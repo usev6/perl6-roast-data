@@ -1,12 +1,9 @@
-#!/home/coke/perl5/perlbrew/perls/perl-5.18.2/bin/perl
+#!/home/christian/perl5/perlbrew/perls/perl-5.20.1/bin/perl
 
 use Modern::Perl;
 use Text::CSV;
 
 my %impls = (
-    "niecza" => {
-        dir => "niecza"
-    }, 
     "rakudo.jvm" => {
         dir => "rakudo.jvm"
     },

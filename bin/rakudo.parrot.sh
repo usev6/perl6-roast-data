@@ -9,7 +9,9 @@ git clone repos/nqp.git rakudo.parrot/nqp
 git clone repos/parrot.git rakudo.parrot/parrot
 git clone repos/roast.git rakudo.parrot/t/spec
 cd rakudo.parrot
-perl Configure.pl --backends=parrot --gen-parrot
+## 2014-09-22: at the moment only master builds at FreeBSD
+#perl Configure.pl --backends=parrot --gen-parrot
+perl Configure.pl --backends=parrot --gen-parrot=master
 make all
 
 # uninstalled rakudo doesn't know how to find Test.pm

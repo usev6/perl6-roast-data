@@ -1,16 +1,15 @@
 #!/bin/sh
 ./bin/git.p5
-# nice -20 ./bin/niecza.sh
 nice -20 ./bin/rakudo.moar.sh
 nice -20 ./bin/rakudo.moar-jit.sh
 nice -20 ./bin/rakudo.parrot.sh
 # nice -20 ./bin/rakudo.jvm.sh
 TEMPFILE="TEMPFILE"
 PASSFILE="perl6_pass_rates.csv"
-OUTPUT=`./bin/cull`
-HEADER=`head -1 $PASSFILE`
+OUTPUT=$(./bin/cull)
+HEADER=$(head -1 $PASSFILE)
 echo "$HEADER" > $TEMPFILE
 echo "$OUTPUT" >> $TEMPFILE
 tail -$(wc -l $PASSFILE|awk '{print $1-1}') $PASSFILE >> $TEMPFILE
 mv $TEMPFILE $PASSFILE
-git commit -m "today (automated commit)" "$PASSFILE" log/
+#git commit -m "today (automated commit)" "$PASSFILE" log/
