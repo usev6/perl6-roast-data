@@ -844,9 +844,8 @@ S03-operators/value_equivalence.rakudo.moar........  73    0    2    0   75
      1 todo   : \@a seems to flatten when it should not
 S03-sequence/arity-2-or-more.t.....................  19    0    0    0   19
 S03-sequence/arity0.t..............................  13    0    0    0   13
-S03-sequence/basic.rakudo.moar..................... 127    0    2    0  129
+S03-sequence/basic.rakudo.moar..................... 128    0    1    0  129
      1 todo   : sequence + last
-     1 todo   : mysterious
 S03-sequence/limit-arity-2-or-more.t...............Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-sequence/limit-arity-2-or-more.t:32
 
 Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-sequence/limit-arity-2-or-more.t:33
@@ -1075,7 +1074,7 @@ use of uninitialized value of type Any in string context  in block <unit> at t/s
      1 todo   : really? :-)
      6 todo   : dubious test
      3 todo   : needs review
-S05-capture/match-object.rakudo.moar...............  18    0    1    2   21
+S05-capture/match-object.rakudo.moar...............  21    0    1    2   24
      1 skipped: No such method pos for invocant of type Any
      1 skipped: Unsupported use of $¢ variable
      1 todo   : Unsupported use of $¢ variable
@@ -1821,8 +1820,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1411435596
-# Using file temp_1411435596
+S16-filehandles/chmod.t............................# Using file temp_1411522048
+# Using file temp_1411522048
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2682,14 +2681,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.875886 seconds
-# gerdr: 0.8944196 seconds
-# recursive-ternary: 0.9691241 seconds
-# loop: 0.98356863 seconds
-# sequence-ternary: 1.6401583 seconds
-# recursive-ternary-hand-cached: 1.8303100 seconds
-# sequence: 2.4783116 seconds
-# hand-memoization: 2.55058010 seconds
+integration/advent2012-day21.t.....................# gerdr: 0.8704644 seconds
+# kaz: 0.8786180 seconds
+# recursive-ternary: 0.9803666 seconds
+# loop: 0.9904617 seconds
+# sequence-ternary: 1.62596212 seconds
+# recursive-ternary-hand-cached: 1.838640 seconds
+# sequence: 2.49904555 seconds
+# hand-memoization: 2.5365289 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2746,9 +2745,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5076,     0,   129,   361,  5566,  5663
-"S03",        4876,     0,   104,    87,  5067,  5089
+"S03",        4877,     0,   103,    87,  5067,  5089
 "S04",         987,     0,    40,    42,  1069,  1121
-"S05",        5191,    56,    91,   181,  5519,  5901
+"S05",        5194,    56,    91,   181,  5522,  5904
 "S06",        1180,     0,    41,   104,  1325,  1405
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         179,     0,    11,    10,   200,   200
@@ -2769,7 +2768,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9146,     0,   121,   173,  9440,  7839
 "int",        1205,     0,    12,    21,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32450,    56,   635,  1251, 34392, 34492
+"total",     32454,    56,   634,  1251, 34395, 34495
 ----------------
 Failure summary:
 S05-transliteration/trans.rakudo.moar aborted 56 test(s)

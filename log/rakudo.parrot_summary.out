@@ -1088,8 +1088,7 @@ S03-operators/bag.t................................Element shifted from empty li
 
  100    0    0    0  100
 S03-operators/basic-types.t........................  19    0    0    0   19
-S03-operators/bit.rakudo.parrot....................  34    0    3    0   37
-     3 todo   : RT #122310
+S03-operators/bit.t................................  37    0    0    0   37
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
 S03-operators/brainos.t............................   9    0    0    0    9
 S03-operators/buf.t................................Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/buf.t:67
@@ -1266,8 +1265,7 @@ Code object coerced to string (please use .gist or .perl to do that)  in block <
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.rakudo.parrot....................  21    0    1    0   22
      1 todo   : RT #65556
-S03-operators/numeric-shift.rakudo.parrot..........  36    0    1    0   37
-     1 todo PASSED: RT #121909 - giving wrong result
+S03-operators/numeric-shift.t......................  37    0    0    0   37
 S03-operators/orelse.rakudo.parrot.................   9    0    0    2   11
      1 skipped: orelse passes $! as argument
      1 skipped: orelse passes $! as multiple arguments
@@ -1322,9 +1320,8 @@ S03-operators/value_equivalence.rakudo.parrot......  73    0    2    0   75
      1 todo   : \@a seems to flatten when it should not
 S03-sequence/arity-2-or-more.t.....................  19    0    0    0   19
 S03-sequence/arity0.t..............................  13    0    0    0   13
-S03-sequence/basic.rakudo.parrot................... 127    0    2    0  129
+S03-sequence/basic.rakudo.parrot................... 128    0    1    0  129
      1 todo   : sequence + last
-     1 todo   : mysterious
 S03-sequence/limit-arity-2-or-more.t...............Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-sequence/limit-arity-2-or-more.t:32
 
 Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-sequence/limit-arity-2-or-more.t:33
@@ -1567,7 +1564,7 @@ use of uninitialized value of type Any in string context  in block <unit> at t/s
      1 todo   : really? :-)
      6 todo   : dubious test
      3 todo   : needs review
-S05-capture/match-object.rakudo.parrot.............  18    0    1    2   21
+S05-capture/match-object.rakudo.parrot.............  21    0    1    2   24
      1 skipped: No such method pos for invocant of type Any
      1 skipped: Unsupported use of $¢ variable
      1 todo   : Unsupported use of $¢ variable
@@ -1599,10 +1596,9 @@ S05-interpolation/regex-in-variable.rakudo.parrot..use of uninitialized value $!
   31    0    3    0   34
      1 todo   : warn on undef
      2 todo   : instance member interpolation
-S05-mass/charsets.rakudo.parrot....................  14    0    3    0   17
+S05-mass/charsets.rakudo.parrot....................  15    0    2    0   17
      1 todo   : blank characters
      1 todo   : punct characters
-     1 todo PASSED: unicode 6.0 punct characters
 S05-mass/named-chars.t............................. 431    0    0    0  431
 S05-mass/properties-block.t........................ 670    0    0    0  670
 S05-mass/properties-derived.rakudo.parrot.......... 190    0    0   66  256
@@ -1611,11 +1607,10 @@ S05-mass/properties-derived.rakudo.parrot.......... 190    0    0   66  256
     42 skipped: isOther* NYI
      7 skipped: isAssigned NYI
      4 skipped: isAny NYI
-S05-mass/properties-general.rakudo.parrot.......... 566    0    6   30  602
+S05-mass/properties-general.rakudo.parrot.......... 572    0    0   30  602
     10 skipped: No [Lr] property defined
     16 skipped: Invalid codepoint \x[FFFE]
      4 skipped: Invalid codepoint \x[FFFF]
-     6 todo PASSED: Unicode spec change in v6.1
 S05-mass/properties-script.rakudo.parrot........... 326    0    0   35  361
     35 skipped: Unicode properties with arguments
 S05-mass/recursive.t...............................  20    0    0    0   20
@@ -2332,8 +2327,8 @@ S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.parrot..................  12    0    1    0   13
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1411437983
-# Using file temp_1411437983
+S16-filehandles/chmod.t............................# Using file temp_1411524396
+# Using file temp_1411524397
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -3345,13 +3340,13 @@ integration/advent2012-day15.rakudo.parrot.........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.rakudo.parrot.........# kaz: 2.7580710 seconds
-# gerdr: 2.8971251 seconds
-# recursive-ternary: 3.3811223 seconds
-# loop: 3.5344070 seconds
-# sequence-ternary: 6.9645574 seconds
-# recursive-ternary-hand-cached: 8.3150727 seconds
-# sequence: 11.0074150 seconds
+integration/advent2012-day21.rakudo.parrot.........# kaz: 2.6421348 seconds
+# gerdr: 2.8012234 seconds
+# recursive-ternary: 3.42533820 seconds
+# loop: 3.54916470 seconds
+# sequence-ternary: 7.228927 seconds
+# recursive-ternary-hand-cached: 8.48670021 seconds
+# sequence: 11.07418291 seconds
    8    0    0    1    9
      1 skipped: RT #122497
 integration/advent2012-day22.rakudo.parrot.........   5    0    1    0    6
@@ -3441,9 +3436,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5003,     0,   124,   439,  5566,  5663
-"S03",        4872,     0,   108,    87,  5067,  5089
+"S03",        4877,     0,   103,    87,  5067,  5089
 "S04",         979,     0,    48,    42,  1069,  1121
-"S05",        5140,     0,   111,   268,  5519,  5901
+"S05",        5150,     0,   104,   268,  5522,  5904
 "S06",        1177,     0,    44,   104,  1325,  1405
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         179,     0,    11,    10,   200,   200
@@ -3464,7 +3459,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9150,     0,   109,   181,  9440,  7839
 "int",        1194,     0,     9,    21,  1224,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31394,     2,   642,  1390, 33428, 34465
+"total",     31409,     2,   630,  1390, 33431, 34468
 ----------------
 Failure summary:
 S19-command-line/dash-e.t 2 - -e print $something works with non-ASCII string literals
