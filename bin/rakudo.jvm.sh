@@ -17,7 +17,7 @@ exit
 
 # uninstalled rakudo doesn't know how to find Test.pm
 # ... or any other modules
-export PERL6LIB=`pwd`/lib:.
+export PERL6LIB=$(pwd)/lib
 
 # some tests require a LANG.
 export LANG=en_US.UTF-8
