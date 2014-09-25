@@ -836,7 +836,7 @@ S03-operators/so.rakudo.moar.......................  14    0    1    0   15
      1 todo   : check test and rakudo
 S03-operators/spaceship-and-containers.t...........   6    0    0    0    6
 S03-operators/spaceship.t..........................   5    0    0    0    5
-S03-operators/subscript-adverbs.t.................. 108    0    0    0  108
+S03-operators/subscript-adverbs.t.................. 110    0    0    0  110
 S03-operators/subscript-vs-lt.t....................   4    0    0    0    4
 S03-operators/ternary.t............................  17    0    0    0   17
 S03-operators/value_equivalence.rakudo.moar........  73    0    2    0   75
@@ -851,16 +851,15 @@ S03-sequence/limit-arity-2-or-more.t...............Code object coerced to string
 Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-sequence/limit-arity-2-or-more.t:33
 
    8    0    0    0    8
-S03-sequence/misc.rakudo.moar......................use of uninitialized value of type Nil in numeric context  in block <unit> at t/spec/S03-sequence/misc.rakudo.moar:79
+S03-sequence/misc.rakudo.moar......................use of uninitialized value of type Nil in numeric context  in block <unit> at t/spec/S03-sequence/misc.rakudo.moar:78
 
-use of uninitialized value of type Nil in numeric context  in block <unit> at t/spec/S03-sequence/misc.rakudo.moar:79
+use of uninitialized value of type Nil in numeric context  in block <unit> at t/spec/S03-sequence/misc.rakudo.moar:78
 
-  12    0    6    1   19
+  16    0    5    1   22
      1 skipped: Not enough positional parameters passed; got 0 but expected 1
      1 todo   : RT #80574
      1 todo   : gives True instead
      2 todo   : NYI
-     1 todo   : Slicel lists are NYI
      1 todo   : bogus test?
 S03-sequence/nonnumeric.rakudo.moar................  18    0    0   19   37
      6 skipped: lifting comparison ops
@@ -1285,8 +1284,19 @@ use of uninitialized value of type Any in string context  in block <unit> at t/s
      3 skipped: s[...] op= RHS
      1 todo   : be smarter about constant detection
 S05-transliteration/79778.t........................   1    0    0    0    1
-S05-transliteration/trans.rakudo.moar..............   4   56    0    0   60
-    56 tests aborted (missing ok/not ok)
+S05-transliteration/trans.rakudo.moar..............use of uninitialized value of type Int in string context  in sub  at t/spec/S05-transliteration/trans.rakudo.moar:207
+
+use of uninitialized value of type Int in string context  in sub  at t/spec/S05-transliteration/trans.rakudo.moar:207
+
+use of uninitialized value of type Int in string context  in sub  at t/spec/S05-transliteration/trans.rakudo.moar:207
+
+use of uninitialized value of type Int in string context  in sub  at t/spec/S05-transliteration/trans.rakudo.moar:207
+
+  46    0   13    1   60
+     1 skipped: feed operator NYI
+     2 todo   : closures and regexes
+    10 todo   : flags
+     1 todo   : disambiguate ranges
 S05-transliteration/with-closure.rakudo.moar.......use of uninitialized value of type Int in string context  in block <unit> at t/spec/S05-transliteration/with-closure.rakudo.moar:59
 
 use of uninitialized value of type Int in string context  in block <unit> at t/spec/S05-transliteration/with-closure.rakudo.moar:59
@@ -1820,8 +1830,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1411521136
-# Using file temp_1411521136
+S16-filehandles/chmod.t............................# Using file temp_1411607480
+# Using file temp_1411607480
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2113,7 +2123,7 @@ Code object coerced to string (please use .gist or .perl to do that)  in block  
 
 Code object coerced to string (please use .gist or .perl to do that)  in any  at src/Perl6/World.nqp:1702
 
-Code object coerced to string (please use .gist or .perl to do that)  in any throw at src/Perl6/World.nqp:2574
+Code object coerced to string (please use .gist or .perl to do that)  in any throw at src/Perl6/World.nqp:2582
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
@@ -2591,8 +2601,7 @@ integration/99problems-21-to-30.t..................use of uninitialized value $p
   15    0    0    0   15
 integration/99problems-31-to-40.t..................  66    0    0    1   67
      1 skipped: No Benchmark module yet
-integration/99problems-41-to-50.t..................  11    0    0    2   13
-     1 skipped: Test(s) not yet written: (*) Truth tables for logical expressions (2).
+integration/99problems-41-to-50.t..................  12    0    0    1   13
      1 skipped: Test(s) not yet written: (**) Truth tables for logical expressions (3).
 integration/99problems-51-to-60.t..................  35    0    0    2   37
      1 skipped: Test(s) not yet written: (**) Generate-and-test paradigm
@@ -2681,14 +2690,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8479711 seconds
-# gerdr: 0.86181328 seconds
-# recursive-ternary: 0.9659314 seconds
-# loop: 0.98607947 seconds
-# sequence-ternary: 1.62367782 seconds
-# recursive-ternary-hand-cached: 1.81837611 seconds
-# sequence: 2.47615151 seconds
-# hand-memoization: 2.49820821 seconds
+integration/advent2012-day21.t.....................# kaz: 0.85324256 seconds
+# gerdr: 0.8636699 seconds
+# recursive-ternary: 0.9685882 seconds
+# loop: 0.9860442 seconds
+# sequence-ternary: 1.65360592 seconds
+# recursive-ternary-hand-cached: 1.7910471 seconds
+# sequence: 2.4728733 seconds
+# hand-memoization: 2.483743 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2745,9 +2754,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5076,     0,   129,   361,  5566,  5663
-"S03",        4877,     0,   103,    87,  5067,  5089
+"S03",        4883,     0,   102,    87,  5072,  5094
 "S04",         987,     0,    40,    42,  1069,  1121
-"S05",        5194,    56,    91,   181,  5522,  5904
+"S05",        5236,     0,   104,   182,  5522,  5904
 "S06",        1180,     0,    41,   104,  1325,  1405
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         179,     0,    11,    10,   200,   200
@@ -2766,9 +2775,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
 "S32",        9146,     0,   121,   173,  9440,  7839
-"int",        1205,     0,    12,    21,  1238,  1227
+"int",        1206,     0,    12,    20,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32454,    56,   634,  1251, 34395, 34495
+"total",     32503,     0,   646,  1251, 34400, 34500
 ----------------
-Failure summary:
-S05-transliteration/trans.rakudo.moar aborted 56 test(s)
+No failures!

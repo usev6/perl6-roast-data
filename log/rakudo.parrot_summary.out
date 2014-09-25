@@ -1312,7 +1312,7 @@ S03-operators/so.rakudo.parrot.....................  14    0    1    0   15
      1 todo   : check test and rakudo
 S03-operators/spaceship-and-containers.t...........   6    0    0    0    6
 S03-operators/spaceship.t..........................   5    0    0    0    5
-S03-operators/subscript-adverbs.t.................. 108    0    0    0  108
+S03-operators/subscript-adverbs.t.................. 110    0    0    0  110
 S03-operators/subscript-vs-lt.t....................   4    0    0    0    4
 S03-operators/ternary.t............................  17    0    0    0   17
 S03-operators/value_equivalence.rakudo.parrot......  73    0    2    0   75
@@ -1327,16 +1327,15 @@ S03-sequence/limit-arity-2-or-more.t...............Code object coerced to string
 Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-sequence/limit-arity-2-or-more.t:33
 
    8    0    0    0    8
-S03-sequence/misc.rakudo.parrot....................use of uninitialized value of type Nil in numeric context  in block <unit> at t/spec/S03-sequence/misc.rakudo.parrot:79
+S03-sequence/misc.rakudo.parrot....................use of uninitialized value of type Nil in numeric context  in block <unit> at t/spec/S03-sequence/misc.rakudo.parrot:78
 
-use of uninitialized value of type Nil in numeric context  in block <unit> at t/spec/S03-sequence/misc.rakudo.parrot:79
+use of uninitialized value of type Nil in numeric context  in block <unit> at t/spec/S03-sequence/misc.rakudo.parrot:78
 
-  12    0    6    1   19
+  16    0    5    1   22
      1 skipped: Not enough positional parameters passed; got 0 but expected 1
      1 todo   : RT #80574
      1 todo   : gives True instead
      2 todo   : NYI
-     1 todo   : Slicel lists are NYI
      1 todo   : bogus test?
 S03-sequence/nonnumeric.rakudo.parrot..............  18    0    0   19   37
      6 skipped: lifting comparison ops
@@ -2327,8 +2326,8 @@ S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.parrot..................  12    0    1    0   13
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1411524396
-# Using file temp_1411524397
+S16-filehandles/chmod.t............................# Using file temp_1411610736
+# Using file temp_1411610736
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2518,7 +2517,7 @@ Code object coerced to string (please use .gist or .perl to do that)  in any  at
 
 use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
 
-Code object coerced to string (please use .gist or .perl to do that)  in any throw at src/Perl6/World.nqp:2574
+Code object coerced to string (please use .gist or .perl to do that)  in any throw at src/Perl6/World.nqp:2582
 
 use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
 
@@ -3221,8 +3220,7 @@ integration/99problems-21-to-30.t..................use of uninitialized value $p
   15    0    0    0   15
 integration/99problems-31-to-40.t..................  66    0    0    1   67
      1 skipped: No Benchmark module yet
-integration/99problems-41-to-50.t..................  11    0    0    2   13
-     1 skipped: Test(s) not yet written: (*) Truth tables for logical expressions (2).
+integration/99problems-41-to-50.t..................  12    0    0    1   13
      1 skipped: Test(s) not yet written: (**) Truth tables for logical expressions (3).
 integration/99problems-51-to-60.t..................  35    0    0    2   37
      1 skipped: Test(s) not yet written: (**) Generate-and-test paradigm
@@ -3340,13 +3338,13 @@ integration/advent2012-day15.rakudo.parrot.........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.rakudo.parrot.........# kaz: 2.6421348 seconds
-# gerdr: 2.8012234 seconds
-# recursive-ternary: 3.42533820 seconds
-# loop: 3.54916470 seconds
-# sequence-ternary: 7.228927 seconds
-# recursive-ternary-hand-cached: 8.48670021 seconds
-# sequence: 11.07418291 seconds
+integration/advent2012-day21.rakudo.parrot.........# kaz: 2.73559443 seconds
+# gerdr: 2.868335 seconds
+# loop: 3.53990650 seconds
+# recursive-ternary: 3.57589196 seconds
+# sequence-ternary: 6.8632637 seconds
+# recursive-ternary-hand-cached: 8.390265 seconds
+# sequence: 11.036642 seconds
    8    0    0    1    9
      1 skipped: RT #122497
 integration/advent2012-day22.rakudo.parrot.........   5    0    1    0    6
@@ -3436,7 +3434,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5003,     0,   124,   439,  5566,  5663
-"S03",        4877,     0,   103,    87,  5067,  5089
+"S03",        4883,     0,   102,    87,  5072,  5094
 "S04",         979,     0,    48,    42,  1069,  1121
 "S05",        5150,     0,   104,   268,  5522,  5904
 "S06",        1177,     0,    44,   104,  1325,  1405
@@ -3457,9 +3455,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
 "S32",        9150,     0,   109,   181,  9440,  7839
-"int",        1194,     0,     9,    21,  1224,  1227
+"int",        1195,     0,     9,    20,  1224,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31409,     2,   630,  1390, 33431, 34468
+"total",     31416,     2,   629,  1389, 33436, 34473
 ----------------
 Failure summary:
 S19-command-line/dash-e.t 2 - -e print $something works with non-ASCII string literals
