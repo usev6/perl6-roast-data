@@ -4,76 +4,22 @@ defined(@array) is deprecated at t/spec/test_summary line 378.
                                                    pass fail todo skip plan
 S02-lexical-conventions/begin_end_pod.t............   1    0    0    0    1
 S02-lexical-conventions/bom.t......................   1    0    0    0    1
-S02-lexical-conventions/comments.rakudo.parrot.....use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  48    0    1    2   51
+S02-lexical-conventions/comments.rakudo.parrot.....  48    0    1    2   51
      2 skipped: NYI, and hangs on JVM
      1 todo   : NYI
 S02-lexical-conventions/end-pod.t..................   1    0    0    0    1
-S02-lexical-conventions/minimal-whitespace.t.......use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   9    0    0    0    9
-S02-lexical-conventions/one-pass-parsing.t.........use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   3    0    0    0    3
+S02-lexical-conventions/minimal-whitespace.t.......   9    0    0    0    9
+S02-lexical-conventions/one-pass-parsing.t.........   3    0    0    0    3
 S02-lexical-conventions/pod-in-multi-line-exprs.t..   3    0    0    0    3
-S02-lexical-conventions/sub-block-parsing.t........use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   9    0    0    0    9
+S02-lexical-conventions/sub-block-parsing.t........   9    0    0    0    9
 S02-lexical-conventions/unicode-whitespace.t.......  50    0    0    0   50
-S02-lexical-conventions/unicode.rakudo.parrot......use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  39    0    0    5   44
+S02-lexical-conventions/unicode.rakudo.parrot......  39    0    0    5   44
      3 skipped: RT #122341 all codepoints that match \v should work as line separator
      2 skipped: VOWEL SIGNs in identifiers; RT #122340
-S02-lexical-conventions/unspace.rakudo.parrot......use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-    
+S02-lexical-conventions/unspace.rakudo.parrot......    
 # Failed test 'code dies'
 # at lib/Test.pm line 303
     # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
   74    0    1   11   86
      3 skipped: indirect method calls parsefail: RT #122344
      1 skipped: .++ does not work: RT #122342
@@ -82,9 +28,7 @@ use of uninitialized value of type Nil in numeric context  in sub throws_like at
      1 todo   : NYI
 S02-lists/indexing.t...............................   1    0    0    0    1
 S02-lists/tree.t...................................  10    0    0    0   10
-S02-literals/adverbs.t.............................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  15    0    0    0   15
+S02-literals/adverbs.t.............................  15    0    0    0   15
 S02-literals/array-interpolation.t.................  12    0    0    0   12
 S02-literals/autoref.t.............................use of uninitialized value of type Any in string context  in block <unit> at t/spec/S02-literals/autoref.t:65
 
@@ -94,42 +38,18 @@ use of uninitialized value of type Any in string context  in block <unit> at t/s
 S02-literals/char-by-name.rakudo.parrot............   8    0    0    2   10
      1 skipped: \c[LINE FEED] not valid: RT #117683
      1 skipped: \c[LF] not valid: RT #117683
-S02-literals/char-by-number.rakudo.parrot..........use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
+S02-literals/char-by-number.rakudo.parrot..........    
+# Failed test 'code dies'
+# at lib/Test.pm line 303
+    # Looks like you failed 1 tests of 2
     
 # Failed test 'code dies'
 # at lib/Test.pm line 303
     # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
     
 # Failed test 'code dies'
 # at lib/Test.pm line 303
     # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-    
-# Failed test 'code dies'
-# at lib/Test.pm line 303
-    # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
     
 # Failed test 'code dies'
 # at lib/Test.pm line 303
@@ -141,102 +61,30 @@ S02-literals/hash-interpolation.t..................  10    0    0    0   10
 S02-literals/heredocs.t............................  16    0    0    0   16
 S02-literals/hex_chars.t...........................   4    0    0    0    4
 S02-literals/listquote-whitespace.t................  12    0    0    0   12
-S02-literals/listquote.rakudo.parrot...............use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  19    0    3    1   23
+S02-literals/listquote.rakudo.parrot...............  19    0    3    1   23
      1 skipped: meta operators
      3 todo   : IntStr/RatStr/NumStr types NYI
-S02-literals/misc-interpolation.t..................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  48    0    0    0   48
+S02-literals/misc-interpolation.t..................  50    0    0    0   50
 S02-literals/numeric.t.............................  22    0    0    0   22
 S02-literals/pair-boolean.t........................   6    0    0    0    6
 S02-literals/pairs.rakudo.parrot...................use of uninitialized value of type Bool in string context  in block <unit> at t/spec/S02-literals/pairs.rakudo.parrot:70
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
 
   75    0    2    2   79
      1 skipped: reduce meta op
      1 skipped: prefix:<|>
      1 todo   : reduce meta op
      1 todo   : prefix:<|>
-S02-literals/quoting-unicode.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  73    0    0    0   73
-S02-literals/quoting.rakudo.parrot.................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-    
+S02-literals/quoting-unicode.t.....................  73    0    0    0   73
+S02-literals/quoting.rakudo.parrot.................    
 # Failed test 'code dies'
 # at lib/Test.pm line 303
     # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
  149    0    7    3  159
      3 skipped: \c@ etc
      1 todo   : retriage
      2 todo   : q:x assigned to array
      4 todo   : quoting adverbs
-S02-literals/radix.rakudo.parrot...................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
- 129    0    6    0  135
+S02-literals/radix.rakudo.parrot................... 129    0    6    0  135
      1 todo   : This needs an RT
      4 todo   : Some question of what this form should actually do
      1 todo   : Really?!
@@ -251,50 +99,10 @@ S02-literals/string-interpolation.t................Potential difficulties:
     at t/spec/S02-literals/string-interpolation.t:12
     ------> [32m    is "{;;;;;;\01[33m⏏[31m;42}", "42", '{\\01 parses correctly (3)[0m
   15    0    0    0   15
-S02-literals/sub-calls.t...........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  20    0    0    0   20
-S02-literals/subscript.t...........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   2    0    0    0    2
-S02-literals/types.t...............................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   7    0    0    0    7
-S02-literals/underscores.t.........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  19    0    0    0   19
+S02-literals/sub-calls.t...........................  20    0    0    0   20
+S02-literals/subscript.t...........................   2    0    0    0    2
+S02-literals/types.t...............................   7    0    0    0    7
+S02-literals/underscores.t.........................  19    0    0    0   19
 S02-literals/version.rakudo.parrot.................  25    0    3    0   28
      3 todo   : trailing zeroes fail
 S02-magicals/78258.t...............................   1    0    0    0    1
@@ -331,14 +139,10 @@ S02-magicals/dollar-underscore.rakudo.parrot.......   8    0    0    1    9
 S02-magicals/dollar_bang.t.........................  15    0    0    0   15
 S02-magicals/env.rakudo.parrot.....................# %*ENV<PUGS_ROCKS>=
 # %*ENV<PUGS_ROCKS>=
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
   16    0    0    1   17
      1 skipped: import fails, ENV not available: RT #122339
 S02-magicals/file_line.t...........................   2    0    0    0    2
-S02-magicals/pid.t.................................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   2    0    0    0    2
+S02-magicals/pid.t.................................   2    0    0    0    2
 S02-magicals/progname.t............................   4    0    0    0    4
 S02-magicals/sub.t.................................Code object coerced to string (please use .gist or .perl to do that)  in sub is at lib/Test.pm:116
 
@@ -358,17 +162,7 @@ S02-names-vars/fmt.t...............................  21    0    0    0   21
 S02-names-vars/list_array_perl.rakudo.parrot.......  18    0    1    2   21
      2 skipped: recursive data structure
      1 todo   : List.perl bug
-S02-names-vars/names.rakudo.parrot.................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
- 128    0    0   13  141
+S02-names-vars/names.rakudo.parrot................. 128    0    0   13  141
      2 skipped: this kind of lookup NYI
      4 skipped: ::{ } package lookup NYI
      7 skipped: package variable autovivification
@@ -381,35 +175,11 @@ use of uninitialized value of type Mu in string context  in block  at t/spec/S02
   95    0    0    3   98
      2 skipped: recursive data structure RT #122286
      1 skipped: RT #67790
-S02-names-vars/signature.rakudo.parrot.............use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  11    0    2    0   13
+S02-names-vars/signature.rakudo.parrot.............  11    0    2    0   13
      2 todo   : eqv on signatures
-S02-names-vars/variables-and-packages.rakudo.parr..use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  35    0    3    0   38
+S02-names-vars/variables-and-packages.rakudo.parr..  35    0    3    0   38
      3 todo   : nom regression: RT #122346
-S02-names-vars/varnames.rakudo.parrot..............use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
+S02-names-vars/varnames.rakudo.parrot..............Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
@@ -421,24 +191,14 @@ Code object coerced to string (please use .gist or .perl to do that)  in block  
      2 todo   : cannot easily override [] at the moment
 S02-names/bare-sigil.t.............................  10    0    0    0   10
 S02-names/caller.t.................................  15    0    0    0   15
-S02-names/identifier.t.............................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  22    0    0    0   22
+S02-names/identifier.t.............................  22    0    0    0   22
 S02-names/indirect.t...............................   6    0    0    0    6
 S02-names/is_cached.rakudo.parrot..................  36    0    2    0   38
      2 todo   : ?
 S02-names/is_default.t............................. 114    0    0    0  114
 S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  15    0    0    0   15
-S02-names/our.rakudo.parrot........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   9    0    0    1   10
+S02-names/our.rakudo.parrot........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
 S02-names/pseudo.rakudo.parrot.....................use of uninitialized value $got of type Any in string context  in sub is at lib/Test.pm:116
 
@@ -467,11 +227,7 @@ use of uninitialized value $got of type Any in string context  in sub is at lib/
      1 todo   : interpolation and auto-viv NYI
      2 todo   : these tests disagree with STD
      2 todo   : not entirely sure these make sense...
-S02-names/symbolic-deref.rakudo.parrot.............use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-    
+S02-names/symbolic-deref.rakudo.parrot.............    
 # Failed test 'right exception type (X::AdHoc)'
 # at lib/Test.pm line 309
     # Expected: (X::AdHoc)
@@ -490,45 +246,15 @@ S02-types/WHICH.rakudo.parrot...................... 538    0    0   52  590
     52 skipped: NYI on parrot
 S02-types/anon_block.rakudo.parrot.................WARNINGS:
 Useless use of "," in expression "{$foo4 = \"blah\"}," in sink context (line 85)
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
 Code object coerced to string (please use .gist or .perl to do that)  in sub isnt at lib/Test.pm:128
 
   39    0    1    2   42
      2 skipped: tests don't work if previous test fails
      1 todo   : Parrot support for zero-arg subs?
-S02-types/array-shapes.rakudo.parrot...............use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   6    0    0   19   25
+S02-types/array-shapes.rakudo.parrot...............   6    0    0   19   25
     15 skipped: array shapes NYI
      4 skipped: native arrays NYI
-S02-types/array.rakudo.parrot......................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value @bar of type Str in string context  in block  at t/spec/S02-types/array.rakudo.parrot:355
+S02-types/array.rakudo.parrot......................use of uninitialized value @bar of type Str in string context  in block  at t/spec/S02-types/array.rakudo.parrot:355
 
   93    0    0    2   95
      2 skipped: multi-dim arrays NYI
@@ -545,8 +271,13 @@ S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.rakudo.parrot.............  15    0    3    0   18
      3 todo   : deprecated %h = {...} for now
 S02-types/autovivification.t.......................  25    0    0    0   25
-S02-types/bag.rakudo.parrot........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
+S02-types/bag.rakudo.parrot........................    
+# Failed test 'right exception type (X::Assignment::RO)'
+# at lib/Test.pm line 309
+    # Expected: (X::Assignment::RO)
+    # Got:      (X::AdHoc)
+    # Exception message: Cannot assign to a readonly variable or a value
+    # Looks like you failed 1 tests of 2
     
 # Failed test 'right exception type (X::Assignment::RO)'
 # at lib/Test.pm line 309
@@ -554,33 +285,6 @@ S02-types/bag.rakudo.parrot........................use of uninitialized value of
     # Got:      (X::AdHoc)
     # Exception message: Cannot assign to a readonly variable or a value
     # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-    
-# Failed test 'right exception type (X::Assignment::RO)'
-# at lib/Test.pm line 309
-    # Expected: (X::Assignment::RO)
-    # Got:      (X::AdHoc)
-    # Exception message: Cannot assign to a readonly variable or a value
-    # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
     
 # Failed test 'right exception type (X::Assignment::RO)'
 # at lib/Test.pm line 309
@@ -588,16 +292,6 @@ use of uninitialized value of type Nil in numeric context  in sub throws_like at
     # Got:      (X::Method::NotFound)
     # Exception message: No such method 'STORE' for invocant of type 'Bag'
     # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
     
 # Failed test 'right exception type (X::Assignment::RO)'
 # at lib/Test.pm line 309
@@ -605,39 +299,21 @@ use of uninitialized value of type Nil in numeric context  in sub throws_like at
     # Got:      (X::AdHoc)
     # Exception message: Cannot assign to a readonly variable or a value
     # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
  188    0    6    3  197
      3 skipped: No longer Iterable
      1 todo   : Not properly interpolating
      4 todo   : ?
      1 todo   : we have not secured .WHICH creation yet
-S02-types/baghash.rakudo.parrot....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
- 222    0    3   24  249
+S02-types/baghash.rakudo.parrot.................... 222    0    3   24  249
     21 skipped: 'is ObjectType' NYI
      3 skipped: No longer Iterable
      1 todo   : Needs to catch up with spec
      2 todo   : in flux
 S02-types/bool.t...................................  51    0    0    0   51
-S02-types/capture.rakudo.parrot....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  18    0    2    1   21
+S02-types/capture.rakudo.parrot....................  18    0    2    1   21
      1 skipped: #122555
      2 todo   : nom regression
-S02-types/catch_type_cast_mismatch.t...............use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  11    0    0    0   11
+S02-types/catch_type_cast_mismatch.t...............  11    0    0    0   11
 S02-types/declare.rakudo.parrot....................  53    0    2   23   78
      1 skipped: Grapheme NYI
      1 skipped: Matcher isa NYI
@@ -667,11 +343,7 @@ S02-types/declare.rakudo.parrot....................  53    0    2   23   78
 S02-types/deprecations.t...........................  36    0    0    0   36
 S02-types/fatrat.t.................................   1    0    0    0    1
 S02-types/flattening.t.............................  41    0    0    0   41
-S02-types/hash.rakudo.parrot.......................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value $expected of type Failure in string context  in sub is at lib/Test.pm:116
+S02-types/hash.rakudo.parrot.......................use of uninitialized value $expected of type Failure in string context  in sub is at lib/Test.pm:116
 
   88    0    1    0   89
      1 todo   : auto-vivified binding does not work yet: RT #118947
@@ -679,9 +351,7 @@ S02-types/hash_ref.t...............................  31    0    0    0   31
 S02-types/infinity.rakudo.parrot...................   6    0    3    4   13
      4 skipped: integer Inf
      3 todo   : Int conversion of NaN and Inf
-S02-types/instants-and-durations.t.................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  12    0    0    0   12
+S02-types/instants-and-durations.t.................  12    0    0    0   12
 S02-types/int-uint.rakudo.parrot...................use of uninitialized value of type Int in string context  in block <unit> at EVAL_0:1
 
 use of uninitialized value of type Int in string context  in block <unit> at EVAL_1:1
@@ -714,22 +384,19 @@ use of uninitialized value of type Int in string context  in block <unit> at EVA
 S02-types/isDEPRECATED.rakudo.parrot...............  12    0    8    0   20
      8 todo   : NYI
 S02-types/lazy-lists.t.............................  23    0    0    0   23
-S02-types/lists.rakudo.parrot......................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value $got of type Parcel in string context  in sub is at lib/Test.pm:116
+S02-types/lists.rakudo.parrot......................use of uninitialized value $got of type Parcel in string context  in sub is at lib/Test.pm:116
 
 use of uninitialized value $expected of type Parcel in string context  in sub is at lib/Test.pm:116
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
   25    0    0    3   28
      3 skipped: list binding
-S02-types/mix.rakudo.parrot........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
+S02-types/mix.rakudo.parrot........................    
+# Failed test 'right exception type (X::Assignment::RO)'
+# at lib/Test.pm line 309
+    # Expected: (X::Assignment::RO)
+    # Got:      (X::AdHoc)
+    # Exception message: Cannot assign to a readonly variable or a value
+    # Looks like you failed 1 tests of 2
     
 # Failed test 'right exception type (X::Assignment::RO)'
 # at lib/Test.pm line 309
@@ -737,33 +404,6 @@ S02-types/mix.rakudo.parrot........................use of uninitialized value of
     # Got:      (X::AdHoc)
     # Exception message: Cannot assign to a readonly variable or a value
     # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-    
-# Failed test 'right exception type (X::Assignment::RO)'
-# at lib/Test.pm line 309
-    # Expected: (X::Assignment::RO)
-    # Got:      (X::AdHoc)
-    # Exception message: Cannot assign to a readonly variable or a value
-    # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
     
 # Failed test 'right exception type (X::Assignment::RO)'
 # at lib/Test.pm line 309
@@ -771,18 +411,6 @@ use of uninitialized value of type Nil in numeric context  in sub throws_like at
     # Got:      (X::Method::NotFound)
     # Exception message: No such method 'STORE' for invocant of type 'Mix'
     # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
     
 # Failed test 'right exception type (X::Assignment::RO)'
 # at lib/Test.pm line 309
@@ -790,8 +418,6 @@ use of uninitialized value of type Nil in numeric context  in sub throws_like at
     # Got:      (X::AdHoc)
     # Exception message: Cannot assign to a readonly variable or a value
     # Looks like you failed 1 tests of 2
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
  170    0    6    3  179
      3 skipped: No longer Iterable
      1 todo   : Not properly interpolating
@@ -804,17 +430,7 @@ use of uninitialized value $got of type Any in string context  in sub is at lib/
   77    0    3    0   80
      2 todo   : unknown
      1 todo   : isa hash
-S02-types/mixhash.rakudo.parrot....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
- 187    0    3   24  214
+S02-types/mixhash.rakudo.parrot.................... 187    0    3   24  214
     21 skipped: 'is ObjectType' NYI
      3 skipped: No longer Iterable
      1 todo   : Needs to catch up with spec
@@ -834,8 +450,6 @@ use of uninitialized value of type Nil in numeric context  in block <unit> at t/
 
 use of uninitialized value of type Nil in numeric context  in block <unit> at t/spec/S02-types/nil.rakudo.parrot:29
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
     
 # Failed test 'code dies'
 # at lib/Test.pm line 303
@@ -847,12 +461,8 @@ use of uninitialized value $got of type Any in string context  in sub is at lib/
   45    0    5    1   51
      1 skipped: triage
      5 todo   : triage
-S02-types/num.t....................................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  66    0    0    0   66
-S02-types/pair.rakudo.parrot.......................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-    
+S02-types/num.t....................................  66    0    0    0   66
+S02-types/pair.rakudo.parrot.......................    
 # Failed test 'right exception type (X::Assignment::RO)'
 # at lib/Test.pm line 309
     # Expected: (X::Assignment::RO)
@@ -868,9 +478,7 @@ S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t..................................use of uninitialized value of type Range in numeric context  in block <unit> at t/spec/S02-types/range.t:87
 
  135    0    0    0  135
-S02-types/set.rakudo.parrot........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
- 157    0   11    1  169
+S02-types/set.rakudo.parrot........................ 157    0   11    1  169
      1 skipped: Set is no longer Iterable
      1 todo   : Not properly interpolating
      1 todo   : we have not secured .WHICH creation yet
@@ -1077,7 +685,7 @@ use of uninitialized value of type Any in string context  in any  at gen/parrot/
 
   23    0    0    0   23
 S03-operators/bag.t................................Element shifted from empty list
-  in method Str at gen/parrot/CORE.setting:13566
+  in method Str at gen/parrot/CORE.setting:13568
   in method Str at gen/parrot/CORE.setting:1116
   in method Stringy at gen/parrot/CORE.setting:1132
   in method Stringy at gen/parrot/CORE.setting:1127
@@ -1256,7 +864,7 @@ S03-operators/minmax.rakudo.parrot.................  21    0    4    0   25
      2 todo   : Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious
      2 todo   : max/min non-associative NYI
 S03-operators/misc.rakudo.parrot...................  32    0    1    0   33
-     1 todo   : nom regression
+     1 todo   : RT #122849
 S03-operators/names.t..............................Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
 
 Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
@@ -1275,15 +883,7 @@ S03-operators/precedence.rakudo.parrot.............  48    0    4    2   54
      1 todo   : list associativity bug
      1 todo   : RT #77848
      2 todo   : non-associativeness of infix:<^> and |
-S03-operators/range-basic.t........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
- 140    0    0    0  140
+S03-operators/range-basic.t........................ 140    0    0    0  140
 S03-operators/range-int.t.......................... 480    0    0    0  480
 S03-operators/range.rakudo.parrot..................use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-operators/range.rakudo.parrot:220
 
@@ -1337,10 +937,9 @@ use of uninitialized value of type Nil in numeric context  in block <unit> at t/
      1 todo   : gives True instead
      2 todo   : NYI
      1 todo   : bogus test?
-S03-sequence/nonnumeric.rakudo.parrot..............  18    0    0   19   37
+S03-sequence/nonnumeric.rakudo.parrot..............  22    0    0   17   39
      6 skipped: lifting comparison ops
     11 skipped: hangs
-     2 skipped: Decrement out of range
 S03-smartmatch/any-any.t...........................   8    0    0    0    8
 S03-smartmatch/any-array.rakudo.parrot.............   4    0    2    0    6
      2 todo   : nom regression
@@ -1778,8 +1377,6 @@ S05-substitution/subst.rakudo.parrot...............use of uninitialized value of
 
 use of uninitialized value of type Any in string context  in block <unit> at t/spec/S05-substitution/subst.rakudo.parrot:24
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
  135    0    1    5  141
      2 skipped: s:g[...] =
      3 skipped: s[...] op= RHS
@@ -1972,7 +1569,7 @@ S06-signature/tree-node-parameters.rakudo.parrot...  16    0    0    4   20
      4 skipped: signature binding of return values NYI
 S06-signature/type-capture.rakudo.parrot...........   7    0    0    1    8
      1 skipped: nom regression
-S06-signature/types.t..............................   6    0    0    0    6
+S06-signature/types.t..............................   8    0    0    0    8
 S06-signature/unpack-array.rakudo.parrot...........  13    0    2    0   15
      2 todo   : ...
 S06-signature/unpack-object.t......................   4    0    0    0    4
@@ -2181,9 +1778,7 @@ S12-introspection/can.t............................Code object coerced to string
 
   25    0    0    0   25
 S12-introspection/definite.t.......................   6    0    0    0    6
-S12-introspection/meta-class.rakudo.parrot.........use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   8    0    0    4   12
+S12-introspection/meta-class.rakudo.parrot.........   8    0    0    4   12
      1 skipped: .layout
      1 skipped: .version, version number parsing
      1 skipped: precedence of prefix:<^>
@@ -2252,8 +1847,6 @@ S12-methods/private.t..............................Code object coerced to string
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
   12    0    0    0   12
 S12-methods/qualified.t............................   2    0    0    0    2
 S12-methods/submethods.rakudo.parrot...............  21    0    0    6   27
@@ -2271,11 +1864,7 @@ use of uninitialized value of type Match in numeric context  in block <unit> at 
 
   33    0    0    0   33
 S12-subset/multi-dispatch.t........................   6    0    0    0    6
-S12-subset/subtypes.t..............................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  77    0    0    0   77
+S12-subset/subtypes.t..............................  77    0    0    0   77
                                                    pass fail todo skip plan
 S13-overloading/metaoperators.t....................  11    0    0    0   11
 S13-overloading/operators.rakudo.parrot............   3    0    0    1    4
@@ -2326,22 +1915,22 @@ S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.parrot..................  12    0    1    0   13
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1411610736
-# Using file temp_1411610736
+S16-filehandles/chmod.t............................# Using file temp_1411697179
+# Using file temp_1411697179
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
 S16-filehandles/filetest.rakudo.parrot.............  32    0    0    9   41
      6 skipped: :M, :C, :A
      3 skipped: no file README
-S16-filehandles/io.t...............................  86    0    0    0   86
+S16-filehandles/io.t...............................  87    0    0    0   87
 S16-filehandles/io_in_for_loops.t..................  29    0    0    0   29
 S16-filehandles/io_in_while_loops.t................  13    0    0    0   13
 S16-filehandles/mkdir_rmdir.rakudo.parrot..........  13    0    0    1   14
      1 skipped: deviation from spec because we do not have sink yet
 S16-filehandles/open.rakudo.parrot.................   3    0    1    1    5
      1 skipped: open('nonexisting') => undefined is waiting on 'use fatal'
-     1 todo   : ?
+     1 todo PASSED: ?
 S16-filehandles/unlink.rakudo.parrot...............   5    0    0    1    6
      1 skipped: implicit closure of file handle at scope exit NYI (FAILS ON WINDOWS) (noauto)
 S16-io/bare-say.t..................................   7    0    0    0    7
@@ -2423,11 +2012,7 @@ S29-conversions/ord_and_chr.rakudo.parrot.......... 254    0    3    0  257
 S29-os/system.t....................................   5    0    0    0    5
                                                    pass fail todo skip plan
 S32-array/bool.t...................................  15    0    0    0   15
-S32-array/create.t.................................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   6    0    0    0    6
+S32-array/create.t.................................   6    0    0    0    6
 S32-array/delete-adverb-native.t...................use of uninitialized value $got of type Int in string context  in sub is at lib/Test.pm:116
 
 use of uninitialized value $expected of type Any in string context  in sub is at lib/Test.pm:116
@@ -2501,26 +2086,12 @@ S32-exceptions/misc.rakudo.parrot..................Code object coerced to string
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
 
 Code object coerced to string (please use .gist or .perl to do that)  in any  at src/Perl6/World.nqp:1702
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
 Code object coerced to string (please use .gist or .perl to do that)  in any throw at src/Perl6/World.nqp:2582
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
@@ -2529,61 +2100,7 @@ Code object coerced to string (please use .gist or .perl to do that)  in block  
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
 
     
 # Failed test ''#`' died'
@@ -2591,109 +2108,9 @@ use of uninitialized value of type Nil in numeric context  in sub throws_like at
     # Looks like you failed 1 tests of 2
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
@@ -2701,9 +2118,7 @@ Code object coerced to string (please use .gist or .perl to do that)  in block  
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
+Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
@@ -2717,17 +2132,9 @@ Code object coerced to string (please use .gist or .perl to do that)  in block  
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
+Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
+Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
@@ -2737,35 +2144,11 @@ Code object coerced to string (please use .gist or .perl to do that)  in block  
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
 
 # Variable '$abd' is not declared. Did you mean any of these?
 #     $abe
 #     $abc
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
@@ -2819,10 +2202,6 @@ Code object coerced to string (please use .gist or .perl to do that)  in block  
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
  264    0    2    0  266
      1 todo   : Cannot find method "returns"
      1 todo   : parsing regression
@@ -2851,11 +2230,7 @@ S32-io/chdir.rakudo.parrot.........................   8    0    0    2   10
      2 skipped: spec non-conformance due to missing sink context
 S32-io/copy.t......................................  29    0    0    0   29
 S32-io/dir.t.......................................  12    0    0    0   12
-S32-io/file-tests.t................................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  34    0    0    0   34
+S32-io/file-tests.t................................  34    0    0    0   34
 S32-io/io-path-cygwin.rakudo.parrot................  49    0    1    2   52
      2 skipped: On-system tests for filetest inheritance
      1 todo   : resolve NYI, needs nqp::readlink
@@ -2884,31 +2259,19 @@ S32-list/classify.rakudo.parrot....................  12    0    0    3   15
 S32-list/combinations.t............................   8    0    0    0    8
 S32-list/create.t..................................   6    0    0    0    6
 S32-list/end.t.....................................  14    0    0    0   14
-S32-list/first-index.rakudo.parrot.................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/first-index.rakudo.parrot:77
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
+S32-list/first-index.rakudo.parrot.................use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/first-index.rakudo.parrot:77
 
 use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/first-index.rakudo.parrot:78
 
   23    0    0    2   25
      2 skipped: adverbial block
-S32-list/first.rakudo.parrot.......................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/first.rakudo.parrot:84
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
+S32-list/first.rakudo.parrot.......................use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/first.rakudo.parrot:84
 
 use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/first.rakudo.parrot:85
 
   25    0    0    2   27
      2 skipped: adverbial block
-S32-list/grep-index.rakudo.parrot..................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/grep-index.rakudo.parrot:108
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
+S32-list/grep-index.rakudo.parrot..................use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/grep-index.rakudo.parrot:108
 
 use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/grep-index.rakudo.parrot:109
 
@@ -2916,11 +2279,7 @@ use of uninitialized value of type Nil in numeric context  in block  at t/spec/S
      6 skipped: closure as non-final argument
      2 skipped: test error -- is $_ rw here?
     12 skipped: adverbial block
-S32-list/grep.rakudo.parrot........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/grep.rakudo.parrot:135
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
+S32-list/grep.rakudo.parrot........................use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/grep.rakudo.parrot:135
 
 use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/grep.rakudo.parrot:136
 
@@ -2937,11 +2296,7 @@ use of uninitialized value <element> of type Mu in string context  in block <uni
 use of uninitialized value <element> of type Mu in string context  in block <unit> at t/spec/S32-list/join.t:94
 
   34    0    0    0   34
-S32-list/last-index.rakudo.parrot..................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/last-index.rakudo.parrot:77
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
+S32-list/last-index.rakudo.parrot..................use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/last-index.rakudo.parrot:77
 
 use of uninitialized value of type Nil in numeric context  in block  at t/spec/S32-list/last-index.rakudo.parrot:78
 
@@ -3003,11 +2358,7 @@ S32-num/power.rakudo.parrot........................  45    0    3    4   52
      1 skipped: NaN**0 should be NaN
      1 skipped: 1i**NaN should be NaN
      3 todo   : Simple bigint optimizations NYI
-S32-num/rand.rakudo.parrot.........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
- 112    0    0    1  113
+S32-num/rand.rakudo.parrot......................... 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect
 S32-num/rat.rakudo.parrot.......................... 819    0    4    1  824
      1 skipped: RT #74648
@@ -3235,22 +2586,12 @@ integration/99problems-61-to-70.t..................   9    0    0    6   15
 integration/advent2009-day01.t.....................   2    0    0    0    2
 integration/advent2009-day02.t.....................  10    0    0    0   10
 integration/advent2009-day03.t.....................   6    0    0    0    6
-integration/advent2009-day04.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   6    0    0    0    6
+integration/advent2009-day04.t.....................   6    0    0    0    6
 integration/advent2009-day05.t.....................  17    0    0    0   17
-integration/advent2009-day06.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  15    0    0    0   15
+integration/advent2009-day06.t.....................  15    0    0    0   15
 integration/advent2009-day07.t.....................  14    0    0    0   14
 integration/advent2009-day08.t.....................   8    0    0    0    8
-integration/advent2009-day09.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  17    0    0    0   17
+integration/advent2009-day09.t.....................  17    0    0    0   17
 integration/advent2009-day10.t.....................   5    0    0    0    5
 integration/advent2009-day11.t.....................   6    0    0    0    6
 integration/advent2009-day12.t.....................   9    0    0    0    9
@@ -3267,9 +2608,7 @@ use of uninitialized value $other of type Any in string context  in sub weather 
 
   11    0    0    0   11
 integration/advent2009-day17.t.....................  62    0    0    0   62
-integration/advent2009-day18.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   7    0    0    0    7
+integration/advent2009-day18.t.....................   7    0    0    0    7
 integration/advent2009-day19.t.....................   6    0    0    0    6
 integration/advent2009-day20.t.....................  21    0    0    0   21
 integration/advent2009-day21.t.....................   2    0    0    0    2
@@ -3280,11 +2619,7 @@ integration/advent2009-day24.t.....................   4    0    0    0    4
 integration/advent2010-day03.t.....................  12    0    0    0   12
 integration/advent2010-day04.t.....................  11    0    0    0   11
 integration/advent2010-day06.t.....................  12    0    0    0   12
-integration/advent2010-day07.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   8    0    0    0    8
+integration/advent2010-day07.t.....................   8    0    0    0    8
 integration/advent2010-day08.t.....................   7    0    0    0    7
 integration/advent2010-day10.rakudo.parrot.........   2    0    2    0    4
      2 todo   : RT #121843
@@ -3303,24 +2638,14 @@ integration/advent2011-day04.rakudo.parrot.........   0    0    0    2    2
 integration/advent2011-day05.t.....................   5    0    0    0    5
 integration/advent2011-day07.t.....................   3    0    0    0    3
 integration/advent2011-day10.t.....................   5    0    0    0    5
-integration/advent2011-day11.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   9    0    0    0    9
+integration/advent2011-day11.t.....................   9    0    0    0    9
 integration/advent2011-day14.t.....................   8    0    0    0    8
 integration/advent2011-day15.t.....................   9    0    0    0    9
 integration/advent2011-day16.t.....................  11    0    0    0   11
 integration/advent2011-day20.t.....................  16    0    0    0   16
 integration/advent2011-day22.t.....................   2    0    0    0    2
 integration/advent2011-day23.t.....................  55    0    0    0   55
-integration/advent2011-day24.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   8    0    0    0    8
+integration/advent2011-day24.t.....................   8    0    0    0    8
 integration/advent2012-day02.t.....................   4    0    0    0    4
 integration/advent2012-day03.t.....................   2    0    0    0    2
 integration/advent2012-day04.rakudo.parrot.........   6    0    0    2    8
@@ -3329,71 +2654,43 @@ integration/advent2012-day06.t.....................   2    0    0    0    2
 integration/advent2012-day09.t.....................   8    0    0    0    8
 integration/advent2012-day10.t.....................  26    0    0    0   26
 integration/advent2012-day12.t.....................   5    0    0    0    5
-integration/advent2012-day13.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  42    0    0    0   42
+integration/advent2012-day13.t.....................  42    0    0    0   42
 integration/advent2012-day14.t.....................   6    0    0    0    6
 integration/advent2012-day15.rakudo.parrot.........  10    0    1    0   11
      1 todo   : NEXT RT #121722
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.rakudo.parrot.........# kaz: 2.73559443 seconds
-# gerdr: 2.868335 seconds
-# loop: 3.53990650 seconds
-# recursive-ternary: 3.57589196 seconds
-# sequence-ternary: 6.8632637 seconds
-# recursive-ternary-hand-cached: 8.390265 seconds
-# sequence: 11.036642 seconds
+integration/advent2012-day21.rakudo.parrot.........# kaz: 2.6755279 seconds
+# gerdr: 2.7993340 seconds
+# recursive-ternary: 3.5120300 seconds
+# loop: 3.5162920 seconds
+# sequence-ternary: 6.94364106 seconds
+# recursive-ternary-hand-cached: 8.5203308 seconds
+# sequence: 11.04591303 seconds
    8    0    0    1    9
      1 skipped: RT #122497
 integration/advent2012-day22.rakudo.parrot.........   5    0    1    0    6
      1 todo   : RT #121789
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
-integration/advent2013-day02.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  12    0    0    0   12
-integration/advent2013-day04.rakudo.parrot.........use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   6    0    1    0    7
+integration/advent2013-day02.t.....................  12    0    0    0   12
+integration/advent2013-day04.rakudo.parrot.........   6    0    1    0    7
      1 todo   : :c in heredocs
 integration/advent2013-day06.t.....................   1    0    0    0    1
 integration/advent2013-day07.t.....................   6    0    0    0    6
 integration/advent2013-day08.t.....................  11    0    0    0   11
-integration/advent2013-day09.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  21    0    0    0   21
-integration/advent2013-day10.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  44    0    0    0   44
+integration/advent2013-day09.t.....................  21    0    0    0   21
+integration/advent2013-day10.t.....................  44    0    0    0   44
 integration/advent2013-day12.t.....................  32    0    0    0   32
 integration/advent2013-day15.rakudo.parrot.........  27    0    3    0   30
      3 todo   : list of numbers
 integration/advent2013-day18.t.....................  10    0    0    0   10
-integration/advent2013-day20.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  22    0    0    0   22
-integration/advent2013-day21.t.....................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  24    0    0    0   24
+integration/advent2013-day20.t.....................  22    0    0    0   22
+integration/advent2013-day21.t.....................  24    0    0    0   24
 integration/advent2013-day22.t.....................   9    0    0    0    9
 integration/advent2013-day23.t.....................   9    0    0    0    9
-integration/code-blocks-as-sub-args.t..............use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   4    0    0    0    4
+integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.t......................# Error message: Constraint type check failed for parameter '$x'
   16    0    0    0   16
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
@@ -3401,20 +2698,12 @@ integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
 integration/man-or-boy.t...........................  10    0    0    0   10
 integration/method-calls-and-instantiation.t.......   2    0    0    0    2
-integration/no-indirect-new.t......................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   2    0    0    0    2
+integration/no-indirect-new.t......................   2    0    0    0    2
 integration/packages.t.............................   3    0    0    0    3
 integration/pair-in-array.t........................   3    0    0    0    3
 integration/passing-pair-class-to-sub.t............   2    0    0    0    2
-integration/real-strings.t.........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  20    0    0    0   20
-integration/role-composition-vs-attribute.rakudo...use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-   6    0    0    4   10
+integration/real-strings.t.........................  20    0    0    0   20
+integration/role-composition-vs-attribute.rakudo...   6    0    0    4   10
      2 skipped: alas, no visibility of native private attributes yet
      2 skipped: alas, no visibility of private attributes in other role
 integration/rule-in-class-Str.t....................   3    0    0    0    3
@@ -3422,22 +2711,18 @@ integration/say-crash.t............................   4    0    0    0    4
 integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.t.........................use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-use of uninitialized value of type Nil in numeric context  in sub throws_like at lib/Test.pm:294
-
-  12    0    0    0   12
+integration/weird-errors.t.........................  12    0    0    0   12
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5003,     0,   124,   439,  5566,  5663
-"S03",        4883,     0,   102,    87,  5072,  5094
+"S02",        5005,     0,   124,   439,  5568,  5661
+"S03",        4887,     0,   102,    85,  5074,  5108
 "S04",         979,     0,    48,    42,  1069,  1121
 "S05",        5150,     0,   104,   268,  5522,  5904
-"S06",        1177,     0,    44,   104,  1325,  1405
+"S06",        1179,     0,    44,   104,  1327,  1407
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         179,     0,    11,    10,   200,   200
 "S10",          71,     0,     2,     1,    74,   131
@@ -3446,7 +2731,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          35,     0,    10,    27,    72,    82
 "S14",         299,     0,     8,    10,   317,   330
 "S15",           0,     0,     0,     0,     0,   283
-"S16",         242,     0,     1,    17,   260,   304
+"S16",         243,     0,     1,    17,   261,   305
 "S17",           0,     0,     0,     0,     0,   665
 "S19",           4,     2,     0,     0,     6,     6
 "S22",          51,     0,     1,     1,    53,    53
@@ -3457,7 +2742,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9150,     0,   109,   181,  9440,  7839
 "int",        1195,     0,     9,    20,  1224,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31416,     2,   629,  1389, 33436, 34473
+"total",     31425,     2,   629,  1387, 33443, 34488
 ----------------
 Failure summary:
 S19-command-line/dash-e.t 2 - -e print $something works with non-ASCII string literals

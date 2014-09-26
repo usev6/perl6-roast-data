@@ -63,7 +63,7 @@ S02-literals/listquote-whitespace.t................  12    0    0    0   12
 S02-literals/listquote.rakudo.moar.................  19    0    3    1   23
      1 skipped: meta operators
      3 todo   : IntStr/RatStr/NumStr types NYI
-S02-literals/misc-interpolation.t..................  48    0    0    0   48
+S02-literals/misc-interpolation.t..................  50    0    0    0   50
 S02-literals/numeric.t.............................  22    0    0    0   22
 S02-literals/pair-boolean.t........................   6    0    0    0    6
 S02-literals/pairs.rakudo.moar.....................use of uninitialized value of type Bool in string context  in block <unit> at t/spec/S02-literals/pairs.rakudo.moar:70
@@ -612,7 +612,7 @@ use of uninitialized value of type Any in string context  in any !cursor_init at
 
   23    0    0    0   23
 S03-operators/bag.t................................Element shifted from empty list
-  in method Str at src/gen/m-CORE.setting:13627
+  in method Str at src/gen/m-CORE.setting:13629
   in method Stringy at src/gen/m-CORE.setting:1129
   in sub infix:<~> at src/gen/m-CORE.setting:1530
   in sub showkv at t/spec/S03-operators/bag.t:7
@@ -788,7 +788,7 @@ S03-operators/minmax.rakudo.moar...................  21    0    4    0   25
      2 todo   : Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious
      2 todo   : max/min non-associative NYI
 S03-operators/misc.rakudo.moar.....................  32    0    1    0   33
-     1 todo   : nom regression
+     1 todo   : RT #122849
 S03-operators/names.t..............................Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
 
 Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
@@ -861,10 +861,9 @@ use of uninitialized value of type Nil in numeric context  in block <unit> at t/
      1 todo   : gives True instead
      2 todo   : NYI
      1 todo   : bogus test?
-S03-sequence/nonnumeric.rakudo.moar................  18    0    0   19   37
+S03-sequence/nonnumeric.rakudo.moar................  22    0    0   17   39
      6 skipped: lifting comparison ops
     11 skipped: hangs
-     2 skipped: Decrement out of range
 S03-smartmatch/any-any.t...........................   8    0    0    0    8
 S03-smartmatch/any-array.rakudo.moar...............   4    0    2    0    6
      2 todo   : nom regression
@@ -1471,7 +1470,7 @@ S06-signature/tree-node-parameters.rakudo.moar.....  16    0    0    4   20
      4 skipped: signature binding of return values NYI
 S06-signature/type-capture.rakudo.moar.............   7    0    0    1    8
      1 skipped: nom regression
-S06-signature/types.t..............................   6    0    0    0    6
+S06-signature/types.t..............................   8    0    0    0    8
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
 S06-signature/unspecified.rakudo.moar..............use of uninitialized value <element> of type Any in string context  in sub both at t/spec/S06-signature/unspecified.rakudo.moar:38
@@ -1830,15 +1829,15 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1411607480
-# Using file temp_1411607480
+S16-filehandles/chmod.t............................# Using file temp_1411693875
+# Using file temp_1411693875
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
 S16-filehandles/filetest.rakudo.moar...............  32    0    0    9   41
      6 skipped: :M, :C, :A
      3 skipped: no file README
-S16-filehandles/io.t...............................  86    0    0    0   86
+S16-filehandles/io.t...............................  87    0    0    0   87
 S16-filehandles/io_in_for_loops.t..................  29    0    0    0   29
 S16-filehandles/io_in_while_loops.t................  13    0    0    0   13
 S16-filehandles/mkdir_rmdir.rakudo.moar............  13    0    0    1   14
@@ -2690,14 +2689,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.85324256 seconds
-# gerdr: 0.8636699 seconds
-# recursive-ternary: 0.9685882 seconds
-# loop: 0.9860442 seconds
-# sequence-ternary: 1.65360592 seconds
-# recursive-ternary-hand-cached: 1.7910471 seconds
-# sequence: 2.4728733 seconds
-# hand-memoization: 2.483743 seconds
+integration/advent2012-day21.t.....................# kaz: 0.83219718 seconds
+# gerdr: 0.84428310 seconds
+# recursive-ternary: 0.95410443 seconds
+# loop: 0.9763591 seconds
+# sequence-ternary: 1.6360570 seconds
+# recursive-ternary-hand-cached: 1.7700549 seconds
+# sequence: 2.4509421 seconds
+# hand-memoization: 2.4751170 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2753,11 +2752,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5076,     0,   129,   361,  5566,  5663
-"S03",        4883,     0,   102,    87,  5072,  5094
+"S02",        5078,     0,   129,   361,  5568,  5661
+"S03",        4887,     0,   102,    85,  5074,  5108
 "S04",         987,     0,    40,    42,  1069,  1121
 "S05",        5236,     0,   104,   182,  5522,  5904
-"S06",        1180,     0,    41,   104,  1325,  1405
+"S06",        1182,     0,    41,   104,  1327,  1407
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         179,     0,    11,    10,   200,   200
 "S10",          71,     0,     2,     1,    74,   131
@@ -2766,7 +2765,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          35,     0,    10,    27,    72,    82
 "S14",         297,     0,    10,    10,   317,   330
 "S15",         240,     0,     2,    16,   258,   283
-"S16",         243,     0,     0,    17,   260,   304
+"S16",         244,     0,     0,    17,   261,   305
 "S17",         666,     0,     7,    19,   692,   692
 "S19",           6,     0,     0,     0,     6,     6
 "S22",          52,     0,     1,     0,    53,    53
@@ -2777,6 +2776,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9146,     0,   121,   173,  9440,  7839
 "int",        1206,     0,    12,    20,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32503,     0,   646,  1251, 34400, 34500
+"total",     32512,     0,   646,  1249, 34407, 34515
 ----------------
 No failures!
