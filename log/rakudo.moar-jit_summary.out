@@ -66,9 +66,7 @@ S02-literals/listquote.rakudo.moar.................  19    0    3    1   23
 S02-literals/misc-interpolation.t..................  50    0    0    0   50
 S02-literals/numeric.t.............................  22    0    0    0   22
 S02-literals/pair-boolean.t........................   6    0    0    0    6
-S02-literals/pairs.rakudo.moar.....................use of uninitialized value of type Bool in string context  in block <unit> at t/spec/S02-literals/pairs.rakudo.moar:70
-
-  75    0    2    2   79
+S02-literals/pairs.rakudo.moar.....................  75    0    2    2   79
      1 skipped: reduce meta op
      1 skipped: prefix:<|>
      1 todo   : reduce meta op
@@ -247,9 +245,7 @@ S02-names/symbolic-deref.rakudo.moar...............  30    0    2    3   35
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
 S02-types/WHICH.t.................................. 590    0    0    0  590
-S02-types/anon_block.rakudo.moar...................WARNINGS:
-Useless use of "," in expression "{$foo4 = \"blah\"}," in sink context (line 85)
-Code object coerced to string (please use .gist or .perl to do that)  in sub isnt at lib/Test.pm:128
+S02-types/anon_block.rakudo.moar...................Code object coerced to string (please use .gist or .perl to do that)  in sub isnt at lib/Test.pm:128
 
   39    0    1    2   42
      2 skipped: tests don't work if previous test fails
@@ -318,9 +314,7 @@ S02-types/declare.rakudo.moar......................  53    0    2   23   78
 S02-types/deprecations.t...........................  36    0    0    0   36
 S02-types/fatrat.t.................................   1    0    0    0    1
 S02-types/flattening.t.............................  41    0    0    0   41
-S02-types/hash.rakudo.moar.........................use of uninitialized value $expected of type Failure in string context  in sub is at lib/Test.pm:116
-
-  88    0    1    0   89
+S02-types/hash.rakudo.moar.........................  88    0    1    0   89
      1 todo   : auto-vivified binding does not work yet: RT #118947
 S02-types/hash_ref.t...............................  31    0    0    0   31
 S02-types/infinity.rakudo.moar.....................   6    0    3    4   13
@@ -347,11 +341,7 @@ use of uninitialized value of type Int in string context  in block <unit> at EVA
 S02-types/isDEPRECATED.rakudo.moar.................  12    0    8    0   20
      8 todo   : NYI
 S02-types/lazy-lists.t.............................  23    0    0    0   23
-S02-types/lists.rakudo.moar........................use of uninitialized value $got of type Parcel in string context  in sub is at lib/Test.pm:116
-
-use of uninitialized value $expected of type Parcel in string context  in sub is at lib/Test.pm:116
-
-  25    0    0    3   28
+S02-types/lists.rakudo.moar........................  25    0    0    3   28
      3 skipped: list binding
 S02-types/mix.rakudo.moar.......................... 174    0    2    3  179
      3 skipped: No longer Iterable
@@ -603,7 +593,7 @@ S03-operators/autoincrement-range.t................# Tests for 'a' .. 'z'
 # Tests for '૦' .. '૯' (Gujarati)
 # Tests for '୦' .. '୯' (Oriya)
   96    0    0    0   96
-S03-operators/autoincrement.t......................  78    0    0    0   78
+S03-operators/autoincrement.t......................  79    0    0    0   79
 S03-operators/autovivification.t...................use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-operators/autovivification.t:84
 
 use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-operators/autovivification.t:95
@@ -616,9 +606,9 @@ S03-operators/bag.t................................Element shifted from empty li
   in method Stringy at src/gen/m-CORE.setting:1129
   in sub infix:<~> at src/gen/m-CORE.setting:1530
   in sub showkv at t/spec/S03-operators/bag.t:7
-  in block <unit> at t/spec/S03-operators/bag.t:162
+  in block <unit> at t/spec/S03-operators/bag.t:165
 
- 100    0    0    0  100
+ 101    0    0    0  101
 S03-operators/basic-types.t........................  19    0    0    0   19
 S03-operators/bit.t................................  37    0    0    0   37
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
@@ -787,8 +777,7 @@ S03-operators/list-quote-junction.t................  16    0    0    0   16
 S03-operators/minmax.rakudo.moar...................  21    0    4    0   25
      2 todo   : Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious
      2 todo   : max/min non-associative NYI
-S03-operators/misc.rakudo.moar.....................  32    0    1    0   33
-     1 todo   : RT #122849
+S03-operators/misc.t...............................  32    0    0    0   32
 S03-operators/names.t..............................Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
 
 Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
@@ -1829,8 +1818,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1411694844
-# Using file temp_1411694844
+S16-filehandles/chmod.t............................# Using file temp_1411781277
+# Using file temp_1411781277
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2473,9 +2462,7 @@ S32-str/sprintf.rakudo.moar........................ 142    0   13    0  155
     10 todo   : Issues with Inf: RT #116280
 S32-str/substr-rw.rakudo.moar......................  19    0   12    0   31
     12 todo   : NYI
-S32-str/substr.rakudo.moar.........................use of uninitialized value $expected of type Failure in string context  in sub is at lib/Test.pm:116
-
-  56    0    0   13   69
+S32-str/substr.rakudo.moar.........................  56    0    0   13   69
     13 skipped: StrPos NYI
 S32-str/tc.rakudo.moar.............................   7    0    2    0    9
      2 todo   : NYI
@@ -2600,8 +2587,7 @@ integration/99problems-21-to-30.t..................use of uninitialized value $p
   15    0    0    0   15
 integration/99problems-31-to-40.t..................  66    0    0    1   67
      1 skipped: No Benchmark module yet
-integration/99problems-41-to-50.t..................  12    0    0    1   13
-     1 skipped: Test(s) not yet written: (**) Truth tables for logical expressions (3).
+integration/99problems-41-to-50.t..................  13    0    0    0   13
 integration/99problems-51-to-60.t..................  35    0    0    2   37
      1 skipped: Test(s) not yet written: (**) Generate-and-test paradigm
      1 skipped: Test(s) not yet written: (**) Construct height-balanced binary trees with a given number of nodes
@@ -2689,14 +2675,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8673044 seconds
-# gerdr: 0.8834482 seconds
-# recursive-ternary: 0.9691439 seconds
-# loop: 1.0053389 seconds
-# sequence-ternary: 1.6354777 seconds
-# recursive-ternary-hand-cached: 1.82422587 seconds
-# sequence: 2.46355128 seconds
-# hand-memoization: 2.5181045 seconds
+integration/advent2012-day21.t.....................# gerdr: 0.85866853 seconds
+# kaz: 0.8725896 seconds
+# recursive-ternary: 0.9488899 seconds
+# loop: 1.0006214 seconds
+# sequence-ternary: 1.6461961 seconds
+# recursive-ternary-hand-cached: 1.8092977 seconds
+# sequence: 2.4989166 seconds
+# hand-memoization: 2.540946 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2753,7 +2739,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5078,     0,   129,   361,  5568,  5661
-"S03",        4887,     0,   102,    85,  5074,  5108
+"S03",        4889,     0,   101,    85,  5075,  5109
 "S04",         987,     0,    40,    42,  1069,  1121
 "S05",        5236,     0,   104,   182,  5522,  5904
 "S06",        1182,     0,    41,   104,  1327,  1407
@@ -2774,8 +2760,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
 "S32",        9146,     0,   121,   173,  9440,  7839
-"int",        1206,     0,    12,    20,  1238,  1227
+"int",        1207,     0,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32512,     0,   646,  1249, 34407, 34515
+"total",     32515,     0,   645,  1248, 34408, 34516
 ----------------
 No failures!
