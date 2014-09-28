@@ -601,14 +601,9 @@ use of uninitialized value of type Any in numeric context  in block <unit> at t/
 use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:599
 
   23    0    0    0   23
-S03-operators/bag.t................................Element shifted from empty list
-  in method Str at src/gen/m-CORE.setting:13629
-  in method Stringy at src/gen/m-CORE.setting:1129
-  in sub infix:<~> at src/gen/m-CORE.setting:1530
-  in sub showkv at t/spec/S03-operators/bag.t:7
-  in block <unit> at t/spec/S03-operators/bag.t:165
-
- 101    0    0    0  101
+S03-operators/bag.t................................# Looks like you planned 101 tests, but ran 109
+ 109    0    0    0  101
+     8 tests more than planned were run
 S03-operators/basic-types.t........................  19    0    0    0   19
 S03-operators/bit.t................................  37    0    0    0   37
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
@@ -1818,8 +1813,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1411781277
-# Using file temp_1411781277
+S16-filehandles/chmod.t............................# Using file temp_1411867655
+# Using file temp_1411867655
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2675,14 +2670,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# gerdr: 0.85866853 seconds
-# kaz: 0.8725896 seconds
-# recursive-ternary: 0.9488899 seconds
-# loop: 1.0006214 seconds
-# sequence-ternary: 1.6461961 seconds
-# recursive-ternary-hand-cached: 1.8092977 seconds
-# sequence: 2.4989166 seconds
-# hand-memoization: 2.540946 seconds
+integration/advent2012-day21.t.....................# kaz: 0.87305168 seconds
+# gerdr: 0.87921341 seconds
+# recursive-ternary: 0.9683438 seconds
+# loop: 0.991118666 seconds
+# sequence-ternary: 1.63564677 seconds
+# recursive-ternary-hand-cached: 1.80501882 seconds
+# sequence: 2.46759069 seconds
+# hand-memoization: 2.4974618 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2739,7 +2734,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5078,     0,   129,   361,  5568,  5661
-"S03",        4889,     0,   101,    85,  5075,  5109
+"S03",        4897,     0,   101,    85,  5075,  5109
 "S04",         987,     0,    40,    42,  1069,  1121
 "S05",        5236,     0,   104,   182,  5522,  5904
 "S06",        1182,     0,    41,   104,  1327,  1407
@@ -2762,6 +2757,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9146,     0,   121,   173,  9440,  7839
 "int",        1207,     0,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32515,     0,   645,  1248, 34408, 34516
+"total",     32523,     0,   645,  1248, 34408, 34516
 ----------------
-No failures!
+Failure summary:
+S03-operators/bag.t passed 8 unplanned test(s)
