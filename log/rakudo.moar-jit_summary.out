@@ -822,8 +822,7 @@ S03-operators/so.rakudo.moar.......................  14    0    1    0   15
      1 todo   : check test and rakudo
 S03-operators/spaceship-and-containers.t...........   6    0    0    0    6
 S03-operators/spaceship.t..........................   5    0    0    0    5
-S03-operators/subscript-adverbs.t..................   0  110    0    0  110
-   110 tests aborted (missing ok/not ok)
+S03-operators/subscript-adverbs.t.................. 110    0    0    0  110
 S03-operators/subscript-vs-lt.t....................   4    0    0    0    4
 S03-operators/ternary.t............................  17    0    0    0   17
 S03-operators/value_equivalence.rakudo.moar........  73    0    2    0   75
@@ -1816,8 +1815,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1411954123
-# Using file temp_1411954124
+S16-filehandles/chmod.t............................# Using file temp_1412040418
+# Using file temp_1412040418
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2248,7 +2247,15 @@ S32-io/IO-Socket-INET.t............................   0    0    0   47   47
 S32-io/chdir.rakudo.moar...........................   8    0    0    2   10
      2 skipped: spec non-conformance due to missing sink context
 S32-io/copy.t......................................  29    0    0    0   29
-S32-io/dir.t.......................................  12    0    0    0   12
+S32-io/dir.t.......................................Saw 1 call to deprecated code during execution.
+================================================================================
+Method directory (from IO::Path) called at:
+  t/spec/S32-io/dir.t, lines 16,29
+Please use dirname instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these calls to deprecated code adapted,
+so that this message will disappear!
+  12    0    0    0   12
 S32-io/file-tests.t................................  34    0    0    0   34
 S32-io/io-path-cygwin.rakudo.moar..................  49    0    1    2   52
      2 skipped: On-system tests for filetest inheritance
@@ -2258,7 +2265,16 @@ S32-io/io-path-unix.rakudo.moar....................  36    0    1    0   37
 S32-io/io-path-win.rakudo.moar.....................  48    0    1    2   51
      2 skipped: On-system tests for filetest inheritance
      1 todo   : resolve NYI, needs nqp::readlink
-S32-io/io-path.t...................................  13    0    0    0   13
+S32-io/io-path.t...................................Saw 1 call to deprecated code during execution.
+================================================================================
+Method directory (from IO::Path) called at:
+  t/spec/S32-io/io-path.t, line 16
+  src/gen/m-CORE.setting, line 15373
+Please use dirname instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these calls to deprecated code adapted,
+so that this message will disappear!
+  13    0    0    0   13
 S32-io/io-spec-cygwin.t............................ 100    0    0    2  102
      2 skipped: cygwin on-platform tests
 S32-io/io-spec-unix.t..............................use of uninitialized value $path of type Any in string context  in block <unit> at t/spec/S32-io/io-spec-unix.t:48
@@ -2673,14 +2689,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.85150331 seconds
-# gerdr: 0.8628425 seconds
-# recursive-ternary: 0.9632998 seconds
-# loop: 0.9775551 seconds
-# sequence-ternary: 1.625584 seconds
-# recursive-ternary-hand-cached: 1.787048 seconds
-# sequence: 2.45382978 seconds
-# hand-memoization: 2.483436 seconds
+integration/advent2012-day21.t.....................# kaz: 0.82452179 seconds
+# gerdr: 0.84003551 seconds
+# recursive-ternary: 0.9386330 seconds
+# loop: 0.96154610 seconds
+# sequence-ternary: 1.61574209 seconds
+# recursive-ternary-hand-cached: 1.73992956 seconds
+# sequence: 2.43636222 seconds
+# hand-memoization: 2.4844168 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2737,7 +2753,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5082,     0,   129,   362,  5573,  5666
-"S03",        4781,   110,   111,    92,  5094,  5128
+"S03",        4891,     0,   111,    92,  5094,  5128
 "S04",         987,     0,    40,    42,  1069,  1121
 "S05",        5236,     0,   104,   182,  5522,  5904
 "S06",        1182,     0,    41,   104,  1327,  1407
@@ -2760,7 +2776,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9146,     0,   121,   173,  9440,  7839
 "int",        1207,     0,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32411,   110,   655,  1256, 34432, 34540
+"total",     32521,     0,   655,  1256, 34432, 34540
 ----------------
-Failure summary:
-S03-operators/subscript-adverbs.t aborted 110 test(s)
+No failures!
