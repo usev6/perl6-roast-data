@@ -82,7 +82,18 @@ S02-literals/quoting.rakudo.parrot.................
      1 todo   : retriage
      2 todo   : q:x assigned to array
      4 todo   : quoting adverbs
-S02-literals/radix.rakudo.parrot................... 129    0    6    0  135
+S02-literals/radix.rakudo.parrot...................    
+# Failed test 'right exception type (X::TypeCheck::Binding)'
+# at lib/Test.pm line 309
+    # Expected: (X::TypeCheck::Binding)
+    # Got:      (X::Numeric::Confused)
+    # Exception message: You have confused the number 42 with the textual representation "42"
+    # Looks like you failed 1 tests of 2
+
+# Failed test ':10() really wants a string, not a number'
+# at t/spec/S02-literals/radix.rakudo.parrot line 28
+# Looks like you failed 1 tests of 135
+ 128    1    6    0  135
      1 todo   : This needs an RT
      4 todo   : Some question of what this form should actually do
      1 todo   : Really?!
@@ -485,7 +496,7 @@ S02-types/sigils-and-types.rakudo.parrot...........  26    0    2    0   28
 S02-types/subscripts_and_context.t.................   8    0    0    0    8
 S02-types/subset.rakudo.parrot.....................  42    0    0    1   43
      1 skipped: (noauto) succeeds for the wrong reason (need to test the error)
-S02-types/type.t...................................  50    0    0    0   50
+S02-types/type.t...................................  51    0    0    0   51
 S02-types/undefined-types.rakudo.parrot............use of uninitialized value $got of type Int in string context  in sub is at lib/Test.pm:116
 
 use of uninitialized value $got of type Int in string context  in sub is at lib/Test.pm:116
@@ -972,7 +983,7 @@ S04-declarations/implicit-parameter.rakudo.parrot..  16    0    2    0   18
      2 todo   : pointy blocks and $_
 S04-declarations/multiple.rakudo.parrot............Potential difficulties:
     Redeclaration of symbol $x
-    at t/spec/S04-declarations/multiple.rakudo.parrot:17
+    at t/spec/S04-declarations/multiple.rakudo.parrot:18
     ------> [32m    my $x [33m⏏[31m= 3;[0m
 Potential difficulties:
     Redeclaration of symbol $x
@@ -1898,8 +1909,8 @@ S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.parrot..................  12    0    1    0   13
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1412129172
-# Using file temp_1412129172
+S16-filehandles/chmod.t............................# Using file temp_1412215613
+# Using file temp_1412215613
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2233,7 +2244,7 @@ S32-io/io-path.t...................................Saw 1 call to deprecated code
 ================================================================================
 Method directory (from IO::Path) called at:
   t/spec/S32-io/io-path.t, line 16
-  gen/parrot/CORE.setting, line 15252
+  gen/parrot/CORE.setting, line 15265
 Please use dirname instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
@@ -2657,13 +2668,13 @@ integration/advent2012-day15.rakudo.parrot.........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.rakudo.parrot.........# kaz: 2.5983470 seconds
-# gerdr: 2.7207473 seconds
-# recursive-ternary: 3.40073496 seconds
-# loop: 3.4789284 seconds
-# sequence-ternary: 6.76192979 seconds
-# recursive-ternary-hand-cached: 8.2086309 seconds
-# sequence: 10.9835225 seconds
+integration/advent2012-day21.rakudo.parrot.........# kaz: 2.65106375 seconds
+# gerdr: 2.8656683 seconds
+# loop: 3.4524360 seconds
+# recursive-ternary: 3.6279012 seconds
+# sequence-ternary: 6.87509380 seconds
+# recursive-ternary-hand-cached: 8.3234122 seconds
+# sequence: 11.0568511 seconds
    8    0    0    1    9
      1 skipped: RT #122497
 integration/advent2012-day22.rakudo.parrot.........   5    0    1    0    6
@@ -2714,7 +2725,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5009,     0,   124,   440,  5573,  5665
+"S02",        5009,     1,   124,   440,  5574,  5666
 "S03",        4891,     0,   111,    92,  5094,  5128
 "S04",         979,     0,    48,    42,  1069,  1121
 "S05",        5150,     0,   104,   268,  5522,  5904
@@ -2738,8 +2749,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9152,     0,   109,   181,  9442,  7841
 "int",        1196,     0,     9,    19,  1224,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31438,     2,   637,  1394, 33471, 34515
+"total",     31438,     3,   637,  1394, 33472, 34516
 ----------------
 Failure summary:
+S02-literals/radix.rakudo.parrot 13 - :10() really wants a string, not a number
 S19-command-line/dash-e.t 2 - -e print $something works with non-ASCII string literals
 S19-command-line/dash-e.t 3 - -e works with non-ASCII program texts
