@@ -81,18 +81,7 @@ S02-literals/quoting.rakudo.moar...................
      1 todo   : retriage
      2 todo   : q:x assigned to array
      4 todo   : quoting adverbs
-S02-literals/radix.rakudo.moar.....................    
-# Failed test 'right exception type (X::TypeCheck::Binding)'
-# at lib/Test.pm line 309
-    # Expected: (X::TypeCheck::Binding)
-    # Got:      (X::Numeric::Confused)
-    # Exception message: You have confused the number 42 with the textual representation "42"
-    # Looks like you failed 1 tests of 2
-
-# Failed test ':10() really wants a string, not a number'
-# at t/spec/S02-literals/radix.rakudo.moar line 28
-# Looks like you failed 1 tests of 135
- 128    1    6    0  135
+S02-literals/radix.rakudo.moar..................... 129    0    6    0  135
      1 todo   : This needs an RT
      4 todo   : Some question of what this form should actually do
      1 todo   : Really?!
@@ -298,7 +287,7 @@ S02-types/capture.rakudo.moar......................  18    0    2    1   21
      1 skipped: #122555
      2 todo   : nom regression
 S02-types/catch_type_cast_mismatch.t...............  11    0    0    0   11
-S02-types/declare.rakudo.moar......................  53    0    2   23   78
+S02-types/declare.rakudo.moar......................  54    0    2   22   78
      1 skipped: Grapheme NYI
      1 skipped: Matcher isa NYI
      1 skipped: Ordering NYI
@@ -317,7 +306,6 @@ S02-types/declare.rakudo.moar......................  53    0    2   23   78
      1 skipped: Integral NYI
      1 skipped: KeyExtractor NYI
      1 skipped: bit NYI
-     1 skipped: Complex not type converted properly during assignment from Rat: RT #122347
      1 skipped: StrLen NYI
      1 skipped: Char NYI
      1 skipped: AnyChar NYI
@@ -402,7 +390,7 @@ S02-types/num.t....................................  66    0    0    0   66
 S02-types/pair.rakudo.moar.........................  94    0    1    2   97
      2 skipped: method($invocant:) syntax missing
      1 todo   : should it really have \n on the end?
-S02-types/parcel.t.................................  48    0    0    0   48
+S02-types/parcel.t.................................  52    0    0    0   52
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t..................................use of uninitialized value of type Range in numeric context  in block <unit> at t/spec/S02-types/range.t:87
 
@@ -825,7 +813,7 @@ S03-operators/relational.rakudo.moar............... 118    0    4    0  122
      4 todo   : RT #121987
 S03-operators/repeat.t.............................  32    0    0    0   32
 S03-operators/scalar-assign.t......................   4    0    0    0    4
-S03-operators/set.t................................ 288    0    0    0  288
+S03-operators/set.t................................ 290    0    0    0  290
 S03-operators/short-circuit.t......................use of uninitialized value of type Nil in numeric context  in block <unit> at t/spec/S03-operators/short-circuit.t:205
 
   83    0    0    0   83
@@ -1280,13 +1268,13 @@ use of uninitialized value of type Any in string context  in block <unit> at t/s
      3 skipped: s[...] op= RHS
      1 todo   : be smarter about constant detection
 S05-transliteration/79778.t........................   1    0    0    0    1
-S05-transliteration/trans.rakudo.moar..............use of uninitialized value of type Int in string context  in sub  at t/spec/S05-transliteration/trans.rakudo.moar:207
+S05-transliteration/trans.rakudo.moar..............use of uninitialized value of type Int in string context  in block  at t/spec/S05-transliteration/trans.rakudo.moar:207
 
-use of uninitialized value of type Int in string context  in sub  at t/spec/S05-transliteration/trans.rakudo.moar:207
+use of uninitialized value of type Int in string context  in block  at t/spec/S05-transliteration/trans.rakudo.moar:207
 
-use of uninitialized value of type Int in string context  in sub  at t/spec/S05-transliteration/trans.rakudo.moar:207
+use of uninitialized value of type Int in string context  in block  at t/spec/S05-transliteration/trans.rakudo.moar:207
 
-use of uninitialized value of type Int in string context  in sub  at t/spec/S05-transliteration/trans.rakudo.moar:207
+use of uninitialized value of type Int in string context  in block  at t/spec/S05-transliteration/trans.rakudo.moar:207
 
   46    0   13    1   60
      1 skipped: feed operator NYI
@@ -1573,7 +1561,7 @@ S11-modules/require.rakudo.moar....................  12    0    2    1   15
                                                    pass fail todo skip plan
 S12-attributes/class.rakudo.moar...................  20    0    0    6   26
      6 skipped: nom regression - method ^foo
-S12-attributes/clone.rakudo.moar...................  32    0    2    0   34
+S12-attributes/clone.rakudo.moar...................  33    0    2    0   35
      2 todo   : clone currently messes up original
 S12-attributes/defaults.t..........................  34    0    0    0   34
 S12-attributes/delegation.t........................  65    0    0    0   65
@@ -1826,8 +1814,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1412212301
-# Using file temp_1412212301
+S16-filehandles/chmod.t............................# Using file temp_1412298768
+# Using file temp_1412298768
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2280,7 +2268,6 @@ S32-io/io-path.t...................................Saw 1 call to deprecated code
 ================================================================================
 Method directory (from IO::Path) called at:
   t/spec/S32-io/io-path.t, line 16
-  src/gen/m-CORE.setting, line 15374
 Please use dirname instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
@@ -2700,14 +2687,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.83280206 seconds
-# gerdr: 0.83967717 seconds
-# recursive-ternary: 0.9497245 seconds
-# loop: 0.9681136 seconds
-# sequence-ternary: 1.6157982 seconds
-# recursive-ternary-hand-cached: 1.7576774 seconds
-# sequence: 2.4241221 seconds
-# hand-memoization: 2.497085 seconds
+integration/advent2012-day21.t.....................# kaz: 0.8458088 seconds
+# gerdr: 0.86430831 seconds
+# recursive-ternary: 0.94476563 seconds
+# loop: 0.9879397 seconds
+# sequence-ternary: 1.62804855 seconds
+# recursive-ternary-hand-cached: 1.760975 seconds
+# sequence: 2.48825927 seconds
+# hand-memoization: 2.49722622 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2763,8 +2750,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5082,     1,   129,   362,  5574,  5666
-"S03",        4891,     0,   111,    92,  5094,  5128
+"S02",        5088,     0,   129,   361,  5578,  5670
+"S03",        4893,     0,   111,    92,  5096,  5130
 "S04",         987,     0,    40,    42,  1069,  1121
 "S05",        5236,     0,   104,   182,  5522,  5904
 "S06",        1182,     0,    41,   104,  1327,  1407
@@ -2772,7 +2759,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",         179,     0,    11,    10,   200,   200
 "S10",          71,     0,     2,     1,    74,   131
 "S11",         104,     0,     4,    14,   122,   141
-"S12",        1344,     0,    46,   124,  1514,  1572
+"S12",        1345,     0,    46,   124,  1515,  1573
 "S13",          35,     0,    10,    27,    72,    82
 "S14",         297,     0,    10,    10,   317,   330
 "S15",         240,     0,     2,    16,   258,   283
@@ -2787,7 +2774,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9148,     0,   121,   173,  9442,  7841
 "int",        1207,     0,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32524,     1,   655,  1256, 34436, 34543
+"total",     32533,     0,   655,  1255, 34443, 34550
 ----------------
-Failure summary:
-S02-literals/radix.rakudo.moar 13 - :10() really wants a string, not a number
+No failures!
