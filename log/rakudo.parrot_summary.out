@@ -185,7 +185,8 @@ Code object coerced to string (please use .gist or .perl to do that)  in block  
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-  10    0    2    0   12
+  10    0    2    1   13
+     1 skipped: NYI
      2 todo   : cannot easily override [] at the moment
 S02-names/bare-sigil.t.............................  10    0    0    0   10
 S02-names/caller.t.................................  15    0    0    0   15
@@ -1627,7 +1628,7 @@ S10-packages/basic.rakudo.parrot...................  58    0    2    1   61
      1 todo   : ticket based only on class... RT #60446
      1 todo   : RT #64606
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.t......................   1    0    0    0    1
+S10-packages/precompilation.t......................   8    0    0    0    8
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
 S11-modules/export.rakudo.parrot...................  28    0    0    8   36
@@ -1897,8 +1898,8 @@ S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.parrot..................  12    0    1    0   13
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1412302082
-# Using file temp_1412302082
+S16-filehandles/chmod.t............................# Using file temp_1412388444
+# Using file temp_1412388444
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2210,33 +2211,49 @@ S32-io/IO-Socket-INET.t............................   0    0    0   47   47
 S32-io/chdir.rakudo.parrot.........................   8    0    0    2   10
      2 skipped: spec non-conformance due to missing sink context
 S32-io/copy.t......................................  29    0    0    0   29
-S32-io/dir.t.......................................Saw 1 call to deprecated code during execution.
-================================================================================
-Method directory (from IO::Path) called at:
-  t/spec/S32-io/dir.t, lines 16,29
-Please use dirname instead.
---------------------------------------------------------------------------------
-Please contact the author to have these calls to deprecated code adapted,
-so that this message will disappear!
-  12    0    0    0   12
+S32-io/dir.t.......................................
+# Failed test 'current directory contains a t/ dir'
+# at t/spec/S32-io/dir.t line 13
+
+# Failed test 'current directory contains a t/ dir'
+# at t/spec/S32-io/dir.t line 14
+
+# Failed test '"." and ".." are not returned'
+# at t/spec/S32-io/dir.t line 19
+
+# Failed test '... unless you override :test'
+# at t/spec/S32-io/dir.t line 20
+# expected: '2'
+#      got: '35'
+
+# Failed test '"." and ".." are not returned'
+# at t/spec/S32-io/dir.t line 25
+
+# Failed test '... unless you override :test'
+# at t/spec/S32-io/dir.t line 26
+# expected: '2'
+#      got: '35'
+
+# Failed test 'dir("t") returns paths with .directory of "t"'
+# at t/spec/S32-io/dir.t line 29
+# expected: 't'
+#      got: ''
+# Looks like you failed 7 tests of 12
+   5    7    0    0   12
 S32-io/file-tests.t................................  34    0    0    0   34
-S32-io/io-path-cygwin.rakudo.parrot................  49    0    1    2   52
-     2 skipped: On-system tests for filetest inheritance
+S32-io/io-path-cygwin.rakudo.parrot................use of uninitialized value of type Any in string context  in block <unit> at t/spec/S32-io/io-path-cygwin.rakudo.parrot:9
+
+  49    0    1    0   50
      1 todo   : resolve NYI, needs nqp::readlink
-S32-io/io-path-unix.rakudo.parrot..................  36    0    1    0   37
+S32-io/io-path-unix.rakudo.parrot..................use of uninitialized value of type Any in string context  in block <unit> at t/spec/S32-io/io-path-unix.rakudo.parrot:9
+
+  34    0    1    0   35
      1 todo   : resolve NYI, needs nqp::readlink
-S32-io/io-path-win.rakudo.parrot...................  48    0    1    2   51
-     2 skipped: On-system tests for filetest inheritance
+S32-io/io-path-win.rakudo.parrot...................use of uninitialized value of type Any in string context  in block <unit> at t/spec/S32-io/io-path-win.rakudo.parrot:8
+
+  48    0    1    0   49
      1 todo   : resolve NYI, needs nqp::readlink
-S32-io/io-path.t...................................Saw 1 call to deprecated code during execution.
-================================================================================
-Method directory (from IO::Path) called at:
-  t/spec/S32-io/io-path.t, line 16
-Please use dirname instead.
---------------------------------------------------------------------------------
-Please contact the author to have these calls to deprecated code adapted,
-so that this message will disappear!
-  13    0    0    0   13
+S32-io/io-path.t...................................  13    0    0    0   13
 S32-io/io-spec-cygwin.t............................ 100    0    0    2  102
      2 skipped: cygwin on-platform tests
 S32-io/io-spec-unix.t..............................use of uninitialized value $path of type Any in string context  in block <unit> at t/spec/S32-io/io-spec-unix.t:48
@@ -2610,7 +2627,16 @@ integration/advent2009-day22.t.....................   4    0    0    0    4
 integration/advent2009-day23.rakudo.parrot.........   9    0    0    1   10
      1 skipped: lists aren't properly lazy in Rakudo yet
 integration/advent2009-day24.t.....................   4    0    0    0    4
-integration/advent2010-day03.t.....................  12    0    0    0   12
+integration/advent2010-day03.t.....................
+# Failed test 'dir'
+# at t/spec/integration/advent2010-day03.t line 19
+# missing: Makefile VERSION CREDITS LICENSE
+
+# Failed test 'dir'
+# at t/spec/integration/advent2010-day03.t line 24
+# got:  missing: t/spectest.data
+# Looks like you failed 2 tests of 12
+  10    2    0    0   12
 integration/advent2010-day04.t.....................  11    0    0    0   11
 integration/advent2010-day06.t.....................  12    0    0    0   12
 integration/advent2010-day07.t.....................   8    0    0    0    8
@@ -2655,13 +2681,13 @@ integration/advent2012-day15.rakudo.parrot.........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.rakudo.parrot.........# gerdr: 2.66439001 seconds
-# kaz: 2.80492821 seconds
-# recursive-ternary: 3.3684556 seconds
-# loop: 3.4561299 seconds
-# sequence-ternary: 6.8856213 seconds
-# recursive-ternary-hand-cached: 8.2816204 seconds
-# sequence: 11.163434822 seconds
+integration/advent2012-day21.rakudo.parrot.........# kaz: 2.7105973 seconds
+# gerdr: 2.835161 seconds
+# recursive-ternary: 3.3484289 seconds
+# loop: 3.5971269 seconds
+# sequence-ternary: 6.8578653 seconds
+# recursive-ternary-hand-cached: 8.4029979 seconds
+# sequence: 10.98702423 seconds
    8    0    0    1    9
      1 skipped: RT #122497
 integration/advent2012-day22.rakudo.parrot.........   5    0    1    0    6
@@ -2712,14 +2738,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5015,     0,   124,   439,  5578,  5670
+"S02",        5015,     0,   124,   440,  5579,  5671
 "S03",        4893,     0,   111,    92,  5096,  5130
 "S04",         979,     0,    48,    42,  1069,  1121
 "S05",        5150,     0,   104,   268,  5522,  5904
 "S06",        1179,     0,    44,   104,  1327,  1407
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         179,     0,    11,    10,   200,   200
-"S10",          71,     0,     2,     1,    74,   131
+"S10",          78,     0,     2,     1,    81,   138
 "S11",         104,     0,     4,    14,   122,   141
 "S12",        1343,     0,    48,   124,  1515,  1573
 "S13",          35,     0,    10,    27,    72,    82
@@ -2733,11 +2759,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1205,     0,     0,    42,  1247,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
-"S32",        9152,     0,   109,   181,  9442,  7841
-"int",        1196,     0,     9,    19,  1224,  1227
+"S32",        9143,     7,   109,   177,  9436,  7835
+"int",        1194,     2,     9,    19,  1224,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31447,     2,   637,  1393, 33479, 34523
+"total",     31443,    11,   637,  1390, 33481, 34525
 ----------------
 Failure summary:
 S19-command-line/dash-e.t 2 - -e print $something works with non-ASCII string literals
 S19-command-line/dash-e.t 3 - -e works with non-ASCII program texts
+S32-io/dir.t 2 - current directory contains a t/ dir
+S32-io/dir.t 3 - current directory contains a t/ dir
+S32-io/dir.t 6 - "." and ".." are not returned
+S32-io/dir.t 7 - ... unless you override :test
+S32-io/dir.t 9 - "." and ".." are not returned
+S32-io/dir.t 10 - ... unless you override :test
+S32-io/dir.t 12 - dir("t") returns paths with .directory of "t"
+integration/advent2010-day03.t 1 - dir
+integration/advent2010-day03.t 2 - dir
