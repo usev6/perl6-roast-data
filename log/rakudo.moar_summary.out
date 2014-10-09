@@ -396,7 +396,7 @@ S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t..................................use of uninitialized value of type Range in numeric context  in block <unit> at t/spec/S02-types/range.t:87
 
  135    0    0    0  135
-S02-types/set.rakudo.moar.......................... 157    0   11    1  169
+S02-types/set.rakudo.moar.......................... 161    0   11    1  173
      1 skipped: Set is no longer Iterable
      1 todo   : Not properly interpolating
      1 todo   : we have not secured .WHICH creation yet
@@ -972,12 +972,12 @@ S04-exceptions/pending.rakudo.moar.................   4    0    1   16   21
      3 skipped: $object.handled
      1 todo   : not full of fail?
 S04-phasers/ascending-order.t......................   7    0    0    0    7
-S04-phasers/begin.t................................   9    0    0    0    9
+S04-phasers/begin.t................................  10    0    0    0   10
 S04-phasers/check.t................................   5    0    0    0    5
 S04-phasers/descending-order.t.....................   7    0    0    0    7
 S04-phasers/end.rakudo.moar........................   3    0    2    0    5
      2 todo   : lexicals and EVAL()
-S04-phasers/enter-leave.rakudo.moar................  18    0    1    2   21
+S04-phasers/enter-leave.rakudo.moar................  19    0    1    2   22
      1 skipped: unwind, RT #121530
      1 skipped: leave NYI
      1 todo   : is this spec? why would LEAVE not see outer $!? fossil?
@@ -1015,7 +1015,9 @@ S04-statements/do.rakudo.moar......................  21    0    0    6   27
      3 skipped: Undeclared name A
      1 skipped: next without loop construct
 S04-statements/for-scope.t.........................  16    0    0    0   16
-S04-statements/for.rakudo.moar.....................  78    0    2    1   81
+S04-statements/for.rakudo.moar.....................Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
+
+  82    0    2    1   85
      1 skipped: optional variable in for loop (RT #63994)
      2 todo   : RT #113026 array iterator does not track a growing array
 S04-statements/for_with_only_one_item.t............   9    0    0    0    9
@@ -1024,7 +1026,7 @@ S04-statements/gather.rakudo.moar..................  27    0    1    0   28
 S04-statements/given.t.............................  51    0    0    0   51
 S04-statements/if.t................................  29    0    0    0   29
 S04-statements/label.t.............................   4    0    0    0    4
-S04-statements/last.t..............................   8    0    0    0    8
+S04-statements/last.t..............................   9    0    0    0    9
 S04-statements/loop.t..............................  15    0    0    0   15
 S04-statements/map-and-sort-in-for.t...............   4    0    0    0    4
 S04-statements/next.t..............................  12    0    0    0   12
@@ -1329,7 +1331,7 @@ S06-macros/opaque-ast.rakudo.moar..................   3    0    0    4    7
      1 skipped: return from macro
 S06-macros/quasi-blocks.rakudo.moar................  10    0    0    2   12
      2 skipped: No such method 'STORE' for invocant of type 'Mu'
-S06-macros/unquoting.rakudo.moar...................   4    0    0    1    5
+S06-macros/unquoting.rakudo.moar...................   5    0    0    1    6
      1 skipped: Specified code ref has no outer, RT #121533
 S06-multi/lexical-multis.rakudo.moar...............  14    0    1    0   15
      1 todo   : lexical scope as tie breaker
@@ -1480,7 +1482,7 @@ S06-traits/is-copy.t...............................Potential difficulties:
     at EVAL_0:1
     ------> [32msub f ($x is copy) { my $x [33m⏏[31m}[0m
   24    0    0    0   24
-S06-traits/is-readonly.rakudo.moar.................useless use of 'is readonly' on $!attr  in any  at src/Perl6/World.nqp:1835
+S06-traits/is-readonly.rakudo.moar.................useless use of 'is readonly' on $!attr  in any  at src/Perl6/World.nqp:1844
 
    2    0    1    0    3
      1 todo   : readonly attributes
@@ -1717,7 +1719,7 @@ S12-methods/indirect_notation.rakudo.moar..........  10    0    0   23   33
      6 skipped: .@foo not yet working
     15 skipped: .*, .+ and .? with @foo
      2 skipped: TTIAR near $o:
-S12-methods/instance.rakudo.moar...................useless use of 'is rw' on @!something  in any  at src/Perl6/World.nqp:1835
+S12-methods/instance.rakudo.moar...................useless use of 'is rw' on @!something  in any  at src/Perl6/World.nqp:1844
 
 use of uninitialized value $got of type AnonInvocant in string context  in sub is at lib/Test.pm:116
 
@@ -1827,8 +1829,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1412730722
-# Using file temp_1412730722
+S16-filehandles/chmod.t............................# Using file temp_1412817173
+# Using file temp_1412817173
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2119,9 +2121,9 @@ Code object coerced to string (please use .gist or .perl to do that)  in block  
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
-Code object coerced to string (please use .gist or .perl to do that)  in any  at src/Perl6/World.nqp:1835
+Code object coerced to string (please use .gist or .perl to do that)  in any  at src/Perl6/World.nqp:1844
 
-Code object coerced to string (please use .gist or .perl to do that)  in any throw at src/Perl6/World.nqp:2715
+Code object coerced to string (please use .gist or .perl to do that)  in any throw at src/Perl6/World.nqp:2724
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
@@ -2733,14 +2735,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.845098 seconds
-# gerdr: 0.86620336 seconds
-# recursive-ternary: 0.9676859 seconds
-# loop: 0.9795798 seconds
-# sequence-ternary: 1.65513336 seconds
-# recursive-ternary-hand-cached: 1.812541425 seconds
-# sequence: 2.4641434 seconds
-# hand-memoization: 2.5050047 seconds
+integration/advent2012-day21.t.....................# kaz: 0.8545938 seconds
+# gerdr: 0.8574184 seconds
+# recursive-ternary: 0.9536851 seconds
+# loop: 0.9825990 seconds
+# sequence-ternary: 1.6100549 seconds
+# recursive-ternary-hand-cached: 1.788408 seconds
+# sequence: 2.4438380 seconds
+# hand-memoization: 2.4794546 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2796,11 +2798,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5088,     0,   129,   362,  5579,  5671
+"S02",        5092,     0,   129,   362,  5583,  5675
 "S03",        4893,     0,   111,    92,  5096,  5130
-"S04",         990,     0,    40,    42,  1072,  1124
+"S04",         997,     0,    40,    42,  1079,  1131
 "S05",        5242,     0,   104,   177,  5523,  5905
-"S06",        1184,     0,    41,   104,  1329,  1409
+"S06",        1185,     0,    41,   104,  1330,  1410
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         180,     0,    11,    10,   201,   201
 "S10",          81,     0,     4,     1,    86,   143
@@ -2820,6 +2822,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9148,     0,   121,   169,  9438,  7872
 "int",        1207,     0,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32565,     0,   657,  1247, 34469, 34611
+"total",     32577,     0,   657,  1247, 34481, 34623
 ----------------
 No failures!
