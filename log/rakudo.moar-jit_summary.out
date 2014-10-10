@@ -977,7 +977,7 @@ S04-phasers/check.t................................   5    0    0    0    5
 S04-phasers/descending-order.t.....................   7    0    0    0    7
 S04-phasers/end.rakudo.moar........................   3    0    2    0    5
      2 todo   : lexicals and EVAL()
-S04-phasers/enter-leave.rakudo.moar................  19    0    1    2   22
+S04-phasers/enter-leave.rakudo.moar................  20    0    1    2   23
      1 skipped: unwind, RT #121530
      1 skipped: leave NYI
      1 todo   : is this spec? why would LEAVE not see outer $!? fossil?
@@ -1079,7 +1079,7 @@ S05-grammar/parse_and_parsefile.t..................use of uninitialized value of
 Saw 1 call to deprecated code during execution.
 ================================================================================
 Method slurp (from IO::Handle) called at:
-  src/gen/m-CORE.setting, line 14106
+  src/gen/m-CORE.setting, line 14108
 Please use IO::Path.slurp instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
@@ -1137,11 +1137,12 @@ S05-metachars/closure.rakudo.moar..................   6    0    1    5   12
      1 todo   : make() inside closure
 S05-metachars/line-anchors.t.......................  19    0    0    0   19
 S05-metachars/newline.t............................  15    0    0    0   15
-S05-metachars/tilde.rakudo.moar....................  14    0    0   12   26
+S05-metachars/tilde.rakudo.moar....................  14    0    1   12   27
      2 skipped: backtracking to find ~ goal
      3 skipped: exceptions from regexes
      2 skipped: backtracking into ~
      5 skipped: should not throw exceptions
+     1 todo   : RT #77616
 S05-metasyntax/angle-brackets.rakudo.moar..........Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S05-metasyntax/angle-brackets.rakudo.moar:193
 
 Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S05-metasyntax/angle-brackets.rakudo.moar:193
@@ -1829,8 +1830,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1412818117
-# Using file temp_1412818117
+S16-filehandles/chmod.t............................# Using file temp_1412904457
+# Using file temp_1412904457
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2074,7 +2075,7 @@ use of uninitialized value $expected of type Int in string context  in sub is at
  216    0    0    0  216
 S32-array/delete.t.................................use of uninitialized value of type Any in string context  in block <unit> at t/spec/S32-array/delete.t:64
 
-  29    0    0    0   29
+  30    0    0    0   30
 S32-array/elems.t..................................  11    0    0    0   11
 S32-array/end.t....................................  12    0    0    0   12
 S32-array/exists-adverb.t..........................  52    0    0    0   52
@@ -2235,7 +2236,7 @@ Code object coerced to string (please use .gist or .perl to do that)  in block  
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
- 267    0    2    0  269
+ 268    0    2    0  270
      1 todo   : Cannot find method "returns"
      1 todo   : parsing regression
 S32-hash/delete-adverb.t...........................use of uninitialized value $got of type Int in string context  in sub is at lib/Test.pm:116
@@ -2328,7 +2329,7 @@ spurt($handle,...) called at:
 Please use spurt($path,...) instead.
 --------------------------------------------------------------------------------
 Method spurt (from IO::Handle) called at:
-  src/gen/m-CORE.setting, line 15925
+  src/gen/m-CORE.setting, line 15927
 Please use IO::Path.spurt instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
@@ -2735,14 +2736,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.85800943 seconds
-# gerdr: 0.86516030 seconds
-# recursive-ternary: 0.97039571 seconds
-# loop: 0.98700772 seconds
-# sequence-ternary: 1.6321215 seconds
-# recursive-ternary-hand-cached: 1.7952945 seconds
-# hand-memoization: 2.461789 seconds
-# sequence: 2.481592 seconds
+integration/advent2012-day21.t.....................# kaz: 0.8630382 seconds
+# gerdr: 0.87127891 seconds
+# recursive-ternary: 0.95148125 seconds
+# loop: 0.982319 seconds
+# sequence-ternary: 1.63911629 seconds
+# recursive-ternary-hand-cached: 1.7850577 seconds
+# hand-memoization: 2.4838212 seconds
+# sequence: 2.4842080 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2800,8 +2801,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5092,     0,   129,   362,  5583,  5675
 "S03",        4893,     0,   111,    92,  5096,  5130
-"S04",         997,     0,    40,    42,  1079,  1131
-"S05",        5242,     0,   104,   177,  5523,  5905
+"S04",         998,     0,    40,    42,  1080,  1132
+"S05",        5242,     0,   105,   177,  5524,  5906
 "S06",        1185,     0,    41,   104,  1330,  1410
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         180,     0,    11,    10,   201,   201
@@ -2819,9 +2820,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1205,     0,     0,    42,  1247,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
-"S32",        9148,     0,   121,   169,  9438,  7872
+"S32",        9150,     0,   121,   169,  9440,  7874
 "int",        1207,     0,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32577,     0,   657,  1247, 34481, 34623
+"total",     32580,     0,   658,  1247, 34485, 34627
 ----------------
 No failures!
