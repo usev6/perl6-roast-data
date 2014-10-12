@@ -459,7 +459,7 @@ S02-types/unicode.rakudo.moar......................   2    0    3   11   16
      2 skipped: graphs NYI
      9 skipped: Bytes/Codes/Graphs NYI
      3 todo   : RT #65170
-S02-types/version.t................................  35    0    0    0   35
+S02-types/version.t................................  36    0    0    0   36
 S02-types/whatever.rakudo.moar.....................  78    0    4    5   87
      5 skipped: currying plus meta ops
      3 todo   : RT #122708 - currying of min/max
@@ -624,7 +624,7 @@ S03-operators/context-forcers.rakudo.moar..........  95    0    0    2   97
      2 skipped: failure modes of Str.Numeric
 S03-operators/context.t............................  38    0    0    0   38
 S03-operators/custom.t.............................   1    0    0    0    1
-S03-operators/div.t................................   6    0    0    0    6
+S03-operators/div.t................................   7    0    0    0    7
 S03-operators/equality.t...........................use of uninitialized value $foo of type Any in string context  in block <unit> at t/spec/S03-operators/equality.t:29
 
 use of uninitialized value $foo of type Any in string context  in block <unit> at t/spec/S03-operators/equality.t:30
@@ -1279,7 +1279,7 @@ use of uninitialized value of type Int in string context  in block  at t/spec/S0
 
 use of uninitialized value of type Int in string context  in block  at t/spec/S05-transliteration/trans.rakudo.moar:207
 
-  46    0   13    1   60
+  48    0   13    1   62
      1 skipped: feed operator NYI
      2 todo   : closures and regexes
     10 todo   : flags
@@ -1535,7 +1535,7 @@ S10-packages/basic.rakudo.moar.....................  58    0    2    1   61
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
 S10-packages/precompilation.rakudo.moar............  11    0    2    0   13
      1 todo   : RT #122773
-     1 todo   : RT #122896
+     1 todo PASSED: RT #122896
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
 S11-modules/export.rakudo.moar.....................  28    0    0    8   36
@@ -1822,8 +1822,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1412990929
-# Using file temp_1412990929
+S16-filehandles/chmod.t............................# Using file temp_1413077251
+# Using file temp_1413077251
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2684,14 +2684,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8577181 seconds
-# gerdr: 0.8603300 seconds
-# recursive-ternary: 0.96786706 seconds
-# loop: 0.973530 seconds
-# sequence-ternary: 1.6385497 seconds
-# recursive-ternary-hand-cached: 1.81737481 seconds
-# sequence: 2.4645888 seconds
-# hand-memoization: 2.4899185 seconds
+integration/advent2012-day21.t.....................# kaz: 0.84461675 seconds
+# gerdr: 0.8546266 seconds
+# recursive-ternary: 0.9584864 seconds
+# loop: 0.9787574 seconds
+# sequence-ternary: 1.6547910 seconds
+# recursive-ternary-hand-cached: 1.82046170 seconds
+# sequence: 2.46650497 seconds
+# hand-memoization: 2.488097 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2747,10 +2747,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5070,     0,   129,   362,  5561,  5653
-"S03",        4893,     0,   111,    92,  5096,  5130
+"S02",        5071,     0,   129,   362,  5562,  5654
+"S03",        4894,     0,   111,    92,  5097,  5131
 "S04",         998,     0,    40,    42,  1080,  1132
-"S05",        5242,     0,   105,   177,  5524,  5906
+"S05",        5244,     0,   105,   177,  5526,  5908
 "S06",        1185,     0,    41,   104,  1330,  1410
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         180,     0,    11,    10,   201,   201
@@ -2771,6 +2771,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9151,     0,   121,   169,  9441,  7875
 "int",        1207,     0,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32559,     0,   658,  1247, 34464, 34607
+"total",     32563,     0,   658,  1247, 34468, 34611
 ----------------
 No failures!
