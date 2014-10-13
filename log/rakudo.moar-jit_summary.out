@@ -103,7 +103,7 @@ S02-literals/underscores.t.........................  19    0    0    0   19
 S02-literals/version.rakudo.moar...................  25    0    3    0   28
      3 todo   : trailing zeroes fail
 S02-magicals/78258.t...............................   1    0    0    0    1
-S02-magicals/DISTRO.rakudo.moar....................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1466
+S02-magicals/DISTRO.rakudo.moar....................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1494
 
 use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/DISTRO.rakudo.moar:51
 
@@ -111,7 +111,7 @@ use of uninitialized value of type Str in string context  in block <unit> at t/s
     14 skipped: unimpl $?DISTRO
      1 todo   : no Distro.desc yet
      2 todo   : no Distro.signature yet
-S02-magicals/KERNEL.rakudo.moar....................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1466
+S02-magicals/KERNEL.rakudo.moar....................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1494
 
 use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/KERNEL.rakudo.moar:39
 
@@ -119,11 +119,11 @@ use of uninitialized value of type Str in string context  in block <unit> at t/s
     16 skipped: unimpl $?KERNEL
      1 todo   : no Kernel.desc yet
      2 todo   : no Kernel.signature yet
-S02-magicals/PERL.rakudo.moar......................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1466
+S02-magicals/PERL.rakudo.moar......................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1494
 
 use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/PERL.rakudo.moar:53
 
-use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1466
+use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1494
 
 use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/PERL.rakudo.moar:78
 
@@ -135,7 +135,7 @@ use of uninitialized value of type Str in string context  in block <unit> at t/s
      2 todo   : no Perl.compiler.signature yet
      1 todo   : no Perl.compiler.desc yet
      2 todo   : no Perl.signature yet
-S02-magicals/VM.rakudo.moar........................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1466
+S02-magicals/VM.rakudo.moar........................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1494
 
 use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/VM.rakudo.moar:52
 
@@ -1683,13 +1683,13 @@ Code object coerced to string (please use .gist or .perl to do that)  in block <
     11 skipped: nom regression
      2 todo   : nom regression
 S12-introspection/parents.t........................  59    0    0    0   59
-S12-introspection/roles.rakudo.moar................use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1466
+S12-introspection/roles.rakudo.moar................use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1494
 
-use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1466
+use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1494
 
-use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1466
+use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1494
 
-use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1466
+use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1494
 
    8    0    0    4   12
      4 skipped: .^roles(:tree)
@@ -1822,8 +1822,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1413077251
-# Using file temp_1413077251
+S16-filehandles/chmod.t............................# Using file temp_1413163664
+# Using file temp_1413163664
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2684,14 +2684,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.84461675 seconds
-# gerdr: 0.8546266 seconds
-# recursive-ternary: 0.9584864 seconds
-# loop: 0.9787574 seconds
-# sequence-ternary: 1.6547910 seconds
-# recursive-ternary-hand-cached: 1.82046170 seconds
-# sequence: 2.46650497 seconds
-# hand-memoization: 2.488097 seconds
+integration/advent2012-day21.t.....................# kaz: 0.8603003 seconds
+# gerdr: 0.8654244 seconds
+# recursive-ternary: 0.96253630 seconds
+# loop: 0.975164 seconds
+# sequence-ternary: 1.622840 seconds
+# recursive-ternary-hand-cached: 1.786589 seconds
+# sequence: 2.4733571 seconds
+# hand-memoization: 2.49967548 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
