@@ -103,7 +103,7 @@ S02-literals/underscores.t.........................  19    0    0    0   19
 S02-literals/version.rakudo.moar...................  25    0    3    0   28
      3 todo   : trailing zeroes fail
 S02-magicals/78258.t...............................   1    0    0    0    1
-S02-magicals/DISTRO.rakudo.moar....................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1494
+S02-magicals/DISTRO.rakudo.moar....................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1510
 
 use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/DISTRO.rakudo.moar:51
 
@@ -111,7 +111,7 @@ use of uninitialized value of type Str in string context  in block <unit> at t/s
     14 skipped: unimpl $?DISTRO
      1 todo   : no Distro.desc yet
      2 todo   : no Distro.signature yet
-S02-magicals/KERNEL.rakudo.moar....................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1494
+S02-magicals/KERNEL.rakudo.moar....................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1510
 
 use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/KERNEL.rakudo.moar:39
 
@@ -119,11 +119,11 @@ use of uninitialized value of type Str in string context  in block <unit> at t/s
     16 skipped: unimpl $?KERNEL
      1 todo   : no Kernel.desc yet
      2 todo   : no Kernel.signature yet
-S02-magicals/PERL.rakudo.moar......................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1494
+S02-magicals/PERL.rakudo.moar......................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1510
 
 use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/PERL.rakudo.moar:53
 
-use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1494
+use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1510
 
 use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/PERL.rakudo.moar:78
 
@@ -135,7 +135,7 @@ use of uninitialized value of type Str in string context  in block <unit> at t/s
      2 todo   : no Perl.compiler.signature yet
      1 todo   : no Perl.compiler.desc yet
      2 todo   : no Perl.signature yet
-S02-magicals/VM.rakudo.moar........................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1494
+S02-magicals/VM.rakudo.moar........................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1510
 
 use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/VM.rakudo.moar:52
 
@@ -504,7 +504,7 @@ use of uninitialized value of type Any in numeric context  in block <unit> at t/
 
 use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-metaops/hyper.rakudo.moar:438
 
- 245    0    6    6  257
+ 248    0    6    6  260
      1 skipped: EVAL(Buf)
      3 skipped: .++ does not work: RT #122342
      2 skipped: nom regression: possible spec change/improvement
@@ -1393,7 +1393,7 @@ S06-signature/named-parameters.rakudo.moar.........  72    0    0   21   93
     16 skipped: multiple same-named arguments NYI
 S06-signature/named-placeholders.t.................   3    0    0    0    3
 S06-signature/named-renaming.t.....................  10    0    0    0   10
-S06-signature/optional.t...........................  25    0    0    0   25
+S06-signature/optional.t...........................  26    0    0    0   26
 S06-signature/outside-subroutine.t.................   2    0    0    0    2
 S06-signature/passing-arrays.t.....................  11    0    0    0   11
 S06-signature/passing-hashes.t.....................   3    0    0    0    3
@@ -1668,7 +1668,7 @@ S12-introspection/can.t............................Code object coerced to string
 
   25    0    0    0   25
 S12-introspection/definite.t.......................   6    0    0    0    6
-S12-introspection/meta-class.rakudo.moar...........   8    0    0    4   12
+S12-introspection/meta-class.rakudo.moar...........   9    0    0    4   13
      1 skipped: .layout
      1 skipped: .version, version number parsing
      1 skipped: precedence of prefix:<^>
@@ -1683,13 +1683,13 @@ Code object coerced to string (please use .gist or .perl to do that)  in block <
     11 skipped: nom regression
      2 todo   : nom regression
 S12-introspection/parents.t........................  59    0    0    0   59
-S12-introspection/roles.rakudo.moar................use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1494
+S12-introspection/roles.rakudo.moar................use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1510
 
-use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1494
+use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1510
 
-use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1494
+use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1510
 
-use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1494
+use of uninitialized value of type R3 in string context  in any  at src/gen/m-Metamodel.nqp:1510
 
    8    0    0    4   12
      4 skipped: .^roles(:tree)
@@ -1799,7 +1799,7 @@ S14-roles/mixin.rakudo.moar........................  29    0    0    3   32
 S14-roles/namespaced.rakudo.moar...................   2    0    1    0    3
      1 todo   : nom regression
 S14-roles/parameter-subtyping.t....................  22    0    0    0   22
-S14-roles/parameterized-basic.t....................  33    0    0    0   33
+S14-roles/parameterized-basic.t....................  35    0    0    0   35
 S14-roles/parameterized-mixin.rakudo.moar..........  24    0    4    0   28
      4 todo   : .does with parametric roles
 S14-roles/parameterized-type.rakudo.moar...........Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
@@ -1822,12 +1822,12 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1413162718
-# Using file temp_1413162718
+S16-filehandles/chmod.t............................# Using file temp_1413249132
+# Using file temp_1413249132
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
-S16-filehandles/filetest.rakudo.moar...............  32    0    0    9   41
+S16-filehandles/filetest.rakudo.moar...............  34    0    0    9   43
      6 skipped: :M, :C, :A
      3 skipped: no file README
 S16-filehandles/io.t...............................  87    0    0    0   87
@@ -2235,7 +2235,7 @@ S32-hash/delete-adverb.t...........................use of uninitialized value $g
 
 use of uninitialized value $expected of type Int in string context  in sub is at lib/Test.pm:116
 
- 130    0    0    0  130
+ 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
 S32-hash/exists-adverb.t...........................  46    0    0    0   46
 S32-hash/exists.rakudo.moar........................  20    0    0    1   21
@@ -2684,14 +2684,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.859438311 seconds
-# gerdr: 0.86839591 seconds
-# recursive-ternary: 0.9714184 seconds
-# loop: 1.0223806 seconds
-# sequence-ternary: 1.6329028 seconds
-# recursive-ternary-hand-cached: 1.800536 seconds
-# sequence: 2.4708646 seconds
-# hand-memoization: 2.5119128 seconds
+integration/advent2012-day21.t.....................# kaz: 0.8572039 seconds
+# gerdr: 0.87395144 seconds
+# recursive-ternary: 0.96251824 seconds
+# loop: 0.9825872 seconds
+# sequence-ternary: 1.6121203 seconds
+# recursive-ternary-hand-cached: 1.774145 seconds
+# hand-memoization: 2.4744738 seconds
+# sequence: 2.5082427 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2748,19 +2748,19 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5071,     0,   129,   362,  5562,  5654
-"S03",        4894,     0,   111,    92,  5097,  5131
+"S03",        4897,     0,   111,    92,  5100,  5134
 "S04",         998,     0,    40,    42,  1080,  1132
 "S05",        5244,     0,   105,   177,  5526,  5908
-"S06",        1185,     0,    41,   104,  1330,  1410
+"S06",        1186,     0,    41,   104,  1331,  1411
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         180,     0,    11,    10,   201,   201
 "S10",          81,     0,     4,     1,    86,   143
 "S11",         104,     0,     4,    14,   122,   141
-"S12",        1353,     0,    46,   124,  1523,  1581
+"S12",        1354,     0,    46,   124,  1524,  1582
 "S13",          35,     0,    10,    27,    72,    82
-"S14",         298,     0,    10,    10,   318,   331
+"S14",         300,     0,    10,    10,   320,   333
 "S15",         240,     0,     2,    16,   258,   283
-"S16",         244,     0,     0,    17,   261,   305
+"S16",         246,     0,     0,    17,   263,   307
 "S17",         666,     0,     7,    19,   692,   692
 "S19",           7,     0,     0,     0,     7,     8
 "S22",          52,     0,     1,     0,    53,    53
@@ -2768,9 +2768,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1205,     0,     0,    42,  1247,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
-"S32",        9151,     0,   121,   169,  9441,  7875
+"S32",        9152,     0,   121,   169,  9442,  7876
 "int",        1207,     0,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32563,     0,   658,  1247, 34468, 34611
+"total",     32573,     0,   658,  1247, 34478, 34621
 ----------------
 No failures!
