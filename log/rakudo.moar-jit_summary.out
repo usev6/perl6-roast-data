@@ -76,7 +76,7 @@ S02-literals/quoting.rakudo.moar...................
 # Failed test 'code dies'
 # at lib/Test.pm line 303
     # Looks like you failed 1 tests of 2
- 149    0    7    3  159
+ 150    0    7    3  160
      3 skipped: \c@ etc
      1 todo   : retriage
      2 todo   : q:x assigned to array
@@ -281,7 +281,11 @@ S02-types/bag.rakudo.moar.......................... 193    0    2    3  198
      3 skipped: No longer Iterable
      1 todo   : Not properly interpolating
      1 todo   : we have not secured .WHICH creation yet
-S02-types/baghash.rakudo.moar...................... 223    0    5   24  252
+S02-types/baghash.rakudo.moar......................
+# Failed test '.roll(100) (2)'
+# at t/spec/S02-types/baghash.rakudo.moar line 262
+# Looks like you failed 1 tests of 252
+ 222    1    5   24  252
     21 skipped: 'is ObjectType' NYI
      3 skipped: No longer Iterable
      1 todo   : Needs to catch up with spec
@@ -1794,7 +1798,7 @@ use of uninitialized value $got of type Any in string context  in sub is at lib/
      1 skipped: anonymous roles only created once
      2 todo   : RT #121626
 S14-roles/attributes.t.............................   7    0    0    0    7
-S14-roles/basic.rakudo.moar........................  38    0    2    3   43
+S14-roles/basic.rakudo.moar........................  40    0    2    3   45
      3 skipped: RT #67768
      1 todo   : RT #121308
      1 todo   : can see it in the position, but even STD message doesn't include it
@@ -1834,8 +1838,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1413509346
-# Using file temp_1413509346
+S16-filehandles/chmod.t............................# Using file temp_1413595731
+# Using file temp_1413595731
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2250,7 +2254,9 @@ Code object coerced to string (please use .gist or .perl to do that)  in block  
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
- 270    0    2    0  272
+Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
+
+ 271    0    2    0  273
      1 todo   : Cannot find method "returns"
      1 todo   : parsing regression
 S32-hash/delete-adverb.t...........................use of uninitialized value $got of type Int in string context  in sub is at lib/Test.pm:116
@@ -2488,7 +2494,7 @@ S32-str/split-simple.rakudo.moar...................  28    0    1    0   29
      1 todo   : RT #112868
 S32-str/split.rakudo.moar..........................  52    0    0    1   53
      1 skipped: No such method null for invocant of type Cursor
-S32-str/sprintf.rakudo.moar........................ 142    0   13    0  155
+S32-str/sprintf.rakudo.moar........................ 143    0   13    0  156
      3 todo   : RT #116280
     10 todo   : Issues with Inf: RT #116280
 S32-str/substr-rw.rakudo.moar......................  19    0   12    0   31
@@ -2706,14 +2712,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.849259 seconds
-# gerdr: 0.88205979 seconds
-# recursive-ternary: 0.9616959 seconds
-# loop: 0.9763346 seconds
-# sequence-ternary: 1.67411182 seconds
-# recursive-ternary-hand-cached: 1.80584204 seconds
-# hand-memoization: 2.4672521 seconds
-# sequence: 2.5286669 seconds
+integration/advent2012-day21.t.....................# kaz: 0.86208008 seconds
+# gerdr: 0.89050768 seconds
+# recursive-ternary: 0.9589442 seconds
+# loop: 0.9966991 seconds
+# sequence-ternary: 1.65822996 seconds
+# recursive-ternary-hand-cached: 1.8072732 seconds
+# hand-memoization: 2.45581079 seconds
+# sequence: 2.5239698 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2769,7 +2775,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5082,     0,   129,   362,  5573,  5665
+"S02",        5082,     1,   129,   362,  5574,  5666
 "S03",        4897,     0,   111,    92,  5100,  5134
 "S04",        1008,     0,    39,    42,  1089,  1141
 "S05",        5247,     0,   105,   177,  5529,  5910
@@ -2780,7 +2786,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S11",         105,     0,     4,    14,   123,   142
 "S12",        1354,     0,    46,   124,  1524,  1582
 "S13",          36,     0,    10,    27,    73,    83
-"S14",         300,     0,    10,    10,   320,   333
+"S14",         302,     0,    10,    10,   322,   335
 "S15",         240,     0,     2,    16,   258,   283
 "S16",         246,     0,     0,    17,   263,   307
 "S17",         666,     0,     7,    19,   692,   692
@@ -2790,10 +2796,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
-"S32",        8940,   216,   121,   169,  9446,  7880
+"S32",        8942,   216,   121,   169,  9448,  7882
 "int",        1207,     0,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32426,   216,   661,  1250, 34553, 34662
+"total",     32430,   217,   661,  1250, 34558, 34667
 ----------------
 Failure summary:
+S02-types/baghash.rakudo.moar 124 - .roll(100) (2)
 S32-array/delete-adverb.t aborted 216 test(s)
