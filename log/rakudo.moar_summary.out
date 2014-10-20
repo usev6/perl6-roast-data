@@ -1834,8 +1834,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1413681107
-# Using file temp_1413681107
+S16-filehandles/chmod.t............................# Using file temp_1413767496
+# Using file temp_1413767496
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2712,21 +2712,26 @@ integration/advent2012-day06.t.....................   2    0    0    0    2
 integration/advent2012-day09.t.....................   8    0    0    0    8
 integration/advent2012-day10.t.....................  26    0    0    0   26
 integration/advent2012-day12.t.....................   5    0    0    0    5
-integration/advent2012-day13.t.....................  42    0    0    0   42
+integration/advent2012-day13.t.....................# elems: 100,  reds: 100,  blues: 0,  others: 0
+
+# Failed test 'weighted roll'
+# at t/spec/integration/advent2012-day13.t line 1
+# Looks like you failed 1 tests of 42
+  41    1    0    0   42
 integration/advent2012-day14.t.....................   6    0    0    0    6
 integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
      1 todo   : RT #121722
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8355715 seconds
-# gerdr: 0.8625954 seconds
-# recursive-ternary: 0.9368156 seconds
-# loop: 0.9775752 seconds
-# sequence-ternary: 1.6513997 seconds
-# recursive-ternary-hand-cached: 1.7925710 seconds
-# hand-memoization: 2.40157888 seconds
-# sequence: 2.46775444 seconds
+integration/advent2012-day21.t.....................# kaz: 0.824485 seconds
+# gerdr: 0.83929416 seconds
+# loop: 0.962651 seconds
+# recursive-ternary: 0.964057 seconds
+# sequence-ternary: 1.66164190 seconds
+# recursive-ternary-hand-cached: 1.777609963 seconds
+# hand-memoization: 2.4299487 seconds
+# sequence: 2.493054 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2804,8 +2809,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
 "S32",        9158,     0,   121,   169,  9448,  7882
-"int",        1207,     0,    12,    19,  1238,  1227
+"int",        1206,     1,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32647,     0,   661,  1250, 34558, 34667
+"total",     32646,     1,   661,  1250, 34558, 34667
 ----------------
-No failures!
+Failure summary:
+integration/advent2012-day13.t 7 - weighted roll
