@@ -242,11 +242,11 @@ S02-types/autovivification.t.......................Error while reading 'TESTCOOK
    0   25    0    0   25
     25 tests aborted (missing ok/not ok)
 S02-types/bag.rakudo.jvm...........................Error while reading 'TESTCOOKIE': No such file or directory at eval-client.pl line 10.
-   0  198    0    0  198
-   198 tests aborted (missing ok/not ok)
+   0  196    0    0  196
+   196 tests aborted (missing ok/not ok)
 S02-types/baghash.rakudo.jvm.......................Error while reading 'TESTCOOKIE': No such file or directory at eval-client.pl line 10.
-   0  252    0    0  252
-   252 tests aborted (missing ok/not ok)
+   0  250    0    0  250
+   250 tests aborted (missing ok/not ok)
 S02-types/bool.t...................................Error while reading 'TESTCOOKIE': No such file or directory at eval-client.pl line 10.
    0   51    0    0   51
     51 tests aborted (missing ok/not ok)
@@ -286,7 +286,7 @@ S02-types/int-uint.rakudo.jvm......................Error while reading 'TESTCOOK
 S02-types/isDEPRECATED.rakudo.jvm..................Error while reading 'TESTCOOKIE': No such file or directory at eval-client.pl line 10.
    0   20    0    0   20
     20 tests aborted (missing ok/not ok)
-S02-types/lazy-lists.t.............................Error while reading 'TESTCOOKIE': No such file or directory at eval-client.pl line 10.
+S02-types/lazy-lists.rakudo.jvm....................Error while reading 'TESTCOOKIE': No such file or directory at eval-client.pl line 10.
    0   23    0    0   23
     23 tests aborted (missing ok/not ok)
 S02-types/lists.rakudo.jvm.........................Error while reading 'TESTCOOKIE': No such file or directory at eval-client.pl line 10.
@@ -1407,8 +1407,8 @@ S12-class/anonymous.rakudo.jvm.....................Error while reading 'TESTCOOK
    0   17    0    0   17
     17 tests aborted (missing ok/not ok)
 S12-class/attributes.rakudo.jvm....................Error while reading 'TESTCOOKIE': No such file or directory at eval-client.pl line 10.
-   0   31    0    0   31
-    31 tests aborted (missing ok/not ok)
+   0   33    0    0   33
+    33 tests aborted (missing ok/not ok)
 S12-class/augment-supersede.rakudo.jvm.............Error while reading 'TESTCOOKIE': No such file or directory at eval-client.pl line 10.
    0   13    0    0   13
     13 tests aborted (missing ok/not ok)
@@ -2796,7 +2796,7 @@ rosettacode/sierpinski_triangle.t..................Error while reading 'TESTCOOK
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",           0,  4976,     0,     0,  4976,  5069
+"S02",           0,  4972,     0,     0,  4972,  5065
 "S03",           0,  5100,     0,     0,  5100,  5134
 "S04",           0,  1072,     0,     0,  1072,  1141
 "S05",           0,  5529,     0,     0,  5529,  5910
@@ -2805,7 +2805,7 @@ rosettacode/sierpinski_triangle.t..................Error while reading 'TESTCOOK
 "S09",           0,   205,     0,     0,   205,   205
 "S10",           0,    86,     0,     0,    86,   143
 "S11",           0,   123,     0,     0,   123,   142
-"S12",           0,  1524,     0,     0,  1524,  1582
+"S12",           0,  1526,     0,     0,  1526,  1584
 "S13",           0,    73,     0,     0,    73,    83
 "S14",           0,   322,     0,     0,   322,   335
 "S15",           0,     0,     0,     0,     0,   283
@@ -2820,7 +2820,7 @@ rosettacode/sierpinski_triangle.t..................Error while reading 'TESTCOOK
 "S32",           0,  7783,     0,     0,  7783,  7882
 "int",           0,  1225,     0,     0,  1225,  1217
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 31743,     0,     0, 31743, 33829
+"total",         0, 31741,     0,     0, 31741, 33827
 ----------------
 Failure summary:
 S02-lexical-conventions/begin_end_pod.t aborted 1 test(s)
@@ -2902,8 +2902,8 @@ S02-types/array_extending.t aborted 21 test(s)
 S02-types/array_ref.t aborted 45 test(s)
 S02-types/assigning-refs.rakudo.jvm aborted 18 test(s)
 S02-types/autovivification.t aborted 25 test(s)
-S02-types/bag.rakudo.jvm aborted 198 test(s)
-S02-types/baghash.rakudo.jvm aborted 252 test(s)
+S02-types/bag.rakudo.jvm aborted 196 test(s)
+S02-types/baghash.rakudo.jvm aborted 250 test(s)
 S02-types/bool.t aborted 51 test(s)
 S02-types/capture.rakudo.jvm aborted 21 test(s)
 S02-types/catch_type_cast_mismatch.t aborted 11 test(s)
@@ -2917,7 +2917,7 @@ S02-types/infinity.rakudo.jvm aborted 13 test(s)
 S02-types/instants-and-durations.t aborted 12 test(s)
 S02-types/int-uint.rakudo.jvm aborted 1 test(s)
 S02-types/isDEPRECATED.rakudo.jvm aborted 20 test(s)
-S02-types/lazy-lists.t aborted 23 test(s)
+S02-types/lazy-lists.rakudo.jvm aborted 23 test(s)
 S02-types/lists.rakudo.jvm aborted 28 test(s)
 S02-types/mix.rakudo.jvm aborted 179 test(s)
 S02-types/mixed_multi_dimensional.rakudo.jvm aborted 80 test(s)
@@ -3287,7 +3287,7 @@ S12-attributes/mutators.rakudo.jvm aborted 12 test(s)
 S12-attributes/recursive.t aborted 23 test(s)
 S12-attributes/undeclared.t aborted 10 test(s)
 S12-class/anonymous.rakudo.jvm aborted 17 test(s)
-S12-class/attributes.rakudo.jvm aborted 31 test(s)
+S12-class/attributes.rakudo.jvm aborted 33 test(s)
 S12-class/augment-supersede.rakudo.jvm aborted 13 test(s)
 S12-class/basic.rakudo.jvm aborted 37 test(s)
 S12-class/declaration-order.t aborted 2 test(s)

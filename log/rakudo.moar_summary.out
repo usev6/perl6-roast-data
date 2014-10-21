@@ -277,15 +277,14 @@ S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.rakudo.moar...............  15    0    3    0   18
      3 todo   : deprecated %h = {...} for now
 S02-types/autovivification.t.......................  25    0    0    0   25
-S02-types/bag.rakudo.moar.......................... 193    0    2    3  198
+S02-types/bag.rakudo.moar.......................... 191    0    2    3  196
      3 skipped: No longer Iterable
      1 todo   : Not properly interpolating
      1 todo   : we have not secured .WHICH creation yet
-S02-types/baghash.rakudo.moar...................... 223    0    5   24  252
+S02-types/baghash.rakudo.moar...................... 223    0    3   24  250
     21 skipped: 'is ObjectType' NYI
      3 skipped: No longer Iterable
      1 todo   : Needs to catch up with spec
-     2 todo   : RT #120407
      2 todo   : in flux
 S02-types/bool.t...................................  51    0    0    0   51
 S02-types/capture.rakudo.moar......................  18    0    2    1   21
@@ -1617,7 +1616,8 @@ S12-attributes/recursive.t.........................  23    0    0    0   23
 S12-attributes/undeclared.t........................  10    0    0    0   10
 S12-class/anonymous.rakudo.moar....................  16    0    1    0   17
      1 todo   : Anonymous class stringification (?)
-S12-class/attributes.rakudo.moar...................  30    0    0    1   31
+S12-class/attributes.rakudo.moar...................  31    0    0    2   33
+     1 skipped: where clauses on attributes NYI, RT #122109
      1 skipped: Cannot use .= to initialize an attribute
 S12-class/augment-supersede.rakudo.moar............  11    0    0    2   13
      2 skipped: redeclaration of symbol Bar
@@ -1834,8 +1834,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1413767496
-# Using file temp_1413767496
+S16-filehandles/chmod.t............................# Using file temp_1413853896
+# Using file temp_1413853896
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2712,26 +2712,21 @@ integration/advent2012-day06.t.....................   2    0    0    0    2
 integration/advent2012-day09.t.....................   8    0    0    0    8
 integration/advent2012-day10.t.....................  26    0    0    0   26
 integration/advent2012-day12.t.....................   5    0    0    0    5
-integration/advent2012-day13.t.....................# elems: 100,  reds: 100,  blues: 0,  others: 0
-
-# Failed test 'weighted roll'
-# at t/spec/integration/advent2012-day13.t line 1
-# Looks like you failed 1 tests of 42
-  41    1    0    0   42
+integration/advent2012-day13.t.....................  42    0    0    0   42
 integration/advent2012-day14.t.....................   6    0    0    0    6
 integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
      1 todo   : RT #121722
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.824485 seconds
-# gerdr: 0.83929416 seconds
-# loop: 0.962651 seconds
-# recursive-ternary: 0.964057 seconds
-# sequence-ternary: 1.66164190 seconds
-# recursive-ternary-hand-cached: 1.777609963 seconds
-# hand-memoization: 2.4299487 seconds
-# sequence: 2.493054 seconds
+integration/advent2012-day21.t.....................# kaz: 0.83493713 seconds
+# gerdr: 0.8379805 seconds
+# loop: 0.94049762 seconds
+# recursive-ternary: 0.9557121 seconds
+# sequence-ternary: 1.6718502 seconds
+# recursive-ternary-hand-cached: 1.7563300 seconds
+# hand-memoization: 2.4490417 seconds
+# sequence: 2.48087042 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2787,7 +2782,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5083,     0,   129,   362,  5574,  5666
+"S02",        5081,     0,   127,   362,  5570,  5662
 "S03",        4897,     0,   111,    92,  5100,  5134
 "S04",        1008,     0,    39,    42,  1089,  1141
 "S05",        5247,     0,   105,   177,  5529,  5910
@@ -2796,7 +2791,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",         184,     0,    11,    10,   205,   205
 "S10",          81,     0,     4,     1,    86,   143
 "S11",         105,     0,     4,    14,   123,   142
-"S12",        1354,     0,    46,   124,  1524,  1582
+"S12",        1355,     0,    46,   125,  1526,  1584
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         302,     0,    10,    10,   322,   335
 "S15",         240,     0,     2,    16,   258,   283
@@ -2809,9 +2804,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
 "S32",        9158,     0,   121,   169,  9448,  7882
-"int",        1206,     1,    12,    19,  1238,  1227
+"int",        1207,     0,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32646,     1,   661,  1250, 34558, 34667
+"total",     32646,     0,   659,  1251, 34556, 34665
 ----------------
-Failure summary:
-integration/advent2012-day13.t 7 - weighted roll
+No failures!
