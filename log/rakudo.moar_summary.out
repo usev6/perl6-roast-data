@@ -173,11 +173,7 @@ S02-names-vars/fmt.t...............................  21    0    0    0   21
 S02-names-vars/list_array_perl.rakudo.moar.........  19    0    1    2   22
      2 skipped: recursive data structure
      1 todo   : List.perl bug
-S02-names-vars/names.rakudo.moar...................Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
- 130    0    0   13  143
+S02-names-vars/names.rakudo.moar................... 130    0    0   13  143
      4 skipped: ::{ } package lookup NYI
      2 skipped: this kind of lookup NYI
      7 skipped: package variable autovivification
@@ -194,15 +190,7 @@ S02-names-vars/signature.rakudo.moar...............  11    0    2    0   13
      2 todo   : eqv on signatures
 S02-names-vars/variables-and-packages.rakudo.moar..  35    0    3    0   38
      3 todo   : nom regression: RT #122346
-S02-names-vars/varnames.rakudo.moar................Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-  10    0    2    1   13
+S02-names-vars/varnames.rakudo.moar................  10    0    2    1   13
      1 skipped: NYI
      2 todo   : cannot easily override [] at the moment
 S02-names/bare-sigil.t.............................  10    0    0    0   10
@@ -612,7 +600,7 @@ S03-operators/bag.rakudo.moar...................... 109    0   12    7  128
      8 todo   : Rakudo update in progress, but not done yet
      4 todo   : Wrong answer at the moment
 S03-operators/basic-types.t........................  19    0    0    0   19
-S03-operators/bit.t................................  37    0    0    0   37
+S03-operators/bit.t................................  38    0    0    0   38
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
 S03-operators/brainos.t............................   9    0    0    0    9
 S03-operators/buf.t................................Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/buf.t:67
@@ -779,9 +767,7 @@ S03-operators/list-quote-junction.t................  16    0    0    0   16
 S03-operators/minmax.rakudo.moar...................  21    0    4    0   25
      2 todo   : Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious
      2 todo   : max/min non-associative NYI
-S03-operators/misc.t...............................Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-  33    0    0    0   33
+S03-operators/misc.t...............................  33    0    0    0   33
 S03-operators/names.t..............................Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
 
 Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
@@ -820,11 +806,7 @@ S03-operators/relational.rakudo.moar............... 118    0    4    0  122
      4 todo   : RT #121987
 S03-operators/repeat.t.............................  32    0    0    0   32
 S03-operators/scalar-assign.t......................   4    0    0    0    4
-S03-operators/set.t................................Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
- 292    0    0    0  292
+S03-operators/set.t................................ 292    0    0    0  292
 S03-operators/short-circuit.t......................use of uninitialized value of type Nil in numeric context  in block <unit> at t/spec/S03-operators/short-circuit.t:205
 
   83    0    0    0   83
@@ -984,7 +966,7 @@ S04-phasers/ascending-order.t......................   7    0    0    0    7
 S04-phasers/begin.t................................  10    0    0    0   10
 S04-phasers/check.t................................   5    0    0    0    5
 S04-phasers/descending-order.t.....................   7    0    0    0    7
-S04-phasers/end.rakudo.moar........................   3    0    2    0    5
+S04-phasers/end.rakudo.moar........................   4    0    2    0    6
      2 todo   : lexicals and EVAL()
 S04-phasers/enter-leave.rakudo.moar................  20    0    1    2   23
      1 skipped: unwind, RT #121530
@@ -1024,9 +1006,7 @@ S04-statements/do.rakudo.moar......................  21    0    0    6   27
      3 skipped: Undeclared name A
      1 skipped: next without loop construct
 S04-statements/for-scope.t.........................  16    0    0    0   16
-S04-statements/for.rakudo.moar.....................Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-  82    0    2    1   85
+S04-statements/for.rakudo.moar.....................  82    0    2    1   85
      1 skipped: optional variable in for loop (RT #63994)
      2 todo   : RT #113026 array iterator does not track a growing array
 S04-statements/for_with_only_one_item.t............   9    0    0    0    9
@@ -1086,7 +1066,7 @@ S05-grammar/methods.t..............................   6    0    0    0    6
 S05-grammar/namespace.t............................   5    0    0    0    5
 S05-grammar/parse_and_parsefile.t..................use of uninitialized value of type Any in string context  in block <unit> at t/spec/S05-grammar/parse_and_parsefile.t:12
 
-  14    0    0    0   14
+  15    0    0    0   15
 S05-grammar/polymorphism.t.........................use of uninitialized value of type Any in string context  in block <unit> at t/spec/S05-grammar/polymorphism.t:55
 
   28    0    0    0   28
@@ -1333,7 +1313,7 @@ S06-macros/errors.t................................   2    0    0    0    2
 S06-macros/opaque-ast.rakudo.moar..................   3    0    0    4    7
      3 skipped: :COMPILING flag
      1 skipped: return from macro
-S06-macros/quasi-blocks.rakudo.moar................  10    0    0    2   12
+S06-macros/quasi-blocks.rakudo.moar................  12    0    0    2   14
      2 skipped: No such method 'STORE' for invocant of type 'Mu'
 S06-macros/unquoting.rakudo.moar...................   5    0    0    1    6
      1 skipped: Specified code ref has no outer, RT #121533
@@ -1745,11 +1725,7 @@ S12-methods/multi.rakudo.moar......................Code object coerced to string
 S12-methods/parallel-dispatch.rakudo.moar..........  31    0    5    1   37
      1 skipped: No such method postcircumfix:<( )> for invocant of type Pair
      5 todo   : is_deeply does not think map results are the same as list on LHS
-S12-methods/private.t..............................Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-  12    0    0    0   12
+S12-methods/private.t..............................  12    0    0    0   12
 S12-methods/qualified.t............................   2    0    0    0    2
 S12-methods/submethods.rakudo.moar.................  21    0    0    6   27
      2 skipped: outer lexicals in roles
@@ -1814,9 +1790,7 @@ S14-roles/parameter-subtyping.t....................  22    0    0    0   22
 S14-roles/parameterized-basic.t....................  35    0    0    0   35
 S14-roles/parameterized-mixin.rakudo.moar..........  24    0    4    0   28
      4 todo   : .does with parametric roles
-S14-roles/parameterized-type.rakudo.moar...........Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-  30    0    0    1   31
+S14-roles/parameterized-type.rakudo.moar...........  30    0    0    1   31
      1 skipped: cannot easily override [] at the moment
 S14-roles/stubs.t..................................   9    0    0    0    9
 S14-roles/submethods.t.............................   4    0    0    0    4
@@ -1834,13 +1808,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-<<<<<<< HEAD
-S16-filehandles/chmod.t............................# Using file temp_1413853896
-# Using file temp_1413853896
-=======
-S16-filehandles/chmod.t............................# Using file temp_1413681107
-# Using file temp_1413681107
->>>>>>> parent of 2eb5541... today (automated commit)
+S16-filehandles/chmod.t............................# Using file temp_1413940364
+# Using file temp_1413940364
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2144,130 +2113,22 @@ use of uninitialized value of type BagHash in string context  in block <unit> at
   16    0    0    0   16
 S32-container/zip.rakudo.moar......................   8    0    0    2   10
      2 skipped: lvalue zip
-S32-exceptions/misc.rakudo.moar....................Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in any  at src/Perl6/World.nqp:1844
+S32-exceptions/misc.rakudo.moar....................Code object coerced to string (please use .gist or .perl to do that)  in any  at src/Perl6/World.nqp:1844
 
 Code object coerced to string (please use .gist or .perl to do that)  in any throw at src/Perl6/World.nqp:2724
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
     
 # Failed test ''#`' died'
 # at lib/Test.pm line 303
     # Looks like you failed 1 tests of 2
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
 # Variable '$abd' is not declared. Did you mean any of these?
 #     $abe
 #     $abc
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
 
     
 # Failed test ''sub f { f(|$) }' died'
 # at lib/Test.pm line 200
     # Looks like you failed 1 tests of 5
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
-Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:314
-
  271    0    2    0  273
      1 todo   : Cannot find method "returns"
      1 todo   : parsing regression
@@ -2724,25 +2585,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-<<<<<<< HEAD
-integration/advent2012-day21.t.....................# kaz: 0.83493713 seconds
-# gerdr: 0.8379805 seconds
-# loop: 0.94049762 seconds
-# recursive-ternary: 0.9557121 seconds
-# sequence-ternary: 1.6718502 seconds
-# recursive-ternary-hand-cached: 1.7563300 seconds
-# hand-memoization: 2.4490417 seconds
-# sequence: 2.48087042 seconds
-=======
-integration/advent2012-day21.t.....................# kaz: 0.8355715 seconds
-# gerdr: 0.8625954 seconds
-# recursive-ternary: 0.9368156 seconds
-# loop: 0.9775752 seconds
-# sequence-ternary: 1.6513997 seconds
-# recursive-ternary-hand-cached: 1.7925710 seconds
-# hand-memoization: 2.40157888 seconds
-# sequence: 2.46775444 seconds
->>>>>>> parent of 2eb5541... today (automated commit)
+integration/advent2012-day21.t.....................# kaz: 0.8196707 seconds
+# gerdr: 0.8370272 seconds
+# recursive-ternary: 0.92276127 seconds
+# loop: 0.95592499 seconds
+# sequence-ternary: 1.6848088 seconds
+# recursive-ternary-hand-cached: 1.7575218 seconds
+# hand-memoization: 2.43845995 seconds
+# sequence: 2.4967221 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2799,10 +2649,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5081,     0,   127,   362,  5570,  5662
-"S03",        4897,     0,   111,    92,  5100,  5134
-"S04",        1008,     0,    39,    42,  1089,  1141
-"S05",        5247,     0,   105,   177,  5529,  5910
-"S06",        1189,     0,    41,   104,  1334,  1414
+"S03",        4898,     0,   111,    92,  5101,  5135
+"S04",        1009,     0,    39,    42,  1090,  1142
+"S05",        5248,     0,   105,   177,  5530,  5911
+"S06",        1191,     0,    41,   104,  1336,  1416
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         184,     0,    11,    10,   205,   205
 "S10",          81,     0,     4,     1,    86,   143
@@ -2822,10 +2672,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9158,     0,   121,   169,  9448,  7882
 "int",        1207,     0,    12,    19,  1238,  1227
 "ros",           2,     0,     0,     0,     2,     2
-<<<<<<< HEAD
-"total",     32646,     0,   659,  1251, 34556, 34665
-=======
-"total",     32647,     0,   661,  1250, 34558, 34667
->>>>>>> parent of 2eb5541... today (automated commit)
+"total",     32651,     0,   659,  1251, 34561, 34670
 ----------------
 No failures!

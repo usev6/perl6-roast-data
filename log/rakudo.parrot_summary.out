@@ -459,8 +459,8 @@ S03-operators/basic-types.t........................nice: ./perl6-p: No such file
    0   19    0    0   19
     19 tests aborted (missing ok/not ok)
 S03-operators/bit.t................................nice: ./perl6-p: No such file or directory
-   0   37    0    0   37
-    37 tests aborted (missing ok/not ok)
+   0   38    0    0   38
+    38 tests aborted (missing ok/not ok)
 S03-operators/boolean-bitwise.t....................nice: ./perl6-p: No such file or directory
    0   45    0    0   45
     45 tests aborted (missing ok/not ok)
@@ -741,8 +741,8 @@ S04-phasers/descending-order.t.....................nice: ./perl6-p: No such file
    0    7    0    0    7
      7 tests aborted (missing ok/not ok)
 S04-phasers/end.rakudo.parrot......................nice: ./perl6-p: No such file or directory
-   0    5    0    0    5
-     5 tests aborted (missing ok/not ok)
+   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
 S04-phasers/enter-leave.rakudo.parrot..............nice: ./perl6-p: No such file or directory
    0   23    0    0   23
     23 tests aborted (missing ok/not ok)
@@ -897,9 +897,9 @@ S05-grammar/methods.t..............................nice: ./perl6-p: No such file
 S05-grammar/namespace.t............................nice: ./perl6-p: No such file or directory
    0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S05-grammar/parse_and_parsefile.t..................nice: ./perl6-p: No such file or directory
-   0   14    0    0   14
-    14 tests aborted (missing ok/not ok)
+S05-grammar/parse_and_parsefile.rakudo.parrot......nice: ./perl6-p: No such file or directory
+   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
 S05-grammar/polymorphism.t.........................nice: ./perl6-p: No such file or directory
    0   28    0    0   28
     28 tests aborted (missing ok/not ok)
@@ -1132,9 +1132,9 @@ S06-macros/errors.t................................nice: ./perl6-p: No such file
 S06-macros/opaque-ast.rakudo.parrot................nice: ./perl6-p: No such file or directory
    0    7    0    0    7
      7 tests aborted (missing ok/not ok)
-S06-macros/quasi-blocks.t..........................nice: ./perl6-p: No such file or directory
-   0   12    0    0   12
-    12 tests aborted (missing ok/not ok)
+S06-macros/quasi-blocks.rakudo.parrot..............nice: ./perl6-p: No such file or directory
+   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
 S06-macros/unquoting.t.............................nice: ./perl6-p: No such file or directory
    0    6    0    0    6
      6 tests aborted (missing ok/not ok)
@@ -2628,10 +2628,10 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-p: No such file
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",           0,  4972,     0,     0,  4972,  5065
-"S03",           0,  5100,     0,     0,  5100,  5134
-"S04",           0,  1072,     0,     0,  1072,  1141
-"S05",           0,  5529,     0,     0,  5529,  5910
-"S06",           0,  1334,     0,     0,  1334,  1414
+"S03",           0,  5101,     0,     0,  5101,  5135
+"S04",           0,  1073,     0,     0,  1073,  1142
+"S05",           0,  5530,     0,     0,  5530,  5911
+"S06",           0,  1336,     0,     0,  1336,  1416
 "S07",           0,     0,     0,     0,     0,     0
 "S09",           0,   205,     0,     0,   205,   205
 "S10",           0,    86,     0,     0,    86,   143
@@ -2651,7 +2651,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-p: No such file
 "S32",           0,  7783,     0,     0,  7783,  7882
 "int",           0,  1211,     0,     0,  1211,  1217
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 31087,     0,     0, 31087, 33827
+"total",         0, 31092,     0,     0, 31092, 33832
 ----------------
 Failure summary:
 S02-lexical-conventions/begin_end_pod.t aborted 1 test(s)
@@ -2805,7 +2805,7 @@ S03-operators/autoincrement.t aborted 79 test(s)
 S03-operators/autovivification.t aborted 23 test(s)
 S03-operators/bag.rakudo.parrot aborted 128 test(s)
 S03-operators/basic-types.t aborted 19 test(s)
-S03-operators/bit.t aborted 37 test(s)
+S03-operators/bit.t aborted 38 test(s)
 S03-operators/boolean-bitwise.t aborted 45 test(s)
 S03-operators/brainos.t aborted 9 test(s)
 S03-operators/buf.t aborted 34 test(s)
@@ -2898,7 +2898,7 @@ S04-phasers/ascending-order.t aborted 7 test(s)
 S04-phasers/begin.t aborted 10 test(s)
 S04-phasers/check.t aborted 5 test(s)
 S04-phasers/descending-order.t aborted 7 test(s)
-S04-phasers/end.rakudo.parrot aborted 5 test(s)
+S04-phasers/end.rakudo.parrot aborted 6 test(s)
 S04-phasers/enter-leave.rakudo.parrot aborted 23 test(s)
 S04-phasers/eval-in-begin.t aborted 3 test(s)
 S04-phasers/first.t aborted 4 test(s)
@@ -2950,7 +2950,7 @@ S05-grammar/action-stubs.t aborted 24 test(s)
 S05-grammar/inheritance.rakudo.parrot aborted 31 test(s)
 S05-grammar/methods.t aborted 6 test(s)
 S05-grammar/namespace.t aborted 5 test(s)
-S05-grammar/parse_and_parsefile.t aborted 14 test(s)
+S05-grammar/parse_and_parsefile.rakudo.parrot aborted 15 test(s)
 S05-grammar/polymorphism.t aborted 28 test(s)
 S05-grammar/protoregex.rakudo.parrot aborted 31 test(s)
 S05-grammar/protos.t aborted 4 test(s)
@@ -3028,7 +3028,7 @@ S06-currying/assuming-and-mmd.t aborted 6 test(s)
 S06-currying/named.t aborted 3 test(s)
 S06-macros/errors.t aborted 2 test(s)
 S06-macros/opaque-ast.rakudo.parrot aborted 7 test(s)
-S06-macros/quasi-blocks.t aborted 12 test(s)
+S06-macros/quasi-blocks.rakudo.parrot aborted 14 test(s)
 S06-macros/unquoting.t aborted 6 test(s)
 S06-multi/lexical-multis.rakudo.parrot aborted 15 test(s)
 S06-multi/positional-vs-named.rakudo.parrot aborted 27 test(s)
