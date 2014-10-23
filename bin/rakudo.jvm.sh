@@ -9,11 +9,7 @@ git clone repos/nqp.git rakudo.jvm/nqp
 git clone repos/roast.git rakudo.jvm/t/spec
 cd rakudo.jvm
 perl Configure.pl --backends=jvm --gen-nqp
-
-make
-exit
-## just build, don't run spectests
-#make all
+make all
 
 # uninstalled rakudo doesn't know how to find Test.pm
 # ... or any other modules
@@ -28,7 +24,8 @@ echo 'exec "ulimit -t 120; ulimit -v 2500000; ulimit -c 0; nice -20 perl eval-cl
 chmod a+x ./perl6
 
 # start eval server
-exec 3> >( ./perl6-eval-server -bind-stdin -cookie TESTCOOKIE -app perl6.jar 2>&1 | 
-               tee eval-server.log )
+./perl6-eval-server -cookie TESTCOOKIE -app perl6.jar &
+
+sleep 10
 
 perl t/spec/test_summary rakudo.jvm 2>&1 | tee ../log/rakudo.jvm_summary.out

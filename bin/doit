@@ -1,9 +1,9 @@
 #!/bin/sh
 ./bin/git.p5
-nice -20 ./bin/rakudo.moar.sh
-nice -20 ./bin/rakudo.moar-jit.sh
-nice -20 ./bin/rakudo.parrot.sh
-nice -20 ./bin/rakudo.jvm.sh
+./bin/rakudo.moar.sh
+./bin/rakudo.moar-jit.sh
+./bin/rakudo.parrot.sh
+./bin/rakudo.jvm.sh
 TEMPFILE="TEMPFILE"
 PASSFILE="perl6_pass_rates.csv"
 OUTPUT=$(./bin/cull)
