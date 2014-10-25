@@ -140,12 +140,11 @@ S02-names/pseudo.rakudo.jvm........................  46    0    8   88  142
      2 todo   : not entirely sure these make sense...
 S02-names/strict.rakudo.jvm........................   4    0    0    1    5
      1 skipped: lax mode does not propagate into EVAL yet
-S02-names/symbolic-deref.rakudo.jvm................  29    0    3    3   35
+S02-names/symbolic-deref.rakudo.jvm................  30    0    2    3   35
      2 skipped: NYI
      1 skipped: no such symbol
      1 todo   : NYI
      1 todo   : no such symbol
-     1 todo PASSED: ?
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
 S02-types/WHICH.rakudo.jvm......................... 578    0    0   12  590
@@ -1646,7 +1645,7 @@ integration/advent2013-day10.rakudo.jvm............  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.rakudo.jvm............  30    0    0    2   32
      2 skipped: RT #121622 aborting on jvm
-integration/advent2013-day14.t.....................   9    1    0    0   10
+integration/advent2013-day14.t.....................  10    0    0    0   10
 integration/advent2013-day15.rakudo.jvm............  26    0    4    0   30
      1 todo   : jvm rounding quirks
      3 todo   : list of numbers
@@ -1685,7 +1684,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5046,     2,   144,   380,  5572,  5664
+"S02",        5047,     2,   143,   380,  5572,  5664
 "S03",        4900,     0,   111,    92,  5103,  5137
 "S04",         996,     0,    42,    58,  1096,  1148
 "S05",        5157,     0,   110,   263,  5530,  5911
@@ -1707,11 +1706,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     3,     3,   344,   354
 "S32",        9156,     0,   105,   187,  9448,  7882
-"int",        1202,     1,    15,    21,  1239,  1228
+"int",        1203,     0,    15,    21,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32165,     3,   701,  1391, 34260, 34660
+"total",     32167,     2,   700,  1391, 34260, 34660
 ----------------
 Failure summary:
 S02-magicals/DISTRO.rakudo.jvm 25 - We know of the DISTRO we are running under
 S02-names-vars/perl.rakudo.jvm 84 - .perl on user-defined type roundtrips okay
-integration/advent2013-day14.t 2 - quotes example
