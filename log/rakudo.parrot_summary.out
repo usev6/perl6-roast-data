@@ -308,8 +308,8 @@ S02-types/nan.rakudo.parrot........................nice: ./perl6-p: No such file
    0   21    0    0   21
     21 tests aborted (missing ok/not ok)
 S02-types/native.rakudo.parrot.....................nice: ./perl6-p: No such file or directory
-   0   27    0    0   27
-    27 tests aborted (missing ok/not ok)
+   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
 S02-types/nested_arrays.t..........................nice: ./perl6-p: No such file or directory
    0    8    0    0    8
      8 tests aborted (missing ok/not ok)
@@ -504,8 +504,8 @@ S03-operators/fiddly.t.............................nice: ./perl6-p: No such file
    0    1    0    0    1
      1 tests aborted (missing ok/not ok)
 S03-operators/flip-flop.rakudo.parrot..............nice: ./perl6-p: No such file or directory
-   0   39    0    0   39
-    39 tests aborted (missing ok/not ok)
+   0   40    0    0   40
+    40 tests aborted (missing ok/not ok)
 S03-operators/gcd.t................................nice: ./perl6-p: No such file or directory
    0   16    0    0   16
     16 tests aborted (missing ok/not ok)
@@ -761,9 +761,9 @@ S04-phasers/in-loop.rakudo.parrot..................nice: ./perl6-p: No such file
 S04-phasers/init.rakudo.parrot.....................nice: ./perl6-p: No such file or directory
    0   11    0    0   11
     11 tests aborted (missing ok/not ok)
-S04-phasers/keep-undo.t............................nice: ./perl6-p: No such file or directory
-   0   12    0    0   12
-    12 tests aborted (missing ok/not ok)
+S04-phasers/keep-undo.rakudo.parrot................nice: ./perl6-p: No such file or directory
+   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
 S04-phasers/multiple.t.............................nice: ./perl6-p: No such file or directory
    0    2    0    0    2
      2 tests aborted (missing ok/not ok)
@@ -1024,8 +1024,8 @@ S05-metasyntax/single-quotes.t.....................nice: ./perl6-p: No such file
    0    5    0    0    5
      5 tests aborted (missing ok/not ok)
 S05-metasyntax/unknown.rakudo.parrot...............nice: ./perl6-p: No such file or directory
-   0   11    0    0   11
-    11 tests aborted (missing ok/not ok)
+   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
 S05-modifier/continue.t............................nice: ./perl6-p: No such file or directory
    0   13    0    0   13
     13 tests aborted (missing ok/not ok)
@@ -1329,15 +1329,15 @@ S09-subscript/slice.rakudo.parrot..................nice: ./perl6-p: No such file
    0   26    0    0   26
     26 tests aborted (missing ok/not ok)
 S09-typed-arrays/arrays.rakudo.parrot..............nice: ./perl6-p: No such file or directory
-   0   65    0    0   65
-    65 tests aborted (missing ok/not ok)
+   0   67    0    0   67
+    67 tests aborted (missing ok/not ok)
 S09-typed-arrays/hashes.t..........................nice: ./perl6-p: No such file or directory
    0   33    0    0   33
     33 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S10-packages/basic.rakudo.parrot...................nice: ./perl6-p: No such file or directory
-   0   62    0    0   62
-    62 tests aborted (missing ok/not ok)
+   0   63    0    0   63
+    63 tests aborted (missing ok/not ok)
 S10-packages/joined-namespaces.t...................nice: ./perl6-p: No such file or directory
    0    3    0    0    3
      3 tests aborted (missing ok/not ok)
@@ -1377,8 +1377,8 @@ S11-modules/require.rakudo.parrot..................nice: ./perl6-p: No such file
     15 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S12-attributes/class.rakudo.parrot.................nice: ./perl6-p: No such file or directory
-   0   27    0    0   27
-    27 tests aborted (missing ok/not ok)
+   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
 S12-attributes/clone.rakudo.parrot.................nice: ./perl6-p: No such file or directory
    0   35    0    0   35
     35 tests aborted (missing ok/not ok)
@@ -1401,8 +1401,8 @@ S12-attributes/recursive.t.........................nice: ./perl6-p: No such file
    0   23    0    0   23
     23 tests aborted (missing ok/not ok)
 S12-attributes/undeclared.t........................nice: ./perl6-p: No such file or directory
-   0   10    0    0   10
-    10 tests aborted (missing ok/not ok)
+   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
 S12-class/anonymous.rakudo.parrot..................nice: ./perl6-p: No such file or directory
    0   17    0    0   17
     17 tests aborted (missing ok/not ok)
@@ -2630,16 +2630,16 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-p: No such file
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",           0,  4974,     0,     0,  4974,  5067
-"S03",           0,  5103,     0,     0,  5103,  5137
-"S04",           0,  1079,     0,     0,  1079,  1148
-"S05",           0,  5530,     0,     0,  5530,  5911
+"S02",           0,  4976,     0,     0,  4976,  5069
+"S03",           0,  5104,     0,     0,  5104,  5138
+"S04",           0,  1083,     0,     0,  1083,  1152
+"S05",           0,  5531,     0,     0,  5531,  5912
 "S06",           0,  1337,     0,     0,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
-"S09",           0,   205,     0,     0,   205,   205
-"S10",           0,    87,     0,     0,    87,   144
+"S09",           0,   207,     0,     0,   207,   207
+"S10",           0,    88,     0,     0,    88,   145
 "S11",           0,   123,     0,     0,   123,   142
-"S12",           0,  1527,     0,     0,  1527,  1585
+"S12",           0,  1530,     0,     0,  1530,  1588
 "S13",           0,    73,     0,     0,    73,    83
 "S14",           0,   322,     0,     0,   322,   335
 "S15",           0,     0,     0,     0,     0,   283
@@ -2654,7 +2654,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-p: No such file
 "S32",           0,  7783,     0,     0,  7783,  7882
 "int",           0,  1212,     0,     0,  1212,  1218
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 31109,     0,     0, 31109, 33849
+"total",         0, 31123,     0,     0, 31123, 33863
 ----------------
 Failure summary:
 S02-lexical-conventions/begin_end_pod.t aborted 1 test(s)
@@ -2758,7 +2758,7 @@ S02-types/mixed_multi_dimensional.rakudo.parrot aborted 80 test(s)
 S02-types/mixhash.rakudo.parrot aborted 214 test(s)
 S02-types/multi_dimensional_array.rakudo.parrot aborted 58 test(s)
 S02-types/nan.rakudo.parrot aborted 21 test(s)
-S02-types/native.rakudo.parrot aborted 27 test(s)
+S02-types/native.rakudo.parrot aborted 29 test(s)
 S02-types/nested_arrays.t aborted 8 test(s)
 S02-types/nested_pairs.t aborted 14 test(s)
 S02-types/nil.rakudo.parrot aborted 51 test(s)
@@ -2823,7 +2823,7 @@ S03-operators/div.t aborted 7 test(s)
 S03-operators/equality.t aborted 32 test(s)
 S03-operators/eqv.rakudo.parrot aborted 54 test(s)
 S03-operators/fiddly.t aborted 1 test(s)
-S03-operators/flip-flop.rakudo.parrot aborted 39 test(s)
+S03-operators/flip-flop.rakudo.parrot aborted 40 test(s)
 S03-operators/gcd.t aborted 16 test(s)
 S03-operators/identity.rakudo.parrot aborted 45 test(s)
 S03-operators/increment.t aborted 32 test(s)
@@ -2908,7 +2908,7 @@ S04-phasers/first.t aborted 4 test(s)
 S04-phasers/in-eval.rakudo.parrot aborted 35 test(s)
 S04-phasers/in-loop.rakudo.parrot aborted 3 test(s)
 S04-phasers/init.rakudo.parrot aborted 11 test(s)
-S04-phasers/keep-undo.t aborted 12 test(s)
+S04-phasers/keep-undo.rakudo.parrot aborted 16 test(s)
 S04-phasers/multiple.t aborted 2 test(s)
 S04-phasers/next.rakudo.parrot aborted 13 test(s)
 S04-phasers/pre-post.rakudo.parrot aborted 22 test(s)
@@ -2995,7 +2995,7 @@ S05-metasyntax/regex.t aborted 29 test(s)
 S05-metasyntax/repeat.t aborted 24 test(s)
 S05-metasyntax/sequential-alternation.t aborted 10 test(s)
 S05-metasyntax/single-quotes.t aborted 5 test(s)
-S05-metasyntax/unknown.rakudo.parrot aborted 11 test(s)
+S05-metasyntax/unknown.rakudo.parrot aborted 12 test(s)
 S05-modifier/continue.t aborted 13 test(s)
 S05-modifier/counted-match.rakudo.parrot aborted 22 test(s)
 S05-modifier/counted.rakudo.parrot aborted 118 test(s)
@@ -3096,9 +3096,9 @@ S09-autovivification/autoincrement.t aborted 7 test(s)
 S09-autovivification/autovivification.rakudo.parr aborted 42 test(s)
 S09-hashes/objecthash.rakudo.parrot aborted 32 test(s)
 S09-subscript/slice.rakudo.parrot aborted 26 test(s)
-S09-typed-arrays/arrays.rakudo.parrot aborted 65 test(s)
+S09-typed-arrays/arrays.rakudo.parrot aborted 67 test(s)
 S09-typed-arrays/hashes.t aborted 33 test(s)
-S10-packages/basic.rakudo.parrot aborted 62 test(s)
+S10-packages/basic.rakudo.parrot aborted 63 test(s)
 S10-packages/joined-namespaces.t aborted 3 test(s)
 S10-packages/precompilation.t aborted 13 test(s)
 S10-packages/use-with-class.t aborted 9 test(s)
@@ -3111,7 +3111,7 @@ S11-modules/lexical.t aborted 2 test(s)
 S11-modules/need.t aborted 2 test(s)
 S11-modules/nested.t aborted 6 test(s)
 S11-modules/require.rakudo.parrot aborted 15 test(s)
-S12-attributes/class.rakudo.parrot aborted 27 test(s)
+S12-attributes/class.rakudo.parrot aborted 29 test(s)
 S12-attributes/clone.rakudo.parrot aborted 35 test(s)
 S12-attributes/defaults.t aborted 34 test(s)
 S12-attributes/delegation.t aborted 65 test(s)
@@ -3119,7 +3119,7 @@ S12-attributes/inheritance.t aborted 7 test(s)
 S12-attributes/instance.rakudo.parrot aborted 140 test(s)
 S12-attributes/mutators.rakudo.parrot aborted 12 test(s)
 S12-attributes/recursive.t aborted 23 test(s)
-S12-attributes/undeclared.t aborted 10 test(s)
+S12-attributes/undeclared.t aborted 11 test(s)
 S12-class/anonymous.rakudo.parrot aborted 17 test(s)
 S12-class/attributes.rakudo.parrot aborted 33 test(s)
 S12-class/augment-supersede.rakudo.parrot aborted 13 test(s)
