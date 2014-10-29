@@ -173,7 +173,7 @@ S02-names-vars/fmt.t...............................  21    0    0    0   21
 S02-names-vars/list_array_perl.rakudo.moar.........  19    0    1    2   22
      2 skipped: recursive data structure
      1 todo   : List.perl bug
-S02-names-vars/names.rakudo.moar................... 130    0    0   13  143
+S02-names-vars/names.rakudo.moar................... 131    0    0   13  144
      4 skipped: ::{ } package lookup NYI
      2 skipped: this kind of lookup NYI
      7 skipped: package variable autovivification
@@ -1839,8 +1839,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1414463513
-# Using file temp_1414463513
+S16-filehandles/chmod.t............................# Using file temp_1414549680
+# Using file temp_1414549680
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1869,7 +1869,7 @@ S16-unfiled/rebindstdhandles.rakudo.moar...........   0    0    0    2    2
 S17-channel/basic.t................................Saw 1 call to deprecated code during execution.
 ================================================================================
 winner called at:
-  src/gen/m-CORE.setting, line 20248
+  src/gen/m-CORE.setting, line 20267
 Deprecated since v2014.10, will be removed with release v2015.10!
 Please use earliest instead.
 --------------------------------------------------------------------------------
@@ -1951,7 +1951,7 @@ S17-supply/list.t..................................# **** scheduling with Thread
 Saw 1 call to deprecated code during execution.
 ================================================================================
 winner called at:
-  src/gen/m-CORE.setting, line 20423
+  src/gen/m-CORE.setting, line 20442
 Deprecated since v2014.10, will be removed with release v2015.10!
 Please use earliest instead.
 --------------------------------------------------------------------------------
@@ -2691,14 +2691,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# gerdr: 0.876373 seconds
-# kaz: 0.87800562 seconds
-# recursive-ternary: 0.97703327 seconds
-# loop: 0.996600 seconds
-# sequence-ternary: 1.7537139 seconds
-# recursive-ternary-hand-cached: 1.8322020 seconds
-# hand-memoization: 2.548859 seconds
-# sequence: 2.77832912 seconds
+integration/advent2012-day21.t.....................# gerdr: 0.87398940 seconds
+# recursive-ternary: 0.970082598 seconds
+# kaz: 0.98549760 seconds
+# loop: 0.98686838 seconds
+# sequence-ternary: 1.74040006 seconds
+# recursive-ternary-hand-cached: 1.80083577 seconds
+# hand-memoization: 2.5313468 seconds
+# sequence: 2.6287815 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2763,7 +2763,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5086,     0,   127,   362,  5575,  5667
+"S02",        5087,     0,   127,   362,  5576,  5668
 "S03",        4900,     0,   111,    93,  5104,  5138
 "S04",        1018,     0,    40,    43,  1101,  1153
 "S05",        5249,     0,   105,   177,  5531,  5912
@@ -2787,6 +2787,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9158,     0,   121,   169,  9448,  7882
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32662,     0,   657,  1251, 34570, 34703
+"total",     32663,     0,   657,  1251, 34571, 34704
 ----------------
 No failures!

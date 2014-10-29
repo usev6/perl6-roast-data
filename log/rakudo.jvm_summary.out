@@ -102,7 +102,7 @@ S02-names-vars/fmt.t...............................  21    0    0    0   21
 S02-names-vars/list_array_perl.rakudo.jvm..........  19    0    1    2   22
      2 skipped: recursive data structure
      1 todo   : List.perl bug
-S02-names-vars/names.rakudo.jvm.................... 130    0    0   13  143
+S02-names-vars/names.rakudo.jvm.................... 131    0    0   13  144
      4 skipped: ::{ } package lookup NYI
      2 skipped: this kind of lookup NYI
      7 skipped: package variable autovivification
@@ -488,9 +488,8 @@ S04-declarations/constant.rakudo.jvm...............  47    0    4    3   54
 S04-declarations/implicit-parameter.t..............  19    0    0    0   19
 S04-declarations/multiple.rakudo.jvm...............   5    0    1    0    6
      1 todo   : nom regression
-S04-declarations/my.rakudo.jvm.....................  70    0    2    3   75
+S04-declarations/my.rakudo.jvm.....................  71    0    2    2   75
      2 skipped: nom regression, OUR::
-     1 skipped: Method 'submethod_table' not found
      1 todo   : previous test skipped
      1 todo   : fails
 S04-declarations/our.rakudo.jvm....................  32    0    1    0   33
@@ -1689,9 +1688,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5050,     1,   144,   380,  5575,  5667
+"S02",        5051,     1,   144,   380,  5576,  5668
 "S03",        4900,     0,   111,    93,  5104,  5138
-"S04",         998,     0,    43,    60,  1101,  1153
+"S04",         999,     0,    43,    59,  1101,  1153
 "S05",        5157,     0,   111,   263,  5531,  5912
 "S06",        1185,     0,    42,   110,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
@@ -1713,7 +1712,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9156,     0,   105,   187,  9448,  7882
 "int",        1203,     0,    15,    21,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32179,     1,   703,  1393, 34276, 34676
+"total",     32181,     1,   703,  1392, 34277, 34677
 ----------------
 Failure summary:
 S02-magicals/DISTRO.rakudo.jvm 25 - We know of the DISTRO we are running under
