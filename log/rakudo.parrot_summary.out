@@ -48,8 +48,8 @@ S02-literals/array-interpolation.t.................nice: ./perl6-p: No such file
    0   12    0    0   12
     12 tests aborted (missing ok/not ok)
 S02-literals/autoref.t.............................nice: ./perl6-p: No such file or directory
-   0   57    0    0   57
-    57 tests aborted (missing ok/not ok)
+   0   59    0    0   59
+    59 tests aborted (missing ok/not ok)
 S02-literals/char-by-name.rakudo.parrot............nice: ./perl6-p: No such file or directory
    0   10    0    0   10
     10 tests aborted (missing ok/not ok)
@@ -280,7 +280,7 @@ S02-types/infinity.rakudo.parrot...................nice: ./perl6-p: No such file
 S02-types/instants-and-durations.t.................nice: ./perl6-p: No such file or directory
    0   12    0    0   12
     12 tests aborted (missing ok/not ok)
-S02-types/int-uint.rakudo.parrot...................nice: ./perl6-p: No such file or directory
+S02-types/int-uint.t...............................nice: ./perl6-p: No such file or directory
    0    1    0    0    1
      1 tests aborted (missing ok/not ok)
 S02-types/isDEPRECATED.rakudo.parrot...............nice: ./perl6-p: No such file or directory
@@ -1709,7 +1709,7 @@ S16-filehandles/io_in_for_loops.t..................nice: ./perl6-p: No such file
 S16-filehandles/io_in_while_loops.t................nice: ./perl6-p: No such file or directory
    0   13    0    0   13
     13 tests aborted (missing ok/not ok)
-S16-filehandles/mkdir_rmdir.rakudo.parrot..........nice: ./perl6-p: No such file or directory
+S16-filehandles/mkdir_rmdir.t......................nice: ./perl6-p: No such file or directory
    0   14    0    0   14
     14 tests aborted (missing ok/not ok)
 S16-filehandles/open.t.............................nice: ./perl6-p: No such file or directory
@@ -2630,7 +2630,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-p: No such file
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",           0,  4978,     0,     0,  4978,  5071
+"S02",           0,  4980,     0,     0,  4980,  5073
 "S03",           0,  5104,     0,     0,  5104,  5138
 "S04",           0,  1084,     0,     0,  1084,  1153
 "S05",           0,  5531,     0,     0,  5531,  5912
@@ -2644,7 +2644,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-p: No such file
 "S14",           0,   322,     0,     0,   322,   335
 "S15",           0,     0,     0,     0,     0,   283
 "S16",           0,   255,     0,     0,   255,   307
-"S17",           0,     0,     0,     0,     0,   665
+"S17",           0,     0,     0,     0,     0,   674
 "S19",           0,    12,     0,     0,    12,    17
 "S22",           0,    53,     0,     0,    53,    53
 "S24",           0,     1,     0,     0,     1,    79
@@ -2654,7 +2654,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-p: No such file
 "S32",           0,  7783,     0,     0,  7783,  7882
 "int",           0,  1212,     0,     0,  1212,  1218
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 31126,     0,     0, 31126, 33866
+"total",         0, 31128,     0,     0, 31128, 33877
 ----------------
 Failure summary:
 S02-lexical-conventions/begin_end_pod.t aborted 1 test(s)
@@ -2672,7 +2672,7 @@ S02-lists/indexing.t aborted 1 test(s)
 S02-lists/tree.t aborted 10 test(s)
 S02-literals/adverbs.t aborted 15 test(s)
 S02-literals/array-interpolation.t aborted 12 test(s)
-S02-literals/autoref.t aborted 57 test(s)
+S02-literals/autoref.t aborted 59 test(s)
 S02-literals/char-by-name.rakudo.parrot aborted 10 test(s)
 S02-literals/char-by-number.rakudo.parrot aborted 42 test(s)
 S02-literals/fmt-interpolation.t aborted 11 test(s)
@@ -2749,7 +2749,7 @@ S02-types/hash.rakudo.parrot aborted 90 test(s)
 S02-types/hash_ref.t aborted 31 test(s)
 S02-types/infinity.rakudo.parrot aborted 13 test(s)
 S02-types/instants-and-durations.t aborted 12 test(s)
-S02-types/int-uint.rakudo.parrot aborted 1 test(s)
+S02-types/int-uint.t aborted 1 test(s)
 S02-types/isDEPRECATED.rakudo.parrot aborted 20 test(s)
 S02-types/lazy-lists.t aborted 23 test(s)
 S02-types/lists.rakudo.parrot aborted 28 test(s)
@@ -3221,7 +3221,7 @@ S16-filehandles/filetest.rakudo.parrot aborted 43 test(s)
 S16-filehandles/io.t aborted 87 test(s)
 S16-filehandles/io_in_for_loops.t aborted 29 test(s)
 S16-filehandles/io_in_while_loops.t aborted 13 test(s)
-S16-filehandles/mkdir_rmdir.rakudo.parrot aborted 14 test(s)
+S16-filehandles/mkdir_rmdir.t aborted 14 test(s)
 S16-filehandles/open.t aborted 5 test(s)
 S16-filehandles/unlink.rakudo.parrot aborted 6 test(s)
 S16-io/bare-say.t aborted 7 test(s)
