@@ -1867,8 +1867,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1414636149
-# Using file temp_1414636149
+S16-filehandles/chmod.t............................# Using file temp_1414722590
+# Using file temp_1414722590
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1893,16 +1893,7 @@ S16-io/tmpdir.t....................................   3    0    0    0    3
 S16-unfiled/rebindstdhandles.rakudo.moar...........   0    0    0    2    2
      2 skipped: contextual rebinding regression
                                                    pass fail todo skip plan
-S17-channel/basic.t................................Saw 1 call to deprecated code during execution.
-================================================================================
-winner called at:
-  src/gen/m-CORE.setting, line 20303
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use earliest instead.
---------------------------------------------------------------------------------
-Please contact the author to have these calls to deprecated code adapted,
-so that this message will disappear!
-  12    0    0    0   12
+S17-channel/basic.t................................  12    0    0    0   12
 S17-channel/earliest.t.............................   3    0    0    0    3
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-procasync/basic.t..............................use of uninitialized value $got of type Any in string context  in sub is at lib/Test.pm:116
@@ -1917,12 +1908,14 @@ S17-promise/in.t...................................   2    0    0    0    2
 S17-promise/start.rakudo.moar......................  13    0    0    2   15
      2 skipped: RT #122715
 S17-promise/then.t.................................  14    0    0    0   14
-S17-scheduler/at.t.................................   7    0    0    0    7
-S17-scheduler/basic.rakudo.moar....................  26    0    0    6   32
-     6 skipped: waiting for new '.loads' semantics
+S17-scheduler/at.rakudo.moar.......................  14    0    1    0   15
+     1 todo   : huh?
+S17-scheduler/basic.rakudo.moar....................  28    0    2   10   40
+    10 skipped: waiting for new '.loads' semantics
+     2 todo   : huh?
 S17-scheduler/every.t..............................  18    0    0    0   18
-S17-scheduler/in.t.................................   6    0    0    0    6
-S17-scheduler/times.t..............................   2    0    0    0    2
+S17-scheduler/in.t.................................  14    0    0    0   14
+S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.t...............................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
   12    0    0    0   12
@@ -1975,15 +1968,6 @@ S17-supply/lines.t.................................# **** scheduling with Thread
   21    0    0    0   21
 S17-supply/list.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
-Saw 1 call to deprecated code during execution.
-================================================================================
-winner called at:
-  src/gen/m-CORE.setting, line 20478
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use earliest instead.
---------------------------------------------------------------------------------
-Please contact the author to have these calls to deprecated code adapted,
-so that this message will disappear!
    5    0    0    0    5
 S17-supply/map.t...................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
@@ -2734,14 +2718,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8791278 seconds
-# gerdr: 0.88022910 seconds
-# recursive-ternary: 0.9702337 seconds
-# loop: 0.9961347 seconds
-# sequence-ternary: 1.7518001 seconds
-# recursive-ternary-hand-cached: 1.8150055 seconds
-# hand-memoization: 2.56045603 seconds
-# sequence: 2.66327397 seconds
+integration/advent2012-day21.t.....................# gerdr: 0.8778126 seconds
+# kaz: 0.8879717 seconds
+# recursive-ternary: 0.9803705 seconds
+# loop: 0.9937825 seconds
+# sequence-ternary: 1.7700765 seconds
+# recursive-ternary-hand-cached: 1.8392874 seconds
+# hand-memoization: 2.5633230 seconds
+# sequence: 2.6535630 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2820,7 +2804,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         302,     0,    10,    10,   322,   335
 "S15",         240,     0,     2,    16,   258,   283
 "S16",         247,     0,     0,    16,   263,   307
-"S17",         655,     0,     4,    18,   677,   701
+"S17",         674,     0,     7,    22,   703,   727
 "S19",          12,     0,     0,     0,    12,    17
 "S22",          52,     0,     1,     0,    53,    53
 "S24",           1,     0,     0,     0,     1,    79
@@ -2830,6 +2814,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9162,     0,   121,   165,  9448,  7882
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32679,     0,   657,  1246, 34582, 34715
+"total",     32698,     0,   660,  1250, 34608, 34741
 ----------------
 No failures!
