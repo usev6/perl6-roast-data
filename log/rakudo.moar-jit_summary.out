@@ -1858,8 +1858,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1414895393
-# Using file temp_1414895393
+S16-filehandles/chmod.t............................# Using file temp_1414981855
+# Using file temp_1414981855
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2709,14 +2709,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.885559 seconds
-# gerdr: 0.900320 seconds
-# recursive-ternary: 1.00020268 seconds
-# loop: 1.0223536 seconds
-# sequence-ternary: 1.7901000 seconds
-# recursive-ternary-hand-cached: 1.8564806 seconds
-# hand-memoization: 2.5959777 seconds
-# sequence: 2.74208383 seconds
+integration/advent2012-day21.t.....................# kaz: 0.8765918 seconds
+# gerdr: 0.89441809 seconds
+# recursive-ternary: 0.9957812 seconds
+# loop: 1.0165617 seconds
+# sequence-ternary: 1.79217041 seconds
+# recursive-ternary-hand-cached: 1.8243509 seconds
+# hand-memoization: 2.6211776 seconds
+# sequence: 2.6899564 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
