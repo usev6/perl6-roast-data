@@ -100,21 +100,7 @@ S02-literals/sub-calls.t...........................  20    0    0    0   20
 S02-literals/subscript.t...........................   2    0    0    0    2
 S02-literals/types.t...............................   7    0    0    0    7
 S02-literals/underscores.t.........................  19    0    0    0   19
-S02-literals/version.rakudo.moar...................
-# Failed test 'version literal stringification'
-# at t/spec/S02-literals/version.rakudo.moar line 1
-# expected: '1.2.3+'
-#      got: '1.2.3'
-
-# Failed test '+ makes a difference in eqv'
-# at t/spec/S02-literals/version.rakudo.moar line 1
-
-# Failed test 'smart-matching and plus (+1)'
-# at t/spec/S02-literals/version.rakudo.moar line 1
-
-# Failed test '+ scopes to the whole version, not just the last chunk'
-# at t/spec/S02-literals/version.rakudo.moar line 1
-  21    4    3    0   28
+S02-literals/version.rakudo.moar...................  27    0    3    0   30
      3 todo   : trailing zeroes fail
 S02-magicals/78258.t...............................   1    0    0    0    1
 S02-magicals/DISTRO.rakudo.moar....................use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1510
@@ -788,10 +774,9 @@ S03-operators/is-divisible-by.rakudo.moar..........  14    0    1    0   15
      1 todo   : not sure why this doesn't fire
 S03-operators/lcm.t................................  15    0    0    0   15
 S03-operators/list-quote-junction.t................  16    0    0    0   16
-S03-operators/minmax.rakudo.moar...................  21    0    4    0   25
-     1 todo   : Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious
+S03-operators/minmax.rakudo.moar...................  21    0    2    2   25
+     2 skipped: Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious
      2 todo   : max/min non-associative NYI
-     1 todo PASSED: Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious
 S03-operators/misc.t...............................  33    0    0    0   33
 S03-operators/names.t..............................Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
 
@@ -1872,8 +1857,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1415067122
-# Using file temp_1415067122
+S16-filehandles/chmod.t............................# Using file temp_1415153517
+# Using file temp_1415153517
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2727,14 +2712,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8320709 seconds
-# gerdr: 0.8461171 seconds
-# recursive-ternary: 0.94295829 seconds
-# loop: 0.9851359 seconds
-# sequence-ternary: 1.7726152 seconds
-# recursive-ternary-hand-cached: 1.7776898 seconds
-# hand-memoization: 2.4518813 seconds
-# sequence: 2.5603054 seconds
+integration/advent2012-day21.t.....................# kaz: 0.8120149 seconds
+# gerdr: 0.84674369 seconds
+# loop: 0.94528449 seconds
+# recursive-ternary: 0.9564939 seconds
+# sequence-ternary: 1.7409839 seconds
+# recursive-ternary-hand-cached: 1.7682580 seconds
+# hand-memoization: 2.462633 seconds
+# sequence: 2.5386698 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2799,8 +2784,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5085,     4,   127,   362,  5578,  5670
-"S03",        4900,     0,   111,    93,  5104,  5138
+"S02",        5091,     0,   127,   362,  5580,  5672
+"S03",        4900,     0,   109,    95,  5104,  5138
 "S04",        1018,     0,    40,    43,  1101,  1153
 "S05",        5249,     0,   105,   177,  5531,  5912
 "S06",        1192,     0,    41,   104,  1337,  1417
@@ -2823,10 +2808,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9158,     0,   125,   165,  9448,  7882
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32691,     4,   664,  1250, 34609, 34742
+"total",     32697,     0,   662,  1252, 34611, 34744
 ----------------
-Failure summary:
-S02-literals/version.rakudo.moar 2 - version literal stringification
-S02-literals/version.rakudo.moar 6 - + makes a difference in eqv
-S02-literals/version.rakudo.moar 13 - smart-matching and plus (+1)
-S02-literals/version.rakudo.moar 15 - + scopes to the whole version, not just the last chunk
+No failures!
