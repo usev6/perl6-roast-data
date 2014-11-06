@@ -1009,7 +1009,13 @@ S04-phasers/pre-post.rakudo.moar...................  19    0    2    1   22
      1 todo   : POST and exceptions
      1 todo   : failing PRE block should not run any other phasers, RT #121531
 S04-phasers/rvalue.t...............................  16    0    0    0   16
-S04-statement-modifiers/for.t......................  23    0    0    0   23
+S04-statement-modifiers/for.t......................
+# Failed test 'for modifies the $_ that is visible to the {} interpolator'
+# at t/spec/S04-statement-modifiers/for.t line 127
+# expected: 'cool'
+#      got: 'bogus'
+# Looks like you failed 1 tests of 24
+  23    1    0    0   24
 S04-statement-modifiers/given.t....................   6    0    0    0    6
 S04-statement-modifiers/if.t.......................  11    0    0    0   11
 S04-statement-modifiers/unless.t...................   6    0    0    0    6
@@ -1564,8 +1570,7 @@ so that this message will disappear!
      1 todo   : ticket based only on class... RT #60446
      1 todo   : RT #64606
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.moar............  11    0    2    0   13
-     1 todo   : RT #122773
+S10-packages/precompilation.rakudo.moar............  12    0    1    0   13
      1 todo PASSED: RT #122896
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
@@ -1857,8 +1862,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1415153517
-# Using file temp_1415153517
+S16-filehandles/chmod.t............................# Using file temp_1415239991
+# Using file temp_1415239991
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2712,14 +2717,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8120149 seconds
-# gerdr: 0.84674369 seconds
-# loop: 0.94528449 seconds
-# recursive-ternary: 0.9564939 seconds
-# sequence-ternary: 1.7409839 seconds
-# recursive-ternary-hand-cached: 1.7682580 seconds
-# hand-memoization: 2.462633 seconds
-# sequence: 2.5386698 seconds
+integration/advent2012-day21.t.....................# kaz: 0.9914841 seconds
+# gerdr: 1.01478738 seconds
+# recursive-ternary: 1.0955050 seconds
+# loop: 1.1206355 seconds
+# sequence-ternary: 1.9157014 seconds
+# recursive-ternary-hand-cached: 1.97038224 seconds
+# hand-memoization: 2.6844854 seconds
+# sequence: 2.76244227 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2786,12 +2791,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5091,     0,   127,   362,  5580,  5672
 "S03",        4900,     0,   109,    95,  5104,  5138
-"S04",        1018,     0,    40,    43,  1101,  1153
+"S04",        1018,     1,    40,    43,  1102,  1154
 "S05",        5249,     0,   105,   177,  5531,  5912
 "S06",        1192,     0,    41,   104,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
-"S10",          83,     0,     4,     1,    88,   145
+"S10",          84,     0,     3,     1,    88,   145
 "S11",         105,     0,     4,    14,   123,   142
 "S12",        1360,     0,    46,   125,  1531,  1589
 "S13",          36,     0,    10,    27,    73,    83
@@ -2808,6 +2813,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9158,     0,   125,   165,  9448,  7882
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32697,     0,   662,  1252, 34611, 34744
+"total",     32698,     1,   661,  1252, 34612, 34745
 ----------------
-No failures!
+Failure summary:
+S04-statement-modifiers/for.t 24 - for modifies the $_ that is visible to the {} interpolator
