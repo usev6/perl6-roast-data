@@ -14,8 +14,7 @@ S02-lexical-conventions/sub-block-parsing.t........  11    0    0    0   11
 S02-lexical-conventions/unicode-whitespace.t.......  50    0    0    0   50
 S02-lexical-conventions/unicode.rakudo.jvm.........  42    0    0    2   44
      2 skipped: VOWEL SIGNs in identifiers; RT #122340
-S02-lexical-conventions/unspace.rakudo.jvm.........  74    0    1   11   86
-     3 skipped: indirect method calls parsefail: RT #122344
+S02-lexical-conventions/unspace.rakudo.jvm.........  77    0    1    8   86
      1 skipped: .++ does not work: RT #122342
      3 skipped: pod and unspace: RT #122343
      4 skipped: =for pod NYI (in STD.pm): RT #122343
@@ -360,7 +359,7 @@ S03-operators/basic-types.t........................  19    0    0    0   19
 S03-operators/bit.t................................  38    0    0    0   38
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
 S03-operators/brainos.t............................   9    0    0    0    9
-S03-operators/buf.t................................  34    0    0    0   34
+S03-operators/buf.t................................  38    0    0    0   38
 S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  22    0    0    0   22
 S03-operators/comparison-simple.t..................  24    0    0    0   24
@@ -702,7 +701,8 @@ S05-metasyntax/lookaround.t........................  10    0    0    0   10
 S05-metasyntax/null.t..............................   4    0    0    0    4
 S05-metasyntax/proto-token-ltm.t...................  10    0    0    0   10
 S05-metasyntax/regex.t.............................  29    0    0    0   29
-S05-metasyntax/repeat.t............................  24    0    0    0   24
+S05-metasyntax/repeat.rakudo.jvm...................  24    0    2    0   26
+     2 todo   : RT #111956
 S05-metasyntax/sequential-alternation.t............  10    0    0    0   10
 S05-metasyntax/single-quotes.t.....................   5    0    0    0    5
 S05-metasyntax/unknown.rakudo.jvm..................  11    0    1    0   12
@@ -1050,12 +1050,10 @@ S12-methods/defer-next.rakudo.jvm..................  20    0    1    0   21
      1 todo   : variant of RT #69608
 S12-methods/delegation.t...........................   7    0    0    0    7
 S12-methods/how.t..................................   2    0    0    0    2
-S12-methods/indirect_notation.rakudo.jvm...........  10    0    0   23   33
+S12-methods/indirect_notation.rakudo.jvm...........  16    0    0   21   37
      6 skipped: .@foo not yet working
     15 skipped: .*, .+ and .? with @foo
-     2 skipped: TTIAR near $o:
-S12-methods/instance.rakudo.jvm....................  36    0    0    2   38
-     2 skipped: indirect object notation
+S12-methods/instance.t.............................  38    0    0    0   38
 S12-methods/lastcall.t.............................   6    0    0    0    6
 S12-methods/lvalue.t...............................  16    0    0    0   16
 S12-methods/method-vs-sub.rakudo.jvm...............   4    0    0    1    5
@@ -1692,16 +1690,16 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5057,     0,   143,   380,  5580,  5672
-"S03",        4900,     0,   109,    95,  5104,  5138
+"S02",        5060,     0,   143,   377,  5580,  5672
+"S03",        4904,     0,   109,    95,  5108,  5142
 "S04",         999,     0,    45,    59,  1103,  1155
-"S05",        5157,     0,   111,   263,  5531,  5912
+"S05",        5157,     0,   113,   263,  5533,  5914
 "S06",        1185,     0,    42,   110,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
 "S10",          77,     0,    10,     1,    88,   145
 "S11",          83,    22,     4,    14,   123,   142
-"S12",        1355,     0,    51,   125,  1531,  1589
+"S12",        1363,     0,    51,   121,  1535,  1593
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         298,     0,    13,    11,   322,   335
 "S15",           0,     0,     0,     0,     0,   283
@@ -1716,7 +1714,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9153,     0,   109,   186,  9448,  7882
 "int",        1203,     0,    15,    21,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32195,    22,   709,  1393, 34319, 34719
+"total",     32210,    22,   711,  1386, 34329, 34729
 ----------------
 Failure summary:
 S11-modules/export.rakudo.jvm 3 - exp_no_parens -- values agree
