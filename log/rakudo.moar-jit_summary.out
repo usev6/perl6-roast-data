@@ -1201,22 +1201,7 @@ Potential difficulties:
     at EVAL_9:1
     ------> [32m/<[33m⏏[31m[..b]>/[0m
   29    0    0    0   29
-S05-metasyntax/repeat.rakudo.moar..................    
-# Failed test 'right exception type (X::Syntax::Regex::SolitaryQuantifier)'
-# at lib/Test.pm line 309
-    # Expected: (X::Syntax::Regex::SolitaryQuantifier)
-    # Got:      (X::Comp::AdHoc)
-    # Exception message: Quantifier quantifies nothing
-    # Looks like you failed 1 tests of 2
-    
-# Failed test 'right exception type (X::Syntax::Regex::SolitaryQuantifier)'
-# at lib/Test.pm line 306
-    # Expected: (X::Syntax::Regex::SolitaryQuantifier)
-    # Got:      (X::Comp::AdHoc)
-    # Exception message: Quantifier quantifies nothing
-    # Looks like you failed 1 tests of 2
-  24    0    2    0   26
-     2 todo   : RT #111956
+S05-metasyntax/repeat.t............................  26    0    0    0   26
 S05-metasyntax/sequential-alternation.t............  10    0    0    0   10
 S05-metasyntax/single-quotes.t.....................   5    0    0    0    5
 S05-metasyntax/unknown.rakudo.moar.................  11    0    1    0   12
@@ -1375,20 +1360,18 @@ S06-operator-overloading/semicolon.t...............WARNINGS:
 Useless use of constant integer 2 in sink context (line 15)
 Useless use of constant integer 3 in sink context (line 15)
    3    0    0    0    3
-S06-operator-overloading/sub.rakudo.moar...........  47    0    7   20   74
+S06-operator-overloading/sub.rakudo.moar...........  51    0    2   18   71
      1 skipped: missing block, apparently "if" not an op
      1 skipped: infix Z will never work; no lexical Z
      4 skipped: prefix:[] form NYI
      1 skipped: &::
      4 skipped: missing block, no lexical Z
      3 skipped: assoc("non")
-     2 skipped: NYI
      2 skipped: macros
      1 skipped: undeclared name
      1 skipped: cannot bind with this LHS
      1 todo   : RT #65638
      1 todo   : infix:<;>
-     5 todo   : huh?
 S06-operator-overloading/workout.t.................  84    0    0    0   84
 S06-other/anon-hashes-vs-blocks.t..................  22    0    0    0   22
 S06-other/introspection.t..........................  12    0    0    0   12
@@ -1702,7 +1685,11 @@ S12-construction/new.rakudo.moar...................  15    0   10    0   25
      1 todo   : nested package handling does't quite get this one right
 S12-enums/anonymous.t..............................   7    0    0    0    7
 S12-enums/as-role.t................................   9    0    0    0    9
-S12-enums/basic.rakudo.moar........................  30    0    0    5   35
+S12-enums/basic.rakudo.moar........................Potential difficulties:
+    Redeclaration of symbol b and c
+    at t/spec/S12-enums/basic.rakudo.moar:126
+    ------> [32m    enum S2 <b c d>[33m⏏[31m;[0m
+  32    0    0    5   37
      5 skipped: Cannot convert string to number
 S12-enums/misc.rakudo.moar.........................  14    0    0    1   15
      1 skipped: RT #63826
@@ -1844,7 +1831,7 @@ S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
 S14-roles/instantiation.t..........................  19    0    0    0   19
 S14-roles/lexical.t................................   9    0    0    0    9
-S14-roles/mixin.rakudo.moar........................  29    0    0    3   32
+S14-roles/mixin.rakudo.moar........................  30    0    0    3   33
      2 skipped: mixin at the point of declaration is compile time
      1 skipped: Twigil ! is only valid on attribute definitions
 S14-roles/namespaced.rakudo.moar...................   2    0    1    0    3
@@ -1871,8 +1858,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1415500369
-# Using file temp_1415500369
+S16-filehandles/chmod.t............................# Using file temp_1415586687
+# Using file temp_1415586687
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2726,14 +2713,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.996944 seconds
-# gerdr: 0.9975104 seconds
-# recursive-ternary: 1.0865770 seconds
-# loop: 1.11561125 seconds
-# sequence-ternary: 1.9076505 seconds
-# recursive-ternary-hand-cached: 1.9490671 seconds
-# hand-memoization: 2.669061429 seconds
-# sequence: 2.7717737 seconds
+integration/advent2012-day21.t.....................# kaz: 0.9812854 seconds
+# gerdr: 0.9998621 seconds
+# recursive-ternary: 1.0903372 seconds
+# loop: 1.1226456 seconds
+# sequence-ternary: 1.8854313 seconds
+# recursive-ternary-hand-cached: 1.9426198 seconds
+# hand-memoization: 2.67070458 seconds
+# sequence: 2.75789621 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2801,15 +2788,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        5095,     0,   126,   359,  5580,  5672
 "S03",        4904,     0,   109,    95,  5108,  5142
 "S04",        1018,     0,    42,    43,  1103,  1155
-"S05",        5249,     0,   107,   177,  5533,  5914
-"S06",        1192,     0,    41,   104,  1337,  1417
+"S05",        5251,     0,   105,   177,  5533,  5914
+"S06",        1196,     0,    36,   102,  1334,  1414
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
 "S10",          84,     0,     3,     1,    88,   145
 "S11",         105,     0,     4,    14,   123,   142
-"S12",        1368,     0,    46,   121,  1535,  1593
+"S12",        1370,     0,    46,   121,  1537,  1595
 "S13",          36,     0,    10,    27,    73,    83
-"S14",         302,     0,    10,    10,   322,   335
+"S14",         303,     0,    10,    10,   323,   336
 "S15",         240,     0,     2,    16,   258,   283
 "S16",         247,     0,     0,    16,   263,   307
 "S17",         674,     0,     7,    22,   703,   727
@@ -2822,6 +2809,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9158,     0,   125,   165,  9448,  7882
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32714,     0,   664,  1245, 34623, 34756
+"total",     32723,     0,   657,  1243, 34623, 34756
 ----------------
 No failures!
