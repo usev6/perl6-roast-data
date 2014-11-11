@@ -27,16 +27,15 @@ S02-literals/autoref.t.............................  59    0    0    0   59
 S02-literals/char-by-name.rakudo.jvm...............   8    0    0    2   10
      1 skipped: \c[LINE FEED] not valid: RT #117683
      1 skipped: \c[LF] not valid: RT #117683
-S02-literals/char-by-number.rakudo.jvm.............  38    0    4    0   42
-     4 todo   : Detecting malformed escape sequences NYI
+S02-literals/char-by-number.t......................  38    0    0    0   38
 S02-literals/fmt-interpolation.t...................  11    0    0    0   11
 S02-literals/hash-interpolation.t..................  10    0    0    0   10
 S02-literals/heredocs.t............................  16    0    0    0   16
 S02-literals/hex_chars.t...........................   4    0    0    0    4
 S02-literals/listquote-whitespace.t................  12    0    0    0   12
-S02-literals/listquote.rakudo.jvm..................  19    0    3    1   23
+S02-literals/listquote.rakudo.jvm..................  19    0    4    1   24
      1 skipped: meta operators
-     3 todo   : IntStr/RatStr/NumStr types NYI
+     4 todo   : IntStr/RatStr/NumStr types NYI
 S02-literals/misc-interpolation.rakudo.jvm.........  49    0    1    0   50
      1 todo   : RT #122583
 S02-literals/numeric.t.............................  22    0    0    0   22
@@ -748,7 +747,7 @@ S05-modifier/repetition.rakudo.jvm.................  10    0    2    0   12
 S05-modifier/sigspace.t............................  16    0    0    0   16
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  13    0    0    0   13
-S05-substitution/subst.rakudo.jvm.................. 135    0    1    5  141
+S05-substitution/subst.rakudo.jvm.................. 136    0    1    5  142
      2 skipped: s:g[...] =
      3 skipped: s[...] op= RHS
      1 todo   : be smarter about constant detection
@@ -1688,10 +1687,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5060,     0,   143,   377,  5580,  5672
+"S02",        5060,     0,   140,   377,  5577,  5669
 "S03",        4904,     0,   109,    95,  5108,  5142
 "S04",         999,     0,    45,    59,  1103,  1155
-"S05",        5159,     0,   111,   263,  5533,  5914
+"S05",        5160,     0,   111,   263,  5534,  5915
 "S06",        1189,     0,    37,   108,  1334,  1414
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
@@ -1712,7 +1711,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9153,     0,   109,   186,  9448,  7882
 "int",        1203,     0,    15,    21,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32218,    22,   704,  1385, 34329, 34729
+"total",     32219,    22,   701,  1385, 34327, 34727
 ----------------
 Failure summary:
 S11-modules/export.rakudo.jvm 3 - exp_no_parens -- values agree

@@ -35,32 +35,15 @@ use of uninitialized value of type Any in string context  in block <unit> at t/s
 S02-literals/char-by-name.rakudo.parrot............   8    0    0    2   10
      1 skipped: \c[LINE FEED] not valid: RT #117683
      1 skipped: \c[LF] not valid: RT #117683
-S02-literals/char-by-number.rakudo.parrot..........    
-# Failed test 'code dies'
-# at lib/Test.pm line 303
-    # Looks like you failed 1 tests of 2
-    
-# Failed test 'code dies'
-# at lib/Test.pm line 303
-    # Looks like you failed 1 tests of 2
-    
-# Failed test 'code dies'
-# at lib/Test.pm line 303
-    # Looks like you failed 1 tests of 2
-    
-# Failed test 'code dies'
-# at lib/Test.pm line 303
-    # Looks like you failed 1 tests of 2
-  38    0    4    0   42
-     4 todo   : Detecting malformed escape sequences NYI
+S02-literals/char-by-number.t......................  38    0    0    0   38
 S02-literals/fmt-interpolation.t...................  11    0    0    0   11
 S02-literals/hash-interpolation.t..................  10    0    0    0   10
 S02-literals/heredocs.t............................  16    0    0    0   16
 S02-literals/hex_chars.t...........................   4    0    0    0    4
 S02-literals/listquote-whitespace.t................  12    0    0    0   12
-S02-literals/listquote.rakudo.parrot...............  19    0    3    1   23
+S02-literals/listquote.rakudo.parrot...............  19    0    4    1   24
      1 skipped: meta operators
-     3 todo   : IntStr/RatStr/NumStr types NYI
+     4 todo   : IntStr/RatStr/NumStr types NYI
 S02-literals/misc-interpolation.t..................  50    0    0    0   50
 S02-literals/numeric.t.............................  22    0    0    0   22
 S02-literals/pair-boolean.t........................   6    0    0    0    6
@@ -1361,7 +1344,7 @@ S05-substitution/subst.rakudo.parrot...............use of uninitialized value of
 
 use of uninitialized value of type Any in string context  in block <unit> at t/spec/S05-substitution/subst.rakudo.parrot:24
 
- 135    0    1    5  141
+ 136    0    1    5  142
      2 skipped: s:g[...] =
      3 skipped: s[...] op= RHS
      1 todo   : be smarter about constant detection
@@ -1923,8 +1906,8 @@ S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.parrot..................  12    0    1    0   13
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1415589215
-# Using file temp_1415589216
+S16-filehandles/chmod.t............................# Using file temp_1415675722
+# Using file temp_1415675722
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2654,13 +2637,13 @@ integration/advent2012-day15.rakudo.parrot.........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.rakudo.parrot.........# kaz: 2.7620181 seconds
-# gerdr: 2.8064088 seconds
-# recursive-ternary: 3.30818672 seconds
-# loop: 3.46833885 seconds
-# sequence-ternary: 7.04809456 seconds
-# recursive-ternary-hand-cached: 8.52359198 seconds
-# sequence: 11.1243413 seconds
+integration/advent2012-day21.rakudo.parrot.........# kaz: 2.8018184 seconds
+# gerdr: 2.96188999 seconds
+# recursive-ternary: 3.52108053 seconds
+# loop: 3.61535466 seconds
+# sequence-ternary: 7.0922222 seconds
+# recursive-ternary-hand-cached: 8.5899823 seconds
+# sequence: 11.36232450 seconds
    8    0    0    1    9
      1 skipped: RT #122497
 integration/advent2012-day22.rakudo.parrot.........   5    0    1    0    6
@@ -2711,10 +2694,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5023,     0,   123,   434,  5580,  5672
+"S02",        5023,     0,   120,   434,  5577,  5669
 "S03",        4904,     0,   109,    95,  5108,  5142
 "S04",        1010,     0,    47,    46,  1103,  1155
-"S05",        5159,     0,   111,   263,  5533,  5914
+"S05",        5160,     0,   111,   263,  5534,  5915
 "S06",        1188,     0,    39,   107,  1334,  1414
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
@@ -2735,6 +2718,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9156,     0,   117,   175,  9448,  7882
 "int",        1197,     0,     9,    19,  1225,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31614,     0,   647,  1387, 33648, 34729
+"total",     31615,     0,   644,  1387, 33646, 34727
 ----------------
 No failures!
