@@ -1374,7 +1374,7 @@ S06-signature/closure-parameters.rakudo.moar.......   4    0    0   11   15
     11 skipped: type syntax parse failure
 S06-signature/code.rakudo.moar.....................   7    0    1    0    8
      1 todo   : RT #67932
-S06-signature/defaults.t...........................   7    0    0    0    7
+S06-signature/defaults.t...........................   8    0    0    0    8
 S06-signature/errors.t.............................  11    0    0    0   11
 S06-signature/introspection.rakudo.moar............  51    0    0    1   52
      1 skipped: expected Any but got Mu instead
@@ -1841,8 +1841,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1415671987
-# Using file temp_1415671987
+S16-filehandles/chmod.t............................# Using file temp_1415758453
+# Using file temp_1415758454
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2162,8 +2162,11 @@ Code object coerced to string (please use .gist or .perl to do that)  in any thr
  271    0    2    0  273
      1 todo   : Cannot find method "returns"
      1 todo   : parsing regression
-S32-hash/delete-adverb.t...........................   1  130    0    0  131
-   130 tests aborted (missing ok/not ok)
+S32-hash/delete-adverb.t...........................use of uninitialized value $got of type Int in string context  in sub is at lib/Test.pm:116
+
+use of uninitialized value $expected of type Int in string context  in sub is at lib/Test.pm:116
+
+ 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
 S32-hash/exists-adverb.t...........................  46    0    0    0   46
 S32-hash/exists.rakudo.moar........................  20    0    0    1   21
@@ -2287,7 +2290,7 @@ so that this message will disappear!
 S32-io/spurt.t.....................................Saw 1 call to deprecated code during execution.
 ================================================================================
 spurt($handle,...) called at:
-  t/spec/S32-io/spurt.t, lines 65,75,83
+  t/spec/S32-io/spurt.t, lines 65,76,85
 Deprecated since v2014.10, will be removed with release v2015.10!
 Please use spurt($path,...) instead.
 --------------------------------------------------------------------------------
@@ -2693,14 +2696,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.9558940 seconds
-# gerdr: 0.98325645 seconds
-# recursive-ternary: 1.0806188 seconds
-# loop: 1.1013741 seconds
-# sequence-ternary: 1.87031922 seconds
-# recursive-ternary-hand-cached: 1.9272129 seconds
-# hand-memoization: 2.638180 seconds
-# sequence: 2.7210825 seconds
+integration/advent2012-day21.t.....................# kaz: 0.9758185 seconds
+# recursive-ternary: 1.0965244 seconds
+# loop: 1.12518276 seconds
+# gerdr: 1.180221 seconds
+# sequence-ternary: 1.9152197 seconds
+# recursive-ternary-hand-cached: 1.95034464 seconds
+# hand-memoization: 2.6819854 seconds
+# sequence: 2.7610035 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2769,7 +2772,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        4904,     0,   109,    95,  5108,  5142
 "S04",        1018,     0,    42,    43,  1103,  1155
 "S05",        5252,     0,   105,   177,  5534,  5915
-"S06",        1196,     0,    36,   102,  1334,  1414
+"S06",        1197,     0,    36,   102,  1335,  1415
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
 "S10",          84,     0,     3,     1,    88,   145
@@ -2786,10 +2789,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
-"S32",        9028,   130,   125,   165,  9448,  7882
+"S32",        9158,     0,   125,   165,  9448,  7882
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32594,   130,   654,  1243, 34621, 34754
+"total",     32725,     0,   654,  1243, 34622, 34755
 ----------------
-Failure summary:
-S32-hash/delete-adverb.t aborted 130 test(s)
+No failures!
