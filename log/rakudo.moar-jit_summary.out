@@ -1841,8 +1841,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1415845950
-# Using file temp_1415845951
+S16-filehandles/chmod.t............................# Using file temp_1415932337
+# Using file temp_1415932337
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1984,13 +1984,7 @@ S17-supply/stable.rakudo.moar......................# **** scheduling with Thread
 # **** scheduling with CurrentThreadScheduler
    5    0    0    2    7
      2 skipped: doesn't work or can't test
-S17-supply/start.t.................................
-# Failed test 'did we get the other original value'
-# at t/spec/S17-supply/start.t line 35
-# expected: [1, 1]
-#      got: [1]
-# Looks like you failed 1 tests of 9
-   8    1    0    0    9
+S17-supply/start.t.................................   9    0    0    0    9
 S17-supply/unique.t................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
   17    0    0    0   17
@@ -2702,14 +2696,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 1.0410426 seconds
-# gerdr: 1.0556501 seconds
-# recursive-ternary: 1.1354276 seconds
-# loop: 1.1548846 seconds
-# sequence-ternary: 1.9690487 seconds
-# recursive-ternary-hand-cached: 2.01406846 seconds
-# hand-memoization: 2.7467354 seconds
-# sequence: 2.851599 seconds
+integration/advent2012-day21.t.....................# kaz: 1.014266 seconds
+# gerdr: 1.016180 seconds
+# recursive-ternary: 1.11647766 seconds
+# loop: 1.1358493 seconds
+# sequence-ternary: 1.9291107 seconds
+# recursive-ternary-hand-cached: 1.9864827 seconds
+# hand-memoization: 2.7303368 seconds
+# sequence: 2.825462 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2788,7 +2782,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         303,     0,    10,    10,   323,   336
 "S15",         240,     0,     2,    16,   258,   283
 "S16",         247,     0,     0,    16,   263,   307
-"S17",         673,     1,     7,    22,   703,   727
+"S17",         674,     0,     7,    22,   703,   727
 "S19",          12,     0,     0,     0,    12,    17
 "S22",          52,     0,     1,     0,    53,    53
 "S24",           1,     0,     0,     0,     1,    79
@@ -2798,7 +2792,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9158,     0,   125,   165,  9448,  7882
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32724,     1,   654,  1243, 34622, 34755
+"total",     32725,     0,   654,  1243, 34622, 34755
 ----------------
-Failure summary:
-S17-supply/start.t 9 - did we get the other original value
+No failures!
