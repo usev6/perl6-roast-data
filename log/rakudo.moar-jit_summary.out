@@ -1167,11 +1167,12 @@ S05-metasyntax/litvar.t............................Potential difficulties:
     at t/spec/S05-metasyntax/litvar.t:36
     ------> [32mok('c0' ~~ m/@var[33m⏏[31m[0]/, 'Array ignores 0');               [0m
   24    0    0    0   24
-S05-metasyntax/longest-alternative.rakudo.moar.....  26    0    4    1   31
+S05-metasyntax/longest-alternative.rakudo.moar.....  25    0    5    1   31
      1 skipped: :::
      2 todo   : LTM - literals in tokens
      1 todo   : LTM - longer quantified atom wins against shorter literal (subrules)
      1 todo   : implicit <.ws> stops LTM
+     1 todo   : LTM - literal wins tie against \w*
 S05-metasyntax/lookaround.t........................  10    0    0    0   10
 S05-metasyntax/null.t..............................   4    0    0    0    4
 S05-metasyntax/proto-token-ltm.t...................  10    0    0    0   10
@@ -1841,8 +1842,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1415932337
-# Using file temp_1415932337
+S16-filehandles/chmod.t............................# Using file temp_1416018711
+# Using file temp_1416018711
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2087,19 +2088,8 @@ use of uninitialized value $got of type Int in string context  in sub is at lib/
 use of uninitialized value $expected of type Int in string context  in sub is at lib/Test.pm:116
 
  138    0    0    0  138
-S32-array/delete-adverb.t..........................use of uninitialized value $got of type Int in string context  in sub is at lib/Test.pm:116
-
-use of uninitialized value $expected of type Any in string context  in sub is at lib/Test.pm:116
-
-use of uninitialized value $got of type Int in string context  in sub is at lib/Test.pm:116
-
-use of uninitialized value $expected of type Any in string context  in sub is at lib/Test.pm:116
-
-use of uninitialized value $got of type Int in string context  in sub is at lib/Test.pm:116
-
-use of uninitialized value $expected of type Int in string context  in sub is at lib/Test.pm:116
-
- 216    0    0    0  216
+S32-array/delete-adverb.t..........................   0  216    0    0  216
+   216 tests aborted (missing ok/not ok)
 S32-array/delete.t.................................use of uninitialized value of type Any in string context  in block <unit> at t/spec/S32-array/delete.t:64
 
   31    0    0    0   31
@@ -2696,14 +2686,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 1.014266 seconds
-# gerdr: 1.016180 seconds
-# recursive-ternary: 1.11647766 seconds
-# loop: 1.1358493 seconds
-# sequence-ternary: 1.9291107 seconds
-# recursive-ternary-hand-cached: 1.9864827 seconds
-# hand-memoization: 2.7303368 seconds
-# sequence: 2.825462 seconds
+integration/advent2012-day21.t.....................# kaz: 0.97519065 seconds
+# gerdr: 0.9948179 seconds
+# recursive-ternary: 1.0726557 seconds
+# loop: 1.09226676 seconds
+# sequence-ternary: 1.8303221 seconds
+# recursive-ternary-hand-cached: 1.9034457 seconds
+# hand-memoization: 2.586974 seconds
+# sequence: 2.7799571 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2771,7 +2761,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        5095,     0,   123,   359,  5577,  5669
 "S03",        4904,     0,   109,    95,  5108,  5142
 "S04",        1018,     0,    42,    43,  1103,  1155
-"S05",        5252,     0,   105,   177,  5534,  5915
+"S05",        5251,     0,   106,   177,  5534,  5915
 "S06",        1197,     0,    36,   102,  1335,  1415
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
@@ -2789,9 +2779,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
-"S32",        9158,     0,   125,   165,  9448,  7882
+"S32",        8942,   216,   125,   165,  9448,  7882
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32725,     0,   654,  1243, 34622, 34755
+"total",     32508,   216,   655,  1243, 34622, 34755
 ----------------
-No failures!
+Failure summary:
+S32-array/delete-adverb.t aborted 216 test(s)
