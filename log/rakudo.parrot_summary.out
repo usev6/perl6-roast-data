@@ -1918,8 +1918,8 @@ S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.parrot..................  12    0    1    0   13
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1416107648
-# Using file temp_1416107648
+S16-filehandles/chmod.t............................# Using file temp_1416194283
+# Using file temp_1416194283
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2234,14 +2234,18 @@ Please use slurp($path,...) instead.
 Please contact the author to have these calls to deprecated code adapted,
 so that this message will disappear!
   18    0    0    0   18
-S32-io/spurt.rakudo.parrot.........................[31m===[0mSORRY![31m===[0m Error while compiling t/spec/S32-io/spurt.rakudo.parrot
-Variable '$io' is not declared
-at t/spec/S32-io/spurt.rakudo.parrot:77
-------> [32m        spurt $io[33m⏏[31m, $buf;[0m
-    expecting any of:
-        postfix
-   0   35    0    0   35
-    35 tests aborted (missing ok/not ok)
+S32-io/spurt.rakudo.parrot.........................Malformed UTF-8 string
+  in method slurp at gen/parrot/CORE.setting:16197
+  in method slurp at gen/parrot/CORE.setting:16178
+  in sub slurp at gen/parrot/CORE.setting:16489
+  in sub slurp at gen/parrot/CORE.setting:16482
+  in block  at t/spec/S32-io/spurt.rakudo.parrot:88
+  in block <unit> at t/spec/S32-io/spurt.rakudo.parrot:14
+
+  22   11    1    1   35
+     1 skipped: is() gets into infinite recursion
+     1 todo PASSED: spurt io
+    11 tests aborted (missing ok/not ok)
 S32-list/categorize.t..............................  12    0    0    0   12
 S32-list/classify.rakudo.parrot....................  12    0    0    3   15
      3 skipped: Cannot use bind operator with this LHS
@@ -2645,13 +2649,13 @@ integration/advent2012-day15.rakudo.parrot.........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.rakudo.parrot.........# kaz: 2.7195569 seconds
-# gerdr: 2.7318061 seconds
-# recursive-ternary: 3.3110374 seconds
-# loop: 3.51557975 seconds
-# sequence-ternary: 6.9147386 seconds
-# recursive-ternary-hand-cached: 8.5664603 seconds
-# sequence: 11.1261747 seconds
+integration/advent2012-day21.rakudo.parrot.........# kaz: 2.75643709 seconds
+# gerdr: 2.7686791 seconds
+# recursive-ternary: 3.403616252 seconds
+# loop: 3.519067 seconds
+# sequence-ternary: 7.0778743 seconds
+# recursive-ternary-hand-cached: 8.63811148 seconds
+# sequence: 11.6420949 seconds
    8    0    0    1    9
      1 skipped: RT #122497
 integration/advent2012-day22.rakudo.parrot.........   5    0    1    0    6
@@ -2723,11 +2727,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
-"S32",        9124,    35,   115,   174,  9448,  7882
+"S32",        9146,    11,   116,   175,  9448,  7882
 "int",        1197,     0,     9,    19,  1225,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31522,    96,   643,  1386, 33647, 34728
+"total",     31544,    72,   644,  1387, 33647, 34728
 ----------------
 Failure summary:
 S12-subset/subtypes.t aborted 61 test(s)
-S32-io/spurt.rakudo.parrot aborted 35 test(s)
+S32-io/spurt.rakudo.parrot aborted 11 test(s)
