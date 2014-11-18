@@ -582,7 +582,7 @@ S03-operators/autovivification.t...................use of uninitialized value of
 
 use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-operators/autovivification.t:95
 
-use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:607
+use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:629
 
   23    0    0    0   23
 S03-operators/bag.rakudo.moar...................... 109    0   12    7  128
@@ -1044,11 +1044,11 @@ S04-statements/while.t.............................   9    0    0    0    9
                                                    pass fail todo skip plan
 S05-capture/caps.rakudo.moar.......................  41    0    1    0   42
      1 todo   : RT #117955 - quantified conjunctive capture
-S05-capture/dot.rakudo.moar........................use of uninitialized value of type Any in string context  in block <unit> at t/spec/S05-capture/dot.rakudo.moar:100
+S05-capture/dot.rakudo.moar........................use of uninitialized value of type Any in string context  in block <unit> at t/spec/S05-capture/dot.rakudo.moar:99
 
-use of uninitialized value of type Any in string context  in block <unit> at t/spec/S05-capture/dot.rakudo.moar:105
+use of uninitialized value of type Any in string context  in block <unit> at t/spec/S05-capture/dot.rakudo.moar:104
 
-use of uninitialized value of type Any in string context  in block <unit> at t/spec/S05-capture/dot.rakudo.moar:110
+use of uninitialized value of type Any in string context  in block <unit> at t/spec/S05-capture/dot.rakudo.moar:109
 
   51    0   10    0   61
      1 todo   : really? :-)
@@ -1167,18 +1167,14 @@ S05-metasyntax/litvar.t............................Potential difficulties:
     at t/spec/S05-metasyntax/litvar.t:36
     ------> [32mok('c0' ~~ m/@var[33m⏏[31m[0]/, 'Array ignores 0');               [0m
   24    0    0    0   24
-S05-metasyntax/longest-alternative.rakudo.moar.....  25    0    5    1   31
-     1 skipped: :::
-     2 todo   : LTM - literals in tokens
-     1 todo   : LTM - longer quantified atom wins against shorter literal (subrules)
-     1 todo   : implicit <.ws> stops LTM
-     1 todo   : LTM - literal wins tie against \w*
+S05-metasyntax/longest-alternative.rakudo.moar.....  30    0    0    1   31
+     1 skipped: ::
 S05-metasyntax/lookaround.t........................  10    0    0    0   10
 S05-metasyntax/null.t..............................   4    0    0    0    4
 S05-metasyntax/proto-token-ltm.t...................  10    0    0    0   10
 S05-metasyntax/regex.t.............................Useless declaration of a has-scoped method in mainline (did you mean 'my token foo'?)
 Useless declaration of a has-scoped method in mainline (did you mean 'my regex baz'?)
-use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:607
+use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:629
 
 Potential difficulties:
     Repeated character (.) unexpectedly found in character class
@@ -1692,7 +1688,7 @@ S12-introspection/WHAT.rakudo.moar.................  25    0   12    0   37
      2 todo   : %h{Str} of Int fails
 S12-introspection/attributes.rakudo.moar...........  25    0    0    5   30
      5 skipped: :tree NYI for .^attributes
-S12-introspection/can.t............................Code object coerced to string (please use .gist or .perl to do that)  in any !cursor_init at gen/moar/stage2/QRegex.nqp:607
+S12-introspection/can.t............................Code object coerced to string (please use .gist or .perl to do that)  in any !cursor_init at gen/moar/stage2/QRegex.nqp:629
 
   25    0    0    0   25
 S12-introspection/definite.t.......................   6    0    0    0    6
@@ -1842,8 +1838,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1416190478
-# Using file temp_1416190478
+S16-filehandles/chmod.t............................# Using file temp_1416276852
+# Using file temp_1416276852
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1989,7 +1985,7 @@ S17-supply/start.t.................................
 # Failed test 'did we get the other original value'
 # at t/spec/S17-supply/start.t line 35
 # expected: [1, 1]
-#      got: [1]
+#      got: [1, 1]
 # Looks like you failed 1 tests of 9
    8    1    0    0    9
 S17-supply/unique.t................................# **** scheduling with ThreadPoolScheduler
@@ -2703,14 +2699,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.9796724 seconds
-# gerdr: 0.991764 seconds
-# loop: 1.08813880 seconds
-# recursive-ternary: 1.1023495 seconds
-# sequence-ternary: 1.8729581 seconds
-# recursive-ternary-hand-cached: 1.9330175 seconds
-# hand-memoization: 2.61304286 seconds
-# sequence: 2.73763066 seconds
+integration/advent2012-day21.t.....................# kaz: 0.9724624 seconds
+# gerdr: 0.99027593 seconds
+# recursive-ternary: 1.0735350 seconds
+# loop: 1.0913367 seconds
+# sequence-ternary: 1.83281107 seconds
+# recursive-ternary-hand-cached: 1.935381 seconds
+# hand-memoization: 2.6121420 seconds
+# sequence: 2.68654384 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2778,7 +2774,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        5095,     0,   123,   359,  5577,  5669
 "S03",        4904,     0,   109,    95,  5108,  5142
 "S04",        1018,     0,    42,    43,  1103,  1155
-"S05",        5251,     0,   106,   177,  5534,  5915
+"S05",        5256,     0,   101,   177,  5534,  5915
 "S06",        1197,     0,    36,   102,  1335,  1415
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
@@ -2799,7 +2795,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9158,     0,   125,   165,  9448,  7882
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32723,     1,   655,  1243, 34622, 34755
+"total",     32728,     1,   650,  1243, 34622, 34755
 ----------------
 Failure summary:
 S17-supply/start.t 9 - did we get the other original value
