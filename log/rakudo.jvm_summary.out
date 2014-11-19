@@ -216,7 +216,7 @@ S02-types/isDEPRECATED.rakudo.jvm..................  12    0    8    0   20
      8 todo   : NYI
 S02-types/lazy-lists.rakudo.jvm....................  22    0    1    0   23
      1 todo   : RT #121994
-S02-types/lists.rakudo.jvm.........................  25    0    0    3   28
+S02-types/lists.rakudo.jvm.........................  26    0    0    3   29
      3 skipped: list binding
 S02-types/mix.rakudo.jvm........................... 170    0    6    3  179
      3 skipped: No longer Iterable
@@ -388,9 +388,8 @@ S03-operators/is-divisible-by.rakudo.jvm...........  14    0    1    0   15
      1 todo   : not sure why this doesn't fire
 S03-operators/lcm.t................................  15    0    0    0   15
 S03-operators/list-quote-junction.t................  16    0    0    0   16
-S03-operators/minmax.rakudo.jvm....................  21    0    2    2   25
+S03-operators/minmax.rakudo.jvm....................  23    0    0    2   25
      2 skipped: Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious
-     2 todo   : max/min non-associative NYI
 S03-operators/misc.t...............................  33    0    0    0   33
 S03-operators/names.t..............................   7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
@@ -401,11 +400,9 @@ S03-operators/orelse.rakudo.jvm....................   9    0    0    2   11
      1 skipped: orelse passes $! as argument
      1 skipped: orelse passes $! as multiple arguments
 S03-operators/overflow.t...........................  98    0    0    0   98
-S03-operators/precedence.rakudo.jvm................  48    0    4    2   54
+S03-operators/precedence.rakudo.jvm................  53    0    1    2   56
      2 skipped: nom regression
-     1 todo   : list associativity bug
-     1 todo   : RT #77848
-     2 todo   : non-associativeness of infix:<^> and |
+     1 todo   : RT #114210
 S03-operators/range-basic.t........................ 140    0    0    0  140
 S03-operators/range-int.t.......................... 480    0    0    0  480
 S03-operators/range.rakudo.jvm..................... 122    0    2    0  124
@@ -804,7 +801,7 @@ S06-operator-overloading/imported-subs.t...........  20    0    0    0   20
 S06-operator-overloading/methods.rakudo.jvm........   2    0    1    0    3
      1 todo   : nom regression
 S06-operator-overloading/semicolon.t...............   3    0    0    0    3
-S06-operator-overloading/sub.rakudo.jvm............  51    0    2   18   71
+S06-operator-overloading/sub.rakudo.jvm............  53    0    2   18   73
      1 skipped: missing block, apparently "if" not an op
      1 skipped: infix Z will never work; no lexical Z
      4 skipped: prefix:[] form NYI
@@ -1229,7 +1226,7 @@ S17-supply/stable.rakudo.jvm.......................   4    0    1    2    7
      1 todo   : D: doesn't work in signatures RT #122229
 S17-supply/start.rakudo.jvm........................   8    0    1    0    9
      1 todo   : D: doesn't work in signatures RT #122229
-S17-supply/unique.rakudo.jvm.......................  16    0    1    0   17
+S17-supply/unique.rakudo.jvm.......................  15    1    1    0   17
      1 todo   : D: doesn't work in signatures RT #122229
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch_path.rakudo.jvm...................   2    0    0    0    2
@@ -1684,11 +1681,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5060,     0,   140,   377,  5577,  5669
-"S03",        4904,     0,   109,    95,  5108,  5142
+"S02",        5061,     0,   140,   377,  5578,  5670
+"S03",        4911,     0,   104,    95,  5110,  5144
 "S04",         999,     0,    45,    59,  1103,  1155
 "S05",        5164,     0,   107,   263,  5534,  5915
-"S06",        1190,     0,    37,   108,  1335,  1415
+"S06",        1192,     0,    37,   108,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
 "S10",          77,     0,    10,     1,    88,   145
@@ -1698,7 +1695,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         298,     0,    13,    12,   323,   336
 "S15",           0,     0,     0,     0,     0,   283
 "S16",         246,     0,     0,    17,   263,   307
-"S17",         613,     0,    28,    26,   667,   700
+"S17",         612,     1,    28,    26,   667,   700
 "S19",          12,     0,     0,     0,    12,    17
 "S22",          51,     0,     1,     1,    53,    53
 "S24",           1,     0,     0,     0,     1,    79
@@ -1708,7 +1705,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9153,     0,   109,   186,  9448,  7882
 "int",        1203,     0,    15,    21,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32224,    22,   697,  1385, 34328, 34728
+"total",     32233,    23,   692,  1385, 34333, 34733
 ----------------
 Failure summary:
 S11-modules/export.rakudo.jvm 3 - exp_no_parens -- values agree
@@ -1733,3 +1730,4 @@ S11-modules/export.rakudo.jvm 22 - exp_my_tag -- values agree
 S11-modules/export.rakudo.jvm 23 - exp_my_tag -- containers agree
 S11-modules/export.rakudo.jvm 24 - exp_my_tag -- values agree
 S11-modules/export.rakudo.jvm 25 - exp_my_tag -- containers agree
+S17-supply/unique.rakudo.jvm 15 - unique with as and expiry works

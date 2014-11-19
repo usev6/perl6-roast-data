@@ -324,7 +324,7 @@ use of uninitialized value of type Int in string context  in block <unit> at EVA
 S02-types/isDEPRECATED.rakudo.moar.................  12    0    8    0   20
      8 todo   : NYI
 S02-types/lazy-lists.t.............................  23    0    0    0   23
-S02-types/lists.rakudo.moar........................  25    0    0    3   28
+S02-types/lists.rakudo.moar........................  26    0    0    3   29
      3 skipped: list binding
 S02-types/mix.rakudo.moar.......................... 174    0    2    3  179
      3 skipped: No longer Iterable
@@ -342,7 +342,8 @@ S02-types/mixhash.rakudo.moar...................... 187    0    3   24  214
      3 skipped: No longer Iterable
      1 todo   : Needs to catch up with spec
      2 todo   : in flux
-S02-types/multi_dimensional_array.rakudo.moar......  48    0    0   10   58
+S02-types/multi_dimensional_array.rakudo.moar......Internal error: zeroed target thread ID in work pass
+  48    0    0   10   58
     10 skipped: multi-dim sized arrays NYI
 S02-types/nan.rakudo.moar..........................  19    0    0    2   21
      1 skipped: unspecced and inconsistent
@@ -757,9 +758,8 @@ S03-operators/is-divisible-by.rakudo.moar..........  14    0    1    0   15
      1 todo   : not sure why this doesn't fire
 S03-operators/lcm.t................................  15    0    0    0   15
 S03-operators/list-quote-junction.t................  16    0    0    0   16
-S03-operators/minmax.rakudo.moar...................  21    0    2    2   25
+S03-operators/minmax.rakudo.moar...................  23    0    0    2   25
      2 skipped: Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious
-     2 todo   : max/min non-associative NYI
 S03-operators/misc.t...............................  33    0    0    0   33
 S03-operators/names.t..............................Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
 
@@ -774,11 +774,9 @@ S03-operators/orelse.rakudo.moar...................   9    0    0    2   11
      1 skipped: orelse passes $! as argument
      1 skipped: orelse passes $! as multiple arguments
 S03-operators/overflow.t...........................  98    0    0    0   98
-S03-operators/precedence.rakudo.moar...............  48    0    4    2   54
+S03-operators/precedence.rakudo.moar...............  53    0    1    2   56
      2 skipped: nom regression
-     1 todo   : list associativity bug
-     1 todo   : RT #77848
-     2 todo   : non-associativeness of infix:<^> and |
+     1 todo   : RT #114210
 S03-operators/range-basic.t........................ 140    0    0    0  140
 S03-operators/range-int.t.......................... 480    0    0    0  480
 S03-operators/range.rakudo.moar....................use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-operators/range.rakudo.moar:220
@@ -1340,7 +1338,7 @@ S06-operator-overloading/semicolon.t...............WARNINGS:
 Useless use of constant integer 2 in sink context (line 15)
 Useless use of constant integer 3 in sink context (line 15)
    3    0    0    0    3
-S06-operator-overloading/sub.rakudo.moar...........  51    0    2   18   71
+S06-operator-overloading/sub.rakudo.moar...........  53    0    2   18   73
      1 skipped: missing block, apparently "if" not an op
      1 skipped: infix Z will never work; no lexical Z
      4 skipped: prefix:[] form NYI
@@ -1838,8 +1836,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1416276852
-# Using file temp_1416276852
+S16-filehandles/chmod.t............................# Using file temp_1416363256
+# Using file temp_1416363256
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1981,13 +1979,7 @@ S17-supply/stable.rakudo.moar......................# **** scheduling with Thread
 # **** scheduling with CurrentThreadScheduler
    5    0    0    2    7
      2 skipped: doesn't work or can't test
-S17-supply/start.t.................................
-# Failed test 'did we get the other original value'
-# at t/spec/S17-supply/start.t line 35
-# expected: [1, 1]
-#      got: [1, 1]
-# Looks like you failed 1 tests of 9
-   8    1    0    0    9
+S17-supply/start.t.................................   9    0    0    0    9
 S17-supply/unique.t................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
   17    0    0    0   17
@@ -2293,7 +2285,7 @@ so that this message will disappear!
 S32-io/spurt.t.....................................Saw 1 call to deprecated code during execution.
 ================================================================================
 spurt($handle,...) called at:
-  t/spec/S32-io/spurt.t, lines 65,76,85
+  t/spec/S32-io/spurt.t, lines 65,75,85
 Deprecated since v2014.10, will be removed with release v2015.10!
 Please use spurt($path,...) instead.
 --------------------------------------------------------------------------------
@@ -2699,14 +2691,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.9724624 seconds
-# gerdr: 0.99027593 seconds
-# recursive-ternary: 1.0735350 seconds
-# loop: 1.0913367 seconds
-# sequence-ternary: 1.83281107 seconds
-# recursive-ternary-hand-cached: 1.935381 seconds
-# hand-memoization: 2.6121420 seconds
-# sequence: 2.68654384 seconds
+integration/advent2012-day21.t.....................# kaz: 1.0015098 seconds
+# gerdr: 1.005644 seconds
+# recursive-ternary: 1.0947395 seconds
+# loop: 1.1109607 seconds
+# sequence-ternary: 1.86475684 seconds
+# recursive-ternary-hand-cached: 1.952389 seconds
+# hand-memoization: 2.654776 seconds
+# sequence: 2.71870519 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2771,11 +2763,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5095,     0,   123,   359,  5577,  5669
-"S03",        4904,     0,   109,    95,  5108,  5142
+"S02",        5096,     0,   123,   359,  5578,  5670
+"S03",        4911,     0,   104,    95,  5110,  5144
 "S04",        1018,     0,    42,    43,  1103,  1155
 "S05",        5256,     0,   101,   177,  5534,  5915
-"S06",        1197,     0,    36,   102,  1335,  1415
+"S06",        1199,     0,    36,   102,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
 "S10",          84,     0,     3,     1,    88,   145
@@ -2785,7 +2777,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         303,     0,    10,    10,   323,   336
 "S15",         240,     0,     2,    16,   258,   283
 "S16",         247,     0,     0,    16,   263,   307
-"S17",         673,     1,     7,    22,   703,   727
+"S17",         674,     0,     7,    22,   703,   727
 "S19",          12,     0,     0,     0,    12,    17
 "S22",          52,     0,     1,     0,    53,    53
 "S24",           1,     0,     0,     0,     1,    79
@@ -2795,7 +2787,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9158,     0,   125,   165,  9448,  7882
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32728,     1,   650,  1243, 34622, 34755
+"total",     32739,     0,   645,  1243, 34627, 34760
 ----------------
-Failure summary:
-S17-supply/start.t 9 - did we get the other original value
+No failures!
