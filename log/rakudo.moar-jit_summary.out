@@ -324,7 +324,7 @@ use of uninitialized value of type Int in string context  in block <unit> at EVA
 S02-types/isDEPRECATED.rakudo.moar.................  12    0    8    0   20
      8 todo   : NYI
 S02-types/lazy-lists.t.............................  23    0    0    0   23
-S02-types/lists.rakudo.moar........................  26    0    0    3   29
+S02-types/lists.rakudo.moar........................  29    0    0    3   32
      3 skipped: list binding
 S02-types/mix.rakudo.moar.......................... 174    0    2    3  179
      3 skipped: No longer Iterable
@@ -342,8 +342,7 @@ S02-types/mixhash.rakudo.moar...................... 187    0    3   24  214
      3 skipped: No longer Iterable
      1 todo   : Needs to catch up with spec
      2 todo   : in flux
-S02-types/multi_dimensional_array.rakudo.moar......Internal error: zeroed target thread ID in work pass
-  48    0    0   10   58
+S02-types/multi_dimensional_array.rakudo.moar......  48    0    0   10   58
     10 skipped: multi-dim sized arrays NYI
 S02-types/nan.rakudo.moar..........................  19    0    0    2   21
      1 skipped: unspecced and inconsistent
@@ -511,7 +510,8 @@ use of uninitialized value <element> of type Any in string context  in block <un
 
 use of uninitialized value <element> of type Any in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:342
 
- 358    0    8    0  366
+ 358    0    9    0  367
+     1 todo   : RT #79116
      1 todo   : item context
      2 todo   : triangle [\^^] and [\xor]
      3 todo   : huh?
@@ -1836,8 +1836,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1416364375
-# Using file temp_1416364375
+S16-filehandles/chmod.t............................# Using file temp_1416450743
+# Using file temp_1416450743
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2691,14 +2691,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# gerdr: 1.036992156 seconds
-# kaz: 1.03834257 seconds
-# recursive-ternary: 1.12047261 seconds
-# loop: 1.13622313 seconds
-# sequence-ternary: 1.889729 seconds
-# recursive-ternary-hand-cached: 1.9608769 seconds
-# hand-memoization: 2.72113093 seconds
-# sequence: 2.7811303 seconds
+integration/advent2012-day21.t.....................# kaz: 1.0297115 seconds
+# gerdr: 1.0309809 seconds
+# recursive-ternary: 1.1133249 seconds
+# loop: 1.14543706 seconds
+# sequence-ternary: 1.883629 seconds
+# recursive-ternary-hand-cached: 1.97950907 seconds
+# hand-memoization: 2.7089683 seconds
+# sequence: 2.7958893 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2763,8 +2763,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5096,     0,   123,   359,  5578,  5670
-"S03",        4911,     0,   104,    95,  5110,  5144
+"S02",        5099,     0,   123,   359,  5581,  5673
+"S03",        4911,     0,   105,    95,  5111,  5145
 "S04",        1018,     0,    42,    43,  1103,  1155
 "S05",        5256,     0,   101,   177,  5534,  5915
 "S06",        1199,     0,    36,   102,  1337,  1417
@@ -2787,6 +2787,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9158,     0,   125,   165,  9448,  7882
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32739,     0,   645,  1243, 34627, 34760
+"total",     32742,     0,   646,  1243, 34631, 34764
 ----------------
 No failures!
