@@ -1899,8 +1899,8 @@ S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.parrot..................  12    0    1    0   13
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1416453449
-# Using file temp_1416453450
+S16-filehandles/chmod.t............................# Using file temp_1416539818
+# Using file temp_1416539818
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2630,13 +2630,13 @@ integration/advent2012-day15.rakudo.parrot.........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.rakudo.parrot.........# gerdr: 2.7276410 seconds
-# kaz: 2.74183262 seconds
-# recursive-ternary: 3.4195279 seconds
-# loop: 3.5978034 seconds
-# sequence-ternary: 7.11097112 seconds
-# recursive-ternary-hand-cached: 8.6493418 seconds
-# sequence: 11.4840535 seconds
+integration/advent2012-day21.rakudo.parrot.........# kaz: 2.68910138 seconds
+# gerdr: 2.7019785 seconds
+# recursive-ternary: 3.3585641 seconds
+# loop: 3.5180952 seconds
+# sequence-ternary: 7.0594345 seconds
+# recursive-ternary-hand-cached: 8.4993804 seconds
+# sequence: 11.141369 seconds
    8    0    0    1    9
      1 skipped: RT #122497
 integration/advent2012-day22.rakudo.parrot.........   5    0    1    0    6

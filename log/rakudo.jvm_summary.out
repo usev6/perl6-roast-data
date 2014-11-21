@@ -916,8 +916,9 @@ S10-packages/precompilation.rakudo.jvm.............  11    0    2    0   13
      1 todo   : RT #122896
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
-S11-modules/export.rakudo.jvm......................   6   22    0    8   36
+S11-modules/export.rakudo.jvm......................   6    0   22    8   36
      8 skipped: export issue
+    22 todo   : different .WHICH for aliased sub in EXPORT::ALL
 S11-modules/import-multi.rakudo.jvm................  14    0    2    1   17
      1 skipped: A symbol "&Gfoo" has already been exported
      1 todo   : huh?
@@ -1690,7 +1691,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
 "S10",          77,     0,    10,     1,    88,   145
-"S11",          83,    22,     4,    14,   123,   142
+"S11",          83,     0,    26,    14,   123,   142
 "S12",        1365,     0,    51,   121,  1537,  1595
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         298,     0,    13,    12,   323,   336
@@ -1706,28 +1707,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9153,     0,   109,   186,  9448,  7882
 "int",        1203,     0,    15,    21,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32237,    22,   693,  1385, 34337, 34737
+"total",     32237,     0,   715,  1385, 34337, 34737
 ----------------
-Failure summary:
-S11-modules/export.rakudo.jvm 3 - exp_no_parens -- values agree
-S11-modules/export.rakudo.jvm 4 - exp_no_parens -- containers agree
-S11-modules/export.rakudo.jvm 5 - exp_empty_parens -- values agree
-S11-modules/export.rakudo.jvm 6 - exp_empty_parens -- containers agree
-S11-modules/export.rakudo.jvm 7 - exp_ALL -- values agree
-S11-modules/export.rakudo.jvm 8 - exp_ALL -- containers agree
-S11-modules/export.rakudo.jvm 9 - exp_DEFAULT -- values agree
-S11-modules/export.rakudo.jvm 10 - exp_DEFAULT -- containers agree
-S11-modules/export.rakudo.jvm 11 - exp_DEFAULT -- values agree
-S11-modules/export.rakudo.jvm 12 - exp_DEFAULT -- containers agree
-S11-modules/export.rakudo.jvm 13 - exp_ALL_DEFAULT -- values agree
-S11-modules/export.rakudo.jvm 14 - exp_ALL_DEFAULT -- containers agree
-S11-modules/export.rakudo.jvm 15 - exp_ALL_DEFAULT -- values agree
-S11-modules/export.rakudo.jvm 16 - exp_ALL_DEFAULT -- containers agree
-S11-modules/export.rakudo.jvm 17 - exp_MANDATORY -- values agree
-S11-modules/export.rakudo.jvm 18 - exp_MANDATORY -- containers agree
-S11-modules/export.rakudo.jvm 19 - exp_MANDATORY -- values agree
-S11-modules/export.rakudo.jvm 20 - exp_MANDATORY -- containers agree
-S11-modules/export.rakudo.jvm 22 - exp_my_tag -- values agree
-S11-modules/export.rakudo.jvm 23 - exp_my_tag -- containers agree
-S11-modules/export.rakudo.jvm 24 - exp_my_tag -- values agree
-S11-modules/export.rakudo.jvm 25 - exp_my_tag -- containers agree
+No failures!
