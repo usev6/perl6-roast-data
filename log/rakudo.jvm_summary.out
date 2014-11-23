@@ -333,7 +333,7 @@ S03-operators/also.rakudo.jvm......................   4    0    4    0    8
 S03-operators/andthen.t............................   8    0    0    0    8
 S03-operators/arith.t.............................. 145    0    0    0  145
 S03-operators/assign-is-not-binding.t..............   8    0    0    0    8
-S03-operators/assign.rakudo.jvm.................... 258    0   22   12  292
+S03-operators/assign.rakudo.jvm.................... 258    0   23   12  293
      3 skipped: expects a term, found infix >= instead
      3 skipped: Two terms in a row
      3 skipped: cannot modifiy an immutable value
@@ -348,6 +348,7 @@ S03-operators/assign.rakudo.jvm.................... 258    0   22   12  292
      2 todo   : unknown
      1 todo   : huh?
      1 todo   : item/list assignment
+     1 todo   : RT #76414
 S03-operators/autoincrement-range.t................  96    0    0    0   96
 S03-operators/autoincrement.t......................  79    0    0    0   79
 S03-operators/autovivification.t...................  23    0    0    0   23
@@ -911,8 +912,9 @@ S10-packages/basic.rakudo.jvm......................  54    0    8    1   63
      1 todo   : ticket based only on class... RT #60446
      1 todo   : RT #64606
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  11    0    2    0   13
+S10-packages/precompilation.rakudo.jvm.............  14    0    3    0   17
      1 todo   : RT #122773
+     1 todo   : RT #123276
      1 todo   : RT #122896
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
@@ -1226,7 +1228,7 @@ S17-supply/squish.rakudo.jvm.......................  10    0    1    0   11
 S17-supply/stable.rakudo.jvm.......................   4    0    1    2    7
      2 skipped: doesn't work or can't test
      1 todo   : D: doesn't work in signatures RT #122229
-S17-supply/start.rakudo.jvm........................   8    0    1    0    9
+S17-supply/start.rakudo.jvm........................   7    1    1    0    9
      1 todo   : D: doesn't work in signatures RT #122229
 S17-supply/unique.rakudo.jvm.......................  16    0    1    0   17
      1 todo   : D: doesn't work in signatures RT #122229
@@ -1684,20 +1686,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5062,     0,   140,   377,  5579,  5671
-"S03",        4911,     0,   105,    95,  5111,  5145
+"S03",        4911,     0,   106,    95,  5112,  5146
 "S04",         999,     0,    45,    59,  1103,  1155
 "S05",        5164,     0,   107,   263,  5534,  5915
 "S06",        1192,     0,    37,   108,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
-"S10",          77,     0,    10,     1,    88,   145
+"S10",          80,     0,    11,     1,    92,   149
 "S11",          85,     0,    26,    14,   125,   144
 "S12",        1365,     0,    51,   121,  1537,  1595
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         298,     0,    13,    12,   323,   336
 "S15",           0,     0,     0,     0,     0,   283
 "S16",         246,     0,     0,    17,   263,   307
-"S17",         613,     0,    28,    26,   667,   700
+"S17",         612,     1,    28,    26,   667,   700
 "S19",          12,     0,     0,     0,    12,    17
 "S22",          51,     0,     1,     1,    53,    53
 "S24",           1,     0,     0,     0,     1,    79
@@ -1707,8 +1709,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9153,     2,   109,   186,  9450,  7884
 "int",        1203,     0,    15,    21,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32237,     2,   715,  1385, 34339, 34739
+"total",     32239,     3,   717,  1385, 34344, 34744
 ----------------
 Failure summary:
+S17-supply/start.rakudo.jvm 9 - did we get the other original value
 S32-num/rounders.rakudo.jvm 55 - round(5.0E33) == 4999999999999999727876154935214080
 S32-num/rounders.rakudo.jvm 96 - (5.0E33).round == 4999999999999999727876154935214080

@@ -324,7 +324,8 @@ use of uninitialized value of type Int in string context  in block <unit> at EVA
 S02-types/isDEPRECATED.rakudo.moar.................  12    0    8    0   20
      8 todo   : NYI
 S02-types/lazy-lists.t.............................  23    0    0    0   23
-S02-types/lists.rakudo.moar........................  29    0    0    3   32
+S02-types/lists.rakudo.moar........................Internal error: zeroed target thread ID in work pass
+  29    0    0    3   32
      3 skipped: list binding
 S02-types/mix.rakudo.moar.......................... 174    0    2    3  179
      3 skipped: No longer Iterable
@@ -551,7 +552,7 @@ use of uninitialized value $got of type Any in string context  in sub is at lib/
 
 use of uninitialized value $got of type Any in string context  in sub is at lib/Test.pm:120
 
- 258    0   22   12  292
+ 258    0   23   12  293
      3 skipped: expects a term, found infix >= instead
      3 skipped: Two terms in a row
      3 skipped: cannot modifiy an immutable value
@@ -566,6 +567,7 @@ use of uninitialized value $got of type Any in string context  in sub is at lib/
      2 todo   : unknown
      1 todo   : huh?
      1 todo   : item/list assignment
+     1 todo   : RT #76414
 S03-operators/autoincrement-range.t................# Tests for 'a' .. 'z'
 # Tests for 'Α' .. 'Ω' (Greek uppercase)
 # Tests for 'α' .. 'ω' (Greek lowercase)
@@ -1547,7 +1549,15 @@ so that this message will disappear!
      1 todo   : ticket based only on class... RT #60446
      1 todo   : RT #64606
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.moar............  12    0    1    0   13
+S10-packages/precompilation.rakudo.moar............# error: Could not find symbol '&C1'
+#   in method <anon> at src/gen/m-CORE.setting:13777
+#   in any find_method_fallback at src/gen/m-Metamodel.nqp:2725
+#   in any find_method at src/gen/m-Metamodel.nqp:988
+#   in block <unit> at getout-2573-692135.code:3
+
+
+  15    0    2    0   17
+     1 todo   : RT #123276
      1 todo PASSED: RT #122896
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
@@ -1841,8 +1851,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1416622416
-# Using file temp_1416622416
+S16-filehandles/chmod.t............................# Using file temp_1416708791
+# Using file temp_1416708791
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1984,13 +1994,7 @@ S17-supply/stable.rakudo.moar......................# **** scheduling with Thread
 # **** scheduling with CurrentThreadScheduler
    5    0    0    2    7
      2 skipped: doesn't work or can't test
-S17-supply/start.t.................................
-# Failed test 'did we get the other original value'
-# at t/spec/S17-supply/start.t line 35
-# expected: [1, 1]
-#      got: [1]
-# Looks like you failed 1 tests of 9
-   8    1    0    0    9
+S17-supply/start.t.................................   9    0    0    0    9
 S17-supply/unique.t................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
   17    0    0    0   17
@@ -2754,14 +2758,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 1.0023569 seconds
-# gerdr: 1.04593958 seconds
-# recursive-ternary: 1.1231868 seconds
-# loop: 1.1311299 seconds
-# sequence-ternary: 1.90714495 seconds
-# recursive-ternary-hand-cached: 1.9824947 seconds
-# hand-memoization: 2.70496718 seconds
-# sequence: 2.7498532 seconds
+integration/advent2012-day21.t.....................# kaz: 0.9702198 seconds
+# gerdr: 0.9864512 seconds
+# recursive-ternary: 1.07477239 seconds
+# loop: 1.0872201 seconds
+# sequence-ternary: 1.85343468 seconds
+# recursive-ternary-hand-cached: 1.8640983 seconds
+# hand-memoization: 2.61808514 seconds
+# sequence: 2.64451726 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2827,20 +2831,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5097,     0,   123,   359,  5579,  5671
-"S03",        4911,     0,   105,    95,  5111,  5145
+"S03",        4911,     0,   106,    95,  5112,  5146
 "S04",        1018,     0,    42,    43,  1103,  1155
 "S05",        5256,     0,   101,   177,  5534,  5915
 "S06",        1199,     0,    36,   102,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
-"S10",          84,     0,     3,     1,    88,   145
+"S10",          87,     0,     4,     1,    92,   149
 "S11",         107,     0,     4,    14,   125,   144
 "S12",        1370,     0,    46,   121,  1537,  1595
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         303,     0,    10,    10,   323,   336
 "S15",         240,     0,     2,    16,   258,   283
 "S16",         247,     0,     0,    16,   263,   307
-"S17",         673,     1,     7,    22,   703,   727
+"S17",         674,     0,     7,    22,   703,   727
 "S19",          12,     0,     0,     0,    12,    17
 "S22",          52,     0,     1,     0,    53,    53
 "S24",           1,     0,     0,     0,     1,    79
@@ -2850,7 +2854,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9160,     0,   125,   165,  9450,  7884
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32743,     1,   646,  1243, 34633, 34766
+"total",     32747,     0,   648,  1243, 34638, 34771
 ----------------
-Failure summary:
-S17-supply/start.t 9 - did we get the other original value
+No failures!
