@@ -244,7 +244,7 @@ S02-types/nil.rakudo.jvm...........................  45    0    5    1   51
      1 skipped: triage
      5 todo   : triage
 S02-types/num.t....................................  66    0    0    0   66
-S02-types/pair.rakudo.jvm..........................  93    0    2    2   97
+S02-types/pair.rakudo.jvm..........................  93    2    2    2   99
      2 skipped: method($invocant:) syntax missing
      1 todo   : ?
      1 todo   : should it really have \n on the end?
@@ -515,9 +515,10 @@ S04-phasers/check.t................................   5    0    0    0    5
 S04-phasers/descending-order.t.....................   7    0    0    0    7
 S04-phasers/end.rakudo.jvm.........................   6    0    2    0    8
      2 todo   : lexicals and EVAL()
-S04-phasers/enter-leave.rakudo.jvm.................  19    0    2    2   23
-     1 skipped: unwind, RT #121530
+S04-phasers/enter-leave.rakudo.jvm.................  20    0    4    1   25
      1 skipped: leave NYI
+     1 todo   : unwind, RT #121530
+     1 todo   : RT #113950
      1 todo   : nigh
      1 todo   : is this spec? why would LEAVE not see outer $!? fossil?
 S04-phasers/eval-in-begin.rakudo.jvm...............   0    0    3    0    3
@@ -704,7 +705,8 @@ S05-metasyntax/unknown.rakudo.jvm..................  11    0    1    0   12
 S05-modifier/continue.t............................  13    0    0    0   13
 S05-modifier/counted-match.rakudo.jvm..............  16    0    0    6   22
      6 skipped: hangs
-S05-modifier/counted.rakudo.jvm.................... 116    0    2    0  118
+S05-modifier/counted.rakudo.jvm.................... 116    0    2    1  119
+     1 skipped: NYI
      2 todo   : unknown
 S05-modifier/global.t..............................   8    0    0    0    8
 S05-modifier/ignorecase.rakudo.jvm.................  22    0    2    0   24
@@ -1228,7 +1230,7 @@ S17-supply/squish.rakudo.jvm.......................  10    0    1    0   11
 S17-supply/stable.rakudo.jvm.......................   4    0    1    2    7
      2 skipped: doesn't work or can't test
      1 todo   : D: doesn't work in signatures RT #122229
-S17-supply/start.rakudo.jvm........................   7    1    1    0    9
+S17-supply/start.rakudo.jvm........................   8    0    1    0    9
      1 todo   : D: doesn't work in signatures RT #122229
 S17-supply/unique.rakudo.jvm.......................  16    0    1    0   17
      1 todo   : D: doesn't work in signatures RT #122229
@@ -1685,10 +1687,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5062,     0,   140,   377,  5579,  5671
+"S02",        5062,     2,   140,   377,  5581,  5673
 "S03",        4911,     0,   106,    95,  5112,  5146
-"S04",         999,     0,    45,    59,  1103,  1155
-"S05",        5164,     0,   107,   263,  5534,  5915
+"S04",        1000,     0,    47,    58,  1105,  1157
+"S05",        5164,     0,   107,   264,  5535,  5916
 "S06",        1192,     0,    37,   108,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
@@ -1699,7 +1701,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         298,     0,    13,    12,   323,   336
 "S15",           0,     0,     0,     0,     0,   283
 "S16",         246,     0,     0,    17,   263,   307
-"S17",         612,     1,    28,    26,   667,   700
+"S17",         613,     0,    28,    26,   667,   700
 "S19",          12,     0,     0,     0,    12,    17
 "S22",          51,     0,     1,     1,    53,    53
 "S24",           1,     0,     0,     0,     1,    79
@@ -1709,9 +1711,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9153,     2,   109,   186,  9450,  7884
 "int",        1203,     0,    15,    21,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32239,     3,   717,  1385, 34344, 34744
+"total",     32241,     4,   719,  1385, 34349, 34749
 ----------------
 Failure summary:
-S17-supply/start.rakudo.jvm 9 - did we get the other original value
+S02-types/pair.rakudo.jvm 98 - chained colonpairs in parens build a list of pairs
+S02-types/pair.rakudo.jvm 99 - chained colonpairs in curlies construct hashes with more than one element
 S32-num/rounders.rakudo.jvm 55 - round(5.0E33) == 4999999999999999727876154935214080
 S32-num/rounders.rakudo.jvm 96 - (5.0E33).round == 4999999999999999727876154935214080
