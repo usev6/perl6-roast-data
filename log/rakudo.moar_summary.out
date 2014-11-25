@@ -531,9 +531,20 @@ use of uninitialized value $x of type Any in string context  in sub f1 at t/spec
 S03-operators/also.rakudo.moar.....................   4    0    4    0    8
      4 todo   : nom regression
 S03-operators/andthen.t............................   8    0    0    0    8
-S03-operators/arith.t..............................use of uninitialized value of type Int in numeric context  in block <unit> at EVAL_3:1
+S03-operators/arith.rakudo.moar....................    
+# Failed test 'right exception type (X::TypeCheck::Assignment)'
+# at lib/Test.pm line 306
+    # Expected: (X::TypeCheck::Assignment)
+    # Got:      (X::TypeCheck::Binding)
+    # Exception message: Type check failed in binding; expected 'Int' but got 'Failure'
+    # Looks like you failed 1 tests of 3
 
- 145    0    0    0  145
+# Failed test 'Division by zero with infix:</> dies and is catchable (1)'
+# at t/spec/S03-operators/arith.rakudo.moar line 322
+use of uninitialized value of type Int in numeric context  in block <unit> at t/spec/S03-operators/arith.rakudo.moar:361
+
+ 152    1    1    0  154
+     1 todo   : RT #122053
 S03-operators/assign-is-not-binding.t..............   8    0    0    0    8
 S03-operators/assign.rakudo.moar...................use of uninitialized value $got of type Any in string context  in sub is at lib/Test.pm:116
 
@@ -584,7 +595,7 @@ S03-operators/autovivification.t...................use of uninitialized value of
 
 use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-operators/autovivification.t:95
 
-use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:629
+use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:681
 
   23    0    0    0   23
 S03-operators/bag.rakudo.moar...................... 109    0   12    7  128
@@ -755,7 +766,11 @@ S03-operators/increment.t..........................  32    0    0    0   32
 S03-operators/infixed-function.t...................   5    0    0    0    5
 S03-operators/inplace.rakudo.moar..................  23    0    0    4   27
      4 skipped: Method '' not found for invocant of class 'Str'
-S03-operators/is-divisible-by.rakudo.moar..........  14    0    1    0   15
+S03-operators/is-divisible-by.rakudo.moar..........    
+# Failed test 'code dies'
+# at lib/Test.pm line 303
+    # Looks like you failed 1 tests of 3
+  14    0    1    0   15
      1 todo   : not sure why this doesn't fire
 S03-operators/lcm.t................................  15    0    0    0   15
 S03-operators/list-quote-junction.t................  16    0    0    0   16
@@ -1167,14 +1182,14 @@ S05-metasyntax/litvar.t............................Potential difficulties:
     at t/spec/S05-metasyntax/litvar.t:36
     ------> [32mok('c0' ~~ m/@var[33m⏏[31m[0]/, 'Array ignores 0');               [0m
   24    0    0    0   24
-S05-metasyntax/longest-alternative.rakudo.moar.....  30    0    0    1   31
+S05-metasyntax/longest-alternative.rakudo.moar.....  40    0    0    1   41
      1 skipped: ::
 S05-metasyntax/lookaround.t........................  10    0    0    0   10
 S05-metasyntax/null.t..............................   4    0    0    0    4
 S05-metasyntax/proto-token-ltm.t...................  10    0    0    0   10
 S05-metasyntax/regex.t.............................Useless declaration of a has-scoped method in mainline (did you mean 'my token foo'?)
 Useless declaration of a has-scoped method in mainline (did you mean 'my regex baz'?)
-use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:629
+use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:681
 
 Potential difficulties:
     Repeated character (.) unexpectedly found in character class
@@ -1554,7 +1569,7 @@ S10-packages/precompilation.rakudo.moar............# error: Could not find symbo
 #   in method <anon> at src/gen/m-CORE.setting:13780
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2725
 #   in any find_method at src/gen/m-Metamodel.nqp:988
-#   in block <unit> at getout-26895-712105.code:3
+#   in block <unit> at getout-51738-877350.code:3
 
 
   15    0    2    0   17
@@ -1702,7 +1717,7 @@ S12-introspection/WHAT.rakudo.moar.................  25    0   12    0   37
      2 todo   : %h{Str} of Int fails
 S12-introspection/attributes.rakudo.moar...........  25    0    0    5   30
      5 skipped: :tree NYI for .^attributes
-S12-introspection/can.t............................Code object coerced to string (please use .gist or .perl to do that)  in any !cursor_init at gen/moar/stage2/QRegex.nqp:629
+S12-introspection/can.t............................Code object coerced to string (please use .gist or .perl to do that)  in any !cursor_init at gen/moar/stage2/QRegex.nqp:681
 
   25    0    0    0   25
 S12-introspection/definite.t.......................   6    0    0    0    6
@@ -1852,8 +1867,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1416795213
-# Using file temp_1416795213
+S16-filehandles/chmod.t............................# Using file temp_1416881612
+# Using file temp_1416881612
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1882,9 +1897,9 @@ S17-channel/basic.t................................  12    0    0    0   12
 S17-channel/earliest.t.............................   3    0    0    0    3
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-procasync/basic.t..............................   9    0    0    0    9
-S17-procasync/kill.rakudo.moar..................... 182   75   22    0  279
-    22 todo   : we cannot actually send signals yet
-    75 tests aborted (missing ok/not ok)
+S17-procasync/kill.rakudo.moar..................... 174   84   21    0  279
+    21 todo   : we cannot actually send signals yet
+    84 tests aborted (missing ok/not ok)
 S17-promise/allof.t................................  10    0    0    0   10
 S17-promise/anyof.t................................   9    0    0    0    9
 S17-promise/basic.t................................  19    0    0    0   19
@@ -2758,14 +2773,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 1.00807965 seconds
-# gerdr: 1.0289192 seconds
-# recursive-ternary: 1.117906 seconds
-# loop: 1.125592 seconds
-# sequence-ternary: 1.9315717 seconds
-# recursive-ternary-hand-cached: 1.932817 seconds
-# hand-memoization: 2.7392357 seconds
-# sequence: 2.7661844 seconds
+integration/advent2012-day21.t.....................# kaz: 0.99062936 seconds
+# gerdr: 1.0148120 seconds
+# recursive-ternary: 1.1139158 seconds
+# loop: 1.15139603 seconds
+# recursive-ternary-hand-cached: 1.88630629 seconds
+# sequence-ternary: 1.9203451 seconds
+# hand-memoization: 2.69571184 seconds
+# sequence: 2.7410766 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2831,9 +2846,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5099,     0,   123,   359,  5581,  5673
-"S03",        4911,     0,   106,    95,  5112,  5146
+"S03",        4918,     1,   107,    95,  5121,  5155
 "S04",        1019,     0,    44,    42,  1105,  1157
-"S05",        5256,     0,   101,   178,  5535,  5916
+"S05",        5266,     0,   101,   178,  5545,  5926
 "S06",        1199,     0,    36,   102,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
@@ -2844,7 +2859,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         303,     0,    10,    10,   323,   336
 "S15",         240,     0,     2,    16,   258,   283
 "S16",         247,     0,     0,    16,   263,   307
-"S17",         832,    75,    26,    22,   955,   979
+"S17",         824,    84,    25,    22,   955,   979
 "S19",          12,     0,     0,     0,    12,    17
 "S22",          52,     0,     1,     0,    53,    53
 "S24",           1,     0,     0,     0,     1,    79
@@ -2854,7 +2869,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9160,     0,   125,   165,  9450,  7884
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32908,    75,   669,  1243, 34895, 35028
+"total",     32917,    85,   669,  1243, 34914, 35047
 ----------------
 Failure summary:
-S17-procasync/kill.rakudo.moar aborted 75 test(s)
+S03-operators/arith.rakudo.moar 143 - Division by zero with infix:</> dies and is catchable (1)
+S17-procasync/kill.rakudo.moar aborted 84 test(s)

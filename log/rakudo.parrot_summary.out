@@ -434,15 +434,11 @@ S02-types/pair.rakudo.parrot.......................
     # Got:      (X::AdHoc)
     # Exception message: Cannot assign to a readonly variable or a value
     # Looks like you failed 1 tests of 2
-duplicate named argument in call
-  in block <unit> at t/spec/S02-types/pair.rakudo.parrot:329
-
-# Looks like you planned 99 tests, but ran 97
-  93    2    2    2   99
+  93    0    2    4   99
      2 skipped: method($invocant:) syntax missing
+     2 skipped: RT #123215
      1 todo   : ?
      1 todo   : should it really have \n on the end?
-     2 tests aborted (missing ok/not ok)
 S02-types/parcel.t.................................  52    0    0    0   52
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t..................................use of uninitialized value of type Range in numeric context  in block <unit> at t/spec/S02-types/range.t:87
@@ -601,9 +597,20 @@ use of uninitialized value $x of type Any in string context  in sub f1 at t/spec
 S03-operators/also.rakudo.parrot...................   4    0    4    0    8
      4 todo   : nom regression
 S03-operators/andthen.t............................   8    0    0    0    8
-S03-operators/arith.t..............................use of uninitialized value of type Int in numeric context  in block <unit> at EVAL_3:1
+S03-operators/arith.rakudo.parrot..................    
+# Failed test 'right exception type (X::TypeCheck::Assignment)'
+# at lib/Test.pm line 309
+    # Expected: (X::TypeCheck::Assignment)
+    # Got:      (X::TypeCheck::Binding)
+    # Exception message: Type check failed in binding; expected 'Int' but got 'Failure'
+    # Looks like you failed 1 tests of 3
 
- 145    0    0    0  145
+# Failed test 'Division by zero with infix:</> dies and is catchable (1)'
+# at t/spec/S03-operators/arith.rakudo.parrot line 322
+use of uninitialized value of type Int in numeric context  in block <unit> at t/spec/S03-operators/arith.rakudo.parrot:361
+
+ 152    1    1    0  154
+     1 todo   : RT #122053
 S03-operators/assign-is-not-binding.t..............   8    0    0    0    8
 S03-operators/assign.rakudo.parrot.................use of uninitialized value $got of type Any in string context  in sub is at lib/Test.pm:116
 
@@ -825,7 +832,11 @@ S03-operators/increment.t..........................  32    0    0    0   32
 S03-operators/infixed-function.t...................   5    0    0    0    5
 S03-operators/inplace.rakudo.parrot................  23    0    0    4   27
      4 skipped: Method '' not found for invocant of class 'Str'
-S03-operators/is-divisible-by.rakudo.parrot........  14    0    1    0   15
+S03-operators/is-divisible-by.rakudo.parrot........    
+# Failed test 'code dies'
+# at lib/Test.pm line 303
+    # Looks like you failed 1 tests of 3
+  14    0    1    0   15
      1 todo   : not sure why this doesn't fire
 S03-operators/lcm.t................................  15    0    0    0   15
 S03-operators/list-quote-junction.t................  16    0    0    0   16
@@ -1254,7 +1265,11 @@ S05-metasyntax/litvar.t............................Potential difficulties:
     at t/spec/S05-metasyntax/litvar.t:36
     ------> [32mok('c0' ~~ m/@var[33m⏏[31m[0]/, 'Array ignores 0');               [0m
   24    0    0    0   24
-S05-metasyntax/longest-alternative.rakudo.parrot...  30    0    0    1   31
+S05-metasyntax/longest-alternative.rakudo.parrot...
+# Failed test 'LTM - literal wins tie against \w*'
+# at t/spec/S05-metasyntax/longest-alternative.rakudo.parrot line 78
+# Looks like you failed 1 tests of 41
+  39    1    0    1   41
      1 skipped: ::
 S05-metasyntax/lookaround.t........................  10    0    0    0   10
 S05-metasyntax/null.t..............................   4    0    0    0    4
@@ -1631,7 +1646,7 @@ S10-packages/precompilation.rakudo.parrot..........# error: Could not find symbo
 #   in any find_method_fallback at gen/parrot/Metamodel.nqp:2795
 #   in any find_method at gen/parrot/Metamodel.nqp:989
 #   in any  at gen/parrot/BOOTSTRAP.nqp:1708
-#   in block <unit> at getout-36470-195225.code:3
+#   in block <unit> at getout-61330-447495.code:3
 
 
   16    0    1    0   17
@@ -1916,8 +1931,8 @@ S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.parrot..................  12    0    1    0   13
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1416799278
-# Using file temp_1416799278
+S16-filehandles/chmod.t............................# Using file temp_1416885607
+# Using file temp_1416885607
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -3105,13 +3120,13 @@ integration/advent2012-day21.rakudo.parrot.........
 # 10200: 87
 # '
 #      got: ''
-# sequence-ternary: 2.50990277 seconds
-# kaz: 2.91701385 seconds
-# gerdr: 2.9947788 seconds
-# recursive-ternary: 3.589509 seconds
-# loop: 3.699173 seconds
-# recursive-ternary-hand-cached: 9.46014523 seconds
-# sequence: 12.17263132 seconds
+# sequence-ternary: 2.5490092 seconds
+# kaz: 2.8663955 seconds
+# gerdr: 2.928138 seconds
+# recursive-ternary: 3.64131528 seconds
+# loop: 3.74218736 seconds
+# recursive-ternary-hand-cached: 9.17585884 seconds
+# sequence: 12.410157 seconds
 # Looks like you failed 1 tests of 9
    7    1    0    1    9
      1 skipped: RT #122497
@@ -3163,10 +3178,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5027,     2,   120,   432,  5581,  5673
-"S03",        4911,     0,   106,    95,  5112,  5146
+"S02",        5027,     0,   120,   434,  5581,  5673
+"S03",        4918,     1,   107,    95,  5121,  5155
 "S04",        1011,     0,    48,    46,  1105,  1157
-"S05",        5164,     0,   107,   264,  5535,  5916
+"S05",        5173,     1,   107,   264,  5545,  5926
 "S06",        1194,     0,    39,   104,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         186,     0,    11,    10,   207,   207
@@ -3187,8 +3202,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9159,     0,   115,   176,  9450,  7884
 "int",        1196,     1,     9,    19,  1225,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31643,     3,   637,  1385, 33668, 34749
+"total",     31659,     3,   638,  1387, 33687, 34768
 ----------------
 Failure summary:
-S02-types/pair.rakudo.parrot aborted 2 test(s)
+S03-operators/arith.rakudo.parrot 143 - Division by zero with infix:</> dies and is catchable (1)
+S05-metasyntax/longest-alternative.rakudo.parrot 26 - LTM - literal wins tie against \w*
 integration/advent2012-day21.rakudo.parrot 4 - sequence-ternary
