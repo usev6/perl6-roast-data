@@ -229,7 +229,7 @@ S02-types/anon_block.rakudo.moar...................Code object coerced to string
 S02-types/array-shapes.rakudo.moar.................   6    0    0   19   25
     15 skipped: array shapes NYI
      4 skipped: native arrays NYI
-S02-types/array.rakudo.moar........................use of uninitialized value @bar of type Str in string context  in block  at t/spec/S02-types/array.rakudo.moar:355
+S02-types/array.rakudo.moar........................use of uninitialized value @bar of type Str in string context  in block  at t/spec/S02-types/array.rakudo.moar:359
 
   93    0    0    2   95
      2 skipped: multi-dim arrays NYI
@@ -531,19 +531,9 @@ use of uninitialized value $x of type Any in string context  in sub f1 at t/spec
 S03-operators/also.rakudo.moar.....................   4    0    4    0    8
      4 todo   : nom regression
 S03-operators/andthen.t............................   8    0    0    0    8
-S03-operators/arith.rakudo.moar....................    
-# Failed test 'right exception type (X::TypeCheck::Assignment)'
-# at lib/Test.pm line 306
-    # Expected: (X::TypeCheck::Assignment)
-    # Got:      (X::TypeCheck::Binding)
-    # Exception message: Type check failed in binding; expected 'Int' but got 'Failure'
-    # Looks like you failed 1 tests of 3
+S03-operators/arith.rakudo.moar....................use of uninitialized value of type Int in numeric context  in block <unit> at t/spec/S03-operators/arith.rakudo.moar:361
 
-# Failed test 'Division by zero with infix:</> dies and is catchable (1)'
-# at t/spec/S03-operators/arith.rakudo.moar line 322
-use of uninitialized value of type Int in numeric context  in block <unit> at t/spec/S03-operators/arith.rakudo.moar:361
-
- 152    1    1    0  154
+ 153    0    1    0  154
      1 todo   : RT #122053
 S03-operators/assign-is-not-binding.t..............   8    0    0    0    8
 S03-operators/assign.rakudo.moar...................use of uninitialized value $got of type Any in string context  in sub is at lib/Test.pm:116
@@ -595,7 +585,7 @@ S03-operators/autovivification.t...................use of uninitialized value of
 
 use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-operators/autovivification.t:95
 
-use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:681
+use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:678
 
   23    0    0    0   23
 S03-operators/bag.rakudo.moar...................... 109    0   12    7  128
@@ -1189,7 +1179,7 @@ S05-metasyntax/null.t..............................   4    0    0    0    4
 S05-metasyntax/proto-token-ltm.t...................  10    0    0    0   10
 S05-metasyntax/regex.t.............................Useless declaration of a has-scoped method in mainline (did you mean 'my token foo'?)
 Useless declaration of a has-scoped method in mainline (did you mean 'my regex baz'?)
-use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:681
+use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:678
 
 Potential difficulties:
     Repeated character (.) unexpectedly found in character class
@@ -1569,7 +1559,7 @@ S10-packages/precompilation.rakudo.moar............# error: Could not find symbo
 #   in method <anon> at src/gen/m-CORE.setting:13780
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2725
 #   in any find_method at src/gen/m-Metamodel.nqp:988
-#   in block <unit> at getout-51738-877350.code:3
+#   in block <unit> at getout-75266-330237.code:3
 
 
   15    0    2    0   17
@@ -1717,7 +1707,7 @@ S12-introspection/WHAT.rakudo.moar.................  25    0   12    0   37
      2 todo   : %h{Str} of Int fails
 S12-introspection/attributes.rakudo.moar...........  25    0    0    5   30
      5 skipped: :tree NYI for .^attributes
-S12-introspection/can.t............................Code object coerced to string (please use .gist or .perl to do that)  in any !cursor_init at gen/moar/stage2/QRegex.nqp:681
+S12-introspection/can.t............................Code object coerced to string (please use .gist or .perl to do that)  in any !cursor_init at gen/moar/stage2/QRegex.nqp:678
 
   25    0    0    0   25
 S12-introspection/definite.t.......................   6    0    0    0    6
@@ -1867,8 +1857,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1416881612
-# Using file temp_1416881612
+S16-filehandles/chmod.t............................# Using file temp_1416968008
+# Using file temp_1416968008
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2773,14 +2763,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.99062936 seconds
-# gerdr: 1.0148120 seconds
-# recursive-ternary: 1.1139158 seconds
-# loop: 1.15139603 seconds
-# recursive-ternary-hand-cached: 1.88630629 seconds
-# sequence-ternary: 1.9203451 seconds
-# hand-memoization: 2.69571184 seconds
-# sequence: 2.7410766 seconds
+integration/advent2012-day21.t.....................# kaz: 0.999831 seconds
+# gerdr: 1.02849016 seconds
+# recursive-ternary: 1.09846287 seconds
+# loop: 1.1465928 seconds
+# recursive-ternary-hand-cached: 1.9025659 seconds
+# sequence-ternary: 1.9206901 seconds
+# sequence: 2.7201683 seconds
+# hand-memoization: 2.74051591 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2846,7 +2836,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5099,     0,   123,   359,  5581,  5673
-"S03",        4918,     1,   107,    95,  5121,  5155
+"S03",        4919,     0,   107,    95,  5121,  5155
 "S04",        1019,     0,    44,    42,  1105,  1157
 "S05",        5266,     0,   101,   178,  5545,  5926
 "S06",        1199,     0,    36,   102,  1337,  1417
@@ -2869,8 +2859,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9160,     0,   125,   165,  9450,  7884
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32917,    85,   669,  1243, 34914, 35047
+"total",     32918,    84,   669,  1243, 34914, 35047
 ----------------
 Failure summary:
-S03-operators/arith.rakudo.moar 143 - Division by zero with infix:</> dies and is catchable (1)
 S17-procasync/kill.rakudo.moar aborted 84 test(s)
