@@ -819,7 +819,7 @@ S03-operators/value_equivalence.rakudo.moar........  73    0    2    0   75
      1 todo   : \@a seems to flatten when it should not
 S03-sequence/arity-2-or-more.t.....................  19    0    0    0   19
 S03-sequence/arity0.t..............................  13    0    0    0   13
-S03-sequence/basic.rakudo.moar..................... 128    0    1    0  129
+S03-sequence/basic.rakudo.moar..................... 129    0    1    0  130
      1 todo   : sequence + last
 S03-sequence/limit-arity-2-or-more.t...............Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-sequence/limit-arity-2-or-more.t:32
 
@@ -1559,7 +1559,7 @@ S10-packages/precompilation.rakudo.moar............# error: Could not find symbo
 #   in method <anon> at src/gen/m-CORE.setting:13780
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2725
 #   in any find_method at src/gen/m-Metamodel.nqp:988
-#   in block <unit> at getout-75266-330237.code:3
+#   in block <unit> at getout-1462-523995.code:3
 
 
   15    0    2    0   17
@@ -1857,8 +1857,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1416968008
-# Using file temp_1416968008
+S16-filehandles/chmod.t............................# Using file temp_1417054407
+# Using file temp_1417054407
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2763,14 +2763,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.999831 seconds
-# gerdr: 1.02849016 seconds
-# recursive-ternary: 1.09846287 seconds
-# loop: 1.1465928 seconds
-# recursive-ternary-hand-cached: 1.9025659 seconds
-# sequence-ternary: 1.9206901 seconds
-# sequence: 2.7201683 seconds
-# hand-memoization: 2.74051591 seconds
+integration/advent2012-day21.t.....................# kaz: 1.00255996 seconds
+# gerdr: 1.0161519 seconds
+# recursive-ternary: 1.1056162 seconds
+# loop: 1.17351789 seconds
+# recursive-ternary-hand-cached: 1.885288 seconds
+# sequence-ternary: 1.91936800 seconds
+# hand-memoization: 2.7225325 seconds
+# sequence: 2.73136286 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2836,7 +2836,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5099,     0,   123,   359,  5581,  5673
-"S03",        4919,     0,   107,    95,  5121,  5155
+"S03",        4920,     0,   107,    95,  5122,  5156
 "S04",        1019,     0,    44,    42,  1105,  1157
 "S05",        5266,     0,   101,   178,  5545,  5926
 "S06",        1199,     0,    36,   102,  1337,  1417
@@ -2859,7 +2859,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9160,     0,   125,   165,  9450,  7884
 "int",        1208,     0,    12,    19,  1239,  1228
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32918,    84,   669,  1243, 34914, 35047
+"total",     32919,    84,   669,  1243, 34915, 35048
 ----------------
 Failure summary:
 S17-procasync/kill.rakudo.moar aborted 84 test(s)
