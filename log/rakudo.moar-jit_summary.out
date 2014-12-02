@@ -1545,7 +1545,7 @@ S10-packages/precompilation.rakudo.moar............# error: Could not find symbo
 #   in method <anon> at src/gen/m-CORE.setting:13772
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2725
 #   in any find_method at src/gen/m-Metamodel.nqp:988
-#   in block <unit> at getout-6902-432648.code:3
+#   in block <unit> at getout-82273-128265.code:3
 
 
   15    0    2    0   17
@@ -1843,8 +1843,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1417401088
-# Using file temp_1417401089
+S16-filehandles/chmod.t............................# Using file temp_1417487503
+# Using file temp_1417487503
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2732,14 +2732,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 1.0243931 seconds
-# gerdr: 1.03614239 seconds
-# recursive-ternary: 1.1051068 seconds
-# loop: 1.1418204 seconds
-# recursive-ternary-hand-cached: 1.8769672 seconds
-# sequence-ternary: 1.89070671 seconds
-# sequence: 2.7197039 seconds
-# hand-memoization: 2.7256267 seconds
+integration/advent2012-day21.t.....................# kaz: 1.0306757 seconds
+# gerdr: 1.041355 seconds
+# recursive-ternary: 1.1148253 seconds
+# loop: 1.1668144 seconds
+# recursive-ternary-hand-cached: 1.87748750 seconds
+# sequence-ternary: 1.9310344 seconds
+# sequence: 2.7519454 seconds
+# hand-memoization: 2.7865220 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
