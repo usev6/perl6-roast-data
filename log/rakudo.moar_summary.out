@@ -585,7 +585,7 @@ S03-operators/autovivification.t...................use of uninitialized value of
 
 use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-operators/autovivification.t:95
 
-use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:752
+use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:978
 
   23    0    0    0   23
 S03-operators/bag.rakudo.moar...................... 109    0   12    7  128
@@ -1179,7 +1179,7 @@ S05-metasyntax/null.t..............................   4    0    0    0    4
 S05-metasyntax/proto-token-ltm.t...................  10    0    0    0   10
 S05-metasyntax/regex.t.............................Useless declaration of a has-scoped method in mainline (did you mean 'my token foo'?)
 Useless declaration of a has-scoped method in mainline (did you mean 'my regex baz'?)
-use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:752
+use of uninitialized value of type Any in string context  in any !cursor_init at gen/moar/stage2/QRegex.nqp:978
 
 Potential difficulties:
     Repeated character (.) unexpectedly found in character class
@@ -1545,7 +1545,7 @@ S10-packages/precompilation.rakudo.moar............# error: Could not find symbo
 #   in method <anon> at src/gen/m-CORE.setting:13772
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2725
 #   in any find_method at src/gen/m-Metamodel.nqp:988
-#   in block <unit> at getout-77929-214559.code:3
+#   in block <unit> at getout-3013-588853.code:3
 
 
   15    0    2    0   17
@@ -1693,7 +1693,7 @@ S12-introspection/WHAT.rakudo.moar.................  25    0   12    0   37
      2 todo   : %h{Str} of Int fails
 S12-introspection/attributes.rakudo.moar...........  25    0    0    5   30
      5 skipped: :tree NYI for .^attributes
-S12-introspection/can.t............................Code object coerced to string (please use .gist or .perl to do that)  in any !cursor_init at gen/moar/stage2/QRegex.nqp:752
+S12-introspection/can.t............................Code object coerced to string (please use .gist or .perl to do that)  in any !cursor_init at gen/moar/stage2/QRegex.nqp:978
 
   25    0    0    0   25
 S12-introspection/definite.t.......................   6    0    0    0    6
@@ -1843,8 +1843,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1417486401
-# Using file temp_1417486401
+S16-filehandles/chmod.t............................# Using file temp_1417572835
+# Using file temp_1417572835
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2732,14 +2732,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 1.0293576 seconds
-# gerdr: 1.0403775 seconds
-# recursive-ternary: 1.1077192 seconds
-# loop: 1.1364078 seconds
-# recursive-ternary-hand-cached: 1.875473 seconds
-# sequence-ternary: 1.9048201 seconds
-# sequence: 2.7212965 seconds
-# hand-memoization: 2.7545227 seconds
+integration/advent2012-day21.t.....................# kaz: 0.95374202 seconds
+# gerdr: 0.97717820 seconds
+# recursive-ternary: 1.0671919 seconds
+# loop: 1.1047694 seconds
+# recursive-ternary-hand-cached: 1.859014 seconds
+# sequence-ternary: 1.8770161 seconds
+# hand-memoization: 2.69586386 seconds
+# sequence: 2.7079280 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
