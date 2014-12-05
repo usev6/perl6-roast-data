@@ -276,11 +276,7 @@ S02-types/bag.rakudo.parrot........................
      1 todo   : Not properly interpolating
      4 todo   : ?
      1 todo   : we have not secured .WHICH creation yet
-S02-types/baghash.rakudo.parrot....................
-# Failed test '.roll(100) (2)'
-# at t/spec/S02-types/baghash.rakudo.parrot line 279
-# Looks like you failed 1 tests of 250
- 222    1    3   24  250
+S02-types/baghash.rakudo.parrot.................... 223    0    3   24  250
     21 skipped: 'is ObjectType' NYI
      3 skipped: No longer Iterable
      1 todo   : Needs to catch up with spec
@@ -1092,8 +1088,13 @@ S04-statements/do.rakudo.parrot....................  21    0    0    6   27
      3 skipped: Undeclared name A
      1 skipped: next without loop construct
 S04-statements/for-scope.t.........................  16    0    0    0   16
-S04-statements/for.rakudo.parrot...................  82    0    2    1   85
+S04-statements/for.rakudo.parrot...................use of uninitialized value of type Any in string context  in block  at t/spec/S04-statements/for.rakudo.parrot:613
+
+use of uninitialized value of type Any in string context  in block  at t/spec/S04-statements/for.rakudo.parrot:619
+
+  82    0    4    1   87
      1 skipped: optional variable in for loop (RT #63994)
+     2 todo   : RT #123005
      2 todo   : RT #113026 array iterator does not track a growing array
 S04-statements/for_with_only_one_item.t............   9    0    0    0    9
 S04-statements/gather.t............................  28    0    0    0   28
@@ -1631,7 +1632,7 @@ S10-packages/precompilation.rakudo.parrot..........# error: Could not find symbo
 #   in any find_method_fallback at gen/parrot/Metamodel.nqp:2795
 #   in any find_method at gen/parrot/Metamodel.nqp:989
 #   in any  at gen/parrot/BOOTSTRAP.nqp:1708
-#   in block <unit> at getout-40421-83441.code:3
+#   in block <unit> at getout-67006-863002.code:3
 
 
   16    0    1    0   17
@@ -1916,8 +1917,8 @@ S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.parrot..................  12    0    1    0   13
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1417662881
-# Using file temp_1417662881
+S16-filehandles/chmod.t............................# Using file temp_1417749481
+# Using file temp_1417749481
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2685,13 +2686,13 @@ integration/advent2012-day15.rakudo.parrot.........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.rakudo.parrot.........# kaz: 2.7133979 seconds
-# gerdr: 2.872741 seconds
-# recursive-ternary: 3.581419178 seconds
-# loop: 3.7152152 seconds
-# sequence-ternary: 7.551660 seconds
-# recursive-ternary-hand-cached: 8.8869372 seconds
-# sequence: 12.1958035 seconds
+integration/advent2012-day21.rakudo.parrot.........# kaz: 2.8714748 seconds
+# gerdr: 2.90098663 seconds
+# recursive-ternary: 3.6198332 seconds
+# loop: 3.8232657 seconds
+# sequence-ternary: 7.63867638 seconds
+# recursive-ternary-hand-cached: 8.93564442 seconds
+# sequence: 12.35861187 seconds
    8    0    0    1    9
      1 skipped: RT #122497
 integration/advent2012-day22.rakudo.parrot.........   5    0    1    0    6
@@ -2742,9 +2743,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5026,     1,   120,   434,  5581,  5673
+"S02",        5027,     0,   120,   434,  5581,  5673
 "S03",        4920,     0,   106,   100,  5126,  5160
-"S04",        1011,     0,    48,    46,  1105,  1157
+"S04",        1011,     0,    50,    46,  1107,  1159
 "S05",        5175,     0,   107,   264,  5546,  5927
 "S06",        1194,     0,    39,   104,  1337,  1417
 "S07",           0,     0,     0,     0,     0,     0
@@ -2764,9 +2765,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
 "S32",        9159,     0,   115,   176,  9450,  7884
-"int",        1197,     0,     9,    19,  1225,  1228
+"int",        1197,     0,     9,    19,  1225,  1235
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31663,     1,   637,  1392, 33693, 34774
+"total",     31664,     0,   639,  1392, 33695, 34783
 ----------------
-Failure summary:
-S02-types/baghash.rakudo.parrot 126 - .roll(100) (2)
+No failures!
