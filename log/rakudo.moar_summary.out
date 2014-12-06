@@ -1545,7 +1545,7 @@ S10-packages/precompilation.rakudo.moar............# error: Could not find symbo
 #   in method <anon> at src/gen/m-CORE.setting:13772
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2725
 #   in any find_method at src/gen/m-Metamodel.nqp:988
-#   in block <unit> at getout-57558-479377.code:3
+#   in block <unit> at getout-81353-478083.code:3
 
 
   15    0    2    0   17
@@ -1843,8 +1843,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1417745588
-# Using file temp_1417745588
+S16-filehandles/chmod.t............................# Using file temp_1417832028
+# Using file temp_1417832028
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1982,13 +1982,7 @@ S17-supply/stable.rakudo.moar......................# **** scheduling with Thread
 # **** scheduling with CurrentThreadScheduler
    5    0    0    2    7
      2 skipped: doesn't work or can't test
-S17-supply/start.t.................................
-# Failed test 'did we get the other original value'
-# at t/spec/S17-supply/start.t line 35
-# expected: [1, 1]
-#      got: [1]
-# Looks like you failed 1 tests of 9
-   8    1    0    0    9
+S17-supply/start.t.................................   9    0    0    0    9
 S17-supply/unique.t................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
   17    0    0    0   17
@@ -2254,35 +2248,6 @@ S32-io/io-spec-cygwin.t............................ 100    0    0    2  102
      2 skipped: cygwin on-platform tests
 S32-io/io-spec-unix.t..............................use of uninitialized value $path of type Any in string context  in block <unit> at t/spec/S32-io/io-spec-unix.t:48
 
-Saw 5 calls to deprecated code during execution.
-================================================================================
-Method no-parent-or-current-test (from IO::Spec::Unix) called at:
-  t/spec/S32-io/io-spec-unix.t, lines 71,72,73,74
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use curupdir instead.
---------------------------------------------------------------------------------
-Method MODULE (from IO::Spec) called at:
-  t/spec/S32-io/io-spec-unix.t, line 195
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use $*SPEC instead.
---------------------------------------------------------------------------------
-Method curdir (from IO::Spec) called at:
-  t/spec/S32-io/io-spec-unix.t, line 196
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use $*SPEC.curdir instead.
---------------------------------------------------------------------------------
-Method rel2abs (from IO::Spec) called at:
-  t/spec/S32-io/io-spec-unix.t, line 196
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use $*SPEC.rel2abs instead.
---------------------------------------------------------------------------------
-Method tmpdir (from IO::Spec) called at:
-  t/spec/S32-io/io-spec-unix.t, line 197
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use $*TMPDIR instead.
---------------------------------------------------------------------------------
-Please contact the author to have these calls to deprecated code adapted,
-so that this message will disappear!
  130    0    0    0  130
 S32-io/io-spec-win.t...............................use of uninitialized value $path of type Any in string context  in block <unit> at t/spec/S32-io/io-spec-win.t:52
 
@@ -2738,14 +2703,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# gerdr: 0.9763289 seconds
-# kaz: 0.980522 seconds
-# recursive-ternary: 1.0721819 seconds
-# loop: 1.07650643 seconds
-# recursive-ternary-hand-cached: 1.8482297 seconds
-# sequence-ternary: 1.8581669 seconds
-# sequence: 2.7109769 seconds
-# hand-memoization: 2.71631960 seconds
+integration/advent2012-day21.t.....................# gerdr: 0.974660427 seconds
+# kaz: 0.9774544 seconds
+# recursive-ternary: 1.0571865 seconds
+# loop: 1.0738447 seconds
+# recursive-ternary-hand-cached: 1.845773 seconds
+# sequence-ternary: 1.8725702 seconds
+# hand-memoization: 2.6781037 seconds
+# sequence: 2.6947074 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2781,12 +2746,8 @@ integration/advent2013-day20.t.....................  22    0    0    0   22
 integration/advent2013-day21.t.....................  24    0    0    0   24
 integration/advent2013-day22.t.....................   9    0    0    0    9
 integration/advent2013-day23.t.....................   9    0    0    0    9
-integration/advent2014-day05.t.....................
-# Failed test 'Missed some updates: 0'
-# at t/spec/integration/advent2014-day05.t line 26
-# twice: '100000'
-# Looks like you failed 1 tests of 7
-   6    1    0    0    7
+integration/advent2014-day05.rakudo.moar...........   6    0    0    1    7
+     1 skipped: sometimes hangs, sometimes segfaults
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.moar............# Error message: Constraint type check failed for parameter '$x'
   15    0    1    0   16
@@ -2830,7 +2791,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         303,     0,    10,    10,   323,   336
 "S15",         240,     0,     2,    16,   258,   283
 "S16",         247,     0,     0,    16,   263,   307
-"S17",         649,     1,     4,    22,   676,   700
+"S17",         650,     0,     4,    22,   676,   700
 "S19",          12,     0,     0,     0,    12,    17
 "S22",          52,     0,     1,     0,    53,    53
 "S24",           1,     0,     0,     0,     1,    79
@@ -2838,10 +2799,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
 "S32",        9160,     0,   125,   165,  9450,  7884
-"int",        1214,     1,    12,    19,  1246,  1235
+"int",        1214,     0,    12,    20,  1246,  1235
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32751,     2,   649,  1248, 34650, 34783
+"total",     32752,     0,   649,  1249, 34650, 34783
 ----------------
-Failure summary:
-S17-supply/start.t 9 - did we get the other original value
-integration/advent2014-day05.t 3 - Missed some updates: 0
+No failures!

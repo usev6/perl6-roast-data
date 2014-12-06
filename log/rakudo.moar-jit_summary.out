@@ -1545,7 +1545,7 @@ S10-packages/precompilation.rakudo.moar............# error: Could not find symbo
 #   in method <anon> at src/gen/m-CORE.setting:13772
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2725
 #   in any find_method at src/gen/m-Metamodel.nqp:988
-#   in block <unit> at getout-61906-435284.code:3
+#   in block <unit> at getout-85698-202549.code:3
 
 
   15    0    2    0   17
@@ -1843,8 +1843,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1417746753
-# Using file temp_1417746753
+S16-filehandles/chmod.t............................# Using file temp_1417833074
+# Using file temp_1417833074
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2248,35 +2248,6 @@ S32-io/io-spec-cygwin.t............................ 100    0    0    2  102
      2 skipped: cygwin on-platform tests
 S32-io/io-spec-unix.t..............................use of uninitialized value $path of type Any in string context  in block <unit> at t/spec/S32-io/io-spec-unix.t:48
 
-Saw 5 calls to deprecated code during execution.
-================================================================================
-Method no-parent-or-current-test (from IO::Spec::Unix) called at:
-  t/spec/S32-io/io-spec-unix.t, lines 71,72,73,74
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use curupdir instead.
---------------------------------------------------------------------------------
-Method MODULE (from IO::Spec) called at:
-  t/spec/S32-io/io-spec-unix.t, line 195
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use $*SPEC instead.
---------------------------------------------------------------------------------
-Method curdir (from IO::Spec) called at:
-  t/spec/S32-io/io-spec-unix.t, line 196
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use $*SPEC.curdir instead.
---------------------------------------------------------------------------------
-Method rel2abs (from IO::Spec) called at:
-  t/spec/S32-io/io-spec-unix.t, line 196
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use $*SPEC.rel2abs instead.
---------------------------------------------------------------------------------
-Method tmpdir (from IO::Spec) called at:
-  t/spec/S32-io/io-spec-unix.t, line 197
-Deprecated since v2014.10, will be removed with release v2015.10!
-Please use $*TMPDIR instead.
---------------------------------------------------------------------------------
-Please contact the author to have these calls to deprecated code adapted,
-so that this message will disappear!
  130    0    0    0  130
 S32-io/io-spec-win.t...............................use of uninitialized value $path of type Any in string context  in block <unit> at t/spec/S32-io/io-spec-win.t:52
 
@@ -2732,14 +2703,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.9843890 seconds
-# gerdr: 0.9964675 seconds
-# recursive-ternary: 1.07935583 seconds
-# loop: 1.0934080 seconds
-# recursive-ternary-hand-cached: 1.8645630 seconds
-# sequence-ternary: 1.8817580 seconds
-# hand-memoization: 2.7395244 seconds
-# sequence: 2.8304814 seconds
+integration/advent2012-day21.t.....................# gerdr: 0.98002660 seconds
+# kaz: 0.99837630 seconds
+# recursive-ternary: 1.056240 seconds
+# loop: 1.08264395 seconds
+# recursive-ternary-hand-cached: 1.8502383 seconds
+# sequence-ternary: 1.8719353 seconds
+# hand-memoization: 2.6872471 seconds
+# sequence: 2.7877418 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2775,7 +2746,8 @@ integration/advent2013-day20.t.....................  22    0    0    0   22
 integration/advent2013-day21.t.....................  24    0    0    0   24
 integration/advent2013-day22.t.....................   9    0    0    0    9
 integration/advent2013-day23.t.....................   9    0    0    0    9
-integration/advent2014-day05.t.....................   7    0    0    0    7
+integration/advent2014-day05.rakudo.moar...........   6    0    0    1    7
+     1 skipped: sometimes hangs, sometimes segfaults
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.moar............# Error message: Constraint type check failed for parameter '$x'
   15    0    1    0   16
@@ -2827,8 +2799,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
 "S32",        9160,     0,   125,   165,  9450,  7884
-"int",        1215,     0,    12,    19,  1246,  1235
+"int",        1214,     0,    12,    20,  1246,  1235
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32753,     0,   649,  1248, 34650, 34783
+"total",     32752,     0,   649,  1249, 34650, 34783
 ----------------
 No failures!
