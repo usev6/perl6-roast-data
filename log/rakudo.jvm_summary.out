@@ -1232,7 +1232,7 @@ S17-supply/squish.rakudo.jvm.......................  10    0    1    0   11
 S17-supply/stable.rakudo.jvm.......................   4    0    1    2    7
      2 skipped: doesn't work or can't test
      1 todo   : D: doesn't work in signatures RT #122229
-S17-supply/start.rakudo.jvm........................   8    0    1    0    9
+S17-supply/start.rakudo.jvm........................   7    1    1    0    9
      1 todo   : D: doesn't work in signatures RT #122229
 S17-supply/unique.rakudo.jvm.......................  16    0    1    0   17
      1 todo   : D: doesn't work in signatures RT #122229
@@ -1705,7 +1705,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         298,     0,    13,    12,   323,   336
 "S15",           0,     0,     0,     0,     0,   283
 "S16",         246,     0,     0,    17,   263,   307
-"S17",         613,     0,    28,    26,   667,   700
+"S17",         612,     1,    28,    26,   667,   700
 "S19",          12,     0,     0,     0,    12,    17
 "S22",          51,     0,     1,     1,    53,    53
 "S24",           1,     0,     0,     0,     1,    79
@@ -1715,6 +1715,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9155,     0,   109,   186,  9450,  7884
 "int",        1209,     0,    15,    22,  1246,  1235
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32269,     0,   723,  1391, 34383, 34783
+"total",     32268,     1,   723,  1391, 34383, 34783
 ----------------
-No failures!
+Failure summary:
+S17-supply/start.rakudo.jvm 9 - did we get the other original value
