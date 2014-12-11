@@ -892,7 +892,7 @@ S03-sequence/limit-arity-2-or-more.t...............Code object coerced to string
 Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-sequence/limit-arity-2-or-more.t:33
 
    8    0    0    0    8
-S03-sequence/misc.rakudo.parrot....................  16    0    4    6   26
+S03-sequence/misc.rakudo.parrot....................  17    0    4    6   27
      6 skipped: RT #123329
      1 todo   : RT #80574
      2 todo   : NYI
@@ -1632,7 +1632,7 @@ S10-packages/precompilation.rakudo.parrot..........# error: Could not find symbo
 #   in any find_method_fallback at gen/parrot/Metamodel.nqp:2795
 #   in any find_method at gen/parrot/Metamodel.nqp:989
 #   in any  at gen/parrot/BOOTSTRAP.nqp:1708
-#   in block <unit> at getout-89907-543962.code:3
+#   in block <unit> at getout-14214-596131.code:3
 
 
   16    0    1    0   17
@@ -1917,8 +1917,8 @@ S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.parrot..................  12    0    1    0   13
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1418181338
-# Using file temp_1418181338
+S16-filehandles/chmod.t............................# Using file temp_1418267738
+# Using file temp_1418267738
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2657,13 +2657,13 @@ integration/advent2012-day15.rakudo.parrot.........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.rakudo.parrot.........# kaz: 2.7729211 seconds
-# gerdr: 2.9213453 seconds
-# recursive-ternary: 3.5126681 seconds
-# loop: 3.5719250 seconds
-# sequence-ternary: 7.4382812 seconds
-# recursive-ternary-hand-cached: 8.8976436 seconds
-# sequence: 12.08053418 seconds
+integration/advent2012-day21.rakudo.parrot.........# kaz: 2.8490928 seconds
+# gerdr: 2.9318195 seconds
+# recursive-ternary: 3.65351532 seconds
+# loop: 3.68063233 seconds
+# sequence-ternary: 7.4091390 seconds
+# recursive-ternary-hand-cached: 8.8449847 seconds
+# sequence: 12.0113912 seconds
    8    0    0    1    9
      1 skipped: RT #122497
 integration/advent2012-day22.rakudo.parrot.........   5    0    1    0    6
@@ -2715,7 +2715,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5027,     0,   120,   434,  5581,  5673
-"S03",        4920,     0,   106,   100,  5126,  5160
+"S03",        4921,     0,   106,   100,  5127,  5161
 "S04",        1011,     0,    50,    46,  1107,  1159
 "S05",        5175,     0,   107,   264,  5546,  5927
 "S06",        1202,     0,    39,    98,  1339,  1428
@@ -2738,6 +2738,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9159,     0,   115,   176,  9450,  7884
 "int",        1197,     0,     9,    19,  1225,  1235
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31672,     0,   639,  1386, 33697, 34794
+"total",     31673,     0,   639,  1386, 33698, 34795
 ----------------
 No failures!
