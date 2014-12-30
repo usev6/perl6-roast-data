@@ -1,9 +1,14 @@
 #!/bin/sh
+
+## update local clones of perl6 repositories
 ./bin/git.p5
+
+## for each backend: build and run spectest
 ./bin/rakudo.moar.sh
-./bin/rakudo.moar-jit.sh
 ./bin/rakudo.parrot.sh
 ./bin/rakudo.jvm.sh
+
+## commit file with pass rates and spectest logs
 TEMPFILE="TEMPFILE"
 PASSFILE="perl6_pass_rates.csv"
 OUTPUT=$(./bin/cull)
@@ -13,3 +18,6 @@ echo "$OUTPUT" >> $TEMPFILE
 tail -$(wc -l $PASSFILE|awk '{print $1-1}') $PASSFILE >> $TEMPFILE
 mv $TEMPFILE $PASSFILE
 git commit -m "today (automated commit)" "$PASSFILE" log/
+
+## panda smoking on rakudo.moar
+./bin/panda.rakudo.moar.sh
