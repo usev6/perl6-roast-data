@@ -14,7 +14,7 @@ git clone repos/roast.git rakudo.moar/t/spec
 cd rakudo.moar
 #perl Configure.pl --gen-moar --gen-nqp --backends=moar
 perl Configure.pl --gen-moar --gen-nqp --backends=moar --prefix=${RAKUDO_INSTALL_DIR}
-make all
+make -j 2 all
 
 # uninstalled rakudo doesn't know how to find Test.pm
 # ... or any other modules

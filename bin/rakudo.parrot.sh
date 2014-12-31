@@ -10,7 +10,7 @@ git clone repos/parrot.git rakudo.parrot/parrot
 git clone repos/roast.git rakudo.parrot/t/spec
 cd rakudo.parrot
 #perl Configure.pl --backends=parrot --gen-parrot --parrot-option="--make=/usr/local/bin/gmake" --parrot-option="--link=c++" 
-perl Configure.pl --backends=parrot --gen-parrot --parrot-option="--link=c++" 
+perl Configure.pl --backends=parrot --gen-parrot --parrot-option="--link=c++"  --parrot-make-option='-j 2'
 make all
 # uninstalled rakudo doesn't know how to find Test.pm
 # ... or any other modules
