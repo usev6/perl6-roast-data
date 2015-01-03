@@ -3,6 +3,9 @@
 # default to sysperl
 PATH=/usr/local/bin:$PATH
 
+RAKUDO_INSTALL_DIR=/home/christian/bin/rakudo.parrot
+rm -rf ${RAKUDO_INSTALL_DIR}/*
+
 rm -rf rakudo.parrot
 git clone repos/rakudo.git rakudo.parrot
 git clone repos/nqp.git rakudo.parrot/nqp
@@ -10,8 +13,10 @@ git clone repos/parrot.git rakudo.parrot/parrot
 git clone repos/roast.git rakudo.parrot/t/spec
 cd rakudo.parrot
 #perl Configure.pl --backends=parrot --gen-parrot --parrot-option="--make=/usr/local/bin/gmake" --parrot-option="--link=c++" 
-perl Configure.pl --backends=parrot --gen-parrot --parrot-option="--link=c++"  --parrot-make-option='-j 2'
+#perl Configure.pl --backends=parrot --gen-parrot --parrot-option="--link=c++" --parrot-make-option='-j 2'
+perl Configure.pl --backends=parrot --gen-parrot --parrot-option="--link=c++" --parrot-make-option='-j 2' --prefix=${RAKUDO_INSTALL_DIR}
 make all
+
 # uninstalled rakudo doesn't know how to find Test.pm
 # ... or any other modules
 export PERL6LIB=$(pwd)/lib
@@ -25,3 +30,6 @@ echo 'exec "ulimit -t 120; ulimit -v 2500000; ulimit -c 0; nice -20 ./perl6-p @A
 chmod a+x ./perl6
 
 perl t/spec/test_summary rakudo.parrot 2>&1 | tee ../log/rakudo.parrot_summary.out
+
+## preparation for panda smoking
+make install
