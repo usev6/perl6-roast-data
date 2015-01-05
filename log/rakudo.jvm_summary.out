@@ -1376,9 +1376,9 @@ S11-modules/require.rakudo.jvm.....................Can't open perl script "eval-
    0   15    0    0   15
     15 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-S12-attributes/class.rakudo.jvm....................Can't open perl script "eval-client.pl": No such file or directory
-   0   29    0    0   29
-    29 tests aborted (missing ok/not ok)
+S12-attributes/class.t.............................Can't open perl script "eval-client.pl": No such file or directory
+   0   21    0    0   21
+    21 tests aborted (missing ok/not ok)
 S12-attributes/clone.rakudo.jvm....................Can't open perl script "eval-client.pl": No such file or directory
    0   35    0    0   35
     35 tests aborted (missing ok/not ok)
@@ -2817,7 +2817,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S09",           0,   211,     0,     0,   211,   211
 "S10",           0,    92,     0,     0,    92,   149
 "S11",           0,   125,     0,     0,   125,   144
-"S12",           0,  1568,     0,     0,  1568,  1626
+"S12",           0,  1560,     0,     0,  1560,  1618
 "S13",           0,    73,     0,     0,    73,    83
 "S14",           0,   323,     0,     0,   323,   336
 "S15",           0,     0,     0,     0,     0,   283
@@ -2832,7 +2832,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S32",           0,  7790,     0,     0,  7790,  7889
 "int",           0,  1267,     0,     0,  1267,  1259
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 31996,     0,     0, 31996, 34085
+"total",         0, 31988,     0,     0, 31988, 34077
 ----------------
 Failure summary:
 S02-lexical-conventions/begin_end_pod.t aborted 1 test(s)
@@ -3289,7 +3289,7 @@ S11-modules/lexical.t aborted 2 test(s)
 S11-modules/need.t aborted 2 test(s)
 S11-modules/nested.t aborted 6 test(s)
 S11-modules/require.rakudo.jvm aborted 15 test(s)
-S12-attributes/class.rakudo.jvm aborted 29 test(s)
+S12-attributes/class.t aborted 21 test(s)
 S12-attributes/clone.rakudo.jvm aborted 35 test(s)
 S12-attributes/defaults.t aborted 34 test(s)
 S12-attributes/delegation.t aborted 65 test(s)
