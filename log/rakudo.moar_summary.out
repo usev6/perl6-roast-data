@@ -39,9 +39,9 @@ S02-lists/indexing.t...............................nice: ./perl6-m: No such file
 S02-lists/tree.t...................................nice: ./perl6-m: No such file or directory
    0   10    0    0   10
     10 tests aborted (missing ok/not ok)
-S02-literals/adverbs.t.............................nice: ./perl6-m: No such file or directory
-   0   15    0    0   15
-    15 tests aborted (missing ok/not ok)
+S02-literals/adverbs.rakudo.moar...................nice: ./perl6-m: No such file or directory
+   0   32    0    0   32
+    32 tests aborted (missing ok/not ok)
 S02-literals/array-interpolation.t.................nice: ./perl6-m: No such file or directory
    0   12    0    0   12
     12 tests aborted (missing ok/not ok)
@@ -1510,8 +1510,8 @@ S12-introspection/attributes.rakudo.moar...........nice: ./perl6-m: No such file
    0   30    0    0   30
     30 tests aborted (missing ok/not ok)
 S12-introspection/can.t............................nice: ./perl6-m: No such file or directory
-   0   25    0    0   25
-    25 tests aborted (missing ok/not ok)
+   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
 S12-introspection/definite.t.......................nice: ./perl6-m: No such file or directory
    0    6    0    0    6
      6 tests aborted (missing ok/not ok)
@@ -2120,8 +2120,8 @@ S32-hash/delete.t..................................nice: ./perl6-m: No such file
    0    8    0    0    8
      8 tests aborted (missing ok/not ok)
 S32-hash/exists-adverb.t...........................nice: ./perl6-m: No such file or directory
-   0   46    0    0   46
-    46 tests aborted (missing ok/not ok)
+   0   47    0    0   47
+    47 tests aborted (missing ok/not ok)
 S32-hash/exists.rakudo.moar........................nice: ./perl6-m: No such file or directory
    0   21    0    0   21
     21 tests aborted (missing ok/not ok)
@@ -2827,7 +2827,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",           0,  4999,     0,     0,  4999,  5092
+"S02",           0,  5016,     0,     0,  5016,  5109
 "S03",           0,  5296,     0,     0,  5296,  5330
 "S04",           0,  1092,     0,     0,  1092,  1161
 "S05",           0,  5552,     0,     0,  5552,  5933
@@ -2836,7 +2836,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "S09",           0,   212,     0,     0,   212,   212
 "S10",           0,    92,     0,     0,    92,   149
 "S11",           0,   125,     0,     0,   125,   144
-"S12",           0,  1563,     0,     0,  1563,  1636
+"S12",           0,  1567,     0,     0,  1567,  1640
 "S13",           0,    73,     0,     0,    73,    83
 "S14",           0,   323,     0,     0,   323,   336
 "S15",           0,   258,     0,     0,   258,   283
@@ -2848,10 +2848,10 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "S26",           0,  1284,     0,     0,  1284,  1945
 "S28",           0,     7,     0,     0,     7,    13
 "S29",           0,   140,     0,     0,   140,   150
-"S32",           0,  7801,     0,     0,  7801,  7900
+"S32",           0,  7802,     0,     0,  7802,  7901
 "int",           0,  1267,     0,     0,  1267,  1259
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 32414,     0,     0, 32414, 34251
+"total",         0, 32436,     0,     0, 32436, 34273
 ----------------
 Failure summary:
 S02-lexical-conventions/begin_end_pod.t aborted 1 test(s)
@@ -2867,7 +2867,7 @@ S02-lexical-conventions/unicode.rakudo.moar aborted 44 test(s)
 S02-lexical-conventions/unspace.rakudo.moar aborted 87 test(s)
 S02-lists/indexing.t aborted 1 test(s)
 S02-lists/tree.t aborted 10 test(s)
-S02-literals/adverbs.t aborted 15 test(s)
+S02-literals/adverbs.rakudo.moar aborted 32 test(s)
 S02-literals/array-interpolation.t aborted 12 test(s)
 S02-literals/autoref.t aborted 59 test(s)
 S02-literals/char-by-name.rakudo.moar aborted 10 test(s)
@@ -3353,7 +3353,7 @@ S12-enums/pseudo-functional.t aborted 11 test(s)
 S12-enums/thorough.rakudo.moar aborted 34 test(s)
 S12-introspection/WHAT.rakudo.moar aborted 37 test(s)
 S12-introspection/attributes.rakudo.moar aborted 30 test(s)
-S12-introspection/can.t aborted 25 test(s)
+S12-introspection/can.t aborted 29 test(s)
 S12-introspection/definite.t aborted 6 test(s)
 S12-introspection/meta-class.rakudo.moar aborted 13 test(s)
 S12-introspection/methods.rakudo.moar aborted 58 test(s)
@@ -3551,7 +3551,7 @@ S32-container/zip.rakudo.moar aborted 10 test(s)
 S32-exceptions/misc.rakudo.moar aborted 276 test(s)
 S32-hash/delete-adverb.t aborted 131 test(s)
 S32-hash/delete.t aborted 8 test(s)
-S32-hash/exists-adverb.t aborted 46 test(s)
+S32-hash/exists-adverb.t aborted 47 test(s)
 S32-hash/exists.rakudo.moar aborted 21 test(s)
 S32-hash/invert.rakudo.moar aborted 5 test(s)
 S32-hash/keys_values.t aborted 14 test(s)
