@@ -21,5 +21,5 @@ cd panda
 perl6 bootstrap.pl
 PATH=${RAKUDO_INSTALL_DIR}/languages/perl6/site/bin:$PATH
 export PERL6LIB=/home/christian/bin/rakudo.moar/languages/perl6/site:ext/File__Find/lib:ext/Shell_Command/lib:ext/JSON__Tiny/lib:lib
-#panda --exclude=Test::ClientServer smoke 2>&1 | tee ../../panda.moar_summary.out
-PANDA_SUBMIT_TESTREPORTS=1 panda --exclude=Test::ClientServer smoke 2>&1 | tee ../../panda.moar_summary.out
+panda --exclude=Test::ClientServer smoke 2>&1 | tee ../../panda.moar_summary.out
+#PANDA_SUBMIT_TESTREPORTS=1 panda --exclude=Test::ClientServer smoke 2>&1 | tee ../../panda.moar_summary.out

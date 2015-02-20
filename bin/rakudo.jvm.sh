@@ -35,10 +35,10 @@ sleep 10
 
 perl t/spec/test_summary rakudo.jvm 2>&1 | tee ../log/rakudo.jvm_summary.out
 
-## preparation for panda smoking
-make install
-
 ## stop eval server
 kill $EVAL_SERVER_PID
+
+## preparation for panda smoking
+make install
 
 sleep 10

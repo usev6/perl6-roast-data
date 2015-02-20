@@ -11,7 +11,7 @@ if (! -d $repo_dir) {
 
 my %repos = (
     "rakudo"  => "https://github.com/rakudo/rakudo.git",
-    "parrot"  => "https://github.com/parrot/parrot.git",
+#   "parrot"  => "https://github.com/parrot/parrot.git",
     "roast"   => "https://github.com/perl6/roast.git",
     "nqp"     => "https://github.com/perl6/nqp.git",
     "MoarVM"  => "https://github.com/MoarVM/MoarVM.git",
