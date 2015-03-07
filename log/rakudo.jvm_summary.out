@@ -800,7 +800,7 @@ S06-multi/type-based.rakudo.jvm....................  50    0    0    3   53
 S06-multi/unpackability.t..........................  10    0    0    0   10
 S06-multi/value-based.t............................  12    0    0    0   12
 S06-operator-overloading/imported-subs.t...........  20    0    0    0   20
-S06-operator-overloading/methods.rakudo.jvm........   2    0    1    0    3
+S06-operator-overloading/methods.rakudo.jvm........   1    1    1    0    3
      1 todo   : nom regression
 S06-operator-overloading/semicolon.t...............   3    0    0    0    3
 S06-operator-overloading/sub.rakudo.jvm............  57    0    2   18   77
@@ -1001,8 +1001,7 @@ S12-coercion/coercion-types.rakudo.jvm.............   6    0    1   11   18
      1 todo   : missing checks
 S12-construction/BUILD.rakudo.jvm..................   8    0    1    0    9
      1 todo   : method BUILD should warn
-S12-construction/autopairs.rakudo.jvm..............   2    0    2    0    4
-     2 todo PASSED: nom regression
+S12-construction/autopairs.t.......................   4    0    0    0    4
 S12-construction/construction.t....................  18    0    0    0   18
 S12-construction/named-params-in-BUILD.t...........   3    0    0    0    3
 S12-construction/new.rakudo.jvm....................  16    0   10    0   26
@@ -1096,16 +1095,10 @@ S13-overloading/operators.rakudo.jvm...............   4    0    0    1    5
 S13-overloading/typecasting-long.rakudo.jvm........   4    0    0   12   16
      4 skipped: cannot easily override [] at the moment
      8 skipped: cannot easily override {} at the moment
-S13-overloading/typecasting-mixed.rakudo.jvm.......   2    0    5    7   14
-     3 skipped: cannot easily override [] at the moment
-     4 skipped: cannot easily override {} at the moment
-     1 todo   : cannot easily override [] at the moment
-     4 todo   : cannot easily override {} at the moment
-S13-overloading/typecasting-short.rakudo.jvm.......   2    0    5    7   14
-     3 skipped: cannot easily override [] at the moment
-     4 skipped: cannot easily override {} at the moment
-     1 todo   : cannot easily override [] at the moment
-     4 todo   : cannot easily override {} at the moment
+S13-overloading/typecasting-mixed.rakudo.jvm.......   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
+S13-overloading/typecasting-short.rakudo.jvm.......   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
 S13-type-casting/methods.t.........................  13    0    0    0   13
                                                    pass fail todo skip plan
 S14-roles/anonymous.rakudo.jvm.....................  12    0    0    1   13
@@ -1688,13 +1681,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        4968,   127,   124,    99,  5318,  5352
 "S04",        1017,     0,    55,    57,  1129,  1181
 "S05",        5225,     0,    99,   256,  5580,  5937
-"S06",        1335,     4,    45,    97,  1481,  1539
+"S06",        1334,     5,    45,    97,  1481,  1539
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         203,     5,     9,    10,   227,   227
 "S10",          80,     0,    11,     1,    92,   149
 "S11",          86,     0,    26,    14,   126,   145
-"S12",        1448,     1,    59,   123,  1631,  1689
-"S13",          36,     0,    10,    27,    73,    83
+"S12",        1450,     1,    57,   123,  1631,  1689
+"S13",          32,    28,     0,    13,    73,    83
 "S14",         302,     0,    11,    12,   325,   338
 "S15",           1,     0,     2,     2,     5,   283
 "S16",         258,     0,     0,    17,   275,   307
@@ -1708,7 +1701,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9142,    69,   101,   185,  9497,  7931
 "int",        1231,    20,    16,    15,  1282,  1271
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32699,   272,   727,  1357, 35055, 35405
+"total",     32696,   301,   715,  1343, 35055, 35405
 ----------------
 Failure summary:
 S02-literals/adverbs.rakudo.jvm aborted 5 test(s)
@@ -1863,6 +1856,7 @@ S03-sequence/misc.rakudo.jvm 28 - non-deducible sequence ending in * throws X::S
 S03-sequence/misc.rakudo.jvm 29 - non-deducible sequence ending in * throws X::Sequence::Deduction (2)
 S03-sequence/nonnumeric.rakudo.jvm 27 - Str decrement fails after 'AA': leftmost characters are never removed
 S03-sequence/nonnumeric.rakudo.jvm 29 - 'Z' ... 'AA' fails: only 1 RHS value and ('Z' before 'AA') is False
+S06-operator-overloading/methods.rakudo.jvm 2 - custom postcircumfix{ } does not lead to warnings
 S06-other/pairs-as-lvalues.rakudo.jvm aborted 4 test(s)
 S09-typed-arrays/arrays.rakudo.jvm 29 - can not assign values of the wrong type
 S09-typed-arrays/arrays.rakudo.jvm 30 - can not assign range of the wrong type
@@ -1870,6 +1864,8 @@ S09-typed-arrays/arrays.rakudo.jvm 36 - can not assign values of the wrong type
 S09-typed-arrays/arrays.rakudo.jvm 37 - can not assign range of the wrong type
 S09-typed-arrays/arrays.rakudo.jvm 62 - typed arrays do check type during list assignment
 S12-attributes/instance.rakudo.jvm 103 - type enforced on array attrib (assignment)
+S13-overloading/typecasting-mixed.rakudo.jvm aborted 14 test(s)
+S13-overloading/typecasting-short.rakudo.jvm aborted 14 test(s)
 S17-scheduler/basic.rakudo.jvm 40 - CurrentThreadScheduler cannot combine :every and :times with :catch
 S17-supply/unique.t 4 - unique with with tap works
 S17-supply/unique.t 5 - unique with as and with tap works
