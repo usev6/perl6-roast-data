@@ -163,12 +163,7 @@ S02-names-vars/signature.rakudo.moar...............  11    0    2    0   13
      2 todo   : eqv on signatures
 S02-names-vars/variables-and-packages.rakudo.moar..  35    0    3    0   38
      3 todo   : nom regression: RT #122346
-S02-names-vars/varnames.rakudo.moar................Potential difficulties:
-    Unsupported use of method postcircumfix:<[ ]>; to represent [ ] delegation please use method AT-POS, ASSIGN-POS, or BIND-POS, or use sub postcircumfix:<[ ]>
-    at t/spec/S02-names-vars/varnames.rakudo.moar:41
-    ------> [32m        method[33m⏏[31m postcircumfix:<[ ]>($x) {  # METHOD TO [0m
-  10    0    3    0   13
-     1 todo   : NYI
+S02-names-vars/varnames.rakudo.moar................  11    0    2    0   13
      2 todo   : cannot easily override [] at the moment
 S02-names/bare-sigil.t.............................  10    0    0    0   10
 S02-names/caller.t.................................  15    0    0    0   15
@@ -200,7 +195,7 @@ S02-names/symbolic-deref.rakudo.moar...............  30    0    2    3   35
      1 todo   : no such symbol
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.t.................................. 596    0    0    0  596
+S02-types/WHICH.t.................................. 598    0    0    0  598
 S02-types/anon_block.rakudo.moar...................Code object coerced to string (please use .gist or .perl to do that)  in sub isnt at lib/Test.pm:178
 
   39    0    1    2   42
@@ -247,7 +242,7 @@ of Perl 6.0.0 (expected sometime in 2015).
   15    0    3    0   18
      3 todo   : deprecated %h = {...} for now
 S02-types/autovivification.t.......................  25    0    0    0   25
-S02-types/bag.rakudo.moar.......................... 191    0    2    3  196
+S02-types/bag.rakudo.moar.......................... 188    0    2    3  193
      3 skipped: No longer Iterable
      1 todo   : Not properly interpolating
      1 todo   : we have not secured .WHICH creation yet
@@ -290,11 +285,7 @@ S02-types/declare.rakudo.moar......................  55    0    2   22   79
 S02-types/deprecations.t...........................  11    0    0    0   11
 S02-types/fatrat.t.................................   1    0    0    0    1
 S02-types/flattening.t.............................  41    0    0    0   41
-S02-types/hash.rakudo.moar.........................Potential difficulties:
-    Unsupported use of method postcircumfix:<{ }>; to represent { } delegation please use method AT-KEY, ASSIGN-KEY, or BIND-KEY, or use sub postcircumfix:<{ }>
-    at t/spec/S02-types/hash.rakudo.moar:211
-    ------> [32m        method[33m⏏[31m postcircumfix:<{ }>($x) { 'bughunt' }  [0m
-  94    0    1    0   95
+S02-types/hash.rakudo.moar.........................  94    0    1    0   95
      1 todo   : auto-vivified binding does not work yet: RT #118947
 S02-types/hash_ref.t...............................  31    0    0    0   31
 S02-types/infinity.rakudo.moar.....................   6    0    3    4   13
@@ -323,7 +314,7 @@ S02-types/isDEPRECATED.rakudo.moar.................  13    0    8    0   21
 S02-types/lazy-lists.t.............................  23    0    0    0   23
 S02-types/lists.rakudo.moar........................  29    0    0    3   32
      3 skipped: list binding
-S02-types/mix.rakudo.moar.......................... 174    0    2    3  179
+S02-types/mix.rakudo.moar.......................... 171    0    2    3  176
      3 skipped: No longer Iterable
      1 todo   : Not properly interpolating
      1 todo   : we have not secured .WHICH creation yet
@@ -366,7 +357,7 @@ S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t..................................use of uninitialized value of type Range in numeric context  in block <unit> at t/spec/S02-types/range.t:87
 
  135    0    0    0  135
-S02-types/set.rakudo.moar.......................... 160    0   12    1  173
+S02-types/set.rakudo.moar.......................... 157    0   12    1  170
      1 skipped: Set is no longer Iterable
     10 todo   : Hypers not yet Set compatible
      1 todo   : Not properly interpolating
@@ -1243,21 +1234,7 @@ S06-multi/type-based.rakudo.moar...................  50    0    0    3   53
 S06-multi/unpackability.t..........................  10    0    0    0   10
 S06-multi/value-based.t............................  12    0    0    0   12
 S06-operator-overloading/imported-subs.t...........  20    0    0    0   20
-S06-operator-overloading/methods.rakudo.moar.......Potential difficulties:
-    Unsupported use of method postcircumfix:<{ }>; to represent { } delegation please use method AT-KEY, ASSIGN-KEY, or BIND-KEY, or use sub postcircumfix:<{ }>
-    at t/spec/S06-operator-overloading/methods.rakudo.moar:10
-    ------> [32m    method[33m⏏[31m postcircumfix:<{ }>($key) { %!attrs{$ke[0m
-
-# Failed test 'custom postcircumfix{ } does not lead to warnings'
-# at /usr/home/christian/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Util.pm line 58
-#      got err: "Potential difficulties:\n    Unsupported use of method postcircumfix:<\{ }>; to represent \{ } delegation please use method AT-KEY, ASSIGN-KEY, or BIND-KEY, or use sub postcircumfix:<\{ }>\n    at getout-71087-791326.code:1\n    ------> \x[1b][32mclass A \{ method\x[1b][33m⏏\x[1b][31m postcircumfix:<\{ }>() \{} }; my \&r = \{\x[1b][0m\n"
-# expected err: ""
-Potential difficulties:
-    Unsupported use of method postcircumfix:<{ }>; to represent { } delegation please use method AT-KEY, ASSIGN-KEY, or BIND-KEY, or use sub postcircumfix:<{ }>
-    at EVAL_0:3
-    ------> [32mmethod[33m⏏[31m postcircumfix:<{ }>($table) {[0m
-# Looks like you failed 1 tests of 3
-   1    1    1    0    3
+S06-operator-overloading/methods.rakudo.moar.......   2    0    1    0    3
      1 todo   : nom regression
 S06-operator-overloading/semicolon.t...............WARNINGS:
 Useless use of constant integer 2 in sink context (line 15)
@@ -1414,10 +1391,10 @@ S10-packages/basic.rakudo.moar.....................  60    0    2    1   63
      1 todo   : ticket based only on class... RT #60446
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
 S10-packages/precompilation.rakudo.moar............# error: Could not find symbol '&C1'
-#   in method <anon> at src/gen/m-CORE.setting:15239
+#   in method <anon> at src/gen/m-CORE.setting:15254
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2904
 #   in any find_method at src/gen/m-Metamodel.nqp:1037
-#   in block <unit> at getout-71183-435881.code:4
+#   in block <unit> at getout-97171-30002.code:4
 
 
   15    0    2    0   17
@@ -1614,11 +1591,7 @@ S12-methods/defer-call.t...........................  14    0    0    0   14
 S12-methods/defer-next.rakudo.moar.................  20    0    1    0   21
      1 todo   : variant of RT #69608
 S12-methods/delegation.t...........................   7    0    0    0    7
-S12-methods/fallback.t.............................Potential difficulties:
-    Unsupported use of method postcircumfix:<( )>; to represent ( ) delegation please use method invoke, or use sub postcircumfix:<( )>
-    at t/spec/S12-methods/fallback.t:59
-    ------> [32m    method[33m⏏[31m postcircumfix:<( )>(|) { 'invaught' }[0m
-  13    0    0    0   13
+S12-methods/fallback.t.............................  13    0    0    0   13
 S12-methods/how.t..................................   2    0    0    0    2
 S12-methods/indirect_notation.rakudo.moar..........  16    0    0   21   37
     15 skipped: .*, .+ and .? with @foo
@@ -1658,34 +1631,21 @@ S12-subset/multi-dispatch.t........................   6    0    0    0    6
 S12-subset/subtypes.t..............................  77    0    0    0   77
                                                    pass fail todo skip plan
 S13-overloading/metaoperators.t....................  11    0    0    0   11
-S13-overloading/operators.rakudo.moar..............Potential difficulties:
-    Unsupported use of method postcircumfix:<{ }>; to represent { } delegation please use method AT-KEY, ASSIGN-KEY, or BIND-KEY, or use sub postcircumfix:<{ }>
-    at t/spec/S13-overloading/operators.rakudo.moar:27
-    ------> [32m        method[33m⏏[31m postcircumfix:<{ }>(*@ix) {   # METHOD [0m
-    Unsupported use of method postcircumfix:<( )>; to represent ( ) delegation please use method invoke, or use sub postcircumfix:<( )>
-    at t/spec/S13-overloading/operators.rakudo.moar:45
-    ------> [32m        method[33m⏏[31m postcircumfix:<( )>($y) {[0m
-   4    0    0    1    5
+S13-overloading/operators.rakudo.moar..............   4    0    0    1    5
      1 skipped: cannot easily override {} at the moment
-S13-overloading/typecasting-long.rakudo.moar.......Potential difficulties:
-    Unsupported use of method postcircumfix:<( )>; to represent ( ) delegation please use method invoke, or use sub postcircumfix:<( )>
-    at t/spec/S13-overloading/typecasting-long.rakudo.moar:21
-    ------> [32m        method[33m⏏[31m postcircumfix:<( )> (|c) {return 'prete[0m
-   4    0    0   12   16
+S13-overloading/typecasting-long.rakudo.moar.......   4    0    0   12   16
      4 skipped: cannot easily override [] at the moment
      8 skipped: cannot easily override {} at the moment
-S13-overloading/typecasting-mixed.rakudo.moar......[31m===[0mSORRY![31m===[0m Error while compiling t/spec/S13-overloading/typecasting-mixed.rakudo.moar
-Unsupported use of method &.( ); to overload ( ) please use sub postcircumfix:<( )>
-at t/spec/S13-overloading/typecasting-mixed.rakudo.moar:10
-------> [32m        method &.( |capture )[33m⏏[31m {[0m
-   0   14    0    0   14
-    14 tests aborted (missing ok/not ok)
-S13-overloading/typecasting-short.rakudo.moar......[31m===[0mSORRY![31m===[0m Error while compiling t/spec/S13-overloading/typecasting-short.rakudo.moar
-Unsupported use of method &.( ); to overload ( ) please use sub postcircumfix:<( )>
-at t/spec/S13-overloading/typecasting-short.rakudo.moar:11
-------> [32m        method &.( |capture )[33m⏏[31m {return 'pretending to be a sub'}   #OK[0m
-   0   14    0    0   14
-    14 tests aborted (missing ok/not ok)
+S13-overloading/typecasting-mixed.rakudo.moar......   2    0    5    7   14
+     3 skipped: cannot easily override [] at the moment
+     4 skipped: cannot easily override {} at the moment
+     1 todo   : cannot easily override [] at the moment
+     4 todo   : cannot easily override {} at the moment
+S13-overloading/typecasting-short.rakudo.moar......   2    0    5    7   14
+     3 skipped: cannot easily override [] at the moment
+     4 skipped: cannot easily override {} at the moment
+     1 todo   : cannot easily override [] at the moment
+     4 todo   : cannot easily override {} at the moment
 S13-type-casting/methods.t.........................use of uninitialized value of type Int(Any) in numeric context  in block <unit> at t/spec/S13-type-casting/methods.t:36
 
   13    0    0    0   13
@@ -1704,11 +1664,7 @@ S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
 S14-roles/instantiation.t..........................  19    0    0    0   19
 S14-roles/lexical.t................................   9    0    0    0    9
-S14-roles/mixin.rakudo.moar........................Potential difficulties:
-    Unsupported use of method postcircumfix:<( )>; to represent ( ) delegation please use method invoke, or use sub postcircumfix:<( )>
-    at t/spec/S14-roles/mixin.rakudo.moar:130
-    ------> [32m    my $x = 42 but role { method[33m⏏[31m postcircumfix:<( )>($arg) { self * $arg[0m
-  30    0    0    3   33
+S14-roles/mixin.rakudo.moar........................  30    0    0    3   33
      1 skipped: Twigil ! is only valid on attribute definitions
      2 skipped: mixin at the point of declaration is compile time
 S14-roles/namespaced.rakudo.moar...................   2    0    1    0    3
@@ -1739,8 +1695,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1425766556
-# Using file temp_1425766556
+S16-filehandles/chmod.t............................# Using file temp_1425852899
+# Using file temp_1425852899
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1795,13 +1751,7 @@ of Perl 6.0.0 (expected sometime in 2015).
 S17-lowlevel/lock.rakudo.moar......................   7    0    0    1    8
      1 skipped: not sure this test is valid
 S17-lowlevel/thread.t..............................  25    0    0    0   25
-S17-procasync/basic.t..............................
-# Failed test 'got correct STDOUT'
-# at t/spec/S17-procasync/basic.t line 83
-# expected: 'Perl 6'
-#      got: 'Perl'
-# Looks like you failed 1 tests of 30
-  29    1    0    0   30
+S17-procasync/basic.t..............................  30    0    0    0   30
 S17-procasync/print.t..............................  16    0    0    0   16
 S17-promise/allof.t................................  11    0    0    0   11
 S17-promise/anyof.t................................  10    0    0    0   10
@@ -2368,7 +2318,11 @@ S32-array/keys_values.t............................   8    0    0    0    8
 S32-array/kv.t.....................................  18    0    0    0   18
 S32-array/pairs.rakudo.moar........................  13    0    1    0   14
      1 todo   : Apparently not rw yet?
-S32-array/perl.t...................................   6    0    0    0    6
+S32-array/perl.t...................................
+# Failed test 'make sure any value can be stored'
+# at t/spec/S32-array/perl.t line 14
+# Looks like you failed 1 tests of 6
+   5    1    0    0    6
 S32-array/pop.t....................................  36    0    0    0   36
 S32-array/push.t...................................  51    0    0    0   51
 S32-array/rotate.t.................................  27    0    0    0   27
@@ -2417,13 +2371,13 @@ Code object coerced to string (please use .gist or .perl to do that)  in any thr
 # Failed test ''sub f { f(|$) }' died'
 # at lib/Test.pm line 255
     # Looks like you failed 1 tests of 5
- 280    0    2    0  282
+ 281    0    2    0  283
      1 todo   : Cannot find method "returns"
      1 todo   : parsing regression
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
 S32-hash/exists-adverb.t...........................  47    0    0    0   47
-S32-hash/exists.rakudo.moar........................  20    0    0    1   21
+S32-hash/exists.rakudo.moar........................  14    0    0    1   15
      1 skipped: unspecced
 S32-hash/invert.t..................................   5    0    0    0    5
 S32-hash/keys_values.t.............................  14    0    0    0   14
@@ -2910,14 +2864,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.9076987 seconds
-# recursive-ternary: 1.0099074 seconds
-# loop: 1.0526559 seconds
-# gerdr: 1.2221294 seconds
-# hand-memoization: 1.39081108 seconds
-# sequence-ternary: 1.6588585 seconds
-# recursive-ternary-hand-cached: 2.44846388 seconds
-# sequence: 3.0098708 seconds
+integration/advent2012-day21.t.....................# kaz: 0.9188160 seconds
+# gerdr: 0.9647928 seconds
+# recursive-ternary: 1.00983437 seconds
+# loop: 1.05780341 seconds
+# hand-memoization: 1.38889938 seconds
+# sequence-ternary: 1.66420741 seconds
+# recursive-ternary-hand-cached: 2.3049937 seconds
+# sequence: 2.91225977 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2982,13 +2936,7 @@ integration/say-crash.t............................   4    0    0    0    4
 integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.rakudo.moar...............
-# Failed test 'presence of postcircumfix does not lead to redeclaration warnings'
-# at /usr/home/christian/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Util.pm line 18
-#      got err: "Potential difficulties:\n    Unsupported use of method postcircumfix:<\{ }>; to represent \{ } delegation please use method AT-KEY, ASSIGN-KEY, or BIND-KEY, or use sub postcircumfix:<\{ }>\n    at getout-71860-108091.code:1\n    ------> \x[1b][32mclass A \{ method\x[1b][33m⏏\x[1b][31m postcircumfix:<\{ }>() \{} }; my \&r = \{;}\x[1b][0m\n"
-# expected err: ""
-# Looks like you failed 1 tests of 14
-  12    1    1    0   14
+integration/weird-errors.rakudo.moar...............  13    0    1    0   14
      1 todo PASSED: RT #123686
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
@@ -2996,35 +2944,31 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5169,     0,   134,   347,  5650,  5742
+"S02",        5163,     0,   133,   347,  5643,  5735
 "S03",        5095,     0,   124,    99,  5318,  5352
 "S04",        1035,     0,    52,    42,  1129,  1181
 "S05",        5317,     0,    93,   170,  5580,  5937
-"S06",        1342,     1,    47,    91,  1481,  1539
+"S06",        1343,     0,    47,    91,  1481,  1539
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         208,     0,     9,    10,   227,   227
 "S10",          87,     0,     4,     1,    92,   149
 "S11",         108,     0,     4,    14,   126,   145
 "S12",        1462,     0,    46,   123,  1631,  1689
-"S13",          32,    28,     0,    13,    73,    83
+"S13",          36,     0,    10,    27,    73,    83
 "S14",         307,     0,     8,    10,   325,   338
 "S15",         241,     0,     4,    18,   263,   283
 "S16",         259,     0,     0,    16,   275,   307
-"S17",         707,     1,     4,    23,   735,   735
+"S17",         708,     0,     4,    23,   735,   735
 "S19",          13,     0,     0,     0,    13,    18
 "S22",          24,     0,     0,     0,    24,    24
 "S24",           1,     0,     0,     0,     1,    79
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     4,     2,   344,   354
-"S32",        9216,     0,   117,   164,  9497,  7931
-"int",        1248,     1,    13,    20,  1282,  1271
+"S32",        9210,     1,   117,   164,  9492,  7926
+"int",        1249,     0,    13,    20,  1282,  1271
 "ros",           2,     0,     0,     0,     2,     2
-"total",     33454,    31,   667,  1207, 35359, 35405
+"total",     33449,     1,   676,  1221, 35347, 35393
 ----------------
 Failure summary:
-S06-operator-overloading/methods.rakudo.moar 2 - custom postcircumfix{ } does not lead to warnings
-S13-overloading/typecasting-mixed.rakudo.moar aborted 14 test(s)
-S13-overloading/typecasting-short.rakudo.moar aborted 14 test(s)
-S17-procasync/basic.t 29 - got correct STDOUT
-integration/weird-errors.rakudo.moar 4 - presence of postcircumfix does not lead to redeclaration warnings
+S32-array/perl.t 3 - make sure any value can be stored

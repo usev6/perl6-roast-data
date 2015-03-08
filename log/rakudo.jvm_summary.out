@@ -103,8 +103,7 @@ S02-names-vars/signature.rakudo.jvm................  11    0    2    0   13
      2 todo   : eqv on signatures
 S02-names-vars/variables-and-packages.rakudo.jvm...  35    0    3    0   38
      3 todo   : nom regression: RT #122346
-S02-names-vars/varnames.rakudo.jvm.................  10    0    3    0   13
-     1 todo   : NYI
+S02-names-vars/varnames.rakudo.jvm.................  11    0    2    0   13
      2 todo   : cannot easily override [] at the moment
 S02-names/bare-sigil.t.............................  10    0    0    0   10
 S02-names/caller.t.................................  15    0    0    0   15
@@ -137,7 +136,7 @@ S02-names/symbolic-deref.rakudo.jvm................  30    0    2    3   35
      1 todo   : no such symbol
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.rakudo.jvm......................... 584    0    0   12  596
+S02-types/WHICH.rakudo.jvm......................... 586    0    0   12  598
     12 skipped: NYI on jvm
 S02-types/anon_block.rakudo.jvm....................  36    0    4    2   42
      2 skipped: tests don't work if previous test fails
@@ -155,7 +154,7 @@ S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.rakudo.jvm................  15    0    3    0   18
      3 todo   : deprecated %h = {...} for now
 S02-types/autovivification.t.......................  25    0    0    0   25
-S02-types/bag.rakudo.jvm........................... 183    4    6    3  196
+S02-types/bag.rakudo.jvm........................... 180    4    6    3  193
      3 skipped: No longer Iterable
      4 todo   : ?
      1 todo   : Not properly interpolating
@@ -213,7 +212,7 @@ S02-types/lazy-lists.rakudo.jvm....................  21    1    1    0   23
      1 todo PASSED: RT #121994
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding
-S02-types/mix.rakudo.jvm........................... 165    5    6    3  179
+S02-types/mix.rakudo.jvm........................... 162    5    6    3  176
      3 skipped: No longer Iterable
      4 todo   : ?
      1 todo   : Not properly interpolating
@@ -248,7 +247,7 @@ S02-types/pair.rakudo.jvm.......................... 104    0    4    0  108
 S02-types/parcel.t.................................  52    0    0    0   52
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t.................................. 135    0    0    0  135
-S02-types/set.rakudo.jvm........................... 156    4   12    1  173
+S02-types/set.rakudo.jvm........................... 153    4   12    1  170
      1 skipped: Set is no longer Iterable
     10 todo   : Hypers not yet Set compatible
      1 todo   : Not properly interpolating
@@ -800,7 +799,7 @@ S06-multi/type-based.rakudo.jvm....................  50    0    0    3   53
 S06-multi/unpackability.t..........................  10    0    0    0   10
 S06-multi/value-based.t............................  12    0    0    0   12
 S06-operator-overloading/imported-subs.t...........  20    0    0    0   20
-S06-operator-overloading/methods.rakudo.jvm........   1    1    1    0    3
+S06-operator-overloading/methods.rakudo.jvm........   2    0    1    0    3
      1 todo   : nom regression
 S06-operator-overloading/semicolon.t...............   3    0    0    0    3
 S06-operator-overloading/sub.rakudo.jvm............  57    0    2   18   77
@@ -1095,10 +1094,16 @@ S13-overloading/operators.rakudo.jvm...............   4    0    0    1    5
 S13-overloading/typecasting-long.rakudo.jvm........   4    0    0   12   16
      4 skipped: cannot easily override [] at the moment
      8 skipped: cannot easily override {} at the moment
-S13-overloading/typecasting-mixed.rakudo.jvm.......   0   14    0    0   14
-    14 tests aborted (missing ok/not ok)
-S13-overloading/typecasting-short.rakudo.jvm.......   0   14    0    0   14
-    14 tests aborted (missing ok/not ok)
+S13-overloading/typecasting-mixed.rakudo.jvm.......   2    0    5    7   14
+     3 skipped: cannot easily override [] at the moment
+     4 skipped: cannot easily override {} at the moment
+     1 todo   : cannot easily override [] at the moment
+     4 todo   : cannot easily override {} at the moment
+S13-overloading/typecasting-short.rakudo.jvm.......   2    0    5    7   14
+     3 skipped: cannot easily override [] at the moment
+     4 skipped: cannot easily override {} at the moment
+     1 todo   : cannot easily override [] at the moment
+     4 todo   : cannot easily override {} at the moment
 S13-type-casting/methods.t.........................  13    0    0    0   13
                                                    pass fail todo skip plan
 S14-roles/anonymous.rakudo.jvm.....................  12    0    0    1   13
@@ -1304,7 +1309,7 @@ S32-array/keys_values.t............................   8    0    0    0    8
 S32-array/kv.t.....................................  18    0    0    0   18
 S32-array/pairs.rakudo.jvm.........................  13    0    1    0   14
      1 todo   : Apparently not rw yet?
-S32-array/perl.t...................................   6    0    0    0    6
+S32-array/perl.t...................................   5    1    0    0    6
 S32-array/pop.t....................................  36    0    0    0   36
 S32-array/push.t...................................  51    0    0    0   51
 S32-array/rotate.t.................................  27    0    0    0   27
@@ -1319,7 +1324,7 @@ S32-container/roundrobin.rakudo.jvm................   4    0    1    0    5
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................   8    0    0    2   10
      2 skipped: lvalue zip
-S32-exceptions/misc.rakudo.jvm..................... 273    0    9    0  282
+S32-exceptions/misc.rakudo.jvm..................... 274    0    9    0  283
      1 todo   : Cannot find method "returns"
      1 todo   : parsing regression
      6 todo PASSED: ?
@@ -1327,7 +1332,7 @@ S32-exceptions/misc.rakudo.jvm..................... 273    0    9    0  282
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
 S32-hash/exists-adverb.t...........................  47    0    0    0   47
-S32-hash/exists.rakudo.jvm.........................  20    0    0    1   21
+S32-hash/exists.rakudo.jvm.........................  14    0    0    1   15
      1 skipped: unspecced
 S32-hash/invert.t..................................   5    0    0    0    5
 S32-hash/keys_values.t.............................  14    0    0    0   14
@@ -1677,17 +1682,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5099,    36,   148,   367,  5650,  5742
+"S02",        5093,    36,   147,   367,  5643,  5735
 "S03",        4968,   127,   124,    99,  5318,  5352
 "S04",        1017,     0,    55,    57,  1129,  1181
 "S05",        5225,     0,    99,   256,  5580,  5937
-"S06",        1334,     5,    45,    97,  1481,  1539
+"S06",        1335,     4,    45,    97,  1481,  1539
 "S07",           0,     0,     0,     0,     0,     0
 "S09",         203,     5,     9,    10,   227,   227
 "S10",          80,     0,    11,     1,    92,   149
 "S11",          86,     0,    26,    14,   126,   145
 "S12",        1450,     1,    57,   123,  1631,  1689
-"S13",          32,    28,     0,    13,    73,    83
+"S13",          36,     0,    10,    27,    73,    83
 "S14",         302,     0,    11,    12,   325,   338
 "S15",           1,     0,     2,     2,     5,   283
 "S16",         258,     0,     0,    17,   275,   307
@@ -1698,10 +1703,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     3,     3,   344,   354
-"S32",        9142,    69,   101,   185,  9497,  7931
+"S32",        9136,    70,   101,   185,  9492,  7926
 "int",        1231,    20,    16,    15,  1282,  1271
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32696,   301,   715,  1343, 35055, 35405
+"total",     32689,   273,   724,  1357, 35043, 35393
 ----------------
 Failure summary:
 S02-literals/adverbs.rakudo.jvm aborted 5 test(s)
@@ -1709,25 +1714,25 @@ S02-literals/quoting.rakudo.jvm 166 - /.../ literals match in void context
 S02-literals/quoting.rakudo.jvm 167 - rx/.../ literals match in void context
 S02-types/array.rakudo.jvm 70 - readonly accessing [*-2] of an one-elem array throws X::OutOfRange
 S02-types/array.rakudo.jvm 74 - indirectly accessing [-1] through a variable throws X::OutOfRange
-S02-types/bag.rakudo.jvm 152 - One of the bag's elements is indeed a bag!
-S02-types/bag.rakudo.jvm 153 - With the proper elements
-S02-types/bag.rakudo.jvm 157 - One of the bag's elements is indeed a bag!
-S02-types/bag.rakudo.jvm 158 - With the proper elements
+S02-types/bag.rakudo.jvm 149 - One of the bag's elements is indeed a bag!
+S02-types/bag.rakudo.jvm 150 - With the proper elements
+S02-types/bag.rakudo.jvm 154 - One of the bag's elements is indeed a bag!
+S02-types/bag.rakudo.jvm 155 - With the proper elements
 S02-types/catch_type_cast_mismatch.t 5 - Accessing array as hash fails
 S02-types/hash.rakudo.jvm 65 - doesn't really make sense, but shouldn't segfault, either ()
 S02-types/lazy-lists.rakudo.jvm 11 - sanity: first is-prime is 2
-S02-types/mix.rakudo.jvm 130 - .pick does not work on Mix
-S02-types/mix.rakudo.jvm 136 - One of the mix's elements is indeed a mix!
-S02-types/mix.rakudo.jvm 137 - With the proper elements
-S02-types/mix.rakudo.jvm 141 - One of the mix's elements is indeed a mix!
-S02-types/mix.rakudo.jvm 142 - With the proper elements
+S02-types/mix.rakudo.jvm 127 - .pick does not work on Mix
+S02-types/mix.rakudo.jvm 133 - One of the mix's elements is indeed a mix!
+S02-types/mix.rakudo.jvm 134 - With the proper elements
+S02-types/mix.rakudo.jvm 138 - One of the mix's elements is indeed a mix!
+S02-types/mix.rakudo.jvm 139 - With the proper elements
 S02-types/mixhash.rakudo.jvm 141 - .pick does not work on MixHash
 S02-types/mixhash.rakudo.jvm 142 - cannot call .grab on a MixHash
 S02-types/native.rakudo.jvm aborted 8 test(s)
-S02-types/set.rakudo.jvm 133 - One of the set's elements is indeed a set!
-S02-types/set.rakudo.jvm 134 - With the proper elements
-S02-types/set.rakudo.jvm 138 - One of the set's elements is indeed a set!
-S02-types/set.rakudo.jvm 139 - With the proper elements
+S02-types/set.rakudo.jvm 130 - One of the set's elements is indeed a set!
+S02-types/set.rakudo.jvm 131 - With the proper elements
+S02-types/set.rakudo.jvm 135 - One of the set's elements is indeed a set!
+S02-types/set.rakudo.jvm 136 - With the proper elements
 S02-types/sethash.rakudo.jvm 41 - SetHash.kv returns list of keys and values
 S03-metaops/cross.rakudo.jvm 29 - cross can modify containers on the left
 S03-metaops/zip.rakudo.jvm 25 - zip can modify containers on the left
@@ -1856,7 +1861,6 @@ S03-sequence/misc.rakudo.jvm 28 - non-deducible sequence ending in * throws X::S
 S03-sequence/misc.rakudo.jvm 29 - non-deducible sequence ending in * throws X::Sequence::Deduction (2)
 S03-sequence/nonnumeric.rakudo.jvm 27 - Str decrement fails after 'AA': leftmost characters are never removed
 S03-sequence/nonnumeric.rakudo.jvm 29 - 'Z' ... 'AA' fails: only 1 RHS value and ('Z' before 'AA') is False
-S06-operator-overloading/methods.rakudo.jvm 2 - custom postcircumfix{ } does not lead to warnings
 S06-other/pairs-as-lvalues.rakudo.jvm aborted 4 test(s)
 S09-typed-arrays/arrays.rakudo.jvm 29 - can not assign values of the wrong type
 S09-typed-arrays/arrays.rakudo.jvm 30 - can not assign range of the wrong type
@@ -1864,8 +1868,6 @@ S09-typed-arrays/arrays.rakudo.jvm 36 - can not assign values of the wrong type
 S09-typed-arrays/arrays.rakudo.jvm 37 - can not assign range of the wrong type
 S09-typed-arrays/arrays.rakudo.jvm 62 - typed arrays do check type during list assignment
 S12-attributes/instance.rakudo.jvm 103 - type enforced on array attrib (assignment)
-S13-overloading/typecasting-mixed.rakudo.jvm aborted 14 test(s)
-S13-overloading/typecasting-short.rakudo.jvm aborted 14 test(s)
 S17-scheduler/basic.rakudo.jvm 40 - CurrentThreadScheduler cannot combine :every and :times with :catch
 S17-supply/unique.t 4 - unique with with tap works
 S17-supply/unique.t 5 - unique with as and with tap works
@@ -1876,6 +1878,7 @@ S17-supply/unique.t 13 - unique with as and with tap works
 S17-supply/unique.t 16 - unique with as and expiry works
 S17-supply/unique.t 17 - unique with as and expiry works
 S22-package-format/local.rakudo.jvm 9 - Cannot install on CUR::File
+S32-array/perl.t 3 - make sure any value can be stored
 S32-array/splice.t 36 - negative offset dies
 S32-array/splice.t 37 - negative size dies
 S32-io/copy.t 8 - .IO.copy missing file
