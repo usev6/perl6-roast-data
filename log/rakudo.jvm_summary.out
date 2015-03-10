@@ -45,7 +45,8 @@ S02-literals/quoting.rakudo.jvm.................... 163    0   11    0  174
      2 todo   : q:x assigned to array
      4 todo   : quoting adverbs
      1 todo   : retriage
-S02-literals/radix.rakudo.jvm...................... 130    0    6    0  136
+S02-literals/radix.rakudo.jvm...................... 131    0    6    1  138
+     1 skipped: RT #123862 - negative radix
      1 todo   : Really?!
      4 todo   : Some question of what this form should actually do
      1 todo   : This needs an RT
@@ -873,7 +874,7 @@ S06-signature/tree-node-parameters.rakudo.jvm......  16    0    0    4   20
      4 skipped: signature binding of return values NYI
 S06-signature/type-capture.rakudo.jvm..............   7    0    0    1    8
      1 skipped: nom regression
-S06-signature/types.t..............................   8    0    0    0    8
+S06-signature/types.t..............................   9    0    0    0    9
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
 S06-signature/unspecified.rakudo.jvm...............  12    0    5    0   17
@@ -908,7 +909,7 @@ S09-subscript/multidim-assignment.t................  10    0    0    0   10
 S09-subscript/slice.rakudo.jvm.....................  27    0    0    4   31
      2 skipped: RT #120383
      2 skipped: RT #61844
-S09-typed-arrays/arrays.rakudo.jvm.................  65    0    3    2   70
+S09-typed-arrays/arrays.rakudo.jvm.................  70    0    3    2   75
      1 skipped: nested typechecks are borked
      1 skipped: type on our-variables
      1 todo   : initialization
@@ -1109,7 +1110,7 @@ S13-type-casting/methods.t.........................  13    0    0    0   13
 S14-roles/anonymous.rakudo.jvm.....................  12    0    0    1   13
      1 skipped: anonymous roles only created once
 S14-roles/attributes.t.............................   7    0    0    0    7
-S14-roles/basic.rakudo.jvm.........................  40    0    2    4   46
+S14-roles/basic.rakudo.jvm.........................  41    0    2    4   47
      1 skipped: RT #120919
      3 skipped: RT #67768
      1 todo   : RT #121308
@@ -1323,11 +1324,9 @@ S32-container/roundrobin.rakudo.jvm................   4    0    1    0    5
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................   8    0    0    2   10
      2 skipped: lvalue zip
-S32-exceptions/misc.rakudo.jvm..................... 274    0    9    0  283
+S32-exceptions/misc.rakudo.jvm..................... 281    0    2    0  283
      1 todo   : Cannot find method "returns"
      1 todo   : parsing regression
-     6 todo PASSED: ?
-     1 todo PASSED: RT #121935
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
 S32-hash/exists-adverb.t...........................  47    0    0    0   47
@@ -1618,10 +1617,9 @@ integration/advent2012-day13.t.....................  42    0    0    0   42
 integration/advent2012-day14.t.....................   6    0    0    0    6
 integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
-integration/advent2012-day19.t.....................  10    0     6    4    0    0   10
-     4 tests aborted (missing ok/not ok)
-Can't read t/spec/integration/advent2013-day15.rakudo.jvm: No such file or directory
-   0    0    9
+integration/advent2012-day19.t.....................  10    0    0    0   10
+integration/advent2012-day20.t.....................   2    0    0    0    2
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.rakudo.jvm............   5    0    1    0    6
      1 todo   : RT #121789
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -1680,18 +1678,18 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5116,    13,   147,   367,  5643,  5735
+"S02",        5117,    13,   147,   368,  5645,  5737
 "S03",        5095,     0,   124,    99,  5318,  5352
 "S04",        1017,     0,    55,    57,  1129,  1181
 "S05",        5226,     0,    99,   256,  5581,  5938
-"S06",        1335,     4,    45,    97,  1481,  1539
+"S06",        1336,     4,    45,    97,  1482,  1540
 "S07",           0,     0,     0,     0,     0,     0
-"S09",         208,     0,     9,    10,   227,   227
+"S09",         213,     0,     9,    10,   232,   232
 "S10",          80,     0,    11,     1,    92,   149
 "S11",          86,     0,    26,    14,   126,   145
 "S12",        1451,     0,    57,   123,  1631,  1689
 "S13",          36,     0,    10,    27,    73,    83
-"S14",         302,     0,    11,    12,   325,   338
+"S14",         303,     0,    11,    12,   326,   339
 "S15",           1,     0,     2,     2,     5,   283
 "S16",         258,     0,     0,    17,   275,   307
 "S17",         658,     0,     4,    27,   689,   735
@@ -1701,10 +1699,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         338,     0,     3,     3,   344,   354
-"S32",        9206,     0,   101,   185,  9492,  7927
+"S32",        9213,     0,    94,   185,  9492,  7927
 "int",        1251,     0,    16,    15,  1282,  1271
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32946,    17,   724,  1357, 35044, 35395
+"total",     32961,    17,   717,  1358, 35053, 35404
 ----------------
 Failure summary:
 S02-literals/adverbs.rakudo.jvm aborted 5 test(s)
