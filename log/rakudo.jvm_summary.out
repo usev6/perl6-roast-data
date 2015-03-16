@@ -2,8 +2,7 @@
                                                    pass fail todo skip plan
 S02-lexical-conventions/begin_end_pod.t............   1    0    0    0    1
 S02-lexical-conventions/bom.t......................   1    0    0    0    1
-S02-lexical-conventions/comments.rakudo.jvm........  49    0    0    2   51
-     2 skipped: hangs
+S02-lexical-conventions/comments.t.................  51    0    0    0   51
 S02-lexical-conventions/end-pod.t..................   1    0    0    0    1
 S02-lexical-conventions/minimal-whitespace.t.......   9    0    0    0    9
 S02-lexical-conventions/one-pass-parsing.t.........   5    0    0    0    5
@@ -433,9 +432,7 @@ S03-sequence/arity0.t..............................  13    0    0    0   13
 S03-sequence/basic.rakudo.jvm...................... 131    0    1    0  132
      1 todo   : sequence + last
 S03-sequence/limit-arity-2-or-more.t...............   8    0    0    0    8
-S03-sequence/misc.rakudo.jvm.......................  25    0    4    0   29
-     2 todo   : NYI
-     1 todo   : RT #80574
+S03-sequence/misc.rakudo.jvm.......................  28    0    1    0   29
      1 todo   : bogus test?
 S03-sequence/nonnumeric.rakudo.jvm.................  22    0    0   17   39
     11 skipped: hangs
@@ -917,10 +914,10 @@ S09-typed-arrays/arrays.rakudo.jvm.................  70    0    3    2   75
 S09-typed-arrays/hashes.t..........................  33    0    0    0   33
 S09-typed-arrays/native-decl.t.....................   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S09-typed-arrays/native-int.t......................   0  107    0    0  107
-   107 tests aborted (missing ok/not ok)
-S09-typed-arrays/native-num.t......................   0  107    0    0  107
-   107 tests aborted (missing ok/not ok)
+S09-typed-arrays/native-int.rakudo.jvm.............   0  126    0    0  126
+   126 tests aborted (missing ok/not ok)
+S09-typed-arrays/native-num.rakudo.jvm.............   0  115    0    0  115
+   115 tests aborted (missing ok/not ok)
 S09-typed-arrays/native.t..........................   0    3    0    0    3
      3 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
@@ -1617,7 +1614,7 @@ integration/advent2011-day23.rakudo.jvm............  54    0    1    0   55
 integration/advent2011-day24.t.....................   8    0    0    0    8
 integration/advent2012-day02.t.....................   4    0    0    0    4
 integration/advent2012-day03.t.....................   2    0    0    0    2
-integration/advent2012-day04.t.....................   8    0    0    0    8
+integration/advent2012-day04.t.....................   7    1    0    0    8
 integration/advent2012-day06.t.....................   2    0    0    0    2
 integration/advent2012-day09.t.....................   8    0    0    0    8
 integration/advent2012-day10.t.....................  26    0    0    0   26
@@ -1687,13 +1684,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5126,     5,   147,   373,  5651,  5743
-"S03",        5127,     0,   118,    99,  5344,  5378
+"S02",        5128,     5,   147,   371,  5651,  5743
+"S03",        5130,     0,   115,    99,  5344,  5378
 "S04",        1018,     0,    55,    57,  1130,  1182
 "S05",        5232,     0,    97,   256,  5585,  5942
 "S06",        1337,     4,    45,    97,  1483,  1541
 "S07",           0,     0,     0,     0,     0,     0
-"S09",         213,   225,     9,    10,   457,   457
+"S09",         213,   252,     9,    10,   484,   484
 "S10",          80,     0,    11,     1,    92,   149
 "S11",          86,     0,    26,    14,   126,   145
 "S12",        1452,     0,    57,   123,  1632,  1690
@@ -1709,14 +1706,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         339,     0,     3,     3,   345,   355
 "S32",        9348,     0,    94,   185,  9627,  8062
-"int",        1251,     0,    16,    15,  1282,  1271
+"int",        1250,     1,    16,    15,  1282,  1271
 "ros",           2,     0,     0,     0,     2,     2
-"total",     33155,   234,   709,  1363, 35461, 35812
+"total",     33159,   262,   706,  1361, 35488, 35839
 ----------------
 Failure summary:
 S02-literals/adverbs.rakudo.jvm aborted 5 test(s)
 S06-other/pairs-as-lvalues.rakudo.jvm aborted 4 test(s)
 S09-typed-arrays/native-decl.t aborted 8 test(s)
-S09-typed-arrays/native-int.t aborted 107 test(s)
-S09-typed-arrays/native-num.t aborted 107 test(s)
+S09-typed-arrays/native-int.rakudo.jvm aborted 126 test(s)
+S09-typed-arrays/native-num.rakudo.jvm aborted 115 test(s)
 S09-typed-arrays/native.t aborted 3 test(s)
+integration/advent2012-day04.t 3 - Pascal's triangle
