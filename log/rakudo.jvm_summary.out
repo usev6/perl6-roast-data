@@ -136,7 +136,7 @@ S02-names/symbolic-deref.rakudo.jvm................  30    0    2    3   35
      1 todo   : no such symbol
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.rakudo.jvm......................... 590    0    0   12  602
+S02-types/WHICH.rakudo.jvm......................... 638    0    0   12  650
     12 skipped: NYI on jvm
 S02-types/anon_block.rakudo.jvm....................  36    0    4    2   42
      2 skipped: tests don't work if previous test fails
@@ -425,8 +425,7 @@ S03-operators/value_equivalence.rakudo.jvm.........  73    0    2    0   75
      1 todo   : \@a seems to flatten when it should not
 S03-sequence/arity-2-or-more.t.....................  20    0    0    0   20
 S03-sequence/arity0.t..............................  13    0    0    0   13
-S03-sequence/basic.rakudo.jvm...................... 131    0    2    0  133
-     2 todo   : sequence + last
+S03-sequence/basic.t............................... 133    0    0    0  133
 S03-sequence/limit-arity-2-or-more.t...............   8    0    0    0    8
 S03-sequence/misc.rakudo.jvm.......................  28    0    0    1   29
      1 skipped: Type check failed in binding $n; expected "Int" but got "Str"
@@ -1431,9 +1430,8 @@ S32-num/power.rakudo.jvm...........................  48    0    0    4   52
      1 skipped: i
 S32-num/rand.rakudo.jvm............................ 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect
-S32-num/rat.rakudo.jvm............................. 819    0    4    1  824
+S32-num/rat.rakudo.jvm............................. 823    0    0    1  824
      1 skipped: RT #74648
-     4 todo PASSED: <1/3> literal should be Rat
 S32-num/real-bridge.t.............................. 200    0    0    0  200
 S32-num/roots.t....................................  55    0    0    0   55
 S32-num/rounders.rakudo.jvm........................ 129    0    1    0  130
@@ -1671,8 +1669,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5139,     0,   143,   369,  5651,  5743
-"S03",        5130,     0,   115,   100,  5345,  5379
+"S02",        5187,     0,   143,   369,  5699,  5791
+"S03",        5132,     0,   113,   100,  5345,  5379
 "S04",        1023,     0,    50,    57,  1130,  1182
 "S05",        5232,     0,    97,   256,  5585,  5942
 "S06",        1351,     0,    49,    99,  1499,  1557
@@ -1692,9 +1690,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         339,     0,     3,     3,   345,   355
-"S32",        9405,     0,    96,   190,  9691,  8126
+"S32",        9409,     0,    92,   190,  9691,  8126
 "int",        1254,     0,    13,    15,  1282,  1271
 "ros",           2,     0,     0,     0,     2,     2
-"total",     33269,     0,   690,  1383, 35342, 35680
+"total",     33323,     0,   684,  1383, 35390, 35728
 ----------------
 No failures!
