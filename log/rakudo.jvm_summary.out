@@ -212,7 +212,7 @@ S02-types/lazy-lists.rakudo.jvm....................  22    0    1    0   23
      1 todo   : RT #121994
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding
-S02-types/mix.rakudo.jvm........................... 169    0    4    3  176
+S02-types/mix.rakudo.jvm........................... 168    1    4    3  176
      3 skipped: No longer Iterable
      2 todo   : ?
      1 todo   : Not properly interpolating
@@ -1669,7 +1669,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5187,     0,   143,   369,  5699,  5791
+"S02",        5186,     1,   143,   369,  5699,  5791
 "S03",        5132,     0,   113,   100,  5345,  5379
 "S04",        1023,     0,    50,    57,  1130,  1182
 "S05",        5232,     0,    97,   256,  5585,  5942
@@ -1693,6 +1693,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9409,     0,    92,   190,  9691,  8126
 "int",        1254,     0,    13,    15,  1282,  1271
 "ros",           2,     0,     0,     0,     2,     2
-"total",     33323,     0,   684,  1383, 35390, 35728
+"total",     33322,     1,   684,  1383, 35390, 35728
 ----------------
-No failures!
+Failure summary:
+S02-types/mix.rakudo.jvm 118 - .roll(100) (2)
