@@ -747,7 +747,7 @@ S03-operators/orelse.rakudo.moar...................   9    0    0    2   11
      1 skipped: orelse passes $! as argument
      1 skipped: orelse passes $! as multiple arguments
 S03-operators/overflow.t...........................  98    0    0    0   98
-S03-operators/precedence.rakudo.moar...............  54    0    0    2   56
+S03-operators/precedence.rakudo.moar...............  56    0    0    2   58
      2 skipped: nom regression
 S03-operators/range-basic.t........................ 140    0    0    0  140
 S03-operators/range-int.t.......................... 480    0    0    0  480
@@ -1431,10 +1431,10 @@ S10-packages/basic.rakudo.moar.....................  60    0    2    1   63
      1 todo   : ticket based only on class... RT #60446
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
 S10-packages/precompilation.rakudo.moar............# error: Could not find symbol '&C1'
-#   in method <anon> at src/gen/m-CORE.setting:15843
+#   in method <anon> at src/gen/m-CORE.setting:15853
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2908
 #   in any find_method at src/gen/m-Metamodel.nqp:1052
-#   in block <unit> at getout-50487-452079.code:4
+#   in block <unit> at getout-67520-379367.code:4
 
 
   19    0    3    0   22
@@ -1738,8 +1738,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1427580812
-# Using file temp_1427580812
+S16-filehandles/chmod.t............................# Using file temp_1427663629
+# Using file temp_1427663629
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2182,7 +2182,7 @@ S32-list/map.rakudo.moar...........................  53    0    0    8   61
      4 skipped: adverbial block; RT #53804
      2 skipped: closure as non-final argument
 S32-list/map_function_return_values.t..............   2    0    0    0    2
-S32-list/minmax.t..................................  55    0    0    0   55
+S32-list/minmax.t..................................  97    0    0    0   97
 S32-list/permutations.t............................   2    0    0    0    2
 S32-list/pick.rakudo.moar..........................  56    0    1    0   57
      1 todo   : error on pick :replace
@@ -2205,7 +2205,18 @@ use of uninitialized value $b of type Code in string context  in block  at t/spe
      1 skipped: closure as non-final argument
      2 todo   : determine behavior of 0-arity methods passed to sort
      1 todo   : method fallback to sub unimpl
-S32-list/squish.t..................................  28    0    0    0   28
+S32-list/squish.rakudo.moar........................use of uninitialized value $x of type Any in string context  in sub is_deeply at lib/Test.pm:371
+
+use of uninitialized value $x of type Any in string context  in sub is_deeply at lib/Test.pm:371
+
+use of uninitialized value $x of type Any in string context  in sub is_deeply at lib/Test.pm:371
+
+use of uninitialized value $x of type Any in string context  in sub is_deeply at lib/Test.pm:371
+
+  28    0    8    0   36
+     2 todo   : RT #124204
+     4 todo   : RT #124205
+     2 todo PASSED: RT #124204
 S32-list/unique.t..................................  33    0    0    0   33
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  31    0    0    0   31
@@ -2540,14 +2551,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.7964455 seconds
-# gerdr: 0.8142188 seconds
-# recursive-ternary: 0.89783369 seconds
-# loop: 0.9114420 seconds
-# hand-memoization: 1.2775556 seconds
-# recursive-ternary-hand-cached: 2.0927850 seconds
-# sequence-ternary: 2.101851 seconds
-# sequence: 3.48069154 seconds
+integration/advent2012-day21.t.....................# kaz: 0.824149 seconds
+# gerdr: 0.8462517 seconds
+# recursive-ternary: 0.90497995 seconds
+# loop: 0.9340235 seconds
+# hand-memoization: 1.2942522 seconds
+# sequence-ternary: 2.13403376 seconds
+# recursive-ternary-hand-cached: 2.1392375 seconds
+# sequence: 3.5293250 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2613,7 +2624,7 @@ integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
 integration/weird-errors.rakudo.moar...............  13    0    1    0   14
-     1 todo   : RT #123686
+     1 todo PASSED: RT #123686
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
@@ -2621,7 +2632,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5220,     0,   131,   348,  5699,  5791
-"S03",        5142,     0,   113,   100,  5355,  5389
+"S03",        5144,     0,   113,   100,  5357,  5391
 "S04",        1042,     0,    52,    36,  1130,  1182
 "S05",        5324,     0,    91,   170,  5585,  5942
 "S06",        1361,     0,    47,    91,  1499,  1557
@@ -2641,9 +2652,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         339,     0,     4,     2,   345,   355
-"S32",        9560,     0,   116,   169,  9845,  8280
+"S32",        9602,     0,   124,   169,  9895,  8330
 "int",        1249,     0,    13,    20,  1282,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35635,     0,   661,  1322, 37618, 37670
+"total",     35679,     0,   669,  1322, 37670, 37722
 ----------------
 No failures!

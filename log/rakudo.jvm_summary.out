@@ -397,7 +397,7 @@ S03-operators/orelse.rakudo.jvm....................   9    0    0    2   11
      1 skipped: orelse passes $! as argument
      1 skipped: orelse passes $! as multiple arguments
 S03-operators/overflow.t...........................  98    0    0    0   98
-S03-operators/precedence.rakudo.jvm................  54    0    0    2   56
+S03-operators/precedence.rakudo.jvm................  56    0    0    2   58
      2 skipped: nom regression
 S03-operators/range-basic.t........................ 140    0    0    0  140
 S03-operators/range-int.t.......................... 480    0    0    0  480
@@ -1172,7 +1172,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   3    0    0    0    3
-S17-lowlevel/lock.rakudo.jvm.......................   7    0    0    1    8
+S17-lowlevel/lock.rakudo.jvm.......................   6    1    0    1    8
      1 skipped: not sure this test is valid
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1396,7 +1396,7 @@ S32-list/map.rakudo.jvm............................  53    0    0    8   61
      4 skipped: adverbial block; RT #53804
      2 skipped: closure as non-final argument
 S32-list/map_function_return_values.t..............   2    0    0    0    2
-S32-list/minmax.t..................................  55    0    0    0   55
+S32-list/minmax.t..................................  97    0    0    0   97
 S32-list/permutations.t............................   2    0    0    0    2
 S32-list/pick.rakudo.jvm...........................  56    0    1    0   57
      1 todo   : error on pick :replace
@@ -1409,7 +1409,10 @@ S32-list/sort.rakudo.jvm...........................  28    0    3    1   32
      1 skipped: closure as non-final argument
      2 todo   : determine behavior of 0-arity methods passed to sort
      1 todo   : method fallback to sub unimpl
-S32-list/squish.t..................................  28    0    0    0   28
+S32-list/squish.rakudo.jvm.........................  28    0    8    0   36
+     2 todo   : RT #124204
+     4 todo   : RT #124205
+     2 todo PASSED: RT #124204
 S32-list/unique.t..................................  33    0    0    0   33
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  31    0    0    0   31
@@ -1678,7 +1681,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5187,     0,   143,   369,  5699,  5791
-"S03",        5142,     0,   113,   100,  5355,  5389
+"S03",        5144,     0,   113,   100,  5357,  5391
 "S04",        1029,     0,    50,    51,  1130,  1182
 "S05",        5232,     0,    97,   256,  5585,  5942
 "S06",        1351,     0,    49,    99,  1499,  1557
@@ -1691,16 +1694,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         306,     0,     8,    12,   326,   339
 "S15",           7,     0,     4,    18,    29,   283
 "S16",         258,     0,     0,    17,   275,   307
-"S17",         667,     0,     4,    27,   698,   744
+"S17",         666,     1,     4,    27,   698,   744
 "S19",          13,     0,     0,     0,    13,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",           1,     0,     0,     0,     1,    79
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         339,     0,     3,     3,   345,   355
-"S32",        9413,     0,    92,   190,  9695,  8130
+"S32",        9455,     0,   100,   190,  9745,  8180
 "int",        1254,     0,    13,    15,  1282,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35034,     0,   685,  1469, 37188, 37520
+"total",     35077,     1,   693,  1469, 37240, 37572
 ----------------
-No failures!
+Failure summary:
+S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
