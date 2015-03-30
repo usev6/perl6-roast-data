@@ -472,25 +472,25 @@ use of uninitialized value of type Any in numeric context  in block <unit> at t/
      2 skipped: nom regression: possible spec change/improvement
      1 todo   : can_meta check for meta operators NYI
 S03-metaops/not.t..................................  39    0    0    0   39
-S03-metaops/reduce.rakudo.moar.....................use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:329
+S03-metaops/reduce.rakudo.moar.....................use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:326
 
-use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:329
+use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:326
 
-use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:329
+use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:326
 
-use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:329
+use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:326
 
-use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:329
+use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:326
 
-use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:329
+use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:326
 
-use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:329
+use of uninitialized value <element> of type Int in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:326
+
+use of uninitialized value <element> of type Any in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:336
 
 use of uninitialized value <element> of type Any in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:339
 
-use of uninitialized value <element> of type Any in string context  in block <unit> at t/spec/S03-metaops/reduce.rakudo.moar:342
-
- 359    0    8    0  367
+ 358    0    8    0  366
      3 todo   : huh?
      1 todo   : item context
      2 todo   : orelse
@@ -1434,7 +1434,7 @@ S10-packages/precompilation.rakudo.moar............# error: Could not find symbo
 #   in method <anon> at src/gen/m-CORE.setting:15853
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2908
 #   in any find_method at src/gen/m-Metamodel.nqp:1052
-#   in block <unit> at getout-67520-379367.code:4
+#   in block <unit> at getout-91998-595461.code:4
 
 
   19    0    3    0   22
@@ -1738,8 +1738,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1427663629
-# Using file temp_1427663629
+S16-filehandles/chmod.t............................# Using file temp_1427750029
+# Using file temp_1427750029
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2551,14 +2551,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.824149 seconds
-# gerdr: 0.8462517 seconds
-# recursive-ternary: 0.90497995 seconds
-# loop: 0.9340235 seconds
-# hand-memoization: 1.2942522 seconds
-# sequence-ternary: 2.13403376 seconds
-# recursive-ternary-hand-cached: 2.1392375 seconds
-# sequence: 3.5293250 seconds
+integration/advent2012-day21.t.....................# kaz: 0.8161272 seconds
+# gerdr: 0.843451 seconds
+# recursive-ternary: 0.90144226 seconds
+# loop: 0.93811612 seconds
+# hand-memoization: 1.282913 seconds
+# recursive-ternary-hand-cached: 2.1278424 seconds
+# sequence-ternary: 2.1612909 seconds
+# sequence: 3.5139354 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2624,7 +2624,7 @@ integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
 integration/weird-errors.rakudo.moar...............  13    0    1    0   14
-     1 todo PASSED: RT #123686
+     1 todo   : RT #123686
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
@@ -2632,7 +2632,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5220,     0,   131,   348,  5699,  5791
-"S03",        5144,     0,   113,   100,  5357,  5391
+"S03",        5143,     0,   113,   100,  5356,  5390
 "S04",        1042,     0,    52,    36,  1130,  1182
 "S05",        5324,     0,    91,   170,  5585,  5942
 "S06",        1361,     0,    47,    91,  1499,  1557
@@ -2655,6 +2655,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9602,     0,   124,   169,  9895,  8330
 "int",        1249,     0,    13,    20,  1282,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35679,     0,   669,  1322, 37670, 37722
+"total",     35678,     0,   669,  1322, 37669, 37721
 ----------------
 No failures!
