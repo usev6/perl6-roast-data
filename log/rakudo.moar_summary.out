@@ -1437,7 +1437,7 @@ S10-packages/precompilation.rakudo.moar............# error: Could not find symbo
 #   in method <anon> at src/gen/m-CORE.setting:15902
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2908
 #   in any find_method at src/gen/m-Metamodel.nqp:1052
-#   in block <unit> at getout-10359-30483.code:4
+#   in block <unit> at getout-27677-47916.code:4
 
 
   19    0    3    0   22
@@ -1741,8 +1741,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1427836433
-# Using file temp_1427836433
+S16-filehandles/chmod.t............................# Using file temp_1427922829
+# Using file temp_1427922829
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2551,14 +2551,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8141608 seconds
-# gerdr: 0.8245961 seconds
-# recursive-ternary: 0.89815902 seconds
-# loop: 0.9265706 seconds
-# hand-memoization: 1.297277 seconds
-# recursive-ternary-hand-cached: 2.1283746 seconds
-# sequence-ternary: 2.14342166 seconds
-# sequence: 3.505663 seconds
+integration/advent2012-day21.t.....................# kaz: 0.8265504 seconds
+# gerdr: 0.8448807 seconds
+# recursive-ternary: 0.9097847 seconds
+# loop: 0.93919242 seconds
+# hand-memoization: 1.2971690 seconds
+# recursive-ternary-hand-cached: 2.1223196 seconds
+# sequence-ternary: 2.148589458 seconds
+# sequence: 3.51296856 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2632,7 +2632,7 @@ integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
 integration/weird-errors.rakudo.moar...............  13    0    1    0   14
-     1 todo PASSED: RT #123686
+     1 todo   : RT #123686
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
