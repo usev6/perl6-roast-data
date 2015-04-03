@@ -441,7 +441,80 @@ S03-binding/ro.rakudo.moar.........................   5    0    6    0   11
      2 todo   : nom regression
 S03-binding/scalars.rakudo.moar....................  24    0    0    9   33
      9 skipped: list binding: RT #122369
-S03-feeds/basic.rakudo.moar........................  10    0    6    8   24
+S03-feeds/basic.rakudo.moar........................as simple assignment");
+}
+
+{
+    my @a = (1 .. 5);
+    my @e = (2, 4);
+
+    my (@b, @c);
+    @a ==> 
+==> @b;
+    @c <== grep { ($_ % 2) == 0 } <== @a;
+    my @f = do {@a ==> grep {($_ % 2) == 0}};
+    
+1 .. 5);
+    my @e = (2, 4);
+
+    my (@b, @c);
+    @a ==> grep { ($_ % 2) == 0 } ==> @b;
+    @c <== 
+<== @a;
+    my @f = do {@a ==> grep {($_ % 2) == 0}};
+    my @g = (@a ==> grep {($_ % 2) == 0});
+
+  
+==> grep { ($_ % 2) == 0 } ==> @b;
+    @c <== grep { ($_ % 2) == 0 } <== @a;
+    my @f = do {@a ==> 
+};
+    my @g = (@a ==> grep {($_ % 2) == 0});
+
+    is(~@b, ~@e, "array ==> grep ==> result");
+    is
+== grep { ($_ % 2) == 0 } <== @a;
+    my @f = do {@a ==> grep {($_ % 2) == 0}};
+    my @g = (@a ==> 
+);
+
+    is(~@b, ~@e, "array ==> grep ==> result");
+    is(~@c, ~@e, "result <== grep <== array");
+  
+ain of feeds may not begin and end with the same array');
+
+    @data = <1 2 4 5 7 8>;
+    @data <== 
+<== eager @data;
+    #?rakudo 2 todo 'feeds + eager'
+    todo('feeds + eager'); is(~@data, ~@odds, '
+ata, ~@odds, '@arr <== grep <== eager @arr works');
+
+    @data = <1 2 4 5 7 8>;
+    @data <== eager 
+<== @data;
+    todo('feeds + eager'); is(~@data, ~@odds, '@arr <== eager grep <== @arr works');
+}
+
+#
+nts of a feed: installing a tap
+{
+    my @data = <0 1 2 3 4 5 6 7 8 9>;
+    my @tap;
+
+    @data <== 
+<== @tap <== grep {$_ % 2} <== eager @data;
+    is(@tap, <1 3 5 7 9>, '@tap contained what was expec
+a tap
+{
+    my @data = <0 1 2 3 4 5 6 7 8 9>;
+    my @tap;
+
+    @data <== map {$_ + 1} <== @tap <== 
+<== eager @data;
+    is(@tap, <1 3 5 7 9>, '@tap contained what was expected at the time');
+    #?ra
+  10    0    6    8   24
      4 skipped: * feeds
      4 skipped: double-ended feeds
      3 todo   : feeds + eager
@@ -989,7 +1062,89 @@ S04-statements/if.t................................  29    0    0    0   29
 S04-statements/label.t.............................   5    0    0    0    5
 S04-statements/last.t..............................   9    0    0    0    9
 S04-statements/loop.t..............................  15    0    0    0   15
-S04-statements/map-and-sort-in-for.t...............   4    0    0    0    4
+S04-statements/map-and-sort-in-for.t............... "1,1,1,1,", "map works in for";
+}
+
+# works, too
+{
+  my @array = <1 2 3 4>;
+  my $output='';
+
+  for 
+-> $elem {
+    $output ~= "$elem,";
+  }
+
+  is $output, "1,2,3,4,", "sort works in for";
+}
+
+{
+  my @a
+ "1,2,3,4,", "sort works in for";
+}
+
+{
+  my @array = <1 2 3 4>;
+  my $output='';
+
+  for (map { 1 }, 
+) -> $elem {
+    $output ~= "$elem,";
+  }
+
+  is $output, "1,1,1,1,", "map and sort work in for";
+}
+
+
+ "1,2,3,4,", "sort works in for";
+}
+
+{
+  my @array = <1 2 3 4>;
+  my $output='';
+
+  for (map { 1 }, 
+) -> $elem {
+    $output ~= "$elem,";
+  }
+
+  is $output, "1,1,1,1,", "map and sort work in for";
+}
+
+
+ "map and sort work in for";
+}
+
+{
+  my @array = <1 2 3 4>;
+  my $output='';
+
+  for (map { $_ * 2 }, 
+) -> $elem {
+    $output ~= "$elem,";
+  }
+
+  is $output, "2,4,6,8,", "map and sort work in for";
+}
+
+
+ "map and sort work in for";
+}
+
+{
+  my @array = <1 2 3 4>;
+  my $output='';
+
+  for (map { $_ * 2 }, 
+) -> $elem {
+    $output ~= "$elem,";
+  }
+
+  is $output, "2,4,6,8,", "map and sort work in for";
+}
+
+
+   4    0    0    0    4
 S04-statements/next.t..............................  12    0    0    0   12
 S04-statements/no-implicit-block.t.................  12    0    0    0   12
 S04-statements/once.t..............................  21    0    0    0   21
@@ -1434,10 +1589,10 @@ S10-packages/basic.rakudo.moar.....................  60    0    2    1   63
      1 todo   : ticket based only on class... RT #60446
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
 S10-packages/precompilation.rakudo.moar............# error: Could not find symbol '&C1'
-#   in method <anon> at src/gen/m-CORE.setting:15908
+#   in method <anon> at src/gen/m-CORE.setting:15917
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2908
 #   in any find_method at src/gen/m-Metamodel.nqp:1052
-#   in block <unit> at getout-90146-406760.code:4
+#   in block <unit> at getout-56182-514601.code:4
 
 
   19    0    3    0   22
@@ -1741,8 +1896,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1428009232
-# Using file temp_1428009232
+S16-filehandles/chmod.t............................# Using file temp_1428095630
+# Using file temp_1428095630
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1950,8 +2105,13 @@ S29-any/cmp.t......................................   6    0    0    0    6
 S29-any/isa.t......................................  10    0    0    0   10
 S29-context/die.rakudo.moar........................WARNINGS:
 Useless use of variable $foo in sink context (line 23)
-  15    0    1    0   16
-     1 todo   : RT #67374
+Died
+  in block  at t/spec/S29-context/die.rakudo.moar:37
+  in block <unit> at t/spec/S29-context/die.rakudo.moar:37
+
+# Looks like you planned 16 tests, but ran 4
+   4   12    0    0   16
+    12 tests aborted (missing ok/not ok)
 S29-context/eval.rakudo.moar.......................  19    0    0    2   21
      2 skipped: EVAL(Buf) RT #122256
 S29-context/exit-in-if.t...........................   1    0    0    0    1
@@ -2194,7 +2354,45 @@ S32-list/reduce.t..................................  15    0    0    0   15
 S32-list/reverse.rakudo.moar.......................  20    0    1    0   21
      1 todo   : RT #77914
 S32-list/roll.t....................................  48    0    0    0   48
-S32-list/sort.rakudo.moar..........................Code object coerced to string (please use .gist or .perl to do that)  in sub is at lib/Test.pm:136
+S32-list/sort.rakudo.moar..........................of numbers was sorted');
+}
+
+{
+    my @a = (4, 5, 3, 2, 5, 1);
+    my @e = (1 .. 5, 5);
+
+    my @s = 
+;
+    is(@s, @e, 'array of numbers was sorted (w/out parens)');
+}
+
+{
+    # This test used to have Na
+2,-3.05,0.1,Inf,42,-1e-07,-Inf).sort;
+    my @e = (-Inf,-3.05,-1e-07,0.1,1.1,2,42,Inf);
+    my @s = 
+;
+    is(@s, @e, 'array of mixed numbers including Inf');
+}
+
+{
+    my @a = (4, 5, 3, 2, 5, 1);
+    m
+s was sorted');
+}
+
+{
+    my @a = <foo bar gorch baz>;
+    my @e = <bar baz foo gorch>;
+
+    my @s = 
+;
+    is(@s, @e, 'array of strings was sorted (w/out parens)');
+}
+
+{
+    my @a = <foo bar gorch baz>
+Code object coerced to string (please use .gist or .perl to do that)  in sub is at lib/Test.pm:136
 
 Code object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:139
 
@@ -2447,7 +2645,9 @@ S32-trig/tan.t..................................... 138    0    0    0  138
 S32-trig/tanh.t.................................... 154    0    0    0  154
                                                    pass fail todo skip plan
 integration/99problems-01-to-10.t..................  22    0    0    0   22
-integration/99problems-11-to-20.t..................  25    0    0    0   25
+integration/99problems-11-to-20.t..................<a b c c d> ==> 
+
+  25    0    0    0   25
 integration/99problems-21-to-30.t..................use of uninitialized value $previous of type Any in string context  in sub  at t/spec/integration/99problems-21-to-30.t:54
 
   15    0    0    0   15
@@ -2492,7 +2692,14 @@ integration/advent2009-day12.t.....................   9    0    0    0    9
 integration/advent2009-day13.t.....................  16    0    0    0   16
 integration/advent2009-day14.t.....................  21    0    0    0   21
 integration/advent2009-day15.t.....................   4    0    0    0    4
-integration/advent2009-day16.t.....................  11    0    0    0   11
+integration/advent2009-day16.t..................... one liner at the end
+    my $result;
+    for ^20 {my ($a,$b)=<AT CG>.pick.comb.pick(*); my ($c,$d)=
+; $result ~= sprintf "%{$c}s%{$d-$c}s\n",$a,$b}
+    is $result.chars , 169 , 'We got a bunch of DNA'
+for ^20 {my ($a,$b)=<AT CG>.pick.comb.pick(*); my ($c,$d)=
+; sprintf "%{$c}s%{$d-$c}s\n",$a,$b}
+  11    0    0    0   11
 integration/advent2009-day17.t.....................  62    0    0    0   62
 integration/advent2009-day18.t.....................   7    0    0    0    7
 integration/advent2009-day19.t.....................   6    0    0    0    6
@@ -2507,7 +2714,45 @@ integration/advent2010-day04.t.....................  11    0    0    0   11
 integration/advent2010-day06.t.....................  12    0    0    0   12
 integration/advent2010-day07.t.....................   8    0    0    0    8
 integration/advent2010-day08.t.....................   8    0    0    0    8
-integration/advent2010-day10.rakudo.moar...........   2    0    2    0    4
+integration/advent2010-day10.rakudo.moar...........xpected, 'left feed';
+}
+
+{
+    # Current version of advent post
+    my @odds-squared <== sort() <== 
+<== grep { $_ % 2 } <== @random-nums;
+    is ~@odds-squared, $odds-squared-expected, 'left feed';
+}
+
+;
+}
+
+{
+    # Current version of advent post
+    my @odds-squared <== sort() <== map { $_ ** 2 } <== 
+<== @random-nums;
+    is ~@odds-squared, $odds-squared-expected, 'left feed';
+}
+
+my @rakudo-people =
+eed';
+}
+
+my @rakudo-people = <scott patrick carl moritz jonathan jerry stephen>;
+@rakudo-people ==> 
+==> map { .tc } ==> my @who-it's-at;
+is ~@who-it's-at, 'Patrick Jonathan', 'right feed';
+
+say "# FUD
+o-people = <scott patrick carl moritz jonathan jerry stephen>;
+@rakudo-people ==> grep { /at/ } ==> 
+==> my @who-it's-at;
+is ~@who-it's-at, 'Patrick Jonathan', 'right feed';
+
+say "# FUDGED!";
+exit(1);
+
+   2    0    2    0    4
      2 todo   : RT #121843
 integration/advent2010-day11.t.....................   2    0    0    0    2
 integration/advent2010-day12.t.....................  13    0    0    0   13
@@ -2534,7 +2779,51 @@ integration/advent2011-day23.rakudo.moar...........  54    0    1    0   55
 integration/advent2011-day24.t.....................   8    0    0    0    8
 integration/advent2012-day02.t.....................   4    0    0    0    4
 integration/advent2012-day03.t.....................   2    0    0    0    2
-integration/advent2012-day04.t.....................   8    0    0    0    8
+integration/advent2012-day04.t.....................ascal's triangle
+        ==> (*[0..100])()                     # get rows up to n = 100
+        ==> 
+==> grep * > 1_000_000                # filter elements exceeding 1e6
+        ==> elems()
+}, 4075, "
+n = 100
+        ==> map *.list                        # flatten rows into a single list
+        ==> 
+==> elems()
+}, 4075, "Pascal's triangle";
+
+# Problem 9
+my @triplet-prods = gather {
+    sub triplets
+(gathered)';
+
+@triplet-prods = do {
+    constant N = 1000;
+
+    1..Int((1 - sqrt(0.5)) * N)
+    ==> 
+==> grep -> [ \a, \u, \v ] { u %% v } \
+    ==> map -> [ \a, \u, \v ] {
+        my \b = u div v;
+   
+    1..Int((1 - sqrt(0.5)) * N)
+    ==> map -> \a { [ a, N * (N - 2 * a), 2 * (N - a) ] } \
+    ==> 
+==> map -> [ \a, \u, \v ] {
+        my \b = u div v;
+        my \c = N - a - b;
+        a * b * c
+  
+-> \a { [ a, N * (N - 2 * a), 2 * (N - a) ] } \
+    ==> grep -> [ \a, \u, \v ] { u %% v } \
+    ==> 
+}
+
+is_deeply @triplet-prods, [31875000], 'Pythagorean triplet products (dataflow)';
+
+# Problem 47
+
+B
+   8    0    0    0    8
 integration/advent2012-day06.t.....................   2    0    0    0    2
 integration/advent2012-day09.t.....................   8    0    0    0    8
 integration/advent2012-day10.t.....................WARNINGS:
@@ -2551,14 +2840,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8166126 seconds
-# gerdr: 0.85018251 seconds
-# recursive-ternary: 0.911566 seconds
-# loop: 0.9519040 seconds
-# hand-memoization: 1.30792786 seconds
-# recursive-ternary-hand-cached: 2.10986534 seconds
-# sequence-ternary: 2.1487426 seconds
-# sequence: 3.49701049 seconds
+integration/advent2012-day21.t.....................# kaz: 0.81405356 seconds
+# gerdr: 0.84840785 seconds
+# recursive-ternary: 0.9238327 seconds
+# loop: 0.95819223 seconds
+# hand-memoization: 1.3097551 seconds
+# recursive-ternary-hand-cached: 2.0933199 seconds
+# sequence-ternary: 2.1855807 seconds
+# sequence: 3.5120271 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2659,10 +2948,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S24",           1,     0,     0,     0,     1,    79
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
-"S29",         339,     0,     4,     2,   345,   355
+"S29",         328,    12,     3,     2,   345,   355
 "S32",        9615,     0,   121,   169,  9905,  8337
 "int",        1253,     0,    14,    20,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35787,     0,   682,  1322, 37791, 37735
+"total",     35776,    12,   681,  1322, 37791, 37735
 ----------------
-No failures!
+Failure summary:
+S29-context/die.rakudo.moar aborted 12 test(s)

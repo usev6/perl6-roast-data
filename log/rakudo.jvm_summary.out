@@ -1285,8 +1285,8 @@ S28-named-variables/inc.t..........................   5    0    0    0    5
                                                    pass fail todo skip plan
 S29-any/cmp.t......................................   6    0    0    0    6
 S29-any/isa.t......................................  10    0    0    0   10
-S29-context/die.rakudo.jvm.........................  15    0    1    0   16
-     1 todo   : RT #67374
+S29-context/die.rakudo.jvm.........................   4   12    0    0   16
+    12 tests aborted (missing ok/not ok)
 S29-context/eval.rakudo.jvm........................  19    0    0    2   21
      2 skipped: EVAL(Buf) RT #122256
 S29-context/exit-in-if.t...........................   1    0    0    0    1
@@ -1708,11 +1708,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S24",           1,     0,     0,     0,     1,    79
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
-"S29",         339,     0,     3,     3,   345,   355
+"S29",         328,    12,     2,     3,   345,   355
 "S32",        9453,    15,    97,   190,  9755,  8187
 "int",        1256,     0,    14,    17,  1287,  1276
 "ros",           1,     1,     0,     0,     2,     2
-"total",     35123,    61,   706,  1471, 37361, 37585
+"total",     35112,    73,   705,  1471, 37361, 37585
 ----------------
 Failure summary:
 S03-operators/range.rakudo.jvm aborted 41 test(s)
@@ -1720,5 +1720,6 @@ S05-modifier/perl5_9.rakudo.jvm 77 - re_tests 1348/1 (1566)
 S05-modifier/perl5_9.rakudo.jvm 79 - re_tests 1352/1 (1570)
 S05-modifier/perl5_9.rakudo.jvm 81 - re_tests 1356/1 (1574)
 S05-modifier/perl5_9.rakudo.jvm 83 - re_tests 1360/1 (1578)
+S29-context/die.rakudo.jvm aborted 12 test(s)
 S32-list/reduce.t aborted 15 test(s)
 rosettacode/greatest_element_of_a_list.t aborted 1 test(s)
