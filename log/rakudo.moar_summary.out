@@ -249,7 +249,7 @@ S02-types/baghash.rakudo.moar...................... 223    0    3   24  250
      2 todo   : in flux
 S02-types/bool.t...................................  51    0    0    0   51
 S02-types/built-in.t...............................   1    0    0    0    1
-S02-types/capture.t................................  24    0    0    0   24
+S02-types/capture.t................................  26    0    0    0   26
 S02-types/catch_type_cast_mismatch.t...............  11    0    0    0   11
 S02-types/declare.rakudo.moar......................  55    0    2   22   79
      1 skipped: AnyChar NYI
@@ -1191,7 +1191,10 @@ S05-substitution/subst.rakudo.moar.................Potential difficulties:
     Redeclaration of symbol $_
     at t/spec/S05-substitution/subst.rakudo.moar:449
     ------> [32m    my $_[33m⏏[31m = 42; s/\d+/xxx/;[0m
- 148    0    1    0  149
+    Redeclaration of symbol $_
+    at t/spec/S05-substitution/subst.rakudo.moar:455
+    ------> [32m    my $_[33m⏏[31m = 0; s{^(\d+)$} = sprintf "%3d -", $_;[0m
+ 149    0    1    0  150
      1 todo   : be smarter about constant detection
 S05-transliteration/79778.t........................   1    0    0    0    1
 S05-transliteration/trans.rakudo.moar..............use of uninitialized value of type Int in string context  in block  at t/spec/S05-transliteration/trans.rakudo.moar:206
@@ -1439,10 +1442,10 @@ S10-packages/basic.rakudo.moar.....................  60    0    2    1   63
      1 todo   : ticket based only on class... RT #60446
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
 S10-packages/precompilation.rakudo.moar............# error: Could not find symbol '&C1'
-#   in method <anon> at src/gen/m-CORE.setting:15908
+#   in method <anon> at src/gen/m-CORE.setting:15914
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2908
 #   in any find_method at src/gen/m-Metamodel.nqp:1052
-#   in block <unit> at getout-19473-964392.code:4
+#   in block <unit> at getout-69045-944869.code:4
 
 
   19    0    3    0   22
@@ -1746,8 +1749,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1428354842
-# Using file temp_1428354842
+S16-filehandles/chmod.t............................# Using file temp_1428441241
+# Using file temp_1428441241
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2030,7 +2033,7 @@ Code object coerced to string (please use .gist or .perl to do that)  in any thr
 
     
 # Failed test ''#`' died'
-# at t/spec/S32-exceptions/misc.rakudo.moar line 172
+# at t/spec/S32-exceptions/misc.rakudo.moar line 173
     # Looks like you failed 1 tests of 2
 # Variable '$abd' is not declared. Did you mean any of these?
 #     $abe
@@ -2038,11 +2041,11 @@ Code object coerced to string (please use .gist or .perl to do that)  in any thr
 
     
 # Failed test ''sub f { f(|$) }' died'
-# at t/spec/S32-exceptions/misc.rakudo.moar line 512
+# at t/spec/S32-exceptions/misc.rakudo.moar line 513
     # Looks like you failed 1 tests of 5
-use of uninitialized value of type Any in string context  in block  at t/spec/S32-exceptions/misc.rakudo.moar:585
+use of uninitialized value of type Any in string context  in block  at t/spec/S32-exceptions/misc.rakudo.moar:586
 
- 288    0    2    0  290
+ 289    0    2    0  291
      1 todo   : Cannot find method "returns"
      1 todo   : parsing regression
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
@@ -2556,14 +2559,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.834596 seconds
-# gerdr: 0.85075725 seconds
-# recursive-ternary: 0.9182526 seconds
-# loop: 0.9496509 seconds
-# hand-memoization: 1.3111810 seconds
-# recursive-ternary-hand-cached: 2.124414130 seconds
-# sequence-ternary: 2.1359588 seconds
-# sequence: 3.503630 seconds
+integration/advent2012-day21.t.....................# kaz: 0.83776052 seconds
+# gerdr: 0.8612278 seconds
+# recursive-ternary: 0.9269226 seconds
+# loop: 0.952894646 seconds
+# hand-memoization: 1.31343097 seconds
+# recursive-ternary-hand-cached: 2.11576773 seconds
+# sequence-ternary: 2.16160165 seconds
+# sequence: 3.5096615 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2644,10 +2647,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5228,     0,   129,   347,  5704,  5796
+"S02",        5230,     0,   129,   347,  5706,  5798
 "S03",        5156,     0,   121,   100,  5377,  5395
 "S04",        1042,     0,    52,    36,  1130,  1182
-"S05",        5399,     0,   100,   171,  5670,  5943
+"S05",        5400,     0,   100,   171,  5671,  5944
 "S06",        1364,     0,    51,    91,  1506,  1564
 "S07",           0,     0,     0,     0,     0,     0
 "S09",        1899,     0,     9,   102,  2010,  2010
@@ -2665,9 +2668,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         339,     0,     4,     2,   345,   355
-"S32",        9616,     0,   121,   169,  9906,  8338
+"S32",        9617,     0,   121,   169,  9907,  8339
 "int",        1253,     0,    14,    20,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35795,     0,   686,  1322, 37803, 37747
+"total",     35799,     0,   686,  1322, 37807, 37751
 ----------------
 No failures!

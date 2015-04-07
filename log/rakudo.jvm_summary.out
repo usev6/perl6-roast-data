@@ -166,7 +166,7 @@ S02-types/baghash.rakudo.jvm....................... 223    0    3   24  250
      2 todo   : in flux
 S02-types/bool.t...................................  51    0    0    0   51
 S02-types/built-in.t...............................   1    0    0    0    1
-S02-types/capture.t................................  24    0    0    0   24
+S02-types/capture.t................................  26    0    0    0   26
 S02-types/catch_type_cast_mismatch.t...............  11    0    0    0   11
 S02-types/declare.rakudo.jvm.......................  55    0    2   22   79
      1 skipped: AnyChar NYI
@@ -399,9 +399,8 @@ S03-operators/precedence.rakudo.jvm................  56    0    0    2   58
      2 skipped: nom regression
 S03-operators/range-basic.t........................ 140    0    0    0  140
 S03-operators/range-int.t.......................... 480    0    0    0  480
-S03-operators/range.rakudo.jvm.....................  82   41    2    0  125
+S03-operators/range.rakudo.jvm..................... 123    0    2    0  125
      2 todo   : huh?
-    41 tests aborted (missing ok/not ok)
 S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: expected Any but got Mu instead
      1 skipped: ~< NYI
@@ -737,7 +736,7 @@ S05-modifier/repetition.rakudo.jvm.................  10    0    2    0   12
 S05-modifier/sigspace.t............................  16    0    0    0   16
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  13    0    0    0   13
-S05-substitution/subst.rakudo.jvm.................. 148    0    1    0  149
+S05-substitution/subst.rakudo.jvm.................. 149    0    1    0  150
      1 todo   : be smarter about constant detection
 S05-transliteration/79778.t........................   1    0    0    0    1
 S05-transliteration/trans.rakudo.jvm...............  49    0   12    1   62
@@ -1331,7 +1330,7 @@ S32-container/roundrobin.rakudo.jvm................   4    0    1    0    5
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip
-S32-exceptions/misc.rakudo.jvm..................... 288    0    2    0  290
+S32-exceptions/misc.rakudo.jvm..................... 289    0    2    0  291
      1 todo   : Cannot find method "returns"
      1 todo   : parsing regression
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
@@ -1406,8 +1405,7 @@ S32-list/minmax.t..................................  97    0    0    0   97
 S32-list/permutations.t............................   2    0    0    0    2
 S32-list/pick.rakudo.jvm...........................  56    0    1    0   57
      1 todo   : error on pick :replace
-S32-list/reduce.t..................................   0   15    0    0   15
-    15 tests aborted (missing ok/not ok)
+S32-list/reduce.t..................................  15    0    0    0   15
 S32-list/reverse.rakudo.jvm........................  20    0    1    0   21
      1 todo   : RT #77914
 S32-list/roll.t....................................  48    0    0    0   48
@@ -1680,19 +1678,17 @@ integration/say-crash.t............................   4    0    0    0    4
 integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.rakudo.jvm................  13    0    1    0   14
-     1 todo PASSED: ?
+integration/weird-errors.t.........................  14    0    0    0   14
                                                    pass fail todo skip plan
-rosettacode/greatest_element_of_a_list.t...........   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
+rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
-"S02",        5195,     0,   141,   368,  5704,  5796
-"S03",        5115,    41,   121,   100,  5377,  5395
+"S02",        5197,     0,   141,   368,  5706,  5798
+"S03",        5156,     0,   121,   100,  5377,  5395
 "S04",        1029,     0,    50,    51,  1130,  1182
-"S05",        5303,     4,   106,   257,  5670,  5943
+"S05",        5304,     4,   106,   257,  5671,  5944
 "S06",        1354,     0,    53,    99,  1506,  1564
 "S07",           0,     0,     0,     0,     0,     0
 "S09",        1899,     0,     9,   102,  2010,  2010
@@ -1710,16 +1706,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1236,     0,     4,    44,  1284,  1945
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         339,     0,     3,     3,   345,   355
-"S32",        9454,    15,    97,   190,  9756,  8188
-"int",        1256,     0,    14,    17,  1287,  1276
-"ros",           1,     1,     0,     0,     2,     2
-"total",     35131,    61,   710,  1471, 37373, 37597
+"S32",        9470,     0,    97,   190,  9757,  8189
+"int",        1257,     0,    13,    17,  1287,  1276
+"ros",           2,     0,     0,     0,     2,     2
+"total",     35193,     4,   709,  1471, 37377, 37601
 ----------------
 Failure summary:
-S03-operators/range.rakudo.jvm aborted 41 test(s)
 S05-modifier/perl5_9.rakudo.jvm 77 - re_tests 1348/1 (1566)
 S05-modifier/perl5_9.rakudo.jvm 79 - re_tests 1352/1 (1570)
 S05-modifier/perl5_9.rakudo.jvm 81 - re_tests 1356/1 (1574)
 S05-modifier/perl5_9.rakudo.jvm 83 - re_tests 1360/1 (1578)
-S32-list/reduce.t aborted 15 test(s)
-rosettacode/greatest_element_of_a_list.t aborted 1 test(s)
