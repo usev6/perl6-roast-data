@@ -779,7 +779,7 @@ S03-operators/value_equivalence.rakudo.moar........  73    0    2    0   75
      1 todo   : \@a seems to flatten when it should not
 S03-sequence/arity-2-or-more.t.....................  20    0    0    0   20
 S03-sequence/arity0.t..............................  13    0    0    0   13
-S03-sequence/basic.t............................... 133    0    0    0  133
+S03-sequence/basic.t............................... 134    0    0    0  134
 S03-sequence/limit-arity-2-or-more.t...............   8    0    0    0    8
 S03-sequence/misc.t................................  30    0    0    0   30
 S03-sequence/nonnumeric.rakudo.moar................  27    0    0   17   44
@@ -874,9 +874,9 @@ use of uninitialized value x1 of type Any in string context  in block  at lib/Te
 
 use of uninitialized value x1 of type Any in string context  in block  at lib/Test.pm:146
 
-use of uninitialized value x3 of type Any in string context  in block <unit> at t/spec/S04-declarations/my.rakudo.moar:332
+use of uninitialized value x3 of type Any in string context  in block <unit> at t/spec/S04-declarations/my.rakudo.moar:337
 
-  91    0    2    2   95
+  92    0    2    2   96
      2 skipped: nom regression, OUR::
      2 todo   : RT #117043
 S04-declarations/our.rakudo.moar...................  32    0    1    0   33
@@ -1415,10 +1415,10 @@ S10-packages/basic.rakudo.moar.....................  60    0    2    1   63
      1 todo   : ticket based only on class... RT #60446
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
 S10-packages/precompilation.rakudo.moar............# error: Could not find symbol '&C1'
-#   in method <anon> at src/gen/m-CORE.setting:16089
+#   in method <anon> at src/gen/m-CORE.setting:16099
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2908
 #   in any find_method at src/gen/m-Metamodel.nqp:1052
-#   in block <unit> at getout-61734-876508.code:4
+#   in block <unit> at getout-12373-182954.code:4
 
 
   19    0    3    0   22
@@ -1698,8 +1698,7 @@ S14-roles/parameter-subtyping.t....................  22    0    0    0   22
 S14-roles/parameterized-basic.t....................  35    0    0    0   35
 S14-roles/parameterized-mixin.rakudo.moar..........  24    0    4    0   28
      4 todo   : .does with parametric roles
-S14-roles/parameterized-type.rakudo.moar...........  30    0    0    1   31
-     1 skipped: cannot easily override [] at the moment
+S14-roles/parameterized-type.t.....................  31    0    0    0   31
 S14-roles/stubs.t..................................  10    0    0    0   10
 S14-roles/submethods.t.............................   4    0    0    0    4
 S14-traits/attributes.t............................   8    0    0    0    8
@@ -1764,8 +1763,8 @@ S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  25    0    0    0   25
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1428873576
-# Using file temp_1428873576
+S16-filehandles/chmod.t............................# Using file temp_1428960035
+# Using file temp_1428960035
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2571,14 +2570,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8473098 seconds
-# gerdr: 0.85929523 seconds
-# recursive-ternary: 0.9298438 seconds
-# loop: 0.973152 seconds
-# hand-memoization: 1.3049350 seconds
-# recursive-ternary-hand-cached: 2.1507674 seconds
-# sequence-ternary: 4.977042 seconds
-# sequence: 6.29259586 seconds
+integration/advent2012-day21.t.....................# kaz: 0.84809483 seconds
+# gerdr: 0.8608021 seconds
+# recursive-ternary: 0.9392444 seconds
+# loop: 0.9898529 seconds
+# hand-memoization: 1.3075424 seconds
+# recursive-ternary-hand-cached: 2.1490342 seconds
+# sequence-ternary: 4.97381928 seconds
+# sequence: 6.3714068 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2660,8 +2659,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5264,     0,   129,   347,  5740,  5832
-"S03",        5144,     0,   121,    99,  5364,  5382
-"S04",        1054,     0,    46,    39,  1139,  1191
+"S03",        5145,     0,   121,    99,  5365,  5383
+"S04",        1055,     0,    46,    39,  1140,  1192
 "S05",        5403,     0,   100,   171,  5674,  5947
 "S06",        1364,     0,    51,    91,  1506,  1564
 "S07",           0,     0,     0,     0,     0,     0
@@ -2670,7 +2669,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S11",         109,     0,     4,    14,   127,   146
 "S12",        1466,     0,    45,   122,  1633,  1691
 "S13",          36,     0,    10,    27,    73,    83
-"S14",         308,     0,     8,    10,   326,   339
+"S14",         309,     0,     8,     9,   326,   339
 "S15",       76565,     0,     4,    18, 76587, 76607
 "S16",         259,     0,     0,    16,   275,   307
 "S17",         709,     0,     4,    31,   744,   744
@@ -2683,7 +2682,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9656,     0,   121,   169,  9946,  8543
 "int",        1247,     6,    14,    20,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",    112210,     6,   679,  1327,114222,114330
+"total",    112213,     6,   679,  1326,114224,114332
 ----------------
 Failure summary:
 integration/advent2012-day04.t aborted 6 test(s)

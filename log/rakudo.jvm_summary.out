@@ -424,7 +424,7 @@ S03-operators/value_equivalence.rakudo.jvm.........  73    0    2    0   75
      1 todo   : \@a seems to flatten when it should not
 S03-sequence/arity-2-or-more.t.....................  20    0    0    0   20
 S03-sequence/arity0.t..............................  13    0    0    0   13
-S03-sequence/basic.t............................... 133    0    0    0  133
+S03-sequence/basic.t............................... 134    0    0    0  134
 S03-sequence/limit-arity-2-or-more.t...............   8    0    0    0    8
 S03-sequence/misc.t................................  30    0    0    0   30
 S03-sequence/nonnumeric.rakudo.jvm.................  27    0    0   17   44
@@ -473,7 +473,7 @@ S04-declarations/constant.rakudo.jvm...............  49    0    4    3   56
 S04-declarations/implicit-parameter.t..............  19    0    0    0   19
 S04-declarations/multiple.rakudo.jvm...............   5    0    1    0    6
      1 todo   : nom regression
-S04-declarations/my.rakudo.jvm.....................  91    0    2    2   95
+S04-declarations/my.rakudo.jvm.....................  92    0    2    2   96
      2 skipped: nom regression, OUR::
      2 todo   : RT #117043
 S04-declarations/our.rakudo.jvm....................  32    0    1    0   33
@@ -1124,8 +1124,7 @@ S14-roles/parameter-subtyping.t....................  22    0    0    0   22
 S14-roles/parameterized-basic.t....................  35    0    0    0   35
 S14-roles/parameterized-mixin.rakudo.jvm...........  24    0    4    0   28
      4 todo   : .does with parametric roles
-S14-roles/parameterized-type.rakudo.jvm............  30    0    0    1   31
-     1 skipped: cannot easily override [] at the moment
+S14-roles/parameterized-type.t.....................  31    0    0    0   31
 S14-roles/stubs.t..................................  10    0    0    0   10
 S14-roles/submethods.t.............................   4    0    0    0    4
 S14-traits/attributes.t............................   8    0    0    0    8
@@ -1688,8 +1687,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,     0,     0,    61
 "S02",        5227,     0,   141,   372,  5740,  5832
-"S03",        5144,     0,   121,    99,  5364,  5382
-"S04",        1037,     3,    45,    54,  1139,  1191
+"S03",        5145,     0,   121,    99,  5365,  5383
+"S04",        1038,     3,    45,    54,  1140,  1192
 "S05",        5307,     4,   106,   257,  5674,  5947
 "S06",        1354,     0,    53,    99,  1506,  1564
 "S07",           0,     0,     0,     0,     0,     0
@@ -1698,7 +1697,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S11",          87,     0,    26,    14,   127,   146
 "S12",        1458,     0,    53,   122,  1633,  1691
 "S13",          36,     0,    10,    27,    73,    83
-"S14",         306,     0,     8,    12,   326,   339
+"S14",         307,     0,     8,    11,   326,   339
 "S15",           7,     0,     4,    18,    29, 76607
 "S16",         258,     0,     0,    17,   275,   307
 "S17",         667,     0,     4,    27,   698,   744
@@ -1711,7 +1710,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9509,     0,    97,   190,  9796,  8393
 "int",        1249,    11,    12,    15,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35270,    18,   702,  1478, 37468,114180
+"total",     35273,    18,   702,  1477, 37470,114182
 ----------------
 Failure summary:
 S04-statement-modifiers/values_in_bool_context.t 6 - literal in bool context - stringified true value
