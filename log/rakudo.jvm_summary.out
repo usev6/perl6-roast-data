@@ -418,7 +418,7 @@ S03-operators/spaceship-and-containers.t...........   6    0    0    0    6
 S03-operators/spaceship.t..........................   5    0    0    0    5
 S03-operators/subscript-adverbs.t.................. 110    0    0    0  110
 S03-operators/subscript-vs-lt.t....................   4    0    0    0    4
-S03-operators/ternary.t............................  21    0    0    0   21
+S03-operators/ternary.t............................  27    0    0    0   27
 S03-operators/value_equivalence.rakudo.jvm.........  73    0    2    0   75
      1 todo   : .WHICH based on type names
      1 todo   : \@a seems to flatten when it should not
@@ -733,8 +733,8 @@ S05-modifier/repetition.rakudo.jvm.................  10    0    2    0   12
 S05-modifier/sigspace.t............................  16    0    0    0   16
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  13    0    0    0   13
-S05-substitution/subst.rakudo.jvm.................. 150    0    1    3  154
-     3 skipped: No such method 'subst-mutate' for invocant of type 'Any'
+S05-substitution/subst.rakudo.jvm.................. 152    0    1    1  154
+     1 skipped: RT #114388 -- No such method 'subst-mutate' for invocant of type 'Any'
      1 todo   : be smarter about constant detection
 S05-transliteration/79778.t........................   1    0    0    0    1
 S05-transliteration/trans.rakudo.jvm...............  61    0    0    1   62
@@ -1025,9 +1025,8 @@ S12-introspection/meta-class.rakudo.jvm............   9    0    0    4   13
      1 skipped: .version, version number parsing
      1 skipped: precedence of HOW
      1 skipped: precedence of prefix:<^>
-S12-introspection/methods.rakudo.jvm...............  45    0    2   11   58
-    11 skipped: nom regression
-     2 todo   : nom regression
+S12-introspection/methods.rakudo.jvm...............  45    0    0   12   57
+    12 skipped: nom regression
 S12-introspection/parents.t........................  59    0    0    0   59
 S12-introspection/roles.rakudo.jvm.................   8    0    0    4   12
      4 skipped: .^roles(:tree)
@@ -1133,13 +1132,8 @@ S15-string-types/Str.rakudo.jvm....................   1    0    2    2    5
      1 skipped: :nfg adverb NYI
      1 skipped: Str.graphs NYI
      2 todo   : NYI
-S15-unicode-information/uniname.rakudo.jvm.........   6    0    2   16   24
-     5 skipped: :either NYI
-     5 skipped: :either and :one NYI
-     5 skipped: :one NYI
-     1 skipped: uninames NYI
-     1 todo   : RT #122470
-     1 todo   : RT #122471
+S15-unicode-information/uniname.rakudo.jvm.........   0   27    0    0   27
+    27 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S16-filehandles/chmod.t............................  16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
@@ -1481,10 +1475,9 @@ S32-str/index.rakudo.jvm...........................  36    0    0    2   38
      2 skipped: StrPos NYI
 S32-str/lc.t.......................................  13    0    0    0   13
 S32-str/lines.t....................................  47    0    0    0   47
-S32-str/numeric.rakudo.jvm......................... 161    0    7    0  168
+S32-str/numeric.rakudo.jvm......................... 162    0    6    0  168
      5 todo   : Failure
      1 todo   : complex Str.Numeric
-     1 todo PASSED: NYI
 S32-str/ords.t.....................................   6    0    0    0    6
 S32-str/pack.t.....................................   7    0    0    0    7
 S32-str/pos.t......................................   2    0    0    0    2
@@ -1682,20 +1675,20 @@ rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
-"S01",           0,     0,     0,     0,     0,    56
+"S01",           0,     0,     0,     0,     0,    57
 "S02",        5227,     0,   141,   372,  5740,  5832
-"S03",        5145,     0,   120,   100,  5365,  5383
+"S03",        5151,     0,   120,   100,  5371,  5389
 "S04",        1058,     0,    45,    51,  1154,  1206
-"S05",        5318,     4,    93,   261,  5676,  5949
+"S05",        5320,     4,    93,   259,  5676,  5949
 "S06",        1354,     0,    53,    99,  1506,  1564
 "S07",           0,     0,     0,     0,     0,     0
 "S09",        1899,     0,     9,   102,  2010,  2010
 "S10",          90,     0,     6,     1,    97,   154
 "S11",          87,     0,    26,    14,   127,   146
-"S12",        1458,     0,    53,   122,  1633,  1691
+"S12",        1458,     0,    51,   123,  1632,  1690
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         307,     0,     8,    11,   326,   339
-"S15",           7,     0,     4,    18,    29, 76607
+"S15",           1,    27,     2,     2,    32, 76625
 "S16",         258,     0,     0,    17,   275,   307
 "S17",         667,     0,     4,    27,   698,   744
 "S19",          13,     0,     0,     0,    13,    18
@@ -1704,15 +1697,16 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1234,     0,     4,    48,  1286,  1947
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         339,     0,     3,     3,   345,   355
-"S32",        9510,     0,    98,   189,  9797,  8394
+"S32",        9511,     0,    97,   189,  9797,  8399
 "int",        1249,    11,    12,    15,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35305,    15,   689,  1478, 37487,114194
+"total",     35308,    42,   684,  1461, 37495,114223
 ----------------
 Failure summary:
 S05-modifier/perl5_9.rakudo.jvm 77 - re_tests 1348/1 (1566)
 S05-modifier/perl5_9.rakudo.jvm 79 - re_tests 1352/1 (1570)
 S05-modifier/perl5_9.rakudo.jvm 81 - re_tests 1356/1 (1574)
 S05-modifier/perl5_9.rakudo.jvm 83 - re_tests 1360/1 (1578)
+S15-unicode-information/uniname.rakudo.jvm aborted 27 test(s)
 integration/advent2012-day04.t aborted 6 test(s)
 integration/precompiled.rakudo.jvm aborted 5 test(s)

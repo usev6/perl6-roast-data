@@ -773,7 +773,7 @@ S03-operators/spaceship-and-containers.t...........   6    0    0    0    6
 S03-operators/spaceship.t..........................   5    0    0    0    5
 S03-operators/subscript-adverbs.t.................. 110    0    0    0  110
 S03-operators/subscript-vs-lt.t....................   4    0    0    0    4
-S03-operators/ternary.t............................  21    0    0    0   21
+S03-operators/ternary.t............................  27    0    0    0   27
 S03-operators/value_equivalence.rakudo.moar........  73    0    2    0   75
      1 todo   : .WHICH based on type names
      1 todo   : \@a seems to flatten when it should not
@@ -1166,8 +1166,8 @@ S05-substitution/subst.rakudo.moar.................Potential difficulties:
     Redeclaration of symbol $_
     at t/spec/S05-substitution/subst.rakudo.moar:457
     ------> [32m    my $_[33m⏏[31m = 0; s{^(\d+)$} = sprintf "%3d -", $_;[0m
- 150    0    1    3  154
-     3 skipped: No such method 'subst-mutate' for invocant of type 'Any'
+ 152    0    1    1  154
+     1 skipped: RT #114388 -- No such method 'subst-mutate' for invocant of type 'Any'
      1 todo   : be smarter about constant detection
 S05-transliteration/79778.t........................   1    0    0    0    1
 S05-transliteration/trans.rakudo.moar..............  61    0    0    1   62
@@ -1427,10 +1427,10 @@ use of uninitialized value $_ of type Any in string context  in block  at t/spec
 use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:76
 
 # error: Could not find symbol '&C1'
-#   in method <anon> at src/gen/m-CORE.setting:16217
+#   in method <anon> at src/gen/m-CORE.setting:16256
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2908
 #   in any find_method at src/gen/m-Metamodel.nqp:1052
-#   in block <unit> at getout-13458-259388.code:4
+#   in block <unit> at getout-69807-459104.code:4
 
 
   19    0    3    0   22
@@ -1599,15 +1599,14 @@ S12-introspection/meta-class.rakudo.moar...........   9    0    0    4   13
      1 skipped: .version, version number parsing
      1 skipped: precedence of HOW
      1 skipped: precedence of prefix:<^>
-S12-introspection/methods.rakudo.moar..............Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S12-introspection/methods.rakudo.moar:164
+S12-introspection/methods.rakudo.moar..............Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S12-introspection/methods.rakudo.moar:163
 
-Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S12-introspection/methods.rakudo.moar:164
+Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S12-introspection/methods.rakudo.moar:163
 
-Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S12-introspection/methods.rakudo.moar:164
+Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S12-introspection/methods.rakudo.moar:163
 
-  45    0    2   11   58
-    11 skipped: nom regression
-     2 todo   : nom regression
+  45    0    0   12   57
+    12 skipped: nom regression
 S12-introspection/parents.t........................  59    0    0    0   59
 S12-introspection/roles.rakudo.moar................   8    0    0    4   12
      4 skipped: .^roles(:tree)
@@ -1767,18 +1766,18 @@ S15-string-types/Str.rakudo.moar...................   1    0    2    2    5
      1 skipped: :nfg adverb NYI
      1 skipped: Str.graphs NYI
      2 todo   : NYI
-S15-unicode-information/unimatch-general.t......... 209    0    0    0  209
-S15-unicode-information/uniname.rakudo.moar........   6    0    2   16   24
+S15-unicode-information/unimatch-general.t......... 217    0    0    0  217
+S15-unicode-information/uniname.rakudo.moar........   8    0    2   17   27
      5 skipped: :either NYI
      5 skipped: :either and :one NYI
      5 skipped: :one NYI
-     1 skipped: uninames NYI
+     2 skipped: uninames NYI
      1 todo   : RT #122470
      1 todo   : RT #122471
-S15-unicode-information/unival.t...................  25    0    0    0   25
+S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1429219214
-# Using file temp_1429219214
+S16-filehandles/chmod.t............................# Using file temp_1429305607
+# Using file temp_1429305607
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2348,10 +2347,9 @@ S32-str/index.rakudo.moar..........................  36    0    0    2   38
 S32-str/lc.rakudo.moar.............................  12    0    1    0   13
      1 todo   : case folding, MoarVM #87
 S32-str/lines.t....................................  47    0    0    0   47
-S32-str/numeric.rakudo.moar........................ 161    0    7    0  168
+S32-str/numeric.rakudo.moar........................ 162    0    6    0  168
      5 todo   : Failure
      1 todo   : complex Str.Numeric
-     1 todo PASSED: NYI
 S32-str/ords.t.....................................   6    0    0    0    6
 S32-str/pack.t.....................................   7    0    0    0    7
 S32-str/pos.t......................................   2    0    0    0    2
@@ -2584,14 +2582,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8902284 seconds
-# gerdr: 0.902594 seconds
-# recursive-ternary: 0.9729877 seconds
-# loop: 0.9984277 seconds
-# hand-memoization: 1.33777863 seconds
-# recursive-ternary-hand-cached: 2.19904967 seconds
-# sequence-ternary: 4.84881136 seconds
-# sequence: 6.40365599 seconds
+integration/advent2012-day21.t.....................# kaz: 0.87691783 seconds
+# gerdr: 0.8896628 seconds
+# recursive-ternary: 0.9601920 seconds
+# loop: 0.981311 seconds
+# hand-memoization: 1.3425929 seconds
+# recursive-ternary-hand-cached: 2.168907 seconds
+# sequence-ternary: 4.9655694 seconds
+# sequence: 6.34925054 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2671,20 +2669,20 @@ rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
-"S01",           0,     0,     0,     0,     0,    56
+"S01",           0,     0,     0,     0,     0,    57
 "S02",        5264,     0,   129,   347,  5740,  5832
-"S03",        5145,     0,   120,   100,  5365,  5383
+"S03",        5151,     0,   120,   100,  5371,  5389
 "S04",        1072,     0,    46,    36,  1154,  1206
-"S05",        5414,     0,    87,   175,  5676,  5949
+"S05",        5416,     0,    87,   173,  5676,  5949
 "S06",        1364,     0,    51,    91,  1506,  1564
 "S07",           0,     0,     0,     0,     0,     0
 "S09",        1899,     0,     9,   102,  2010,  2010
 "S10",          91,     0,     5,     1,    97,   154
 "S11",         109,     0,     4,    14,   127,   146
-"S12",        1466,     0,    45,   122,  1633,  1691
+"S12",        1466,     0,    43,   123,  1632,  1690
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         309,     0,     8,     9,   326,   339
-"S15",       76565,     0,     4,    18, 76587, 76607
+"S15",       76582,     0,     4,    19, 76605, 76625
 "S16",         259,     0,     0,    16,   275,   307
 "S17",         709,     0,     4,    31,   744,   744
 "S19",          13,     0,     0,     0,    13,    18
@@ -2693,10 +2691,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1234,     0,     4,    48,  1286,  1947
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         339,     0,     4,     2,   345,   355
-"S32",        9657,     0,   121,   169,  9947,  8544
+"S32",        9658,     0,   120,   169,  9947,  8549
 "int",        1247,     6,    14,    20,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",    112242,     6,   665,  1328,114241,114344
+"total",    112268,     6,   662,  1328,114264,114373
 ----------------
 Failure summary:
 integration/advent2012-day04.t aborted 6 test(s)
