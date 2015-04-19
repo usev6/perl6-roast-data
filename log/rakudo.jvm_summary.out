@@ -447,7 +447,7 @@ S03-operators/value_equivalence.rakudo.jvm.........  73    0    2    0   75
      1 todo   : \@a seems to flatten when it should not
 S03-sequence/arity-2-or-more.t.....................  20    0    0    0   20
 S03-sequence/arity0.t..............................  13    0    0    0   13
-S03-sequence/basic.t............................... 134    0    0    0  134
+S03-sequence/basic.t............................... 136    0    0    0  136
 S03-sequence/limit-arity-2-or-more.t...............   8    0    0    0    8
 S03-sequence/misc.t................................  30    0    0    0   30
 S03-sequence/nonnumeric.rakudo.jvm.................  27    0    0   17   44
@@ -1134,8 +1134,7 @@ S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
 S14-roles/instantiation.t..........................  19    0    0    0   19
 S14-roles/lexical.t................................   9    0    0    0    9
-S14-roles/mixin.rakudo.jvm.........................  29    0    0    4   33
-     1 skipped: NullPointerException with throws_like, correct otherwise
+S14-roles/mixin.rakudo.jvm.........................  30    0    0    3   33
      1 skipped: Twigil ! is only valid on attribute definitions
      2 skipped: mixin at the point of declaration is compile time
 S14-roles/namespaced.rakudo.jvm....................   2    0    1    0    3
@@ -1186,7 +1185,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   3    0    0    0    3
-S17-lowlevel/lock.rakudo.jvm.......................   7    0    0    1    8
+S17-lowlevel/lock.rakudo.jvm.......................   6    1    0    1    8
      1 skipped: not sure this test is valid
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1699,7 +1698,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    19,     0,    56,    75,    86
 "S02",        5227,     0,   141,   372,  5740,  5832
-"S03",        5151,     0,   120,   100,  5371,  5389
+"S03",        5153,     0,   120,   100,  5373,  5391
 "S04",        1058,     0,    45,    51,  1154,  1206
 "S05",        5320,     4,    93,   259,  5676,  5949
 "S06",        1354,     0,    53,    99,  1506,  1564
@@ -1709,10 +1708,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S11",          87,     0,    26,    14,   127,   146
 "S12",        1458,     0,    51,   123,  1632,  1690
 "S13",          36,     0,    10,    27,    73,    83
-"S14",         307,     0,     8,    11,   326,   339
+"S14",         308,     0,     8,    10,   326,   339
 "S15",           1,    27,     2,     2,    32, 76625
 "S16",         258,     0,     0,    17,   275,   307
-"S17",         667,     0,     4,    27,   698,   744
+"S17",         666,     1,     4,    27,   698,   744
 "S19",          13,     0,     0,     0,    13,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          17,     0,     0,     0,    17,    94
@@ -1722,7 +1721,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9511,     0,    97,   189,  9797,  8399
 "int",        1255,     5,    12,    15,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35314,    55,   684,  1517, 37570,114252
+"total",     35316,    56,   684,  1516, 37572,114254
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.jvm aborted 6 test(s)
@@ -1734,4 +1733,5 @@ S05-modifier/perl5_9.rakudo.jvm 79 - re_tests 1352/1 (1570)
 S05-modifier/perl5_9.rakudo.jvm 81 - re_tests 1356/1 (1574)
 S05-modifier/perl5_9.rakudo.jvm 83 - re_tests 1360/1 (1578)
 S15-unicode-information/uniname.rakudo.jvm aborted 27 test(s)
+S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
 integration/precompiled.rakudo.jvm aborted 5 test(s)
