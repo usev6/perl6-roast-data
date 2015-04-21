@@ -989,22 +989,25 @@ S04-statement-modifiers/while.t....................use of uninitialized value of
 
    5    0    0    0    5
 S04-statement-parsing/hash.t.......................   8    0    0    0    8
-S04-statements/do.rakudo.moar......................  21    0    0    6   27
+S04-statements/do.rakudo.moar......................  21    0    1    7   29
      3 skipped: Undeclared name A
      1 skipped: last without loop construct
-     1 skipped: next without loop construct
+     2 skipped: next without loop construct
      1 skipped: redo without loop construct
+     1 todo   : Rakudo still uses Nil here
 S04-statements/for-scope.t.........................  16    0    0    0   16
-S04-statements/for.rakudo.moar.....................  83    0    4    1   88
+S04-statements/for.rakudo.moar.....................  86    0    6    1   93
      1 skipped: optional variable in for loop (RT #63994)
      2 todo   : RT #113026 array iterator does not track a growing array
      2 todo   : RT #123005
+     2 todo   : Rakudo still uses Nil here
 S04-statements/for_with_only_one_item.t............   9    0    0    0    9
 S04-statements/gather.rakudo.moar..................  27    0    1    2   30
      2 skipped: RT #66820
      1 todo   : RT #117635 (infinite loop)
 S04-statements/given.t.............................  51    0    0    0   51
-S04-statements/if.t................................  29    0    0    0   29
+S04-statements/if.rakudo.moar......................  37    0    2    0   39
+     2 todo   : rakudo still uses Nil here
 S04-statements/label.t.............................   5    0    0    0    5
 S04-statements/last.t..............................   9    0    0    0    9
 S04-statements/loop.t..............................  15    0    0    0   15
@@ -1474,10 +1477,10 @@ use of uninitialized value $_ of type Any in string context  in block  at t/spec
 use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:76
 
 # error: Could not find symbol '&C1'
-#   in method <anon> at src/gen/m-CORE.setting:16335
+#   in method <anon> at src/gen/m-CORE.setting:16339
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2909
 #   in any find_method at src/gen/m-Metamodel.nqp:1053
-#   in block <unit> at getout-12840-152127.code:4
+#   in block <unit> at getout-42915-484744.code:4
 
 
   19    0    3    0   22
@@ -1822,17 +1825,16 @@ S15-string-types/Str.rakudo.moar...................   1    0    2    2    5
      1 skipped: Str.graphs NYI
      2 todo   : NYI
 S15-unicode-information/unimatch-general.t......... 217    0    0    0  217
-S15-unicode-information/uniname.rakudo.moar........   8    0    2   17   27
+S15-unicode-information/uniname.rakudo.moar........  10    0    2   15   27
      5 skipped: :either NYI
      5 skipped: :either and :one NYI
      5 skipped: :one NYI
-     2 skipped: uninames NYI
      1 todo   : RT #122470
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1429564824
-# Using file temp_1429564824
+S16-filehandles/chmod.t............................# Using file temp_1429651239
+# Using file temp_1429651239
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1863,7 +1865,16 @@ S17-channel/earliest.t.............................   3    0    0    0    3
 S17-lowlevel/lock.rakudo.moar......................   7    0    0    1    8
      1 skipped: not sure this test is valid
 S17-lowlevel/thread.t..............................  25    0    0    0   25
-S17-procasync/basic.rakudo.moar....................  27    0    0    3   30
+S17-procasync/basic.rakudo.moar....................
+# Failed test 'was execution successful'
+# at t/spec/S17-procasync/basic.rakudo.moar line 40
+
+# Failed test 'is the status ok'
+# at t/spec/S17-procasync/basic.rakudo.moar line 41
+# expected: '0'
+#      got: '-1'
+# Looks like you failed 2 tests of 30
+  25    2    0    3   30
      3 skipped: returns Nil (flapping tests)
 S17-procasync/print.rakudo.moar....................  11    0    0    5   16
      5 skipped: Flapping tests
@@ -2179,7 +2190,7 @@ S32-io/io-path.t...................................Saw 1 call to deprecated code
 ================================================================================
 Method path (from Str) called at:
   t/spec/S32-io/io-path.t, lines 43,8
-Deprecated since v2014.11, will be removed with release v2015.11!
+Deprecated since v2014.11, will be removed with release v2015.9!
 Please use IO instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
@@ -2204,7 +2215,7 @@ S32-io/slurp.t.....................................Saw 1 call to deprecated code
 ================================================================================
 slurp($handle,...) called at:
   t/spec/S32-io/slurp.t, lines 45,53
-Deprecated since v2014.10, will be removed with release v2015.10!
+Deprecated since v2014.10, will be removed with release v2015.9!
 Please use slurp($path,...) instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
@@ -2217,7 +2228,7 @@ S32-io/spurt.t.....................................Saw 1 call to deprecated code
 ================================================================================
 spurt($handle,...) called at:
   t/spec/S32-io/spurt.t, lines 65,75,85
-Deprecated since v2014.10, will be removed with release v2015.10!
+Deprecated since v2014.10, will be removed with release v2015.9!
 Please use spurt($path,...) instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
@@ -2674,14 +2685,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8911294 seconds
-# gerdr: 0.91737334 seconds
-# recursive-ternary: 0.9741798 seconds
-# loop: 1.0242840 seconds
-# hand-memoization: 1.34182100 seconds
-# recursive-ternary-hand-cached: 2.20590505 seconds
-# sequence-ternary: 4.9652668 seconds
-# sequence: 6.39483866 seconds
+integration/advent2012-day21.t.....................# kaz: 0.9028118 seconds
+# gerdr: 0.9178908 seconds
+# recursive-ternary: 1.00562557 seconds
+# loop: 1.010504 seconds
+# hand-memoization: 1.345555 seconds
+# recursive-ternary-hand-cached: 2.20461596 seconds
+# sequence-ternary: 4.9425236 seconds
+# sequence: 6.42267697 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2705,7 +2716,7 @@ integration/advent2013-day19.t.....................Saw 1 call to deprecated code
 ================================================================================
 Method more (from Supply) called at:
   t/spec/integration/advent2013-day19.t, lines 17,18,19,27,36,40
-Deprecated since v2014.10, will be removed with release v2015.10!
+Deprecated since v2014.10, will be removed with release v2015.9!
 Please use emit instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these calls to deprecated code adapted,
@@ -2775,7 +2786,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,    19,     0,    56,    75,    86
 "S02",        5271,     0,   129,   340,  5740,  5832
 "S03",        5153,     0,   120,   100,  5373,  5391
-"S04",        1072,     0,    46,    36,  1154,  1206
+"S04",        1083,     0,    51,    37,  1171,  1223
 "S05",        5416,     0,    87,   173,  5676,  5949
 "S06",        1364,     0,    51,    91,  1506,  1564
 "S07",           0,     0,     0,     0,     0,     0
@@ -2785,9 +2796,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S12",        1467,     0,    43,   123,  1633,  1690
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         310,     0,     8,     8,   326,   339
-"S15",       78414,     0,     4,    19, 78437, 78457
+"S15",       78416,     0,     4,    17, 78437, 78457
 "S16",         259,     0,     0,    16,   275,   307
-"S17",         709,     0,     4,    31,   744,   744
+"S17",         707,     2,     4,    31,   744,   744
 "S19",          13,     0,     0,     0,    13,    18
 "S22",          24,     0,     0,     0,    24,    24
 "S24",          17,     0,     0,     0,    17,    94
@@ -2797,10 +2808,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9760,     0,   210,   191, 10161,  8547
 "int",        1258,     0,    14,    15,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",    114226,    19,   752,  1393,116390,116236
+"total",    114237,    21,   757,  1392,116407,116253
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.moar aborted 6 test(s)
 S01-perl-5-integration/roundtrip.t aborted 5 test(s)
 S01-perl-5-integration/strings.rakudo.moar aborted 6 test(s)
 S01-perl-5-integration/subs.t aborted 2 test(s)
+S17-procasync/basic.rakudo.moar 14 - was execution successful
+S17-procasync/basic.rakudo.moar 15 - is the status ok
