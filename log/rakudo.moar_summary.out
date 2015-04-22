@@ -1057,7 +1057,8 @@ S05-grammar/signatures.t...........................   2    0    0    0    2
 S05-grammar/ws.rakudo.moar.........................  10    0    0    2   12
      2 skipped: infinite loop: RT #64094 (noauto)
 S05-interpolation/lexicals.t.......................  10    0    0    0   10
-S05-interpolation/regex-in-variable.rakudo.moar....  34    0    1    0   35
+S05-interpolation/regex-in-variable.rakudo.moar....  36    0    2    0   38
+     1 todo   : escaping characters before EVAL is the wrong way to fix this
      1 todo   : warn on undef
 S05-mass/charsets.t................................  17    0    0    0   17
 S05-mass/named-chars.t............................. 431    0    0    0  431
@@ -1480,7 +1481,7 @@ use of uninitialized value $_ of type Any in string context  in block  at t/spec
 #   in method <anon> at src/gen/m-CORE.setting:16339
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2909
 #   in any find_method at src/gen/m-Metamodel.nqp:1053
-#   in block <unit> at getout-42915-484744.code:4
+#   in block <unit> at getout-85075-824838.code:4
 
 
   19    0    3    0   22
@@ -1833,8 +1834,8 @@ S15-unicode-information/uniname.rakudo.moar........  10    0    2   15   27
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1429651239
-# Using file temp_1429651239
+S16-filehandles/chmod.t............................# Using file temp_1429737630
+# Using file temp_1429737630
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2685,14 +2686,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.9028118 seconds
-# gerdr: 0.9178908 seconds
-# recursive-ternary: 1.00562557 seconds
-# loop: 1.010504 seconds
-# hand-memoization: 1.345555 seconds
-# recursive-ternary-hand-cached: 2.20461596 seconds
-# sequence-ternary: 4.9425236 seconds
-# sequence: 6.42267697 seconds
+integration/advent2012-day21.t.....................# kaz: 0.8997341 seconds
+# gerdr: 0.9261390 seconds
+# recursive-ternary: 0.9867963 seconds
+# loop: 1.0181686 seconds
+# hand-memoization: 1.338546 seconds
+# recursive-ternary-hand-cached: 2.2117574 seconds
+# sequence-ternary: 4.950054 seconds
+# sequence: 6.3199022 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2708,7 +2709,12 @@ integration/advent2013-day09.t.....................  21    0    0    0   21
 integration/advent2013-day10.rakudo.moar...........  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.t.....................  32    0    0    0   32
-integration/advent2013-day14.t.....................  10    0    0    0   10
+integration/advent2013-day14.t.....................# combiner failure:Cannot call method 'count' on a null object
+===SORRY!===
+Cannot call method 'count' on a null object
+# Looks like you planned 10 tests, but ran 6
+   6    4    0    0   10
+     4 tests aborted (missing ok/not ok)
 integration/advent2013-day15.rakudo.moar...........  27    0    3    0   30
      3 todo   : list of numbers
 integration/advent2013-day18.t.....................  10    0    0    0   10
@@ -2787,7 +2793,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        5271,     0,   129,   340,  5740,  5832
 "S03",        5153,     0,   120,   100,  5373,  5391
 "S04",        1083,     0,    51,    37,  1171,  1223
-"S05",        5416,     0,    87,   173,  5676,  5949
+"S05",        5418,     0,    88,   173,  5679,  5952
 "S06",        1364,     0,    51,    91,  1506,  1564
 "S07",           0,     0,     0,     0,     0,     0
 "S09",        1899,     0,     9,   102,  2010,  2010
@@ -2806,9 +2812,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         341,     0,     4,     2,   347,   357
 "S32",        9760,     0,   210,   191, 10161,  8547
-"int",        1258,     0,    14,    15,  1287,  1276
+"int",        1254,     4,    14,    15,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",    114237,    21,   757,  1392,116407,116253
+"total",    114235,    25,   758,  1392,116410,116256
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.moar aborted 6 test(s)
@@ -2817,3 +2823,4 @@ S01-perl-5-integration/strings.rakudo.moar aborted 6 test(s)
 S01-perl-5-integration/subs.t aborted 2 test(s)
 S17-procasync/basic.rakudo.moar 14 - was execution successful
 S17-procasync/basic.rakudo.moar 15 - is the status ok
+integration/advent2013-day14.t aborted 4 test(s)
