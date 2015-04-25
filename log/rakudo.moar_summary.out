@@ -333,23 +333,7 @@ S02-types/infinity.rakudo.moar.....................   6    0    3    4   13
      4 skipped: integer Inf
      3 todo   : Int conversion of NaN and Inf
 S02-types/instants-and-durations.t.................  12    0    0    0   12
-S02-types/int-uint.t...............................use of uninitialized value of type Int in string context  in block <unit> at EVAL_6:1
-
-use of uninitialized value of type Int in string context  in block <unit> at EVAL_7:1
-
-use of uninitialized value of type Int in string context  in block <unit> at EVAL_8:1
-
-use of uninitialized value of type Int in string context  in block <unit> at EVAL_9:1
-
-use of uninitialized value of type Int in string context  in block <unit> at EVAL_10:1
-
-use of uninitialized value of type Int in string context  in block <unit> at EVAL_11:1
-
-use of uninitialized value of type Int in string context  in block <unit> at EVAL_12:1
-
-use of uninitialized value of type Int in string context  in block <unit> at EVAL_13:1
-
-   1    0    0    0    1
+S02-types/int-uint.t...............................   1    0    0    0    1
 S02-types/isDEPRECATED.rakudo.moar.................  13    0    8    0   21
      8 todo   : NYI
 S02-types/lazy-lists.t.............................  23    0    0    0   23
@@ -1101,21 +1085,16 @@ S05-metachars/tilde.rakudo.moar....................  14    0    1   12   27
      3 skipped: exceptions from regexes
      5 skipped: should not throw exceptions
      1 todo   : RT #77616
-S05-metasyntax/angle-brackets.rakudo.moar..........Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S05-metasyntax/angle-brackets.rakudo.moar:193
-
-Code object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S05-metasyntax/angle-brackets.rakudo.moar:193
-
-  67    0    3   21   91
+S05-metasyntax/angle-brackets.rakudo.moar..........  68    0    1   22   91
      2 skipped: <$subrule> NYI
      1 skipped: <&foo()> NYI
     11 skipped: <*literal>
      2 skipped: <test()> NYI
      1 skipped: <~~ ... >
+     2 skipped: The use of a hash as an assertion is reserved.
      2 skipped: angle quotes in regexes
      1 skipped: colon arguments NYI
-     1 skipped: indirect subrule call NYI
      1 todo   : !!! in regexes
-     2 todo   : <%hash> NYI
 S05-metasyntax/assertions.t........................   4    0    0    0    4
 S05-metasyntax/changed.t...........................  12    0    0    0   12
 S05-metasyntax/charset.t...........................  41    0    0    0   41
@@ -1478,10 +1457,10 @@ use of uninitialized value $_ of type Any in string context  in block  at t/spec
 use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:76
 
 # error: Could not find symbol '&C1'
-#   in method <anon> at src/gen/m-CORE.setting:16394
+#   in method <anon> at src/gen/m-CORE.setting:16417
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2909
 #   in any find_method at src/gen/m-Metamodel.nqp:1053
-#   in block <unit> at getout-40195-667278.code:4
+#   in block <unit> at getout-84846-12.code:4
 
 
   19    0    3    0   22
@@ -1840,16 +1819,18 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1429910433
-# Using file temp_1429910433
+S16-filehandles/chmod.t............................# Using file temp_1429996837
+# Using file temp_1429996837
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
 S16-filehandles/filetest.rakudo.moar...............  34    0    0    9   43
      6 skipped: :M, :C, :A
      3 skipped: no file README
-S16-filehandles/io.t...............................  87    0    0    0   87
-S16-filehandles/io_in_for_loops.t..................  29    0    0    0   29
+S16-filehandles/io.rakudo.moar..................... 110    0    0    2  112
+     1 skipped: Too late to change filehandle encoding
+     1 skipped: Will fail due to above failure
+S16-filehandles/io_in_for_loops.t..................  33    0    0    0   33
 S16-filehandles/io_in_while_loops.t................  13    0    0    0   13
 S16-filehandles/mkdir_rmdir.t......................  14    0    0    0   14
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -1974,7 +1955,7 @@ S17-supply/reverse.t...............................# **** scheduling with Thread
    3    0    0    0    3
 S17-supply/rotor.t.................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
-   9    0    0    0    9
+  17    0    0    0   17
 S17-supply/schedule-on.t...........................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    7    0    0    0    7
@@ -2063,10 +2044,9 @@ S29-context/sleep.t................................# sleep-timer() for 3 seconds
 # checking infinite waiting times
   17    0    0    0   17
 S29-conversions/hash.t.............................   8    0    0    0    8
-S29-conversions/ord_and_chr.rakudo.moar............ 254    0    3    0  257
+S29-conversions/ord_and_chr.rakudo.moar............ 255    0    2    0  257
      1 todo   : chr max
      1 todo   : chr surrogate
-     1 todo PASSED: RT #65172 - combining graphemes
 S29-os/system.t....................................   6    0    0    0    6
                                                    pass fail todo skip plan
 S32-array/bool.t...................................  15    0    0    0   15
@@ -2398,7 +2378,7 @@ S32-str/chomp.t....................................  39    0    0    0   39
 S32-str/chop.t.....................................  32    0    0    0   32
 S32-str/comb.rakudo.moar...........................  40    0    0    1   41
      1 skipped: cannot call match, no signature matches
-S32-str/encode.rakudo.moar.........................  21    0    0    1   22
+S32-str/encode.rakudo.moar.........................  25    0    0    1   26
      1 skipped: We do not handle NDF yet
 S32-str/ends-with.t................................   8    0    0    0    8
 S32-str/flip.t.....................................  13    0    0    0   13
@@ -2483,8 +2463,7 @@ S32-str/trim.t.....................................  36    0    0    0   36
 S32-str/uc.rakudo.moar.............................  16    0    1    0   17
      1 todo   : case folding of German sharp S, RT #121377
 S32-str/unpack.t...................................  12    0    0    0   12
-S32-str/words.rakudo.moar..........................  11    0    0    2   13
-     2 skipped: graphemes NYI
+S32-str/words.t....................................  13    0    0    0   13
 S32-temporal/Date.t................................Potential difficulties:
     Leading 0 does not indicate octal in Perl 6; please use 0o6 if you mean that
     at t/spec/S32-temporal/Date.t:15
@@ -2681,14 +2660,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.9096386 seconds
-# gerdr: 0.92780845 seconds
-# recursive-ternary: 0.9988015 seconds
-# loop: 1.0158105 seconds
-# hand-memoization: 1.3420748 seconds
-# recursive-ternary-hand-cached: 2.2011407 seconds
-# sequence-ternary: 4.92714393 seconds
-# sequence: 6.3799993 seconds
+integration/advent2012-day21.t.....................# kaz: 0.9162006 seconds
+# gerdr: 0.926203 seconds
+# recursive-ternary: 1.00181786 seconds
+# loop: 1.04398662 seconds
+# hand-memoization: 1.390811 seconds
+# recursive-ternary-hand-cached: 2.2257145 seconds
+# sequence-ternary: 5.5804985 seconds
+# sequence: 7.06582898 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2760,7 +2739,7 @@ integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
 integration/weird-errors.rakudo.moar...............  13    0    1    0   14
-     1 todo PASSED: RT #123686 & RT #124318
+     1 todo   : RT #123686 & RT #124318
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
@@ -2770,7 +2749,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        5274,     0,   126,   331,  5731,  5823
 "S03",        5153,     0,   120,   100,  5373,  5391
 "S04",        1083,     0,    51,    37,  1171,  1223
-"S05",        5410,     0,    90,   175,  5675,  5948
+"S05",        5411,     0,    88,   176,  5675,  5948
 "S06",        1364,     0,    51,    91,  1506,  1564
 "S07",           0,     0,     0,     0,     0,     0
 "S09",        1899,     0,     9,   102,  2010,  2010
@@ -2780,18 +2759,18 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         310,     0,     8,     8,   326,   339
 "S15",       78474,     0,     3,    19, 78496, 78516
-"S16",         259,     0,     0,    16,   275,   307
-"S17",         709,     0,     4,    31,   744,   744
+"S16",         286,     0,     0,    18,   304,   336
+"S17",         717,     0,     4,    31,   752,   752
 "S19",          13,     0,     0,     0,    13,    18
 "S22",          24,     0,     0,     0,    24,    24
 "S24",          17,     0,     0,     0,    17,    94
 "S26",        1234,     0,     4,    48,  1286,  1947
 "S28",           7,     0,     0,     0,     7,    13
-"S29",         341,     0,     4,     2,   347,   357
-"S32",        9801,     0,   204,   191, 10196,  8571
+"S29",         342,     0,     3,     2,   347,   357
+"S32",        9807,     0,   204,   189, 10200,  8575
 "int",        1258,     0,    14,    15,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",    114335,    19,   750,  1387,116491,116326
+"total",    114378,    19,   747,  1388,116532,116367
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.moar aborted 6 test(s)
