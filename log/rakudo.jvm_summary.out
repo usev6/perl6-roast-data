@@ -1168,7 +1168,7 @@ S16-filehandles/filestat.t.........................  10    0    0    0   10
 S16-filehandles/filetest.rakudo.jvm................  34    0    0    9   43
      6 skipped: :M, :C, :A
      3 skipped: no file README
-S16-filehandles/io.rakudo.jvm...................... 102    0    8    2  112
+S16-filehandles/io.rakudo.jvm...................... 103    0    8    2  113
      1 skipped: Too late to change filehandle encoding
      1 skipped: Will fail due to above failure
      1 todo   : builtin JVM charset folds these
@@ -1246,7 +1246,8 @@ S17-supply/on-demand.t.............................   7    0    0    0    7
 S17-supply/on.t....................................  10    0    0    0   10
 S17-supply/reduce.t................................  10    0    0    0   10
 S17-supply/reverse.t...............................   3    0    0    0    3
-S17-supply/rotor.t.................................  17    0    0    0   17
+S17-supply/rotor.rakudo.jvm........................  31    0    1    0   32
+     1 todo   : only deprecated so far
 S17-supply/schedule-on.t...........................   7    0    0    0    7
 S17-supply/sort.t..................................   7    0    0    0    7
 S17-supply/squish.t................................  11    0    0    0   11
@@ -1767,8 +1768,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         309,     0,     8,     9,   326,   339
 "S15",          13,     2,     4,    17,    36, 78516
-"S16",         277,     0,     8,    19,   304,   336
-"S17",         675,     0,     4,    27,   706,   752
+"S16",         278,     0,     8,    19,   305,   337
+"S17",         689,     0,     5,    27,   721,   767
 "S19",          13,     0,     0,     0,    13,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          17,     0,     0,     0,    17,    94
@@ -1778,7 +1779,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9638,    11,   190,   211, 10050,  8425
 "int",        1255,     5,    12,    15,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35501,    43,   790,  1542, 37876,116217
+"total",     35516,    43,   791,  1542, 37892,116233
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.jvm aborted 6 test(s)
