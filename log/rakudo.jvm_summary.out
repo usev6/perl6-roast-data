@@ -438,7 +438,7 @@ S03-operators/spaceship-and-containers.t...........   6    0    0    0    6
 S03-operators/spaceship.t..........................   5    0    0    0    5
 S03-operators/subscript-adverbs.t.................. 110    0    0    0  110
 S03-operators/subscript-vs-lt.t....................   4    0    0    0    4
-S03-operators/ternary.t............................  27    0    0    0   27
+S03-operators/ternary.t............................  26    1    0    0   27
 S03-operators/value_equivalence.rakudo.jvm.........  73    0    2    0   75
      1 todo   : .WHICH based on type names
      1 todo   : \@a seems to flatten when it should not
@@ -1753,7 +1753,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    19,     0,    56,    75,    86
 "S02",        5235,     0,   141,   356,  5732,  5824
-"S03",        5178,     0,   120,   100,  5398,  5416
+"S03",        5177,     1,   120,   100,  5398,  5416
 "S04",        1082,     2,    47,    52,  1183,  1259
 "S05",        5322,     4,    91,   262,  5679,  5952
 "S06",        1354,     0,    53,    99,  1506,  1564
@@ -1776,13 +1776,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9640,    11,   190,   211, 10052,  8427
 "int",        1194,    67,    11,    15,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35505,   103,   787,  1542, 37937,116302
+"total",     35504,   104,   787,  1542, 37937,116302
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.jvm aborted 6 test(s)
 S01-perl-5-integration/roundtrip.t aborted 5 test(s)
 S01-perl-5-integration/strings.rakudo.jvm aborted 6 test(s)
 S01-perl-5-integration/subs.t aborted 2 test(s)
+S03-operators/ternary.t 22 - parenthesized adverbed literal in second part of ternary
 S04-statements/for.rakudo.jvm 61 - for loop with value-less next flattens out nexted iterations
 S04-statements/for.rakudo.jvm 63 - for loop with value-less last flattens out last iteration
 S05-modifier/perl5_9.rakudo.jvm 77 - re_tests 1348/1 (1566)
