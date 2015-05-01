@@ -509,7 +509,7 @@ S04-declarations/will.rakudo.jvm...................  10    0    4    3   17
 S04-exception-handlers/catch.t.....................  29    0    0    0   29
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
 S04-exceptions/control_across_runloop.t............   1    0    0    0    1
-S04-exceptions/fail.rakudo.jvm.....................  23    0    0    2   25
+S04-exceptions/fail.rakudo.jvm.....................  24    0    0    2   26
      2 skipped: RT #64990
 S04-exceptions/pending.rakudo.jvm..................   4    3    1   13   21
     13 skipped: $!.pending
@@ -674,12 +674,11 @@ S05-metachars/closure.rakudo.jvm...................   6    0    1    5   12
      1 todo   : make() inside closure
 S05-metachars/line-anchors.t.......................  19    0    0    0   19
 S05-metachars/newline.t............................  15    0    0    0   15
-S05-metachars/tilde.rakudo.jvm.....................  14    0    1   12   27
+S05-metachars/tilde.rakudo.jvm.....................  15    0    0   12   27
      2 skipped: backtracking into ~
      2 skipped: backtracking to find ~ goal
      3 skipped: exceptions from regexes
      5 skipped: should not throw exceptions
-     1 todo   : RT #77616
 S05-metasyntax/angle-brackets.rakudo.jvm...........  68    0    1   22   91
      2 skipped: <$subrule> NYI
      1 skipped: <&foo()> NYI
@@ -825,7 +824,7 @@ S06-operator-overloading/sub.rakudo.jvm............  57    0    2   18   77
      1 todo   : infix:<;>
 S06-operator-overloading/term.t....................   9    0    0    0    9
 S06-operator-overloading/workout.t.................  84    0    0    0   84
-S06-other/anon-hashes-vs-blocks.rakudo.jvm.........  21    0    0    1   22
+S06-other/anon-hashes-vs-blocks.rakudo.jvm.........  25    0    0    1   26
      1 skipped: jvm chokes on compiling {;} for some reason
 S06-other/introspection.t..........................  12    0    0    0   12
 S06-other/main-eval.rakudo.jvm.....................   2    0    1    0    3
@@ -1136,10 +1135,10 @@ S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
 S14-roles/instantiation.t..........................  19    0    0    0   19
 S14-roles/lexical.t................................   9    0    0    0    9
-S14-roles/mixin.rakudo.jvm.........................  29    1    0    3   33
+S14-roles/mixin.rakudo.jvm.........................  29    4    0    3   36
      1 skipped: Twigil ! is only valid on attribute definitions
      2 skipped: mixin at the point of declaration is compile time
-     1 tests aborted (missing ok/not ok)
+     4 tests aborted (missing ok/not ok)
 S14-roles/namespaced.rakudo.jvm....................   2    0    1    0    3
      1 todo   : nom regression
 S14-roles/parameter-subtyping.t....................  22    0    0    0   22
@@ -1767,17 +1766,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,    19,     0,    56,    75,    86
 "S02",        5075,   187,   124,   346,  5732,  5824
 "S03",        4803,   384,   115,    96,  5398,  5416
-"S04",         952,   144,    41,    46,  1183,  1259
-"S05",        5320,     9,    89,   261,  5679,  5952
-"S06",        1323,    52,    46,    85,  1506,  1564
+"S04",         953,   144,    41,    46,  1184,  1260
+"S05",        5321,     9,    88,   261,  5679,  5952
+"S06",        1327,    52,    46,    85,  1510,  1568
 "S07",           0,     0,     0,     0,     0,     0
 "S09",        1859,    45,     5,   101,  2010,  2010
 "S10",          83,     9,     4,     1,    97,   154
 "S11",          87,     0,    26,    14,   127,   146
 "S12",        1350,   112,    49,   122,  1633,  1690
 "S13",          29,     7,    10,    27,    73,    83
-"S14",         307,     2,     8,     9,   326,   339
-"S15",          15,     0,     4,    17,    36, 78516
+"S14",         307,     5,     8,     9,   329,   342
+"S15",          15,     0,     4,    17,    36, 78518
 "S16",         279,     0,     8,    19,   306,   338
 "S17",         691,     0,     5,    27,   723,   769
 "S19",          13,     0,     0,     0,    13,    18
@@ -1789,7 +1788,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        7951,  1730,   165,   206, 10052,  8427
 "int",        1136,   125,    11,    15,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32895,  2827,   717,  1500, 37939,116304
+"total",     32901,  2830,   716,  1500, 37947,116314
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.jvm aborted 6 test(s)
@@ -1847,7 +1846,7 @@ S12-methods/instance.t aborted 39 test(s)
 S12-methods/multi.rakudo.jvm aborted 15 test(s)
 S12-methods/what.t aborted 22 test(s)
 S13-type-casting/methods.t aborted 7 test(s)
-S14-roles/mixin.rakudo.jvm aborted 1 test(s)
+S14-roles/mixin.rakudo.jvm aborted 4 test(s)
 S14-roles/stubs.t aborted 1 test(s)
 S29-context/die.rakudo.jvm 14 - die with no output
 S29-context/die.rakudo.jvm 15 - say something and die
