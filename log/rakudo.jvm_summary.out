@@ -145,7 +145,7 @@ S02-names/pseudo.rakudo.jvm........................  52    0    8   82  142
      2 todo   : these tests disagree with STD
 S02-names/strict.rakudo.jvm........................   5    0    0    1    6
      1 skipped: lax mode does not propagate into EVAL yet
-S02-names/symbolic-deref.rakudo.jvm................  31    0    2    2   35
+S02-names/symbolic-deref.rakudo.jvm................  32    0    2    2   36
      2 skipped: NYI
      1 todo   : NYI
      1 todo   : no such symbol
@@ -320,7 +320,7 @@ S03-metaops/cross.rakudo.jvm.......................  33    0    0    1   34
      1 skipped: .slice for iterators NYI
 S03-metaops/eager-hyper.rakudo.jvm.................   6    0    0    2    8
      2 skipped: hyper prefix NYI
-S03-metaops/hyper.rakudo.jvm.......................  98  201    0    2  301
+S03-metaops/hyper.rakudo.jvm....................... 101  201    0    2  304
      2 skipped: nom regression: possible spec change/improvement
    201 tests aborted (missing ok/not ok)
 S03-metaops/not.t..................................  39    0    0    0   39
@@ -468,8 +468,8 @@ S03-smartmatch/any-str.rakudo.jvm..................   4    0    0    1    5
 S03-smartmatch/any-sub.t...........................   8    0    0    0    8
 S03-smartmatch/any-type.t..........................  15    0    0    0   15
 S03-smartmatch/array-array.t.......................  36    0    0    0   36
-S03-smartmatch/array-hash.t........................   0    6    0    0    6
-     6 tests aborted (missing ok/not ok)
+S03-smartmatch/array-hash.rakudo.jvm...............   0    0    0    6    6
+     6 skipped: RT #124444
 S03-smartmatch/capture-signature.t.................   6    0    0    0    6
 S03-smartmatch/disorganized.t......................  42    0    0    0   42
 S03-smartmatch/hash-hash.rakudo.jvm................   8    0    8    0   16
@@ -1442,7 +1442,7 @@ S32-list/pick.rakudo.jvm...........................  56    0    1    0   57
 S32-list/reduce.t..................................  15    0    0    0   15
 S32-list/reverse.rakudo.jvm........................  20    0    1    0   21
      1 todo   : RT #77914
-S32-list/roll.t....................................  48    0    0    0   48
+S32-list/roll.t....................................  49    0    0    0   49
 S32-list/rotor.t...................................   1    8    0    0    9
      8 tests aborted (missing ok/not ok)
 S32-list/sort.rakudo.jvm...........................   5   26    0    1   32
@@ -1764,8 +1764,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    19,     0,    56,    75,    86
-"S02",        5075,   187,   124,   346,  5732,  5824
-"S03",        4803,   384,   115,    96,  5398,  5416
+"S02",        5076,   187,   124,   346,  5733,  5825
+"S03",        4806,   378,   115,   102,  5401,  5419
 "S04",         953,   144,    41,    46,  1184,  1260
 "S05",        5321,     9,    88,   261,  5679,  5952
 "S06",        1327,    52,    46,    85,  1510,  1568
@@ -1785,10 +1785,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1234,     0,     4,    48,  1286,  1947
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         339,     2,     3,     3,   347,   357
-"S32",        7951,  1730,   165,   206, 10052,  8427
+"S32",        7952,  1730,   165,   206, 10053,  8428
 "int",        1136,   125,    11,    15,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     32901,  2830,   716,  1500, 37947,116314
+"total",     32906,  2824,   716,  1506, 37952,116319
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.jvm aborted 6 test(s)
@@ -1817,7 +1817,6 @@ S03-operators/buf.t aborted 6 test(s)
 S03-operators/flip-flop.rakudo.jvm aborted 21 test(s)
 S03-operators/range.rakudo.jvm aborted 11 test(s)
 S03-operators/short-circuit.t aborted 24 test(s)
-S03-smartmatch/array-hash.t aborted 6 test(s)
 S04-declarations/constant.rakudo.jvm aborted 41 test(s)
 S04-declarations/my.rakudo.jvm aborted 92 test(s)
 S04-exceptions/pending.rakudo.jvm aborted 3 test(s)

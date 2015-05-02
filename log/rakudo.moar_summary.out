@@ -231,7 +231,7 @@ S02-names/pseudo.rakudo.moar.......................  52    0    8   82  142
      2 todo   : these tests disagree with STD
 S02-names/strict.rakudo.moar.......................   5    0    0    1    6
      1 skipped: lax mode does not propagate into EVAL yet
-S02-names/symbolic-deref.rakudo.moar...............  31    0    2    2   35
+S02-names/symbolic-deref.rakudo.moar...............  32    0    2    2   36
      2 skipped: NYI
      1 todo   : NYI
      1 todo   : no such symbol
@@ -481,15 +481,15 @@ S03-metaops/cross.rakudo.moar......................  33    0    0    1   34
      1 skipped: .slice for iterators NYI
 S03-metaops/eager-hyper.rakudo.moar................   6    0    0    2    8
      2 skipped: hyper prefix NYI
-S03-metaops/hyper.rakudo.moar......................use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-metaops/hyper.rakudo.moar:432
+S03-metaops/hyper.rakudo.moar......................use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-metaops/hyper.rakudo.moar:437
 
-use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-metaops/hyper.rakudo.moar:432
+use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-metaops/hyper.rakudo.moar:437
 
-use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-metaops/hyper.rakudo.moar:432
+use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-metaops/hyper.rakudo.moar:437
 
-use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-metaops/hyper.rakudo.moar:432
+use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S03-metaops/hyper.rakudo.moar:437
 
- 297    0    1    3  301
+ 300    0    1    3  304
      1 skipped: EVAL(Buf)
      2 skipped: nom regression: possible spec change/improvement
      1 todo   : can_meta check for meta operators NYI
@@ -845,11 +845,8 @@ S03-smartmatch/any-str.rakudo.moar.................   4    0    0    1    5
 S03-smartmatch/any-sub.t...........................   8    0    0    0    8
 S03-smartmatch/any-type.t..........................  15    0    0    0   15
 S03-smartmatch/array-array.t.......................  36    0    0    0   36
-S03-smartmatch/array-hash.t........................Type check failed in binding &call; expected 'Callable' but got 'Method+{<anon>}'
-  in block <unit> at t/spec/S03-smartmatch/array-hash.t:8
-
-   0    6    0    0    6
-     6 tests aborted (missing ok/not ok)
+S03-smartmatch/array-hash.rakudo.moar..............   0    0    0    6    6
+     6 skipped: RT #124444
 S03-smartmatch/capture-signature.t.................   6    0    0    0    6
 S03-smartmatch/disorganized.t......................  42    0    0    0   42
 S03-smartmatch/hash-hash.rakudo.moar...............   8    0    8    0   16
@@ -1421,23 +1418,13 @@ use of uninitialized value <element> of type Int in string context  in sub is at
 
 use of uninitialized value <element> of type Int in string context  in sub is at lib/Test.pm:135
 
-
-# Failed test 'Can feed Arrays of Type to .new of Array[Array[Type]] (binding)'
-# at t/spec/S09-typed-arrays/arrays.rakudo.moar line 195
-# expected: $((Bool::True, Bool::False, Bool::True), (Bool::True,))
-#      got: $(Array[Bool].new(Bool::True, Bool::False, Bool::True), Array[Bool].new(Bool::True))
-
-# Failed test 'Can feed Arrays of Type to .new of Array[Array[Type]] (assignment)'
-# at t/spec/S09-typed-arrays/arrays.rakudo.moar line 200
-# expected: $((Bool::True, Bool::False, Bool::True), (Bool::True,))
-#      got: $(Array[Bool].new(Bool::True, Bool::False, Bool::True), Array[Bool].new(Bool::True))
-# Looks like you failed 2 tests of 75
-  68    2    3    2   75
+  68    0    5    2   75
      1 skipped: nested typechecks are borked
      1 skipped: type on our-variables
      1 todo   : initialization
      1 todo   : need parameterized Lists
      1 todo   : nested typechecks are borked
+     2 todo   : unexpectedly getting array Array[Bool].new
 S09-typed-arrays/hashes.t..........................  33    0    0    0   33
 S09-typed-arrays/native-decl.t.....................   8    0    0    0    8
 S09-typed-arrays/native-int.rakudo.moar............# Testing int8 array
@@ -1479,7 +1466,7 @@ use of uninitialized value $_ of type Any in string context  in block <unit> at 
 # error: Could not find symbol '&C1'
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2914
 #   in any find_method at src/gen/m-Metamodel.nqp:1053
-#   in block <unit> at getout-45593-459346.code:4
+#   in block <unit> at getout-79486-433803.code:4
 
 
   19    0    3    0   22
@@ -1835,8 +1822,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
      1 todo   : RT #122471
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1430515243
-# Using file temp_1430515243
+S16-filehandles/chmod.t............................# Using file temp_1430601636
+# Using file temp_1430601636
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2287,7 +2274,7 @@ S32-list/pick.rakudo.moar..........................  56    0    1    0   57
 S32-list/reduce.t..................................  15    0    0    0   15
 S32-list/reverse.rakudo.moar.......................  20    0    1    0   21
      1 todo   : RT #77914
-S32-list/roll.t....................................  48    0    0    0   48
+S32-list/roll.t....................................  49    0    0    0   49
 S32-list/rotor.t...................................   9    0    0    0    9
 S32-list/sort.rakudo.moar..........................Code object coerced to string (please use .gist or .perl to do that)  in sub is at lib/Test.pm:135
 
@@ -2791,14 +2778,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# gerdr: 0.923084898 seconds
-# kaz: 0.92321808 seconds
-# recursive-ternary: 1.02263894 seconds
-# loop: 1.0245129 seconds
-# hand-memoization: 1.3920796 seconds
-# recursive-ternary-hand-cached: 2.3209446 seconds
-# sequence-ternary: 5.425917 seconds
-# sequence: 6.82691462 seconds
+integration/advent2012-day21.t.....................# gerdr: 0.92022940 seconds
+# kaz: 0.9259715 seconds
+# recursive-ternary: 1.02312572 seconds
+# loop: 1.03145181 seconds
+# hand-memoization: 1.3889253 seconds
+# recursive-ternary-hand-cached: 2.3410090 seconds
+# sequence-ternary: 5.50140696 seconds
+# sequence: 6.836788225 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT #121789
@@ -2814,13 +2801,7 @@ integration/advent2013-day09.t.....................  21    0    0    0   21
 integration/advent2013-day10.rakudo.moar...........  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.t.....................  32    0    0    0   32
-integration/advent2013-day14.t.....................# parse worker failure:Cannot assign to a readonly variable or a value
-# combiner failure:Cannot assign to a readonly variable or a value
-===SORRY!===
-Cannot assign to a readonly variable or a value
-# Looks like you planned 10 tests, but ran 6
-   6    4    0    0   10
-     4 tests aborted (missing ok/not ok)
+integration/advent2013-day14.t.....................  10    0    0    0   10
 integration/advent2013-day15.rakudo.moar...........  27    0    3    0   30
      3 todo   : list of numbers
 integration/advent2013-day18.t.....................  10    0    0    0   10
@@ -2883,13 +2864,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    19,     0,    56,    75,    86
-"S02",        5275,     0,   126,   331,  5732,  5824
-"S03",        5172,     6,   120,   100,  5398,  5416
+"S02",        5276,     0,   126,   331,  5733,  5825
+"S03",        5175,     0,   120,   106,  5401,  5419
 "S04",        1100,     0,    47,    37,  1184,  1260
 "S05",        5454,     0,    84,   141,  5679,  5952
 "S06",        1368,     0,    51,    91,  1510,  1568
 "S07",           0,     0,     0,     0,     0,     0
-"S09",        1897,     2,     9,   102,  2010,  2010
+"S09",        1897,     0,    11,   102,  2010,  2010
 "S10",          91,     0,     5,     1,    97,   154
 "S11",         109,     0,     4,    14,   127,   146
 "S12",        1467,     0,    43,   123,  1633,  1690
@@ -2904,19 +2885,16 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1234,     0,     4,    48,  1286,  1947
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         342,     0,     3,     2,   347,   357
-"S32",        9820,     0,   193,   189, 10202,  8577
-"int",        1193,    66,    13,    15,  1287,  1276
+"S32",        9821,     0,   193,   189, 10203,  8578
+"int",        1197,    62,    13,    15,  1287,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",    114431,    93,   728,  1353,116605,116464
+"total",    114440,    81,   730,  1359,116610,116469
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.moar aborted 6 test(s)
 S01-perl-5-integration/roundtrip.t aborted 5 test(s)
 S01-perl-5-integration/strings.rakudo.moar aborted 6 test(s)
 S01-perl-5-integration/subs.t aborted 2 test(s)
-S03-smartmatch/array-hash.t aborted 6 test(s)
-S09-typed-arrays/arrays.rakudo.moar 71 - Can feed Arrays of Type to .new of Array[Array[Type]] (binding)
-S09-typed-arrays/arrays.rakudo.moar 73 - Can feed Arrays of Type to .new of Array[Array[Type]] (assignment)
 integration/advent2009-day17.t 1 - Line 0 -2 matched using map()
 integration/advent2009-day17.t 2 - Line 2 -1.83333333333333 matched using map()
 integration/advent2009-day17.t 3 - Line 4 -1.66666666666667 matched using map()
@@ -2933,4 +2911,3 @@ integration/advent2009-day17.t 13 - Line 24 0 matched using map()
 integration/advent2009-day17.t 14 - Line 26 0.166666666666667 matched using map()
 integration/advent2009-day17.t 15 - Line 28 0.333333333333333 matched using map()
 integration/advent2009-day17.t aborted 47 test(s)
-integration/advent2013-day14.t aborted 4 test(s)
