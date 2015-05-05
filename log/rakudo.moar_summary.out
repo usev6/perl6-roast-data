@@ -237,7 +237,7 @@ S02-names/symbolic-deref.rakudo.moar...............  32    0    2    2   36
      1 todo   : no such symbol
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.t.................................. 650    0    0    0  650
+S02-types/WHICH.t.................................. 648    0    0    0  648
 S02-types/anon_block.rakudo.moar...................Code object coerced to string (please use .gist or .perl to do that)  in sub isnt at lib/Test.pm:179
 
   39    0    1    2   42
@@ -529,39 +529,7 @@ use of uninitialized value $x of type Any in string context  in block <unit> at 
 S03-operators/also.rakudo.moar.....................   4    0    4    0    8
      4 todo   : nom regression
 S03-operators/andthen.t............................   8    0    0    0    8
-S03-operators/arith.rakudo.moar....................use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-operators/arith.rakudo.moar:313
-
-use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-operators/arith.rakudo.moar:313
-
-use of uninitialized value of type Any in numeric context  in block  at lib/Test.pm:453
-
-use of uninitialized value of type Any in numeric context  in block  at lib/Test.pm:453
-
-use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-operators/arith.rakudo.moar:316
-
-use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-operators/arith.rakudo.moar:316
-
-use of uninitialized value of type Any in numeric context  in block  at lib/Test.pm:453
-
-use of uninitialized value of type Any in numeric context  in block  at lib/Test.pm:453
-
-use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-operators/arith.rakudo.moar:319
-
-use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-operators/arith.rakudo.moar:319
-
-use of uninitialized value of type Any in numeric context  in block  at lib/Test.pm:453
-
-use of uninitialized value of type Any in numeric context  in block  at lib/Test.pm:453
-
-use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-operators/arith.rakudo.moar:333
-
-use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-operators/arith.rakudo.moar:333
-
-use of uninitialized value of type Any in numeric context  in block  at lib/Test.pm:453
-
-use of uninitialized value of type Any in numeric context  in block  at lib/Test.pm:453
-
-use of uninitialized value of type Int in numeric context  in block <unit> at t/spec/S03-operators/arith.rakudo.moar:370
+S03-operators/arith.rakudo.moar....................use of uninitialized value of type Int in numeric context  in block <unit> at t/spec/S03-operators/arith.rakudo.moar:370
 
  156    0    0    0  156
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
@@ -1376,7 +1344,7 @@ S06-traits/is-copy.t...............................Potential difficulties:
     at EVAL_0:1
     ------> [32msub f ($x is copy) { my $x [33m⏏[31m}[0m
   25    0    0    0   25
-S06-traits/is-readonly.rakudo.moar.................useless use of 'is readonly' on $!attr  in any ex-handle at src/Perl6/World.nqp:3464
+S06-traits/is-readonly.rakudo.moar.................useless use of 'is readonly' on $!attr  in any ex-handle at src/Perl6/World.nqp:3467
 
    2    0    1    0    3
      1 todo   : readonly attributes
@@ -1463,7 +1431,7 @@ use of uninitialized value $_ of type Any in string context  in block <unit> at 
 # error: Could not find symbol '&C1'
 #   in any find_method_fallback at src/gen/m-Metamodel.nqp:2914
 #   in any find_method at src/gen/m-Metamodel.nqp:1053
-#   in block <unit> at getout-61140-924449.code:4
+#   in block <unit> at getout-78023-844454.code:4
 
 
   19    0    3    0   22
@@ -1661,7 +1629,7 @@ S12-methods/how.t..................................   3    0    0    0    3
 S12-methods/indirect_notation.rakudo.moar..........  16    0    0   21   37
     15 skipped: .*, .+ and .? with @foo
      6 skipped: .@foo not yet working
-S12-methods/instance.t.............................useless use of 'is rw' on @!something  in any ex-handle at src/Perl6/World.nqp:3464
+S12-methods/instance.t.............................useless use of 'is rw' on @!something  in any ex-handle at src/Perl6/World.nqp:3467
 
   39    0    0    0   39
 S12-methods/lastcall.t.............................   6    0    0    0    6
@@ -1819,8 +1787,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
      1 todo   : RT \#122471
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1430774371
-# Using file temp_1430774371
+S16-filehandles/chmod.t............................# Using file temp_1430860765
+# Using file temp_1430860765
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1849,7 +1817,7 @@ S16-unfiled/rebindstdhandles.rakudo.moar...........   0    0    0    2    2
      2 skipped: contextual rebinding regression
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
-S17-channel/earliest.t.............................   5    0    0    0    5
+S17-channel/earliest.t.............................   7    0    0    0    7
 S17-lowlevel/lock.rakudo.moar......................   7    0    0    1    8
      1 skipped: not sure this test is valid
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -2106,9 +2074,9 @@ use of uninitialized value of type BagHash in string context
   16    0    0    0   16
 S32-container/zip.rakudo.moar......................  12    0    0    2   14
      2 skipped: lvalue zip
-S32-exceptions/misc.rakudo.moar....................Code object coerced to string (please use .gist or .perl to do that)  in any ex-handle at src/Perl6/World.nqp:3464
+S32-exceptions/misc.rakudo.moar....................Code object coerced to string (please use .gist or .perl to do that)  in any ex-handle at src/Perl6/World.nqp:3467
 
-Code object coerced to string (please use .gist or .perl to do that)  in any routine_def at src/gen/m-Perl6-Actions.nqp:2606
+Code object coerced to string (please use .gist or .perl to do that)  in any routine_def at src/gen/m-Perl6-Actions.nqp:2608
 
     
 # Failed test ''#`' died'
@@ -2300,35 +2268,7 @@ use of uninitialized value $x of type Any in string context  in sub is_deeply at
 S32-list/unique.t..................................  34    0    0    0   34
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  31    0    0    0   31
-S32-num/complex.t..................................use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_0:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_0:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_0:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_0:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_0:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_0:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_0:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_0:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_7:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_7:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_7:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_7:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_7:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_7:1
-
- 488    0    0    0  488
+S32-num/complex.t.................................. 488    0    0    0  488
 S32-num/cool-num.rakudo.moar.......................  39    0    0    4   43
      4 skipped: angle conversion
 S32-num/exp.t......................................  72    0    0    0   72
@@ -2353,9 +2293,7 @@ S32-num/power.rakudo.moar..........................  43    0    9    0   52
      1 todo   : i
 S32-num/rand.rakudo.moar........................... 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect
-S32-num/rat.rakudo.moar............................use of uninitialized value of type Any in numeric context  in sub dies-ok at lib/Test.pm:358
-
- 823    0    0    1  824
+S32-num/rat.rakudo.moar............................ 823    0    0    1  824
      1 skipped: RT #74648
 S32-num/real-bridge.t.............................. 200    0    0    0  200
 S32-num/roots.t....................................  55    0    0    0   55
@@ -2718,19 +2656,7 @@ integration/advent2010-day08.t.....................   8    0    0    0    8
 integration/advent2010-day10.rakudo.moar...........   2    0    2    0    4
      2 todo   : RT \#121843
 integration/advent2010-day11.t.....................   2    0    0    0    2
-integration/advent2010-day12.t.....................use of uninitialized value of type Any in numeric context  in sub smart-match-medley at t/spec/integration/advent2010-day12.t:40
-
-use of uninitialized value of type Any in numeric context  in sub smart-match-medley at t/spec/integration/advent2010-day12.t:40
-
-use of uninitialized value of type Any in numeric context  in sub smart-match-medley at t/spec/integration/advent2010-day12.t:40
-
-use of uninitialized value of type Any in numeric context  in sub smart-match-medley at t/spec/integration/advent2010-day12.t:40
-
-use of uninitialized value of type Any in numeric context  in sub smart-match-medley at t/spec/integration/advent2010-day12.t:40
-
-use of uninitialized value of type Any in numeric context  in sub smart-match-medley at t/spec/integration/advent2010-day12.t:40
-
-  13    0    0    0   13
+integration/advent2010-day12.t.....................  13    0    0    0   13
 integration/advent2010-day14.t.....................   5    0    0    0    5
 integration/advent2010-day16.t.....................  13    0    0    0   13
 integration/advent2010-day19.rakudo.moar...........   5    0    1    0    6
@@ -2763,27 +2689,21 @@ Useless use of "," in expression "like(qq!Lottery results: {(1..49).roll(6).sort
 Useless use of "," in expression "like(Q:s:b{$*OS\\n&sin(3)}, /\\w+ .*? \\n '&sin(3)'/), 'Q:s:b(...)'" in sink context (line 108)
   26    0    0    0   26
 integration/advent2012-day12.t.....................   5    0    0    0    5
-integration/advent2012-day13.t.....................use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_1:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_1:1
-
-use of uninitialized value of type Any in numeric context  in any <unit-outer> at EVAL_1:1
-
-  42    0    0    0   42
+integration/advent2012-day13.t.....................  42    0    0    0   42
 integration/advent2012-day14.t.....................   6    0    0    0    6
 integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
      1 todo   : RT \#121722
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8418287 seconds
-# gerdr: 0.8770265 seconds
-# loop: 0.98307636 seconds
-# recursive-ternary: 1.0792895 seconds
-# hand-memoization: 1.3020095 seconds
-# recursive-ternary-hand-cached: 2.1369786 seconds
-# sequence-ternary: 5.24216766 seconds
-# sequence: 6.6498148 seconds
+integration/advent2012-day21.t.....................# kaz: 0.85124643 seconds
+# gerdr: 0.8630386 seconds
+# recursive-ternary: 0.9238126 seconds
+# loop: 0.95943899 seconds
+# hand-memoization: 1.2758207 seconds
+# recursive-ternary-hand-cached: 2.10577029 seconds
+# sequence-ternary: 5.13584469 seconds
+# sequence: 6.5451255 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT \#121789
@@ -2855,14 +2775,14 @@ integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
 integration/weird-errors.rakudo.moar...............  13    0    1    0   14
-     1 todo   : RT \#123686 & RT \#124318
+     1 todo PASSED: RT \#123686 & RT \#124318
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    19,     0,    56,    75,    86
-"S02",        5280,     0,   124,   330,  5734,  5820
+"S02",        5278,     0,   124,   330,  5732,  5818
 "S03",        5176,     0,   120,   106,  5402,  5420
 "S04",        1100,     0,    47,    37,  1184,  1260
 "S05",        5454,     0,    84,   141,  5679,  5952
@@ -2876,7 +2796,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         313,     0,     8,     8,   329,   342
 "S15",       78476,     0,     3,    19, 78498, 78518
 "S16",         288,     0,     0,    18,   306,   338
-"S17",         735,     0,     5,    31,   771,   771
+"S17",         737,     0,     5,    31,   773,   773
 "S19",          13,     0,     0,     0,    13,    18
 "S22",          24,     0,     0,     0,    24,    24
 "S24",          17,     0,     0,     0,    17,    94
