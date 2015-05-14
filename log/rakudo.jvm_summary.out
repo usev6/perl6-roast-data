@@ -440,10 +440,9 @@ S03-operators/precedence.rakudo.jvm................  56    0    0    2   58
      2 skipped: nom regression RT #124538
 S03-operators/range-basic.t........................ 140    0    0    0  140
 S03-operators/range-int.t.......................... 480    0    0    0  480
-S03-operators/range.rakudo.jvm..................... 112   11    2    0  125
+S03-operators/range.rakudo.jvm..................... 123    0    2    0  125
      1 todo   : huh? RT \#124542
      1 todo   : huh? RT \#124543
-    10 tests aborted (missing ok/not ok)
 S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: expected Any but got Mu instead RT #124552
      1 skipped: ~< NYI RT #124531
@@ -519,8 +518,7 @@ S04-declarations/my.rakudo.jvm.....................  92    0    2    2   96
      2 todo   : RT \#117043
 S04-declarations/our.rakudo.jvm....................  32    0    1    0   33
      1 todo   : our-scoped var in role RT \#125060
-S04-declarations/state.rakudo.jvm..................  39    0    2    0   41
-     1 todo   : embedded closures in regexen RT \#125051
+S04-declarations/state.rakudo.jvm..................  40    0    1    0   41
      1 todo   : initialization happens only on first call(?) RT \#125052
 S04-declarations/will.rakudo.jvm...................  10    0    4    3   17
      1 skipped: declared variable not visible in block yet RT #125061
@@ -668,7 +666,7 @@ S05-mass/properties-derived.rakudo.jvm............. 232    0    1   21  254
     10 skipped: isCommon NYI RT #124884
      7 skipped: isGraphemeLink RT #124874
      1 todo   : isUnassigned NYI RT \#124883
-S05-mass/properties-general.rakudo.jvm............. 582    0    7   10  599
+S05-mass/properties-general.rakudo.jvm............. 589    0    7   10  606
     10 skipped: No [Lr] property defined RT #124860
      3 todo   : Unicode spec change in v6.1 RT \#124872
      3 todo   : Unions of properties of non-existent codepoints RT \#124863
@@ -676,18 +674,25 @@ S05-mass/properties-general.rakudo.jvm............. 582    0    7   10  599
 S05-mass/properties-script.rakudo.jvm.............. 325    0    0   35  360
     35 skipped: Unicode properties with arguments RT #124886
 S05-mass/recursive.t...............................  20    0    0    0   20
-S05-mass/rx.rakudo.jvm............................. 115  614    2    8  739
+S05-mass/rx.rakudo.jvm............................. 721    0    4   14  739
      1 skipped: :: NYI RT #124889
      1 skipped: :: NYI RT #124890
      1 skipped: :: NYI RT #124891
      1 skipped: :: NYI RT #124893
      1 skipped: :: NYI RT #124894
      1 skipped: :: NYI RT #124895
+     1 skipped: :: NYI RT #124900
+     1 skipped: :: NYI RT #124901
+     1 skipped: :: NYI RT #124902
      1 skipped: ::: NYI RT #124892
      1 skipped: ::: NYI RT #124896
+     1 skipped: :s() RT #124899
+     1 skipped: regex <name> RT #124904
+     1 skipped: regex <name> RT #124905
      1 todo   : <commit> NYI RT \#124897
      1 todo   : RT \#121307
-   614 tests aborted (missing ok/not ok)
+     1 todo   : anchors and after RT \#124898
+     1 todo   : parse error RT \#124903
 S05-mass/stdrules.rakudo.jvm....................... 160    0    0   28  188
     14 skipped: <.graph> RT #124887
     14 skipped: <.print> RT #124888
@@ -730,8 +735,9 @@ S05-metasyntax/interpolating-closure.rakudo.jvm....   5    0    1    0    6
      1 todo   : dunno RT \#124527
 S05-metasyntax/litvar.rakudo.jvm...................  29    0    0    3   32
      3 skipped: :ignoremark needs NFG RT #124500
-S05-metasyntax/longest-alternative.rakudo.jvm......  41    0    0    1   42
+S05-metasyntax/longest-alternative.rakudo.jvm......  43    0    0    5   48
      1 skipped: :: RT #124526
+     4 skipped: :ignoremark needs NFG RT #124500
 S05-metasyntax/lookaround.t........................  10    0    0    0   10
 S05-metasyntax/null.t..............................   4    0    0    0    4
 S05-metasyntax/proto-token-ltm.t...................  10    0    0    0   10
@@ -995,14 +1001,14 @@ S10-packages/basic.rakudo.jvm......................  59    1    2    1   63
      1 todo   : RT \#64606
      1 todo   : ticket based only on class... RT \#60446
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  23    0    4    0   27
+S10-packages/precompilation.rakudo.jvm.............  29    0    4    0   33
      1 todo   : RT \#122773
      1 todo   : RT \#122896
      1 todo   : RT \#123276
      1 todo   : no 6model parametrics interning yet
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
-S11-modules/export.rakudo.jvm......................   9    0   22    8   39
+S11-modules/export.rakudo.jvm......................  10    0   22    8   40
      2 skipped: export issue
      6 skipped: export issue RT #125086
     22 todo   : different .WHICH for aliased sub in EXPORT::ALL
@@ -1260,7 +1266,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.rakudo.jvm.......................   6    1    0    1    8
+S17-lowlevel/lock.rakudo.jvm.......................   7    0    0    1    8
      1 skipped: not sure this test is valid RT #124793
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1838,20 +1844,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    19,     0,    56,    75,    86
 "S02",        5254,     0,   143,   419,  5816,  5815
-"S03",        5187,    11,   118,   105,  5421,  5439
-"S04",        1110,     2,    48,    49,  1209,  1261
-"S05",        4826,   623,    87,   194,  5730,  5989
+"S03",        5198,     0,   118,   105,  5421,  5439
+"S04",        1111,     2,    47,    49,  1209,  1261
+"S05",        5441,     9,    89,   204,  5743,  6002
 "S06",        1359,     6,    50,   105,  1520,  1569
 "S07",           0,     0,     0,     0,     0,     0
 "S09",        1897,     0,    11,   102,  2010,  2010
-"S10",          94,     1,     6,     1,   102,   159
-"S11",          87,     0,    26,    14,   127,   146
+"S10",         100,     1,     6,     1,   108,   165
+"S11",          88,     0,    26,    14,   128,   147
 "S12",        1473,     0,    50,   125,  1648,  1702
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         312,     0,     8,     9,   329,   342
 "S15",          15,     0,     4,    17,    36, 78518
-"S16",         284,     0,     6,    16,   306,   338
-"S17",         698,     1,     5,    23,   727,   773
+"S16",         284,     0,     6,    16,   306,   334
+"S17",         699,     0,     5,    23,   727,   773
 "S19",          13,     0,     0,     0,    13,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    95
@@ -1861,18 +1867,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9655,    14,   196,   203, 10068,  8430
 "int",        1256,     5,    11,    15,  1287,  1273
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35181,   688,   786,  1532, 38187,116380
+"total",     35816,    62,   787,  1542, 38207,116396
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.jvm aborted 6 test(s)
 S01-perl-5-integration/roundtrip.t aborted 5 test(s)
 S01-perl-5-integration/strings.rakudo.jvm aborted 6 test(s)
 S01-perl-5-integration/subs.t aborted 2 test(s)
-S03-operators/range.rakudo.jvm 115 - (1..$_) lives
-S03-operators/range.rakudo.jvm aborted 10 test(s)
 S04-statements/for.rakudo.jvm 61 - for loop with value-less next flattens out nexted iterations
 S04-statements/for.rakudo.jvm 63 - for loop with value-less last flattens out last iteration
-S05-mass/rx.rakudo.jvm aborted 614 test(s)
 S05-metasyntax/unicode-property-pair.rakudo.jvm aborted 5 test(s)
 S05-modifier/perl5_9.rakudo.jvm 77 - re_tests 1348/1 (1566)
 S05-modifier/perl5_9.rakudo.jvm 79 - re_tests 1352/1 (1570)
@@ -1881,7 +1884,6 @@ S05-modifier/perl5_9.rakudo.jvm 83 - re_tests 1360/1 (1578)
 S06-currying/assuming-and-mmd.rakudo.jvm aborted 2 test(s)
 S06-currying/named.t aborted 4 test(s)
 S10-packages/basic.rakudo.jvm 30 - another simple package case that should not blow platform
-S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
 S28-named-variables/slangs.t aborted 6 test(s)
 S32-io/pipe.t 3 - Child fails and prints nothing
 S32-io/pipe.t 4 - Child fails and prints nothing
