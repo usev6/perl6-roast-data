@@ -999,7 +999,7 @@ S10-packages/basic.rakudo.jvm......................  59    1    2    1   63
      1 todo   : RT \#64606
      1 todo   : ticket based only on class... RT \#60446
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  28    1    4    0   33
+S10-packages/precompilation.rakudo.jvm.............  29    0    4    0   33
      1 todo   : RT \#122773
      1 todo   : RT \#122896
      1 todo   : RT \#123276
@@ -1262,7 +1262,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.rakudo.jvm.......................   7    0    0    1    8
+S17-lowlevel/lock.rakudo.jvm.......................   6    1    0    1    8
      1 skipped: not sure this test is valid RT #124793
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1322,7 +1322,7 @@ S17-supply/sort.t..................................   7    0    0    0    7
 S17-supply/squish.t................................  11    0    0    0   11
 S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
      2 skipped: doesn't work or can't test RT #124822
-S17-supply/start.t.................................   9    0    0    0    9
+S17-supply/start.t.................................   8    1    0    0    9
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch_path.rakudo.jvm...................   2    0    0    0    2
@@ -1533,8 +1533,7 @@ S32-num/expmod.t................................... 117    0    0    0  117
 S32-num/fatrat.rakudo.jvm.......................... 279    0    1    2  282
      2 skipped: FatRat arith + type objects RT #124814
      1 todo   : unknown RT \#124815
-S32-num/int.rakudo.jvm............................. 102    0    3    2  107
-     2 skipped: trailing characters produce failures RT #124817
+S32-num/int.rakudo.jvm............................. 104    0    3    0  107
      3 todo   : Inf and NaN NYI for Int RT \#124818
 S32-num/is-prime.t.................................  35    0    0    0   35
 S32-num/log.rakudo.jvm.............................  28    0    1    0   29
@@ -1839,29 +1838,29 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,    19,     0,    56,    75,    86
 "S02",        5255,     0,   143,   416,  5814,  5813
 "S03",        5187,    11,   118,   105,  5421,  5439
-"S04",        1120,     2,    47,    49,  1218,  1270
+"S04",        1120,     2,    47,    49,  1218,  1268
 "S05",        5441,     9,    89,   204,  5743,  6002
 "S06",        1359,     7,    49,   105,  1520,  1569
 "S07",           0,     0,     0,     0,     0,     0
 "S09",        1897,     0,    11,   102,  2010,  2010
-"S10",          99,     2,     6,     1,   108,   165
+"S10",         100,     1,     6,     1,   108,   165
 "S11",          88,     0,    26,    14,   128,   147
 "S12",        1473,     0,    50,   125,  1648,  1702
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         313,     0,     8,     8,   329,   342
 "S15",          15,     0,     4,    16,    35, 78517
 "S16",         284,     0,     6,    16,   306,   334
-"S17",         700,     0,     5,    23,   728,   774
+"S17",         698,     2,     5,    23,   728,   774
 "S19",          13,     0,     0,     0,    13,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    95
 "S26",        1234,     0,     4,    48,  1286,  1947
 "S28",           7,     6,     0,     0,    13,    13
 "S29",         341,     0,     3,     3,   347,   348
-"S32",        9655,    14,   196,   188, 10053,  8415
+"S32",        9657,    14,   196,   186, 10053,  8415
 "int",        1256,     5,    11,    15,  1287,  1273
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35816,    75,   786,  1522, 38199,116388
+"total",     35817,    76,   786,  1520, 38199,116386
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.jvm aborted 6 test(s)
@@ -1880,7 +1879,8 @@ S06-currying/assuming-and-mmd.t 1 - Assumptive Blocks
 S06-currying/assuming-and-mmd.t aborted 2 test(s)
 S06-currying/named.t aborted 4 test(s)
 S10-packages/basic.rakudo.jvm 30 - another simple package case that should not blow platform
-S10-packages/precompilation.rakudo.jvm 15 - precompile load - from the command line
+S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
+S17-supply/start.t 9 - did we get the other original value
 S28-named-variables/slangs.t aborted 6 test(s)
 S32-io/pipe.t 3 - Child fails and prints nothing
 S32-io/pipe.t 4 - Child fails and prints nothing

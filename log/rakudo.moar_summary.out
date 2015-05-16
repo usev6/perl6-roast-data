@@ -165,7 +165,38 @@ S02-magicals/args.t................................   6    0    0    0    6
 S02-magicals/block.rakudo.moar.....................   0    0    0    1    1
      1 skipped: &?BLOCK NYI RT #125131
 S02-magicals/dollar-underscore.t...................  11    0    0    0   11
-S02-magicals/dollar_bang.t.........................  15    0    0    0   15
+S02-magicals/dollar_bang.t.........................WARNING: unhandled Failure detected in DESTROY:
+Divide by zero
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1230
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1226
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1194
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1144
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1679
+  in any visit_op_children at src/gen/m-Perl6-Optimizer.nqp:1167
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1049
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1679
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1691
+  in any visit_op_children at src/gen/m-Perl6-Optimizer.nqp:1167
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1049
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1679
+  in any visit_op_children at src/gen/m-Perl6-Optimizer.nqp:1167
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1049
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1679
+  in any visit_op_children at src/gen/m-Perl6-Optimizer.nqp:1167
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1049
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1679
+  in any visit_want at src/gen/m-Perl6-Optimizer.nqp:1519
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1682
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1691
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1688
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1691
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+
+  15    0    0    0   15
 S02-magicals/env.rakudo.moar.......................# %*ENV<PUGS_ROCKS>=
 # %*ENV<PUGS_ROCKS>=
   16    0    0    1   17
@@ -186,7 +217,27 @@ S02-names-vars/fmt.t...............................  21    0    0    0   21
 S02-names-vars/list_array_perl.rakudo.moar.........  19    0    1    2   22
      2 skipped: recursive data structure RT #124639
      1 todo   : List.perl bug
-S02-names-vars/names.rakudo.moar................... 131    0    0   13  144
+S02-names-vars/names.rakudo.moar...................WARNING: unhandled Failure detected in DESTROY:
+Could not find symbol '&bravo_bravo_quebec'
+  in block <unit> at EVAL_1:1
+  in any <unit-outer> at EVAL_1:1
+  in block  at lib/Test.pm:443
+  in sub subtest at lib/Test.pm:272
+  in sub throws-like at lib/Test.pm:470
+  in sub throws_like at lib/Test.pm:431
+  in block <unit> at t/spec/S02-names-vars/names.rakudo.moar:70
+
+WARNING: unhandled Failure detected in DESTROY:
+Could not find symbol '&whiskey_tango_foxtrot'
+  in block <unit> at EVAL_0:1
+  in any <unit-outer> at EVAL_0:1
+  in block  at lib/Test.pm:443
+  in sub subtest at lib/Test.pm:272
+  in sub throws-like at lib/Test.pm:470
+  in sub throws_like at lib/Test.pm:431
+  in block <unit> at t/spec/S02-names-vars/names.rakudo.moar:67
+
+ 131    0    0   13  144
      4 skipped: ::{ } package lookup NYI RT #124638
      7 skipped: package variable autovivification RT #124637
      2 skipped: this kind of lookup NYI
@@ -271,7 +322,22 @@ Use of Nil in string context  in block  at t/spec/S02-types/array.rakudo.moar:29
 Use of Nil in string context  in block  at t/spec/S02-types/array.rakudo.moar:291
 Use of Nil in string context  in block  at t/spec/S02-types/array.rakudo.moar:291
 Use of Nil in string context  in block  at t/spec/S02-types/array.rakudo.moar:291
-Use of Nil in string context  in block  at t/spec/S02-types/array.rakudo.moar:291
+Use of Nil in string contextWARNING: unhandled Failure detected in DESTROY:
+Index out of range. Is: -1, should be in 0..Inf
+  in block  at t/spec/S02-types/array.rakudo.moar:244
+  in block <unit> at t/spec/S02-types/array.rakudo.moar:241
+
+WARNING: unhandled Failure detected in DESTROY:
+Index out of range. Is: -1, should be in 0..Inf
+  in block  at t/spec/S02-types/array.rakudo.moar:243
+  in block <unit> at t/spec/S02-types/array.rakudo.moar:241
+
+WARNING: unhandled Failure detected in DESTROY:
+Index out of range. Is: -1, should be in 0..Inf
+  in block  at t/spec/S02-types/array.rakudo.moar:230
+  in block <unit> at t/spec/S02-types/array.rakudo.moar:223
+
+  in block  at t/spec/S02-types/array.rakudo.moar:291
 Use of Nil in string context  in block  at t/spec/S02-types/array.rakudo.moar:291
 Use of Nil in string context  in block  at t/spec/S02-types/array.rakudo.moar:291
 Use of Nil in string context  in block  at t/spec/S02-types/array.rakudo.moar:291
@@ -363,7 +429,17 @@ Please note that *ALL* deprecated features will be removed at the RC-0 release
   15    0    3    0   18
      3 todo   : deprecated %h = {...} for now
 S02-types/autovivification.t.......................  25    0    0    0   25
-S02-types/bag.rakudo.moar.......................... 188    0    2    3  193
+S02-types/bag.rakudo.moar..........................WARNING: unhandled Failure detected in DESTROY:
+Cannot call 'DELETE-KEY' on an immutable 'Bag'
+  in block  at t/spec/S02-types/bag.rakudo.moar:92
+  in block <unit> at t/spec/S02-types/bag.rakudo.moar:88
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot call 'DELETE-KEY' on an immutable 'Bag'
+  in block  at t/spec/S02-types/bag.rakudo.moar:48
+  in block <unit> at t/spec/S02-types/bag.rakudo.moar:12
+
+ 188    0    2    3  193
      3 skipped: No longer Iterable
      1 todo   : Not properly interpolating
      1 todo   : we have not secured .WHICH creation yet RT \#124454
@@ -450,7 +526,17 @@ S02-types/keyhash.rakudo.moar......................   0    0    0   59   59
 S02-types/lazy-lists.t.............................  23    0    0    0   23
 S02-types/lists.rakudo.moar........................  29    0    0    3   32
      3 skipped: list binding RT #124494
-S02-types/mix.rakudo.moar.......................... 171    0    2    3  176
+S02-types/mix.rakudo.moar..........................WARNING: unhandled Failure detected in DESTROY:
+Cannot call 'DELETE-KEY' on an immutable 'Mix'
+  in block  at t/spec/S02-types/mix.rakudo.moar:47
+  in block <unit> at t/spec/S02-types/mix.rakudo.moar:12
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot call 'DELETE-KEY' on an immutable 'Mix'
+  in block  at t/spec/S02-types/mix.rakudo.moar:95
+  in block <unit> at t/spec/S02-types/mix.rakudo.moar:91
+
+ 171    0    2    3  176
      3 skipped: No longer Iterable
      1 todo   : Not properly interpolating
      1 todo   : we have not secured .WHICH creation yet RT \#124496
@@ -502,7 +588,22 @@ Use of Nil in string context  in block  at t/spec/S02-types/range.t:95
 Use of Nil in string context  in block  at t/spec/S02-types/range.t:96
 Use of Nil in string context  in block  at t/spec/S02-types/range.t:96
  135    0    0    0  135
-S02-types/set.rakudo.moar..........................    
+S02-types/set.rakudo.moar..........................WARNING: unhandled Failure detected in DESTROY:
+Cannot call 'DELETE-KEY' on an immutable 'Set'
+  in block  at t/spec/S02-types/set.rakudo.moar:79
+  in block <unit> at t/spec/S02-types/set.rakudo.moar:75
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot call 'DELETE-KEY' on an immutable 'Set'
+  in block  at t/spec/S02-types/set.rakudo.moar:35
+  in block <unit> at t/spec/S02-types/set.rakudo.moar:10
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot modify an immutable Set
+  in block  at t/spec/S02-types/set.rakudo.moar:32
+  in block <unit> at t/spec/S02-types/set.rakudo.moar:10
+
+    
 # Failed test 'code dies'
 # at t/spec/S02-types/set.rakudo.moar line 222
     # Looks like you failed 1 tests of 2
@@ -626,32 +727,7 @@ S03-operators/also.rakudo.moar.....................   4    0    4    0    8
      1 todo   : nom regression RT \#124546
      1 todo   : nom regression RT \#124547
 S03-operators/andthen.t............................   8    0    0    0    8
-S03-operators/arith.rakudo.moar....................WARNING: unhandled Failure detected in DESTROY:
-Divide by zero
-  in block  at t/spec/S03-operators/arith.rakudo.moar:329
-  in block <unit> at t/spec/S03-operators/arith.rakudo.moar:302
-
-WARNING: unhandled Failure detected in DESTROY:
-Divide by zero
-  in block  at t/spec/S03-operators/arith.rakudo.moar:326
-  in block <unit> at t/spec/S03-operators/arith.rakudo.moar:302
-
-WARNING: unhandled Failure detected in DESTROY:
-Divide by zero
-  in block  at t/spec/S03-operators/arith.rakudo.moar:323
-  in block <unit> at t/spec/S03-operators/arith.rakudo.moar:302
-
-WARNING: unhandled Failure detected in DESTROY:
-Divide by zero
-  in block  at t/spec/S03-operators/arith.rakudo.moar:309
-  in block <unit> at t/spec/S03-operators/arith.rakudo.moar:302
-
-WARNING: unhandled Failure detected in DESTROY:
-Divide by zero
-  in block  at t/spec/S03-operators/arith.rakudo.moar:306
-  in block <unit> at t/spec/S03-operators/arith.rakudo.moar:302
-
-Use of uninitialized value of type Int in numeric context  in block  at t/spec/S03-operators/arith.rakudo.moar:371
+S03-operators/arith.rakudo.moar....................Use of uninitialized value of type Int in numeric context  in block  at t/spec/S03-operators/arith.rakudo.moar:371
  156    0    0    0  156
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
 S03-operators/assign.rakudo.moar................... 263    0   21   12  296
@@ -676,6 +752,22 @@ S03-operators/autoincrement-range.t................# Tests for 'a' .. 'z'
 # Tests for '٠' .. '٩' (Arabic-Indic)
 # Tests for '०' .. '९' (Devangari)
 # Tests for '০' .. '৯' (Bengali)
+WARNING: unhandled Failure detected in DESTROY:
+Decrement out of range
+  in block <unit> at t/spec/S03-operators/autoincrement-range.t:79
+
+WARNING: unhandled Failure detected in DESTROY:
+Decrement out of range
+  in block <unit> at t/spec/S03-operators/autoincrement-range.t:58
+
+WARNING: unhandled Failure detected in DESTROY:
+Decrement out of range
+  in block <unit> at t/spec/S03-operators/autoincrement-range.t:37
+
+WARNING: unhandled Failure detected in DESTROY:
+Decrement out of range
+  in block <unit> at t/spec/S03-operators/autoincrement-range.t:17
+
 # Tests for '੦' .. '੯' (Gurmukhi)
 # Tests for '૦' .. '૯' (Gujarati)
 # Tests for '୦' .. '୯' (Oriya)
@@ -694,7 +786,19 @@ S03-operators/basic-types.t........................  19    0    0    0   19
 S03-operators/bit.t................................  38    0    0    0   38
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
 S03-operators/brainos.t............................   9    0    0    0    9
-S03-operators/buf.t................................Use of uninitialized value of type Any in string context  in block  at t/spec/S03-operators/buf.t:93
+S03-operators/buf.t................................WARNING: unhandled Failure detected in DESTROY:
+From argument to subbuf out of range. Is: WhateverCode.new, should be in 0..1; use *-1 if you want to index relative to the end
+  in block <unit> at t/spec/S03-operators/buf.t:67
+
+WARNING: unhandled Failure detected in DESTROY:
+From argument to subbuf out of range. Is: 2, should be in 0..1
+  in block <unit> at t/spec/S03-operators/buf.t:56
+
+WARNING: unhandled Failure detected in DESTROY:
+From argument to subbuf out of range. Is: -1, should be in 0..1; use *-1 if you want to index relative to the end
+  in block <unit> at t/spec/S03-operators/buf.t:50
+
+Use of uninitialized value of type Any in string context  in block  at t/spec/S03-operators/buf.t:93
   43    0    0    0   43
 S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  31    0    0    0   31
@@ -704,7 +808,33 @@ S03-operators/context-forcers.rakudo.moar..........  95    0    0    2   97
      2 skipped: failure modes of Str.Numeric RT #124540
 S03-operators/context.t............................  38    0    0    0   38
 S03-operators/custom.t.............................   1    0    0    0    1
-S03-operators/div.t................................   7    0    0    0    7
+S03-operators/div.t................................WARNING: unhandled Failure detected in DESTROY:
+Divide by zero
+  in block <unit> at t/spec/S03-operators/div.t:9
+
+WARNING: unhandled Failure detected in DESTROY:
+Divide by zero
+  in block <unit> at t/spec/S03-operators/div.t:8
+
+WARNING: unhandled Failure detected in DESTROY:
+Divide by zero
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1230
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1226
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1194
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1144
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1679
+  in any visit_op_children at src/gen/m-Perl6-Optimizer.nqp:1167
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1049
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1679
+  in any visit_want at src/gen/m-Perl6-Optimizer.nqp:1519
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1682
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+
+   7    0    0    0    7
 S03-operators/equality.t...........................Use of uninitialized value $foo of type Any in string context  in block <unit> at t/spec/S03-operators/equality.t:29
 Use of uninitialized value $foo of type Any in string context  in block <unit> at t/spec/S03-operators/equality.t:30
 Use of uninitialized value @foo of type Any in string context  in block <unit> at t/spec/S03-operators/equality.t:33
@@ -975,7 +1105,12 @@ Use of Nil in string context  in block  at EVAL_2:1
 S04-exception-handlers/control.t...................   9    0    0    0    9
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
 S04-exceptions/control_across_runloop.t............   1    0    0    0    1
-S04-exceptions/fail.rakudo.moar....................  24    0    0    2   26
+S04-exceptions/fail.rakudo.moar....................WARNING: unhandled Failure detected in DESTROY:
+whale
+  in block  at t/spec/S04-exceptions/fail.rakudo.moar:74
+  in block <unit> at t/spec/S04-exceptions/fail.rakudo.moar:72
+
+  24    0    0    2   26
      2 skipped: RT #64990
 S04-exceptions/pending.rakudo.moar.................Use of Nil in numeric context  in block  at t/spec/S04-exceptions/pending.rakudo.moar:78
    5    0    2   14   21
@@ -1061,7 +1196,27 @@ S04-statements/return.rakudo.moar..................  17    0    1    0   18
 S04-statements/sink.rakudo.moar....................   1    0    1    0    2
      1 todo   : RT \#117235
 S04-statements/terminator.t........................  20    0    0    0   20
-S04-statements/try.t...............................  32    0    0    0   32
+S04-statements/try.t...............................WARNING: unhandled Failure detected in DESTROY:
+Cannot convert string to number: base-10 number must begin with valid digits or '.' in '⏏foo' (indicated by ⏏)
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1230
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1226
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1194
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1009
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1676
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1009
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1667
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1691
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1688
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1667
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1691
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+
+  32    0    0    0   32
 S04-statements/unless.t............................  10    0    0    0   10
 S04-statements/until.t.............................   4    0    0    0    4
 S04-statements/when.rakudo.moar....................  12    0    0   12   24
@@ -1126,7 +1281,50 @@ S05-mass/properties-general.rakudo.moar............ 592    0    4   10  606
      1 todo   : Unions of properties of non-existent codepoints RT \#124866
 S05-mass/properties-script.t....................... 360    0    0    0  360
 S05-mass/recursive.t...............................  20    0    0    0   20
-S05-mass/rx.rakudo.moar............................Use of Nil in string context  in block <unit> at t/spec/S05-mass/rx.rakudo.moar:432
+S05-mass/rx.rakudo.moar............................Potential difficulties:
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1419
+    ------> [32mok 'a b c def' ~~ /:s(1) b c [:s(0) d[33m⏏[31m e f ]/, 'sigspace, lexical repetition ([0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1419
+    ------> [32mok 'a b c def' ~~ /:s(1) b c [:s(0) d e[33m⏏[31m f ]/, 'sigspace, lexical repetition (:s[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1422
+    ------> [32mok 'a b c def' ~~ /:s b c [:!s d[33m⏏[31m e f ]/, 'sigspace, lexical repetition ([0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1422
+    ------> [32mok 'a b c def' ~~ /:s b c [:!s d e[33m⏏[31m f ]/, 'sigspace, lexical repetition (:s[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1426
+    ------> [32mok 'a b c def' !~~ /:s(0) b[33m⏏[31m c [:s(1) d e f ]/, 'sigspace, lexical r[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1430
+    ------> [32mok 'a b c def' !~~ /:!s b[33m⏏[31m c [:s d e f ]/, 'sigspace, lexical repe[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1434
+    ------> [32mok 'a b c def' !~~ /:s(0) b[33m⏏[31m c [:s(0) d e f ]/, 'sigspace, lexical r[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1434
+    ------> [32mok 'a b c def' !~~ /:s(0) b c [:s(0) d[33m⏏[31m e f ]/, 'sigspace, lexical repetition ([0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1434
+    ------> [32mok 'a b c def' !~~ /:s(0) b c [:s(0) d e[33m⏏[31m f ]/, 'sigspace, lexical repetition (:s[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1438
+    ------> [32mok 'a b c def' !~~ /:!s b[33m⏏[31m c [:!s d e f ]/, 'sigspace, lexical rep[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1438
+    ------> [32mok 'a b c def' !~~ /:!s b c [:!s d[33m⏏[31m e f ]/, 'sigspace, lexical repetition ([0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:1438
+    ------> [32mok 'a b c def' !~~ /:!s b c [:!s d e[33m⏏[31m f ]/, 'sigspace, lexical repetition (:s[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:2077
+    ------> [32m    ok 'foooo' ~~ /^ f[33m⏏[31m o ** 4 $/, 'RT #112450 sanity';[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-mass/rx.rakudo.moar:2079
+    ------> [32m    ok 'foooo' ~~ /^ f[33m⏏[31m o ** {$rt112450} $/, 'RT #112450 closur[0m
+Use of Nil in string context  in block <unit> at t/spec/S05-mass/rx.rakudo.moar:432
  721    0    4   14  739
      1 skipped: :: NYI RT #124889
      1 skipped: :: NYI RT #124890
@@ -1153,7 +1351,17 @@ S05-match/arrayhash.t..............................   8    0    0    0    8
 S05-match/blocks.rakudo.moar.......................Use of Nil in string context  in block  at t/spec/S05-match/blocks.rakudo.moar:57
   18    0    1    0   19
      1 todo   : Assignment to matched string affects earlier match objects
-S05-match/capturing-contexts.rakudo.moar...........  45    0    1    0   46
+S05-match/capturing-contexts.rakudo.moar...........Potential difficulties:
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-match/capturing-contexts.rakudo.moar:12
+    ------> [32m$match = 'abd' ~~ m/ (a) (b) c || (\w) b[33m⏏[31m d /;[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-match/capturing-contexts.rakudo.moar:27
+    ------> [32m  'abd' ~~ m/ (a) (b) c || (\w) b[33m⏏[31m d /;[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-match/capturing-contexts.rakudo.moar:37
+    ------> [32mbd' ~~ m/ <alpha> <alpha> c || <alpha> b[33m⏏[31m d /;[0m
+  45    0    1    0   46
      1 todo   : RT \#70007
 S05-match/make.t...................................   4    0    0    0    4
 S05-match/non-capturing.t..........................   9    0    0    0    9
@@ -1185,7 +1393,14 @@ S05-metasyntax/assertions.t........................   4    0    0    0    4
 S05-metasyntax/changed.t...........................  12    0    0    0   12
 S05-metasyntax/charset.t...........................  41    0    0    0   41
 S05-metasyntax/delimiters.t........................  21    0    0    0   21
-S05-metasyntax/interpolating-closure.rakudo.moar...   5    0    1    0    6
+S05-metasyntax/interpolating-closure.rakudo.moar...Potential difficulties:
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-metasyntax/interpolating-closure.rakudo.moar:19
+    ------> [32mmy regex abc { a[33m⏏[31m b c }[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-metasyntax/interpolating-closure.rakudo.moar:19
+    ------> [32mmy regex abc { a b[33m⏏[31m c }[0m
+   5    0    1    0    6
      1 todo   : dunno RT \#124527
 S05-metasyntax/litvar.t............................Potential difficulties:
     Apparent subscript will be treated as regex
@@ -1225,7 +1440,14 @@ Potential difficulties:
   29    0    0    0   29
 S05-metasyntax/repeat.t............................  27    0    0    0   27
 S05-metasyntax/sequential-alternation.t............  10    0    0    0   10
-S05-metasyntax/single-quotes.t.....................   5    0    0    0    5
+S05-metasyntax/single-quotes.t.....................Potential difficulties:
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-metasyntax/single-quotes.t:21
+    ------> [32mok("ab cd" ~~ m/ab ' ' c[33m⏏[31m d/, 'ab cd 2');[0m
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-metasyntax/single-quotes.t:25
+    ------> [32mok("ab/cd" ~~ m/ab '/' c[33m⏏[31m d/, 'ab/cd');[0m
+   5    0    0    0    5
 S05-metasyntax/unicode-property-pair.t.............   5    0    0    0    5
 S05-metasyntax/unknown.rakudo.moar.................Use of Nil in string context  in block  at t/spec/S05-metasyntax/unknown.rakudo.moar:29
   11    0    1    0   12
@@ -1281,7 +1503,11 @@ S05-modifier/pos.rakudo.moar.......................  37    0    3    0   40
      1 todo   : m:g
      1 todo   : m:p:i:g// NYI
      1 todo   : s:pos/// NYI
-S05-modifier/repetition-exhaustive.rakudo.moar.....   4    0    1    0    5
+S05-modifier/repetition-exhaustive.rakudo.moar.....Potential difficulties:
+    Space is not signficant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
+    at t/spec/S05-modifier/repetition-exhaustive.rakudo.moar:20
+    ------> [32mmy regex rx { a[33m⏏[31m b+ };[0m
+   4    0    1    0    5
      1 todo   : exhaustive capture too greedy RT \#125133
 S05-modifier/repetition.t..........................  12    0    0    0   12
 S05-modifier/sigspace.t............................  16    0    0    0   16
@@ -1576,12 +1802,17 @@ Cannot initialize an infinite list onto a array[num]
   in block <unit> at t/spec/S09-typed-arrays/native-num.rakudo.moar:11
 
 # Testing num32 array
+# Testing num64 array
 WARNING: unhandled Failure detected in DESTROY:
 Cannot initialize an infinite list onto a array[num32]
   in block  at t/spec/S09-typed-arrays/native-num.rakudo.moar:152
   in block <unit> at t/spec/S09-typed-arrays/native-num.rakudo.moar:11
 
-# Testing num64 array
+WARNING: unhandled Failure detected in DESTROY:
+Cannot initialize an infinite list onto a array[num64]
+  in block  at t/spec/S09-typed-arrays/native-num.rakudo.moar:152
+  in block <unit> at t/spec/S09-typed-arrays/native-num.rakudo.moar:11
+
  360    0    0   27  387
      3 skipped: borkedness with num and iteration RT #124678
      6 skipped: cannot approx test Parcels
@@ -1609,21 +1840,14 @@ Potential difficulties:
      1 todo   : RT \#64606
      1 todo   : ticket based only on class... RT \#60446
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.moar............Use of Nil in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:112
-
-# Failed test 'precompile load - from the command line'
-# at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Util.pm line 58
-#      got err: "Potential difficulties:\n    Semicolon form without 'unit' declarator is deprecated\n    at getout-81118-87495.code:2\n    ------> \x[1b][32m       class C does Bar ;\x[1b][33m⏏\x[1b][31m<EOL>\x[1b][0m\n"
-# expected err: ""
-Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
+S10-packages/precompilation.rakudo.moar............Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Cannot find method 'postcircumfix:<( )>'
-#   in block <unit> at getout-81118-348166.code:4
+#   in block <unit> at getout-11067-468851.code:4
 
 
-# Looks like you failed 1 tests of 33
-  29    1    3    0   33
+  30    0    3    0   33
      1 todo   : RT \#123276
      1 todo   : no 6model parametrics interning yet
      1 todo PASSED: RT \#122896
@@ -2043,8 +2267,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
      1 todo   : RT \#122471
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1431724766
-# Using file temp_1431724766
+S16-filehandles/chmod.t............................# Using file temp_1431811155
+# Using file temp_1431811155
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2413,15 +2637,7 @@ Cannot convert string to number: trailing characters after number in '5⏏ foo' 
   in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
   in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
 
-# Variable '$abd' is not declared. Did you mean any of these?
-#     $abc
-#     $abe
-
-    
-# Failed test ''sub f { f(|$) }' died'
-# at t/spec/S32-exceptions/misc.rakudo.moar line 518
-    # Looks like you failed 1 tests of 5
-Use of Nil in string contextWARNING: unhandled Failure detected in DESTROY:
+WARNING: unhandled Failure detected in DESTROY:
 Can not convert 1+2i to Num: imaginary part not zero
   in block <unit> at EVAL_222:1
   in any <unit-outer> at EVAL_222:1
@@ -2431,7 +2647,15 @@ Can not convert 1+2i to Num: imaginary part not zero
   in sub throws_like at lib/Test.pm:431
   in block <unit> at t/spec/S32-exceptions/misc.rakudo.moar:360
 
-  in block  at lib/Test.pm:456
+# Variable '$abd' is not declared. Did you mean any of these?
+#     $abc
+#     $abe
+
+    
+# Failed test ''sub f { f(|$) }' died'
+# at t/spec/S32-exceptions/misc.rakudo.moar line 518
+    # Looks like you failed 1 tests of 5
+Use of Nil in string context  in block  at lib/Test.pm:456
 Use of Nil in string context  in block  at lib/Test.pm:456
 Use of uninitialized value of type Any in string context  in block  at t/spec/S32-exceptions/misc.rakudo.moar:590
 Use of Nil in string context  in block  at lib/Test.pm:456
@@ -2469,7 +2693,11 @@ S32-io/dir.rakudo.moar.............................   9    0    4    0   13
      1 todo   : directories are not marked with trailing / yet RT \#124784
      1 todo   : dirname is not yet absolute RT \#124786
      1 todo   : entries are still IO::Path RT \#124785
-S32-io/file-tests.t................................  34    0    0    0   34
+S32-io/file-tests.t................................WARNING: unhandled Failure detected in DESTROY:
+Failed to find 'non-existent-file-tests' while trying to do '.f'
+  in block <unit> at t/spec/S32-io/file-tests.t:40
+
+  34    0    0    0   34
 S32-io/io-handle.t.................................   3    0    0    0    3
 S32-io/io-path-cygwin.rakudo.moar..................Use of uninitialized value $CWD of type Any in string context  in block <unit> at t/spec/S32-io/io-path-cygwin.rakudo.moar:9
   49    0    1    0   50
@@ -2516,7 +2744,12 @@ so that this message will disappear!
 Please note that *ALL* deprecated features will be removed at the RC-0 release
 (expected september 2015).
   18    0    0    0   18
-S32-io/spurt.t.....................................Saw 1 call to deprecated code during execution.
+S32-io/spurt.t.....................................WARNING: unhandled Failure detected in DESTROY:
+'t' is a directory, cannot do '.open' on a directory
+  in block  at t/spec/S32-io/spurt.t:90
+  in block <unit> at t/spec/S32-io/spurt.t:89
+
+Saw 1 call to deprecated code during execution.
 ================================================================================
 spurt($handle,...) called at:
   t/spec/S32-io/spurt.t, lines 65,74,83
@@ -2602,7 +2835,20 @@ Use of uninitialized value $x of type Any in string context  in sub is-deeply at
 S32-list/unique.t..................................  34    0    0    0   34
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  31    0    0    0   31
-S32-num/complex.t..................................Use of Nil in string context  in block <unit> at EVAL_0:1
+S32-num/complex.t..................................Use of Nil in string contextWARNING: unhandled Failure detected in DESTROY:
+Can not convert 2+2i to Real: imaginary part not zero
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1230
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1194
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1194
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1009
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1667
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1667
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1691
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+
+  in block <unit> at EVAL_0:1
 Use of Nil in string context  in block <unit> at EVAL_7:1
  488    0    0    0  488
 S32-num/cool-num.rakudo.moar.......................  39    0    0    4   43
@@ -2612,8 +2858,7 @@ S32-num/expmod.t................................... 117    0    0    0  117
 S32-num/fatrat.rakudo.moar......................... 279    0    1    2  282
      2 skipped: FatRat arith + type objects RT #124814
      1 todo   : unknown RT \#124815
-S32-num/int.rakudo.moar............................ 102    0    3    2  107
-     2 skipped: trailing characters produce failures RT #124817
+S32-num/int.rakudo.moar............................ 104    0    3    0  107
      3 todo   : Inf and NaN NYI for Int RT \#124818
 S32-num/is-prime.t.................................  35    0    0    0   35
 S32-num/log.rakudo.moar............................  28    0    1    0   29
@@ -2634,7 +2879,25 @@ S32-num/real-bridge.t.............................. 200    0    0    0  200
 S32-num/roots.t....................................  55    0    0    0   55
 S32-num/rounders.t................................. 130    0    0    0  130
 S32-num/rshift_pos_amount.t........................ 189    0    0    0  189
-S32-num/sign.rakudo.moar...........................  34    0    1    0   35
+S32-num/sign.rakudo.moar...........................WARNING: unhandled Failure detected in DESTROY:
+Can not convert 3+4i to Real: imaginary part not zero
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1230
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1226
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1194
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1144
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1679
+  in any visit_want at src/gen/m-Perl6-Optimizer.nqp:1519
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1682
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1691
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1688
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1691
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+
+  34    0    1    0   35
      1 todo   : Nom does not yet have a NaN framework in place RT \#124813
 S32-num/sqrt.t.....................................  18    0    0    0   18
 S32-num/stringify.rakudo.moar......................Use of uninitialized value of type Complex in string context  in block  at t/spec/S32-num/stringify.rakudo.moar:37
@@ -2934,6 +3197,11 @@ integration/advent2010-day10.rakudo.moar...........   2    0    2    0    4
      2 todo   : RT \#121843
 integration/advent2010-day11.t.....................   2    0    0    0    2
 integration/advent2010-day12.t.....................Use of Nil in string context  in block  at t/spec/integration/advent2010-day12.t:40
+WARNING: unhandled Failure detected in DESTROY:
+Cannot convert string to number: base-10 number must begin with valid digits or '.' in '⏏bar' (indicated by ⏏)
+  in sub smart-match-medley at t/spec/integration/advent2010-day12.t:28
+  in block <unit> at t/spec/integration/advent2010-day12.t:51
+
 Use of Nil in string context  in block  at t/spec/integration/advent2010-day12.t:40
   13    0    0    0   13
 integration/advent2010-day14.t.....................   5    0    0    0    5
@@ -2976,14 +3244,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.79600491 seconds
-# gerdr: 0.8382225 seconds
-# recursive-ternary: 0.8914171 seconds
-# loop: 0.9292905 seconds
-# hand-memoization: 1.2716851 seconds
-# recursive-ternary-hand-cached: 2.1517861 seconds
-# sequence-ternary: 5.0500758 seconds
-# sequence: 6.5054337 seconds
+integration/advent2012-day21.t.....................# kaz: 0.8021269 seconds
+# gerdr: 0.82106733 seconds
+# recursive-ternary: 0.9012782 seconds
+# loop: 0.9208378 seconds
+# hand-memoization: 1.25442128 seconds
+# recursive-ternary-hand-cached: 2.1256556 seconds
+# sequence-ternary: 4.943535 seconds
+# sequence: 6.44349276 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT \#121789
@@ -3064,12 +3332,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,    19,     0,    56,    75,    86
 "S02",        5293,     0,   130,   391,  5814,  5813
 "S03",        5198,     0,   118,   105,  5421,  5439
-"S04",        1126,     0,    46,    46,  1218,  1270
+"S04",        1126,     0,    46,    46,  1218,  1268
 "S05",        5551,     0,    81,   141,  5773,  6002
 "S06",        1373,     0,    47,   100,  1520,  1569
 "S07",           0,     0,     0,     0,     0,     0
 "S09",        1897,     0,    11,   102,  2010,  2010
-"S10",         101,     1,     5,     1,   108,   165
+"S10",         102,     0,     5,     1,   108,   165
 "S11",         110,     0,     4,    14,   128,   147
 "S12",        1481,     0,    42,   125,  1648,  1702
 "S13",          36,     0,    10,    27,    73,    83
@@ -3083,15 +3351,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1234,     0,     4,    48,  1286,  1947
 "S28",          13,     0,     0,     0,    13,    13
 "S29",         342,     0,     3,     2,   347,   348
-"S32",        9827,     0,   204,   172, 10203,  8565
+"S32",        9829,     0,   204,   170, 10203,  8565
 "int",        1259,     0,    13,    15,  1287,  1273
 "ros",           2,     0,     0,     0,     2,     2
-"total",    114896,    95,   758,  1417,117166,116817
+"total",    114899,    94,   758,  1415,117166,116815
 ----------------
 Failure summary:
 S01-perl-5-integration/hash.rakudo.moar aborted 6 test(s)
 S01-perl-5-integration/roundtrip.t aborted 5 test(s)
 S01-perl-5-integration/strings.rakudo.moar aborted 6 test(s)
 S01-perl-5-integration/subs.t aborted 2 test(s)
-S10-packages/precompilation.rakudo.moar 15 - precompile load - from the command line
 S17-procasync/kill.rakudo.moar aborted 75 test(s)
