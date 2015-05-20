@@ -98,21 +98,21 @@ S02-literals/underscores.t.........................  19    0    0    0   19
 S02-literals/version.rakudo.moar...................  27    0    3    0   30
      3 todo   : trailing zeroes fail RT \#124562
 S02-magicals/78258.t...............................   1    0    0    0    1
-S02-magicals/DISTRO.rakudo.moar....................Use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1640
+S02-magicals/DISTRO.rakudo.moar....................Use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1643
   12    0    2   14   28
     14 skipped: unimpl $?DISTRO RT #124616
      1 todo   : no Distro.signature yet RT \#124617
      1 todo   : no Distro.signature yet RT \#124621
-S02-magicals/KERNEL.rakudo.moar....................Use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1640
+S02-magicals/KERNEL.rakudo.moar....................Use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1643
 Use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/KERNEL.rakudo.moar:39
   20    0    3   16   39
     16 skipped: unimpl $?KERNEL RT #124624
      1 todo   : no Kernel.desc yet RT \#124626
      1 todo   : no Kernel.signature yet RT \#124625
      1 todo   : no Kernel.signature yet RT \#124627
-S02-magicals/PERL.rakudo.moar......................Use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1640
+S02-magicals/PERL.rakudo.moar......................Use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1643
 Use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/PERL.rakudo.moar:49
-Use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1640
+Use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1643
 Use of uninitialized value of type Str in string context  in block <unit> at t/spec/S02-magicals/PERL.rakudo.moar:68
   17    0    8   25   50
     25 skipped: unimpl $?PERL RT #124581
@@ -124,7 +124,7 @@ Use of uninitialized value of type Str in string context  in block <unit> at t/s
      1 todo   : no Perl.desc yet RT \#124585
      1 todo   : no Perl.signature yet RT \#124582
      1 todo   : no Perl.signature yet RT \#124588
-S02-magicals/VM.rakudo.moar........................Use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1640
+S02-magicals/VM.rakudo.moar........................Use of uninitialized value of type Blob in string context  in any  at src/gen/m-Metamodel.nqp:1643
   13    0    2   17   32
      2 skipped: VM.properties does not exist RT #124606
     15 skipped: unimpl $?VM RT #124608
@@ -155,27 +155,7 @@ S02-names-vars/fmt.t...............................  21    0    0    0   21
 S02-names-vars/list_array_perl.rakudo.moar.........  19    0    1    2   22
      2 skipped: recursive data structure RT #124639
      1 todo   : List.perl bug
-S02-names-vars/names.rakudo.moar...................WARNING: unhandled Failure detected in DESTROY:
-Could not find symbol '&bravo_bravo_quebec'
-  in block <unit> at EVAL_1:1
-  in any <unit-outer> at EVAL_1:1
-  in block  at lib/Test.pm:443
-  in sub subtest at lib/Test.pm:272
-  in sub throws-like at lib/Test.pm:470
-  in block <unit> at t/spec/S02-names-vars/names.rakudo.moar:70
-  in any <unit-outer> at t/spec/S02-names-vars/names.rakudo.moar:1
-
-WARNING: unhandled Failure detected in DESTROY:
-Could not find symbol '&whiskey_tango_foxtrot'
-  in block <unit> at EVAL_0:1
-  in any <unit-outer> at EVAL_0:1
-  in block  at lib/Test.pm:443
-  in sub subtest at lib/Test.pm:272
-  in sub throws-like at lib/Test.pm:470
-  in block <unit> at t/spec/S02-names-vars/names.rakudo.moar:67
-  in any <unit-outer> at t/spec/S02-names-vars/names.rakudo.moar:1
-
- 131    0    0   13  144
+S02-names-vars/names.rakudo.moar................... 131    0    0   13  144
      4 skipped: ::{ } package lookup NYI RT #124638
      7 skipped: package variable autovivification RT #124637
      2 skipped: this kind of lookup NYI
@@ -204,17 +184,7 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  15    0    0    0   15
 S02-names/our.rakudo.moar..........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.moar.......................WARNING: unhandled Failure detected in DESTROY:
-No such symbol 'OUR::A43'
-  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:184
-  in any <unit-outer> at t/spec/S02-names/pseudo.rakudo.moar:1
-
-WARNING: unhandled Failure detected in DESTROY:
-No such symbol 'OUR::A42'
-  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:180
-  in any <unit-outer> at t/spec/S02-names/pseudo.rakudo.moar:1
-
-  52    0    8   82  142
+S02-names/pseudo.rakudo.moar.......................  52    0    8   82  142
     19 skipped: CORE NYI RT #124916
      4 skipped: the binding in here is NYI RT #124914
     23 skipped: various issues to resolve RT #124917
@@ -263,12 +233,6 @@ S02-types/array.rakudo.moar........................
     # Looks like you failed 1 tests of 2
 WARNING: unhandled Failure detected in DESTROY:
 Index out of range. Is: -1, should be in 0..Inf
-  in block  at t/spec/S02-types/array.rakudo.moar:244
-  in block <unit> at t/spec/S02-types/array.rakudo.moar:241
-  in any <unit-outer> at t/spec/S02-types/array.rakudo.moar:1
-
-WARNING: unhandled Failure detected in DESTROY:
-Index out of range. Is: -1, should be in 0..Inf
   in block  at t/spec/S02-types/array.rakudo.moar:230
   in block <unit> at t/spec/S02-types/array.rakudo.moar:223
   in any <unit-outer> at t/spec/S02-types/array.rakudo.moar:1
@@ -314,14 +278,14 @@ Please note that *ALL* deprecated features will be removed at the RC-0 release
      3 todo   : deprecated %h = {...} for now
 S02-types/autovivification.t.......................  25    0    0    0   25
 S02-types/bag.rakudo.moar..........................WARNING: unhandled Failure detected in DESTROY:
-Cannot call 'DELETE-KEY' on an immutable 'Bag'
-  in block  at t/spec/S02-types/bag.rakudo.moar:48
+Cannot modify an immutable Bag
+  in block  at t/spec/S02-types/bag.rakudo.moar:36
   in block <unit> at t/spec/S02-types/bag.rakudo.moar:12
   in any <unit-outer> at t/spec/S02-types/bag.rakudo.moar:1
 
 WARNING: unhandled Failure detected in DESTROY:
-Cannot modify an immutable Bag
-  in block  at t/spec/S02-types/bag.rakudo.moar:36
+Cannot call 'DELETE-KEY' on an immutable 'Bag'
+  in block  at t/spec/S02-types/bag.rakudo.moar:48
   in block <unit> at t/spec/S02-types/bag.rakudo.moar:12
   in any <unit-outer> at t/spec/S02-types/bag.rakudo.moar:1
 
@@ -384,14 +348,14 @@ S02-types/lazy-lists.t.............................  23    0    0    0   23
 S02-types/lists.rakudo.moar........................  29    0    0    3   32
      3 skipped: list binding RT #124494
 S02-types/mix.rakudo.moar..........................WARNING: unhandled Failure detected in DESTROY:
-Cannot modify an immutable Mix
-  in block  at t/spec/S02-types/mix.rakudo.moar:35
+Cannot call 'DELETE-KEY' on an immutable 'Mix'
+  in block  at t/spec/S02-types/mix.rakudo.moar:47
   in block <unit> at t/spec/S02-types/mix.rakudo.moar:12
   in any <unit-outer> at t/spec/S02-types/mix.rakudo.moar:1
 
 WARNING: unhandled Failure detected in DESTROY:
-Cannot call 'DELETE-KEY' on an immutable 'Mix'
-  in block  at t/spec/S02-types/mix.rakudo.moar:47
+Cannot modify an immutable Mix
+  in block  at t/spec/S02-types/mix.rakudo.moar:35
   in block <unit> at t/spec/S02-types/mix.rakudo.moar:12
   in any <unit-outer> at t/spec/S02-types/mix.rakudo.moar:1
 
@@ -457,6 +421,12 @@ Cannot call 'DELETE-KEY' on an immutable 'Set'
 # Failed test 'code dies'
 # at t/spec/S02-types/set.rakudo.moar line 224
     # Looks like you failed 1 tests of 2
+WARNING: unhandled Failure detected in DESTROY:
+Cannot call 'DELETE-KEY' on an immutable 'Set'
+  in block  at t/spec/S02-types/set.rakudo.moar:79
+  in block <unit> at t/spec/S02-types/set.rakudo.moar:75
+  in any <unit-outer> at t/spec/S02-types/set.rakudo.moar:1
+
     
 # Failed test 'right exception type (X::AdHoc)'
 # at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
@@ -469,12 +439,6 @@ Cannot call 'DELETE-KEY' on an immutable 'Set'
 # Failed test 'code dies'
 # at t/spec/S02-types/set.rakudo.moar line 226
     # Looks like you failed 1 tests of 2
-WARNING: unhandled Failure detected in DESTROY:
-Cannot call 'DELETE-KEY' on an immutable 'Set'
-  in block  at t/spec/S02-types/set.rakudo.moar:79
-  in block <unit> at t/spec/S02-types/set.rakudo.moar:75
-  in any <unit-outer> at t/spec/S02-types/set.rakudo.moar:1
-
  157    0   12    1  170
      1 skipped: Set is no longer Iterable
      9 todo   : Hypers not yet Set compatible RT \#124487
@@ -743,7 +707,102 @@ Use of uninitialized value of type Any in numeric context  in block  at t/spec/S
  123    0    2    0  125
      1 todo   : huh? RT \#124542
      1 todo   : huh? RT \#124543
-S03-operators/reduce-le1arg.rakudo.moar............  51    0    0    3   54
+S03-operators/reduce-le1arg.rakudo.moar............WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:59
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:58
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:57
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:56
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:55
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:54
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:53
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:52
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:51
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:50
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:49
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:48
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:44
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:43
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:40
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:39
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:38
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:37
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .shift from an empty Array
+  in block <unit> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:36
+  in any <unit-outer> at t/spec/S03-operators/reduce-le1arg.rakudo.moar:1
+
+  51    0    0    3   54
      1 skipped: expected Any but got Mu instead RT #124552
      1 skipped: ~< NYI RT #124531
      1 skipped: ~> NYI RT #124531
@@ -888,26 +947,6 @@ S04-exceptions/control_across_runloop.t............   1    0    0    0    1
 S04-exceptions/fail.rakudo.moar....................  24    0    0    2   26
      2 skipped: RT #64990
 S04-exceptions/pending.rakudo.moar.................Use of Nil in numeric context  in block  at t/spec/S04-exceptions/pending.rakudo.moar:78
-WARNING: unhandled Failure detected in DESTROY:
-4
-  in block <unit> at t/spec/S04-exceptions/pending.rakudo.moar:28
-  in any <unit-outer> at t/spec/S04-exceptions/pending.rakudo.moar:1
-
-WARNING: unhandled Failure detected in DESTROY:
-3
-  in block <unit> at t/spec/S04-exceptions/pending.rakudo.moar:28
-  in any <unit-outer> at t/spec/S04-exceptions/pending.rakudo.moar:1
-
-WARNING: unhandled Failure detected in DESTROY:
-2
-  in block <unit> at t/spec/S04-exceptions/pending.rakudo.moar:28
-  in any <unit-outer> at t/spec/S04-exceptions/pending.rakudo.moar:1
-
-WARNING: unhandled Failure detected in DESTROY:
-1
-  in block <unit> at t/spec/S04-exceptions/pending.rakudo.moar:28
-  in any <unit-outer> at t/spec/S04-exceptions/pending.rakudo.moar:1
-
    5    0    2   14   21
     13 skipped: $!.pending
      1 skipped: $object.handled
@@ -926,8 +965,7 @@ S04-phasers/enter-leave.rakudo.moar................  21    0    3    1   25
      1 todo   : unwind, RT \#121530
 S04-phasers/eval-in-begin.t........................   3    0    0    0    3
 S04-phasers/first.t................................   4    0    0    0    4
-S04-phasers/in-eval.rakudo.moar....................# Looks like you planned 35 tests, but ran 34
-  34    0    1    0   35
+S04-phasers/in-eval.rakudo.moar....................  34    0    1    0   35
      1 todo   : not sure
 S04-phasers/in-loop.rakudo.moar....................   1    0    2    0    3
      2 todo   : NEXT/LEAVE ordering RT \#124952
@@ -1529,14 +1567,20 @@ S09-typed-arrays/native-int.rakudo.moar............# Testing int8 array
 1315    0    0   65 1380
      5 skipped: highest bit length stays negative, RT #124088
     60 skipped: nativeint.list loops on itself
-S09-typed-arrays/native-num.rakudo.moar............WARNING: unhandled Failure detected in DESTROY:
+S09-typed-arrays/native-num.rakudo.moar............# Testing num32 array
+# Testing num64 array
+WARNING: unhandled Failure detected in DESTROY:
+Cannot initialize an infinite list onto a array[num64]
+  in block  at t/spec/S09-typed-arrays/native-num.rakudo.moar:152
+  in block <unit> at t/spec/S09-typed-arrays/native-num.rakudo.moar:11
+  in any <unit-outer> at t/spec/S09-typed-arrays/native-num.rakudo.moar:1
+
+WARNING: unhandled Failure detected in DESTROY:
 Cannot initialize an infinite list onto a array[num]
   in block  at t/spec/S09-typed-arrays/native-num.rakudo.moar:152
   in block <unit> at t/spec/S09-typed-arrays/native-num.rakudo.moar:11
   in any <unit-outer> at t/spec/S09-typed-arrays/native-num.rakudo.moar:1
 
-# Testing num32 array
-# Testing num64 array
  360    0    0   27  387
      3 skipped: borkedness with num and iteration RT #124678
      6 skipped: cannot approx test Parcels
@@ -1579,8 +1623,8 @@ S10-packages/precompilation.rakudo.moar............Use of uninitialized value $_
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Cannot find method 'postcircumfix:<( )>'
-#   in block <unit> at getout-13956-186802.code:4
-#   in any <unit-outer> at getout-13956-186802.code:1
+#   in block <unit> at getout-34029-392633.code:4
+#   in any <unit-outer> at getout-34029-392633.code:1
 
 
   30    0    3    0   33
@@ -1650,7 +1694,7 @@ adapted, so that this message will disappear!
 
 Please note that *ALL* deprecated features will be removed at the RC-0 release
 (expected september 2015).
- 146    0    6    1  153
+ 136    0    6    1  143
      1 skipped: dubious test - the initializer becomes a submethod here, implying a scope RT #124908
      1 todo   : huh?
      1 todo   : over-eager auto-vivification bugs
@@ -1830,7 +1874,7 @@ S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
 S14-roles/instantiation.t..........................  19    0    0    0   19
 S14-roles/lexical.t................................   9    0    0    0    9
-S14-roles/mixin.rakudo.moar........................Use of uninitialized value of type Any in string context  in any try_select at src/gen/m-Metamodel.nqp:2426
+S14-roles/mixin.rakudo.moar........................Use of uninitialized value of type Any in string context  in any try_select at src/gen/m-Metamodel.nqp:2429
   34    0    0    2   36
      2 skipped: mixin at the point of declaration is compile time RT #124747
 S14-roles/namespaced.rakudo.moar...................   2    0    1    0    3
@@ -1840,7 +1884,7 @@ S14-roles/parameterized-basic.t....................  35    0    0    0   35
 S14-roles/parameterized-mixin.rakudo.moar..........  24    0    4    0   28
      4 todo   : .does with parametric roles RT \#124746
 S14-roles/parameterized-type.t.....................  31    0    0    0   31
-S14-roles/stubs.t..................................Use of uninitialized value of type Any in string context  in any try_select at src/gen/m-Metamodel.nqp:2426
+S14-roles/stubs.t..................................Use of uninitialized value of type Any in string context  in any try_select at src/gen/m-Metamodel.nqp:2429
   10    0    0    0   10
 S14-roles/submethods.t.............................   4    0    0    0    4
 S14-traits/attributes.t............................   8    0    0    0    8
@@ -1918,8 +1962,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
      1 todo   : RT \#122471
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
-S16-filehandles/chmod.t............................# Using file temp_1432070328
-# Using file temp_1432070328
+S16-filehandles/chmod.t............................# Using file temp_1432156735
+# Using file temp_1432156735
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2236,6 +2280,10 @@ Code object coerced to string (please use .gist or .perl to do that)  in any thr
 # Failed test ''#`' died'
 # at t/spec/S32-exceptions/misc.rakudo.moar line 175
     # Looks like you failed 1 tests of 2
+# Variable '$abd' is not declared. Did you mean any of these?
+#     $abc
+#     $abe
+
 WARNING: unhandled Failure detected in DESTROY:
 Cannot convert string to number: trailing characters after number in '5⏏ foo' (indicated by ⏏)
   in any  at src/gen/m-Perl6-Optimizer.nqp:1230
@@ -2253,10 +2301,6 @@ Cannot convert string to number: trailing characters after number in '5⏏ foo' 
   in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
   in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
   in any optimize at src/Perl6/Compiler.nqp:64
-
-# Variable '$abd' is not declared. Did you mean any of these?
-#     $abc
-#     $abe
 
     
 # Failed test ''sub f { f(|$) }' died'
@@ -2290,13 +2334,25 @@ S32-io/IO-Socket-INET.t............................   0    0    0   47   47
     47 skipped: Operating system not yet supported
 S32-io/chdir.rakudo.moar...........................   8    0    0    2   10
      2 skipped: spec non-conformance due to missing sink context
-S32-io/copy.t......................................  29    0    0    0   29
+S32-io/copy.t......................................WARNING: unhandled Failure detected in DESTROY:
+Failed to copy '/usr/home/christian/perl6/perl6-roast-data/rakudo.moar/non-existent-copy' to 'non-existent-copy-mtgt': Failed to copy file: no such file or directory
+  in any  at ././CORE.setting.moarvm:1
+  in block  at t/spec/S32-io/copy.t:38
+  in block <unit> at t/spec/S32-io/copy.t:28
+  in any <unit-outer> at t/spec/S32-io/copy.t:1
+
+  29    0    0    0   29
 S32-io/dir.rakudo.moar.............................   9    0    4    0   13
      1 todo   : $*CWD misses slash at end still RT \#124787
      1 todo   : directories are not marked with trailing / yet RT \#124784
      1 todo   : dirname is not yet absolute RT \#124786
      1 todo   : entries are still IO::Path RT \#124785
-S32-io/file-tests.t................................  34    0    0    0   34
+S32-io/file-tests.t................................WARNING: unhandled Failure detected in DESTROY:
+Failed to find 'non-existent-file-tests' while trying to do '.f'
+  in block <unit> at t/spec/S32-io/file-tests.t:40
+  in any <unit-outer> at t/spec/S32-io/file-tests.t:1
+
+  34    0    0    0   34
 S32-io/io-handle.t.................................   3    0    0    0    3
 S32-io/io-path-cygwin.rakudo.moar..................Use of uninitialized value $CWD of type Any in string context  in block <unit> at t/spec/S32-io/io-path-cygwin.rakudo.moar:9
   49    0    1    0   50
@@ -2343,7 +2399,13 @@ adapted, so that this message will disappear!
 Please note that *ALL* deprecated features will be removed at the RC-0 release
 (expected september 2015).
   18    0    0    0   18
-S32-io/spurt.t.....................................Saw 1 occurrence of deprecated code.
+S32-io/spurt.t.....................................WARNING: unhandled Failure detected in DESTROY:
+'t' is a directory, cannot do '.open' on a directory
+  in block  at t/spec/S32-io/spurt.t:90
+  in block <unit> at t/spec/S32-io/spurt.t:89
+  in any <unit-outer> at t/spec/S32-io/spurt.t:1
+
+Saw 1 occurrence of deprecated code.
 ================================================================================
 spurt($handle,...) seen at:
   t/spec/S32-io/spurt.t, lines 65,74,83
@@ -2419,49 +2481,17 @@ Use of uninitialized value $b of type Code in string context  in block  at t/spe
   30    0    2    0   32
      1 todo   : closure as non-final argument RT \#124762
      1 todo   : method fallback to sub unimpl RT \#124763
-S32-list/squish.rakudo.moar........................Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:415
-Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:415
-Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:415
-Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:415
+S32-list/squish.rakudo.moar........................Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:410
+Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:410
+Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:410
+Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:410
   31    0    6    0   37
      2 todo   : RT \#124204
      4 todo   : RT \#124205
 S32-list/unique.t..................................  34    0    0    0   34
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  31    0    0    0   31
-S32-num/complex.t..................................WARNING: unhandled Failure detected in DESTROY:
-Can not convert 2+2i to Real: imaginary part not zero
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1230
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1194
-  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1194
-  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1009
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1667
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1667
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1691
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
-  in any optimize at src/Perl6/Compiler.nqp:64
-
-WARNING: unhandled Failure detected in DESTROY:
-Can not convert 2+3i to Real: imaginary part not zero
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1230
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1194
-  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1194
-  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1009
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1667
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1667
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1691
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1697
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
-  in any optimize at src/Perl6/Compiler.nqp:64
-  in sub eval_exception at lib/Test.pm:482
-  in sub eval-dies-ok at lib/Test.pm:388
-  in block <unit> at t/spec/S32-num/complex.t:20
-  in any <unit-outer> at t/spec/S32-num/complex.t:1
-
- 488    0    0    0  488
+S32-num/complex.t.................................. 488    0    0    0  488
 S32-num/cool-num.rakudo.moar.......................  39    0    0    4   43
      4 skipped: angle conversion RT #124816
 S32-num/exp.t......................................  72    0    0    0   72
@@ -2807,14 +2837,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.7783941 seconds
-# gerdr: 0.79452530 seconds
-# recursive-ternary: 0.87494675 seconds
-# loop: 0.90479082 seconds
-# hand-memoization: 1.2607338 seconds
-# recursive-ternary-hand-cached: 2.1245122 seconds
-# sequence-ternary: 5.04329168 seconds
-# sequence: 6.47998610 seconds
+integration/advent2012-day21.t.....................# gerdr: 0.79061520 seconds
+# kaz: 0.791885 seconds
+# recursive-ternary: 0.89315706 seconds
+# loop: 0.91333584 seconds
+# hand-memoization: 1.2456890 seconds
+# recursive-ternary-hand-cached: 2.12811231 seconds
+# sequence-ternary: 5.120290 seconds
+# sequence: 6.54667482 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT \#121789
@@ -2895,14 +2925,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        5291,     0,   130,   391,  5812,  5811
 "S03",        5198,     0,   118,   105,  5421,  5439
-"S04",        1133,     0,    49,    46,  1228,  1268
+"S04",        1133,     0,    49,    46,  1228,  1272
 "S05",        5553,     0,    81,   141,  5775,  6004
-"S06",        1373,     0,    47,   100,  1520,  1569
-"S07",           0,     0,     0,     0,     0,     0
+"S06",        1373,     0,    47,   100,  1520,  1591
+"S07",           0,     0,     0,     0,     0,    96
 "S09",        1897,     0,    11,   102,  2010,  2010
 "S10",         102,     0,     5,     1,   108,   165
 "S11",         110,     0,     4,    14,   128,   147
-"S12",        1484,     0,    42,   122,  1648,  1702
+"S12",        1474,     0,    42,   122,  1638,  1693
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         314,     0,     8,     7,   329,   342
 "S15",       78476,     0,     3,    18, 78497, 78517
@@ -2917,7 +2947,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9833,     0,   204,   170, 10207,  8569
 "int",        1259,     0,    13,    15,  1287,  1273
 "ros",           2,     0,     0,     0,     2,     2
-"total",    114913,    75,   761,  1431,117180,116819
+"total",    114903,    75,   761,  1431,117170,116932
 ----------------
 Failure summary:
 S17-procasync/kill.rakudo.moar aborted 75 test(s)
