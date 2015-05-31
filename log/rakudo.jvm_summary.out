@@ -168,7 +168,7 @@ S02-names/symbolic-deref.rakudo.jvm................  32    0    2    2   36
      1 todo   : no such symbol
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.rakudo.jvm......................... 636    0    0   12  648
+S02-types/WHICH.rakudo.jvm......................... 634    0    0   12  646
     12 skipped: NYI on jvm
 S02-types/anon_block.rakudo.jvm....................  36    0    4    2   42
      2 skipped: tests don't work if previous test fails
@@ -225,7 +225,7 @@ S02-types/declare.rakudo.jvm.......................  59    0    0   21   80
      1 skipped: complex NYI RT #124463
      1 skipped: num16  NYI RT #124481
      1 skipped: rat NYI RT #124464
-S02-types/deprecations.t...........................   9    0    0    0    9
+S02-types/deprecations.t...........................   8    0    0    0    8
 S02-types/fatrat.t.................................   1    0    0    0    1
 S02-types/flattening.t.............................  41    0    0    0   41
 S02-types/hash.rakudo.jvm..........................  94    0    1    0   95
@@ -341,7 +341,7 @@ S03-metaops/hyper.rakudo.jvm....................... 300    0    1    3  304
      2 skipped: nom regression: possible spec change/improvement RT #124513
      1 todo   : can_meta check for meta operators NYI
 S03-metaops/not.t..................................  39    0    0    0   39
-S03-metaops/reduce.rakudo.jvm...................... 360    0    6    0  366
+S03-metaops/reduce.rakudo.jvm...................... 363    0    6    0  369
      3 todo   : huh?
      1 todo   : item context
      2 todo   : orelse RT \#124516
@@ -1834,8 +1834,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5254,     0,   143,   415,  5812,  5811
-"S03",        5209,     0,   120,   103,  5432,  5450
+"S02",        5251,     0,   143,   415,  5809,  5808
+"S03",        5212,     0,   120,   103,  5435,  5453
 "S04",        1130,     0,    52,    47,  1229,  1273
 "S05",        5447,     8,    93,   207,  5755,  6004
 "S06",        1364,     0,    50,   107,  1521,  1592
