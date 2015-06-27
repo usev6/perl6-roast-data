@@ -1299,7 +1299,7 @@ S17-supply/sort.t..................................   7    0    0    0    7
 S17-supply/squish.t................................  11    0    0    0   11
 S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
      2 skipped: doesn't work or can't test RT #124822
-S17-supply/start.t.................................   8    1    0    0    9
+S17-supply/start.t.................................   9    0    0    0    9
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch_path.rakudo.jvm...................   2    0    0    0    2
@@ -1831,7 +1831,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         317,     0,     8,     8,   333,   346
 "S15",          15,     0,     4,    16,    35, 78526
 "S16",         252,    48,     0,    16,   316,   344
-"S17",         700,     1,     5,    23,   729,   775
+"S17",         701,     0,     5,    23,   729,   775
 "S19",          13,     0,     0,     0,    13,    17
 "S22",           0,    24,     0,     0,    24,    24
 "S24",           4,    14,     0,     0,    18,    89
@@ -1841,7 +1841,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9770,     0,   193,   175, 10138,  8471
 "int",        1241,    17,    11,    15,  1284,  1275
 "ros",           2,     0,     0,     0,     2,     2
-"total",     34858,   475,   783,  1457, 37573,115182
+"total",     34859,   474,   783,  1457, 37573,115182
 ----------------
 Failure summary:
 S02-literals/quoting.rakudo.jvm 124 - Testing for q:x operator.
@@ -1855,7 +1855,6 @@ S06-signature/introspection.rakudo.jvm aborted 13 test(s)
 S09-typed-arrays/native-int.rakudo.jvm aborted 137 test(s)
 S09-typed-arrays/native-num.rakudo.jvm aborted 129 test(s)
 S16-filehandles/io.rakudo.jvm aborted 48 test(s)
-S17-supply/start.t 9 - did we get the other original value
 S22-package-format/local.rakudo.jvm aborted 24 test(s)
 S24-testing/3-output.t aborted 1 test(s)
 S24-testing/line-numbers.t aborted 13 test(s)
