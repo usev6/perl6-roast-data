@@ -316,7 +316,15 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  15    0    0    0   15
 S02-names/our.rakudo.moar..........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.moar.......................Saw 1 occurrence of deprecated code.
+S02-names/pseudo.rakudo.moar.......................WARNING: unhandled Failure detected in DESTROY:
+No such symbol 'OUR::A43'
+  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:184
+
+WARNING: unhandled Failure detected in DESTROY:
+No such symbol 'OUR::A42'
+  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:180
+
+Saw 1 occurrence of deprecated code.
 ================================================================================
 $*PROGRAM_NAME seen at:
   /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S02-names/pseudo.rakudo.moar, line 252
@@ -353,14 +361,14 @@ S02-types/anon_block.rakudo.moar...................Block object coerced to strin
      1 todo   : Parrot support for zero-arg subs?
 S02-types/array-shapes.rakudo.moar.................    
 # Failed test 'right exception type (X::TypeCheck)'
-# at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
     # Expected: (X::TypeCheck)
     # Got:      (X::AdHoc)
     # Exception message: This type cannot unbox to a native integer
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::TypeCheck)'
-# at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
     # Expected: (X::TypeCheck)
     # Got:      (X::AdHoc)
     # Exception message: This type cannot unbox to a native integer
@@ -370,21 +378,21 @@ S02-types/array-shapes.rakudo.moar.................
      2 todo   : X::AdHoc "This type cannot unbox to a native integer" RT \#125123
 S02-types/array.rakudo.moar........................    
 # Failed test 'right exception type (X::Subscript::Negative)'
-# at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
     # Expected: (X::Subscript::Negative)
     # Got:      (X::AdHoc)
     # Exception message: MVMArray: Index out of bounds
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Item)'
-# at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
     # Expected: (X::Item)
     # Got:      (X::AdHoc)
     # Exception message: Cannot coerce Inf or NaN to an Int
     # Looks like you failed 1 test of 4
     
 # Failed test 'right exception type (X::Item)'
-# at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
     # Expected: (X::Item)
     # Got:      (X::AdHoc)
     # Exception message: Cannot coerce Inf or NaN to an Int
@@ -498,7 +506,7 @@ S02-types/set.rakudo.moar..........................
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::AdHoc)'
-# at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
     # Expected: (X::AdHoc)
     # Got:      (X::HyperOp::NonDWIM)
     # Exception message: Lists on either side of non-dwimmy hyperop of infix:<+> are not of the same length
@@ -510,7 +518,7 @@ S02-types/set.rakudo.moar..........................
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::AdHoc)'
-# at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
     # Expected: (X::AdHoc)
     # Got:      (X::HyperOp::NonDWIM)
     # Exception message: Lists on either side of non-dwimmy hyperop of infix:<+> are not of the same length
@@ -747,30 +755,7 @@ S03-operators/increment.t..........................  37    0    0    0   37
 S03-operators/infixed-function.t...................   5    0    0    0    5
 S03-operators/inplace.rakudo.moar..................  23    0    0    4   27
      4 skipped: Method '' not found for invocant of class 'Str' RT #124528
-S03-operators/is-divisible-by.rakudo.moar..........WARNING: unhandled Failure detected in DESTROY:
-Attempt to divide 9 by zero using infix:<%%>
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1229
-  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
-  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1147
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1708
-  in any visit_want at src/gen/m-Perl6-Optimizer.nqp:1548
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1711
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1717
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1717
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
-  in any optimize at src/Perl6/Compiler.nqp:64
-
-    
+S03-operators/is-divisible-by.rakudo.moar..........    
 # Failed test 'code dies'
 # at t/spec/S03-operators/is-divisible-by.rakudo.moar line 41
     # Looks like you failed 1 test of 4
@@ -881,8 +866,13 @@ Use of Nil in string context  in block  at t/spec/S04-blocks-and-statements/temp
 Use of Nil in string context  in block  at t/spec/S04-blocks-and-statements/temp.rakudo.moar:135
 Use of Nil in string context  in block  at t/spec/S04-blocks-and-statements/temp.rakudo.moar:136
 Use of Nil in string context  in block  at t/spec/S04-blocks-and-statements/temp.rakudo.moar:137
-  30    0    6    0   36
-     6 todo   : TEMP phasers NYI
+Too few positionals passed; expected 2 arguments but got 1
+  in block <unit> at t/spec/S04-blocks-and-statements/temp.rakudo.moar:153
+
+# Looks like you planned 36 tests, but ran 27
+  23    9    4    0   36
+     4 todo   : TEMP phasers NYI
+     9 tests aborted (missing ok/not ok)
 S04-declarations/constant.rakudo.moar..............Use of uninitialized value of type Any in numeric context  in block  at t/spec/S04-declarations/constant.rakudo.moar:93
 Use of uninitialized value of type Any in numeric context  in block  at t/spec/S04-declarations/constant.rakudo.moar:115
 Use of uninitialized value of type Any in numeric context  in block  at t/spec/S04-declarations/constant.rakudo.moar:137
@@ -1177,7 +1167,7 @@ S05-match/capturing-contexts.rakudo.moar...........Potential difficulties:
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
     at t/spec/S05-match/capturing-contexts.rakudo.moar:37
     ------> [32mbd' ~~ m/ <alpha> <alpha> c || <alpha> b[33m⏏[31m d /;[0m
-  45    0    1    0   46
+  49    0    1    0   50
      1 todo   : RT \#70007
 S05-match/make.t...................................   4    0    0    0    4
 S05-match/non-capturing.t..........................   9    0    0    0    9
@@ -1285,7 +1275,7 @@ S05-modifier/global.t..............................   8    0    0    0    8
 S05-modifier/ignorecase-and-ignoremark.t...........  15    0    0    0   15
 S05-modifier/ignorecase.rakudo.moar................  23    0    2    0   25
      2 todo   : ignorecase and SS/&szlig; RT \#121377
-S05-modifier/ignoremark.t..........................  15    0    0    0   15
+S05-modifier/ignoremark.t..........................  16    0    0    0   16
 S05-modifier/ii.rakudo.moar........................  15    0    6    0   21
      6 todo   : NYI
 S05-modifier/my.rakudo.moar........................  22    0    2    0   24
@@ -1595,9 +1585,21 @@ S10-packages/precompilation.rakudo.moar............Use of uninitialized value $_
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-87876-370266.code:4
+#   in block <unit> at getout-3756-485002.code:4
 
 
+Saw 1 occurrence of deprecated code.
+================================================================================
+Method pipe (from IO::Handle) seen at:
+  src/gen/m-CORE.setting, line 19891
+Deprecated since v2015.6, will be removed with release v2015.9!
+Please use shell() or run() with :in, :out or :err instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these occurrences of deprecated code
+adapted, so that this message will disappear!
+
+Please note that *ALL* deprecated features will be removed at the RC-0 release
+(expected September 2015).
   30    0    3    0   33
      1 todo   : RT \#123276
      1 todo   : no 6model parametrics interning yet
@@ -1854,7 +1856,13 @@ S14-roles/parameter-subtyping.t....................  22    0    0    0   22
 S14-roles/parameterized-basic.t....................  36    0    0    0   36
 S14-roles/parameterized-mixin.rakudo.moar..........  24    0    4    0   28
      4 todo   : .does with parametric roles RT \#124746
-S14-roles/parameterized-type.t.....................  32    0    0    0   32
+S14-roles/parameterized-type.t.....................Too few positionals passed; expected 2 arguments but got 1
+  in method call_test at t/spec/S14-roles/parameterized-type.t:32
+  in block <unit> at t/spec/S14-roles/parameterized-type.t:50
+
+# Looks like you planned 32 tests, but ran 16
+  16   16    0    0   32
+    16 tests aborted (missing ok/not ok)
 S14-roles/stubs.t..................................Use of uninitialized value of type Any in string context  in any try_select at src/gen/m-Metamodel.nqp:2454
   10    0    0    0   10
 S14-roles/submethods.t.............................   4    0    0    0    4
@@ -1936,8 +1944,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1435410752
-# Using file temp_1435410752
+S16-filehandles/chmod.t............................# Using file temp_1435439940
+# Using file temp_1435439940
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1983,12 +1991,7 @@ S17-channel/earliest.t.............................   7    0    0    0    7
 S17-lowlevel/lock.rakudo.moar......................   7    0    0    1    8
      1 skipped: not sure this test is valid RT #124793
 S17-lowlevel/thread.t..............................  25    0    0    0   25
-S17-procasync/basic.rakudo.moar....................
-# Failed test 'The object is-a 'Proc::Status''
-# at t/spec/S17-procasync/basic.rakudo.moar line 39
-# Actual type: Proc
-# Looks like you failed 1 test of 30
-  26    1    0    3   30
+S17-procasync/basic.rakudo.moar....................  27    0    0    3   30
      3 skipped: returns Nil (flapping tests) RT #125047
 S17-procasync/kill.rakudo.moar.....................
 # Failed test 'The object is-a 'Proc::Status''
@@ -2283,7 +2286,19 @@ S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
 S19-command-line/repl.t............................   1    0    0    0    1
                                                    pass fail todo skip plan
-S22-package-format/local.t.........................  24    0    0    0   24
+S22-package-format/local.t.........................Saw 1 occurrence of deprecated code.
+================================================================================
+Method pipe (from IO::Handle) seen at:
+  src/gen/m-CORE.setting, line 19891
+Deprecated since v2015.6, will be removed with release v2015.9!
+Please use shell() or run() with :in, :out or :err instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these occurrences of deprecated code
+adapted, so that this message will disappear!
+
+Please note that *ALL* deprecated features will be removed at the RC-0 release
+(expected September 2015).
+  24    0    0    0   24
                                                    pass fail todo skip plan
 S24-testing/0-compile.t............................   1    0    0    0    1
 S24-testing/3-output.t.............................   4    0    0    0    4
@@ -2364,20 +2379,7 @@ S32-array/kv.t.....................................  18    0    0    0   18
 S32-array/pairs.rakudo.moar........................  13    0    1    0   14
      1 todo   : Apparently not rw yet?
 S32-array/perl.t...................................   6    0    0    0    6
-S32-array/pop.rakudo.moar..........................WARNING: unhandled Failure detected in DESTROY:
-Cannot .pop from an empty Array
-  in block <unit> at t/spec/S32-array/pop.rakudo.moar:72
-
-WARNING: unhandled Failure detected in DESTROY:
-Cannot .pop from an empty Array
-  in block <unit> at t/spec/S32-array/pop.rakudo.moar:64
-
-Use of uninitialized value @frames of type Any in string context  in sub todo at lib/Test.pm:271
-WARNING: unhandled Failure detected in DESTROY:
-Cannot .pop from an empty Array
-  in block  at t/spec/S32-array/pop.rakudo.moar:42
-
-  36    0    1    0   37
+S32-array/pop.rakudo.moar..........................  36    0    1    0   37
      1 todo   : RT \#111720
 S32-array/push.t...................................  51    0    0    0   51
 S32-array/rotate.t.................................  27    0    0    0   27
@@ -3021,14 +3023,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.786337 seconds
-# gerdr: 0.8052831 seconds
-# recursive-ternary: 0.8889215 seconds
-# loop: 0.91945326 seconds
-# hand-memoization: 1.2209623 seconds
-# recursive-ternary-hand-cached: 2.2923491 seconds
-# sequence-ternary: 5.054766 seconds
-# sequence: 6.7066027 seconds
+integration/advent2012-day21.t.....................# kaz: 0.7947626 seconds
+# gerdr: 0.8098165 seconds
+# recursive-ternary: 0.89617349 seconds
+# loop: 0.9174974 seconds
+# hand-memoization: 1.22848825 seconds
+# recursive-ternary-hand-cached: 2.3331660 seconds
+# sequence-ternary: 5.117276 seconds
+# sequence: 6.7758653 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT \#121789
@@ -3154,6 +3156,18 @@ Compilation unit 'EVAL_11' contained the following violations:
  Line 6:
   nqp::gethllsym
 ===============================================================================
+Saw 1 occurrence of deprecated code.
+================================================================================
+Method pipe (from IO::Handle) seen at:
+  src/gen/m-CORE.setting, line 19891
+Deprecated since v2015.6, will be removed with release v2015.9!
+Please use shell() or run() with :in, :out or :err instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these occurrences of deprecated code
+adapted, so that this message will disappear!
+
+Please note that *ALL* deprecated features will be removed at the RC-0 release
+(expected September 2015).
    4    0    1    0    5
      1 todo   : Something wrong with dynamic variables.
 integration/real-strings.t.........................  20    0    0    0   20
@@ -3174,8 +3188,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        5292,     0,   126,   386,  5804,  5803
 "S03",        5243,     0,   119,    98,  5460,  5478
-"S04",        1149,     0,    47,    42,  1238,  1276
-"S05",        5558,     0,    84,   144,  5786,  6005
+"S04",        1142,     9,    45,    42,  1238,  1276
+"S05",        5563,     0,    84,   144,  5791,  6010
 "S06",        1394,     0,    47,    92,  1533,  1604
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1898,     0,    12,   101,  2011,  2011
@@ -3183,10 +3197,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S11",         111,     0,     6,    11,   128,   147
 "S12",        1483,     0,    45,   144,  1672,  1730
 "S13",          36,     0,    10,    27,    73,    83
-"S14",         318,     0,     8,     7,   333,   346
+"S14",         302,    16,     8,     7,   333,   346
 "S15",       78485,     0,     3,    18, 78506, 78526
 "S16",         298,     0,     2,    16,   316,   344
-"S17",         955,    32,    36,    31,  1054,  1054
+"S17",         956,    31,    36,    31,  1054,  1054
 "S19",          13,     0,     0,     0,    13,    17
 "S22",          24,     0,     0,     0,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
@@ -3196,10 +3210,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9932,     0,   201,   155, 10288,  8621
 "int",        1254,     8,    12,    15,  1289,  1275
 "ros",           2,     0,     0,     0,     2,     2
-"total",    115810,    40,   770,  1441,118061,117112
+"total",    115793,    64,   768,  1441,118066,117117
 ----------------
 Failure summary:
-S17-procasync/basic.rakudo.moar 13 - The object is-a 'Proc::Status'
+S04-blocks-and-statements/temp.rakudo.moar aborted 9 test(s)
+S14-roles/parameterized-type.t aborted 16 test(s)
 S17-procasync/kill.rakudo.moar 7 - The object is-a 'Proc::Status'
 S17-procasync/kill.rakudo.moar 16 - The object is-a 'Proc::Status'
 S17-procasync/kill.rakudo.moar 25 - The object is-a 'Proc::Status'
