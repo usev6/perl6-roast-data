@@ -165,7 +165,7 @@ S02-names/symbolic-deref.rakudo.jvm................  32    0    2    2   36
      1 todo   : no such symbol
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.rakudo.jvm......................... 633    1    0   12  646
+S02-types/WHICH.rakudo.jvm......................... 634    0    0   12  646
     12 skipped: NYI on jvm
 S02-types/anon_block.rakudo.jvm....................  36    0    4    2   42
      2 skipped: tests don't work if previous test fails
@@ -1817,7 +1817,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5194,    75,   131,   404,  5804,  5803
+"S02",        5195,    74,   131,   404,  5804,  5803
 "S03",        5230,    14,   119,    97,  5460,  5478
 "S04",        1143,     0,    50,    45,  1238,  1276
 "S05",        5450,     0,    96,   210,  5756,  6005
@@ -1841,14 +1841,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9770,     0,   193,   175, 10138,  8471
 "int",        1241,    17,    11,    15,  1284,  1275
 "ros",           2,     0,     0,     0,     2,     2
-"total",     34859,   474,   783,  1457, 37573,115182
+"total",     34860,   473,   783,  1457, 37573,115182
 ----------------
 Failure summary:
 S02-literals/quoting.rakudo.jvm 124 - Testing for q:x operator.
 S02-literals/quoting.rakudo.jvm 125 - Testing for q:x operator. (utf8)
 S02-literals/quoting.rakudo.jvm aborted 49 test(s)
 S02-magicals/KERNEL.rakudo.jvm aborted 23 test(s)
-S02-types/WHICH.rakudo.jvm 185 - checking Proc::Status.WHICH
 S03-junctions/misc.rakudo.jvm 131 - Do not try to auto-thread Junction type object (only case)
 S03-smartmatch/signature-signature.rakudo.jvm aborted 13 test(s)
 S06-signature/introspection.rakudo.jvm aborted 13 test(s)

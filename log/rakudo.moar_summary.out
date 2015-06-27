@@ -316,15 +316,7 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  15    0    0    0   15
 S02-names/our.rakudo.moar..........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.moar.......................WARNING: unhandled Failure detected in DESTROY:
-No such symbol 'OUR::A43'
-  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:184
-
-WARNING: unhandled Failure detected in DESTROY:
-No such symbol 'OUR::A42'
-  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:180
-
-Saw 1 occurrence of deprecated code.
+S02-names/pseudo.rakudo.moar.......................Saw 1 occurrence of deprecated code.
 ================================================================================
 $*PROGRAM_NAME seen at:
   /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S02-names/pseudo.rakudo.moar, line 252
@@ -354,17 +346,7 @@ S02-names/symbolic-deref.rakudo.moar...............  32    0    2    2   36
      1 todo   : no such symbol
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.t..................................
-# Failed test 'checking Proc::Status.WHICH'
-# at t/spec/S02-types/WHICH.t line 339
-# expected: 'Proc::Status'
-#      got: 'Failure|34473333344'
-WARNING: unhandled Failure detected in DESTROY:
-No such symbol 'Proc::Status'
-  in block <unit> at t/spec/S02-types/WHICH.t:339
-
-# Looks like you failed 1 test of 646
- 645    1    0    0  646
+S02-types/WHICH.t.................................. 646    0    0    0  646
 S02-types/anon_block.rakudo.moar...................Block object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:178
   39    0    1    2   42
      2 skipped: tests don't work if previous test fails
@@ -765,7 +747,30 @@ S03-operators/increment.t..........................  37    0    0    0   37
 S03-operators/infixed-function.t...................   5    0    0    0    5
 S03-operators/inplace.rakudo.moar..................  23    0    0    4   27
      4 skipped: Method '' not found for invocant of class 'Str' RT #124528
-S03-operators/is-divisible-by.rakudo.moar..........    
+S03-operators/is-divisible-by.rakudo.moar..........WARNING: unhandled Failure detected in DESTROY:
+Attempt to divide 9 by zero using infix:<%%>
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1229
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1147
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1708
+  in any visit_want at src/gen/m-Perl6-Optimizer.nqp:1548
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1711
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1717
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1717
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+  in any optimize at src/Perl6/Compiler.nqp:64
+
+    
 # Failed test 'code dies'
 # at t/spec/S03-operators/is-divisible-by.rakudo.moar line 41
     # Looks like you failed 1 test of 4
@@ -1271,7 +1276,11 @@ S05-modifier/continue.t............................Use of Nil in string context 
   13    0    0    0   13
 S05-modifier/counted-match.rakudo.moar.............  16    0    0    6   22
      6 skipped: hangs RT #125026
-S05-modifier/counted.t............................. 119    0    0    0  119
+S05-modifier/counted.t.............................WARNING: unhandled Failure detected in DESTROY:
+Attempt to retrieve negative match :nth(0)
+  in block <unit> at t/spec/S05-modifier/counted.t:25
+
+ 119    0    0    0  119
 S05-modifier/global.t..............................   8    0    0    0    8
 S05-modifier/ignorecase-and-ignoremark.t...........  15    0    0    0   15
 S05-modifier/ignorecase.rakudo.moar................  23    0    2    0   25
@@ -1582,20 +1591,14 @@ S10-packages/basic.rakudo.moar.....................  60    0    2    1   63
      1 todo   : RT \#64606
      1 todo   : ticket based only on class... RT \#60446
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.moar............
-# Failed test 'Diamond relationship'
-# at t/spec/S10-packages/precompilation.rakudo.moar line 30
-# expected: ["A", "B", "C"]
-#      got: []
-Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
+S10-packages/precompilation.rakudo.moar............Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-73163-157324.code:4
+#   in block <unit> at getout-87876-370266.code:4
 
 
-# Looks like you failed 1 test of 33
-  29    1    3    0   33
+  30    0    3    0   33
      1 todo   : RT \#123276
      1 todo   : no 6model parametrics interning yet
      1 todo PASSED: RT \#122896
@@ -1933,8 +1936,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1435387393
-# Using file temp_1435387393
+S16-filehandles/chmod.t............................# Using file temp_1435410752
+# Using file temp_1435410752
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -1980,18 +1983,139 @@ S17-channel/earliest.t.............................   7    0    0    0    7
 S17-lowlevel/lock.rakudo.moar......................   7    0    0    1    8
      1 skipped: not sure this test is valid RT #124793
 S17-lowlevel/thread.t..............................  25    0    0    0   25
-S17-procasync/basic.rakudo.moar....................Could not find symbol '&Status'
-  in block <unit> at t/spec/S17-procasync/basic.rakudo.moar:39
+S17-procasync/basic.rakudo.moar....................
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/basic.rakudo.moar line 39
+# Actual type: Proc
+# Looks like you failed 1 test of 30
+  26    1    0    3   30
+     3 skipped: returns Nil (flapping tests) RT #125047
+S17-procasync/kill.rakudo.moar.....................
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
 
-# Looks like you planned 30 tests, but ran 12
-  12   18    0    0   30
-    18 tests aborted (missing ok/not ok)
-S17-procasync/kill.rakudo.moar.....................Could not find symbol '&Status'
-  in block <unit> at t/spec/S17-procasync/kill.rakudo.moar:44
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
 
-# Looks like you planned 279 tests, but ran 6
-   6  273    0    0  279
-   273 tests aborted (missing ok/not ok)
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+
+# Failed test 'The object is-a 'Proc::Status''
+# at t/spec/S17-procasync/kill.rakudo.moar line 44
+# Actual type: Proc
+ 217   31   31    0  279
+    31 todo   : we cannot actually send signals yet
 S17-procasync/print.rakudo.moar....................  11    0    0    5   16
      5 skipped: Flapping tests RT #125048
 S17-promise/allof.t................................  11    0    0    0   11
@@ -2248,7 +2372,7 @@ WARNING: unhandled Failure detected in DESTROY:
 Cannot .pop from an empty Array
   in block <unit> at t/spec/S32-array/pop.rakudo.moar:64
 
-Use of uninitialized value @frames of type Any in string context  in block  at ././CORE.setting.moarvm:1
+Use of uninitialized value @frames of type Any in string context  in sub todo at lib/Test.pm:271
 WARNING: unhandled Failure detected in DESTROY:
 Cannot .pop from an empty Array
   in block  at t/spec/S32-array/pop.rakudo.moar:42
@@ -2897,14 +3021,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.7859642 seconds
-# gerdr: 0.8029230 seconds
-# recursive-ternary: 0.89302515 seconds
-# loop: 0.9145540 seconds
-# hand-memoization: 1.224202 seconds
-# recursive-ternary-hand-cached: 2.310482 seconds
-# sequence-ternary: 5.05841164 seconds
-# sequence: 6.7616756 seconds
+integration/advent2012-day21.t.....................# kaz: 0.786337 seconds
+# gerdr: 0.8052831 seconds
+# recursive-ternary: 0.8889215 seconds
+# loop: 0.91945326 seconds
+# hand-memoization: 1.2209623 seconds
+# recursive-ternary-hand-cached: 2.2923491 seconds
+# sequence-ternary: 5.054766 seconds
+# sequence: 6.7066027 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT \#121789
@@ -3048,21 +3172,21 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5291,     1,   126,   386,  5804,  5803
+"S02",        5292,     0,   126,   386,  5804,  5803
 "S03",        5243,     0,   119,    98,  5460,  5478
 "S04",        1149,     0,    47,    42,  1238,  1276
 "S05",        5558,     0,    84,   144,  5786,  6005
 "S06",        1394,     0,    47,    92,  1533,  1604
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1898,     0,    12,   101,  2011,  2011
-"S10",         101,     1,     5,     1,   108,   165
+"S10",         102,     0,     5,     1,   108,   165
 "S11",         111,     0,     6,    11,   128,   147
 "S12",        1483,     0,    45,   144,  1672,  1730
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         318,     0,     8,     7,   333,   346
 "S15",       78485,     0,     3,    18, 78506, 78526
 "S16",         298,     0,     2,    16,   316,   344
-"S17",         730,   291,     5,    28,  1054,  1054
+"S17",         955,    32,    36,    31,  1054,  1054
 "S19",          13,     0,     0,     0,    13,    17
 "S22",          24,     0,     0,     0,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
@@ -3072,11 +3196,39 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9932,     0,   201,   155, 10288,  8621
 "int",        1254,     8,    12,    15,  1289,  1275
 "ros",           2,     0,     0,     0,     2,     2
-"total",    115583,   301,   739,  1438,118061,117112
+"total",    115810,    40,   770,  1441,118061,117112
 ----------------
 Failure summary:
-S02-types/WHICH.t 185 - checking Proc::Status.WHICH
-S10-packages/precompilation.rakudo.moar 7 - Diamond relationship
-S17-procasync/basic.rakudo.moar aborted 18 test(s)
-S17-procasync/kill.rakudo.moar aborted 273 test(s)
+S17-procasync/basic.rakudo.moar 13 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 7 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 16 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 25 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 34 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 43 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 52 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 61 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 70 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 79 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 88 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 97 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 106 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 115 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 124 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 133 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 142 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 151 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 160 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 169 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 178 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 187 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 196 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 205 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 214 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 223 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 232 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 241 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 250 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 259 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 268 - The object is-a 'Proc::Status'
+S17-procasync/kill.rakudo.moar 277 - The object is-a 'Proc::Status'
 integration/advent2012-day04.t aborted 8 test(s)
