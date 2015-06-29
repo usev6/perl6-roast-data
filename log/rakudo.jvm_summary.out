@@ -477,8 +477,8 @@ S03-smartmatch/hash-hash.rakudo.jvm................   8    0    8    0   16
 S03-smartmatch/range-range.t.......................  14    0    0    0   14
 S03-smartmatch/regex-hash.t........................   4    0    0    0    4
 S03-smartmatch/scalar-hash.t.......................   3    0    0    0    3
-S03-smartmatch/signature-signature.rakudo.jvm......   6   13    0    0   19
-    13 tests aborted (missing ok/not ok)
+S03-smartmatch/signature-signature.rakudo.jvm......  18    0    0    1   19
+     1 skipped: Parametric types
                                                    pass fail todo skip plan
 S04-blocks-and-statements/let.rakudo.jvm...........  11    0    1    0   12
      1 todo   : let restore on exception, RT \#121647
@@ -486,9 +486,8 @@ S04-blocks-and-statements/pointy-rw.t..............  10    0    0    0   10
 S04-blocks-and-statements/pointy.rakudo.jvm........  16    0    2    0   18
      1 todo   : &?ROUTINE
      1 todo   : pointy blocks and last/redo RT \#124973
-S04-blocks-and-statements/temp.rakudo.jvm..........  23    9    4    0   36
-     4 todo   : TEMP phasers NYI
-     9 tests aborted (missing ok/not ok)
+S04-blocks-and-statements/temp.rakudo.jvm..........  30    0    6    0   36
+     6 todo   : TEMP phasers NYI
 S04-declarations/constant.rakudo.jvm...............  52    0    4    0   56
      3 todo   : COMPILING RT \#125054
      1 todo   : constants as type constraints
@@ -898,12 +897,10 @@ S06-signature/definite-return.rakudo.jvm...........   0    0    0    9    9
      9 skipped: definite values as return specifications dont parse yet RT #124927
 S06-signature/errors.rakudo.jvm....................  21    0    6    0   27
      6 todo   : unival NYI RT \#124920
-S06-signature/introspection.rakudo.jvm.............  40   15    0    1   56
+S06-signature/introspection.rakudo.jvm.............  55    0    0    1   56
      1 skipped: expected Any but got Mu instead
-    15 tests aborted (missing ok/not ok)
 S06-signature/mixed-placeholders.t.................  18    0    0    0   18
-S06-signature/multi-invocant.rakudo.jvm............  24    0    1    0   25
-     1 todo   : seems we cannot handle no multi-invocant case anymore
+S06-signature/multi-invocant.t.....................  25    0    0    0   25
 S06-signature/multidimensional.t...................  10    0    0    0   10
 S06-signature/named-parameters.rakudo.jvm..........  77    0    0   16   93
     16 skipped: multiple same-named arguments NYI RT #124921
@@ -1194,8 +1191,7 @@ S14-roles/parameter-subtyping.t....................  22    0    0    0   22
 S14-roles/parameterized-basic.t....................  36    0    0    0   36
 S14-roles/parameterized-mixin.rakudo.jvm...........  24    0    4    0   28
      4 todo   : .does with parametric roles RT \#124746
-S14-roles/parameterized-type.t.....................  16   16    0    0   32
-    16 tests aborted (missing ok/not ok)
+S14-roles/parameterized-type.t.....................  32    0    0    0   32
 S14-roles/stubs.t..................................  10    0    0    0   10
 S14-roles/submethods.t.............................   4    0    0    0    4
 S14-traits/attributes.t............................   8    0    0    0    8
@@ -1822,17 +1818,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        5195,    74,   131,   404,  5804,  5803
-"S03",        5230,    14,   119,    97,  5460,  5478
-"S04",        1136,     9,    48,    45,  1238,  1276
+"S03",        5242,     1,   119,    98,  5460,  5478
+"S04",        1143,     0,    50,    45,  1238,  1276
 "S05",        5454,     0,    96,   210,  5760,  6010
-"S06",        1392,    15,    51,   102,  1560,  1631
+"S06",        1408,     0,    50,   102,  1560,  1631
 "S07",           0,     0,     0,     0,     0,    96
 "S09",         223,   266,    12,     9,   510,   510
 "S10",         101,     0,     6,     1,   108,   165
 "S11",          89,     0,    28,    11,   128,   147
 "S12",        1475,     0,    53,   144,  1672,  1730
 "S13",          36,     0,    10,    27,    73,    83
-"S14",         301,    16,     8,     8,   333,   346
+"S14",         317,     0,     8,     8,   333,   346
 "S15",          15,     0,     4,    16,    35, 78526
 "S16",         252,    48,     0,    16,   316,   344
 "S17",         701,     0,     5,    23,   729,   775
@@ -1845,7 +1841,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9770,     0,   193,   175, 10138,  8471
 "int",        1242,    17,    11,    15,  1285,  1276
 "ros",           2,     0,     0,     0,     2,     2
-"total",     34866,   500,   782,  1457, 37605,115215
+"total",     34917,   447,   783,  1458, 37605,115215
 ----------------
 Failure summary:
 S02-literals/quoting.rakudo.jvm 124 - Testing for q:x operator.
@@ -1853,12 +1849,8 @@ S02-literals/quoting.rakudo.jvm 125 - Testing for q:x operator. (utf8)
 S02-literals/quoting.rakudo.jvm aborted 49 test(s)
 S02-magicals/KERNEL.rakudo.jvm aborted 23 test(s)
 S03-junctions/misc.rakudo.jvm 131 - Do not try to auto-thread Junction type object (only case)
-S03-smartmatch/signature-signature.rakudo.jvm aborted 13 test(s)
-S04-blocks-and-statements/temp.rakudo.jvm aborted 9 test(s)
-S06-signature/introspection.rakudo.jvm aborted 15 test(s)
 S09-typed-arrays/native-int.rakudo.jvm aborted 137 test(s)
 S09-typed-arrays/native-num.rakudo.jvm aborted 129 test(s)
-S14-roles/parameterized-type.t aborted 16 test(s)
 S16-filehandles/io.rakudo.jvm aborted 48 test(s)
 S22-package-format/local.rakudo.jvm aborted 24 test(s)
 S24-testing/3-output.t aborted 1 test(s)
