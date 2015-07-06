@@ -171,7 +171,7 @@ S02-names/symbolic-deref.rakudo.jvm................  32    0    2    2   36
      1 todo   : no such symbol
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.rakudo.jvm......................... 636    0    0   12  648
+S02-types/WHICH.rakudo.jvm......................... 638    0    0   12  650
     12 skipped: NYI on jvm
 S02-types/anon_block.rakudo.jvm....................  36    0    4    2   42
      2 skipped: tests don't work if previous test fails
@@ -352,14 +352,14 @@ S03-operators/also.rakudo.jvm......................   4    0    4    0    8
 S03-operators/andthen.t............................   8    0    0    0    8
 S03-operators/arith.rakudo.jvm..................... 157    0    0    0  157
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
-S03-operators/assign.rakudo.jvm.................... 272    0   20   11  303
+S03-operators/assign.rakudo.jvm.................... 275    0   17   11  303
      2 skipped: RT #76734
      2 skipped: cannot modifiy an immutable value RT #124533
      1 skipped: cannot modifiy an immutable value RT #124534
      6 skipped: ~< and ~> NYI RT #124531
      3 todo   : item assignment
      1 todo   : item/list assignment
-     5 todo   : list assignment
+     2 todo   : list assignment
      5 todo   : list assignment to scalar
      1 todo   : list assignment with ($var, *)
      3 todo   : list assignment, autovivification (?)
@@ -611,13 +611,12 @@ S05-capture/alias.rakudo.jvm.......................  25    0    0    5   30
      5 skipped: Package variable capture RT #125122
 S05-capture/caps.rakudo.jvm........................  41    0    1    0   42
      1 todo   : RT \#117955 - quantified conjunctive capture
-S05-capture/dot.rakudo.jvm.........................  52    0   10    0   62
+S05-capture/dot.rakudo.jvm.........................  53    0    9    0   62
      3 todo   : dubious test RT \#125004
      3 todo   : dubious test RT \#125005
      1 todo   : needs review RT \#125006
      1 todo   : needs review RT \#125007
      1 todo   : needs review RT \#125008
-     1 todo   : really? :-) RT \#125003
 S05-capture/match-object.rakudo.jvm................  22    0    1    2   25
      1 skipped: No such method pos for invocant of type Any RT #124999
      1 skipped: Unsupported use of $¢ variable RT #124997
@@ -927,8 +926,7 @@ S06-signature/sub-ref.rakudo.jvm...................  28    0    2    4   34
      2 todo   : RT \#63974
 S06-signature/tree-node-parameters.rakudo.jvm......  16    0    0    4   20
      4 skipped: signature binding of return values NYI RT #124945
-S06-signature/type-capture.rakudo.jvm..............   7    0    0    1    8
-     1 skipped: nom regression RT #124940
+S06-signature/type-capture.t.......................   9    0    0    0    9
 S06-signature/types.t..............................   9    0    0    0    9
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
@@ -1240,7 +1238,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.rakudo.jvm.......................   7    0    0    1    8
+S17-lowlevel/lock.rakudo.jvm.......................   6    1    0    1    8
      1 skipped: not sure this test is valid RT #124793
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1320,8 +1318,7 @@ S22-package-format/local.rakudo.jvm................  23    0    0    1   24
                                                    pass fail todo skip plan
 S24-testing/0-compile.t............................   1    0    0    0    1
 S24-testing/3-output.t.............................   4    0    0    0    4
-S24-testing/line-numbers.t.........................   0   13    0    0   13
-    13 tests aborted (missing ok/not ok)
+S24-testing/line-numbers.t.........................  13    0    0    0   13
                                                    pass fail todo skip plan
 S26-documentation/01-delimited.t...................  40    0    0    0   40
 S26-documentation/02-paragraph.t...................  27    0    0    0   27
@@ -1379,7 +1376,7 @@ S29-conversions/ord_and_chr.rakudo.jvm............. 254    0    2    1  257
      1 todo   : chr surrogate RT \#124834
 S29-os/system.t....................................   8    0    0    0    8
                                                    pass fail todo skip plan
-S32-array/adverbs.t................................ 478    0    0    0  478
+S32-array/adverbs.t................................ 602    0    0    0  602
 S32-array/bool.t...................................  15    0    0    0   15
 S32-array/create.t.................................   6    0    0    0    6
 S32-array/delete-adverb-native.t................... 138    0    0    0  138
@@ -1414,7 +1411,7 @@ S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
 S32-exceptions/misc.rakudo.jvm..................... 316    0    1    0  317
      1 todo   : parsing regression RT \#124679
-S32-hash/adverbs.t................................. 956    0    0    0  956
+S32-hash/adverbs.t.................................1124    0    0    0 1124
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
 S32-hash/exists-adverb.t...........................  47    0    0    0   47
@@ -1816,11 +1813,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5225,     1,   143,   411,  5780,  5779
-"S03",        5252,     1,   119,    98,  5470,  5488
+"S02",        5227,     1,   143,   411,  5782,  5781
+"S03",        5255,     1,   116,    98,  5470,  5488
 "S04",        1143,     2,    50,    45,  1240,  1278
-"S05",        5470,     0,    96,   198,  5764,  6014
-"S06",        1444,     0,    54,   102,  1600,  1671
+"S05",        5471,     0,    95,   198,  5764,  6014
+"S06",        1446,     0,    54,   101,  1601,  1672
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1900,     0,    12,   101,  2013,  2013
 "S10",         104,     0,     6,     1,   111,   168
@@ -1830,17 +1827,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         318,     0,     8,     8,   334,   347
 "S15",          15,     0,     4,    16,    35, 78526
 "S16",         252,    48,     0,    16,   316,   344
-"S17",         702,     0,     5,    23,   730,   776
+"S17",         701,     1,     5,    23,   730,   776
 "S19",          13,     0,     0,     0,    13,    17
 "S22",          23,     0,     0,     1,    24,    24
-"S24",           5,    13,     0,     0,    18,    89
+"S24",          18,     0,     0,     0,    18,    89
 "S26",        1888,     0,     4,    76,  1968,  1968
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         345,     0,     3,     3,   351,   351
-"S32",       11212,     0,   192,   175, 11579,  9912
+"S32",       11504,     0,   192,   175, 11871, 10204
 "int",        1252,     8,    11,    15,  1286,  1277
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38087,   170,   790,  1545, 40592,118199
+"total",     38399,   158,   786,  1544, 40887,118494
 ----------------
 Failure summary:
 S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNative?
@@ -1849,5 +1846,5 @@ S04-phasers/enter-leave.rakudo.jvm aborted 2 test(s)
 S12-attributes/clone.t aborted 21 test(s)
 S12-attributes/instance.rakudo.jvm aborted 76 test(s)
 S16-filehandles/io.rakudo.jvm aborted 48 test(s)
-S24-testing/line-numbers.t aborted 13 test(s)
+S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
 integration/advent2012-day04.t aborted 8 test(s)
