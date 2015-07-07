@@ -171,7 +171,7 @@ S02-names/symbolic-deref.rakudo.jvm................  32    0    2    2   36
      1 todo   : no such symbol
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.rakudo.jvm......................... 638    0    0   12  650
+S02-types/WHICH.rakudo.jvm......................... 648    0    0   12  660
     12 skipped: NYI on jvm
 S02-types/anon_block.rakudo.jvm....................  36    0    4    2   42
      2 skipped: tests don't work if previous test fails
@@ -814,11 +814,9 @@ S06-advanced/wrap.rakudo.jvm.......................  74    0    7    4   85
      1 todo   : callwith RT \#124653
      1 todo   : temp and wrap
      1 todo   : temp and wrap RT \#124654
-S06-currying/assuming-and-mmd.rakudo.jvm...........   4    0    1    2    7
-     2 skipped: probably optimizer bug RT #125207
-     1 todo   : probably optimizer bug RT \#125207
-S06-currying/named.rakudo.jvm......................   1    0    0    3    4
-     3 skipped: probably optimizer bug RT #125207
+S06-currying/assuming-and-mmd.t....................   7    0    0    0    7
+S06-currying/named.rakudo.jvm......................  24    1    2    0   27
+     2 todo PASSED: last part of RT \#123498 is still unresolved.
 S06-macros/errors.t................................   2    0    0    0    2
 S06-macros/opaque-ast.rakudo.jvm...................   3    0    0    4    7
      3 skipped: :COMPILING flag RT #124964
@@ -898,9 +896,9 @@ S06-signature/definite-return.rakudo.jvm...........   0    0    0    9    9
      9 skipped: definite values as return specifications dont parse yet RT #124927
 S06-signature/errors.rakudo.jvm....................  21    0    6    0   27
      6 todo   : unival NYI RT \#124920
-S06-signature/introspection.rakudo.jvm.............  80    0    4    1   85
+S06-signature/introspection.rakudo.jvm............. 117    0    7    1  125
      1 skipped: expected Any but got Mu instead
-     3 todo   : needs/find RT
+     6 todo   : needs/find RT
      1 todo   : needs/find RT: Logic to make :a($a) into :$a makes :a(:b($a) into ::b(:$a)
 S06-signature/mixed-placeholders.t.................  18    0    0    0   18
 S06-signature/multi-invocant.t.....................  25    0    0    0   25
@@ -1238,7 +1236,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.rakudo.jvm.......................   6    1    0    1    8
+S17-lowlevel/lock.rakudo.jvm.......................   7    0    0    1    8
      1 skipped: not sure this test is valid RT #124793
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1409,7 +1407,7 @@ S32-container/roundrobin.rakudo.jvm................   4    0    1    0    5
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
-S32-exceptions/misc.rakudo.jvm..................... 316    0    1    0  317
+S32-exceptions/misc.rakudo.jvm..................... 314    2    1    0  317
      1 todo   : parsing regression RT \#124679
 S32-hash/adverbs.t.................................1124    0    0    0 1124
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
@@ -1481,12 +1479,11 @@ S32-list/grep.rakudo.jvm...........................  24    0    6   13   43
 S32-list/join.t....................................  34    0    0    0   34
 S32-list/last-index.rakudo.jvm.....................  23    0    0    2   25
      2 skipped: adverbial block RT #124754
-S32-list/map.rakudo.jvm............................  54    0    0    7   61
+S32-list/map.rakudo.jvm............................  55    0    0    6   61
      1 skipped: Too few positionals passed; expected 3 arguments but got 1; RT #125146
      1 skipped: Too few positionals passed; expected 5 arguments but got 4; RT #125146
      2 skipped: adverbial block RT #124752
      2 skipped: closure as non-final argument RT #124753
-     1 skipped: probably optimizer bug RT #125207
 S32-list/map_function_return_values.t..............   2    0    0    0    2
 S32-list/minmax.t..................................  97    0    0    0   97
 S32-list/permutations.t............................   2    0    0    0    2
@@ -1650,8 +1647,7 @@ S32-str/words.rakudo.jvm...........................  11    0    2    0   13
      2 todo   : NFG on JVM RT \#124739
 S32-temporal/Date.t................................  72    0    0    0   72
 S32-temporal/DateTime-Instant-Duration.t...........  33    0    0    0   33
-S32-temporal/DateTime.rakudo.jvm................... 218    0    1    0  219
-     1 todo   : nom regression
+S32-temporal/DateTime.t............................ 219    0    0    0  219
 S32-temporal/calendar.t............................ 130    0    0    0  130
 S32-temporal/local.rakudo.jvm......................  16    0    9    0   25
      9 todo   : RT \#122702
@@ -1813,11 +1809,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5227,     1,   143,   411,  5782,  5781
+"S02",        5237,     1,   143,   411,  5792,  5791
 "S03",        5255,     1,   116,    98,  5470,  5488
 "S04",        1143,     2,    50,    45,  1240,  1278
 "S05",        5471,     0,    95,   198,  5764,  6014
-"S06",        1446,     0,    54,   101,  1601,  1672
+"S06",        1509,     1,    58,    96,  1664,  2005
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1900,     0,    12,   101,  2013,  2013
 "S10",         104,     0,     6,     1,   111,   168
@@ -1827,24 +1823,26 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         318,     0,     8,     8,   334,   347
 "S15",          15,     0,     4,    16,    35, 78526
 "S16",         252,    48,     0,    16,   316,   344
-"S17",         701,     1,     5,    23,   730,   776
+"S17",         702,     0,     5,    23,   730,   776
 "S19",          13,     0,     0,     0,    13,    17
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1888,     0,     4,    76,  1968,  1968
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         345,     0,     3,     3,   351,   351
-"S32",       11504,     0,   192,   175, 11871, 10204
+"S32",       11504,     2,   191,   174, 11871, 10204
 "int",        1252,     8,    11,    15,  1286,  1277
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38399,   158,   786,  1544, 40887,118494
+"total",     38473,   160,   789,  1538, 40960,118837
 ----------------
 Failure summary:
 S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNative?
 S03-junctions/misc.rakudo.jvm 131 - Do not try to auto-thread Junction type object (only case)
 S04-phasers/enter-leave.rakudo.jvm aborted 2 test(s)
+S06-currying/named.rakudo.jvm 27 - Priming :(Int :$a!) with \(:a) mixed in a Failure 
 S12-attributes/clone.t aborted 21 test(s)
 S12-attributes/instance.rakudo.jvm aborted 76 test(s)
 S16-filehandles/io.rakudo.jvm aborted 48 test(s)
-S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
+S32-exceptions/misc.rakudo.jvm 279 - did we throws-like X::Comp::Group?
+S32-exceptions/misc.rakudo.jvm 286 - adequate error message when calling bare "ord"
 integration/advent2012-day04.t aborted 8 test(s)
