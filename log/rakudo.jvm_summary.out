@@ -719,9 +719,10 @@ S05-metasyntax/interpolating-closure.rakudo.jvm....   5    0    1    0    6
      1 todo   : dunno RT \#124527
 S05-metasyntax/litvar.rakudo.jvm...................  29    0    0    3   32
      3 skipped: :ignoremark needs NFG RT #124500
-S05-metasyntax/longest-alternative.rakudo.jvm......  43    0    0    5   48
+S05-metasyntax/longest-alternative.rakudo.jvm......  44    0    1    5   50
      1 skipped: :: RT #124526
      4 skipped: :ignoremark needs NFG RT #124500
+     1 todo   : RT \#113884 - constant variables not counted in LTM yet
 S05-metasyntax/lookaround.t........................  10    0    0    0   10
 S05-metasyntax/null.t..............................   4    0    0    0    4
 S05-metasyntax/proto-token-ltm.t...................  10    0    0    0   10
@@ -920,7 +921,7 @@ S06-signature/sub-ref.rakudo.jvm...................  28    0    2    4   34
      2 todo   : RT \#63974
 S06-signature/tree-node-parameters.rakudo.jvm......  16    0    0    4   20
      4 skipped: signature binding of return values NYI RT #124945
-S06-signature/type-capture.t.......................   9    0    0    0    9
+S06-signature/type-capture.t.......................  10    0    0    0   10
 S06-signature/types.t..............................   9    0    0    0    9
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
@@ -1236,7 +1237,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.rakudo.jvm.......................   6    1    0    1    8
+S17-lowlevel/lock.rakudo.jvm.......................   7    0    0    1    8
      1 skipped: not sure this test is valid RT #124793
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1393,7 +1394,8 @@ S32-array/pop.rakudo.jvm...........................  36    0    1    0   37
 S32-array/push.t...................................  52    0    0    0   52
 S32-array/rotate.t.................................  27    0    0    0   27
 S32-array/shift.t..................................  31    0    0    0   31
-S32-array/splice.t.................................  62    0    0    0   62
+S32-array/splice.rakudo.jvm........................ 140    0    2    0  142
+     2 todo   : somehow the test causes different typecheck error
 S32-array/unshift.t................................  57    0    0    0   57
 S32-basics/warn.t..................................   7    0    0    0    7
 S32-basics/xxKEY.rakudo.jvm........................ 127    0    2    0  129
@@ -1813,8 +1815,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        5243,     3,   144,   406,  5796,  5795
 "S03",        5255,     1,   116,    98,  5470,  5488
 "S04",        1150,     2,    49,    33,  1234,  1272
-"S05",        5472,     0,    95,   198,  5765,  6015
-"S06",        1516,     0,    56,    96,  1668,  2009
+"S05",        5473,     0,    96,   198,  5767,  6017
+"S06",        1517,     0,    56,    96,  1669,  2010
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1900,     0,    12,   101,  2013,  2013
 "S10",         104,     0,     6,     1,   111,   168
@@ -1824,17 +1826,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         318,     0,     8,     8,   334,   347
 "S15",          15,     0,     4,    16,    35, 78526
 "S16",         252,    48,     0,    16,   316,   344
-"S17",         701,     1,     5,    23,   730,   776
+"S17",         702,     0,     5,    23,   730,   776
 "S19",          13,     0,     0,     0,    13,    17
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1888,     0,     4,    76,  1968,  1968
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         345,     0,     3,     3,   351,   351
-"S32",       11530,     1,   192,   173, 11896, 10229
+"S32",       11608,     1,   194,   173, 11976, 10309
 "int",        1252,     8,    11,    15,  1286,  1277
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38616,    64,   794,  1521, 40995,118872
+"total",     38697,    63,   797,  1521, 41078,118955
 ----------------
 Failure summary:
 S02-magicals/sub.t aborted 2 test(s)
@@ -1842,6 +1844,5 @@ S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNa
 S03-junctions/misc.rakudo.jvm 131 - Do not try to auto-thread Junction type object (only case)
 S04-phasers/enter-leave.rakudo.jvm aborted 2 test(s)
 S16-filehandles/io.rakudo.jvm aborted 48 test(s)
-S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
 S32-exceptions/misc.rakudo.jvm 318 - did we throws-like X::TooLateForREPR?
 integration/advent2012-day04.t aborted 8 test(s)
