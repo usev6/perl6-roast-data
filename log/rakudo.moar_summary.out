@@ -73,10 +73,9 @@ S02-literals/quoting-unicode.t.....................  75    0    0    0   75
 S02-literals/quoting.rakudo.moar................... 166    0    8    0  174
      4 todo   : comments inside qq:ww NYI RT \#ww NYI RT\#:124555
      4 todo   : quoting adverbs
-S02-literals/radix.rakudo.moar..................... 131    0    6    1  138
+S02-literals/radix.rakudo.moar..................... 149    0    2    1  152
      1 skipped: RT #123862 - negative radix
      1 todo   : Really?!
-     4 todo   : Some question of what this form should actually do RT \#124561
      1 todo   : This needs an RT
 S02-literals/string-interpolation.t................Potential difficulties:
     To refer to a positional match capture, just use $0 (numbering starts at 0).
@@ -214,21 +213,21 @@ S02-names/indirect.t...............................   6    0    0    0    6
 S02-names/is_cached.t..............................  38    0    0    0   38
 S02-names/is_default.rakudo.moar...................    
 # Failed test '.got matches Nil'
-# at src/gen/m-CORE.setting line 10555
+# at src/gen/m-CORE.setting line 10561
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:498
     # Got:      
     # Looks like you failed 1 test of 4
     
 # Failed test '.got matches Nil'
-# at src/gen/m-CORE.setting line 10555
+# at src/gen/m-CORE.setting line 10561
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:498
     # Got:      
     # Looks like you failed 1 test of 4
     
 # Failed test '.got matches Nil'
-# at src/gen/m-CORE.setting line 10555
+# at src/gen/m-CORE.setting line 10561
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:498
     # Got:      
@@ -249,15 +248,7 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  15    0    0    0   15
 S02-names/our.rakudo.moar..........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.moar.......................WARNING: unhandled Failure detected in DESTROY:
-No such symbol 'OUR::A43'
-  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:184
-
-WARNING: unhandled Failure detected in DESTROY:
-No such symbol 'OUR::A42'
-  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:180
-
-  52    0    8   82  142
+S02-names/pseudo.rakudo.moar.......................  52    0    8   82  142
     19 skipped: CORE NYI RT #124916
      4 skipped: the binding in here is NYI RT #124914
     23 skipped: various issues to resolve RT #124917
@@ -761,30 +752,7 @@ S03-operators/increment.t..........................  37    0    0    0   37
 S03-operators/infixed-function.t...................   5    0    0    0    5
 S03-operators/inplace.rakudo.moar..................  23    0    0    4   27
      4 skipped: Method '' not found for invocant of class 'Str' RT #124528
-S03-operators/is-divisible-by.rakudo.moar..........WARNING: unhandled Failure detected in DESTROY:
-Attempt to divide 9 by zero using infix:<%%>
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1229
-  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
-  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1147
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1708
-  in any visit_want at src/gen/m-Perl6-Optimizer.nqp:1548
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1711
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1717
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1717
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
-  in any optimize at src/Perl6/Compiler.nqp:64
-
-    
+S03-operators/is-divisible-by.rakudo.moar..........    
 # Failed test 'code dies'
 # at t/spec/S03-operators/is-divisible-by.rakudo.moar line 41
     # Looks like you failed 1 test of 4
@@ -794,7 +762,13 @@ S03-operators/lcm.t................................  15    0    0    0   15
 S03-operators/list-quote-junction.t................  16    0    0    0   16
 S03-operators/minmax.rakudo.moar...................  27    0    0    2   29
      2 skipped: Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious RT #124539
-S03-operators/misc.t...............................  36    0    0    0   36
+S03-operators/misc.rakudo.moar.....................Use of uninitialized value of type Str in string context  in block  at t/spec/S03-operators/misc.rakudo.moar:132
+    
+# Failed test 'code dies'
+# at t/spec/S03-operators/misc.rakudo.moar line 132
+    # Looks like you failed 1 test of 2
+  37    0    1    0   38
+     1 todo   : RT \#93978
 S03-operators/mix.rakudo.moar......................  95    0   18   15  128
     15 skipped: submix behavior still under discussion
      2 todo   : Crashing
@@ -1773,7 +1747,7 @@ S10-packages/precompilation.rakudo.moar............Use of uninitialized value $_
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-14403-941877.code:4
+#   in block <unit> at getout-37465-850297.code:4
 
 
   33    0    3    0   36
@@ -2104,8 +2078,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1436563540
-# Using file temp_1436563540
+S16-filehandles/chmod.t............................# Using file temp_1436649899
+# Using file temp_1436649899
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2716,7 +2690,20 @@ S32-array/kv.t.....................................  18    0    0    0   18
 S32-array/pairs.rakudo.moar........................  13    0    1    0   14
      1 todo   : Apparently not rw yet?
 S32-array/perl.t...................................   6    0    0    0    6
-S32-array/pop.rakudo.moar..........................  36    0    1    0   37
+S32-array/pop.rakudo.moar..........................WARNING: unhandled Failure detected in DESTROY:
+Cannot .pop from an empty Array
+  in block <unit> at t/spec/S32-array/pop.rakudo.moar:72
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .pop from an empty Array
+  in block <unit> at t/spec/S32-array/pop.rakudo.moar:64
+
+Use of uninitialized value @frames of type Any in string context  in sub proclaim at lib/Test.pm:540
+WARNING: unhandled Failure detected in DESTROY:
+Cannot .pop from an empty Array
+  in block  at t/spec/S32-array/pop.rakudo.moar:42
+
+  36    0    1    0   37
      1 todo   : RT \#111720
 S32-array/push.t...................................  52    0    0    0   52
 S32-array/rotate.t.................................  27    0    0    0   27
@@ -2732,11 +2719,81 @@ S32-array/splice.rakudo.moar.......................
 # Failed test 'right exception type (X::TypeCheck::Splice)'
 # at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
     # Expected: (X::TypeCheck::Splice)
+    # Got:      (X::AdHoc)
+    # Exception message: Cannot call method 'splice' on a null object
+    # Looks like you failed 1 test of 5
+    
+# Failed test 'right exception type (X::TypeCheck::Splice)'
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+    # Expected: (X::TypeCheck::Splice)
     # Got:      (X::TypeCheck::Binding)
     # Exception message: Type check failed in binding @arr; expected 'Positional' but got 'Mu'
     # Looks like you failed 1 test of 5
- 140    0    2    0  142
-     2 todo   : somehow the test causes different typecheck error
+    
+# Failed test 'right exception type (X::TypeCheck::Splice)'
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+    # Expected: (X::TypeCheck::Splice)
+    # Got:      (X::AdHoc)
+    # Exception message: Cannot call method 'splice' on a null object
+    # Looks like you failed 1 test of 5
+    
+# Failed test 'right exception type (X::TypeCheck::Splice)'
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+    # Expected: (X::TypeCheck::Splice)
+    # Got:      (X::TypeCheck::Binding)
+    # Exception message: Type check failed in binding @arr; expected 'Positional' but got 'Mu'
+    # Looks like you failed 1 test of 5
+    
+# Failed test 'right exception type (X::TypeCheck::Splice)'
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+    # Expected: (X::TypeCheck::Splice)
+    # Got:      (X::AdHoc)
+    # Exception message: Cannot call method 'splice' on a null object
+    # Looks like you failed 1 test of 5
+    
+# Failed test 'right exception type (X::TypeCheck::Splice)'
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+    # Expected: (X::TypeCheck::Splice)
+    # Got:      (X::TypeCheck::Binding)
+    # Exception message: Type check failed in binding @arr; expected 'Positional' but got 'Mu'
+    # Looks like you failed 1 test of 5
+    
+# Failed test 'right exception type (X::TypeCheck::Splice)'
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+    # Expected: (X::TypeCheck::Splice)
+    # Got:      (X::AdHoc)
+    # Exception message: Cannot call method 'splice' on a null object
+    # Looks like you failed 1 test of 5
+    
+# Failed test 'right exception type (X::TypeCheck::Splice)'
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+    # Expected: (X::TypeCheck::Splice)
+    # Got:      (X::TypeCheck::Binding)
+    # Exception message: Type check failed in binding @arr; expected 'Positional' but got 'Mu'
+    # Looks like you failed 1 test of 5
+    
+# Failed test 'right exception type (X::TypeCheck::Splice)'
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+    # Expected: (X::TypeCheck::Splice)
+    # Got:      (X::AdHoc)
+    # Exception message: Cannot call method 'splice' on a null object
+    # Looks like you failed 1 test of 5
+    
+# Failed test 'right exception type (X::TypeCheck::Splice)'
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+    # Expected: (X::TypeCheck::Splice)
+    # Got:      (X::TypeCheck::Binding)
+    # Exception message: Type check failed in binding @arr; expected 'Positional' but got 'Mu'
+    # Looks like you failed 1 test of 5
+    
+# Failed test 'right exception type (X::TypeCheck::Splice)'
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
+    # Expected: (X::TypeCheck::Splice)
+    # Got:      (X::AdHoc)
+    # Exception message: Cannot call method 'splice' on a null object
+    # Looks like you failed 1 test of 5
+ 343    0   12    0  355
+    12 todo   : somehow the test causes different typecheck error
 S32-array/unshift.t................................  57    0    0    0   57
 S32-basics/warn.t..................................# It's OK to see this warning during a test run  in block  at t/spec/S32-basics/warn.t:14
    7    0    0    0    7
@@ -3835,14 +3892,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8170683 seconds
-# gerdr: 0.8250619 seconds
-# recursive-ternary: 0.9424715 seconds
-# loop: 0.97369772 seconds
-# hand-memoization: 1.25771210 seconds
-# recursive-ternary-hand-cached: 2.58868259 seconds
-# sequence-ternary: 5.3155824 seconds
-# sequence: 7.2300261 seconds
+integration/advent2012-day21.t.....................# kaz: 0.798872 seconds
+# gerdr: 0.8040281 seconds
+# recursive-ternary: 0.9205657 seconds
+# loop: 0.9584087 seconds
+# hand-memoization: 1.2386088 seconds
+# recursive-ternary-hand-cached: 2.57254990 seconds
+# sequence-ternary: 5.32685089 seconds
+# sequence: 7.1026644 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT \#121789
@@ -3986,8 +4043,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5282,     0,   129,   385,  5796,  5795
-"S03",        5256,     0,   116,    98,  5470,  5488
+"S02",        5300,     0,   125,   385,  5810,  5809
+"S03",        5257,     0,   117,    98,  5472,  5490
 "S04",        1158,     0,    46,    30,  1234,  1272
 "S05",        5582,     0,    84,   132,  5798,  6017
 "S06",        1523,     0,    55,    91,  1669,  2010
@@ -4007,10 +4064,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1888,     0,     4,    76,  1968,  1968
 "S28",          13,     0,     0,     0,    13,    13
 "S29",         346,     0,     3,     2,   351,   351
-"S32",       11770,     0,   201,   155, 12126, 10459
+"S32",       11973,     0,   211,   155, 12339, 10672
 "int",        1256,     8,    12,    15,  1291,  1277
 "ros",           2,     0,     0,     0,     2,     2
-"total",    117839,    39,   773,  1415,120066,119384
+"total",    118061,    39,   780,  1415,120295,119613
 ----------------
 Failure summary:
 S17-procasync/kill.rakudo.moar 7 - The object is-a 'Proc::Status'
