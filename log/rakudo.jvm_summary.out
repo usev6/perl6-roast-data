@@ -1237,7 +1237,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.rakudo.jvm.......................   7    0    0    1    8
+S17-lowlevel/lock.rakudo.jvm.......................   6    1    0    1    8
      1 skipped: not sure this test is valid RT #124793
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1275,7 +1275,7 @@ S17-supply/flat.t..................................  17    0    0    0   17
 S17-supply/from-list.t.............................  13    0    0    0   13
 S17-supply/grab.t..................................   5    0    0    0    5
 S17-supply/grep.t..................................   7    0    0    0    7
-S17-supply/interval.t..............................   2    1    0    0    3
+S17-supply/interval.t..............................   3    0    0    0    3
 S17-supply/last.rakudo.jvm.........................   8    0    1    0    9
      1 todo   : we don't have Natural numbers yet RT \#124825
 S17-supply/lines.t.................................  21    0    0    0   21
@@ -1844,6 +1844,6 @@ S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNa
 S03-junctions/misc.rakudo.jvm 131 - Do not try to auto-thread Junction type object (only case)
 S04-phasers/enter-leave.rakudo.jvm aborted 2 test(s)
 S16-filehandles/io.rakudo.jvm aborted 48 test(s)
-S17-supply/interval.t 2 - interval of 1 second
+S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
 S32-exceptions/misc.rakudo.jvm 318 - did we throws-like X::TooLateForREPR?
 integration/advent2012-day04.t aborted 8 test(s)
