@@ -186,7 +186,7 @@ S02-types/array_extending.t........................  21    0    0    0   21
 S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  25    0    0    0   25
-S02-types/bag.rakudo.jvm........................... 186    0    4    3  193
+S02-types/bag.rakudo.jvm........................... 188    0    4    3  195
      3 skipped: No longer Iterable
      2 todo   : ?
      1 todo   : Not properly interpolating
@@ -271,7 +271,7 @@ S02-types/pair.rakudo.jvm.......................... 104    0    4    0  108
 S02-types/parcel.t.................................  52    0    0    0   52
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t.................................. 135    0    0    0  135
-S02-types/set.rakudo.jvm........................... 157    0   12    1  170
+S02-types/set.rakudo.jvm........................... 158    0   12    1  171
      1 skipped: Set is no longer Iterable
      9 todo   : Hypers not yet Set compatible RT \#124487
      1 todo   : Hypers not yet Set compatible RT \#124488
@@ -1237,7 +1237,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.rakudo.jvm.......................   6    1    0    1    8
+S17-lowlevel/lock.rakudo.jvm.......................   7    0    0    1    8
      1 skipped: not sure this test is valid RT #124793
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1812,7 +1812,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5261,     3,   140,   406,  5810,  5809
+"S02",        5264,     3,   140,   406,  5813,  5812
 "S03",        5256,     1,   117,    98,  5472,  5490
 "S04",        1150,     2,    49,    33,  1234,  1272
 "S05",        5473,     0,    96,   198,  5767,  6017
@@ -1826,7 +1826,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         318,     0,     8,     8,   334,   347
 "S15",          15,     0,     4,    16,    35, 78526
 "S16",         252,    48,     0,    16,   316,   344
-"S17",         701,     1,     5,    23,   730,   776
+"S17",         702,     0,     5,    23,   730,   776
 "S19",          13,     0,     0,     0,    13,    17
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
@@ -1836,7 +1836,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       11811,     1,   204,   173, 12189, 10522
 "int",        1252,     8,    11,    15,  1286,  1277
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38918,    64,   804,  1521, 41307,119184
+"total",     38922,    63,   804,  1521, 41310,119187
 ----------------
 Failure summary:
 S02-magicals/sub.t aborted 2 test(s)
@@ -1844,6 +1844,5 @@ S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNa
 S03-junctions/misc.rakudo.jvm 131 - Do not try to auto-thread Junction type object (only case)
 S04-phasers/enter-leave.rakudo.jvm aborted 2 test(s)
 S16-filehandles/io.rakudo.jvm aborted 48 test(s)
-S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
 S32-exceptions/misc.rakudo.jvm 318 - did we throws-like X::TooLateForREPR?
 integration/advent2012-day04.t aborted 8 test(s)
