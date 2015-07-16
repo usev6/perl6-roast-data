@@ -248,7 +248,15 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  15    0    0    0   15
 S02-names/our.rakudo.moar..........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.moar.......................  52    0    8   82  142
+S02-names/pseudo.rakudo.moar.......................WARNING: unhandled Failure detected in DESTROY:
+No such symbol 'OUR::A43'
+  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:184
+
+WARNING: unhandled Failure detected in DESTROY:
+No such symbol 'OUR::A42'
+  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:180
+
+  52    0    8   82  142
     19 skipped: CORE NYI RT #124916
      4 skipped: the binding in here is NYI RT #124914
     23 skipped: various issues to resolve RT #124917
@@ -1125,7 +1133,53 @@ S04-statements/return.rakudo.moar..................  17    0    1    0   18
 S04-statements/sink.rakudo.moar....................   1    0    1    0    2
      1 todo   : RT \#117235
 S04-statements/terminator.t........................  20    0    0    0   20
-S04-statements/try.t...............................  32    0    0    0   32
+S04-statements/try.t...............................WARNING: unhandled Failure detected in DESTROY:
+Cannot convert string to number: base-10 number must begin with valid digits or '.' in '⏏foo' (indicated by ⏏)
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1229
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1012
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1705
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1012
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1696
+  in any visit_want at src/gen/m-Perl6-Optimizer.nqp:1548
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1696
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1696
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1696
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1696
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+  in any optimize at src/Perl6/Compiler.nqp:64
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot convert string to number: base-10 number must begin with valid digits or '.' in '⏏foo' (indicated by ⏏)
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1229
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1012
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1705
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1012
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1696
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1717
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1696
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1720
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1726
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+  in any optimize at src/Perl6/Compiler.nqp:64
+
+  32    0    0    0   32
 S04-statements/unless.t............................  10    0    0    0   10
 S04-statements/until.t.............................   4    0    0    0    4
 S04-statements/when.t..............................  18    0    0    0   18
@@ -1769,7 +1823,7 @@ S10-packages/precompilation.rakudo.moar............Use of uninitialized value $_
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-17340-504510.code:4
+#   in block <unit> at getout-37556-482464.code:4
 
 
   33    0    3    0   36
@@ -2100,8 +2154,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1436995550
-# Using file temp_1436995550
+S16-filehandles/chmod.t............................# Using file temp_1437081941
+# Using file temp_1437081941
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -3713,7 +3767,20 @@ S32-array/kv.t.....................................  18    0    0    0   18
 S32-array/pairs.rakudo.moar........................  13    0    1    0   14
      1 todo   : Apparently not rw yet?
 S32-array/perl.t...................................   6    0    0    0    6
-S32-array/pop.rakudo.moar..........................  36    0    1    0   37
+S32-array/pop.rakudo.moar..........................WARNING: unhandled Failure detected in DESTROY:
+Cannot pop from an empty Array
+  in block <unit> at t/spec/S32-array/pop.rakudo.moar:72
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot pop from an empty Array
+  in block <unit> at t/spec/S32-array/pop.rakudo.moar:64
+
+Use of uninitialized value @frames of type Any in string context  in block  at lib/Test.pm:644
+WARNING: unhandled Failure detected in DESTROY:
+Cannot pop from an empty Array
+  in block  at t/spec/S32-array/pop.rakudo.moar:42
+
+  36    0    1    0   37
      1 todo   : RT \#111720
 S32-array/push.t...................................  52    0    0    0   52
 S32-array/rotate.t.................................  27    0    0    0   27
@@ -4516,7 +4583,7 @@ S32-list/unique.t..................................  34    0    0    0   34
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  31    0    0    0   31
 S32-num/complex.t..................................Use of uninitialized value @frames of type Any in string context  in block <unit> at EVAL_0:1
-Use of uninitialized value @frames of type Any in string contextWARNING: unhandled Failure detected in DESTROY:
+WARNING: unhandled Failure detected in DESTROY:
 Can not convert 2+4i to Real: imaginary part not zero
   in any  at src/gen/m-Perl6-Optimizer.nqp:1233
   in any  at src/gen/m-Perl6-Optimizer.nqp:1197
@@ -4542,15 +4609,7 @@ Can not convert 2+2i to Real: imaginary part not zero
   in sub infix:<~> at src/gen/m-CORE.setting:1613
   in method mess at src/gen/m-CORE.setting:17360
   in submethod DESTROY at src/gen/m-CORE.setting:17333
-  in block  at src/gen/m-CORE.setting:687
-  in method Numeric at src/gen/m-CORE.setting:8073
-  in method Int at src/gen/m-CORE.setting:7661
-  in block  at src/gen/m-CORE.setting:15152
-  in method AT-POS at src/gen/m-CORE.setting:15119
-  in method first at src/gen/m-CORE.setting:15264
-  in method first-none-setting-line at src/gen/m-CORE.setting:15275
-  in block  at src/gen/m-CORE.setting:15554
-  in sub print_control at src/gen/m-CORE.setting:15550
+  in sub print_control at src/gen/m-CORE.setting:15549
 .
 Please report this as a bug (mail to rakudobug@perl.org)
  and re-run with the --ll-exception command line option
@@ -4569,7 +4628,7 @@ Can not convert 2+2i to Real: imaginary part not zero
   in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
   in any optimize at src/Perl6/Compiler.nqp:64
 
-  in block <unit> at EVAL_7:1
+Use of uninitialized value @frames of type Any in string context  in block <unit> at EVAL_7:1
  488    0    0    0  488
 S32-num/cool-num.rakudo.moar.......................  39    0    0    4   43
      4 skipped: angle conversion RT #124816
@@ -4943,14 +5002,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.82153043 seconds
-# gerdr: 0.8381638 seconds
-# recursive-ternary: 0.95087061 seconds
-# loop: 1.0025172 seconds
-# hand-memoization: 1.2880071 seconds
-# recursive-ternary-hand-cached: 2.60860142 seconds
-# sequence-ternary: 5.37779797 seconds
-# sequence: 7.2969381 seconds
+integration/advent2012-day21.t.....................# kaz: 0.82244662 seconds
+# gerdr: 0.8241900 seconds
+# recursive-ternary: 0.95029474 seconds
+# loop: 1.0108602 seconds
+# hand-memoization: 1.288169 seconds
+# recursive-ternary-hand-cached: 2.62267729 seconds
+# sequence-ternary: 5.39265169 seconds
+# sequence: 7.3147589 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT \#121789
