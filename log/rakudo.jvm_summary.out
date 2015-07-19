@@ -1407,9 +1407,8 @@ S32-container/roundrobin.rakudo.jvm................   4    0    1    0    5
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
-S32-exceptions/misc.rakudo.jvm..................... 316   11    1    0  328
+S32-exceptions/misc.rakudo.jvm..................... 325    2    1    0  328
      1 todo   : parsing regression RT \#124679
-    11 tests aborted (missing ok/not ok)
 S32-hash/adverbs.t.................................1124    0    0    0 1124
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
@@ -1835,10 +1834,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1888,     0,     4,    76,  1968,  1968
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         345,     0,     3,     3,   351,   351
-"S32",       11621,   205,   203,   173, 12202, 10535
+"S32",       11630,   196,   203,   173, 12202, 10535
 "int",        1251,     9,    11,    15,  1286,  1277
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38755,   269,   802,  1519, 41345,119223
+"total",     38764,   260,   802,  1519, 41345,119223
 ----------------
 Failure summary:
 S02-magicals/sub.t aborted 2 test(s)
@@ -1847,7 +1846,8 @@ S03-junctions/misc.rakudo.jvm 131 - Do not try to auto-thread Junction type obje
 S04-phasers/enter-leave.rakudo.jvm aborted 2 test(s)
 S16-filehandles/io.rakudo.jvm aborted 48 test(s)
 S19-command-line/arguments.t 1 - concise error message when called script not found
-S32-exceptions/misc.rakudo.jvm aborted 11 test(s)
+S32-exceptions/misc.rakudo.jvm 318 - did we throws-like X::TooLateForREPR?
+S32-exceptions/misc.rakudo.jvm 328 - The gist of exception with no message method mentions the type
 S32-list/pick.rakudo.jvm aborted 15 test(s)
 S32-temporal/DateTime.t aborted 49 test(s)
 S32-temporal/calendar.t aborted 130 test(s)
