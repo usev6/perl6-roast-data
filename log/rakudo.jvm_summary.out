@@ -1168,11 +1168,9 @@ S13-type-casting/methods.t.........................  13    0    0    0   13
                                                    pass fail todo skip plan
 S14-roles/anonymous.t..............................  13    0    0    0   13
 S14-roles/attributes.t.............................   7    0    0    0    7
-S14-roles/basic.rakudo.jvm.........................  41    0    2    4   47
+S14-roles/basic.rakudo.jvm.........................  43    0    0    4   47
      1 skipped: RT #120919
      3 skipped: RT #67768
-     1 todo   : RT \#121308
-     1 todo   : can see it in the position, but even STD message doesn't include it
 S14-roles/bool.t...................................   3    0    0    0    3
 S14-roles/composition.rakudo.jvm...................  24    0    0    2   26
      2 skipped: diamond composition RT #124749
@@ -1261,7 +1259,7 @@ S17-supply/Channel.t...............................  12    0    0    0   12
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   5    0    0    0    5
 S17-supply/basic.t.................................  22    0    0    0   22
-S17-supply/batch.t.................................  11    0    0    0   11
+S17-supply/batch.t.................................  10    1    0    0   11
 S17-supply/categorize.t............................  75    0    0    0   75
 S17-supply/classify.t..............................  39    0    0    0   39
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1407,8 +1405,9 @@ S32-container/roundrobin.rakudo.jvm................   4    0    1    0    5
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
-S32-exceptions/misc.rakudo.jvm..................... 325    2    1    0  328
+S32-exceptions/misc.rakudo.jvm..................... 316   15    1    0  332
      1 todo   : parsing regression RT \#124679
+    15 tests aborted (missing ok/not ok)
 S32-hash/adverbs.t.................................1124    0    0    0 1124
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
@@ -1824,20 +1823,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S11",          89,     0,    28,    11,   128,   147
 "S12",        1492,     0,    51,   144,  1687,  1742
 "S13",          36,     0,    10,    27,    73,    83
-"S14",         328,     0,     8,     6,   342,   355
+"S14",         330,     0,     6,     6,   342,   355
 "S15",          15,     0,     4,    16,    35, 78526
 "S16",         256,    48,     0,    16,   320,   348
-"S17",         702,     0,     5,    23,   730,   777
+"S17",         701,     1,     5,    23,   730,   777
 "S19",          13,     1,     0,     0,    14,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1888,     0,     4,    76,  1968,  1968
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         345,     0,     3,     3,   351,   351
-"S32",       11630,   196,   203,   173, 12202, 10535
+"S32",       11621,   209,   203,   173, 12206, 10539
 "int",        1251,     9,    11,    15,  1286,  1277
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38764,   260,   802,  1519, 41345,119223
+"total",     38756,   274,   800,  1519, 41349,119227
 ----------------
 Failure summary:
 S02-magicals/sub.t aborted 2 test(s)
@@ -1845,9 +1844,9 @@ S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNa
 S03-junctions/misc.rakudo.jvm 131 - Do not try to auto-thread Junction type object (only case)
 S04-phasers/enter-leave.rakudo.jvm aborted 2 test(s)
 S16-filehandles/io.rakudo.jvm aborted 48 test(s)
+S17-supply/batch.t 9 - we can batch by time and elems
 S19-command-line/arguments.t 1 - concise error message when called script not found
-S32-exceptions/misc.rakudo.jvm 318 - did we throws-like X::TooLateForREPR?
-S32-exceptions/misc.rakudo.jvm 328 - The gist of exception with no message method mentions the type
+S32-exceptions/misc.rakudo.jvm aborted 15 test(s)
 S32-list/pick.rakudo.jvm aborted 15 test(s)
 S32-temporal/DateTime.t aborted 49 test(s)
 S32-temporal/calendar.t aborted 130 test(s)
