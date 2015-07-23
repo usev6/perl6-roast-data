@@ -593,7 +593,7 @@ S04-statements/return.rakudo.jvm...................  17    0    1    0   18
 S04-statements/sink.rakudo.jvm.....................   1    0    1    0    2
      1 todo   : RT \#117235
 S04-statements/terminator.t........................  20    0    0    0   20
-S04-statements/try.t...............................  32    0    0    0   32
+S04-statements/try.t...............................  40    0    0    0   40
 S04-statements/unless.t............................  10    0    0    0   10
 S04-statements/until.t.............................   4    0    0    0    4
 S04-statements/when.t..............................  18    0    0    0   18
@@ -803,8 +803,7 @@ S06-advanced/wrap.rakudo.jvm.......................  75    0    6    4   85
 S06-currying/assuming-and-mmd.t....................   7    0    0    0    7
 S06-currying/misc.rakudo.jvm.......................   1    0    0   10   11
     10 skipped: RT #125537 interferes with test code here
-S06-currying/named.rakudo.jvm......................  26    0    1    0   27
-     1 todo PASSED: need/find RT JVM seems to not mind the type conflict
+S06-currying/named.t...............................  27    0    0    0   27
 S06-currying/positional.t.......................... 227    0    0    0  227
 S06-currying/slurpy.t..............................  32    0    0    0   32
 S06-macros/errors.t................................   2    0    0    0    2
@@ -1226,7 +1225,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.rakudo.jvm.......................   7    0    1    0    8
+S17-lowlevel/lock.rakudo.jvm.......................   6    1    1    0    8
      1 todo   : not sure this test is valid RT \#124793
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1399,8 +1398,9 @@ S32-container/roundrobin.rakudo.jvm................   4    0    1    0    5
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
-S32-exceptions/misc.rakudo.jvm..................... 329    2    1    0  332
+S32-exceptions/misc.rakudo.jvm..................... 316   24    1    0  341
      1 todo   : parsing regression RT \#124679
+    24 tests aborted (missing ok/not ok)
 S32-hash/adverbs.t.................................1124    0    0    0 1124
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
@@ -1775,11 +1775,12 @@ integration/advent2013-day20.t.....................  22    0    0    0   22
 integration/advent2013-day21.t.....................  24    0    0    0   24
 integration/advent2013-day22.t.....................   9    0    0    0    9
 integration/advent2013-day23.t.....................   9    0    0    0    9
-integration/advent2014-day05.t.....................   7    0    0    0    7
+integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
+     1 skipped: sometimes hangs, sometimes segfaults
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  16    0    1    0   17
+integration/error-reporting.rakudo.jvm.............  19    0    1    0   20
      1 todo   : nigh
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1808,9 +1809,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        5270,     3,   135,   406,  5814,  5813
 "S03",        5256,     1,   117,    98,  5472,  5490
-"S04",        1150,     2,    51,    31,  1234,  1272
+"S04",        1158,     2,    51,    31,  1242,  1280
 "S05",        4997,   502,    89,   183,  5771,  6021
-"S06",        1781,     0,    59,    99,  1939,  2010
+"S06",        1782,     0,    58,    99,  1939,  2010
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1902,     1,    14,    96,  2013,  2013
 "S10",         104,     0,     6,     1,   111,   168
@@ -1820,17 +1821,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         330,     0,     6,     6,   342,   355
 "S15",          15,     0,     4,    16,    35, 78526
 "S16",         256,    48,     0,    16,   320,   348
-"S17",         702,     0,     7,    21,   730,   777
+"S17",         701,     1,     7,    21,   730,   777
 "S19",          13,     1,     0,     0,    14,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1888,     0,     8,    72,  1968,  1968
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         345,     0,     3,     3,   351,   351
-"S32",       11641,   210,   203,   173, 12227, 10554
-"int",        1252,     9,    11,    14,  1286,  1277
+"S32",       11628,   232,   203,   173, 12236, 10563
+"int",        1254,     9,    11,    15,  1289,  1280
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38570,   777,   802,  1493, 41642,119244
+"total",     38567,   800,   801,  1494, 41662,119264
 ----------------
 Failure summary:
 S02-magicals/sub.t aborted 2 test(s)
@@ -1840,9 +1841,9 @@ S04-phasers/enter-leave.rakudo.jvm aborted 2 test(s)
 S05-mass/properties-general.rakudo.jvm aborted 502 test(s)
 S09-typed-arrays/native-int.rakudo.jvm 1378 - negative value on uint32 array becomes positive
 S16-filehandles/io.rakudo.jvm aborted 48 test(s)
+S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
 S19-command-line/arguments.t 1 - concise error message when called script not found
-S32-exceptions/misc.rakudo.jvm 318 - did we throws-like X::TooLateForREPR?
-S32-exceptions/misc.rakudo.jvm 328 - The gist of exception with no message method mentions the type
+S32-exceptions/misc.rakudo.jvm aborted 24 test(s)
 S32-io/IO-Socket-Async.rakudo.jvm aborted 1 test(s)
 S32-list/pick.rakudo.jvm aborted 15 test(s)
 S32-temporal/DateTime.t aborted 62 test(s)
