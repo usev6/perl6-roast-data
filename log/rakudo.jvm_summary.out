@@ -264,7 +264,7 @@ S02-types/pair.rakudo.jvm.......................... 104    0    4    0  108
      1 todo   : ?
      2 todo   : RT \#123215
      1 todo   : should it really have \n on the end?
-S02-types/parcel.t.................................  52    0    0    0   52
+S02-types/parcel.t.................................  54    0    0    0   54
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t.................................. 135    0    0    0  135
 S02-types/set.rakudo.jvm........................... 159    0   11    1  171
@@ -424,8 +424,7 @@ S03-operators/range-int.t.......................... 480    0    0    0  480
 S03-operators/range.rakudo.jvm..................... 123    0    2    0  125
      1 todo   : huh? RT \#124542
      1 todo   : huh? RT \#124543
-S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
-     1 skipped: expected Any but got Mu instead RT #124552
+S03-operators/reduce-le1arg.rakudo.jvm.............  50    0    0    2   52
      1 skipped: ~< NYI RT #124531
      1 skipped: ~> NYI RT #124531
 S03-operators/relational.rakudo.jvm................ 118    0    4    0  122
@@ -522,12 +521,12 @@ S04-phasers/check.t................................   5    0    0    0    5
 S04-phasers/descending-order.t.....................   7    0    0    0    7
 S04-phasers/end.rakudo.jvm.........................   6    0    2    0    8
      2 todo   : lexicals and EVAL() RT \#124963
-S04-phasers/enter-leave.rakudo.jvm.................  21    2    3    1   27
+S04-phasers/enter-leave.rakudo.jvm.................  21    0    3    3   27
+     2 skipped: java.lang.NullPointerException (second one only with is())
      1 skipped: leave NYI RT #124960
      1 todo   : is this spec? why would LEAVE not see outer $!? fossil?
      1 todo   : nigh
      1 todo   : unwind, RT \#121530
-     2 tests aborted (missing ok/not ok)
 S04-phasers/eval-in-begin.t........................   3    0    0    0    3
 S04-phasers/first.t................................   4    0    0    0    4
 S04-phasers/in-eval.rakudo.jvm.....................  34    0    1    0   35
@@ -956,9 +955,10 @@ S09-typed-arrays/arrays.rakudo.jvm.................  68    0    6    2   76
      2 todo   : unexpectedly getting array Array[Bool].new
 S09-typed-arrays/hashes.t..........................  33    0    0    0   33
 S09-typed-arrays/native-decl.t.....................   8    0    0    0    8
-S09-typed-arrays/native-int.rakudo.jvm.............1317    1    2   60 1380
+S09-typed-arrays/native-int.rakudo.jvm.............1317    0    3   60 1380
     60 skipped: nativeint.list loops on itself
      2 todo   : highest bit length stays negative, RT \#124088
+     1 todo   : missing an invert? (-1 --> 0, -2 --> -1)
 S09-typed-arrays/native-num.rakudo.jvm............. 360    0    0   27  387
      3 skipped: borkedness with num and iteration RT #124678
      6 skipped: cannot approx test Parcels
@@ -1225,7 +1225,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.rakudo.jvm.......................   6    1    1    0    8
+S17-lowlevel/lock.rakudo.jvm.......................   7    0    1    0    8
      1 todo   : not sure this test is valid RT \#124793
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1296,7 +1296,7 @@ S17-supply/zip.t...................................  10    0    0    0   10
                                                    pass fail todo skip plan
 S19-command-line-options/02-dash-n.t...............   3    0    0    0    3
 S19-command-line-options/03-dash-p.t...............   2    0    0    0    2
-S19-command-line/arguments.t.......................   2    1    0    0    3
+S19-command-line/arguments.t.......................   3    0    0    0    3
 S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
 S19-command-line/repl.t............................   1    0    0    0    1
@@ -1381,7 +1381,7 @@ S32-array/perl.t...................................   6    0    0    0    6
 S32-array/pop.rakudo.jvm...........................  36    0    1    0   37
      1 todo   : RT \#111720
 S32-array/push.t...................................  52    0    0    0   52
-S32-array/rotate.t.................................  27    0    0    0   27
+S32-array/rotate.t.................................  29    0    0    0   29
 S32-array/shift.t..................................  31    0    0    0   31
 S32-array/splice.rakudo.jvm........................ 345    0   12    0  357
     12 todo   : somehow the test causes different typecheck error
@@ -1398,9 +1398,9 @@ S32-container/roundrobin.rakudo.jvm................   4    0    1    0    5
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
-S32-exceptions/misc.rakudo.jvm..................... 316   24    1    0  341
+S32-exceptions/misc.rakudo.jvm..................... 339    0    2    0  341
+     1 todo   : Error while compiling, type X::TooLateForREPR
      1 todo   : parsing regression RT \#124679
-    24 tests aborted (missing ok/not ok)
 S32-hash/adverbs.t.................................1124    0    0    0 1124
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
@@ -1481,9 +1481,9 @@ S32-list/map.rakudo.jvm............................  56    0    0    6   62
 S32-list/map_function_return_values.t..............   2    0    0    0    2
 S32-list/minmax.t..................................  97    0    0    0   97
 S32-list/permutations.t............................   2    0    0    0    2
-S32-list/pick.rakudo.jvm...........................  41   15    1    0   57
+S32-list/pick.rakudo.jvm...........................  55    0    2    0   57
+     1 todo   : "Cannot .pick from an infinite list" (but not from CLI)
      1 todo   : error on pick :replace
-    15 tests aborted (missing ok/not ok)
 S32-list/reduce.t..................................  15    0    0    0   15
 S32-list/reverse.rakudo.jvm........................  20    0    1    0   21
      1 todo   : RT \#77914
@@ -1737,8 +1737,7 @@ integration/advent2011-day23.t.....................  55    0    0    0   55
 integration/advent2011-day24.t.....................   8    0    0    0    8
 integration/advent2012-day02.t.....................   4    0    0    0    4
 integration/advent2012-day03.t.....................   2    0    0    0    2
-integration/advent2012-day04.t.....................   0    8    0    0    8
-     8 tests aborted (missing ok/not ok)
+integration/advent2012-day04.t.....................   8    0    0    0    8
 integration/advent2012-day06.t.....................   2    0    0    0    2
 integration/advent2012-day09.t.....................   8    0    0    0    8
 integration/advent2012-day10.t.....................  26    0    0    0   26
@@ -1807,13 +1806,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5270,     3,   135,   406,  5814,  5813
-"S03",        5256,     1,   117,    98,  5472,  5490
-"S04",        1158,     2,    51,    31,  1242,  1280
+"S02",        5272,     3,   135,   406,  5816,  5815
+"S03",        5255,     1,   117,    97,  5470,  5488
+"S04",        1158,     0,    51,    33,  1242,  1280
 "S05",        4997,   502,    89,   183,  5771,  6021
 "S06",        1782,     0,    58,    99,  1939,  2010
 "S07",           0,     0,     0,     0,     0,    96
-"S09",        1902,     1,    14,    96,  2013,  2013
+"S09",        1902,     0,    15,    96,  2013,  2013
 "S10",         104,     0,     6,     1,   111,   168
 "S11",          89,     0,    28,    11,   128,   147
 "S12",        1493,     0,    51,   144,  1688,  1743
@@ -1821,32 +1820,25 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         330,     0,     6,     6,   342,   355
 "S15",          15,     0,     4,    16,    35, 78526
 "S16",         256,    48,     0,    16,   320,   348
-"S17",         701,     1,     7,    21,   730,   777
-"S19",          13,     1,     0,     0,    14,    18
+"S17",         702,     0,     7,    21,   730,   777
+"S19",          14,     0,     0,     0,    14,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1888,     0,     8,    72,  1968,  1968
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         345,     0,     3,     3,   351,   351
-"S32",       11628,   232,   203,   173, 12236, 10563
-"int",        1254,     9,    11,    15,  1289,  1280
+"S32",       11667,   193,   205,   173, 12238, 10565
+"int",        1262,     1,    11,    15,  1289,  1280
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38567,   800,   801,  1494, 41662,119264
+"total",     38617,   748,   804,  1495, 41664,119266
 ----------------
 Failure summary:
 S02-magicals/sub.t aborted 2 test(s)
 S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNative?
 S03-junctions/misc.rakudo.jvm 131 - Do not try to auto-thread Junction type object (only case)
-S04-phasers/enter-leave.rakudo.jvm aborted 2 test(s)
 S05-mass/properties-general.rakudo.jvm aborted 502 test(s)
-S09-typed-arrays/native-int.rakudo.jvm 1378 - negative value on uint32 array becomes positive
 S16-filehandles/io.rakudo.jvm aborted 48 test(s)
-S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
-S19-command-line/arguments.t 1 - concise error message when called script not found
-S32-exceptions/misc.rakudo.jvm aborted 24 test(s)
 S32-io/IO-Socket-Async.rakudo.jvm aborted 1 test(s)
-S32-list/pick.rakudo.jvm aborted 15 test(s)
 S32-temporal/DateTime.t aborted 62 test(s)
 S32-temporal/calendar.t aborted 130 test(s)
-integration/advent2012-day04.t aborted 8 test(s)
 integration/advent2013-day06.t aborted 1 test(s)
