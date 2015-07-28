@@ -331,7 +331,8 @@ S03-metaops/reduce.rakudo.jvm...................... 363    0    6    0  369
      3 todo   : huh?
      1 todo   : item context
      2 todo   : orelse RT \#124516
-S03-metaops/reverse.t..............................  39    0    0    0   39
+S03-metaops/reverse.rakudo.jvm.....................  39    0    1    0   40
+     1 todo   : RT \#118791 Rxx does not yet thunk the RHS
 S03-metaops/zip.rakudo.jvm.........................  25    0    4    2   31
      2 skipped: nom regression RT #122230
      4 todo   : nom regression RT \#122230
@@ -499,7 +500,7 @@ S04-declarations/our.rakudo.jvm....................  32    0    1    0   33
      1 todo   : our-scoped var in role RT \#76450
 S04-declarations/state.rakudo.jvm..................  40    0    1    0   41
      1 todo   : initialization happens only on first call(?) RT \#102994
-S04-declarations/will.rakudo.jvm...................  12    0    4    3   19
+S04-declarations/will.rakudo.jvm...................  13    0    4    3   20
      1 skipped: declared variable not visible in block yet RT #125061
      1 skipped: declared variable not visible in block yet RT #125063
      1 skipped: declared variable not visible in block yet RT #125066
@@ -801,8 +802,8 @@ S06-advanced/wrap.rakudo.jvm.......................  75    0    6    4   85
      1 todo   : temp and wrap
      1 todo   : temp and wrap RT \#124654
 S06-currying/assuming-and-mmd.t....................   7    0    0    0    7
-S06-currying/misc.rakudo.jvm.......................   1    0    0   10   11
-    10 skipped: RT #125537 interferes with test code here
+S06-currying/misc.rakudo.jvm.......................  10    0    0    1   11
+     1 skipped: JVM binding problems with non-nominal types
 S06-currying/named.t...............................  27    0    0    0   27
 S06-currying/positional.t.......................... 227    0    0    0  227
 S06-currying/slurpy.t..............................  32    0    0    0   32
@@ -884,9 +885,8 @@ S06-signature/definite-return.rakudo.jvm...........   0    0    3    6    9
      3 todo   : definite values as return specifications dont parse yet RT \#124927
 S06-signature/errors.rakudo.jvm....................  21    0    6    0   27
      6 todo   : unival NYI RT \#124920
-S06-signature/introspection.rakudo.jvm............. 117    0    7    1  125
+S06-signature/introspection.rakudo.jvm............. 131    0    1    1  133
      1 skipped: expected Any but got Mu instead
-     6 todo   : needs/find RT
      1 todo   : needs/find RT: Logic to make :a($a) into :$a makes :a(:b($a) into ::b(:$a)
 S06-signature/mixed-placeholders.t.................  18    0    0    0   18
 S06-signature/multi-invocant.t.....................  25    0    0    0   25
@@ -1808,10 +1808,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        5273,     1,   136,   408,  5818,  5817
-"S03",        5257,     1,   117,    98,  5473,  5491
-"S04",        1158,     0,    51,    33,  1242,  1280
+"S03",        5257,     1,   118,    98,  5474,  5492
+"S04",        1159,     0,    51,    33,  1243,  1280
 "S05",        4997,   502,    89,   183,  5771,  6021
-"S06",        1782,     0,    58,    99,  1939,  2010
+"S06",        1805,     0,    52,    90,  1947,  2018
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1902,     0,    15,    96,  2013,  2013
 "S10",         104,     0,     6,     1,   111,   168
@@ -1831,7 +1831,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       11667,   194,   204,   174, 12239, 10566
 "int",        1263,     1,    11,    15,  1290,  1281
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38622,   750,   804,  1499, 41675,119277
+"total",     38646,   750,   799,  1490, 41685,119286
 ----------------
 Failure summary:
 S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNative?
