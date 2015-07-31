@@ -172,7 +172,7 @@ Regex object coerced to string (please use .gist or .perl to do that)  in block 
 Regex object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:134
 Regex object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:134
 Regex object coerced to string (please use .gist or .perl to do that)  in block  at lib/Test.pm:134
-   8    0    0    0    8
+  10    0    0    0   10
 S02-magicals/subname.t.............................   4    0    0    0    4
 S02-names-vars/contextual.t........................  24    0    0    0   24
 S02-names-vars/fmt.t...............................  21    0    0    0   21
@@ -213,21 +213,21 @@ S02-names/indirect.t...............................   6    0    0    0    6
 S02-names/is_cached.t..............................  38    0    0    0   38
 S02-names/is_default.rakudo.moar...................    
 # Failed test '.got matches Nil'
-# at src/gen/m-CORE.setting line 10586
+# at src/gen/m-CORE.setting line 10592
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:498
     # Got:      
     # Looks like you failed 1 test of 4
     
 # Failed test '.got matches Nil'
-# at src/gen/m-CORE.setting line 10586
+# at src/gen/m-CORE.setting line 10592
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:498
     # Got:      
     # Looks like you failed 1 test of 4
     
 # Failed test '.got matches Nil'
-# at src/gen/m-CORE.setting line 10586
+# at src/gen/m-CORE.setting line 10592
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:498
     # Got:      
@@ -248,7 +248,15 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  15    0    0    0   15
 S02-names/our.rakudo.moar..........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.moar.......................  52    0    8   82  142
+S02-names/pseudo.rakudo.moar.......................WARNING: unhandled Failure detected in DESTROY:
+No such symbol 'OUR::A43'
+  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:184
+
+WARNING: unhandled Failure detected in DESTROY:
+No such symbol 'OUR::A42'
+  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:180
+
+  52    0    8   82  142
     19 skipped: CORE NYI RT #124916
      4 skipped: the binding in here is NYI RT #124914
     23 skipped: various issues to resolve RT #124917
@@ -752,6 +760,29 @@ S03-operators/inplace.rakudo.moar..................  23    0    0    4   27
 S03-operators/is-divisible-by.rakudo.moar..........    
 # Failed test 'code dies'
 # at t/spec/S03-operators/is-divisible-by.rakudo.moar line 41
+WARNING: unhandled Failure detected in DESTROY:
+Attempt to divide 9 by zero using infix:<%%>
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1229
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1147
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1710
+  in any visit_want at src/gen/m-Perl6-Optimizer.nqp:1550
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1713
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1719
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1719
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+  in any optimize at src/Perl6/Compiler.nqp:64
+
     # Looks like you failed 1 test of 4
   14    0    1    0   15
      1 todo   : not sure why this doesn't fire
@@ -1445,7 +1476,7 @@ S06-multi/positional-vs-named.rakudo.moar..........  25    0    0    2   27
 S06-multi/proto.rakudo.moar........................  22    0    1    5   28
      5 skipped: redeclaration of routine 'bar' RT #118069
      1 todo   : operator protos
-S06-multi/redispatch.t.............................  13    0    0    0   13
+S06-multi/redispatch.t.............................  14    0    0    0   14
 S06-multi/syntax.t.................................Sub object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S06-multi/syntax.t:71
   41    0    0    0   41
 S06-multi/type-based.rakudo.moar...................  59    0    4    0   63
@@ -1649,10 +1680,10 @@ S10-packages/precompilation.rakudo.moar............Use of uninitialized value $_
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-17840-597930.code:4
+#   in block <unit> at getout-60268-528386.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-17840-597930.code:4
+#   in block <unit> at getout-60268-528386.code:4
 
 
   33    0    3    0   36
@@ -1979,8 +2010,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1438291568
-# Using file temp_1438291568
+S16-filehandles/chmod.t............................# Using file temp_1438377957
+# Using file temp_1438377957
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2011,8 +2042,8 @@ S16-unfiled/rebindstdhandles.rakudo.moar...........   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.rakudo.moar......................   7    0    1    0    8
-     1 todo   : not sure this test is valid RT \#124793
+S17-lowlevel/lock.rakudo.moar......................   6    2    0    0    8
+     1 tests aborted (missing ok/not ok)
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-procasync/basic.rakudo.moar....................  27    0    0    3   30
      3 skipped: returns Nil (flapping tests) RT #125047
@@ -3710,7 +3741,7 @@ Use of uninitialized value of type BagHash in string context  in block <unit> at
   16    0    0    0   16
 S32-container/zip.rakudo.moar......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
-S32-exceptions/misc.rakudo.moar....................Sub object coerced to string (please use .gist or .perl to do that)  in any throw at src/Perl6/World.nqp:3416
+S32-exceptions/misc.rakudo.moar....................Sub object coerced to string (please use .gist or .perl to do that)  in any throw at src/Perl6/World.nqp:3424
     
 # Failed test ''#`' died'
 # at t/spec/S32-exceptions/misc.rakudo.moar line 175
@@ -4279,11 +4310,13 @@ S32-hash/slice.rakudo.moar.........................  19    0   10    0   29
      6 todo   : binding on hash elements unimplemented
      2 todo   : binding on hash elements unimplemented RT \#124779
      2 todo   : binding on hash elements unimplemented RT \#124780
-S32-io/IO-Socket-Async.rakudo.moar.................# Looks like you planned 6 tests, but ran 5
-   3    1    0    2    6
+S32-io/IO-Socket-Async.rakudo.moar.................connection reset by peer
+  in block <unit> at t/spec/S32-io/IO-Socket-Async.rakudo.moar:102
+
+# Looks like you planned 6 tests, but ran 4
+   3    2    0    1    6
      1 skipped: Flapping RT #122318
-     1 skipped: RT #122318 - test is flapping
-     1 tests aborted (missing ok/not ok)
+     2 tests aborted (missing ok/not ok)
 S32-io/IO-Socket-INET.t............................   0    0    0   47   47
     47 skipped: Operating system not yet supported
 S32-io/chdir.rakudo.moar...........................   8    0    0    2   10
@@ -4388,7 +4421,28 @@ Use of uninitialized value $x of type Any in string context  in sub is-deeply at
 S32-list/unique.t..................................  34    0    0    0   34
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  31    0    0    0   31
-S32-num/complex.t.................................. 488    0    0    0  488
+S32-num/complex.t..................................WARNING: unhandled Failure detected in DESTROY:
+Can not convert 2+4i to Real: imaginary part not zero
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1197
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1012
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1698
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1698
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+  in any optimize at src/Perl6/Compiler.nqp:64
+
+WARNING: unhandled Failure detected in DESTROY:
+Can not convert 2+2i to Real: imaginary part not zero
+  in block <unit> at EVAL_0:1
+  in sub eval_exception at lib/Test.pm:521
+  in sub eval-dies-ok at lib/Test.pm:427
+  in block <unit> at t/spec/S32-num/complex.t:20
+
+ 488    0    0    0  488
 S32-num/cool-num.rakudo.moar.......................  39    0    0    4   43
      4 skipped: angle conversion RT #124816
 S32-num/exp.t......................................  72    0    0    0   72
@@ -4666,14 +4720,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.8153127 seconds
-# gerdr: 0.851419 seconds
-# recursive-ternary: 0.96642311 seconds
-# loop: 0.9981778 seconds
-# hand-memoization: 1.2932830 seconds
-# recursive-ternary-hand-cached: 2.5921699 seconds
-# sequence-ternary: 5.4126806 seconds
-# sequence: 7.306612 seconds
+integration/advent2012-day21.t.....................# gerdr: 0.81379608 seconds
+# kaz: 0.821459 seconds
+# recursive-ternary: 0.9016066 seconds
+# loop: 0.9331694 seconds
+# hand-memoization: 1.2628130 seconds
+# recursive-ternary-hand-cached: 2.2964413 seconds
+# sequence-ternary: 5.05770553 seconds
+# sequence: 6.5543273 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT \#121789
@@ -4825,11 +4879,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5313,     0,   122,   385,  5820,  5819
+"S02",        5315,     0,   122,   385,  5822,  5821
 "S03",        5258,     0,   118,    98,  5474,  5492
 "S04",        1168,     0,    47,    28,  1243,  1280
 "S05",        5597,     0,    88,   117,  5802,  6021
-"S06",        1811,     0,    52,    85,  1948,  2019
+"S06",        1812,     0,    52,    85,  1949,  2020
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1903,     0,    14,    96,  2013,  2013
 "S10",         105,     0,     5,     1,   111,   168
@@ -4839,19 +4893,21 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         341,     0,     6,     5,   352,   365
 "S15",       78485,     0,     3,    18, 78506, 78526
 "S16",         305,     0,     2,    16,   323,   351
-"S17",         959,    31,    38,    29,  1057,  1057
+"S17",         958,    33,    37,    29,  1057,  1057
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          24,     0,     0,     0,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1888,     0,     8,    72,  1968,  1968
 "S28",          13,     0,     0,     0,    13,    13
 "S29",         346,     0,     3,     2,   351,   351
-"S32",       12023,     1,   208,   158, 12390, 10717
+"S32",       12023,     2,   208,   157, 12390, 10717
 "int",        1269,     0,    12,    15,  1296,  1282
 "ros",           2,     0,     0,     0,     2,     2
-"total",    118493,    32,   783,  1381,120689,119730
+"total",    118495,    35,   782,  1380,120692,119733
 ----------------
 Failure summary:
+S17-lowlevel/lock.rakudo.moar 7 - Condition variable worked
+S17-lowlevel/lock.rakudo.moar aborted 1 test(s)
 S17-procasync/kill.rakudo.moar 7 - The object is-a 'Proc::Status'
 S17-procasync/kill.rakudo.moar 16 - The object is-a 'Proc::Status'
 S17-procasync/kill.rakudo.moar 25 - The object is-a 'Proc::Status'
@@ -4883,4 +4939,4 @@ S17-procasync/kill.rakudo.moar 250 - The object is-a 'Proc::Status'
 S17-procasync/kill.rakudo.moar 259 - The object is-a 'Proc::Status'
 S17-procasync/kill.rakudo.moar 268 - The object is-a 'Proc::Status'
 S17-procasync/kill.rakudo.moar 277 - The object is-a 'Proc::Status'
-S32-io/IO-Socket-Async.rakudo.moar aborted 1 test(s)
+S32-io/IO-Socket-Async.rakudo.moar aborted 2 test(s)

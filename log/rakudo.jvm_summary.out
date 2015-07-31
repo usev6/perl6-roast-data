@@ -115,8 +115,9 @@ S02-magicals/env.rakudo.jvm........................  16    0    0    1   17
 S02-magicals/file_line.t...........................   2    0    0    0    2
 S02-magicals/pid.t.................................   2    0    0    0    2
 S02-magicals/progname.t............................   4    0    0    0    4
-S02-magicals/sub.rakudo.jvm........................   6    0    0    2    8
+S02-magicals/sub.rakudo.jvm........................   6    2    0    2   10
      2 skipped: java.lang.NullPointerException (openjdk)
+     2 tests aborted (missing ok/not ok)
 S02-magicals/subname.t.............................   4    0    0    0    4
 S02-names-vars/contextual.t........................  24    0    0    0   24
 S02-names-vars/fmt.t...............................  21    0    0    0   21
@@ -820,7 +821,7 @@ S06-multi/positional-vs-named.rakudo.jvm...........  25    0    0    2   27
 S06-multi/proto.rakudo.jvm.........................  22    0    1    5   28
      5 skipped: redeclaration of routine 'bar' RT #118069
      1 todo   : operator protos
-S06-multi/redispatch.t.............................  13    0    0    0   13
+S06-multi/redispatch.t.............................  14    0    0    0   14
 S06-multi/syntax.t.................................  41    0    0    0   41
 S06-multi/type-based.rakudo.jvm....................  59    0    4    0   63
      4 todo   : coercions need to fail like constraints RT \#124772
@@ -1802,11 +1803,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5275,     1,   136,   408,  5820,  5819
+"S02",        5275,     3,   136,   408,  5822,  5821
 "S03",        5257,     1,   118,    98,  5474,  5492
 "S04",        1160,     0,    50,    33,  1243,  1280
 "S05",        4997,   502,    89,   183,  5771,  6021
-"S06",        1806,     0,    52,    90,  1948,  2019
+"S06",        1807,     0,    52,    90,  1949,  2020
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1902,     0,    15,    96,  2013,  2013
 "S10",         104,     0,     6,     1,   111,   168
@@ -1826,9 +1827,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       11861,     1,   202,   176, 12240, 10567
 "int",        1265,     0,    11,    15,  1291,  1282
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38856,   557,   796,  1491, 41700,119301
+"total",     38857,   559,   796,  1491, 41703,119304
 ----------------
 Failure summary:
+S02-magicals/sub.rakudo.jvm aborted 2 test(s)
 S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNative?
 S03-junctions/misc.rakudo.jvm 131 - Do not try to auto-thread Junction type object (only case)
 S05-mass/properties-general.rakudo.jvm aborted 502 test(s)
