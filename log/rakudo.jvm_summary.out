@@ -254,8 +254,7 @@ S02-types/nan.rakudo.jvm...........................  20    0    0    1   21
 S02-types/native.rakudo.jvm........................  44    0    1    3   48
      3 skipped: cannot unbox to a native number
      1 todo   : RT \#102416 - though maybe wrong test? Not sure .WHAT is *that* magic
-S02-types/nested_arrays.rakudo.jvm.................   8    0    1    0    9
-     1 todo   : Should we fail, or should we throw RT \#124449
+S02-types/nested_arrays.t..........................  10    0    0    0   10
 S02-types/nested_pairs.t...........................  14    0    0    0   14
 S02-types/nil.rakudo.jvm...........................  45    0    5    1   51
      1 skipped: triage
@@ -268,12 +267,12 @@ S02-types/pair.rakudo.jvm.......................... 104    0    4    0  108
 S02-types/parcel.t.................................  54    0    0    0   54
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t.................................. 135    0    0    0  135
-S02-types/set.rakudo.jvm........................... 159    0   11    1  171
+S02-types/set.rakudo.jvm........................... 160    0   11    1  172
      1 skipped: Set is no longer Iterable
      9 todo   : Hypers not yet Set compatible RT \#124487
      1 todo   : Hypers not yet Set compatible RT \#124488
      1 todo   : we have not secured .WHICH creation yet RT \#124489
-S02-types/sethash.rakudo.jvm....................... 188    0    0   11  199
+S02-types/sethash.rakudo.jvm....................... 189    0    0   11  200
     10 skipped: 'is TypeObject' NYI RT #124490
      1 skipped: no longer Iterable
 S02-types/sigils-and-types.rakudo.jvm..............  26    0    2    0   28
@@ -785,7 +784,7 @@ S05-transliteration/with-closure.rakudo.jvm........  15    0    2    1   18
      1 skipped: Unable to resolve method ord in class Any RT #124659
      2 todo   : nom regression
                                                    pass fail todo skip plan
-S06-advanced/callframe.rakudo.jvm..................  10    0    0    1   11
+S06-advanced/callframe.rakudo.jvm..................  14    0    0    1   15
      1 skipped: Unable to resolve method inline in type CallFrame
 S06-advanced/callsame.t............................   3    0    0    0    3
 S06-advanced/lexical-subs.t........................  13    0    0    0   13
@@ -1286,7 +1285,7 @@ S17-supply/sort.t..................................   7    0    0    0    7
 S17-supply/squish.t................................  11    0    0    0   11
 S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
      2 skipped: doesn't work or can't test RT #124822
-S17-supply/start.t.................................   9    0    0    0    9
+S17-supply/start.t.................................   8    1    0    0    9
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch_path.rakudo.jvm...................   2    0    0    0    2
@@ -1803,11 +1802,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5275,     3,   136,   408,  5822,  5821
+"S02",        5279,     3,   135,   408,  5825,  5824
 "S03",        5257,     1,   118,    98,  5474,  5492
 "S04",        1160,     0,    50,    33,  1243,  1280
 "S05",        4997,   502,    89,   183,  5771,  6021
-"S06",        1807,     0,    52,    90,  1949,  2117
+"S06",        1811,     0,    52,    90,  1953,  2121
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1902,     0,    15,    96,  2013,  2013
 "S10",         104,     0,     6,     1,   111,   168
@@ -1817,7 +1816,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         340,     0,     6,     6,   352,   365
 "S15",          15,     0,     4,    16,    35, 78526
 "S16",         256,    51,     0,    16,   323,   351
-"S17",         702,     1,     7,    21,   731,   778
+"S17",         701,     2,     7,    21,   731,   778
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
@@ -1827,7 +1826,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       11862,     1,   202,   176, 12241, 10568
 "int",        1265,     0,    11,    15,  1291,  1282
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38858,   559,   796,  1491, 41704,119402
+"total",     38865,   560,   795,  1491, 41711,119409
 ----------------
 Failure summary:
 S02-magicals/sub.rakudo.jvm aborted 2 test(s)
@@ -1836,4 +1835,5 @@ S03-junctions/misc.rakudo.jvm 131 - Do not try to auto-thread Junction type obje
 S05-mass/properties-general.rakudo.jvm aborted 502 test(s)
 S16-filehandles/io.rakudo.jvm aborted 51 test(s)
 S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
+S17-supply/start.t 9 - did we get the other original value
 S32-io/IO-Socket-Async.rakudo.jvm aborted 1 test(s)
