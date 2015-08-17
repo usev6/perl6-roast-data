@@ -710,7 +710,7 @@ S05-metasyntax/angle-brackets.rakudo.jvm...........  69    0    2   20   91
      1 todo   : <$subrule> NYI RT \#124524
 S05-metasyntax/assertions.t........................   4    0    0    0    4
 S05-metasyntax/changed.t...........................  12    0    0    0   12
-S05-metasyntax/charset.t...........................  41    0    0    0   41
+S05-metasyntax/charset.t...........................  42    0    0    0   42
 S05-metasyntax/delimiters.t........................  21    0    0    0   21
 S05-metasyntax/interpolating-closure.rakudo.jvm....   5    0    1    0    6
      1 todo   : dunno RT \#124527
@@ -1279,7 +1279,7 @@ S17-supply/flat.t..................................  17    0    0    0   17
 S17-supply/from-list.t.............................  13    0    0    0   13
 S17-supply/grab.t..................................   5    0    0    0    5
 S17-supply/grep.t..................................   7    0    0    0    7
-S17-supply/interval.t..............................   3    0    0    0    3
+S17-supply/interval.t..............................   2    1    0    0    3
 S17-supply/last.rakudo.jvm.........................   8    0    1    0    9
      1 todo   : we don't have Natural numbers yet RT \#124825
 S17-supply/lines.t.................................  21    0    0    0   21
@@ -1483,10 +1483,9 @@ S32-list/grep-index.rakudo.jvm.....................  20    0    6   14   40
      6 skipped: adverbial block RT #124760
      2 skipped: test error -- is $_ rw here?
      6 todo   : closure as non-final argument RT \#124761
-S32-list/grep.rakudo.jvm...........................  25    0    6   12   43
+S32-list/grep.rakudo.jvm...........................  25    0    0   12   37
      6 skipped: adverbial block RT #124755
      6 skipped: adverbial block RT #124756
-     6 todo   : closure as non-final argument RT \#124757
 S32-list/join.t....................................  34    0    0    0   34
 S32-list/last-index.rakudo.jvm.....................  23    0    0    2   25
      2 skipped: adverbial block RT #124754
@@ -1508,9 +1507,7 @@ S32-list/reverse.rakudo.jvm........................  20    0    1    0   21
 S32-list/roll.t....................................  49    0    0    0   49
 S32-list/rotor.rakudo.jvm..........................   6    0    0    3    9
      3 skipped: UnwindException RT #124279
-S32-list/sort.rakudo.jvm...........................  30    0    0    2   32
-     1 skipped: closure as non-final argument RT #124762
-     1 skipped: method fallback to sub unimpl RT #124763
+S32-list/sort.t....................................  30    0    0    0   30
 S32-list/squish.rakudo.jvm.........................  31    0    6    0   37
      2 todo   : RT \#124204
      4 todo   : RT \#124205
@@ -1830,7 +1827,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        5258,    77,   128,   401,  5864,  5863
 "S03",        5258,     1,   122,    98,  5479,  5497
 "S04",        1209,     0,    61,    33,  1303,  1340
-"S05",        4997,   502,    89,   183,  5771,  6021
+"S05",        4998,   502,    89,   183,  5772,  6022
 "S06",        1900,     0,    62,    95,  2057,  2128
 "S07",           0,     0,     0,     0,     0,    96
 "S09",         227,   266,    13,     9,   515,   515
@@ -1841,17 +1838,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         342,     0,     8,     6,   356,   369
 "S15",          37,     7,     4,    35,    83, 78574
 "S16",         256,    51,     0,    16,   323,   351
-"S17",         702,     1,     7,    21,   731,   778
+"S17",         701,     2,     7,    21,   731,   778
 "S19",          14,     0,     0,     0,    14,    18
 "S22",           0,    24,     0,     0,    24,    24
 "S24",          17,     1,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         342,     3,     3,     3,   351,   351
-"S32",       11927,     1,   210,   178, 12316, 10643
+"S32",       11927,     1,   204,   176, 12308, 10635
 "int",        1256,     9,    11,    15,  1291,  1284
 "ros",           2,     0,     0,     0,     2,     2
-"total",     37383,   943,   821,  1422, 40569,118172
+"total",     37383,   944,   815,  1420, 40562,118165
 ----------------
 Failure summary:
 S02-literals/quoting.rakudo.jvm 124 - Testing for q:x operator.
@@ -1867,6 +1864,7 @@ S09-typed-arrays/native-num.rakudo.jvm aborted 129 test(s)
 S15-literals/identifiers.t aborted 7 test(s)
 S16-filehandles/io.rakudo.jvm aborted 51 test(s)
 S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
+S17-supply/interval.t 2 - interval of 1 second
 S22-package-format/local.rakudo.jvm aborted 24 test(s)
 S24-testing/3-output.t aborted 1 test(s)
 S29-os/system.t 4 - qx{} does not capture stderr
