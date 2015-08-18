@@ -495,7 +495,7 @@ S04-declarations/multiple.rakudo.jvm...............   5    0    1    0    6
      1 todo   : nom regression RT \#125053
 S04-declarations/my.rakudo.jvm.....................  94    0    2    0   96
      2 todo   : RT \#117043
-S04-declarations/our.t.............................  32    0    0    0   32
+S04-declarations/our.t.............................  31    0    0    0   31
 S04-declarations/state.rakudo.jvm..................  40    0    1    0   41
      1 todo   : initialization happens only on first call(?) RT \#102994
 S04-declarations/will.rakudo.jvm...................  13    0    4    3   20
@@ -1279,7 +1279,7 @@ S17-supply/flat.t..................................  17    0    0    0   17
 S17-supply/from-list.t.............................  13    0    0    0   13
 S17-supply/grab.t..................................   5    0    0    0    5
 S17-supply/grep.t..................................   7    0    0    0    7
-S17-supply/interval.t..............................   2    1    0    0    3
+S17-supply/interval.t..............................   3    0    0    0    3
 S17-supply/last.rakudo.jvm.........................   8    0    1    0    9
      1 todo   : we don't have Natural numbers yet RT \#124825
 S17-supply/lines.t.................................  21    0    0    0   21
@@ -1826,7 +1826,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        5258,    77,   128,   401,  5864,  5863
 "S03",        5258,     1,   122,    98,  5479,  5497
-"S04",        1209,     0,    61,    33,  1303,  1340
+"S04",        1208,     0,    61,    33,  1302,  1339
 "S05",        4998,   502,    89,   183,  5772,  6022
 "S06",        1900,     0,    62,    95,  2057,  2128
 "S07",           0,     0,     0,     0,     0,    96
@@ -1838,7 +1838,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         342,     0,     8,     6,   356,   369
 "S15",          37,     7,     4,    35,    83, 78574
 "S16",         256,    51,     0,    16,   323,   351
-"S17",         701,     2,     7,    21,   731,   778
+"S17",         702,     1,     7,    21,   731,   778
 "S19",          14,     0,     0,     0,    14,    18
 "S22",           0,    24,     0,     0,    24,    24
 "S24",          17,     1,     0,     0,    18,    89
@@ -1848,7 +1848,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       11927,     1,   204,   176, 12308, 10635
 "int",        1256,     9,    11,    15,  1291,  1284
 "ros",           2,     0,     0,     0,     2,     2
-"total",     37383,   944,   815,  1420, 40562,118165
+"total",     37383,   943,   815,  1420, 40561,118164
 ----------------
 Failure summary:
 S02-literals/quoting.rakudo.jvm 124 - Testing for q:x operator.
@@ -1864,7 +1864,6 @@ S09-typed-arrays/native-num.rakudo.jvm aborted 129 test(s)
 S15-literals/identifiers.t aborted 7 test(s)
 S16-filehandles/io.rakudo.jvm aborted 51 test(s)
 S17-lowlevel/lock.rakudo.jvm 7 - Condition variable worked
-S17-supply/interval.t 2 - interval of 1 second
 S22-package-format/local.rakudo.jvm aborted 24 test(s)
 S24-testing/3-output.t aborted 1 test(s)
 S29-os/system.t 4 - qx{} does not capture stderr
