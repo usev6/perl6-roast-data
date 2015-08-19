@@ -121,10 +121,10 @@ S02-names-vars/fmt.t...............................  21    0    0    0   21
 S02-names-vars/list_array_perl.rakudo.jvm..........  19    0    1    2   22
      2 skipped: recursive data structure RT #124639
      1 todo   : List.perl bug
-S02-names-vars/names.rakudo.jvm.................... 131    0    0   13  144
+S02-names-vars/names.rakudo.jvm.................... 136    0    0    8  144
      4 skipped: ::{ } package lookup NYI RT #124638
-     7 skipped: package variable autovivification RT #124637
-     2 skipped: this kind of lookup NYI
+     2 skipped: package variable autovivification RT #124637
+     2 skipped: this kind of lookup NYI RT #125659
 S02-names-vars/perl.rakudo.jvm..................... 102    0    1    3  106
      1 skipped: RT #67790
      2 skipped: recursive data structure RT #122286
@@ -1824,7 +1824,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5258,    77,   128,   401,  5864,  5863
+"S02",        5263,    77,   128,   396,  5864,  5863
 "S03",        5258,     1,   122,    98,  5479,  5497
 "S04",        1208,     0,    61,    33,  1302,  1339
 "S05",        4998,   502,    89,   183,  5772,  6022
@@ -1848,7 +1848,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       11927,     1,   204,   176, 12308, 10635
 "int",        1256,     9,    11,    15,  1291,  1284
 "ros",           2,     0,     0,     0,     2,     2
-"total",     37383,   943,   815,  1420, 40561,118164
+"total",     37388,   943,   815,  1415, 40561,118164
 ----------------
 Failure summary:
 S02-literals/quoting.rakudo.jvm 124 - Testing for q:x operator.
