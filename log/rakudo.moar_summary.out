@@ -596,7 +596,11 @@ S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  31    0    0    0   31
 S03-operators/comparison-simple.t..................  24    0    0    0   24
 S03-operators/comparison.t.........................  41    0    0    0   41
-S03-operators/context-forcers.rakudo.moar..........  95    0    0    2   97
+S03-operators/context-forcers.rakudo.moar..........WARNING: unhandled Failure detected in DESTROY:
+Cannot convert string to number: trailing characters after number in '2⏏ is my favorite number' (indicated by ⏏)
+  in block <unit> at t/spec/S03-operators/context-forcers.rakudo.moar:89
+
+  95    0    0    2   97
      2 skipped: failure modes of Str.Numeric RT #124540
 S03-operators/context.t............................  38    0    0    0   38
 S03-operators/custom.t.............................   1    0    0    0    1
@@ -770,29 +774,6 @@ S03-operators/is-divisible-by.rakudo.moar..........
 # Failed test 'code dies'
 # at t/spec/S03-operators/is-divisible-by.rakudo.moar line 41
     # Looks like you failed 1 test of 4
-WARNING: unhandled Failure detected in DESTROY:
-Attempt to divide 9 by zero using infix:<%%>
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1229
-  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
-  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1147
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1710
-  in any visit_want at src/gen/m-Perl6-Optimizer.nqp:1550
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1713
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1719
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1719
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
-  in any optimize at src/Perl6/Compiler.nqp:64
-
   14    0    1    0   15
      1 todo   : not sure why this doesn't fire
 S03-operators/lcm.t................................  15    0    0    0   15
@@ -1720,10 +1701,10 @@ S10-packages/precompilation.rakudo.moar............Use of uninitialized value $_
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-9777-896313.code:4
+#   in block <unit> at getout-80947-333787.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-9777-896313.code:4
+#   in block <unit> at getout-80947-333787.code:4
 
 
   33    0    3    0   36
@@ -2054,8 +2035,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1440372400
-# Using file temp_1440372400
+S16-filehandles/chmod.t............................# Using file temp_1440458807
+# Using file temp_1440458807
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -4635,14 +4616,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.81108790 seconds
-# gerdr: 0.82342309 seconds
-# recursive-ternary: 0.9045933 seconds
-# loop: 0.9639908 seconds
-# hand-memoization: 1.28226367 seconds
-# recursive-ternary-hand-cached: 2.2581433 seconds
-# sequence-ternary: 5.1007524 seconds
-# sequence: 6.5423100 seconds
+integration/advent2012-day21.t.....................# gerdr: 0.81308906 seconds
+# kaz: 0.81773631 seconds
+# recursive-ternary: 0.9091564 seconds
+# loop: 0.966282 seconds
+# hand-memoization: 1.26173211 seconds
+# recursive-ternary-hand-cached: 2.2853767 seconds
+# sequence-ternary: 5.0760339 seconds
+# sequence: 6.5328460 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT \#121789
@@ -4709,7 +4690,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod1C7ED29F/p6testmod6999B18F.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodA84FDF5C/p6testmod299BC3D7.pm6')
     # Looks like you failed 1 test of 2
    4    0    3    0    7
      1 todo   : RT \#123679 Cannot invoke this object (REPR: Null, cs = 0)
