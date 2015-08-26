@@ -215,21 +215,21 @@ S02-names/is_default.rakudo.moar...................
 # Failed test '.got matches Nil'
 # at src/gen/m-CORE.setting line 10640
     # Expected: Nil
-Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:498
+Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:506
     # Got:      
     # Looks like you failed 1 test of 4
     
 # Failed test '.got matches Nil'
 # at src/gen/m-CORE.setting line 10640
     # Expected: Nil
-Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:498
+Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:506
     # Got:      
     # Looks like you failed 1 test of 4
     
 # Failed test '.got matches Nil'
 # at src/gen/m-CORE.setting line 10640
     # Expected: Nil
-Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:498
+Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:506
     # Got:      
     # Looks like you failed 1 test of 4
     
@@ -596,11 +596,7 @@ S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  31    0    0    0   31
 S03-operators/comparison-simple.t..................  24    0    0    0   24
 S03-operators/comparison.t.........................  41    0    0    0   41
-S03-operators/context-forcers.rakudo.moar..........WARNING: unhandled Failure detected in DESTROY:
-Cannot convert string to number: trailing characters after number in '2⏏ is my favorite number' (indicated by ⏏)
-  in block <unit> at t/spec/S03-operators/context-forcers.rakudo.moar:89
-
-  95    0    0    2   97
+S03-operators/context-forcers.rakudo.moar..........  95    0    0    2   97
      2 skipped: failure modes of Str.Numeric RT #124540
 S03-operators/context.t............................  38    0    0    0   38
 S03-operators/custom.t.............................   1    0    0    0    1
@@ -773,6 +769,29 @@ S03-operators/inplace.rakudo.moar..................  23    0    0    4   27
 S03-operators/is-divisible-by.rakudo.moar..........    
 # Failed test 'code dies'
 # at t/spec/S03-operators/is-divisible-by.rakudo.moar line 41
+WARNING: unhandled Failure detected in DESTROY:
+Attempt to divide 9 by zero using infix:<%%>
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1229
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1147
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1710
+  in any visit_want at src/gen/m-Perl6-Optimizer.nqp:1550
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1713
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1719
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1719
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+  in any optimize at src/Perl6/Compiler.nqp:64
+
     # Looks like you failed 1 test of 4
   14    0    1    0   15
      1 todo   : not sure why this doesn't fire
@@ -1527,10 +1546,9 @@ S06-other/introspection.t..........................  12    0    0    0   12
 S06-other/main-eval.rakudo.moar....................   2    0    1    0    3
      1 todo   : MAIN in EVAL RT \#124662
 S06-other/main-semicolon.t.........................   8    0    0    0    8
-S06-other/main-usage.rakudo.moar...................  17    0    9    0   26
+S06-other/main-usage.rakudo.moar...................  19    0    7    0   26
      1 todo   : NYI RT \#124669
      1 todo   : NYI RT \#124670
-     2 todo   : RT \#115744
      1 todo   : nom regression RT \#124664
      1 todo   : nom regression RT \#124665
      1 todo   : nom regression RT \#124666
@@ -1701,10 +1719,10 @@ S10-packages/precompilation.rakudo.moar............Use of uninitialized value $_
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-80947-333787.code:4
+#   in block <unit> at getout-28347-734434.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-80947-333787.code:4
+#   in block <unit> at getout-28347-734434.code:4
 
 
   33    0    3    0   36
@@ -2035,8 +2053,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1440458807
-# Using file temp_1440458807
+S16-filehandles/chmod.t............................# Using file temp_1440619125
+# Using file temp_1440619125
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -4251,8 +4269,8 @@ S32-io/io-spec-win.t...............................Use of uninitialized value $p
 S32-io/note.t......................................   6    0    0    0    6
 S32-io/other.t.....................................  60    0    0    0   60
 S32-io/pipe.t......................................WARNINGS:
-Useless use of constant integer 1 in sink context (line 1)
 WARNINGS:
+Useless use of constant integer 1 in sink context (line 1)
 Useless use of constant integer 1 in sink context (line 1)
   14    0    0    0   14
 S32-io/rename.t....................................  29    0    0    0   29
@@ -4311,17 +4329,52 @@ S32-list/roll.t....................................  49    0    0    0   49
 S32-list/rotor.t...................................   9    0    0    0    9
 S32-list/sort.t....................................Use of uninitialized value $b of type Code in string context  in block  at t/spec/S32-list/sort.t:187
   30    0    0    0   30
-S32-list/squish.rakudo.moar........................Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:454
-Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:454
-Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:454
-Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:454
+S32-list/squish.rakudo.moar........................Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:462
+Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:462
+Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:462
+Use of uninitialized value $x of type Any in string context  in sub is-deeply at lib/Test.pm:462
   31    0    6    0   37
      2 todo   : RT \#124204
      4 todo   : RT \#124205
 S32-list/unique.t..................................  34    0    0    0   34
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  31    0    0    0   31
-S32-num/complex.t.................................. 488    0    0    0  488
+S32-num/complex.t..................................WARNING: unhandled Failure detected in DESTROY:
+Can not convert 2+4i to Real: imaginary part not zero
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1197
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1012
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1698
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1698
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+  in any optimize at src/Perl6/Compiler.nqp:64
+
+WARNING: unhandled Failure detected in DESTROY:
+Can not convert 2+2i to Real: imaginary part not zero
+  in block <unit> at EVAL_0:1
+  in sub eval_exception at lib/Test.pm:529
+  in sub eval-dies-ok at lib/Test.pm:435
+  in block <unit> at t/spec/S32-num/complex.t:20
+
+WARNING: unhandled Failure detected in DESTROY:
+Can not convert 2+2i to Real: imaginary part not zero
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
+  in any  at src/gen/m-Perl6-Optimizer.nqp:1197
+  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
+  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1012
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1698
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1698
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
+  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
+  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
+  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
+  in any optimize at src/Perl6/Compiler.nqp:64
+
+ 488    0    0    0  488
 S32-num/cool-num.rakudo.moar.......................  39    0    0    4   43
      4 skipped: angle conversion RT #124816
 S32-num/exp.t......................................  72    0    0    0   72
@@ -4502,7 +4555,7 @@ S32-temporal/Date.t................................Potential difficulties:
     Please use 0o1 if you mean that.
     at t/spec/S32-temporal/Date.t:28
     ------> [32m    isa-ok Date.new(2010, 01, 01[33m⏏[31m), Date, 'Date.new() returns a Date';  #[0m
-  73    0    0    0   73
+  75    0    0    0   75
 S32-temporal/DateTime-Instant-Duration.t...........  33    0    0    0   33
 S32-temporal/DateTime.t............................ 234    0    0    0  234
 S32-temporal/calendar.t............................ 130    0    0    0  130
@@ -4616,14 +4669,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# gerdr: 0.81308906 seconds
-# kaz: 0.81773631 seconds
-# recursive-ternary: 0.9091564 seconds
-# loop: 0.966282 seconds
-# hand-memoization: 1.26173211 seconds
-# recursive-ternary-hand-cached: 2.2853767 seconds
-# sequence-ternary: 5.0760339 seconds
-# sequence: 6.5328460 seconds
+integration/advent2012-day21.t.....................# kaz: 0.82747316 seconds
+# gerdr: 0.83530396 seconds
+# recursive-ternary: 0.9056018 seconds
+# loop: 0.96871697 seconds
+# hand-memoization: 1.28156983 seconds
+# recursive-ternary-hand-cached: 2.2779397 seconds
+# sequence-ternary: 5.101481 seconds
+# sequence: 6.77007987 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT \#121789
@@ -4690,7 +4743,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodA84FDF5C/p6testmod299BC3D7.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod0912BA59/p6testmodAADD8D0A.pm6')
     # Looks like you failed 1 test of 2
    4    0    3    0    7
      1 todo   : RT \#123679 Cannot invoke this object (REPR: Null, cs = 0)
@@ -4716,7 +4769,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        5259,     0,   122,    98,  5479,  5497
 "S04",        1217,     0,    57,    28,  1302,  1339
 "S05",        5598,     0,    88,   117,  5803,  6022
-"S06",        1905,     0,    62,    90,  2057,  2128
+"S06",        1907,     0,    60,    90,  2057,  2128
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1905,     0,    15,    96,  2016,  2016
 "S10",         105,     0,     5,     1,   111,   168
@@ -4733,10 +4786,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",          13,     0,     0,     0,    13,    13
 "S29",         346,     0,     3,     2,   351,   351
-"S32",       12093,     1,   208,   158, 12460, 10702
+"S32",       12095,     1,   208,   158, 12462, 10704
 "int",        1269,     0,    14,    15,  1298,  1284
 "ros",           2,     0,     0,     0,     2,     2
-"total",    118910,     2,   811,  1381,121104,120010
+"total",    118914,     2,   809,  1381,121106,120012
 ----------------
 Failure summary:
 S02-types/declare.rakudo.moar 19 - Assign big bigint to native won't overflow silently
