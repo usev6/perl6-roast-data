@@ -777,30 +777,7 @@ S03-operators/increment.t..........................  37    0    0    0   37
 S03-operators/infixed-function.t...................   5    0    0    0    5
 S03-operators/inplace.rakudo.moar..................  23    0    0    4   27
      4 skipped: Method '' not found for invocant of class 'Str' RT #124528
-S03-operators/is-divisible-by.rakudo.moar..........WARNING: unhandled Failure detected in DESTROY:
-Attempt to divide 9 by zero using infix:<%%>
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1229
-  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
-  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1147
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1710
-  in any visit_want at src/gen/m-Perl6-Optimizer.nqp:1550
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1713
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1719
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1719
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
-  in any optimize at src/Perl6/Compiler.nqp:64
-
-    
+S03-operators/is-divisible-by.rakudo.moar..........    
 # Failed test 'code dies'
 # at t/spec/S03-operators/is-divisible-by.rakudo.moar line 41
     # Looks like you failed 1 test of 4
@@ -1732,10 +1709,10 @@ S10-packages/precompilation.rakudo.moar............Use of uninitialized value $_
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-18531-340938.code:4
+#   in block <unit> at getout-53902-548309.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-18531-340938.code:4
+#   in block <unit> at getout-53902-548309.code:4
 
 
   33    0    3    0   36
@@ -2066,8 +2043,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1441236415
-# Using file temp_1441236415
+S16-filehandles/chmod.t............................# Using file temp_1441322817
+# Using file temp_1441322817
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2098,7 +2075,8 @@ S16-unfiled/rebindstdhandles.rakudo.moar...........   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.t................................   8    0    0    0    8
+S17-lowlevel/lock.rakudo.moar......................   7    0    0    1    8
+     1 skipped: runs out of filehandles on OS X RT #125977
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-procasync/basic.rakudo.moar....................  27    0    0    3   30
      3 skipped: returns Nil (flapping tests) RT #125047
@@ -5347,28 +5325,7 @@ Use of uninitialized value $x of type Any in string context  in sub is-deeply at
 S32-list/unique.t..................................  34    0    0    0   34
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  31    0    0    0   31
-S32-num/complex.t..................................WARNING: unhandled Failure detected in DESTROY:
-Can not convert 2+4i to Real: imaginary part not zero
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1233
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1197
-  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1197
-  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1012
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1698
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1698
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1722
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1728
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
-  in any optimize at src/Perl6/Compiler.nqp:64
-
-WARNING: unhandled Failure detected in DESTROY:
-Can not convert 2+2i to Real: imaginary part not zero
-  in block <unit> at EVAL_0:1
-  in sub eval_exception at lib/Test.pm:529
-  in sub eval-dies-ok at lib/Test.pm:435
-  in block <unit> at t/spec/S32-num/complex.t:20
-
- 488    0    0    0  488
+S32-num/complex.t.................................. 488    0    0    0  488
 S32-num/cool-num.rakudo.moar.......................  39    0    0    4   43
      4 skipped: angle conversion RT #124816
 S32-num/exp.t......................................  72    0    0    0   72
@@ -5662,14 +5619,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# gerdr: 0.82780260 seconds
-# kaz: 0.8299923 seconds
-# recursive-ternary: 0.921394 seconds
-# loop: 0.9598785 seconds
-# hand-memoization: 1.27695771 seconds
-# recursive-ternary-hand-cached: 2.30126548 seconds
-# sequence-ternary: 5.1021263 seconds
-# sequence: 6.5588904 seconds
+integration/advent2012-day21.t.....................# kaz: 0.82105573 seconds
+# gerdr: 0.82837369 seconds
+# recursive-ternary: 0.9106172 seconds
+# loop: 0.95983457 seconds
+# hand-memoization: 1.26426272 seconds
+# recursive-ternary-hand-cached: 2.2766680 seconds
+# sequence-ternary: 5.082992 seconds
+# sequence: 6.5264135 seconds
    9    0    0    0    9
 integration/advent2012-day22.rakudo.moar...........   5    0    1    0    6
      1 todo   : RT \#121789
@@ -5736,7 +5693,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod6EAAC93A/p6testmodDAE91982.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodBCD76407/p6testmod8ACE5F9B.pm6')
     # Looks like you failed 1 test of 2
    4    0    3    0    7
      1 todo   : RT \#123679 Cannot invoke this object (REPR: Null, cs = 0)
@@ -5772,7 +5729,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         345,     0,     8,     5,   358,   371
 "S15",       78533,     0,     3,    18, 78554, 78582
 "S16",         305,     0,     2,    16,   323,   351
-"S17",        1042,     0,    37,    29,  1108,  1058
+"S17",        1041,     0,    37,    30,  1108,  1058
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          24,     0,     0,     0,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
@@ -5782,7 +5739,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12113,     0,   204,   156, 12473, 10750
 "int",        1269,     0,    14,    15,  1298,  1284
 "ros",           2,     0,     0,     0,     2,     2
-"total",    118939,    93,   804,  1379,121215,120164
+"total",    118938,    93,   804,  1380,121215,120164
 ----------------
 Failure summary:
 S02-literals/allomorphic.t aborted 93 test(s)
