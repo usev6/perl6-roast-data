@@ -407,8 +407,8 @@ S03-operators/overflow.t...........................   0   98    0    0   98
     98 tests aborted (missing ok/not ok)
 S03-operators/precedence.rakudo.jvm................   0   59    0    0   59
     59 tests aborted (missing ok/not ok)
-S03-operators/range-basic.t........................   0  140    0    0  140
-   140 tests aborted (missing ok/not ok)
+S03-operators/range-basic.t........................   0  142    0    0  142
+   142 tests aborted (missing ok/not ok)
 S03-operators/range-int.t..........................   0  480    0    0  480
    480 tests aborted (missing ok/not ok)
 S03-operators/range.t..............................   0  125    0    0  125
@@ -417,8 +417,8 @@ S03-operators/reduce-le1arg.rakudo.jvm.............   0   54    0    0   54
     54 tests aborted (missing ok/not ok)
 S03-operators/relational.rakudo.jvm................   0  124    0    0  124
    124 tests aborted (missing ok/not ok)
-S03-operators/repeat.rakudo.jvm....................   0   30    0    0   30
-    30 tests aborted (missing ok/not ok)
+S03-operators/repeat.rakudo.jvm....................   0   32    0    0   32
+    32 tests aborted (missing ok/not ok)
 S03-operators/scalar-assign.t......................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 S03-operators/set.t................................   0  292    0    0  292
@@ -443,8 +443,8 @@ S03-sequence/arity-2-or-more.t.....................   0   20    0    0   20
     20 tests aborted (missing ok/not ok)
 S03-sequence/arity0.t..............................   0   13    0    0   13
     13 tests aborted (missing ok/not ok)
-S03-sequence/basic.t...............................   0  135    0    0  135
-   135 tests aborted (missing ok/not ok)
+S03-sequence/basic.t...............................   0  143    0    0  143
+   143 tests aborted (missing ok/not ok)
 S03-sequence/limit-arity-2-or-more.t...............   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
 S03-sequence/misc.t................................   0   29    0    0   29
@@ -1692,8 +1692,8 @@ S32-num/power.rakudo.jvm...........................   0   52    0    0   52
     52 tests aborted (missing ok/not ok)
 S32-num/rand.rakudo.jvm............................   0  113    0    0  113
    113 tests aborted (missing ok/not ok)
-S32-num/rat.rakudo.jvm.............................   0  828    0    0  828
-   828 tests aborted (missing ok/not ok)
+S32-num/rat.rakudo.jvm.............................   0  829    0    0  829
+   829 tests aborted (missing ok/not ok)
 S32-num/real-bridge.t..............................   0  200    0    0  200
    200 tests aborted (missing ok/not ok)
 S32-num/roots.t....................................   0   55    0    0   55
@@ -2053,7 +2053,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    75,     0,     0,    75,    86
 "S02",           0,  5066,     0,     0,  5066,  5159
-"S03",           0,  5476,     0,     0,  5476,  5494
+"S03",           0,  5488,     0,     0,  5488,  5506
 "S04",           0,  1278,     0,     0,  1278,  1345
 "S05",           0,  5786,     0,     0,  5786,  6036
 "S06",           0,  2060,     0,     0,  2060,  2131
@@ -2073,10 +2073,10 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S26",           0,  1989,     0,     0,  1989,  1989
 "S28",           0,     7,     0,     0,     7,    13
 "S29",           0,   152,     0,     0,   152,   152
-"S32",           0,  8497,     0,     0,  8497,  8558
+"S32",           0,  8498,     0,     0,  8498,  8559
 "int",           0,  1279,     0,     0,  1279,  1275
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 35728,     0,     0, 35728,115226
+"total",         0, 35741,     0,     0, 35741,115239
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2281,12 +2281,12 @@ S03-operators/numeric-shift.t aborted 37 test(s)
 S03-operators/orelse.rakudo.jvm aborted 11 test(s)
 S03-operators/overflow.t aborted 98 test(s)
 S03-operators/precedence.rakudo.jvm aborted 59 test(s)
-S03-operators/range-basic.t aborted 140 test(s)
+S03-operators/range-basic.t aborted 142 test(s)
 S03-operators/range-int.t aborted 480 test(s)
 S03-operators/range.t aborted 125 test(s)
 S03-operators/reduce-le1arg.rakudo.jvm aborted 54 test(s)
 S03-operators/relational.rakudo.jvm aborted 124 test(s)
-S03-operators/repeat.rakudo.jvm aborted 30 test(s)
+S03-operators/repeat.rakudo.jvm aborted 32 test(s)
 S03-operators/scalar-assign.t aborted 4 test(s)
 S03-operators/set.t aborted 292 test(s)
 S03-operators/short-circuit.t aborted 83 test(s)
@@ -2299,7 +2299,7 @@ S03-operators/ternary.t aborted 27 test(s)
 S03-operators/value_equivalence.rakudo.jvm aborted 85 test(s)
 S03-sequence/arity-2-or-more.t aborted 20 test(s)
 S03-sequence/arity0.t aborted 13 test(s)
-S03-sequence/basic.t aborted 135 test(s)
+S03-sequence/basic.t aborted 143 test(s)
 S03-sequence/limit-arity-2-or-more.t aborted 8 test(s)
 S03-sequence/misc.t aborted 29 test(s)
 S03-sequence/nonnumeric.rakudo.jvm aborted 44 test(s)
@@ -2913,7 +2913,7 @@ S32-num/pi.t aborted 5 test(s)
 S32-num/polar.t aborted 48 test(s)
 S32-num/power.rakudo.jvm aborted 52 test(s)
 S32-num/rand.rakudo.jvm aborted 113 test(s)
-S32-num/rat.rakudo.jvm aborted 828 test(s)
+S32-num/rat.rakudo.jvm aborted 829 test(s)
 S32-num/real-bridge.t aborted 200 test(s)
 S32-num/roots.t aborted 55 test(s)
 S32-num/rounders.rakudo.jvm aborted 130 test(s)
