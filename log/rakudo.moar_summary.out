@@ -45,13 +45,8 @@ S02-lexical-conventions/unspace.rakudo.moar........
 S02-lists/indexing.t...............................   2    0    0    0    2
 S02-lists/tree.t...................................  10    0    0    0   10
 S02-literals/adverbs.rakudo.moar...................Use of Nil in string context  in block  at t/spec/S02-literals/adverbs.rakudo.moar:28
-Method 'perl' not found for invocant of class 'Perl6::Grammar'
-  in sub is-deeply at lib/Test.pm:422
-  in block <unit> at t/spec/S02-literals/adverbs.rakudo.moar:57
-
-  25    5    2    0   32
+  30    0    2    0   32
      2 todo   : :@<...> and :%<...> broken needs RT
-     5 tests aborted (missing ok/not ok)
 S02-literals/array-interpolation.t.................  12    0    0    0   12
 S02-literals/autoref.t.............................Use of uninitialized value of type Any in string context  in block  at t/spec/S02-literals/autoref.t:45
   38    0    0    0   38
@@ -213,21 +208,21 @@ S02-names/indirect.t...............................   6    0    0    0    6
 S02-names/is_cached.t..............................  38    0    0    0   38
 S02-names/is_default.rakudo.moar...................    
 # Failed test '.got matches Nil'
-# at src/gen/m-CORE.setting line 2862
+# at src/gen/m-CORE.setting line 2863
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:461
     # Got:      
     # Looks like you failed 1 test of 4
     
 # Failed test '.got matches Nil'
-# at src/gen/m-CORE.setting line 2862
+# at src/gen/m-CORE.setting line 2863
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:461
     # Got:      
     # Looks like you failed 1 test of 4
     
 # Failed test '.got matches Nil'
-# at src/gen/m-CORE.setting line 2862
+# at src/gen/m-CORE.setting line 2863
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context  in block  at lib/Test.pm:461
     # Got:      
@@ -561,7 +556,7 @@ S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  31    0    0    0   31
 S03-operators/comparison-simple.t..................  24    0    0    0   24
 S03-operators/comparison.t.........................  41    0    0    0   41
-S03-operators/context-forcers.rakudo.moar..........  95    0    0    2   97
+S03-operators/context-forcers.rakudo.moar.......... 101    0    0    2  103
      2 skipped: failure modes of Str.Numeric RT #124540
 S03-operators/context.t............................  37    0    0    0   37
 S03-operators/custom.t.............................   1    0    0    0    1
@@ -931,10 +926,10 @@ Use of Nil in string context  in block  at t/spec/S04-blocks-and-statements/temp
 Use of Nil in string context  in block  at t/spec/S04-blocks-and-statements/temp.rakudo.moar:137
   30    0    6    0   36
      6 todo   : TEMP phasers NYI
-S04-declarations/constant.rakudo.moar..............Use of uninitialized value of type Any in numeric context  in block  at t/spec/S04-declarations/constant.rakudo.moar:93
-Use of uninitialized value of type Any in numeric context  in block  at t/spec/S04-declarations/constant.rakudo.moar:115
-Use of uninitialized value of type Any in numeric context  in block  at t/spec/S04-declarations/constant.rakudo.moar:137
-  54    0    4    0   58
+S04-declarations/constant.rakudo.moar..............Use of uninitialized value of type Any in numeric context  in block  at t/spec/S04-declarations/constant.rakudo.moar:97
+Use of uninitialized value of type Any in numeric context  in block  at t/spec/S04-declarations/constant.rakudo.moar:119
+Use of uninitialized value of type Any in numeric context  in block  at t/spec/S04-declarations/constant.rakudo.moar:141
+  59    0    4    0   63
      3 todo   : COMPILING RT \#125054
      1 todo   : constants as type constraints
 S04-declarations/implicit-parameter.t..............  20    0    0    0   20
@@ -1619,10 +1614,10 @@ S10-packages/precompilation.rakudo.moar............Use of uninitialized value $_
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 Use of uninitialized value $_ of type Any in string context  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-24129-560900.code:4
+#   in block <unit> at getout-44504-155942.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-24129-560900.code:4
+#   in block <unit> at getout-44504-155942.code:4
 
 
   33    0    3    0   36
@@ -1885,7 +1880,7 @@ S15-nfg/from-file.rakudo.moar......................   2    0    0    2    4
      1 skipped: writing utf16 NYI RT #124911
 S15-nfg/long-uni.t.................................  24    0    0    0   24
 S15-nfg/many-combiners.t...........................   5    0    0    0    5
-S15-nfg/many-threads.t.............................When invoking cuid_3536_1442013215.00975 'new', provided outer frame 0x8049a8a80 (cuid_3334_1442013215.00975 'pull-one') does not match expected static frame 0x804ae42c0 (cuid_3542_1442013215.00975 '')
+S15-nfg/many-threads.t.............................When invoking cuid_3537_1442099615.49718 'new', provided outer frame 0x8049b0d00 (cuid_9520_1442099615.49718 '') does not match expected static frame 0x804aec900 (cuid_3543_1442099615.49718 '')
   in block <unit> at t/spec/S15-nfg/many-threads.t:8
 
    0    4    0    0    4
@@ -1955,8 +1950,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1442014007
-# Using file temp_1442014007
+S16-filehandles/chmod.t............................# Using file temp_1442100408
+# Using file temp_1442100408
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2007,7 +2002,11 @@ S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.rakudo.moar......................  14    2    0    2   18
      2 skipped: RT #122715
      2 tests aborted (missing ok/not ok)
-S17-promise/stress.t...............................   1    0    0    0    1
+S17-promise/stress.t...............................When invoking cuid_3423_1442099615.49718 'new', provided outer frame 0x804a64580 (cuid_998_1442099615.49718 'sequential-map') does not match expected static frame 0x804ae6c80 (cuid_3425_1442099615.49718 '')
+  in block <unit> at t/spec/S17-promise/stress.t:6
+
+   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
 S17-promise/then.t.................................  14    0    0    0   14
 S17-scheduler/at.rakudo.moar.......................Method 'cancel' not found for invocant of class 'Any'
   in block  at t/spec/S17-scheduler/at.rakudo.moar:76
@@ -3246,19 +3245,6 @@ S32-list/unique.t..................................  34    0    0    0   34
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  44    0    0    0   44
 S32-num/complex.t..................................WARNING: unhandled Failure detected in DESTROY:
-Can not convert 2+3i to Real: imaginary part not zero
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1232
-  in any  at src/gen/m-Perl6-Optimizer.nqp:1196
-  in any optimize_call at src/gen/m-Perl6-Optimizer.nqp:1196
-  in any visit_op at src/gen/m-Perl6-Optimizer.nqp:1012
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1708
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1708
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1732
-  in any visit_children at src/gen/m-Perl6-Optimizer.nqp:1738
-  in any visit_block at src/gen/m-Perl6-Optimizer.nqp:896
-  in any optimize at src/gen/m-Perl6-Optimizer.nqp:876
-
-WARNING: unhandled Failure detected in DESTROY:
 Can not convert 2+2i to Real: imaginary part not zero
   in any  at src/gen/m-Perl6-Optimizer.nqp:1232
   in any  at src/gen/m-Perl6-Optimizer.nqp:1196
@@ -3318,13 +3304,12 @@ Use of uninitialized value of type Any in numeric context  in block <unit> at t/
 Use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S32-scalar/undef.rakudo.moar:303
 Use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S32-scalar/undef.rakudo.moar:305
 Use of uninitialized value of type Any in numeric context  in block <unit> at t/spec/S32-scalar/undef.rakudo.moar:305
-Use of Nil in string context  in block  at t/spec/S32-scalar/undef.rakudo.moar:316
-  73    0    4   16   93
+Use of Nil in string context  in block  at t/spec/S32-scalar/undef.rakudo.moar:308
+  73    0    2   16   91
     10 skipped: Cannot use bind operator with this left-hand side RT #124566
      6 skipped: access to &your_sub RT #124565
      1 todo   : definedness of array RT \#124563
      1 todo   : definedness of hash RT \#124564
-     2 todo   : todo: lists, defined, truthness RT \#124567
 S32-str/append.t...................................   7    0    0    0    7
 S32-str/bool.t.....................................  12    0    0    0   12
 S32-str/capitalize.t...............................  17    0    0    0   17
@@ -3335,13 +3320,13 @@ S32-str/comb.rakudo.moar...........................  47    0    0    1   48
 S32-str/contains.t.................................  20    0    0    0   20
 S32-str/encode.rakudo.moar.........................    
 # Failed test '.message matches rx:s:i/line 1 col\w* 2|term/'
-# at src/gen/m-CORE.setting line 2862
+# at src/gen/m-CORE.setting line 2863
     # Expected: rx:s:i/line 1 col\w* 2|term/
     # Got:      Malformed UTF-16; odd number of bytes
     # Looks like you failed 1 test of 3
     
 # Failed test '.message matches rx:s:i/line 1 col\w* 2/'
-# at src/gen/m-CORE.setting line 2862
+# at src/gen/m-CORE.setting line 2863
     # Expected: rx:s:i/line 1 col\w* 2/
     # Got:      Malformed UTF-16; unexpected low surrogate
     # Looks like you failed 1 test of 3
@@ -3534,7 +3519,12 @@ integration/advent2010-day23.t.....................   8    0    0    0    8
 integration/advent2011-day03.t.....................   2    0    0    0    2
 integration/advent2011-day04.t.....................   2    0    0    0    2
 integration/advent2011-day05.t.....................   5    0    0    0    5
-integration/advent2011-day07.t.....................   3    0    0    0    3
+integration/advent2011-day07.t.....................Potential difficulties:
+    Useless use of hash composer on right side of hash assignment; did you mean := instead?
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Advent/GrammarProfiler.pm:31
+    ------> [32mb reset-timing is export { %timing = {} [33m⏏[31m}[0m
+      from t/spec/integration/advent2011-day07.t:5
+   3    0    0    0    3
 integration/advent2011-day10.t.....................   5    0    0    0    5
 integration/advent2011-day11.t.....................   9    0    0    0    9
 integration/advent2011-day14.t.....................   8    0    0    0    8
@@ -3564,14 +3554,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.31646029 seconds
-# gerdr: 0.3369736 seconds
-# recursive-ternary: 0.4641781 seconds
-# loop: 0.4679776 seconds
-# hand-memoization: 0.7536374 seconds
-# recursive-ternary-hand-cached: 1.8263888 seconds
-# sequence-ternary: 2.5980062 seconds
-# sequence: 4.0776252 seconds
+integration/advent2012-day21.t.....................# kaz: 0.3155648 seconds
+# gerdr: 0.3369918 seconds
+# recursive-ternary: 0.4596574 seconds
+# loop: 0.46675951 seconds
+# hand-memoization: 0.7490316 seconds
+# recursive-ternary-hand-cached: 1.87087481 seconds
+# sequence-ternary: 2.6872865 seconds
+# sequence: 4.0610630 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -3586,7 +3576,8 @@ integration/advent2013-day09.t.....................  21    0    0    0   21
 integration/advent2013-day10.rakudo.moar...........  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.t.....................  32    0    0    0   32
-integration/advent2013-day14.t.....................  10    0    0    0   10
+integration/advent2013-day14.t.....................   6    4    0    0   10
+     4 tests aborted (missing ok/not ok)
 integration/advent2013-day15.t.....................  30    0    0    0   30
 integration/advent2013-day18.t.....................  10    0    0    0   10
 integration/advent2013-day19.t.....................   4    0    0    0    4
@@ -3631,7 +3622,7 @@ Use of uninitialized value of type Any in string context  in any load_module at 
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod2E5AA19F/p6testmod7E620CC2.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodEE1C432F/p6testmod0BAA9D3D.pm6')
     # Looks like you failed 1 test of 2
    5    0    2    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -3652,9 +3643,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5384,     5,   109,   387,  5885,  5977
-"S03",        5277,     0,   126,    85,  5488,  5506
-"S04",        1223,     0,    46,    29,  1298,  1345
+"S02",        5389,     0,   109,   387,  5885,  5977
+"S03",        5283,     0,   126,    85,  5494,  5512
+"S04",        1228,     0,    46,    29,  1303,  1350
 "S05",        5618,     0,    88,   112,  5818,  6037
 "S06",        1910,     0,    60,    90,  2060,  2131
 "S07",           0,     0,     0,     0,     0,    96
@@ -3666,22 +3657,23 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         345,     0,     8,     5,   358,   371
 "S15",       78529,     4,     3,    18, 78554, 78582
 "S16",         302,     0,     2,    16,   320,   373
-"S17",        1033,    10,    36,    31,  1110,  1059
+"S17",        1032,    11,    36,    31,  1110,  1059
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          24,     0,     0,     0,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",          13,     0,     0,     0,    13,    13
 "S29",         351,     0,     3,     2,   356,   356
-"S32",       12154,     0,   204,   156, 12514, 10796
-"int",        1272,     3,     9,    15,  1299,  1285
+"S32",       12154,     0,   202,   156, 12512, 10794
+"int",        1268,     7,     9,    15,  1299,  1285
 "ros",           2,     0,     0,     0,     2,     2
-"total",    119090,    22,   772,  1314,121198,120279
+"total",    119101,    22,   770,  1314,121207,120288
 ----------------
 Failure summary:
-S02-literals/adverbs.rakudo.moar aborted 5 test(s)
 S15-nfg/many-threads.t aborted 4 test(s)
 S17-lowlevel/thread.t aborted 8 test(s)
 S17-promise/start.rakudo.moar aborted 2 test(s)
+S17-promise/stress.t aborted 1 test(s)
 integration/advent2012-day04.t 3 - Pascal's triangle
+integration/advent2013-day14.t aborted 4 test(s)
 integration/advent2014-day05.rakudo.moar aborted 2 test(s)
