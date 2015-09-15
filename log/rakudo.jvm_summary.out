@@ -309,7 +309,7 @@ S03-junctions/autothreading.t...................... 104    0    0    0  104
 S03-junctions/boolean-context.t....................  77    0    0    0   77
 S03-junctions/misc.rakudo.jvm...................... 127    2    2    0  131
      2 todo   : junction transformed into string before attemting to match RT \#111726
-S03-metaops/cross.rakudo.jvm.......................  39    0    0    1   40
+S03-metaops/cross.rakudo.jvm.......................  41    0    0    1   42
      1 skipped: .slice for iterators NYI RT #124518
 S03-metaops/eager-hyper.rakudo.jvm.................   6    0    0    2    8
      2 skipped: hyper prefix NYI RT #124517
@@ -660,7 +660,7 @@ S05-mass/stdrules.rakudo.jvm....................... 160    0    0   28  188
 S05-match/arrayhash.t..............................   8    0    0    0    8
 S05-match/blocks.rakudo.jvm........................  18    0    1    0   19
      1 todo   : Assignment to matched string affects earlier match objects
-S05-match/capturing-contexts.rakudo.jvm............  49    0    1    0   50
+S05-match/capturing-contexts.rakudo.jvm............  50    0    1    0   51
      1 todo   : RT \#70007
 S05-match/make.t...................................   4    0    0    0    4
 S05-match/non-capturing.t..........................   9    0    0    0    9
@@ -971,8 +971,8 @@ S10-packages/use-with-class.t......................   9    0    0    0    9
 S11-modules/export.rakudo.jvm......................  12    0   24    5   41
      2 skipped: export issue
      3 skipped: export issue RT #125086
-    22 todo   : different .WHICH for aliased sub in EXPORT::ALL
      2 todo   : export issue RT \#125086
+    22 todo PASSED: different .WHICH for aliased sub in EXPORT::ALL
 S11-modules/import-multi.rakudo.jvm................  14    0    2    1   17
      1 skipped: A symbol "&Gfoo" has already been exported RT #125089
      1 todo   : huh?
@@ -1200,7 +1200,7 @@ S16-filehandles/filestat.t.........................  10    0    0    0   10
 S16-filehandles/filetest.rakudo.jvm................  34    0    0    9   43
      6 skipped: :M, :C, :A
      3 skipped: no file README
-S16-filehandles/io.rakudo.jvm......................  68   51    0    0  119
+S16-filehandles/io.rakudo.jvm......................  74   51    0    0  125
     51 tests aborted (missing ok/not ok)
 S16-filehandles/io_in_for_loops.t..................  33    0    0    0   33
 S16-filehandles/io_in_while_loops.t................  13    0    0    0   13
@@ -1221,8 +1221,10 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  17    0    0    0   17
-S17-channel/earliest.t.............................   7    0    0    0    7
+S17-channel/basic.t................................  13    4    0    0   17
+     4 tests aborted (missing ok/not ok)
+S17-channel/earliest.t.............................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
 S17-lowlevel/lock.t................................   8    0    0    0    8
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -1265,7 +1267,8 @@ S17-supply/interval.t..............................   3    0    0    0    3
 S17-supply/last.rakudo.jvm.........................   8    0    1    0    9
      1 todo   : we don't have Natural numbers yet RT \#124825
 S17-supply/lines.t.................................  21    0    0    0   21
-S17-supply/list.t..................................   5    0    0    0    5
+S17-supply/list.t..................................   1    4    0    0    5
+     4 tests aborted (missing ok/not ok)
 S17-supply/map.t...................................   9    0    0    0    9
 S17-supply/max.t...................................  10    0    0    0   10
 S17-supply/merge.t.................................  10    0    0    0   10
@@ -1450,7 +1453,7 @@ S32-io/rename.t....................................  29    0    0    0   29
 S32-io/slurp.t.....................................  17    0    0    0   17
 S32-io/spurt.t.....................................  35    0    0    0   35
 S32-list/categorize.t..............................  28    0    0    0   28
-S32-list/classify.rakudo.jvm.......................  35    0    1    3   39
+S32-list/classify.rakudo.jvm.......................  36    0    1    3   40
      3 skipped: Cannot use bind operator with this LHS RT #124751
      1 todo   : Not sure how this should be fixed
 S32-list/combinations.t............................   8    0    0    0    8
@@ -1492,10 +1495,8 @@ S32-list/rotor.rakudo.jvm..........................   6    0    0    3    9
 S32-list/seq.rakudo.jvm............................  25    0    1    0   26
      1 todo   : Cannot assign immutable
 S32-list/sort.t....................................  30    0    0    0   30
-S32-list/squish.rakudo.jvm.........................  29    3    6    0   38
-     2 todo   : RT \#124204
-     4 todo   : RT \#124205
-     3 tests aborted (missing ok/not ok)
+S32-list/squish.rakudo.jvm.........................   4   34    0    0   38
+    34 tests aborted (missing ok/not ok)
 S32-list/unique.t..................................  14   20    0    0   34
     20 tests aborted (missing ok/not ok)
 S32-num/abs.t......................................  49    0    0    0   49
@@ -1579,8 +1580,8 @@ S32-str/samemark.rakudo.jvm........................   0    0    0    7    7
      7 skipped: samemark NYI - RT #125165
 S32-str/split-simple.t.............................   0   29    0    0   29
     29 tests aborted (missing ok/not ok)
-S32-str/split.rakudo.jvm...........................  20   33    0    0   53
-    33 tests aborted (missing ok/not ok)
+S32-str/split.rakudo.jvm...........................  22   31    0    0   53
+    31 tests aborted (missing ok/not ok)
 S32-str/sprintf-b.rakudo.jvm.......................  68    0   90    7  165
      1 skipped: "%+ #10b" dies with "unsupported use of %+ variable;" RT #124727
      1 skipped: "%+ 010b" dies with "unsupported use of %+ variable;" RT #124718
@@ -1771,7 +1772,8 @@ integration/advent2013-day09.t.....................  21    0    0    0   21
 integration/advent2013-day10.rakudo.jvm............  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.t.....................  32    0    0    0   32
-integration/advent2013-day14.t.....................  10    0    0    0   10
+integration/advent2013-day14.t.....................   6    4    0    0   10
+     4 tests aborted (missing ok/not ok)
 integration/advent2013-day15.rakudo.jvm............  29    0    1    0   30
      1 todo   : jvm rounding quirks
 integration/advent2013-day18.t.....................  10    0    0    0   10
@@ -1813,9 +1815,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        4766,   647,   116,   357,  5886,  5978
-"S03",        4796,   540,    82,    84,  5502,  5520
+"S03",        4798,   540,    82,    84,  5504,  5522
 "S04",        1137,    92,    44,    30,  1303,  1350
-"S05",        4722,   803,    87,   175,  5787,  6037
+"S05",        4723,   803,    87,   175,  5788,  6038
 "S06",        1894,    11,    61,    95,  2061,  2132
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1955,     0,    11,    37,  2003,  2003
@@ -1825,18 +1827,18 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          36,     0,    10,    27,    73,    83
 "S14",         344,     0,     8,     6,   358,   371
 "S15",          37,     7,     4,    35,    83, 78582
-"S16",         251,    53,     0,    16,   320,   373
-"S17",         756,     0,     5,    22,   783,   780
+"S16",         257,    53,     0,    16,   326,   379
+"S17",         741,    15,     5,    22,   783,   780
 "S19",          11,     3,     0,     0,    14,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         350,     0,     3,     3,   356,   356
-"S32",       11584,   407,   198,   173, 12362, 10644
-"int",        1183,    87,     7,    15,  1292,  1285
+"S32",       11562,   436,   192,   173, 12363, 10645
+"int",        1179,    91,     7,    15,  1292,  1285
 "ros",           2,     0,     0,     0,     2,     2
-"total",     37468,  2650,   727,  1380, 42225,119869
+"total",     37436,  2698,   721,  1380, 42235,119879
 ----------------
 Failure summary:
 S02-magicals/sub.rakudo.jvm aborted 2 test(s)
@@ -1903,6 +1905,9 @@ S15-literals/identifiers.t aborted 7 test(s)
 S16-filehandles/argfiles.t 6 - lines($*ARGFILES) reads from $*IN if no files are in @*ARGS
 S16-filehandles/argfiles.t 7 - lines($*ARGFILES) reads from $*IN if - is in @*ARGS
 S16-filehandles/io.rakudo.jvm aborted 51 test(s)
+S17-channel/basic.t aborted 4 test(s)
+S17-channel/earliest.t aborted 7 test(s)
+S17-supply/list.t aborted 4 test(s)
 S19-command-line-options/03-dash-p.t 1 - -p -e 1 works like cat
 S19-command-line-options/03-dash-p.t 2 - -p works in combination with s:g///
 S19-command-line/dash-e.t 3 - -e works with non-ASCII program texts
@@ -1928,7 +1933,7 @@ S32-list/reduce.t 1 - basic reduce works (1)
 S32-list/reduce.t 2 - n-ary reduce() works
 S32-list/reduce.t 3 - right assoc n-ary reduce() works
 S32-list/roll.t 12 - .roll() returns something can be used as single scalar
-S32-list/squish.rakudo.jvm aborted 3 test(s)
+S32-list/squish.rakudo.jvm aborted 34 test(s)
 S32-list/unique.t aborted 20 test(s)
 S32-num/rshift_pos_amount.t aborted 189 test(s)
 S32-str/comb.rakudo.jvm aborted 37 test(s)
@@ -1937,7 +1942,7 @@ S32-str/index.t 38 - method does -1.0E34 give Nil
 S32-str/index.t 39 - sub does -1.0E35 give Nil
 S32-str/index.t 40 - method does -1.0E35 give Nil
 S32-str/split-simple.t aborted 29 test(s)
-S32-str/split.rakudo.jvm aborted 33 test(s)
+S32-str/split.rakudo.jvm aborted 31 test(s)
 integration/99problems-11-to-20.t aborted 24 test(s)
 integration/99problems-21-to-30.t aborted 3 test(s)
 integration/advent2009-day02.t 6 - 
@@ -1955,3 +1960,4 @@ integration/advent2012-day21.t 6 - recursive-ternary
 integration/advent2012-day21.t 7 - hand-memoization
 integration/advent2012-day21.t 8 - gerdr
 integration/advent2012-day21.t 9 - kaz
+integration/advent2013-day14.t aborted 4 test(s)
