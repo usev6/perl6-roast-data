@@ -67,9 +67,7 @@ S02-literals/pod.rakudo.jvm........................   0    0    0    5    5
      3 skipped: isn't the iterator exhausted already, since it's been used previously?
      2 skipped: postcircumfix:<{ }> not defined for type Array RT #125130
 S02-literals/quoting-unicode.t.....................  89    0    0    0   89
-S02-literals/quoting.rakudo.jvm.................... 168    0    8    0  176
-     4 todo   : comments inside qq:ww NYI RT \#ww NYI RT\#:124555
-     4 todo   : quoting adverbs
+S02-literals/quoting.t............................. 176    0    0    0  176
 S02-literals/radix.rakudo.jvm...................... 151    0    2    1  154
      1 skipped: RT #123862 - negative radix
      1 todo   : Really?!
@@ -230,7 +228,7 @@ S02-types/isDEPRECATED.rakudo.jvm..................  13    0    8    0   21
 S02-types/keyhash.rakudo.jvm.......................   0    0    0   59   59
     59 skipped: 'is ObjectType' NYI RT #124490
 S02-types/lazy-lists.t.............................  22    0    0    0   22
-S02-types/list.t...................................  55    0    0    0   55
+S02-types/list.t...................................  59    0    0    0   59
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding RT #124494
 S02-types/mix.rakudo.jvm...........................  44  137    0    0  181
@@ -436,7 +434,7 @@ S03-sequence/arity-2-or-more.t.....................  20    0    0    0   20
 S03-sequence/arity0.t..............................  13    0    0    0   13
 S03-sequence/basic.t............................... 143    0    0    0  143
 S03-sequence/limit-arity-2-or-more.t...............   8    0    0    0    8
-S03-sequence/misc.t................................  29    0    0    0   29
+S03-sequence/misc.t................................  29    1    0    0   30
 S03-sequence/nonnumeric.rakudo.jvm.................  27    0    0   17   44
     11 skipped: hangs RT #125049
      6 skipped: lifting comparison ops RT #125050
@@ -534,7 +532,7 @@ S04-phasers/pre-post.rakudo.jvm....................  20    0    1    1   22
      1 skipped: POST and exceptions RT #124962
      1 todo   : POST and exceptions RT \#124961
 S04-phasers/rvalue.t...............................  16    0    0    0   16
-S04-statement-modifiers/for.t......................  27    0    0    0   27
+S04-statement-modifiers/for.t......................  28    0    0    0   28
 S04-statement-modifiers/given.t....................  11    0    0    0   11
 S04-statement-modifiers/if.t.......................  13    0    0    0   13
 S04-statement-modifiers/unless.t...................   8    0    0    0    8
@@ -1161,7 +1159,7 @@ S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
 S14-roles/instantiation.t..........................  19    0    0    0   19
 S14-roles/lexical.t................................   9    0    0    0    9
-S14-roles/mixin.t..................................  45    0    0    0   45
+S14-roles/mixin.t..................................  47    0    0    0   47
 S14-roles/namespaced.rakudo.jvm....................  10    0    1    0   11
      1 todo   : nom regression RT \#124750
 S14-roles/parameter-subtyping.t....................  22    0    0    0   22
@@ -1225,14 +1223,14 @@ S17-channel/basic.t................................  13    4    0    0   17
      4 tests aborted (missing ok/not ok)
 S17-channel/earliest.t.............................   0    7    0    0    7
      7 tests aborted (missing ok/not ok)
-S17-lowlevel/lock.t................................   8    0    0    0    8
+S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/basic.t................................  23    0    0    0   23
 S17-promise/in.t...................................   3    0    0    0    3
-S17-promise/start.rakudo.jvm.......................  16    0    0    2   18
+S17-promise/start.rakudo.jvm.......................  36    0    0    2   38
      2 skipped: RT #122715
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
@@ -1468,9 +1466,10 @@ S32-list/grep-index.rakudo.jvm.....................  20    0    6   14   40
      6 skipped: adverbial block RT #124760
      2 skipped: test error -- is $_ rw here?
      6 todo   : closure as non-final argument RT \#124761
-S32-list/grep.rakudo.jvm...........................  24    1    0   12   37
+S32-list/grep.rakudo.jvm...........................  18    7    0   12   37
      6 skipped: adverbial block RT #124755
      6 skipped: adverbial block RT #124756
+     6 tests aborted (missing ok/not ok)
 S32-list/join.t....................................  38    0    0    0   38
 S32-list/last-index.rakudo.jvm.....................  23    0    0    2   25
      2 skipped: adverbial block RT #124754
@@ -1814,9 +1813,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        4766,   647,   116,   357,  5886,  5978
-"S03",        4798,   540,    82,    84,  5504,  5522
-"S04",        1137,    92,    44,    30,  1303,  1350
+"S02",        4778,   647,   108,   357,  5890,  5982
+"S03",        4798,   541,    82,    84,  5505,  5523
+"S04",        1138,    92,    44,    30,  1304,  1351
 "S05",        4723,   803,    87,   175,  5788,  6038
 "S06",        1894,    11,    61,    95,  2061,  2132
 "S07",           0,     0,     0,     0,     0,    96
@@ -1825,20 +1824,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S11",          90,     0,    28,    11,   129,   148
 "S12",        1493,     0,    49,   145,  1687,  1742
 "S13",          36,     0,    10,    27,    73,    83
-"S14",         344,     0,     8,     6,   358,   371
+"S14",         346,     0,     8,     6,   360,   373
 "S15",          37,     7,     4,    35,    83, 78582
 "S16",         257,    53,     0,    16,   326,   379
-"S17",         741,    15,     5,    22,   783,   780
+"S17",         776,    15,     5,    22,   818,   815
 "S19",          11,     3,     0,     0,    14,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         350,     0,     3,     3,   356,   356
-"S32",       11562,   436,   192,   173, 12363, 10645
+"S32",       11556,   442,   192,   173, 12363, 10645
 "int",        1179,    91,     7,    15,  1292,  1285
 "ros",           2,     0,     0,     0,     2,     2
-"total",     37436,  2698,   721,  1380, 42235,119879
+"total",     37480,  2705,   713,  1380, 42278,119922
 ----------------
 Failure summary:
 S02-magicals/sub.rakudo.jvm aborted 2 test(s)
@@ -1866,6 +1865,7 @@ S03-operators/mix.rakudo.jvm aborted 108 test(s)
 S03-operators/nesting.t 3 - sort works using &[<=>]
 S03-operators/repeat.rakudo.jvm aborted 4 test(s)
 S03-operators/set.t aborted 236 test(s)
+S03-sequence/misc.t 30 - code endpoint protects item
 S04-declarations/will.rakudo.jvm 8 - for iteration #1
 S04-declarations/will.rakudo.jvm 9 - for iteration #2
 S04-declarations/will.rakudo.jvm 10 - for iteration #3
@@ -1926,6 +1926,7 @@ S32-io/pipe.t 11 - Can talk to subprocess bidirectional
 S32-io/pipe.t 12 - Can capture stdout and stderr, and chain stdin
 S32-io/pipe.t 13 - Can capture stdout and stderr, and chain stdin
 S32-list/grep.rakudo.jvm 30 - Non-empty return value from grep is true (2)
+S32-list/grep.rakudo.jvm aborted 6 test(s)
 S32-list/map.rakudo.jvm 52 - map on pair works (comma)
 S32-list/map.rakudo.jvm 53 - map on pair works (=>)
 S32-list/pick.rakudo.jvm 11 - .pick() returns something can be used as single scalar
