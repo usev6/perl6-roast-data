@@ -73,9 +73,9 @@ S02-literals/pod.rakudo.moar.......................   0    0    0    5    5
      2 skipped: postcircumfix:<{ }> not defined for type Array RT #125130
 S02-literals/quoting-unicode.t.....................  89    0    0    0   89
 S02-literals/quoting.t............................. 176    0    0    0  176
-S02-literals/radix.rakudo.moar..................... 151    0    2    1  154
+S02-literals/radix.rakudo.moar..................... 151    0    1    2  154
      1 skipped: RT #123862 - negative radix
-     1 todo   : Really?!
+     1 skipped: Really?!
      1 todo   : This needs an RT
 S02-literals/string-interpolation.t................Potential difficulties:
     To refer to a positional match capture, just use $0 (numbering starts at 0).
@@ -184,22 +184,15 @@ Regex object coerced to string (please use .gist or .perl to do that)  in block 
 S02-magicals/subname.t.............................   4    0    0    0    4
 S02-names-vars/contextual.t........................  24    0    0    0   24
 S02-names-vars/fmt.t...............................  21    0    0    0   21
-S02-names-vars/list_array_perl.rakudo.moar.........  20    0    1    2   23
-     2 skipped: recursive data structure RT #124639
-     1 todo   : List.perl bug
+S02-names-vars/list_array_perl.t...................  25    0    0    0   25
 S02-names-vars/names.rakudo.moar................... 136    0    0    8  144
      4 skipped: ::{ } package lookup NYI RT #124638
      2 skipped: package variable autovivification RT #124637
      2 skipped: this kind of lookup NYI RT #125659
 S02-names-vars/perl.rakudo.moar....................Use of uninitialized value of type Mu in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S02-names-vars/perl.rakudo.moar:57
-Use of uninitialized value of type Mu in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S02-names-vars/perl.rakudo.moar:58
-Use of uninitialized value of type Mu in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S02-names-vars/perl.rakudo.moar:58
-  99    0    0    3  102
+ 101    0    0    1  102
      1 skipped: RT #67790
-     2 skipped: recursive data structure RT #122286
 S02-names-vars/signature.t.........................Potential difficulties:
     To refer to a positional match capture, just use $0 (numbering starts at 0).
     Parenthesize as \(...) if you intended a capture of a single numeric value.
@@ -219,7 +212,7 @@ S02-names/indirect.t...............................   6    0    0    0    6
 S02-names/is_cached.t..............................  38    0    0    0   38
 S02-names/is_default.rakudo.moar...................    
 # Failed test '.got matches Nil'
-# at gen/moar/m-CORE.setting line 2894
+# at gen/moar/m-CORE.setting line 2902
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at lib/Test.pm:461
@@ -227,7 +220,7 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
     # Looks like you failed 1 test of 4
     
 # Failed test '.got matches Nil'
-# at gen/moar/m-CORE.setting line 2894
+# at gen/moar/m-CORE.setting line 2902
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at lib/Test.pm:461
@@ -235,7 +228,7 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
     # Looks like you failed 1 test of 4
     
 # Failed test '.got matches Nil'
-# at gen/moar/m-CORE.setting line 2894
+# at gen/moar/m-CORE.setting line 2902
     # Expected: Nil
 Use of uninitialized value $got of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at lib/Test.pm:461
@@ -257,7 +250,7 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  15    0    0    0   15
 S02-names/our.rakudo.moar..........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.moar.......................  67    0    8   67  142
+S02-names/pseudo.rakudo.moar.......................  69    0    6   67  142
      4 skipped: Cannot bind to &::("CORE")::foo RT #126113
      4 skipped: the binding in here is NYI RT #124914
     23 skipped: various issues to resolve RT #124917
@@ -266,7 +259,6 @@ S02-names/pseudo.rakudo.moar.......................  67    0    8   67  142
      2 todo   : binding and interpolation together NYI
      1 todo   : interpolation and auto-viv NYI
      2 todo   : not entirely sure these make sense...
-     2 todo   : these tests disagree with STD
 S02-names/strict.rakudo.moar.......................   5    0    0    1    6
      1 skipped: lax mode does not propagate into EVAL yet RT #124912
 S02-names/symbolic-deref.rakudo.moar...............  32    0    2    2   36
@@ -333,12 +325,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  25    0    0    0   25
-S02-types/bag.rakudo.moar.......................... 196    0    1    3  200
-     3 skipped: No longer Iterable
+S02-types/bag.rakudo.moar.......................... 196    0    1    0  197
      1 todo   : we have not secured .WHICH creation yet RT \#124454
-S02-types/baghash.rakudo.moar...................... 223    0    2   24  249
+S02-types/baghash.rakudo.moar...................... 223    0    2   21  246
     21 skipped: 'is TypeObject' NYI RT #124490
-     3 skipped: No longer Iterable
      2 todo   : in flux
 S02-types/bool.rakudo.moar.........................  51    0    2    0   53
      2 todo   : RT \#72580
@@ -383,17 +373,15 @@ S02-types/lists.rakudo.moar........................  29    0    0    3   32
      3 skipped: list binding RT #124494
 S02-types/mix.rakudo.moar..........................Potential difficulties:
     Redeclaration of symbol $inner-list
-    at t/spec/S02-types/mix.rakudo.moar:361
+    at t/spec/S02-types/mix.rakudo.moar:353
     ------> [32m    my $inner-list[33m⏏[31m = $m1.keys.first(List);[0m
- 177    0    1    3  181
-     3 skipped: No longer Iterable
+ 177    0    1    0  178
      1 todo   : we have not secured .WHICH creation yet RT \#124496
 S02-types/mixed_multi_dimensional.rakudo.moar......  77    0    3    0   80
      1 todo   : isa hash
      2 todo   : unknown
-S02-types/mixhash.rakudo.moar...................... 186    0    2   24  212
+S02-types/mixhash.rakudo.moar...................... 186    0    2   21  209
     21 skipped: 'is TypeObject' NYI RT #124490
-     3 skipped: No longer Iterable
      2 todo   : in flux
 S02-types/multi_dimensional_array.rakudo.moar......  48    0    0   10   58
      6 skipped: multi-dim sized arrays NYI RT #124482
@@ -426,11 +414,10 @@ S02-types/range.t..................................Use of uninitialized value of
  137    0    0    0  137
 S02-types/set.rakudo.moar..........................Potential difficulties:
     Redeclaration of symbol $inner-list
-    at t/spec/S02-types/set.rakudo.moar:318
+    at t/spec/S02-types/set.rakudo.moar:315
     ------> [32m    my $inner-list[33m⏏[31m = $s1.keys.first(List);[0m
- 163    0    1   10  174
+ 163    0    1    9  173
      9 skipped: Hypers not yet Set compatible RT #124487
-     1 skipped: Set is no longer Iterable
      1 todo   : we have not secured .WHICH creation yet RT \#124489
 S02-types/sethash.rakudo.moar...................... 192    0    0   10  202
     10 skipped: 'is TypeObject' NYI RT #124490
@@ -497,10 +484,9 @@ S03-junctions/autothreading.t...................... 104    0    0    0  104
 S03-junctions/boolean-context.t....................  74    0    0    0   74
 S03-junctions/misc.rakudo.moar..................... 133    0    2    0  135
      2 todo   : junction transformed into string before attemting to match RT \#111726
-S03-metaops/cross.rakudo.moar......................  41    0    0    1   42
-     1 skipped: .slice for iterators NYI RT #124518
-S03-metaops/eager-hyper.rakudo.moar................   6    0    0    2    8
-     2 skipped: hyper prefix NYI RT #124517
+S03-metaops/cross.t................................  42    0    0    0   42
+S03-metaops/eager-hyper.rakudo.moar................   7    0    1    0    8
+     1 todo   : hyper NYI entirely, I guess RT \#124517
 S03-metaops/hyper.rakudo.moar......................Use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-metaops/hyper.rakudo.moar:503
 Use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-metaops/hyper.rakudo.moar:509
 Use of uninitialized value of type Any in numeric context  in block  at t/spec/S03-metaops/hyper.rakudo.moar:531
@@ -522,9 +508,8 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
      1 todo   : item context
 S03-metaops/reverse.rakudo.moar....................  39    0    1    0   40
      1 todo   : RT \#118791 Rxx does not yet thunk the RHS
-S03-metaops/zip.rakudo.moar........................  25    0    4    2   31
-     2 skipped: nom regression RT #122230
-     4 todo   : nom regression RT \#122230
+S03-metaops/zip.rakudo.moar........................  25    0    6    0   31
+     6 todo   : nom regression RT \#122230
 S03-operators/adverbial-modifiers.rakudo.moar......Block object coerced to string (please use .gist or .perl to do that)  in block  at t/spec/S03-operators/adverbial-modifiers.rakudo.moar:48
 Block object coerced to string (please use .gist or .perl to do that)  in block  at t/spec/S03-operators/adverbial-modifiers.rakudo.moar:48
 Use of uninitialized value $x of type Any in string context
@@ -1525,7 +1510,7 @@ S06-multi/subsignature.rakudo.moar.................  87    0    8    5  100
      2 todo   : Calls wrong candidate
      5 todo   : Multimethod sort does not descend into subsignatures
      1 todo   : operator protos
-S06-multi/syntax.t.................................Sub object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S06-multi/syntax.t:71
+S06-multi/syntax.t.................................Sub object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S06-multi/syntax.t:74
   41    0    0    0   41
 S06-multi/type-based.rakudo.moar...................  60    0    4    0   64
      4 todo   : coercions need to fail like constraints RT \#124772
@@ -1737,10 +1722,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 Use of uninitialized value $_ of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-35617-509208.code:4
+#   in block <unit> at getout-54849-826968.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-35617-509208.code:4
+#   in block <unit> at getout-54849-826968.code:4
 
 
   33    0    3    0   36
@@ -1879,7 +1864,7 @@ S12-enums/basic.rakudo.moar........................Potential difficulties:
     ------> [32m    enum S2 <b c d>[33m⏏[31m;[0m
   32    0    0    5   37
      5 skipped: Cannot convert string to number RT #124832
-S12-enums/misc.t...................................  15    0    0    0   15
+S12-enums/misc.t...................................  17    0    0    0   17
 S12-enums/non-int.rakudo.moar......................   5    0    1    0    6
      1 todo   : NYI RT \#124833
 S12-enums/pseudo-functional.t......................  11    0    0    0   11
@@ -2082,8 +2067,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1442878043
-# Using file temp_1442878043
+S16-filehandles/chmod.t............................# Using file temp_1442964443
+# Using file temp_1442964443
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2114,7 +2099,19 @@ S16-unfiled/rebindstdhandles.rakudo.moar...........   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.rakudo.moar......................  22    0    0    1   23
+S17-lowlevel/lock.rakudo.moar......................Use of uninitialized value of type Any in string context
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at lib/Test.pm:134
+
+# Failed test 'Correct result and no crash in lock/condvar use (1)'
+# at t/spec/S17-lowlevel/lock.rakudo.moar line 153
+Use of uninitialized value of type Any in string context
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in code  at lib/Test.pm:137
+# expected: '10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200 210 220 230 240 250 260 270 280 290 300 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 510 520 530 540 550 560 570 580 590 600 610 620 630 640 650 660 670 680 690 700 710 720 730 740 750 760 770 780 790 800 810 820 830 840 850 860 870 880 890 900 910 920 930 940 950 960 970 980 990 1000'
+Use of uninitialized value of type Any in string context
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at lib/Test.pm:144
+#      got: '10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170  190 200 210 220 230 240 250 260 270 280 290 300 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 510 520 530 540 550 560 570 580 590 600 610 620 630 640 650 660 670 680 690 700 710 720 730 740 750 760 770 780 790 800 810 820 830 840 850 860 870 880 890 900 910 920 930 940 950 960 970 980 990 1000'
+# Looks like you failed 1 test of 23
+  21    1    0    1   23
      1 skipped: runs out of filehandles on OS X RT #125977
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -4095,9 +4092,15 @@ Use of uninitialized value of type Any in numeric context  in block  at t/spec/S
      6 skipped: adverbial block RT #124760
      2 skipped: test error -- is $_ rw here?
      6 todo   : closure as non-final argument RT \#124761
-S32-list/grep.rakudo.moar..........................Use of uninitialized value of type Any in numeric context  in block  at t/spec/S32-list/grep.rakudo.moar:121
+S32-list/grep.rakudo.moar..........................
+# Failed test 'Junction matcher'
+# at t/spec/S32-list/grep.rakudo.moar line 100
+# expected: 'b|c'
+#      got: 'any("b", "c", "")'
+Use of uninitialized value of type Any in numeric context  in block  at t/spec/S32-list/grep.rakudo.moar:121
 Use of uninitialized value of type Any in numeric context  in block  at t/spec/S32-list/grep.rakudo.moar:122
-  25    0    0   12   37
+# Looks like you failed 1 test of 37
+  24    1    0   12   37
      6 skipped: adverbial block RT #124755
      6 skipped: adverbial block RT #124756
 S32-list/join.t....................................Use of uninitialized value <element> of type Any in string context
@@ -4159,19 +4162,6 @@ S32-list/unique.t..................................  34    0    0    0   34
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  44    0    0    0   44
 S32-num/complex.t..................................WARNING: unhandled Failure detected in DESTROY:
-Can not convert 2+3i to Real: imaginary part not zero
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1241
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1205
-  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1205
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1021
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1722
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1722
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1746
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1752
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:896
-  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:876
-
-WARNING: unhandled Failure detected in DESTROY:
 Can not convert 2+2i to Real: imaginary part not zero
   in any  at gen/moar/m-Perl6-Optimizer.nqp:1241
   in any  at gen/moar/m-Perl6-Optimizer.nqp:1205
@@ -4184,6 +4174,19 @@ Can not convert 2+2i to Real: imaginary part not zero
   in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:896
   in any optimize at gen/moar/m-Perl6-Optimizer.nqp:876
   in any optimize at src/Perl6/Compiler.nqp:64
+
+WARNING: unhandled Failure detected in DESTROY:
+Can not convert 2+3i to Real: imaginary part not zero
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1241
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1205
+  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1205
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1021
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1722
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1722
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1746
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1752
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:896
+  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:876
 
  488    0    0    0  488
 S32-num/cool-num.rakudo.moar.......................  39    0    0    4   43
@@ -4257,13 +4260,13 @@ S32-str/comb.rakudo.moar...........................  47    0    0    1   48
 S32-str/contains.t.................................  20    0    0    0   20
 S32-str/encode.rakudo.moar.........................    
 # Failed test '.message matches rx:s:i/line 1 col\w* 2|term/'
-# at gen/moar/m-CORE.setting line 2894
+# at gen/moar/m-CORE.setting line 2902
     # Expected: rx:s:i/line 1 col\w* 2|term/
     # Got:      Malformed UTF-16; odd number of bytes
     # Looks like you failed 1 test of 3
     
 # Failed test '.message matches rx:s:i/line 1 col\w* 2/'
-# at gen/moar/m-CORE.setting line 2894
+# at gen/moar/m-CORE.setting line 2902
     # Expected: rx:s:i/line 1 col\w* 2/
     # Got:      Malformed UTF-16; unexpected low surrogate
     # Looks like you failed 1 test of 3
@@ -4435,16 +4438,20 @@ integration/advent2009-day19.t.....................   6    0    0    0    6
 integration/advent2009-day20.t.....................  21    0    0    0   21
 integration/advent2009-day21.t.....................   2    0    0    0    2
 integration/advent2009-day22.t.....................   4    0    0    0    4
-integration/advent2009-day23.rakudo.moar...........   9    0    0    1   10
-     1 skipped: lists aren't properly lazy in Rakudo yet
+integration/advent2009-day23.t.....................  10    0    0    0   10
 integration/advent2009-day24.t.....................   4    0    0    0    4
 integration/advent2010-day03.t.....................  12    0    0    0   12
 integration/advent2010-day04.t.....................  11    0    0    0   11
 integration/advent2010-day06.t.....................  12    0    0    0   12
 integration/advent2010-day07.t.....................   8    0    0    0    8
 integration/advent2010-day08.t.....................   8    0    0    0    8
-integration/advent2010-day10.rakudo.moar...........   2    0    2    0    4
+integration/advent2010-day10.rakudo.moar...........Method 'match' not found for invocant of class 'Any'
+  in block <unit> at t/spec/integration/advent2010-day10.rakudo.moar:26
+
+# Looks like you planned 4 tests, but ran 3
+   1    1    2    0    4
      2 todo   : RT \#121843
+     1 tests aborted (missing ok/not ok)
 integration/advent2010-day11.t.....................   2    0    0    0    2
 integration/advent2010-day12.t.....................  13    0    0    0   13
 integration/advent2010-day14.t.....................   5    0    0    0    5
@@ -4470,7 +4477,12 @@ integration/advent2011-day15.t.....................   9    0    0    0    9
 integration/advent2011-day16.t.....................  12    0    0    0   12
 integration/advent2011-day20.t.....................  16    0    0    0   16
 integration/advent2011-day22.t.....................   2    0    0    0    2
-integration/advent2011-day23.t.....................  55    0    0    0   55
+integration/advent2011-day23.t.....................Method 'match' not found for invocant of class 'Any'
+  in block <unit> at t/spec/integration/advent2011-day23.t:109
+
+# Looks like you planned 55 tests, but ran 31
+  31   24    0    0   55
+    24 tests aborted (missing ok/not ok)
 integration/advent2011-day24.t.....................   8    0    0    0    8
 integration/advent2012-day02.t.....................   4    0    0    0    4
 integration/advent2012-day03.t.....................   2    0    0    0    2
@@ -4487,14 +4499,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.3223317 seconds
-# gerdr: 0.34309803 seconds
-# recursive-ternary: 0.4804127 seconds
-# loop: 0.4829489 seconds
-# hand-memoization: 0.7643425 seconds
-# recursive-ternary-hand-cached: 1.9342772 seconds
-# sequence-ternary: 2.627274 seconds
-# sequence: 4.1696628 seconds
+integration/advent2012-day21.t.....................# kaz: 0.3266871 seconds
+# gerdr: 0.34537587 seconds
+# recursive-ternary: 0.4740952 seconds
+# loop: 0.4792397 seconds
+# hand-memoization: 0.769704 seconds
+# recursive-ternary-hand-cached: 1.92876661 seconds
+# sequence-ternary: 2.6302126 seconds
+# sequence: 4.18491253 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -4551,7 +4563,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod52C76787/p6testmodBD67F1A5.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod6CD71D81/p6testmod44DC3E49.pm6')
     # Looks like you failed 1 test of 2
    5    0    2    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -4572,8 +4584,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5502,     0,   101,   372,  5975,  5974
-"S03",        5328,     0,   119,    85,  5532,  5550
+"S02",        5511,     0,    97,   356,  5964,  5963
+"S03",        5330,     0,   122,    80,  5532,  5550
 "S04",        1213,    22,    42,    28,  1305,  1352
 "S05",        5621,     0,    88,   112,  5821,  6040
 "S06",        1967,     0,    58,    90,  2115,  2186
@@ -4581,26 +4593,30 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        1956,     0,    10,    37,  2003,  2003
 "S10",         105,     0,     5,     1,   111,   168
 "S11",         100,    14,     5,    10,   129,   148
-"S12",        1504,     0,    39,   145,  1688,  1743
+"S12",        1506,     0,    39,   145,  1690,  1745
 "S13",          32,     0,     0,     1,    33,    43
 "S14",         347,     0,     8,     5,   360,   373
 "S15",       78533,     0,     3,    18, 78554, 78582
 "S16",         308,     0,     2,    16,   326,   379
-"S17",        1080,     1,    36,    31,  1148,  1148
+"S17",        1079,     2,    36,    31,  1148,  1148
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          24,     0,     0,     0,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",          13,     0,     0,     0,    13,    13
 "S29",         351,     0,     3,     2,   356,   356
-"S32",       12166,     1,   193,   156, 12516, 10798
-"int",        1275,     0,    10,    15,  1300,  1286
+"S32",       12165,     2,   193,   156, 12516, 10798
+"int",        1251,    25,    10,    14,  1300,  1286
 "ros",           2,     0,     0,     0,     2,     2
-"total",    119368,    38,   730,  1271,121407,120446
+"total",    119355,    65,   729,  1249,121398,120437
 ----------------
 Failure summary:
 S04-phasers/pre-post.rakudo.moar aborted 22 test(s)
 S11-modules/require.rakudo.moar 3 - can load InnerModule from a path at run time
 S11-modules/require.rakudo.moar aborted 13 test(s)
+S17-lowlevel/lock.rakudo.moar 9 - Correct result and no crash in lock/condvar use (1)
 S17-promise/stress.t aborted 1 test(s)
+S32-list/grep.rakudo.moar 28 - Junction matcher
 S32-num/power.rakudo.moar 11 - -1 ** 4553535345364535345634543534 == 1
+integration/advent2010-day10.rakudo.moar aborted 1 test(s)
+integration/advent2011-day23.t aborted 24 test(s)

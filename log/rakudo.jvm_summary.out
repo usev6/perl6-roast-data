@@ -70,9 +70,9 @@ S02-literals/pod.rakudo.jvm........................   0    0    0    5    5
      2 skipped: postcircumfix:<{ }> not defined for type Array RT #125130
 S02-literals/quoting-unicode.t.....................  89    0    0    0   89
 S02-literals/quoting.t............................. 176    0    0    0  176
-S02-literals/radix.rakudo.jvm...................... 151    0    2    1  154
+S02-literals/radix.rakudo.jvm...................... 151    0    1    2  154
      1 skipped: RT #123862 - negative radix
-     1 todo   : Really?!
+     1 skipped: Really?!
      1 todo   : This needs an RT
 S02-literals/string-interpolation.t................  15    0    0    0   15
 S02-literals/sub-calls.t...........................  20    0    0    0   20
@@ -122,17 +122,15 @@ S02-magicals/sub.rakudo.jvm........................   6    2    0    2   10
 S02-magicals/subname.t.............................   4    0    0    0    4
 S02-names-vars/contextual.t........................  24    0    0    0   24
 S02-names-vars/fmt.t...............................  21    0    0    0   21
-S02-names-vars/list_array_perl.rakudo.jvm..........  20    0    1    2   23
-     2 skipped: recursive data structure RT #124639
-     1 todo   : List.perl bug
+S02-names-vars/list_array_perl.t...................  14   11    0    0   25
+    11 tests aborted (missing ok/not ok)
 S02-names-vars/names.rakudo.jvm.................... 135    1    0    8  144
      4 skipped: ::{ } package lookup NYI RT #124638
      2 skipped: package variable autovivification RT #124637
      2 skipped: this kind of lookup NYI RT #125659
      1 tests aborted (missing ok/not ok)
-S02-names-vars/perl.rakudo.jvm.....................  98    0    1    3  102
+S02-names-vars/perl.rakudo.jvm..................... 100    0    1    1  102
      1 skipped: RT #67790
-     2 skipped: recursive data structure RT #122286
      1 todo   : RT \#123048
 S02-names-vars/signature.t.........................  13    0    0    0   13
 S02-names-vars/variables-and-packages.rakudo.jvm...  35    0    3    0   38
@@ -154,7 +152,7 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  15    0    0    0   15
 S02-names/our.rakudo.jvm...........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.jvm........................  67    0    8   67  142
+S02-names/pseudo.rakudo.jvm........................  69    0    6   67  142
      4 skipped: Cannot bind to &::("CORE")::foo RT #126113
      4 skipped: the binding in here is NYI RT #124914
     23 skipped: various issues to resolve RT #124917
@@ -163,7 +161,6 @@ S02-names/pseudo.rakudo.jvm........................  67    0    8   67  142
      2 todo   : binding and interpolation together NYI
      1 todo   : interpolation and auto-viv NYI
      2 todo   : not entirely sure these make sense...
-     2 todo   : these tests disagree with STD
 S02-names/strict.rakudo.jvm........................   5    0    0    1    6
      1 skipped: lax mode does not propagate into EVAL yet RT #124912
 S02-names/symbolic-deref.rakudo.jvm................  32    0    2    2   36
@@ -189,13 +186,11 @@ S02-types/array_extending.t........................  21    0    0    0   21
 S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  25    0    0    0   25
-S02-types/bag.rakudo.jvm........................... 192    2    3    3  200
-     3 skipped: No longer Iterable
+S02-types/bag.rakudo.jvm........................... 192    2    3    0  197
      2 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT \#124454
-S02-types/baghash.rakudo.jvm....................... 221    2    2   24  249
+S02-types/baghash.rakudo.jvm....................... 221    2    2   21  246
     21 skipped: 'is TypeObject' NYI RT #124490
-     3 skipped: No longer Iterable
      2 todo   : in flux
 S02-types/bool.rakudo.jvm..........................  51    0    2    0   53
      2 todo   : RT \#72580
@@ -237,16 +232,14 @@ S02-types/lazy-lists.t.............................  22    0    0    0   22
 S02-types/list.t...................................  59    0    0    0   59
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding RT #124494
-S02-types/mix.rakudo.jvm........................... 175    0    3    3  181
-     3 skipped: No longer Iterable
+S02-types/mix.rakudo.jvm........................... 175    0    3    0  178
      2 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT \#124496
 S02-types/mixed_multi_dimensional.rakudo.jvm.......  77    0    3    0   80
      1 todo   : isa hash
      2 todo   : unknown
-S02-types/mixhash.rakudo.jvm....................... 186    0    2   24  212
+S02-types/mixhash.rakudo.jvm....................... 186    0    2   21  209
     21 skipped: 'is TypeObject' NYI RT #124490
-     3 skipped: No longer Iterable
      2 todo   : in flux
 S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
      6 skipped: multi-dim sized arrays NYI RT #124482
@@ -268,9 +261,8 @@ S02-types/pair.rakudo.jvm.......................... 142    0    4    0  146
      2 todo PASSED: RT \#123215
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t.................................. 137    0    0    0  137
-S02-types/set.rakudo.jvm........................... 163    0    1   10  174
+S02-types/set.rakudo.jvm........................... 163    0    1    9  173
      9 skipped: Hypers not yet Set compatible RT #124487
-     1 skipped: Set is no longer Iterable
      1 todo   : we have not secured .WHICH creation yet RT \#124489
 S02-types/sethash.rakudo.jvm....................... 192    0    0   10  202
     10 skipped: 'is TypeObject' NYI RT #124490
@@ -317,10 +309,9 @@ S03-junctions/autothreading.t...................... 104    0    0    0  104
 S03-junctions/boolean-context.t....................  74    0    0    0   74
 S03-junctions/misc.rakudo.jvm...................... 132    1    2    0  135
      2 todo   : junction transformed into string before attemting to match RT \#111726
-S03-metaops/cross.rakudo.jvm.......................  41    0    0    1   42
-     1 skipped: .slice for iterators NYI RT #124518
-S03-metaops/eager-hyper.rakudo.jvm.................   6    0    0    2    8
-     2 skipped: hyper prefix NYI RT #124517
+S03-metaops/cross.t................................  42    0    0    0   42
+S03-metaops/eager-hyper.rakudo.jvm.................   7    0    1    0    8
+     1 todo   : hyper NYI entirely, I guess RT \#124517
 S03-metaops/hyper.rakudo.jvm....................... 307    7    1    3  318
      1 skipped: EVAL(Buf) RT #122256
      2 skipped: nom regression: possible spec change/improvement RT #124513
@@ -331,9 +322,8 @@ S03-metaops/reduce.rakudo.jvm...................... 370    0    1    0  371
      1 todo   : item context
 S03-metaops/reverse.rakudo.jvm.....................  39    0    1    0   40
      1 todo   : RT \#118791 Rxx does not yet thunk the RHS
-S03-metaops/zip.rakudo.jvm.........................  25    0    4    2   31
-     2 skipped: nom regression RT #122230
-     4 todo   : nom regression RT \#122230
+S03-metaops/zip.rakudo.jvm.........................  25    0    6    0   31
+     6 todo   : nom regression RT \#122230
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
      1 todo   : Multi colonpair syntax not yet understood RT \#124553
 S03-operators/also.rakudo.jvm......................   4    0    4    0    8
@@ -1064,7 +1054,7 @@ S12-enums/anonymous.t..............................   7    0    0    0    7
 S12-enums/as-role.t................................   9    0    0    0    9
 S12-enums/basic.rakudo.jvm.........................  32    0    0    5   37
      5 skipped: Cannot convert string to number RT #124832
-S12-enums/misc.t...................................  15    0    0    0   15
+S12-enums/misc.t...................................  17    0    0    0   17
 S12-enums/non-int.rakudo.jvm.......................   5    0    1    0    6
      1 todo   : NYI RT \#124833
 S12-enums/pseudo-functional.t......................  11    0    0    0   11
@@ -1459,10 +1449,9 @@ S32-list/grep-index.rakudo.jvm.....................  20    0    6   14   40
      6 skipped: adverbial block RT #124760
      2 skipped: test error -- is $_ rw here?
      6 todo   : closure as non-final argument RT \#124761
-S32-list/grep.rakudo.jvm...........................  19    6    0   12   37
+S32-list/grep.rakudo.jvm...........................  24    1    0   12   37
      6 skipped: adverbial block RT #124755
      6 skipped: adverbial block RT #124756
-     6 tests aborted (missing ok/not ok)
 S32-list/join.t....................................  38    0    0    0   38
 S32-list/last-index.rakudo.jvm.....................  23    0    0    2   25
      2 skipped: adverbial block RT #124754
@@ -1700,16 +1689,16 @@ integration/advent2009-day19.t.....................   6    0    0    0    6
 integration/advent2009-day20.t.....................  21    0    0    0   21
 integration/advent2009-day21.t.....................   2    0    0    0    2
 integration/advent2009-day22.t.....................   4    0    0    0    4
-integration/advent2009-day23.rakudo.jvm............   9    0    0    1   10
-     1 skipped: lists aren't properly lazy in Rakudo yet
+integration/advent2009-day23.t.....................  10    0    0    0   10
 integration/advent2009-day24.t.....................   4    0    0    0    4
 integration/advent2010-day03.t.....................  12    0    0    0   12
 integration/advent2010-day04.t.....................  11    0    0    0   11
 integration/advent2010-day06.t.....................  12    0    0    0   12
 integration/advent2010-day07.t.....................   8    0    0    0    8
 integration/advent2010-day08.t.....................   8    0    0    0    8
-integration/advent2010-day10.rakudo.jvm............   2    0    2    0    4
+integration/advent2010-day10.rakudo.jvm............   1    1    2    0    4
      2 todo   : RT \#121843
+     1 tests aborted (missing ok/not ok)
 integration/advent2010-day11.t.....................   2    0    0    0    2
 integration/advent2010-day12.t.....................  13    0    0    0   13
 integration/advent2010-day14.t.....................   5    0    0    0    5
@@ -1730,7 +1719,8 @@ integration/advent2011-day15.t.....................   9    0    0    0    9
 integration/advent2011-day16.t.....................  12    0    0    0   12
 integration/advent2011-day20.t.....................  16    0    0    0   16
 integration/advent2011-day22.t.....................   2    0    0    0    2
-integration/advent2011-day23.t.....................  55    0    0    0   55
+integration/advent2011-day23.t.....................  31   24    0    0   55
+    24 tests aborted (missing ok/not ok)
 integration/advent2011-day24.t.....................   8    0    0    0    8
 integration/advent2012-day02.t.....................   4    0    0    0    4
 integration/advent2012-day03.t.....................   2    0    0    0    2
@@ -1801,8 +1791,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5359,   102,   118,   396,  5975,  5974
-"S03",        5298,    30,   119,    85,  5532,  5550
+"S02",        5357,   113,   114,   380,  5964,  5963
+"S03",        5300,    30,   122,    80,  5532,  5550
 "S04",        1183,    42,    47,    33,  1305,  1352
 "S05",        4761,   767,    87,   175,  5790,  6040
 "S06",        1931,    32,    58,    94,  2115,  2186
@@ -1810,7 +1800,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        1955,     0,    11,    37,  2003,  2003
 "S10",         104,     0,     6,     1,   111,   168
 "S11",          90,     0,    28,    11,   129,   148
-"S12",        1494,     0,    49,   145,  1688,  1743
+"S12",        1496,     0,    49,   145,  1690,  1745
 "S13",          32,     0,     0,     1,    33,    43
 "S14",         346,     0,     8,     6,   360,   373
 "S15",          37,     7,     4,    35,    83, 78582
@@ -1822,21 +1812,22 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         350,     0,     3,     3,   356,   356
-"S32",       11678,   325,   190,   173, 12366, 10648
-"int",        1236,    34,     8,    15,  1293,  1286
+"S32",       11683,   320,   190,   173, 12366, 10648
+"int",        1212,    59,     8,    14,  1293,  1286
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38868,  1402,   749,  1396, 42415,120017
+"total",     38851,  1433,   748,  1374, 42406,120008
 ----------------
 Failure summary:
 S02-literals/allomorphic.t aborted 92 test(s)
 S02-literals/listquote.rakudo.jvm 20 - < ... 3 ...> is an Int
 S02-magicals/sub.rakudo.jvm aborted 2 test(s)
+S02-names-vars/list_array_perl.t aborted 11 test(s)
 S02-names-vars/names.rakudo.jvm aborted 1 test(s)
 S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNative?
-S02-types/bag.rakudo.jvm 119 - .roll(100) (1)
-S02-types/bag.rakudo.jvm 120 - .roll(100) (2)
-S02-types/baghash.rakudo.jvm 124 - .roll(100) (1)
-S02-types/baghash.rakudo.jvm 125 - .roll(100) (2)
+S02-types/bag.rakudo.jvm 116 - .roll(100) (1)
+S02-types/bag.rakudo.jvm 117 - .roll(100) (2)
+S02-types/baghash.rakudo.jvm 121 - .roll(100) (1)
+S02-types/baghash.rakudo.jvm 122 - .roll(100) (2)
 S02-types/declare.rakudo.jvm 19 - Assign big bigint to native won't overflow silently
 S03-junctions/misc.rakudo.jvm 135 - Do not try to auto-thread Junction type object (only case)
 S03-metaops/hyper.rakudo.jvm aborted 7 test(s)
@@ -1879,7 +1870,7 @@ S06-signature/slurpy-params.rakudo.jvm aborted 14 test(s)
 S15-literals/identifiers.t aborted 7 test(s)
 S16-filehandles/io.rakudo.jvm aborted 51 test(s)
 S17-supply/zip-latest.t aborted 12 test(s)
-S32-list/grep.rakudo.jvm aborted 6 test(s)
+S32-list/grep.rakudo.jvm 28 - Junction matcher
 S32-list/map.rakudo.jvm aborted 2 test(s)
 S32-list/minmax.rakudo.jvm 100 - [max] of <>-style list finds the numerically largest number
 S32-list/minmax.rakudo.jvm 101 - .max on <>-style list finds the numerically largest number
@@ -1893,6 +1884,8 @@ S32-str/index.t 39 - sub does -1.0E35 give Nil
 S32-str/index.t 40 - method does -1.0E35 give Nil
 S32-str/split.rakudo.jvm aborted 31 test(s)
 integration/99problems-11-to-20.t aborted 24 test(s)
+integration/advent2010-day10.rakudo.jvm aborted 1 test(s)
+integration/advent2011-day23.t aborted 24 test(s)
 integration/advent2012-day15.t 9 - FIRST/NEXT/LAST example
 integration/advent2012-day21.t 2 - sequence
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
