@@ -51,7 +51,7 @@ S02-literals/char-by-name.rakudo.jvm...............   9    0    0    1   10
 S02-literals/char-by-number.t......................  38    0    0    0   38
 S02-literals/fmt-interpolation.t...................  11    0    0    0   11
 S02-literals/hash-interpolation.t..................  10    0    0    0   10
-S02-literals/heredocs.t............................  17    0    0    0   17
+S02-literals/heredocs.t............................  21    0    0    0   21
 S02-literals/hex_chars.t...........................   4    0    0    0    4
 S02-literals/listquote-whitespace.t................  12    0    0    0   12
 S02-literals/listquote.rakudo.jvm..................  23    0    1    0   24
@@ -862,11 +862,8 @@ S06-signature/closure-parameters.rakudo.jvm........  12    0    0    5   17
 S06-signature/code.rakudo.jvm......................   7    0    1    0    8
      1 todo   : RT \#67932
 S06-signature/defaults.t...........................   9    0    0    0    9
-S06-signature/definite-return.rakudo.jvm...........   4    0    3    2    9
+S06-signature/definite-return.rakudo.jvm...........  15    0    0    2   17
      2 skipped: variables as return specifications dont parse yet RT #124927
-     1 todo   : failure bypass of declared return value NYI
-     1 todo PASSED: definite values as return specifications dont parse yet RT \#124927
-     1 todo PASSED: failure bypass of declared return value NYI
 S06-signature/errors.rakudo.jvm....................  21    0    6    0   27
      6 todo   : unival NYI RT \#124920
 S06-signature/introspection.rakudo.jvm............. 131    0    1    1  133
@@ -994,8 +991,8 @@ S12-attributes/instance.rakudo.jvm................. 140    0    6    1  147
      1 todo   : over-eager auto-vivification bugs
      2 todo   : ro array/hash with accessor
      2 todo   : ro on list attributes
-S12-attributes/mutators.rakudo.jvm.................   5    0    0    7   12
-     7 skipped: Can not get attribute $!varies declared in class MagicVal with this object RT #124909
+S12-attributes/mutators.rakudo.jvm.................   5    0    0    5   10
+     5 skipped: RT #126198
 S12-attributes/native.t............................  43    0    0    0   43
 S12-attributes/recursive.t.........................  23    0    0    0   23
 S12-attributes/undeclared.t........................  11    0    0    0   11
@@ -1785,16 +1782,16 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5471,    20,   111,   380,  5982,  5981
+"S02",        5475,    20,   111,   380,  5986,  5985
 "S03",        5349,    12,   119,    74,  5554,  5572
 "S04",        1200,    25,    48,    32,  1305,  1337
 "S05",        4787,   767,    86,   149,  5789,  6035
-"S06",        1951,    30,    57,    88,  2126,  2197
+"S06",        1962,    30,    54,    88,  2134,  2205
 "S07",           0,     0,     0,     0,     0,    96
 "S09",        1955,     0,    11,    37,  2003,  2003
 "S10",         104,     0,     6,     1,   111,   168
 "S11",          90,     0,    28,    11,   129,   148
-"S12",        1497,     0,    49,   144,  1690,  1745
+"S12",        1497,     0,    49,   142,  1688,  1743
 "S13",          58,     0,     2,     1,    61,    71
 "S14",         346,     0,     8,     6,   360,   373
 "S15",          37,     7,     4,    35,    83, 78582
@@ -1809,7 +1806,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       11730,   317,   190,   174, 12411, 10653
 "int",        1246,    25,     8,    14,  1293,  1286
 "ros",           2,     0,     0,     0,     2,     2
-"total",     39382,  1254,   743,  1335, 42714,120252
+"total",     39397,  1254,   740,  1333, 42724,120262
 ----------------
 Failure summary:
 S02-magicals/sub.rakudo.jvm aborted 2 test(s)
