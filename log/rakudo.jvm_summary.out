@@ -27,7 +27,7 @@ S02-lexical-conventions/begin_end_pod.t............   2    0    0    0    2
 S02-lexical-conventions/bom.t......................   1    0    0    0    1
 S02-lexical-conventions/comments.t.................  51    0    0    0   51
 S02-lexical-conventions/end-pod.t..................   1    0    0    0    1
-S02-lexical-conventions/minimal-whitespace.t.......   9    0    0    0    9
+S02-lexical-conventions/minimal-whitespace.t.......  13    0    0    0   13
 S02-lexical-conventions/one-pass-parsing.t.........   5    0    0    0    5
 S02-lexical-conventions/pod-in-multi-line-exprs.t..   3    0    0    0    3
 S02-lexical-conventions/sub-block-parsing.t........  11    0    0    0   11
@@ -1116,7 +1116,7 @@ S12-methods/trusts.t...............................   4    0    0    0    4
 S12-methods/typed-attributes.t.....................   7    0    0    0    7
 S12-methods/what.t.................................  33    0    0    0   33
 S12-subset/multi-dispatch.t........................   6    0    0    0    6
-S12-subset/subtypes.t..............................  77    0    0    0   77
+S12-subset/subtypes.t..............................  76    1    0    0   77
                                                    pass fail todo skip plan
 S13-overloading/metaoperators.t....................  11    0    0    0   11
 S13-overloading/operators.rakudo.jvm...............   4    0    0    1    5
@@ -1127,7 +1127,7 @@ S13-type-casting/methods.t.........................  13    0    0    0   13
                                                    pass fail todo skip plan
 S14-roles/anonymous.t..............................  13    0    0    0   13
 S14-roles/attributes.t.............................   7    0    0    0    7
-S14-roles/basic.rakudo.jvm.........................  45    0    0    4   49
+S14-roles/basic.rakudo.jvm.........................  44    1    0    4   49
      1 skipped: RT #120919
      3 skipped: RT #67768
 S14-roles/bool.t...................................   3    0    0    0    3
@@ -1137,7 +1137,7 @@ S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
 S14-roles/instantiation.t..........................  19    0    0    0   19
 S14-roles/lexical.t................................   9    0    0    0    9
-S14-roles/mixin.t..................................  47    0    0    0   47
+S14-roles/mixin.t..................................  46    1    0    0   47
 S14-roles/namespaced.rakudo.jvm....................  10    0    1    0   11
      1 todo   : nom regression RT \#124750
 S14-roles/parameter-subtyping.t....................  22    0    0    0   22
@@ -1695,7 +1695,7 @@ integration/advent2010-day11.t.....................   2    0    0    0    2
 integration/advent2010-day12.t.....................  13    0    0    0   13
 integration/advent2010-day14.t.....................   5    0    0    0    5
 integration/advent2010-day16.t.....................  13    0    0    0   13
-integration/advent2010-day19.rakudo.jvm............   5    0    1    0    6
+integration/advent2010-day19.rakudo.jvm............   4    1    1    0    6
      1 todo   : RT \#121940 - should be 'True'
 integration/advent2010-day21.t.....................   4    0    0    0    4
 integration/advent2010-day22.t.....................   3    0    0    0    3
@@ -1782,7 +1782,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5475,    20,   111,   380,  5986,  5985
+"S02",        5479,    20,   111,   380,  5990,  5989
 "S03",        5349,    12,   119,    74,  5554,  5572
 "S04",        1200,    25,    48,    32,  1305,  1337
 "S05",        4787,   767,    86,   149,  5789,  6035
@@ -1791,9 +1791,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        1955,     0,    11,    37,  2003,  2003
 "S10",         104,     0,     6,     1,   111,   168
 "S11",          90,     0,    28,    11,   129,   148
-"S12",        1497,     0,    49,   142,  1688,  1743
+"S12",        1496,     1,    49,   142,  1688,  1743
 "S13",          58,     0,     2,     1,    61,    71
-"S14",         346,     0,     8,     6,   360,   373
+"S14",         344,     2,     8,     6,   360,   373
 "S15",          37,     7,     4,    35,    83, 78582
 "S16",         444,    51,     0,    16,   511,   559
 "S17",         794,     0,     5,    22,   821,   869
@@ -1804,9 +1804,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         350,     0,     3,     3,   356,   356
 "S32",       11730,   317,   190,   174, 12411, 10653
-"int",        1246,    25,     8,    14,  1293,  1286
+"int",        1245,    26,     8,    14,  1293,  1286
 "ros",           2,     0,     0,     0,     2,     2
-"total",     39397,  1254,   740,  1333, 42724,120262
+"total",     39397,  1258,   740,  1333, 42728,120266
 ----------------
 Failure summary:
 S02-magicals/sub.rakudo.jvm aborted 2 test(s)
@@ -1853,6 +1853,9 @@ S06-signature/sigilless.t aborted 8 test(s)
 S06-signature/slurpy-params.rakudo.jvm aborted 14 test(s)
 S06-traits/misc.rakudo.jvm 5 - is rw dies in signature bidning if passed a literal Int
 S06-traits/misc.rakudo.jvm 6 - is rw dies in signature bidning if passed an itemized array
+S12-subset/subtypes.t 44 - subtypes based on roles work
+S14-roles/basic.rakudo.jvm 26 - type-check passes when role mixed in
+S14-roles/mixin.t 27 - RT #100782 2/2
 S15-literals/identifiers.t aborted 7 test(s)
 S16-filehandles/io.rakudo.jvm aborted 51 test(s)
 S32-list/map.rakudo.jvm aborted 2 test(s)
@@ -1866,4 +1869,5 @@ S32-str/index.t 39 - sub does -1.0E35 give Nil
 S32-str/index.t 40 - method does -1.0E35 give Nil
 S32-str/split.rakudo.jvm aborted 31 test(s)
 integration/99problems-11-to-20.t aborted 24 test(s)
+integration/advent2010-day19.rakudo.jvm 4 - 42 but False
 integration/advent2012-day15.t 9 - FIRST/NEXT/LAST example
