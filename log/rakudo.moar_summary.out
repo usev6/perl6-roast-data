@@ -470,7 +470,7 @@ S03-metaops/cross.rakudo.moar......................
 # Failed test ''<1 2> Xcmp <1 2> Xcmp <1 2>' died'
 # at t/spec/S03-metaops/cross.rakudo.moar line 79
     # Looks like you failed 1 test of 2
-  47    0    1    0   48
+  49    0    1    0   50
      1 todo   : code does not die
 S03-metaops/eager-hyper.rakudo.moar................   7    0    1    0    8
      1 todo   : hyper NYI entirely, I guess RT \#124517
@@ -482,10 +482,10 @@ Use of uninitialized value of type Any in numeric context  in block  at t/spec/S
 # Failed test ''my @a >>[=]>> (1,2,3)' died'
 # at t/spec/S03-metaops/hyper.rakudo.moar line 873
     # Looks like you failed 1 test of 2
- 316    0    1    1  318
+ 317    0    1    1  319
      1 skipped: EVAL(Buf) RT #122256
      1 todo   : can_meta check for meta operators NYI
-S03-metaops/not.t..................................  39    0    0    0   39
+S03-metaops/not.t..................................  41    0    0    0   41
 S03-metaops/reduce.rakudo.moar.....................Use of uninitialized value <element> of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S03-metaops/reduce.rakudo.moar:334
 Use of uninitialized value <element> of type Any in string context
@@ -494,11 +494,11 @@ Use of uninitialized value <element> of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S03-metaops/reduce.rakudo.moar:337
 Use of uninitialized value <element> of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S03-metaops/reduce.rakudo.moar:337
- 370    0    1    0  371
+ 371    0    1    0  372
      1 todo   : item context
-S03-metaops/reverse.rakudo.moar....................  39    0    1    0   40
+S03-metaops/reverse.rakudo.moar....................  41    0    1    0   42
      1 todo   : RT \#118791 Rxx does not yet thunk the RHS
-S03-metaops/zip.rakudo.moar........................  41    0    6    0   47
+S03-metaops/zip.rakudo.moar........................  43    0    6    0   49
      6 todo   : nom regression RT \#122230
 S03-operators/adverbial-modifiers.rakudo.moar......Block object coerced to string (please use .gist or .perl to do that)  in block  at t/spec/S03-operators/adverbial-modifiers.rakudo.moar:48
 Block object coerced to string (please use .gist or .perl to do that)  in block  at t/spec/S03-operators/adverbial-modifiers.rakudo.moar:48
@@ -513,54 +513,6 @@ S03-operators/also.rakudo.moar.....................   4    0    4    0    8
      1 todo   : nom regression RT \#124547
 S03-operators/andthen.t............................   8    0    0    0    8
 S03-operators/arith.t..............................Use of uninitialized value of type Int in numeric context  in block  at t/spec/S03-operators/arith.t:379
-WARNING: unhandled Failure detected in DESTROY:
-Attempt to divide 3 by zero using div
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1247
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1243
-  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1211
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1737
-  in any visit_want at gen/moar/m-Perl6-Optimizer.nqp:1534
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1728
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1728
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1752
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1728
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1752
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1758
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1728
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1752
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1758
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
-  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
-  in any optimize at src/Perl6/Compiler.nqp:70
-
-WARNING: unhandled Failure detected in DESTROY:
-Attempt to divide 3 by zero using infix:<%>
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1247
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1243
-  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1211
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1737
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1737
-  in any visit_want at gen/moar/m-Perl6-Optimizer.nqp:1534
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1728
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1728
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1752
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1728
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1752
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1758
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1728
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1752
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1758
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
-  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
-  in any optimize at src/Perl6/Compiler.nqp:70
-
  157    0    0    0  157
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
 S03-operators/assign.rakudo.moar................... 264    0   16   14  294
@@ -630,8 +582,7 @@ S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  31    0    0    0   31
 S03-operators/comparison-simple.t..................  24    0    0    0   24
 S03-operators/comparison.t.........................  41    0    0    0   41
-S03-operators/composition.rakudo.moar..............   7    0    0    1    8
-     1 skipped: function composition with more-than-one-arg functions
+S03-operators/composition.t........................  10    0    0    0   10
 S03-operators/context-forcers.rakudo.moar.......... 104    0    0    2  106
      2 skipped: failure modes of Str.Numeric RT #124540
 S03-operators/context.t............................  37    0    0    0   37
@@ -1788,10 +1739,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 Use of uninitialized value $_ of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-20017-170564.code:4
+#   in block <unit> at getout-39747-320356.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-20017-170564.code:4
+#   in block <unit> at getout-39747-320356.code:4
 
 
   33    0    3    0   36
@@ -2143,8 +2094,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1443742091
-# Using file temp_1443742091
+S16-filehandles/chmod.t............................# Using file temp_1443828494
+# Using file temp_1443828494
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2855,7 +2806,15 @@ S32-array/pop.rakudo.moar..........................
      1 todo   : code does not die
 S32-array/push.t...................................  52    0    0    0   52
 S32-array/rotate.t.................................  29    0    0    0   29
-S32-array/shift.t..................................  31    0    0    0   31
+S32-array/shift.t..................................WARNING: unhandled Failure detected in DESTROY:
+Cannot shift from an empty Array
+  in block <unit> at t/spec/S32-array/shift.t:69
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot shift from an empty Array
+  in block <unit> at t/spec/S32-array/shift.t:61
+
+  31    0    0    0   31
 S32-array/splice.rakudo.moar.......................    
 # Failed test 'right exception type (X::TypeCheck::Splice)'
 # at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
@@ -4329,13 +4288,13 @@ S32-str/comb.rakudo.moar...........................  47    0    0    1   48
 S32-str/contains.t.................................  20    0    0    0   20
 S32-str/encode.rakudo.moar.........................    
 # Failed test '.message matches rx:s:i/line 1 col\w* 2|term/'
-# at gen/moar/m-CORE.setting line 2931
+# at gen/moar/m-CORE.setting line 2942
     # Expected: rx:s:i/line 1 col\w* 2|term/
     # Got:      Malformed UTF-16; odd number of bytes
     # Looks like you failed 1 test of 3
     
 # Failed test '.message matches rx:s:i/line 1 col\w* 2/'
-# at gen/moar/m-CORE.setting line 2931
+# at gen/moar/m-CORE.setting line 2942
     # Expected: rx:s:i/line 1 col\w* 2/
     # Got:      Malformed UTF-16; unexpected low surrogate
     # Looks like you failed 1 test of 3
@@ -4555,14 +4514,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.507249 seconds
-# gerdr: 0.5253420 seconds
-# recursive-ternary: 0.57254506 seconds
-# loop: 0.665621 seconds
-# hand-memoization: 0.9617351 seconds
-# sequence-ternary: 1.1545190 seconds
-# recursive-ternary-hand-cached: 1.9313338 seconds
-# sequence: 2.46824833 seconds
+integration/advent2012-day21.t.....................# kaz: 0.5085438 seconds
+# gerdr: 0.53076705 seconds
+# recursive-ternary: 0.5761381 seconds
+# loop: 0.6689761 seconds
+# hand-memoization: 0.9557988 seconds
+# sequence-ternary: 1.1590814 seconds
+# recursive-ternary-hand-cached: 1.92223076 seconds
+# sequence: 2.44692534 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -4619,7 +4578,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodADF2F5EF/p6testmodE6C07477.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod23E9E20B/p6testmod8B7E1775.pm6')
     # Looks like you failed 1 test of 2
    5    0    2    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -4641,7 +4600,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        5573,     0,    94,   355,  6022,  6021
-"S03",        5371,     0,   120,    75,  5566,  5584
+"S03",        5384,     0,   120,    74,  5578,  5596
 "S04",        1234,     0,    45,    27,  1306,  1338
 "S05",        5682,     0,    87,    96,  5865,  6035
 "S06",        1994,     0,    55,    84,  2133,  2204
@@ -4664,7 +4623,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12224,     3,   194,   158, 12579, 10821
 "int",        1276,     0,    10,    14,  1300,  1286
 "ros",           2,     0,     0,     0,     2,     2
-"total",    119891,    17,   731,  1218,121857,120779
+"total",    119904,    17,   731,  1217,121869,120791
 ----------------
 Failure summary:
 S11-modules/require.rakudo.moar 3 - can load InnerModule from a path at run time
