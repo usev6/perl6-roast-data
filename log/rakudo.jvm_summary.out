@@ -142,7 +142,7 @@ S02-names/identifier.t.............................  22    0    0    0   22
 S02-names/indirect.t...............................   6    0    0    0    6
 S02-names/is_cached.rakudo.jvm.....................  36    0    2    0   38
      2 todo   : is cached is only a hint: RT \#122425
-S02-names/is_default.rakudo.jvm.................... 105    1    2    2  110
+S02-names/is_default.rakudo.jvm.................... 104    2    2    2  110
      2 skipped: is default on attributes
      1 todo   : fails first on native int hashes being NYI
      1 todo PASSED: native int default(*) is NYI
@@ -184,10 +184,10 @@ S02-types/array_extending.t........................  21    0    0    0   21
 S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  25    0    0    0   25
-S02-types/bag.rakudo.jvm........................... 192    2    3    0  197
+S02-types/bag.rakudo.jvm........................... 194    0    3    0  197
      2 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT \#124454
-S02-types/baghash.rakudo.jvm....................... 221    2    2   21  246
+S02-types/baghash.rakudo.jvm....................... 223    0    2   21  246
     21 skipped: 'is TypeObject' NYI RT #124490
      2 todo   : in flux
 S02-types/bool.rakudo.jvm..........................  51    0    2    0   53
@@ -381,7 +381,7 @@ S03-operators/identity.rakudo.jvm..................  37    0    8    0   45
      4 todo   : unspecced
 S03-operators/increment.t..........................  28    9    0    0   37
 S03-operators/infixed-function.t...................   5    0    0    0    5
-S03-operators/inplace.rakudo.jvm...................  23    0    0    4   27
+S03-operators/inplace.rakudo.jvm...................  27    0    0    4   31
      4 skipped: Method '' not found for invocant of class 'Str' RT #124528
 S03-operators/is-divisible-by.rakudo.jvm...........  14    0    1    0   15
      1 todo   : not sure why this doesn't fire
@@ -486,11 +486,12 @@ S04-declarations/will.rakudo.jvm...................   9    4    4    3   20
      1 todo   : declared variable not visible in block yet RT \#125067
      1 todo   : will init NYI
      1 todo   : will post NYI RT \#125062
-S04-exception-handlers/catch.t.....................  30    0    0    0   30
+S04-exception-handlers/catch.t.....................  29    1    0    0   30
 S04-exception-handlers/control.t...................  10    0    0    0   10
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
 S04-exceptions/control_across_runloop.t............   1    0    0    0    1
-S04-exceptions/fail.t..............................  27    0    0    0   27
+S04-exceptions/fail.t..............................   4   23    0    0   27
+    23 tests aborted (missing ok/not ok)
 S04-exceptions/pending.rakudo.jvm..................   6    0    1   14   21
     13 skipped: $!.pending
      1 skipped: $object.handled
@@ -515,8 +516,9 @@ S04-phasers/in-loop.rakudo.jvm.....................   2    0    1    2    5
      2 skipped: RT #122134 - last+ENTER in loop
      1 todo   : this test works "standalone", but not after previous test; RT \#121145
 S04-phasers/init.t.................................  13    0    0    0   13
-S04-phasers/keep-undo.rakudo.jvm...................  14    0    2    0   16
+S04-phasers/keep-undo.rakudo.jvm...................  13    1    2    0   16
      2 todo   : RT \#111866
+     1 tests aborted (missing ok/not ok)
 S04-phasers/multiple.t.............................   2    0    0    0    2
 S04-phasers/next.rakudo.jvm........................  11    0    2    0   13
      2 todo   : NEXT/LEAVE ordering RT \#124952
@@ -531,9 +533,10 @@ S04-statement-modifiers/unless.t...................   8    0    0    0    8
 S04-statement-modifiers/until.t....................   4    0    0    0    4
 S04-statement-modifiers/values_in_bool_context.t...  24    0    0    0   24
 S04-statement-modifiers/while.t....................   5    0    0    0    5
-S04-statement-modifiers/with.rakudo.jvm............  33    0    1    0   34
-     1 todo   : parenless with/for doesn't work yet
-S04-statement-modifiers/without.t..................   8    0    0    0    8
+S04-statement-modifiers/with.rakudo.jvm............  20   14    0    0   34
+    14 tests aborted (missing ok/not ok)
+S04-statement-modifiers/without.t..................   4    4    0    0    8
+     4 tests aborted (missing ok/not ok)
 S04-statement-parsing/hash.t.......................   8    0    0    0    8
 S04-statements/do.rakudo.jvm.......................  21    0    1    7   29
      3 skipped: Undeclared name A RT #124574
@@ -573,7 +576,7 @@ S04-statements/return.rakudo.jvm...................  19    0    1    0   20
      1 todo   : lexotic return
 S04-statements/sink.t..............................   2    0    0    0    2
 S04-statements/terminator.t........................  20    0    0    0   20
-S04-statements/try.t...............................  40    0    0    0   40
+S04-statements/try.t...............................  38    2    0    0   40
 S04-statements/unless.t............................  10    0    0    0   10
 S04-statements/until.t.............................   4    0    0    0    4
 S04-statements/when.t..............................  18    0    0    0   18
@@ -1199,7 +1202,8 @@ S16-filehandles/unlink.rakudo.jvm..................   5    0    0    1    6
 S16-io/bare-say.t..................................   7    0    0    0    7
 S16-io/basic-open.t................................  11    0    0    0   11
 S16-io/cwd.t.......................................   3    0    0    0    3
-S16-io/getc.t......................................   2    0    0    0    2
+S16-io/getc.t......................................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
 S16-io/lines.t..................................... 170    0    0    0  170
 S16-io/note.t......................................   5    0    0    0    5
 S16-io/print.t.....................................  12    0    0    0   12
@@ -1471,8 +1475,7 @@ S32-list/map_function_return_values.t..............   2    0    0    0    2
 S32-list/minmax.rakudo.jvm.........................  99    0    0    2  101
      2 skipped: post-GLR
 S32-list/permutations.t............................   2    0    0    0    2
-S32-list/pick.rakudo.jvm...........................  55    0    2    0   57
-     1 todo   : error on pick :replace
+S32-list/pick.rakudo.jvm...........................  56    0    1    0   57
      1 todo PASSED: "Cannot .pick from an infinite list" (but not from CLI)
 S32-list/reduce.t..................................  13    0    0    0   13
 S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
@@ -1794,9 +1797,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5512,    20,   111,   379,  6022,  6021
-"S03",        5362,    22,   120,    74,  5578,  5596
-"S04",        1201,    25,    48,    32,  1306,  1338
+"S02",        5515,    17,   111,   379,  6022,  6021
+"S03",        5366,    22,   120,    74,  5582,  5600
+"S04",        1157,    70,    47,    32,  1306,  1338
 "S05",        4822,   767,    86,   159,  5834,  6035
 "S06",        1653,   338,    55,    87,  2133,  2204
 "S07",          22,     0,     0,     0,    22,   118
@@ -1807,7 +1810,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          58,     0,     2,     1,    61,    71
 "S14",         344,     2,     8,     6,   360,   373
 "S15",          37,     7,     4,    35,    83, 78582
-"S16",         444,    51,     0,    16,   511,   559
+"S16",         442,    53,     0,    16,   511,   559
 "S17",         794,     0,     5,    22,   821,   869
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          23,     0,     0,     1,    24,    24
@@ -1815,20 +1818,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         350,     0,     3,     3,   356,   356
-"S32",       11743,   321,   191,   174, 12429, 10671
+"S32",       11744,   321,   190,   174, 12429, 10671
 "int",        1245,    26,     8,    14,  1293,  1286
 "ros",           2,     0,     0,     0,     2,     2
-"total",     39204,  1580,   744,  1341, 42869,120362
+"total",     39166,  1624,   742,  1341, 42873,120366
 ----------------
 Failure summary:
 S02-magicals/sub.rakudo.jvm aborted 2 test(s)
 S02-names-vars/list_array_perl.t aborted 11 test(s)
 S02-names-vars/names.rakudo.jvm aborted 1 test(s)
 S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNative?
-S02-types/bag.rakudo.jvm 116 - .roll(100) (1)
-S02-types/bag.rakudo.jvm 117 - .roll(100) (2)
-S02-types/baghash.rakudo.jvm 121 - .roll(100) (1)
-S02-types/baghash.rakudo.jvm 122 - .roll(100) (2)
+S02-names/is_default.rakudo.jvm 110 - Failure.new as a default value on an unconstrained Scalar works
 S02-types/declare.rakudo.jvm 19 - Assign big bigint to native won't overflow silently
 S03-junctions/misc.rakudo.jvm 135 - Do not try to auto-thread Junction type object (only case)
 S03-metaops/hyper.rakudo.jvm aborted 8 test(s)
@@ -1846,15 +1846,22 @@ S04-declarations/will.rakudo.jvm 8 - for iteration #1
 S04-declarations/will.rakudo.jvm 9 - for iteration #2
 S04-declarations/will.rakudo.jvm 10 - for iteration #3
 S04-declarations/will.rakudo.jvm 11 - all for blocks set variable
+S04-exception-handlers/catch.t 28 - doesn't segfault
+S04-exceptions/fail.t aborted 23 test(s)
 S04-phasers/first.t 1 - FIRST only ran once
 S04-phasers/first.t 3 - multiple FIRST {} ran in order
 S04-phasers/first.t 4 - FIRST {} ran before ENTER {}
+S04-phasers/keep-undo.rakudo.jvm aborted 1 test(s)
 S04-phasers/pre-post.rakudo.jvm aborted 4 test(s)
+S04-statement-modifiers/with.rakudo.jvm aborted 14 test(s)
+S04-statement-modifiers/without.t aborted 4 test(s)
 S04-statements/for.rakudo.jvm 91 - did we throws-like X::Parameter::RW?
 S04-statements/label.t aborted 4 test(s)
 S04-statements/last.t aborted 2 test(s)
 S04-statements/next.t aborted 6 test(s)
 S04-statements/redo.t aborted 1 test(s)
+S04-statements/try.t 31 - When $! not set, die() has default message "Died"
+S04-statements/try.t 32 - When $! is set, die() is die($!).
 S05-mass/properties-general.rakudo.jvm aborted 502 test(s)
 S05-modifier/counted-match.rakudo.jvm 2 - did we throws-like Exception?
 S05-modifier/counted-match.rakudo.jvm 3 - did we throws-like Exception?
@@ -1888,6 +1895,7 @@ S14-roles/basic.rakudo.jvm 26 - type-check passes when role mixed in
 S14-roles/mixin.t 27 - RT #100782 2/2
 S15-literals/identifiers.t aborted 7 test(s)
 S16-filehandles/io.rakudo.jvm aborted 51 test(s)
+S16-io/getc.t aborted 2 test(s)
 S32-io/move.t 20 - did we throws-like X::IO::Move?
 S32-io/move.t 22 - move createonly fail
 S32-list/map.rakudo.jvm aborted 4 test(s)
