@@ -128,13 +128,13 @@ S02-literals/version.rakudo.moar...................  27    0    3    0   30
      3 todo   : trailing zeroes fail RT \#124562
 S02-magicals/78258.t...............................   1    0    0    0    1
 S02-magicals/DISTRO.rakudo.moar....................Use of uninitialized value of type Blob in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any  at gen/moar/m-Metamodel.nqp:1679
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any  at gen/moar/m-Metamodel.nqp:1670
   12    0    2   14   28
     14 skipped: unimpl $?DISTRO RT #124616
      1 todo   : no Distro.signature yet RT \#124617
      1 todo   : no Distro.signature yet RT \#124621
 S02-magicals/KERNEL.rakudo.moar....................Use of uninitialized value of type Blob in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any  at gen/moar/m-Metamodel.nqp:1679
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any  at gen/moar/m-Metamodel.nqp:1670
 Use of uninitialized value of type Str in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block <unit> at t/spec/S02-magicals/KERNEL.rakudo.moar:39
   21    0    3   16   40
@@ -143,11 +143,11 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
      1 todo   : no Kernel.signature yet RT \#124625
      1 todo   : no Kernel.signature yet RT \#124627
 S02-magicals/PERL.rakudo.moar......................Use of uninitialized value of type Blob in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any  at gen/moar/m-Metamodel.nqp:1679
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any  at gen/moar/m-Metamodel.nqp:1670
 Use of uninitialized value of type Str in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block <unit> at t/spec/S02-magicals/PERL.rakudo.moar:49
 Use of uninitialized value of type Blob in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any  at gen/moar/m-Metamodel.nqp:1679
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any  at gen/moar/m-Metamodel.nqp:1670
 Use of uninitialized value of type Str in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block <unit> at t/spec/S02-magicals/PERL.rakudo.moar:68
   17    0    8   25   50
@@ -161,7 +161,7 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
      1 todo   : no Perl.signature yet RT \#124582
      1 todo   : no Perl.signature yet RT \#124588
 S02-magicals/VM.rakudo.moar........................Use of uninitialized value of type Blob in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any  at gen/moar/m-Metamodel.nqp:1679
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any  at gen/moar/m-Metamodel.nqp:1670
   13    0    2   17   32
      2 skipped: VM.properties does not exist RT #124606
     15 skipped: unimpl $?VM RT #124608
@@ -229,7 +229,7 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  15    0    0    0   15
 S02-names/our.rakudo.moar..........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.moar.......................  69    0    6   67  142
+S02-names/pseudo.rakudo.moar.......................  71    0    6   67  144
      4 skipped: Cannot bind to &::("CORE")::foo RT #126113
      4 skipped: the binding in here is NYI RT #124914
     23 skipped: various issues to resolve RT #124917
@@ -304,32 +304,7 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  25    0    0    0   25
-S02-types/bag.rakudo.moar..........................    
-# Failed test 'code dies'
-# at t/spec/S02-types/bag.rakudo.moar line 501
-    # Looks like you failed 1 test of 2
-
-# Failed test 'Make sure we cannot assign on a .values alias'
-# at t/spec/S02-types/bag.rakudo.moar line 501
-    
-# Failed test 'right exception type (X::Assignment::RO)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
-    # Expected: (X::Assignment::RO)
-    # Got:      (X::AdHoc)
-    # Exception message: Cannot assign to a readonly variable or a value
-    # Looks like you failed 1 test of 2
-
-# Failed test 'Make sure we cannot assign on a .pairs alias'
-# at t/spec/S02-types/bag.rakudo.moar line 505
-    
-# Failed test 'code dies'
-# at t/spec/S02-types/bag.rakudo.moar line 509
-    # Looks like you failed 1 test of 2
-
-# Failed test 'Make sure we cannot assign on a .kv alias'
-# at t/spec/S02-types/bag.rakudo.moar line 509
-# Looks like you failed 3 tests of 201
- 197    3    1    0  201
+S02-types/bag.rakudo.moar.......................... 198    0    1    0  199
      1 todo   : we have not secured .WHICH creation yet RT \#124454
 S02-types/baghash.rakudo.moar...................... 231    0    2   21  254
     21 skipped: 'is TypeObject' NYI RT #124490
@@ -383,32 +358,7 @@ S02-types/mix.rakudo.moar..........................Potential difficulties:
     Redeclaration of symbol $inner-list
     at t/spec/S02-types/mix.rakudo.moar:353
     ------> [32m    my $inner-list[33m⏏[31m = $m1.keys.first(List);[0m
-    
-# Failed test 'code dies'
-# at t/spec/S02-types/mix.rakudo.moar line 436
-    # Looks like you failed 1 test of 2
-
-# Failed test 'Make sure we cannot assign on a .values alias'
-# at t/spec/S02-types/mix.rakudo.moar line 436
-    
-# Failed test 'right exception type (X::Assignment::RO)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
-    # Expected: (X::Assignment::RO)
-    # Got:      (X::AdHoc)
-    # Exception message: Cannot assign to a readonly variable or a value
-    # Looks like you failed 1 test of 2
-
-# Failed test 'Make sure we cannot assign on a .pairs alias'
-# at t/spec/S02-types/mix.rakudo.moar line 440
-    
-# Failed test 'code dies'
-# at t/spec/S02-types/mix.rakudo.moar line 444
-    # Looks like you failed 1 test of 2
-
-# Failed test 'Make sure we cannot assign on a .kv alias'
-# at t/spec/S02-types/mix.rakudo.moar line 444
-# Looks like you failed 3 tests of 182
- 178    3    1    0  182
+ 179    0    1    0  180
      1 todo   : we have not secured .WHICH creation yet RT \#124496
 S02-types/mixed_multi_dimensional.rakudo.moar......  77    0    3    0   80
      1 todo   : isa hash
@@ -438,9 +388,10 @@ Use of Nil in numeric context  in block <unit> at t/spec/S02-types/nil.rakudo.mo
      1 skipped: triage
      5 todo   : triage
 S02-types/num.t....................................  66    0    0    0   66
-S02-types/pair.rakudo.moar.........................# checking Pair.new
+S02-types/pair.rakudo.moar.........................# checking Pair.new(:key,:value)
+# checking Pair.new(key,value)
 # checking pair()
- 150    0    1    0  151
+ 175    0    1    0  176
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t..................................Use of uninitialized value of type Range in numeric context  in block <unit> at t/spec/S02-types/range.t:87
@@ -1135,10 +1086,9 @@ S04-phasers/begin.rakudo.moar......................  12    0    1    0   13
 S04-phasers/check.t................................   5    0    0    0    5
 S04-phasers/descending-order.t.....................   7    0    0    0    7
 S04-phasers/end.t..................................   8    0    0    0    8
-S04-phasers/enter-leave.rakudo.moar................  25    0    2    1   28
+S04-phasers/enter-leave.rakudo.moar................  28    0    1    1   30
      1 skipped: leave NYI RT #124960
      1 todo   : is this spec? why would LEAVE not see outer $!? fossil?
-     1 todo   : unwind, RT \#121530
 S04-phasers/eval-in-begin.t........................   3    0    0    0    3
 S04-phasers/first.t................................   4    0    0    0    4
 S04-phasers/in-eval.rakudo.moar....................  34    0    1    0   35
@@ -1799,10 +1749,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 Use of uninitialized value $_ of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-77066-426946.code:4
+#   in block <unit> at getout-28260-288525.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-77066-426946.code:4
+#   in block <unit> at getout-28260-288525.code:4
 
 
   33    0    3    0   36
@@ -2033,10 +1983,9 @@ S12-subset/multi-dispatch.t........................   6    0    0    0    6
 S12-subset/subtypes.t..............................  77    0    0    0   77
                                                    pass fail todo skip plan
 S13-overloading/metaoperators.t....................  11    0    0    0   11
-S13-overloading/operators.rakudo.moar..............   4    0    0    1    5
-     1 skipped: cannot easily override {} at the moment
+S13-overloading/operators.t........................   6    0    0    0    6
 S13-overloading/typecasting-long.rakudo.moar.......    
-# Failed test ''class XXX { method postcircumfix:<( )>(XXX:U: $x) { } }; XXX();' died'
+# Failed test ''class XXX { method CALL-ME(XXX:U: $x) { } }; XXX();' died'
 # at t/spec/S13-overloading/typecasting-long.rakudo.moar line 109
     # Looks like you failed 1 test of 2
   30    0    2    0   32
@@ -2058,7 +2007,7 @@ S14-roles/lexical.t................................   9    0    0    0    9
 S14-roles/mixin.t..................................Use of uninitialized value of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any throw at src/Perl6/World.nqp:3512
 Use of uninitialized value of type Any in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any try_select at gen/moar/m-Metamodel.nqp:2489
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any try_select at gen/moar/m-Metamodel.nqp:2480
   47    0    0    0   47
 S14-roles/namespaced.rakudo.moar...................  10    0    1    0   11
      1 todo   : nom regression RT \#124750
@@ -2068,7 +2017,7 @@ S14-roles/parameterized-mixin.rakudo.moar..........  26    0    4    0   30
      4 todo   : .does with parametric roles RT \#124746
 S14-roles/parameterized-type.t.....................  32    0    0    0   32
 S14-roles/stubs.rakudo.moar........................Use of uninitialized value of type Any in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any try_select at gen/moar/m-Metamodel.nqp:2489
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any try_select at gen/moar/m-Metamodel.nqp:2480
   12    0    2    0   14
      2 todo   : RT\#124393 Stubbing individual multis as role interface NYI
 S14-roles/submethods.t.............................   4    0    0    0    4
@@ -2154,8 +2103,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1444001300
-# Using file temp_1444001300
+S16-filehandles/chmod.t............................# Using file temp_1444087664
+# Using file temp_1444087664
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -4339,13 +4288,13 @@ S32-str/comb.rakudo.moar...........................  47    0    0    1   48
 S32-str/contains.t.................................  20    0    0    0   20
 S32-str/encode.rakudo.moar.........................    
 # Failed test '.message matches rx:s:i/line 1 col\w* 2|term/'
-# at gen/moar/m-CORE.setting line 2944
+# at gen/moar/m-CORE.setting line 2955
     # Expected: rx:s:i/line 1 col\w* 2|term/
     # Got:      Malformed UTF-16; odd number of bytes
     # Looks like you failed 1 test of 3
     
 # Failed test '.message matches rx:s:i/line 1 col\w* 2/'
-# at gen/moar/m-CORE.setting line 2944
+# at gen/moar/m-CORE.setting line 2955
     # Expected: rx:s:i/line 1 col\w* 2/
     # Got:      Malformed UTF-16; unexpected low surrogate
     # Looks like you failed 1 test of 3
@@ -4565,14 +4514,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.50599570 seconds
-# gerdr: 0.5194366 seconds
-# recursive-ternary: 0.5683450 seconds
-# loop: 0.651893 seconds
-# hand-memoization: 0.9635651 seconds
-# sequence-ternary: 1.1524520 seconds
-# recursive-ternary-hand-cached: 1.895607 seconds
-# sequence: 2.43822608 seconds
+integration/advent2012-day21.t.....................# kaz: 0.33177123 seconds
+# gerdr: 0.34706620 seconds
+# recursive-ternary: 0.48431760 seconds
+# loop: 0.4930716 seconds
+# hand-memoization: 0.7627751 seconds
+# sequence-ternary: 1.0737706 seconds
+# recursive-ternary-hand-cached: 1.8259779 seconds
+# sequence: 2.38073968 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -4604,7 +4553,7 @@ integration/error-reporting.rakudo.moar............# Error message: Constraint t
 
 # Failed test 'Thrown Failure outputs dual backtraces'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Util.pm line 58
-#      got err: "foo\n  in sub s1 at getout-80199-866841.code:1\n  in block <unit> at getout-80199-866841.code:1\n\nActually thrown at:\n  in sub s1 at getout-80199-866841.code:1\n  in block <unit> at getout-80199-866841.code:1\n\n"
+#      got err: "foo\n  in sub s1 at getout-31413-560347.code:1\n  in block <unit> at getout-31413-560347.code:1\n\nActually thrown at:\n  in sub s1 at getout-31413-560347.code:1\n  in block <unit> at getout-31413-560347.code:1\n\n"
 # Looks like you failed 1 test of 22
   20    1    1    0   22
      1 todo   : nigh
@@ -4634,7 +4583,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod5CB14568/p6testmod46AC6F6E.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodEBDD944C/p6testmod2CC0C0AC.pm6')
     # Looks like you failed 1 test of 2
    5    0    2    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -4655,9 +4604,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5591,     6,    94,   355,  6046,  6045
+"S02",        5620,     0,    94,   355,  6069,  6068
 "S03",        5388,     0,   120,    74,  5582,  5600
-"S04",        1232,     2,    45,    27,  1306,  1338
+"S04",        1235,     2,    44,    27,  1308,  1340
 "S05",        5682,     0,    87,    96,  5865,  6035
 "S06",        2001,     0,    55,    84,  2140,  2211
 "S07",          22,     0,     0,     0,    22,   118
@@ -4665,7 +4614,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S10",         105,     0,     5,     1,   111,   168
 "S11",         100,    14,     5,    10,   129,   148
 "S12",        1506,     0,    40,   142,  1688,  1743
-"S13",          58,     0,     2,     1,    61,    71
+"S13",          60,     0,     2,     0,    62,    72
 "S14",         347,     0,     8,     5,   360,   373
 "S15",       78537,     0,     7,    18, 78562, 78582
 "S16",         493,     0,     2,    16,   511,   559
@@ -4679,15 +4628,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12225,     3,   193,   158, 12579, 10821
 "int",        1275,     1,    10,    14,  1300,  1286
 "ros",           2,     0,     0,     0,     2,     2
-"total",    119931,    26,   730,  1217,121904,120826
+"total",    119965,    20,   729,  1216,121930,120852
 ----------------
 Failure summary:
-S02-types/bag.rakudo.moar 199 - Make sure we cannot assign on a .values alias
-S02-types/bag.rakudo.moar 200 - Make sure we cannot assign on a .pairs alias
-S02-types/bag.rakudo.moar 201 - Make sure we cannot assign on a .kv alias
-S02-types/mix.rakudo.moar 180 - Make sure we cannot assign on a .values alias
-S02-types/mix.rakudo.moar 181 - Make sure we cannot assign on a .pairs alias
-S02-types/mix.rakudo.moar 182 - Make sure we cannot assign on a .kv alias
 S04-exceptions/fail.t 27 - Failure reports backtrace from its creation point.
 S04-statements/try.t 32 - When $! is set, die() is die($!).
 S11-modules/require.rakudo.moar 3 - can load InnerModule from a path at run time
