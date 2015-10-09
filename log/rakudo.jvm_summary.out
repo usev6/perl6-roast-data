@@ -167,7 +167,7 @@ S02-names/symbolic-deref.rakudo.jvm................  32    0    2    2   36
      1 todo   : no such symbol
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.rakudo.jvm......................... 650    0    0   12  662
+S02-types/WHICH.rakudo.jvm......................... 803    5    0   12  820
     12 skipped: NYI on jvm
 S02-types/anon_block.rakudo.jvm....................  36    0    4    2   42
      2 skipped: tests don't work if previous test fails
@@ -476,7 +476,8 @@ S04-declarations/multiple.rakudo.jvm...............   5    0    1    0    6
 S04-declarations/my.rakudo.jvm.....................  95    0    2    0   97
      2 todo   : RT \#117043
 S04-declarations/our.t.............................  31    0    0    0   31
-S04-declarations/smiley.t..........................  12    0    0    0   12
+S04-declarations/smiley.rakudo.jvm.................  52    0    5    0   57
+     5 todo   : Int:U is not being parsed correctly yet
 S04-declarations/state.rakudo.jvm..................  40    0    1    0   41
      1 todo   : initialization happens only on first call(?) RT \#102994
 S04-declarations/will.rakudo.jvm...................   9    4    4    3   20
@@ -526,16 +527,16 @@ S04-phasers/pre-post.rakudo.jvm....................  17    4    1    0   22
      1 todo   : POST and exceptions RT \#124961
      4 tests aborted (missing ok/not ok)
 S04-phasers/rvalue.t...............................  16    0    0    0   16
-S04-statement-modifiers/for.t......................  28    0    0    0   28
-S04-statement-modifiers/given.t....................  11    0    0    0   11
-S04-statement-modifiers/if.t.......................  13    0    0    0   13
-S04-statement-modifiers/unless.t...................   8    0    0    0    8
-S04-statement-modifiers/until.t....................   4    0    0    0    4
+S04-statement-modifiers/for.t......................  29    0    0    0   29
+S04-statement-modifiers/given.t....................  12    0    0    0   12
+S04-statement-modifiers/if.t.......................  14    0    0    0   14
+S04-statement-modifiers/unless.t...................   9    0    0    0    9
+S04-statement-modifiers/until.t....................   5    0    0    0    5
 S04-statement-modifiers/values_in_bool_context.t...  24    0    0    0   24
-S04-statement-modifiers/while.t....................   5    0    0    0    5
-S04-statement-modifiers/with.rakudo.jvm............  33    0    1    0   34
+S04-statement-modifiers/while.t....................   6    0    0    0    6
+S04-statement-modifiers/with.rakudo.jvm............  34    0    1    0   35
      1 todo   : parenless with/for doesn't work yet
-S04-statement-modifiers/without.t..................   8    0    0    0    8
+S04-statement-modifiers/without.t..................   9    0    0    0    9
 S04-statement-parsing/hash.t.......................   8    0    0    0    8
 S04-statements/do.rakudo.jvm.......................  21    0    1    7   29
      3 skipped: Undeclared name A RT #124574
@@ -823,7 +824,7 @@ S06-operator-overloading/imported-subs.t...........  19    0    0    0   19
 S06-operator-overloading/methods.rakudo.jvm........   2    0    1    0    3
      1 todo   : nom regression RT \#124988
 S06-operator-overloading/semicolon.t...............   3    0    0    0    3
-S06-operator-overloading/sub.rakudo.jvm............  65    3    2   14   84
+S06-operator-overloading/sub.rakudo.jvm............  65    9    2   14   90
      1 skipped: cannot bind with this LHS RT #124979
      1 skipped: infix Z will never work; no lexical Z RT #124983
      2 skipped: macros RT #124978
@@ -836,7 +837,7 @@ S06-operator-overloading/sub.rakudo.jvm............  65    3    2   14   84
      1 skipped: undeclared name
      1 todo   : RT \#65638
      1 todo   : infix:<;> RT \#124981
-     3 tests aborted (missing ok/not ok)
+     9 tests aborted (missing ok/not ok)
 S06-operator-overloading/term.t....................   9    0    0    0    9
 S06-operator-overloading/workout.t.................  84    0    0    0   84
 S06-other/anon-hashes-vs-blocks.t..................  26    0    0    0   26
@@ -1011,8 +1012,7 @@ S12-attributes/mutators.rakudo.jvm.................   5    0    0    5   10
      5 skipped: RT #126198
 S12-attributes/native.t............................  43    0    0    0   43
 S12-attributes/recursive.t.........................  23    0    0    0   23
-S12-attributes/smiley.rakudo.jvm...................   6    0    1    0    7
-     1 todo   : attributes pragma NYI
+S12-attributes/smiley.t............................   7    0    0    0    7
 S12-attributes/undeclared.t........................  11    0    0    0   11
 S12-class/anonymous.rakudo.jvm.....................  16    0    1    0   17
      1 todo   : Anonymous class stringification (?) RT \#125045
@@ -1494,8 +1494,8 @@ S32-list/rotor.rakudo.jvm..........................   6    0    0    3    9
 S32-list/seq.rakudo.jvm............................  25    0    1    0   26
      1 todo   : Cannot assign immutable
 S32-list/sort.t....................................  30    0    0    0   30
-S32-list/squish.t..................................   4   34    0    0   38
-    34 tests aborted (missing ok/not ok)
+S32-list/squish.t..................................   0   40    0    0   40
+    40 tests aborted (missing ok/not ok)
 S32-list/unique.t..................................  14   20    0    0   34
     20 tests aborted (missing ok/not ok)
 S32-num/abs.t......................................  49    0    0    0   49
@@ -1805,16 +1805,16 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5576,    18,   109,   379,  6082,  6081
+"S02",        5729,    23,   109,   379,  6240,  6239
 "S03",        5366,    22,   120,    74,  5582,  5600
-"S04",        1214,    25,    49,    32,  1320,  1352
+"S04",        1262,    25,    54,    32,  1373,  1405
 "S05",        4829,   767,    93,   159,  5848,  6049
-"S06",        1689,   341,    61,    82,  2173,  2244
+"S06",        1689,   347,    61,    82,  2179,  2250
 "S07",          22,     0,     0,     0,    22,   118
 "S09",        1957,     0,    11,    37,  2005,  2005
 "S10",         104,     0,     6,     1,   111,   168
 "S11",          90,     0,    28,    11,   129,   148
-"S12",        1500,     1,    51,   140,  1692,  1747
+"S12",        1501,     1,    50,   140,  1692,  1747
 "S13",          60,     0,     2,     0,    62,    72
 "S14",         344,     2,     8,     6,   360,   373
 "S15",          37,     7,     4,    35,    83, 78582
@@ -1826,10 +1826,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         350,     0,     3,     3,   356,   356
-"S32",       11744,   321,   190,   174, 12429, 10671
+"S32",       11740,   327,   190,   174, 12431, 10685
 "int",        1245,    26,     8,    14,  1293,  1286
 "ros",           2,     0,     0,     0,     2,     2
-"total",     39384,  1539,   762,  1333, 43018,120511
+"total",     39582,  1556,   766,  1333, 43237,120742
 ----------------
 Failure summary:
 S02-magicals/sub.rakudo.jvm aborted 2 test(s)
@@ -1838,6 +1838,11 @@ S02-names-vars/names.rakudo.jvm aborted 1 test(s)
 S02-names/is_default.rakudo.jvm 104 - did we throws-like X::Comp::Trait::NotOnNative?
 S02-names/pseudo.rakudo.jvm 143 - MY::.values actually produces values
 S02-names/pseudo.rakudo.jvm 144 - OUTER::.values actually produces values
+S02-types/WHICH.rakudo.jvm 163 - checking NFC.WHICH
+S02-types/WHICH.rakudo.jvm 165 - checking NFD.WHICH
+S02-types/WHICH.rakudo.jvm 167 - checking NFKC.WHICH
+S02-types/WHICH.rakudo.jvm 169 - checking NFKD.WHICH
+S02-types/WHICH.rakudo.jvm 265 - checking Uni.WHICH
 S02-types/declare.rakudo.jvm 19 - Assign big bigint to native won't overflow silently
 S03-junctions/misc.rakudo.jvm 135 - Do not try to auto-thread Junction type object (only case)
 S03-metaops/hyper.rakudo.jvm aborted 8 test(s)
@@ -1885,7 +1890,7 @@ S06-multi/proto.rakudo.jvm 8 - dispatch on class worked (anon cap)
 S06-multi/proto.rakudo.jvm 9 - dispatch with no possible candidates fell back to proto (anon cap)
 S06-multi/proto.rakudo.jvm 10 - impossible dispatch failed (anon cap)
 S06-multi/subsignature.rakudo.jvm 37 - slurpy and named interact well (2)
-S06-operator-overloading/sub.rakudo.jvm aborted 3 test(s)
+S06-operator-overloading/sub.rakudo.jvm aborted 9 test(s)
 S06-signature/arity.t aborted 4 test(s)
 S06-signature/sigilless.t aborted 8 test(s)
 S06-signature/slurpy-params.rakudo.jvm aborted 14 test(s)
@@ -1909,7 +1914,7 @@ S16-io/bom.t 10 - BOM-only file reports 0 lines like empty file
 S32-io/move.t 20 - did we throws-like X::IO::Move?
 S32-io/move.t 22 - move createonly fail
 S32-list/map.rakudo.jvm aborted 4 test(s)
-S32-list/squish.t aborted 34 test(s)
+S32-list/squish.t aborted 40 test(s)
 S32-list/unique.t aborted 20 test(s)
 S32-num/rshift_pos_amount.t aborted 189 test(s)
 S32-str/comb.rakudo.jvm aborted 37 test(s)
