@@ -587,6 +587,7 @@ S03-operators/assign.rakudo.moar................... 264    0   16   14  294
      1 todo   : list assignment with ($var, *)
      3 todo   : list assignment, autovivification (?)
 S03-operators/autoincrement-range.t................# Tests for 'a' .. 'z'
+# Tests for 'Α' .. 'Ω' (Greek uppercase)
 WARNING: unhandled Failure detected in DESTROY:
 Decrement out of range
   in block <unit> at t/spec/S03-operators/autoincrement-range.t:37
@@ -595,7 +596,6 @@ WARNING: unhandled Failure detected in DESTROY:
 Decrement out of range
   in block <unit> at t/spec/S03-operators/autoincrement-range.t:17
 
-# Tests for 'Α' .. 'Ω' (Greek uppercase)
 # Tests for 'α' .. 'ω' (Greek lowercase)
 # Tests for 'א' .. 'ת' (Hebrew)
 # Tests for '0' .. '9'
@@ -885,8 +885,8 @@ S03-operators/mix.rakudo.moar...................... 102    0   26    0  128
      8 todo   : Rakudo update in progress, but not done yet RT \#124541
      4 todo   : Wrong answer at the moment
      8 todo   : submix behavior still under discussion
-S03-operators/names.t..............................Sub+{<anon|34474733120>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
-Sub+{<anon|34474733120>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
+S03-operators/names.t..............................Sub+{<anon|34466357440>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
+Sub+{<anon|34466357440>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
    7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -1166,9 +1166,7 @@ S04-statements/do.rakudo.moar......................  21    0    1    7   29
      1 todo   : Rakudo still uses Nil here RT \#124572
 S04-statements/for-scope.t.........................  16    0    0    0   16
 S04-statements/for.rakudo.moar.....................Use of Nil in string context  in block  at t/spec/S04-statements/for.rakudo.moar:504
-Use of Nil in string context  in code  at t/spec/S04-statements/for.rakudo.moar:637
-  90    0    4    0   94
-     2 todo   : RT \#123005 RT \#118705
+  95    0    2    0   97
      1 todo   : Rakudo still uses Nil here RT \#124568
      1 todo   : Rakudo still uses Nil here RT \#124569
 S04-statements/for_with_only_one_item.t............  12    0    0    0   12
@@ -1193,7 +1191,7 @@ S04-statements/return.rakudo.moar..................  19    0    1    0   20
 S04-statements/sink.t..............................   2    0    0    0    2
 S04-statements/terminator.t........................  20    0    0    0   20
 S04-statements/try.t...............................  40    0    0    0   40
-S04-statements/unless.t............................  10    0    0    0   10
+S04-statements/unless.t............................  11    0    0    0   11
 S04-statements/until.t.............................   4    0    0    0    4
 S04-statements/when.t..............................  18    0    0    0   18
 S04-statements/while.t.............................Potential difficulties:
@@ -1201,8 +1199,7 @@ S04-statements/while.t.............................Potential difficulties:
     at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/EVAL_1:1
     ------> [32mwhile 0 { my $_ [33m⏏[31m}[0m
   10    0    0    0   10
-S04-statements/with.rakudo.moar....................   4    0    3    0    7
-     3 todo   : $_ not yet set in with/without block
+S04-statements/with.t..............................  80    0    0    0   80
                                                    pass fail todo skip plan
 S05-capture/alias.rakudo.moar......................Use of Nil in string context  in block <unit> at t/spec/S05-capture/alias.rakudo.moar:45
   25    0    3    2   30
@@ -1788,10 +1785,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 Use of uninitialized value $_ of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-21904-957394.code:4
+#   in block <unit> at getout-45818-654317.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-21904-957394.code:4
+#   in block <unit> at getout-45818-654317.code:4
 
 
   33    0    3    0   36
@@ -1824,18 +1821,10 @@ S11-modules/importing.t............................  16    0    0    0   16
 S11-modules/lexical.t..............................   2    0    0    0    2
 S11-modules/need.t.................................   2    0    0    0    2
 S11-modules/nested.t...............................   6    0    0    0    6
-S11-modules/require.rakudo.moar....................
-# Failed test 'can load InnerModule from a path at run time'
-# at t/spec/S11-modules/require.rakudo.moar line 16
-# Could not find file 't/spec/S11-modules/InnerModule.pm' for module t/spec/S11-modules/InnerModule.pm
-Cannot find method 'Any'
-  in block <unit> at t/spec/S11-modules/require.rakudo.moar:18
-
-# Looks like you planned 16 tests, but ran 3
-# Looks like you failed 1 test of 3
-   1   14    1    0   16
+S11-modules/require.rakudo.moar....................  13    0    2    1   16
+     1 skipped: Trying to import from 'InnerModule', but the following symbols are missing: quux RT #118407
      1 todo   : creation of stub package symbol NYI RT \#125083
-    13 tests aborted (missing ok/not ok)
+     1 todo   : variable form plus imports NYI RT \#125084
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  23    0    0    0   23
 S12-attributes/clone.t.............................  39    0    0    0   39
@@ -2141,8 +2130,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  10    0    0    0   10
-S16-filehandles/chmod.t............................# Using file temp_1445124507
-# Using file temp_1445124507
+S16-filehandles/chmod.t............................# Using file temp_1445210902
+# Using file temp_1445210902
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2851,19 +2840,6 @@ S32-array/pop.rakudo.moar..........................
 # Failed test ''@pop.pop = 3' died'
 # at t/spec/S32-array/pop.rakudo.moar line 92
     # Looks like you failed 1 test of 2
-WARNING: unhandled Failure detected in DESTROY:
-Cannot pop from an empty Array
-  in block <unit> at t/spec/S32-array/pop.rakudo.moar:72
-
-WARNING: unhandled Failure detected in DESTROY:
-Cannot pop from an empty Array
-  in block <unit> at t/spec/S32-array/pop.rakudo.moar:64
-
-WARNING: unhandled Failure detected in DESTROY:
-Cannot pop from an empty Array
-  in block  at t/spec/S32-array/pop.rakudo.moar:42
-  in block <unit> at t/spec/S32-array/pop.rakudo.moar:14
-
   35    0    2    0   37
      1 todo   : RT \#111720
      1 todo   : code does not die
@@ -4260,14 +4236,8 @@ S32-num/narrow.t...................................   9    0    0    0    9
 S32-num/pi.t.......................................   5    0    0    0    5
 S32-num/polar.t....................................  48    0    0    0   48
 S32-num/polymod.t..................................   4    0    0    0    4
-S32-num/power.rakudo.moar..........................
-# Failed test '-1 ** 4553535345364535345634543534 == 1'
-# at t/spec/S32-num/power.rakudo.moar line 19
-# expected: '1'
-#      got: '0'
-# Looks like you failed 1 test of 52
-  44    1    7    0   52
-     4 todo   : big exponents RT \#124798
+S32-num/power.rakudo.moar..........................  44    0    8    0   52
+     5 todo   : big exponents RT \#124798
      1 todo   : i RT \#124810
      2 todo   : wrong results for "NaN" used with "**" RT \#124800
 S32-num/rand.rakudo.moar........................... 112    0    0    1  113
@@ -4545,14 +4515,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.3577742 seconds
-# gerdr: 0.37288860 seconds
-# loop: 0.5231376 seconds
-# recursive-ternary: 0.54922505 seconds
-# hand-memoization: 0.78699809 seconds
-# sequence-ternary: 1.0954611 seconds
-# recursive-ternary-hand-cached: 1.98380020 seconds
-# sequence: 2.44818301 seconds
+integration/advent2012-day21.t.....................# kaz: 0.34499067 seconds
+# gerdr: 0.3533512 seconds
+# loop: 0.512834 seconds
+# recursive-ternary: 0.5445140 seconds
+# hand-memoization: 0.77585559 seconds
+# sequence-ternary: 1.094567 seconds
+# recursive-ternary-hand-cached: 1.9558182 seconds
+# sequence: 2.46217828 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -4609,7 +4579,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodD2403AD3/p6testmodD4AE1189.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod2A57ECEE/p6testmod2874075E.pm6')
     # Looks like you failed 1 test of 2
    5    0    2    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -4632,13 +4602,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        5839,     0,    95,   355,  6289,  6288
 "S03",        5457,     0,   114,    75,  5646,  5664
-"S04",        1314,     0,    43,    27,  1384,  1416
+"S04",        1396,     0,    38,    27,  1461,  1493
 "S05",        5696,     0,    87,    96,  5879,  6049
 "S06",        2056,     0,    59,    80,  2195,  2246
 "S07",          22,     0,     0,     0,    22,   118
 "S09",        1958,     0,    10,    37,  2005,  2005
 "S10",         105,     0,     5,     1,   111,   168
-"S11",         100,    14,     5,    10,   129,   148
+"S11",         112,     0,     6,    11,   129,   148
 "S12",        1565,     0,    40,   137,  1742,  1797
 "S13",          60,     0,     2,     0,    62,    72
 "S14",         348,     0,     8,     5,   361,   374
@@ -4651,12 +4621,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",          13,     0,     0,     0,    13,    13
 "S29",         351,     0,     3,     2,   356,   356
-"S32",       12291,     1,   188,   156, 12636, 10878
+"S32",       12291,     0,   189,   156, 12636, 10878
 "int",        1276,     0,    10,    14,  1300,  1286
 "ros",           2,     0,     0,     0,     2,     2
-"total",    120583,    15,   722,  1206,122526,121428
+"total",    120677,     0,   719,  1207,122603,121505
 ----------------
-Failure summary:
-S11-modules/require.rakudo.moar 3 - can load InnerModule from a path at run time
-S11-modules/require.rakudo.moar aborted 13 test(s)
-S32-num/power.rakudo.moar 11 - -1 ** 4553535345364535345634543534 == 1
+No failures!
