@@ -277,10 +277,9 @@ S02-types/unicode.rakudo.jvm.......................   2    0    3    0    5
      1 todo   : NFG on JVM RT \#124500
      2 todo   : NFG on JVM RT \#124501
 S02-types/version.t................................  36    0    0    0   36
-S02-types/whatever.rakudo.jvm......................  84    0    4    5   93
-     5 skipped: currying plus meta ops RT #124486
+S02-types/whatever.rakudo.jvm...................... 103    0    1    5  109
+     5 skipped: currying plus R meta op RT #124486
      1 todo   : * as dummy
-     3 todo   : RT \#122708 - currying of min/max
                                                    pass fail todo skip plan
 S03-binding/arrays.t...............................  47    0    0    0   47
 S03-binding/attributes.rakudo.jvm..................   9    0    0    3   12
@@ -654,7 +653,7 @@ S05-mass/stdrules.t................................ 191    0    0    0  191
 S05-match/arrayhash.t..............................   8    0    0    0    8
 S05-match/blocks.rakudo.jvm........................  18    0    1    0   19
      1 todo   : Assignment to matched string affects earlier match objects
-S05-match/capturing-contexts.rakudo.jvm............  50    0    1    0   51
+S05-match/capturing-contexts.rakudo.jvm............  51    0    1    0   52
      1 todo   : RT \#70007
 S05-match/make.t...................................   4    0    0    0    4
 S05-match/non-capturing.t..........................   9    0    0    0    9
@@ -695,7 +694,7 @@ S05-metasyntax/longest-alternative.rakudo.jvm......  48    0    0    5   53
 S05-metasyntax/lookaround.t........................  10    0    0    0   10
 S05-metasyntax/null.t..............................   4    0    0    0    4
 S05-metasyntax/proto-token-ltm.t...................  10    0    0    0   10
-S05-metasyntax/regex.t.............................  32    0    0    0   32
+S05-metasyntax/regex.t.............................  42    0    0    0   42
 S05-metasyntax/repeat.t............................  32    0    0    0   32
 S05-metasyntax/sequential-alternation.t............  10    0    0    0   10
 S05-metasyntax/single-quotes.t.....................   5    0    0    0    5
@@ -756,8 +755,8 @@ S05-modifier/repetition.t..........................   0   12    0    0   12
 S05-modifier/sigspace.t............................  16    0    0    0   16
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  13    0    0    0   13
-S05-substitution/subst.rakudo.jvm..................  24  130    0    0  154
-   130 tests aborted (missing ok/not ok)
+S05-substitution/subst.rakudo.jvm..................  24  138    0    0  162
+   138 tests aborted (missing ok/not ok)
 S05-transliteration/79778.t........................   1    0    0    0    1
 S05-transliteration/trans.rakudo.jvm...............  61    0    0    1   62
      1 skipped: feed operator NYI
@@ -1280,4 +1279,149 @@ S17-supply/squish.t................................  15    0    0    0   15
 S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
      2 skipped: doesn't work or can't test RT #124822
 S17-supply/start.t.................................   9    0    0    0    9
-S17-supply/syntax.t................................
+S17-supply/syntax.t................................  53    0    0    0   53
+S17-supply/throttle.t..............................   7    0    0    0    7
+S17-supply/unique.t................................  16    1    0    0   17
+S17-supply/wait.t..................................   4    0    0    0    4
+S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
+S17-supply/words.t.................................   5    0    0    0    5
+S17-supply/zip-latest.t............................  12    0    0    0   12
+S17-supply/zip.t...................................  10    0    0    0   10
+                                                   pass fail todo skip plan
+S19-command-line-options/02-dash-n.t...............   3    0    0    0    3
+S19-command-line-options/03-dash-p.t...............   0    2    0    0    2
+S19-command-line/arguments.t.......................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+S19-command-line/dash-e.t..........................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S19-command-line/help.t............................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S19-command-line/repl.t............................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S22-package-format/local.rakudo.jvm................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S24-testing/0-compile.t............................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S24-testing/3-output.t.............................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S24-testing/line-numbers.t.........................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S26-documentation/01-delimited.t...................   0   40    0    0   40
+    40 tests aborted (missing ok/not ok)
+S26-documentation/02-paragraph.t...................   0   27    0    0   27
+    27 tests aborted (missing ok/not ok)
+S26-documentation/03-abbreviated.t.................   0   30    0    0   30
+    30 tests aborted (missing ok/not ok)
+S26-documentation/04-code.t........................   0   50    0    0   50
+    50 tests aborted (missing ok/not ok)
+S26-documentation/05-comment.t.....................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+S26-documentation/06-lists.t.......................   0   39    0    0   39
+    39 tests aborted (missing ok/not ok)
+S26-documentation/07-tables.t......................   0   38    0    0   38
+    38 tests aborted (missing ok/not ok)
+S26-documentation/08-formattingcodes.t.............   0   45    0    0   45
+    45 tests aborted (missing ok/not ok)
+S26-documentation/09-configuration.rakudo.jvm......   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+S26-documentation/10-doc-cli.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S26-documentation/block-leading.t..................   0  334    0    0  334
+   334 tests aborted (missing ok/not ok)
+S26-documentation/block-trailing.t.................   0  327    0    0  327
+   327 tests aborted (missing ok/not ok)
+S26-documentation/module-comment.t.................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S26-documentation/multiline-leading.t..............   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S26-documentation/multiline-trailing.t.............   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S26-documentation/wacky.t..........................   0   30    0    0   30
+    30 tests aborted (missing ok/not ok)
+S26-documentation/why-both.t.......................   0  291    0    0  291
+   291 tests aborted (missing ok/not ok)
+S26-documentation/why-leading.t....................   0  355    0    0  355
+   355 tests aborted (missing ok/not ok)
+S26-documentation/why-trailing.t...................   0  348    0    0  348
+   348 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S28-named-variables/cwd.t..........................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S28-named-variables/inc.t..........................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S29-any/cmp.t......................................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S29-any/isa.t......................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S29-context/die.rakudo.jvm.........................   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
+S29-context/eval.rakudo.jvm........................   0   23    0    0   23
+    23 tests aborted (missing ok/not ok)
+S29-context/evalfile.t.............................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S29-context/exit-in-if.t...........................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S29-context/exit.t.................................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+S29-context/sleep.t................................   0   22    0    0   22
+    22 tests aborted (missing ok/not ok)
+S29-conversions/hash.t.............................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S29-conversions/ord_and_chr.rakudo.jvm.............   0   53    0    0   53
+    53 tests aborted (missing ok/not ok)
+S29-os/system.t....................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S32-array/adverbs.t................................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S32-array/bool.t...................................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+S32-array/create.t.................................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S32-array/delete-adverb-native.t...................   0  138    0    0  138
+   138 tests aborted (missing ok/not ok)
+S32-array/delete-adverb.t..........................   0  218    0    0  218
+   218 tests aborted (missing ok/not ok)
+S32-array/delete.t.................................   0   32    0    0   32
+    32 tests aborted (missing ok/not ok)
+S32-array/elems.t..................................   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
+S32-array/end.t....................................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+S32-array/exists-adverb.t..........................   0   52    0    0   52
+    52 tests aborted (missing ok/not ok)
+S32-array/keys_values.t............................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S32-array/kv.t.....................................   0   18    0    0   18
+    18 tests aborted (missing ok/not ok)
+S32-array/pairs.t..................................   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
+S32-array/perl.t...................................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S32-array/pop.rakudo.jvm...........................   0   37    0    0   37
+    37 tests aborted (missing ok/not ok)
+S32-array/push.t...................................   0   52    0    0   52
+    52 tests aborted (missing ok/not ok)
+S32-array/rotate.t.................................   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
+S32-array/shift.t..................................   0   31    0    0   31
+    31 tests aborted (missing ok/not ok)
+S32-array/splice.rakudo.jvm........................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S32-array/unshift.t................................   0   76    0    0   76
+    76 tests aborted (missing ok/not ok)
+S32-basics/warn.t..................................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S32-basics/xxKEY.rakudo.jvm........................   0  129    0    0  129
+   129 tests aborted (missing ok/not ok)
+S32-basics/xxPOS.rakudo.jvm........................   0   60    0    0   60
+    60 tests aborted (missing ok/not ok)
+S32-container/cat.rakudo.jvm.......................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S32-container/roundrobin.t.........................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+Can't read t/spec/S32-container/stringify.t: No such file or directory
