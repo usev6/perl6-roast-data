@@ -72,7 +72,7 @@ S02-literals/radix.rakudo.jvm...................... 151    0    1    2  154
      1 skipped: RT #123862 - negative radix
      1 skipped: Really?!
      1 todo   : This needs an RT
-S02-literals/string-interpolation.t................  15    0    0    0   15
+S02-literals/string-interpolation.t................  16    0    0    0   16
 S02-literals/sub-calls.t...........................  20    0    0    0   20
 S02-literals/subscript.t...........................   2    0    0    0    2
 S02-literals/types.t...............................   7    0    0    0    7
@@ -352,7 +352,8 @@ S03-operators/basic-types.t........................  19    0    0    0   19
 S03-operators/bit.t................................  38    0    0    0   38
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
 S03-operators/brainos.t............................   9    0    0    0    9
-S03-operators/buf.t................................  53    0    0    0   53
+S03-operators/buf.t................................  20   33    0    0   53
+    33 tests aborted (missing ok/not ok)
 S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  31    0    0    0   31
 S03-operators/comparison-simple.t..................  24    0    0    0   24
@@ -411,8 +412,7 @@ S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
 S03-operators/relational.rakudo.jvm................ 118    0    6    0  124
      4 todo   : RT \#121987
      2 todo   : RT \#81336
-S03-operators/repeat.rakudo.jvm....................  31    0    1    0   32
-     1 todo PASSED: RT 123830
+S03-operators/repeat.t.............................  32    0    0    0   32
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set.t................................ 292    0    0    0  292
 S03-operators/short-circuit.t......................  83    0    0    0   83
@@ -469,7 +469,7 @@ S04-declarations/constant.rakudo.jvm...............  66    0    4    0   70
 S04-declarations/implicit-parameter.t..............  20    0    0    0   20
 S04-declarations/multiple.rakudo.jvm...............   5    0    1    0    6
      1 todo   : nom regression RT \#125053
-S04-declarations/my.rakudo.jvm.....................  95    0    2    0   97
+S04-declarations/my.rakudo.jvm.....................  96    0    2    0   98
      2 todo   : RT \#117043
 S04-declarations/our.t.............................  31    0    0    0   31
 S04-declarations/smiley.t..........................  60    0    0    0   60
@@ -754,8 +754,8 @@ S05-modifier/repetition.t..........................   0   12    0    0   12
 S05-modifier/sigspace.t............................  16    0    0    0   16
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  13    0    0    0   13
-S05-substitution/subst.rakudo.jvm..................  24  138    0    0  162
-   138 tests aborted (missing ok/not ok)
+S05-substitution/subst.rakudo.jvm..................  24  139    0    0  163
+   139 tests aborted (missing ok/not ok)
 S05-transliteration/79778.t........................   1    0    0    0    1
 S05-transliteration/trans.rakudo.jvm...............  61    0    0    1   62
      1 skipped: feed operator NYI
@@ -797,7 +797,7 @@ S06-macros/quasi-blocks.rakudo.jvm.................  12    0    0    2   14
 S06-macros/unquoting.t.............................   6    0    0    0    6
 S06-multi/lexical-multis.rakudo.jvm................  14    0    1    0   15
      1 todo   : lexical scope as tie breaker
-S06-multi/positional-vs-named.t....................  27    0    0    0   27
+S06-multi/positional-vs-named.t....................  28    0    0    0   28
 S06-multi/proto.rakudo.jvm.........................  22    3    1    0   26
      1 todo   : operator protos
 S06-multi/redispatch.t.............................  14    0    0    0   14
@@ -1218,8 +1218,7 @@ S17-promise/allof.t................................  11    0    0    0   11
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/basic.t................................  23    0    0    0   23
 S17-promise/in.t...................................   3    0    0    0    3
-S17-promise/start.rakudo.jvm.......................  36    0    0    2   38
-     2 skipped: RT #122715
+S17-promise/start.t................................  39    0    0    0   39
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
 S17-scheduler/at.rakudo.jvm........................  14    0    1    0   15
@@ -1231,7 +1230,7 @@ S17-scheduler/basic.rakudo.jvm.....................  28    0    2   10   40
      2 skipped: waiting for new '.loads' semantics RT #124777
      2 todo   : huh?
 S17-scheduler/every.t..............................  18    0    0    0   18
-S17-scheduler/in.t.................................  13    1    0    0   14
+S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.t...............................  12    0    0    0   12
 S17-supply/Promise.t...............................  13    0    0    0   13
@@ -1405,8 +1404,9 @@ S32-hash/slice.rakudo.jvm..........................  19    0   10    0   29
      6 todo   : binding on hash elements unimplemented
      2 todo   : binding on hash elements unimplemented RT \#124779
      2 todo   : binding on hash elements unimplemented RT \#124780
-S32-io/IO-Socket-Async.rakudo.jvm..................   5    0    0    1    6
+S32-io/IO-Socket-Async.rakudo.jvm..................   4    1    0    1    6
      1 skipped: Flapping RT #122318
+     1 tests aborted (missing ok/not ok)
 S32-io/IO-Socket-INET.t............................   0    0    0   47   47
     47 skipped: Operating system not yet supported
 S32-io/chdir.rakudo.jvm............................   8    0    0    2   10
@@ -1436,8 +1436,10 @@ S32-io/note.t......................................   6    0    0    0    6
 S32-io/other.t.....................................  60    0    0    0   60
 S32-io/pipe.t......................................  14    0    0    0   14
 S32-io/rename.t....................................  29    0    0    0   29
-S32-io/slurp.t.....................................  17    0    0    0   17
-S32-io/spurt.t.....................................  35    0    0    0   35
+S32-io/slurp.t.....................................   9    8    0    0   17
+     8 tests aborted (missing ok/not ok)
+S32-io/spurt.t.....................................   0   35    0    0   35
+    35 tests aborted (missing ok/not ok)
 S32-list/categorize.t..............................  28    0    0    0   28
 S32-list/classify.rakudo.jvm.......................  36    0    1    3   40
      3 skipped: Cannot use bind operator with this LHS RT #124751
@@ -1566,7 +1568,7 @@ S32-str/lines.t....................................  47    0    0    0   47
 S32-str/numeric.rakudo.jvm......................... 163    0    5    0  168
      5 todo   : Unsure of what val() should accept
 S32-str/ords.t.....................................   6    0    0    0    6
-S32-str/pack.t.....................................   7    0    0    0    7
+S32-str/pack.t.....................................   1    6    0    0    7
 S32-str/pos.t......................................   2    0    0    0    2
 S32-str/rindex.t...................................  43    0    0    0   43
 S32-str/samecase.t.................................   8    0    0    0    8
@@ -1801,11 +1803,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        5780,    61,   102,   374,  6317,  6316
-"S03",        5447,    22,   113,    75,  5657,  5675
-"S04",        1365,    30,    43,    32,  1470,  1502
-"S05",        4853,   775,    86,   159,  5873,  6074
-"S06",        1996,    46,    55,    85,  2182,  2233
+"S02",        5781,    61,   102,   374,  6318,  6317
+"S03",        5415,    55,   112,    75,  5657,  5675
+"S04",        1366,    30,    43,    32,  1471,  1503
+"S05",        4853,   776,    86,   159,  5874,  6075
+"S06",        1997,    46,    55,    85,  2183,  2234
 "S07",          22,     0,     0,     0,    22,   118
 "S09",        1963,     0,    11,    37,  2011,  2011
 "S10",         104,     0,     6,     1,   111,   168
@@ -1813,19 +1815,19 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S12",        1560,     1,    48,   137,  1746,  1801
 "S13",          60,     0,     2,     0,    62,    72
 "S14",         345,     2,     8,     6,   361,   374
-"S15",          37,     7,     4,    35,    83, 78614
+"S15",          37,     7,     4,    35,    83, 79016
 "S16",         489,     9,     6,    16,   520,   568
-"S17",         804,     1,     5,    22,   832,   880
+"S17",         808,     0,     5,    20,   833,   881
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         351,     0,     3,     3,   357,   357
-"S32",       12025,   263,   187,   174, 12649, 10903
+"S32",       11975,   313,   187,   174, 12649, 10903
 "int",        1261,    11,     8,    14,  1294,  1287
 "ros",           2,     0,     0,     0,     2,     2
-"total",     40547,  1228,   701,  1329, 43805,121322
+"total",     40472,  1311,   700,  1327, 43810,121729
 ----------------
 Failure summary:
 S02-magicals/sub.rakudo.jvm aborted 2 test(s)
@@ -1846,6 +1848,7 @@ S02-types/hash_ref.t aborted 5 test(s)
 S03-junctions/misc.t 142 - Do not try to auto-thread Junction type object (only case)
 S03-metaops/hyper.rakudo.jvm 146 - .squish is nodal
 S03-metaops/hyper.rakudo.jvm aborted 11 test(s)
+S03-operators/buf.t aborted 33 test(s)
 S03-operators/increment.t 16 - can't postincrement a literal number
 S03-operators/increment.t 17 - can't preincrement a literal number
 S03-operators/increment.t 18 - can't postdecrement a literal number
@@ -1882,7 +1885,7 @@ S05-modifier/counted.t 3 - did we throws-like Exception?
 S05-modifier/counted.t aborted 98 test(s)
 S05-modifier/repetition-exhaustive.rakudo.jvm aborted 5 test(s)
 S05-modifier/repetition.t aborted 12 test(s)
-S05-substitution/subst.rakudo.jvm aborted 138 test(s)
+S05-substitution/subst.rakudo.jvm aborted 139 test(s)
 S06-advanced/callframe.rakudo.jvm aborted 2 test(s)
 S06-currying/misc.rakudo.jvm aborted 1 test(s)
 S06-multi/proto.rakudo.jvm 8 - dispatch on class worked (anon cap)
@@ -1910,7 +1913,6 @@ S16-io/bom.t 7 - BOM stripped first line has correct chars
 S16-io/bom.t 8 - BOM stripped first line is correct
 S16-io/bom.t 9 - BOM-only file slurps to empty string
 S16-io/bom.t 10 - BOM-only file reports 0 lines like empty file
-S17-scheduler/in.t 8 - Timer tasks on ThreadPoolScheduler/:catch ran in right order
 S32-array/adverbs.t 22 - did we throws-like X::Adverb?
 S32-array/adverbs.t 42 - did we throws-like X::Adverb?
 S32-array/adverbs.t 62 - did we throws-like X::Adverb?
@@ -1999,6 +2001,9 @@ S32-hash/adverbs.t 1064 - did we throws-like X::Adverb?
 S32-hash/adverbs.t 1084 - did we throws-like X::Adverb?
 S32-hash/adverbs.t 1104 - did we throws-like X::Adverb?
 S32-hash/adverbs.t 1124 - did we throws-like X::Adverb?
+S32-io/IO-Socket-Async.rakudo.jvm aborted 1 test(s)
+S32-io/slurp.t aborted 8 test(s)
+S32-io/spurt.t aborted 35 test(s)
 S32-list/map.rakudo.jvm aborted 2 test(s)
 S32-list/produce.t aborted 25 test(s)
 S32-list/squish.t aborted 40 test(s)
@@ -2008,6 +2013,12 @@ S32-str/index.t 37 - sub does -1.0E34 give Nil
 S32-str/index.t 38 - method does -1.0E34 give Nil
 S32-str/index.t 39 - sub does -1.0E35 give Nil
 S32-str/index.t 40 - method does -1.0E35 give Nil
+S32-str/pack.t 1 - H* works
+S32-str/pack.t 2 - H works on odd-length strings
+S32-str/pack.t 4 - C S L n N v V work
+S32-str/pack.t 5 - x by itself works
+S32-str/pack.t 6 - x with amount works
+S32-str/pack.t 7 - x* works (as in it does nothing.)
 S32-str/split-simple.t aborted 14 test(s)
 S32-str/split.rakudo.jvm aborted 31 test(s)
 S32-str/tc.rakudo.jvm 5 - sharp s => Ss
