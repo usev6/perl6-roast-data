@@ -330,8 +330,7 @@ S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
 S03-operators/assign.rakudo.jvm.................... 264    0   16   14  294
      3 skipped: ,= needs to be special cased after GLR to compile to push(@a, 3, 4)
      2 skipped: RT #76734
-     2 skipped: cannot modifiy an immutable value RT #124533
-     1 skipped: cannot modifiy an immutable value RT #124534
+     3 skipped: cannot modify an immutable value RT #124533
      6 skipped: ~< and ~> NYI RT #124531
      2 todo   : ,= needs to be special cased after GLR to compile to push(@a, 3, 4)
      2 todo   : item assignment
@@ -551,19 +550,21 @@ S04-statements/gather.rakudo.jvm...................  31    0    0    3   34
 S04-statements/given.t.............................  51    0    0    0   51
 S04-statements/if.rakudo.jvm.......................  39    0    4    0   43
      4 todo   : RT\#105872
-S04-statements/label.t.............................   1    4    0    0    5
-     4 tests aborted (missing ok/not ok)
-S04-statements/last.t..............................   7    2    0    0    9
-     2 tests aborted (missing ok/not ok)
+S04-statements/label.rakudo.jvm....................   2    0    2    2    6
+     1 skipped: SEGV on moar, wrong Exception type on jvm, RT 126490
+     1 skipped: control exception without handler, RT 126490
+     2 todo   : redo of outer labels broken, related to RT 126490
+S04-statements/last.rakudo.jvm.....................   8    0    0    1    9
+     1 skipped: control exception without handler, RT 126490
 S04-statements/loop.t..............................  15    0    0    0   15
 S04-statements/map-and-sort-in-for.t...............   4    0    0    0    4
-S04-statements/next.t..............................   6    6    0    0   12
-     6 tests aborted (missing ok/not ok)
+S04-statements/next.rakudo.jvm.....................  11    0    0    1   12
+     1 skipped: control exception without handler, RT 126490
 S04-statements/no-implicit-block.t.................  12    0    0    0   12
 S04-statements/once.t..............................  21    0    0    0   21
 S04-statements/quietly.t...........................   4    0    0    0    4
-S04-statements/redo.t..............................  11    1    0    0   12
-     1 tests aborted (missing ok/not ok)
+S04-statements/redo.rakudo.jvm.....................  11    0    0    1   12
+     1 skipped: control exception without handler, RT 126490
 S04-statements/repeat.t............................  19    0    0    0   19
 S04-statements/return.rakudo.jvm...................  19    0    1    0   20
      1 todo   : lexotic return
@@ -1480,8 +1481,8 @@ S32-list/minmax.rakudo.jvm.........................  99    0    0    2  101
      2 skipped: post-GLR
 S32-list/permutations.t............................   2    0    0    0    2
 S32-list/pick.t....................................  57    0    0    0   57
-S32-list/produce.t.................................   0   25    0    0   25
-    25 tests aborted (missing ok/not ok)
+S32-list/produce.rakudo.jvm........................  20    0    0    5   25
+     5 skipped: RT #126493 - expected Positional but got Seq
 S32-list/reduce.t..................................  15    0    0    0   15
 S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
      1 todo   : RT \#77914
@@ -1568,7 +1569,7 @@ S32-str/lines.t....................................  47    0    0    0   47
 S32-str/numeric.rakudo.jvm......................... 163    0    5    0  168
      5 todo   : Unsure of what val() should accept
 S32-str/ords.t.....................................   6    0    0    0    6
-S32-str/pack.t.....................................   1    6    0    0    7
+S32-str/pack.t.....................................   7    0    0    0    7
 S32-str/pos.t......................................   2    0    0    0    2
 S32-str/rindex.t...................................  43    0    0    0   43
 S32-str/samecase.t.................................   8    0    0    0    8
@@ -1715,8 +1716,9 @@ integration/advent2010-day11.t.....................   2    0    0    0    2
 integration/advent2010-day12.t.....................  13    0    0    0   13
 integration/advent2010-day14.t.....................   5    0    0    0    5
 integration/advent2010-day16.t.....................  13    0    0    0   13
-integration/advent2010-day19.rakudo.jvm............   4    1    1    0    6
+integration/advent2010-day19.rakudo.jvm............   4    0    2    0    6
      1 todo   : RT \#121940 - should be 'True'
+     1 todo   : RT \#126491
 integration/advent2010-day21.t.....................   4    0    0    0    4
 integration/advent2010-day22.t.....................   3    0    0    0    3
 integration/advent2010-day23.t.....................   8    0    0    0    8
@@ -1796,7 +1798,7 @@ integration/say-crash.t............................   4    0    0    0    4
 integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.t.........................  19    0    0    0   19
+integration/weird-errors.t.........................  20    0    0    0   20
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
@@ -1805,7 +1807,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        5781,    61,   102,   374,  6318,  6317
 "S03",        5415,    55,   112,    75,  5657,  5675
-"S04",        1366,    30,    43,    32,  1471,  1503
+"S04",        1373,    17,    45,    37,  1472,  1504
 "S05",        4853,   776,    86,   159,  5874,  6075
 "S06",        1997,    46,    55,    85,  2183,  2234
 "S07",          22,     0,     0,     0,    22,   118
@@ -1824,10 +1826,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         351,     0,     3,     3,   357,   357
-"S32",       11975,   313,   187,   174, 12649, 10903
-"int",        1261,    11,     8,    14,  1294,  1287
+"S32",       12001,   282,   187,   179, 12649, 10903
+"int",        1262,    10,     9,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     40472,  1311,   700,  1327, 43810,121729
+"total",     40506,  1266,   703,  1337, 43812,121731
 ----------------
 Failure summary:
 S02-magicals/sub.rakudo.jvm aborted 2 test(s)
@@ -1867,10 +1869,6 @@ S04-phasers/first.t 3 - multiple FIRST {} ran in order
 S04-phasers/first.t 4 - FIRST {} ran before ENTER {}
 S04-phasers/pre-post.rakudo.jvm aborted 4 test(s)
 S04-statements/for.rakudo.jvm 91 - did we throws-like X::Parameter::RW?
-S04-statements/label.t aborted 4 test(s)
-S04-statements/last.t aborted 2 test(s)
-S04-statements/next.t aborted 6 test(s)
-S04-statements/redo.t aborted 1 test(s)
 S04-statements/with.t 37 - $_: with on Failure
 S04-statements/with.t 44 - $pos: with on Failure
 S04-statements/with.t 51 - $_: without on Failure
@@ -2005,7 +2003,6 @@ S32-io/IO-Socket-Async.rakudo.jvm aborted 1 test(s)
 S32-io/slurp.t aborted 8 test(s)
 S32-io/spurt.t aborted 35 test(s)
 S32-list/map.rakudo.jvm aborted 2 test(s)
-S32-list/produce.t aborted 25 test(s)
 S32-list/squish.t aborted 40 test(s)
 S32-list/unique.t aborted 20 test(s)
 S32-str/comb.rakudo.jvm aborted 37 test(s)
@@ -2013,16 +2010,9 @@ S32-str/index.t 37 - sub does -1.0E34 give Nil
 S32-str/index.t 38 - method does -1.0E34 give Nil
 S32-str/index.t 39 - sub does -1.0E35 give Nil
 S32-str/index.t 40 - method does -1.0E35 give Nil
-S32-str/pack.t 1 - H* works
-S32-str/pack.t 2 - H works on odd-length strings
-S32-str/pack.t 4 - C S L n N v V work
-S32-str/pack.t 5 - x by itself works
-S32-str/pack.t 6 - x with amount works
-S32-str/pack.t 7 - x* works (as in it does nothing.)
 S32-str/split-simple.t aborted 14 test(s)
 S32-str/split.rakudo.jvm aborted 31 test(s)
 S32-str/tc.rakudo.jvm 5 - sharp s => Ss
 S32-str/tc.rakudo.jvm 6 - lj => Lj (in one character)
-integration/advent2010-day19.rakudo.jvm 4 - 42 but False
 integration/advent2012-day10.t aborted 9 test(s)
 integration/advent2012-day15.t 9 - FIRST/NEXT/LAST example
