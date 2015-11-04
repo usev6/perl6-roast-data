@@ -226,8 +226,8 @@ S02-types/keyhash.rakudo.jvm.......................   0   59    0    0   59
     59 tests aborted (missing ok/not ok)
 S02-types/lazy-lists.t.............................   0   23    0    0   23
     23 tests aborted (missing ok/not ok)
-S02-types/list.t...................................   0   59    0    0   59
-    59 tests aborted (missing ok/not ok)
+S02-types/list.t...................................   0   61    0    0   61
+    61 tests aborted (missing ok/not ok)
 S02-types/lists.rakudo.jvm.........................   0   32    0    0   32
     32 tests aborted (missing ok/not ok)
 S02-types/mix.rakudo.jvm...........................   0  192    0    0  192
@@ -254,8 +254,8 @@ S02-types/pair.rakudo.jvm..........................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 S02-types/parsing-bool.t...........................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
-S02-types/range.t..................................   0  161    0    0  161
-   161 tests aborted (missing ok/not ok)
+S02-types/range.t..................................   0  168    0    0  168
+   168 tests aborted (missing ok/not ok)
 S02-types/set.rakudo.jvm...........................   0  174    0    0  174
    174 tests aborted (missing ok/not ok)
 S02-types/sethash.rakudo.jvm.......................   0  202    0    0  202
@@ -409,8 +409,8 @@ S03-operators/overflow.t...........................   0   98    0    0   98
     98 tests aborted (missing ok/not ok)
 S03-operators/precedence.rakudo.jvm................   0   64    0    0   64
     64 tests aborted (missing ok/not ok)
-S03-operators/range-basic.t........................   0  105    0    0  105
-   105 tests aborted (missing ok/not ok)
+S03-operators/range-basic.t........................   0  110    0    0  110
+   110 tests aborted (missing ok/not ok)
 S03-operators/range-int.t..........................   0  480    0    0  480
    480 tests aborted (missing ok/not ok)
 S03-operators/range.t..............................   0  125    0    0  125
@@ -720,8 +720,8 @@ S05-metasyntax/assertions.t........................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 S05-metasyntax/changed.t...........................   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
-S05-metasyntax/charset.t...........................   0   44    0    0   44
-    44 tests aborted (missing ok/not ok)
+S05-metasyntax/charset.t...........................   0   47    0    0   47
+    47 tests aborted (missing ok/not ok)
 S05-metasyntax/delimiters.t........................   0   21    0    0   21
     21 tests aborted (missing ok/not ok)
 S05-metasyntax/interpolating-closure.rakudo.jvm....   0    7    0    0    7
@@ -1277,8 +1277,8 @@ S16-filehandles/io.rakudo.jvm......................   0  125    0    0  125
    125 tests aborted (missing ok/not ok)
 S16-filehandles/io_in_for_loops.t..................   0   33    0    0   33
     33 tests aborted (missing ok/not ok)
-S16-filehandles/io_in_while_loops.rakudo.jvm.......   0   16    0    0   16
-    16 tests aborted (missing ok/not ok)
+S16-filehandles/io_in_while_loops.rakudo.jvm.......   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
 S16-filehandles/mkdir_rmdir.t......................   0   14    0    0   14
     14 tests aborted (missing ok/not ok)
 S16-filehandles/open.t.............................   0    5    0    0    5
@@ -2113,10 +2113,10 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    75,     0,     0,    75,    86
-"S02",           0,  5354,     0,     0,  5354,  5354
-"S03",           0,  5671,     0,     0,  5671,  5689
+"S02",           0,  5363,     0,     0,  5363,  5363
+"S03",           0,  5676,     0,     0,  5676,  5694
 "S04",           0,  1452,     0,     0,  1452,  1504
-"S05",           0,  5874,     0,     0,  5874,  6075
+"S05",           0,  5877,     0,     0,  5877,  6078
 "S06",           0,  2173,     0,     0,  2173,  2234
 "S07",           0,    22,     0,     0,    22,   118
 "S09",           0,   521,     0,     0,   521,   521
@@ -2126,7 +2126,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S13",           0,    62,     0,     0,    62,    72
 "S14",           0,   361,     0,     0,   361,   374
 "S15",           0,    83,     0,     0,    83, 79016
-"S16",           0,   397,     0,     0,   397,   445
+"S16",           0,   398,     0,     0,   398,   452
 "S17",           0,   833,     0,     0,   833,   881
 "S19",           0,    14,     0,     0,    14,    18
 "S22",           0,    24,     0,     0,    24,    24
@@ -2137,7 +2137,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0,  8870,     0,     0,  8870,  8903
 "int",           0,  1282,     0,     0,  1282,  1278
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 37223,     0,     0, 37223,116955
+"total",         0, 37241,     0,     0, 37241,116979
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2252,7 +2252,7 @@ S02-types/int-uint.t aborted 1 test(s)
 S02-types/isDEPRECATED.rakudo.jvm aborted 21 test(s)
 S02-types/keyhash.rakudo.jvm aborted 59 test(s)
 S02-types/lazy-lists.t aborted 23 test(s)
-S02-types/list.t aborted 59 test(s)
+S02-types/list.t aborted 61 test(s)
 S02-types/lists.rakudo.jvm aborted 32 test(s)
 S02-types/mix.rakudo.jvm aborted 192 test(s)
 S02-types/mixed_multi_dimensional.rakudo.jvm aborted 80 test(s)
@@ -2266,7 +2266,7 @@ S02-types/nil.rakudo.jvm aborted 52 test(s)
 S02-types/num.t aborted 66 test(s)
 S02-types/pair.rakudo.jvm aborted 4 test(s)
 S02-types/parsing-bool.t aborted 4 test(s)
-S02-types/range.t aborted 161 test(s)
+S02-types/range.t aborted 168 test(s)
 S02-types/set.rakudo.jvm aborted 174 test(s)
 S02-types/sethash.rakudo.jvm aborted 202 test(s)
 S02-types/sigils-and-types.rakudo.jvm aborted 27 test(s)
@@ -2343,7 +2343,7 @@ S03-operators/numeric-shift.t aborted 37 test(s)
 S03-operators/orelse.t aborted 10 test(s)
 S03-operators/overflow.t aborted 98 test(s)
 S03-operators/precedence.rakudo.jvm aborted 64 test(s)
-S03-operators/range-basic.t aborted 105 test(s)
+S03-operators/range-basic.t aborted 110 test(s)
 S03-operators/range-int.t aborted 480 test(s)
 S03-operators/range.t aborted 125 test(s)
 S03-operators/reduce-le1arg.rakudo.jvm aborted 54 test(s)
@@ -2497,7 +2497,7 @@ S05-metachars/tilde.t aborted 29 test(s)
 S05-metasyntax/angle-brackets.rakudo.jvm aborted 91 test(s)
 S05-metasyntax/assertions.t aborted 4 test(s)
 S05-metasyntax/changed.t aborted 12 test(s)
-S05-metasyntax/charset.t aborted 44 test(s)
+S05-metasyntax/charset.t aborted 47 test(s)
 S05-metasyntax/delimiters.t aborted 21 test(s)
 S05-metasyntax/interpolating-closure.rakudo.jvm aborted 7 test(s)
 S05-metasyntax/litvar.rakudo.jvm aborted 33 test(s)
@@ -2770,7 +2770,7 @@ S16-filehandles/filestat.t aborted 10 test(s)
 S16-filehandles/filetest.rakudo.jvm aborted 43 test(s)
 S16-filehandles/io.rakudo.jvm aborted 125 test(s)
 S16-filehandles/io_in_for_loops.t aborted 33 test(s)
-S16-filehandles/io_in_while_loops.rakudo.jvm aborted 16 test(s)
+S16-filehandles/io_in_while_loops.rakudo.jvm aborted 17 test(s)
 S16-filehandles/mkdir_rmdir.t aborted 14 test(s)
 S16-filehandles/open.t aborted 5 test(s)
 S16-filehandles/unlink.rakudo.jvm aborted 6 test(s)
