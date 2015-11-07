@@ -208,7 +208,7 @@ S02-names-vars/signature.t.........................Potential difficulties:
   13    0    0    0   13
 S02-names-vars/variables-and-packages.rakudo.moar..  35    0    3    0   38
      3 todo   : nom regression: RT \#122346
-S02-names-vars/varnames.rakudo.moar................  11    0    2    0   13
+S02-names-vars/varnames.rakudo.moar................  27    0    2    0   29
      2 todo   : cannot easily override [] at the moment
 S02-names/bare-sigil.t.............................  11    0    0    0   11
 S02-names/caller.t.................................Use of Nil in string context  in block  at t/spec/S02-names/caller.t:88
@@ -232,12 +232,12 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  24    0    0    0   24
 S02-names/our.rakudo.moar..........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.moar.......................  69    0    4   71  144
+S02-names/pseudo.rakudo.moar.......................  71    0    6   67  144
      4 skipped: Cannot bind to &::("CORE")::foo RT #126113
-     4 skipped: RT #126523
      4 skipped: the binding in here is NYI RT #124914
     23 skipped: various issues to resolve RT #124917
     36 skipped: various issues, skipping all for now RT #124915
+     2 todo   : RT \#126523
      2 todo   : binding and interpolation together NYI
      1 todo   : interpolation and auto-viv NYI
      1 todo   : not entirely sure these make sense...
@@ -531,6 +531,10 @@ S03-operators/assign.rakudo.moar................... 264    0   16   14  294
      1 todo   : list assignment with ($var, *)
      3 todo   : list assignment, autovivification (?)
 S03-operators/autoincrement-range.t................# Tests for 'a' .. 'z'
+WARNING: unhandled Failure detected in DESTROY:
+Decrement out of range
+  in block <unit> at t/spec/S03-operators/autoincrement-range.t:17
+
 # Tests for 'Α' .. 'Ω' (Greek uppercase)
 # Tests for 'α' .. 'ω' (Greek lowercase)
 # Tests for 'א' .. 'ת' (Hebrew)
@@ -821,8 +825,8 @@ S03-operators/mix.rakudo.moar...................... 102    0   26    0  128
      8 todo   : Rakudo update in progress, but not done yet RT \#124541
      4 todo   : Wrong answer at the moment
      8 todo   : submix behavior still under discussion
-S03-operators/names.t..............................Sub+{<anon|34468402816>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
-Sub+{<anon|34468402816>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
+S03-operators/names.t..............................Sub+{<anon|34460038464>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
+Sub+{<anon|34460038464>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
    7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -1755,10 +1759,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 Use of uninitialized value $_ of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-27818-19289.code:4
+#   in block <unit> at getout-73666-972299.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-27818-19289.code:4
+#   in block <unit> at getout-73666-972299.code:4
 
 
   33    0    3    0   36
@@ -2101,8 +2105,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  12    0    0    0   12
-S16-filehandles/chmod.t............................# Using file temp_1446769708
-# Using file temp_1446769708
+S16-filehandles/chmod.t............................# Using file temp_1446856110
+# Using file temp_1446856110
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2117,8 +2121,7 @@ S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/mkdir_rmdir.t......................  14    0    0    0   14
 S16-filehandles/open.t.............................   4    0    0    1    5
      1 skipped: open('nonexisting') => undefined is waiting on 'use fatal'
-S16-filehandles/unlink.rakudo.moar.................   5    0    0    1    6
-     1 skipped: implicit closure of file handle at scope exit NYI (FAILS ON WINDOWS) (noauto)
+S16-filehandles/unlink.t...........................   3    0    0    0    3
 S16-io/bare-say.t..................................   7    0    0    0    7
 S16-io/basic-open.t................................  11    0    0    0   11
 S16-io/bom.t.......................................  10    0    0    0   10
@@ -2174,12 +2177,7 @@ S17-scheduler/basic.rakudo.moar....................  28    0    2   10   40
      2 skipped: waiting for new '.loads' semantics RT #124777
      2 todo   : huh?
 S17-scheduler/every.t..............................  18    0    0    0   18
-S17-scheduler/in.t.................................[31m===[0mSORRY![31m===[0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S17-scheduler/in.t
-Variable '$name:in' is not declared
-at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S17-scheduler/in.t:41
-------> [32mtracker, "1s1scatch2s", "Timer tasks on [33m⏏[31m$name:in/:catch ran in right order";[0m
-   0   14    0    0   14
-    14 tests aborted (missing ok/not ok)
+S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.t...............................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
@@ -2821,6 +2819,19 @@ S32-array/pop.rakudo.moar..........................
 # Failed test ''@pop.pop = 3' died'
 # at t/spec/S32-array/pop.rakudo.moar line 92
     # Looks like you failed 1 test of 2
+WARNING: unhandled Failure detected in DESTROY:
+Cannot pop from an empty Array
+  in block <unit> at t/spec/S32-array/pop.rakudo.moar:72
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot pop from an empty Array
+  in block <unit> at t/spec/S32-array/pop.rakudo.moar:64
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot pop from an empty Array
+  in block  at t/spec/S32-array/pop.rakudo.moar:42
+  in block <unit> at t/spec/S32-array/pop.rakudo.moar:14
+
   35    0    2    0   37
      1 todo   : RT \#111720
      1 todo   : code does not die
@@ -4286,17 +4297,17 @@ S32-str/comb.rakudo.moar...........................  77    0    0    1   78
 S32-str/contains.t.................................  20    0    0    0   20
 S32-str/encode.rakudo.moar.........................    
 # Failed test '.message matches rx:s:i/line 1 col\w* 2|term/'
-# at gen/moar/m-CORE.setting line 3185
+# at gen/moar/m-CORE.setting line 3191
     # Expected: rx:s:i/line 1 col\w* 2|term/
     # Got:      Malformed UTF-16; odd number of bytes
     # Looks like you failed 1 test of 3
     
 # Failed test '.message matches rx:s:i/line 1 col\w* 2/'
-# at gen/moar/m-CORE.setting line 3185
+# at gen/moar/m-CORE.setting line 3191
     # Expected: rx:s:i/line 1 col\w* 2/
     # Got:      Malformed UTF-16; unexpected low surrogate
     # Looks like you failed 1 test of 3
-  29    0    2    1   32
+  34    0    2    1   37
      1 skipped: We do not handle NDF yet RT #124687
      1 todo   : RT\#107204 should say line and column
      1 todo   : RT\#107204 should say line and column or mention term(ination)
@@ -4320,7 +4331,7 @@ S32-str/samecase.t.................................   8    0    0    0    8
 S32-str/samemark.rakudo.moar.......................   0    0    0    7    7
      7 skipped: samemark NYI - RT #125165
 S32-str/split-simple.t.............................  29    0    0    0   29
-S32-str/split.rakudo.moar..........................  54    0    0    1   55
+S32-str/split.rakudo.moar.......................... 103    0    0    1  104
      1 skipped: No such method null for invocant of type Cursor RT #124685
 S32-str/sprintf-b.rakudo.moar......................  68    0   90    7  165
      1 skipped: "%+ #10b" dies with "unsupported use of %+ variable;" RT #124727
@@ -4515,14 +4526,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.34493667 seconds
-# gerdr: 0.3595699 seconds
-# loop: 0.5008951 seconds
-# recursive-ternary: 0.5221741 seconds
-# hand-memoization: 0.69106140 seconds
-# sequence-ternary: 1.06143137 seconds
-# recursive-ternary-hand-cached: 1.870727 seconds
-# sequence: 2.35331475 seconds
+integration/advent2012-day21.t.....................# kaz: 0.3453535 seconds
+# gerdr: 0.360084 seconds
+# loop: 0.50049301 seconds
+# recursive-ternary: 0.5250965 seconds
+# hand-memoization: 0.6915508 seconds
+# sequence-ternary: 1.06028322 seconds
+# recursive-ternary-hand-cached: 1.8586477 seconds
+# sequence: 2.35954498 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -4579,7 +4590,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod55C4EF50/p6testmod07263BD8.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodA027741A/p6testmodC2EB8DC4.pm6')
     # Looks like you failed 1 test of 2
    5    0    2    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -4608,7 +4619,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6741,     0,    90,   355,  7186,  7185
+"S02",        6759,     0,    92,   351,  7202,  7201
 "S03",        5489,     0,   112,    75,  5676,  5694
 "S04",        1406,     0,    38,    28,  1472,  1504
 "S05",        5769,     0,    90,    94,  5953,  6123
@@ -4621,20 +4632,19 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          60,     0,     2,     0,    62,    72
 "S14",         348,     0,     8,     5,   361,   374
 "S15",       79007,     0,     3,    18, 79028, 79048
-"S16",         564,     0,     2,    16,   582,   636
-"S17",         842,    14,     6,    28,   890,   890
+"S16",         562,     0,     2,    15,   579,   635
+"S17",         856,     0,     6,    28,   890,   890
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          24,     0,     0,     0,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",          13,     0,     0,     0,    13,    13
 "S29",         364,     0,     3,     2,   369,   369
-"S32",       12571,     0,   187,   158, 12916, 11158
+"S32",       12625,     0,   187,   158, 12970, 11175
 "int",        1277,     1,    10,    14,  1302,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",    122239,    16,   675,  1206,124136,123044
+"total",    122323,     2,   677,  1201,124203,123076
 ----------------
 Failure summary:
 S06-traits/misc.rakudo.moar 5 - is rw dies in signature binding if passed a literal Int
-S17-scheduler/in.t aborted 14 test(s)
 integration/weird-errors.t 19 - Doesn't die with weird internal error
