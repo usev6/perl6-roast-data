@@ -825,8 +825,8 @@ S03-operators/mix.rakudo.moar...................... 102    0   26    0  128
      8 todo   : Rakudo update in progress, but not done yet RT \#124541
      4 todo   : Wrong answer at the moment
      8 todo   : submix behavior still under discussion
-S03-operators/names.t..............................Sub+{<anon|34460022080>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
-Sub+{<anon|34460022080>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
+S03-operators/names.t..............................Sub+{<anon|34462651712>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
+Sub+{<anon|34462651712>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
    7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -1669,13 +1669,8 @@ S06-traits/is-readonly.rakudo.moar.................Potential difficulties:
    2    0    1    0    3
      1 todo   : readonly attributes
 S06-traits/is-rw.t.................................   7    0    0    0    7
-S06-traits/misc.rakudo.moar........................    
-# Failed test 'code dies'
-# at t/spec/S06-traits/misc.rakudo.moar line 46
-    # Looks like you failed 1 test of 2
-  17    0    3    0   20
+S06-traits/misc.rakudo.moar........................  18    0    2    0   20
      2 todo   : is readonly does not override
-     1 todo   : optimizer too greedy: RT \#126585
 S06-traits/native-is-copy.t........................  15    0    0    0   15
 S06-traits/native-is-rw.t..........................  48    0    0    0   48
 S06-traits/precedence.rakudo.moar..................  14    0    1    0   15
@@ -1754,10 +1749,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 Use of uninitialized value $_ of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-13146-153489.code:4
+#   in block <unit> at getout-58778-84473.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-13146-153489.code:4
+#   in block <unit> at getout-58778-84473.code:4
 
 
   33    0    3    0   36
@@ -2100,8 +2095,8 @@ S15-unicode-information/uniname.rakudo.moar........  14    0    2   15   31
 S15-unicode-information/unival.t...................  32    0    0    0   32
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  12    0    0    0   12
-S16-filehandles/chmod.t............................# Using file temp_1446942510
-# Using file temp_1446942510
+S16-filehandles/chmod.t............................# Using file temp_1447028916
+# Using file temp_1447028916
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2832,11 +2827,7 @@ Cannot pop from an empty Array
      1 todo   : code does not die
 S32-array/push.t...................................  52    0    0    0   52
 S32-array/rotate.t.................................  29    0    0    0   29
-S32-array/shift.t..................................WARNING: unhandled Failure detected in DESTROY:
-Cannot shift from an empty Array
-  in block <unit> at t/spec/S32-array/shift.t:61
-
-  31    0    0    0   31
+S32-array/shift.t..................................  31    0    0    0   31
 S32-array/splice.rakudo.moar.......................    
 # Failed test 'right exception type (X::TypeCheck::Splice)'
 # at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
@@ -4330,17 +4321,7 @@ S32-str/samecase.t.................................   8    0    0    0    8
 S32-str/samemark.rakudo.moar.......................   0    0    0    7    7
      7 skipped: samemark NYI - RT #125165
 S32-str/split-simple.t.............................  29    0    0    0   29
-S32-str/split.rakudo.moar..........................    
-# Failed test '.nogo matches (k v)'
-# at gen/moar/m-CORE.setting line 3191
-    # Expected: $("k", "v")
-    # Got:      v k
-    # Looks like you failed 1 test of 5
-
-# Failed test 'clashing named parameters'
-# at t/spec/S32-str/split.rakudo.moar line 221
-# Looks like you failed 1 test of 104
- 102    1    0    1  104
+S32-str/split.rakudo.moar..........................  56    0    0    1   57
      1 skipped: No such method null for invocant of type Cursor RT #124685
 S32-str/sprintf-b.rakudo.moar......................  68    0   90    7  165
      1 skipped: "%+ #10b" dies with "unsupported use of %+ variable;" RT #124727
@@ -4535,14 +4516,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.3449265 seconds
-# gerdr: 0.3616399 seconds
-# loop: 0.5006280 seconds
-# recursive-ternary: 0.52965016 seconds
-# hand-memoization: 0.68260123 seconds
-# sequence-ternary: 1.05919268 seconds
-# recursive-ternary-hand-cached: 1.88509705 seconds
-# sequence: 2.3812885 seconds
+integration/advent2012-day21.t.....................# kaz: 0.34639206 seconds
+# gerdr: 0.3622415 seconds
+# loop: 0.50190474 seconds
+# recursive-ternary: 0.5397022 seconds
+# hand-memoization: 0.6927891 seconds
+# sequence-ternary: 1.0659630 seconds
+# recursive-ternary-hand-cached: 1.8806870 seconds
+# sequence: 2.3517078 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -4599,7 +4580,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodE8902723/p6testmod7EED889E.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodA8F7DB30/p6testmod471D55EA.pm6')
     # Looks like you failed 1 test of 2
    5    0    2    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -4629,7 +4610,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        5489,     0,   112,    75,  5676,  5694
 "S04",        1406,     0,    38,    28,  1472,  1504
 "S05",        5770,     0,    89,    94,  5953,  6123
-"S06",        2049,     0,    56,    80,  2185,  2236
+"S06",        2050,     0,    55,    80,  2185,  2236
 "S07",          22,     0,     0,     0,    22,   118
 "S09",        1964,     0,    10,    37,  2011,  2011
 "S10",         105,     0,     5,     1,   111,   168
@@ -4646,10 +4627,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",          13,     0,     0,     0,    13,    13
 "S29",         364,     0,     3,     2,   369,   369
-"S32",       12624,     1,   187,   158, 12970, 11175
+"S32",       12578,     0,   187,   158, 12923, 11128
 "int",        1277,     0,    11,    14,  1302,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",    122323,     1,   678,  1201,124203,123076
+"total",    122278,     0,   677,  1201,124156,123029
 ----------------
-Failure summary:
-S32-str/split.rakudo.moar 71 - clashing named parameters
+No failures!
