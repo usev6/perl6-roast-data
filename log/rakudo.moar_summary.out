@@ -515,7 +515,55 @@ S03-operators/also.rakudo.moar.....................   4    0    4    0    8
      1 todo   : nom regression RT \#124546
      1 todo   : nom regression RT \#124547
 S03-operators/andthen.t............................   8    0    0    0    8
-S03-operators/arith.t..............................Use of uninitialized value of type Int in numeric context  in block  at t/spec/S03-operators/arith.t:379
+S03-operators/arith.t..............................WARNING: unhandled Failure detected in DESTROY:
+Attempt to divide 3 by zero using div
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1359
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1355
+  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1317
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1850
+  in any visit_want at gen/moar/m-Perl6-Optimizer.nqp:1647
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1841
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1841
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1865
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1841
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1865
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1871
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1841
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1865
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1871
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
+  in any optimize at src/Perl6/Compiler.nqp:70
+
+WARNING: unhandled Failure detected in DESTROY:
+Attempt to divide 3 by zero using infix:<%>
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1359
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1355
+  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1317
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1850
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1850
+  in any visit_want at gen/moar/m-Perl6-Optimizer.nqp:1647
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1841
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1841
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1865
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1841
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1865
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1871
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1841
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1865
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1871
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
+  in any optimize at src/Perl6/Compiler.nqp:70
+
+Use of uninitialized value of type Int in numeric context  in block  at t/spec/S03-operators/arith.t:379
  157    0    0    0  157
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
 S03-operators/assign.rakudo.moar................... 264    0   16   14  294
@@ -821,8 +869,8 @@ S03-operators/mix.rakudo.moar...................... 102    0   26    0  128
      8 todo   : Rakudo update in progress, but not done yet RT \#124541
      4 todo   : Wrong answer at the moment
      8 todo   : submix behavior still under discussion
-S03-operators/names.t..............................Sub+{<anon|34462639744>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
-Sub+{<anon|34462639744>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
+S03-operators/names.t..............................Sub+{<anon|34463807104>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
+Sub+{<anon|34463807104>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
    7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -1031,8 +1079,8 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 Use of uninitialized value x1 of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at lib/Test.pm:144
 Use of uninitialized value x3 of type Any in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S04-declarations/my.rakudo.moar:343
-  96    0    2    0   98
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S04-declarations/my.rakudo.moar:349
+  97    0    2    0   99
      2 todo   : RT \#117043
 S04-declarations/our.t.............................  31    0    0    0   31
 S04-declarations/smiley.t..........................  60    0    0    0   60
@@ -1293,7 +1341,7 @@ S05-metachars/closure.rakudo.moar..................   6    0    1    5   12
      2 skipped: assignment to match variables (dubious) RT #124946
      3 skipped: assignment to match variables (dubious) RT #124947
      1 todo   : make() inside closure
-S05-metachars/line-anchors.t.......................  23    0    0    0   23
+S05-metachars/line-anchors.t.......................  24    0    0    0   24
 S05-metachars/newline.t............................  15    0    0    0   15
 S05-metachars/tilde.t..............................  29    0    0    0   29
 S05-metasyntax/angle-brackets.rakudo.moar..........    
@@ -1490,7 +1538,7 @@ S06-advanced/callframe.rakudo.moar.................  14    0    0    1   15
 S06-advanced/callsame.t............................   3    0    0    0    3
 S06-advanced/lexical-subs.t........................  13    0    0    0   13
 S06-advanced/recurse.t.............................  13    0    0    0   13
-S06-advanced/return.rakudo.moar....................  92    0    1    0   93
+S06-advanced/return.rakudo.moar....................  97    0    1    0   98
      1 todo   : RT \#61732
 S06-advanced/stub.rakudo.moar......................Stub code executed  in sub hail at t/spec/S06-advanced/stub.rakudo.moar:20
    9    0    0    1   10
@@ -1515,11 +1563,7 @@ S06-macros/quasi-blocks.rakudo.moar................  12    0    0    2   14
      2 skipped: No such method 'STORE' for invocant of type 'Mu' RT #124968
 S06-macros/unquoting.rakudo.moar...................   5    0    0    1    6
      1 skipped: Specified code ref has no outer, RT #121533
-S06-multi/by-trait.t...............................Parameter '$rw' expected a writable container, but got Int value
-  in block <unit> at t/spec/S06-multi/by-trait.t:15
-
-   0    5    0    0    5
-     5 tests aborted (missing ok/not ok)
+S06-multi/by-trait.t...............................   5    0    0    0    5
 S06-multi/lexical-multis.rakudo.moar...............  14    0    1    0   15
      1 todo   : lexical scope as tie breaker
 S06-multi/positional-vs-named.t....................  28    0    0    0   28
@@ -1750,10 +1794,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 Use of uninitialized value $_ of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-86221-780364.code:4
+#   in block <unit> at getout-12336-714768.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-86221-780364.code:4
+#   in block <unit> at getout-12336-714768.code:4
 
 
   33    0    3    0   36
@@ -2097,8 +2141,8 @@ S15-unicode-information/uniprop.t..................   6    0    0    0    6
 S15-unicode-information/unival.t...................  40    0    0    0   40
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  12    0    0    0   12
-S16-filehandles/chmod.t............................# Using file temp_1447115322
-# Using file temp_1447115322
+S16-filehandles/chmod.t............................# Using file temp_1447201704
+# Using file temp_1447201704
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2155,8 +2199,7 @@ S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/basic.t................................  23    0    0    0   23
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  39    0    0    0   39
-S17-promise/stress.t...............................   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
+S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
 S17-scheduler/at.rakudo.moar.......................Method 'cancel' not found for invocant of class 'Any'
   in block  at t/spec/S17-scheduler/at.rakudo.moar:76
@@ -4281,13 +4324,13 @@ S32-str/comb.rakudo.moar...........................  77    0    0    1   78
 S32-str/contains.t.................................  20    0    0    0   20
 S32-str/encode.rakudo.moar.........................    
 # Failed test '.message matches rx:s:i/line 1 col\w* 2|term/'
-# at gen/moar/m-CORE.setting line 3191
+# at gen/moar/m-CORE.setting line 3206
     # Expected: rx:s:i/line 1 col\w* 2|term/
     # Got:      Malformed UTF-16; odd number of bytes
     # Looks like you failed 1 test of 3
     
 # Failed test '.message matches rx:s:i/line 1 col\w* 2/'
-# at gen/moar/m-CORE.setting line 3191
+# at gen/moar/m-CORE.setting line 3206
     # Expected: rx:s:i/line 1 col\w* 2/
     # Got:      Malformed UTF-16; unexpected low surrogate
     # Looks like you failed 1 test of 3
@@ -4362,7 +4405,7 @@ S32-str/sprintf-b.rakudo.moar......................  68    0   90    7  165
      1 todo   : RT \#123979
 S32-str/sprintf.rakudo.moar........................ 144    0   13    0  157
     10 todo   : Issues with Inf: RT \#116280
-     3 todo   : RT \#116280 -- sprintf prints numbers instead of NaN/inf/-inf
+     3 todo   : RT \#116280 -- sprintf prints numbers instead of NaN/Inf/-Inf
 S32-str/starts-with.t..............................   8    0    0    0    8
 S32-str/substr-eq.t................................  12    0    0    0   12
 S32-str/substr-rw.rakudo.moar......................  31    0    8    0   39
@@ -4511,14 +4554,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.3369954 seconds
-# gerdr: 0.3579611 seconds
-# recursive-ternary: 0.5230510 seconds
-# hand-memoization: 0.71732465 seconds
-# loop: 0.75292307 seconds
-# sequence-ternary: 1.043381 seconds
-# recursive-ternary-hand-cached: 1.82830381 seconds
-# sequence: 2.3563161 seconds
+integration/advent2012-day21.t.....................# kaz: 0.3391716 seconds
+# gerdr: 0.35929125 seconds
+# loop: 0.49702193 seconds
+# recursive-ternary: 0.5166375 seconds
+# hand-memoization: 0.7365166 seconds
+# sequence-ternary: 1.0411754 seconds
+# recursive-ternary-hand-cached: 1.85666793 seconds
+# sequence: 2.3633580 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -4575,7 +4618,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodD9EB9BCD/p6testmod66C0BD85.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod69CE9053/p6testmodED75686F.pm6')
     # Looks like you failed 1 test of 2
    5    0    2    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -4603,9 +4646,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        6765,     0,    92,   351,  7208,  7207
 "S03",        5489,     0,   112,    75,  5676,  5694
-"S04",        1406,     0,    38,    28,  1472,  1504
-"S05",        5770,     0,    89,    94,  5953,  6123
-"S06",        2050,     5,    55,    80,  2190,  2236
+"S04",        1407,     0,    38,    28,  1473,  1505
+"S05",        5771,     0,    89,    94,  5954,  6124
+"S06",        2060,     0,    55,    80,  2195,  2241
 "S07",          22,     0,     0,     0,    22,   118
 "S09",        1964,     0,    10,    37,  2011,  2011
 "S10",         105,     0,     5,     1,   111,   168
@@ -4615,7 +4658,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         348,     0,     8,     5,   361,   374
 "S15",       79035,     0,     3,    18, 79056, 79076
 "S16",         902,     0,     3,    15,   920,   976
-"S17",         855,     1,     6,    28,   890,   890
+"S17",         856,     0,     6,    28,   890,   890
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          24,     0,     0,     0,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
@@ -4625,8 +4668,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12609,     0,   187,   158, 12954, 11159
 "int",        1277,     0,    11,    14,  1302,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",    122684,     6,   678,  1201,124569,123437
+"total",    122697,     0,   678,  1201,124576,123444
 ----------------
-Failure summary:
-S06-multi/by-trait.t aborted 5 test(s)
-S17-promise/stress.t aborted 1 test(s)
+No failures!
