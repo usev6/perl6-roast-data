@@ -1251,8 +1251,8 @@ S06-macros/unquoting.t.............................Can't open perl script "eval-
    0    6    0    0    6
      6 tests aborted (missing ok/not ok)
 S06-multi/by-trait.rakudo.jvm......................Can't open perl script "eval-client.pl": No such file or directory
-   0    5    0    0    5
-     5 tests aborted (missing ok/not ok)
+   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
 S06-multi/lexical-multis.rakudo.jvm................Can't open perl script "eval-client.pl": No such file or directory
    0   15    0    0   15
     15 tests aborted (missing ok/not ok)
@@ -1742,8 +1742,8 @@ S12-methods/default-trait.t........................Can't open perl script "eval-
    0    6    0    0    6
      6 tests aborted (missing ok/not ok)
 S12-methods/defer-call.t...........................Can't open perl script "eval-client.pl": No such file or directory
-   0   14    0    0   14
-    14 tests aborted (missing ok/not ok)
+   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
 S12-methods/defer-next.rakudo.jvm..................Can't open perl script "eval-client.pl": No such file or directory
    0   21    0    0   21
     21 tests aborted (missing ok/not ok)
@@ -3171,12 +3171,12 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S03",           0,  5676,     0,     0,  5676,  5694
 "S04",           0,  1453,     0,     0,  1453,  1505
 "S05",           0,  5941,     0,     0,  5941,  6142
-"S06",           0,  2186,     0,     0,  2186,  2242
+"S06",           0,  2194,     0,     0,  2194,  2250
 "S07",           0,    22,     0,     0,    22,   118
 "S09",           0,   521,     0,     0,   521,   521
 "S10",           0,   111,     0,     0,   111,   168
 "S11",           0,   129,     0,     0,   129,   148
-"S12",           0,  1748,     0,     0,  1748,  1803
+"S12",           0,  1750,     0,     0,  1750,  1805
 "S13",           0,    62,     0,     0,    62,    72
 "S14",           0,   361,     0,     0,   361,   374
 "S15",           0,    91,     0,     0,    91, 79076
@@ -3191,7 +3191,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S32",           0,  8874,     0,     0,  8874,  8938
 "int",           0,  1282,     0,     0,  1282,  1278
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 37375,     0,     0, 37375,117193
+"total",         0, 37385,     0,     0, 37385,117203
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3607,7 +3607,7 @@ S06-macros/errors.t aborted 2 test(s)
 S06-macros/opaque-ast.rakudo.jvm aborted 7 test(s)
 S06-macros/quasi-blocks.rakudo.jvm aborted 14 test(s)
 S06-macros/unquoting.t aborted 6 test(s)
-S06-multi/by-trait.rakudo.jvm aborted 5 test(s)
+S06-multi/by-trait.rakudo.jvm aborted 13 test(s)
 S06-multi/lexical-multis.rakudo.jvm aborted 15 test(s)
 S06-multi/positional-vs-named.t aborted 28 test(s)
 S06-multi/proto.rakudo.jvm aborted 26 test(s)
@@ -3769,7 +3769,7 @@ S12-methods/calling_syntax.t aborted 11 test(s)
 S12-methods/chaining.t aborted 17 test(s)
 S12-methods/class-and-instance.t aborted 8 test(s)
 S12-methods/default-trait.t aborted 6 test(s)
-S12-methods/defer-call.t aborted 14 test(s)
+S12-methods/defer-call.t aborted 16 test(s)
 S12-methods/defer-next.rakudo.jvm aborted 21 test(s)
 S12-methods/delegation.t aborted 7 test(s)
 S12-methods/fallback.t aborted 13 test(s)
