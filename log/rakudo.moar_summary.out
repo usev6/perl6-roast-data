@@ -286,23 +286,9 @@ S02-types/anon_block.rakudo.moar...................Block object coerced to strin
   39    0    1    2   42
      2 skipped: tests don't work if previous test fails
      1 todo   : Parrot support for zero-arg subs?
-S02-types/array-shapes.rakudo.moar.................    
-# Failed test 'right exception type (X::TypeCheck)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
-    # Expected: (X::TypeCheck)
-    # Got:      (X::AdHoc)
-    # Exception message: This type cannot unbox to a native integer
-    # Looks like you failed 1 test of 2
-    
-# Failed test 'right exception type (X::TypeCheck)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
-    # Expected: (X::TypeCheck)
-    # Got:      (X::AdHoc)
-    # Exception message: This type cannot unbox to a native integer
-    # Looks like you failed 1 test of 2
-   8    0    2   15   25
+S02-types/array-shapes.rakudo.moar.................   8    0    2   15   25
     15 skipped: array shapes NYI RT #124502
-     2 todo   : X::AdHoc "This type cannot unbox to a native integer" RT \#125123
+     2 todo PASSED: X::AdHoc "This type cannot unbox to a native integer" RT \#125123
 S02-types/array.rakudo.moar........................    
 # Failed test 'code dies'
 # at t/spec/S02-types/array.rakudo.moar line 269
@@ -594,8 +580,8 @@ S03-operators/bit.t................................  38    0    0    0   38
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
 S03-operators/brainos.t............................   9    0    0    0    9
 S03-operators/buf.t................................Use of uninitialized value of type Any in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S03-operators/buf.t:95
-  53    0    0    0   53
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S03-operators/buf.t:94
+  55    0    0    0   55
 S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  31    0    0    0   31
 S03-operators/comparison-simple.t..................  24    0    0    0   24
@@ -856,8 +842,8 @@ S03-operators/mix.rakudo.moar...................... 102    0   26    0  128
      8 todo   : Rakudo update in progress, but not done yet RT \#124541
      4 todo   : Wrong answer at the moment
      8 todo   : submix behavior still under discussion
-S03-operators/names.t..............................Sub+{<anon|34476111232>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
-Sub+{<anon|34476111232>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
+S03-operators/names.t..............................Sub+{<anon|34476107136>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
+Sub+{<anon|34476107136>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
    7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -1503,6 +1489,14 @@ S05-substitution/subst.rakudo.moar.................Potential difficulties:
     Redeclaration of symbol $_
     at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S05-substitution/subst.rakudo.moar:467
     ------> [32m    my $_[33m⏏[31m = 0; s{^(\d+)$} = sprintf "%3d -", $_;[0m
+Saw 1 occurrence of deprecated code.
+================================================================================
+split(:all) seen at:
+  gen/moar/m-CORE.setting, line 9929
+Please use split(:v) instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these occurrences of deprecated code
+adapted, so that this message will disappear!
  161    0    1    1  163
      1 skipped: RT #114388 -- No such method 'subst-mutate' for invocant of type 'Any'
      1 todo   : be smarter about constant detection
@@ -1781,10 +1775,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 Use of uninitialized value $_ of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-60094-379029.code:4
+#   in block <unit> at getout-101-853430.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-60094-379029.code:4
+#   in block <unit> at getout-101-853430.code:4
 
 
   33    0    3    0   36
@@ -2122,18 +2116,18 @@ S15-unicode-information/uniprop.t..................   6    0    0    0    6
 S15-unicode-information/unival.t...................  40    0    0    0   40
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  12    0    0    0   12
-S16-filehandles/chmod.t............................# Using file temp_1447460914
-# Using file temp_1447460914
+S16-filehandles/chmod.t............................# Using file temp_1447547305
+# Using file temp_1447547305
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
 S16-filehandles/filetest.rakudo.moar...............  34    0    0    9   43
      6 skipped: :M, :C, :A
      3 skipped: no file README
-S16-filehandles/io.rakudo.moar..................... 123    0    2    0  125
+S16-filehandles/io.rakudo.moar..................... 109    0    2    0  111
      1 todo   : Too late to change filehandle encoding RT \#125079
      1 todo   : Will fail due to above failure RT \#125082
-S16-filehandles/io_in_for_loops.t..................  33    0    0    0   33
+S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/mkdir_rmdir.t......................  14    0    0    0   14
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2146,7 +2140,7 @@ S16-io/bom.t.......................................  10    0    0    0   10
 S16-io/comb.t......................................  25    0    0    0   25
 S16-io/cwd.t.......................................   3    0    0    0    3
 S16-io/getc.t......................................   2    0    0    0    2
-S16-io/lines.t..................................... 510    0    0    0  510
+S16-io/lines.t..................................... 384    0    0    0  384
 S16-io/newline.t...................................   6    0    0    0    6
 S16-io/note.t......................................   5    0    0    0    5
 S16-io/print.t.....................................  12    0    0    0   12
@@ -2837,12 +2831,29 @@ S32-array/pop.rakudo.moar..........................
 # Failed test ''@pop.pop = 3' died'
 # at t/spec/S32-array/pop.rakudo.moar line 92
     # Looks like you failed 1 test of 2
+WARNING: unhandled Failure detected in DESTROY:
+Cannot pop from an empty Array
+  in block <unit> at t/spec/S32-array/pop.rakudo.moar:72
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot pop from an empty Array
+  in block <unit> at t/spec/S32-array/pop.rakudo.moar:64
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot pop from an empty Array
+  in block  at t/spec/S32-array/pop.rakudo.moar:42
+  in block <unit> at t/spec/S32-array/pop.rakudo.moar:14
+
   35    0    2    0   37
      1 todo   : RT \#111720
      1 todo   : code does not die
 S32-array/push.t...................................  52    0    0    0   52
 S32-array/rotate.t.................................  29    0    0    0   29
-S32-array/shift.t..................................  31    0    0    0   31
+S32-array/shift.t..................................WARNING: unhandled Failure detected in DESTROY:
+Cannot shift from an empty Array
+  in block <unit> at t/spec/S32-array/shift.t:61
+
+  31    0    0    0   31
 S32-array/splice.rakudo.moar.......................    
 # Failed test 'right exception type (X::TypeCheck::Splice)'
 # at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm.moarvm line 1
@@ -4237,7 +4248,43 @@ S32-list/tail.t....................................  19    0    0    0   19
 S32-list/unique.t..................................  34    0    0    0   34
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  44    0    0    0   44
-S32-num/complex.t.................................. 488    0    0    0  488
+S32-num/complex.t..................................WARNING: unhandled Failure detected in DESTROY:
+Can not convert 2+4i to Real: imaginary part not zero
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1359
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1317
+  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1307
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
+  in any optimize at src/Perl6/Compiler.nqp:70
+
+WARNING: unhandled Failure detected in DESTROY:
+Can not convert 2+2i to Real: imaginary part not zero
+  in block <unit> at EVAL_0:1
+  in block  at lib/Test.pm:445
+  in sub subtest at lib/Test.pm:294
+  in sub throws-like at lib/Test.pm:472
+  in block <unit> at t/spec/S32-num/complex.t:21
+
+WARNING: unhandled Failure detected in DESTROY:
+Can not convert 2+2i to Real: imaginary part not zero
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1359
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1317
+  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1307
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
+  in any optimize at src/Perl6/Compiler.nqp:70
+
+ 488    0    0    0  488
 S32-num/cool-num.rakudo.moar.......................  39    0    0    4   43
      4 skipped: angle conversion RT #124816
 S32-num/exp.t......................................  72    0    0    0   72
@@ -4338,7 +4385,15 @@ S32-str/rindex.t...................................  43    0    0    0   43
 S32-str/samecase.t.................................   8    0    0    0    8
 S32-str/samemark.rakudo.moar.......................   0    0    0    7    7
      7 skipped: samemark NYI - RT #125165
-S32-str/split-simple.t.............................  29    0    0    0   29
+S32-str/split-simple.t.............................Saw 1 occurrence of deprecated code.
+================================================================================
+split(:all) seen at:
+  gen/moar/m-CORE.setting, line 9929
+Please use split(:v) instead.
+--------------------------------------------------------------------------------
+Please contact the author to have these occurrences of deprecated code
+adapted, so that this message will disappear!
+  29    0    0    0   29
 S32-str/split.rakudo.moar..........................  56    0    0    1   57
      1 skipped: No such method null for invocant of type Cursor RT #124685
 S32-str/sprintf-b.rakudo.moar......................  68    0   90    7  165
@@ -4533,14 +4588,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.3322971 seconds
-# gerdr: 0.3477052 seconds
-# recursive-ternary: 0.4675334 seconds
-# loop: 0.4871471 seconds
-# hand-memoization: 0.723592806 seconds
-# sequence-ternary: 1.0320060 seconds
-# recursive-ternary-hand-cached: 1.677786 seconds
-# sequence: 2.17381048 seconds
+integration/advent2012-day21.t.....................# kaz: 0.3302062 seconds
+# gerdr: 0.3440157 seconds
+# recursive-ternary: 0.46657606 seconds
+# loop: 0.4838679 seconds
+# hand-memoization: 0.72196182 seconds
+# sequence-ternary: 1.03747856 seconds
+# recursive-ternary-hand-cached: 1.6827909 seconds
+# sequence: 2.163973 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -4596,7 +4651,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod2283CEB9/p6testmodCF1C30F6.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod47C2AF98/p6testmodD05E109D.pm6')
     # Looks like you failed 1 test of 2
    5    0    2    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -4623,7 +4678,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        6772,     0,    92,   351,  7215,  7214
-"S03",        5489,     0,   112,    75,  5676,  5694
+"S03",        5491,     0,   112,    75,  5678,  5696
 "S04",        1407,     0,    38,    28,  1473,  1505
 "S05",        5788,     0,    90,    94,  5972,  6142
 "S06",        2070,     0,    54,    80,  2204,  2250
@@ -4635,7 +4690,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         348,     0,     8,     5,   361,   374
 "S15",       79035,     0,     3,    18, 79056, 79076
-"S16",         902,     0,     3,    15,   920,   976
+"S16",         761,     0,     3,    15,   779,   835
 "S17",         856,     0,     6,    28,   890,   890
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          24,     0,     0,     0,    24,    24
@@ -4646,6 +4701,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12625,     0,   174,   158, 12957, 11162
 "int",        1278,     0,    10,    14,  1302,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",    122753,     0,   661,  1201,124615,123483
+"total",    122614,     0,   661,  1201,124476,123344
 ----------------
 No failures!
