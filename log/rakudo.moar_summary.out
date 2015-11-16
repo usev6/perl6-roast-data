@@ -286,9 +286,8 @@ S02-types/anon_block.rakudo.moar...................Block object coerced to strin
   39    0    1    2   42
      2 skipped: tests don't work if previous test fails
      1 todo   : Parrot support for zero-arg subs?
-S02-types/array-shapes.rakudo.moar.................   8    0    2   15   25
+S02-types/array-shapes.rakudo.moar.................  10    0    0   15   25
     15 skipped: array shapes NYI RT #124502
-     2 todo PASSED: X::AdHoc "This type cannot unbox to a native integer" RT \#125123
 S02-types/array.rakudo.moar........................    
 # Failed test 'code dies'
 # at t/spec/S02-types/array.rakudo.moar line 269
@@ -549,10 +548,6 @@ S03-operators/assign.rakudo.moar................... 264    0   16   14  294
      1 todo   : list assignment with ($var, *)
      3 todo   : list assignment, autovivification (?)
 S03-operators/autoincrement-range.t................# Tests for 'a' .. 'z'
-WARNING: unhandled Failure detected in DESTROY:
-Decrement out of range
-  in block <unit> at t/spec/S03-operators/autoincrement-range.t:17
-
 # Tests for 'Α' .. 'Ω' (Greek uppercase)
 # Tests for 'α' .. 'ω' (Greek lowercase)
 # Tests for 'א' .. 'ת' (Hebrew)
@@ -1492,7 +1487,7 @@ S05-substitution/subst.rakudo.moar.................Potential difficulties:
 Saw 1 occurrence of deprecated code.
 ================================================================================
 split(:all) seen at:
-  gen/moar/m-CORE.setting, line 9929
+  gen/moar/m-CORE.setting, line 9940
 Please use split(:v) instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these occurrences of deprecated code
@@ -1775,10 +1770,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 Use of uninitialized value $_ of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-101-853430.code:4
+#   in block <unit> at getout-26874-392658.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-101-853430.code:4
+#   in block <unit> at getout-26874-392658.code:4
 
 
   33    0    3    0   36
@@ -2116,8 +2111,8 @@ S15-unicode-information/uniprop.t..................   6    0    0    0    6
 S15-unicode-information/unival.t...................  40    0    0    0   40
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  12    0    0    0   12
-S16-filehandles/chmod.t............................# Using file temp_1447547305
-# Using file temp_1447547305
+S16-filehandles/chmod.t............................# Using file temp_1447633716
+# Using file temp_1447633716
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -4352,13 +4347,13 @@ S32-str/comb.rakudo.moar...........................  77    0    0    1   78
 S32-str/contains.t.................................  20    0    0    0   20
 S32-str/encode.rakudo.moar.........................    
 # Failed test '.message matches rx:s:i/line 1 col\w* 2|term/'
-# at gen/moar/m-CORE.setting line 3211
+# at gen/moar/m-CORE.setting line 3222
     # Expected: rx:s:i/line 1 col\w* 2|term/
     # Got:      Malformed UTF-16; odd number of bytes
     # Looks like you failed 1 test of 3
     
 # Failed test '.message matches rx:s:i/line 1 col\w* 2/'
-# at gen/moar/m-CORE.setting line 3211
+# at gen/moar/m-CORE.setting line 3222
     # Expected: rx:s:i/line 1 col\w* 2/
     # Got:      Malformed UTF-16; unexpected low surrogate
     # Looks like you failed 1 test of 3
@@ -4388,7 +4383,7 @@ S32-str/samemark.rakudo.moar.......................   0    0    0    7    7
 S32-str/split-simple.t.............................Saw 1 occurrence of deprecated code.
 ================================================================================
 split(:all) seen at:
-  gen/moar/m-CORE.setting, line 9929
+  gen/moar/m-CORE.setting, line 9940
 Please use split(:v) instead.
 --------------------------------------------------------------------------------
 Please contact the author to have these occurrences of deprecated code
@@ -4588,14 +4583,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.3302062 seconds
-# gerdr: 0.3440157 seconds
-# recursive-ternary: 0.46657606 seconds
-# loop: 0.4838679 seconds
-# hand-memoization: 0.72196182 seconds
-# sequence-ternary: 1.03747856 seconds
-# recursive-ternary-hand-cached: 1.6827909 seconds
-# sequence: 2.163973 seconds
+integration/advent2012-day21.t.....................# kaz: 0.32732933 seconds
+# gerdr: 0.35111365 seconds
+# recursive-ternary: 0.4685966 seconds
+# loop: 0.4844847 seconds
+# hand-memoization: 0.7235850 seconds
+# sequence-ternary: 1.03220619 seconds
+# recursive-ternary-hand-cached: 1.69975283 seconds
+# sequence: 2.1487217 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -4651,7 +4646,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod47C2AF98/p6testmodD05E109D.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod214E8F22/p6testmodD8447BBA.pm6')
     # Looks like you failed 1 test of 2
    5    0    2    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -4677,7 +4672,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6772,     0,    92,   351,  7215,  7214
+"S02",        6774,     0,    90,   351,  7215,  7214
 "S03",        5491,     0,   112,    75,  5678,  5696
 "S04",        1407,     0,    38,    28,  1473,  1505
 "S05",        5788,     0,    90,    94,  5972,  6142
@@ -4701,6 +4696,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12625,     0,   174,   158, 12957, 11162
 "int",        1278,     0,    10,    14,  1302,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",    122614,     0,   661,  1201,124476,123344
+"total",    122616,     0,   659,  1201,124476,123344
 ----------------
 No failures!
