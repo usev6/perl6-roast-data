@@ -224,8 +224,8 @@ S02-types/infinity.rakudo.jvm......................   6    0    3    4   13
      3 todo   : Int conversion of NaN and Inf RT \#124453
 S02-types/instants-and-durations.t.................  12    0    0    0   12
 S02-types/int-uint.t...............................   1    0    0    0    1
-S02-types/is-type.rakudo.jvm.......................  11    0    1    0   12
-     1 todo   : state variables with `is BagHash`
+S02-types/is-type.rakudo.jvm.......................  10    0    0    2   12
+     2 skipped: state variables with `is BagHash`
 S02-types/isDEPRECATED.rakudo.jvm..................  13    0    8    0   21
      8 todo   : NYI
 S02-types/keyhash.rakudo.jvm.......................   0    0    0   59   59
@@ -1189,10 +1189,8 @@ S14-traits/routines.rakudo.jvm.....................  14    0    1    0   15
 S15-literals/identifiers.rakudo.jvm................   5    0    1    1    7
      1 skipped: fails due to above failure
      1 todo   : parsing issue: X::Syntax::Confused
-S15-literals/numbers.rakudo.jvm....................  22    0    0   19   41
-     9 skipped: Confused
-     3 skipped: Malformed radix number
-     7 skipped: is not a valid number
+S15-literals/numbers.rakudo.jvm....................   0   46    0    0   46
+    46 tests aborted (missing ok/not ok)
 S15-string-types/Str.rakudo.jvm....................   1    0    2    1    4
      1 skipped: :nfg adverb NYI RT #124991
      1 todo   : NFG on JVM RT \#124992
@@ -1294,8 +1292,7 @@ S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/last.rakudo.jvm.........................   8    0    1    0    9
      1 todo   : we don't have Natural numbers yet RT \#124825
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   9    0    0    0    9
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1794,7 +1791,7 @@ integration/advent2012-day15.rakudo.jvm............  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1849,7 +1846,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6719,     0,   105,   406,  7230,  7229
+"S02",        6718,     0,   104,   408,  7230,  7229
 "S03",        5496,     4,   115,    89,  5704,  5722
 "S04",        1377,     0,    57,    39,  1473,  1505
 "S05",        5594,     0,   108,   239,  5941,  6142
@@ -1861,7 +1858,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S12",        1602,     0,    40,   126,  1768,  1823
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         346,     1,     9,     5,   361,   374
-"S15",          46,     0,     5,    40,    91, 79076
+"S15",          24,    46,     5,    21,    96, 79081
 "S16",         698,     0,    67,   159,   924,   980
 "S17",         798,     0,    19,    20,   837,   885
 "S19",          14,     0,     0,     0,    14,    18
@@ -1871,9 +1868,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         363,     0,     3,     3,   369,   369
 "S32",       12290,    11,   193,   240, 12734, 11019
-"int",        1270,     1,    10,    14,  1295,  1288
+"int",        1269,     2,    10,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43222,    17,   822,  1681, 45742,123747
+"total",     43198,    64,   821,  1664, 45747,123752
 ----------------
 Failure summary:
 S03-junctions/autothreading.t 78 - infix:<ne> collapses the junction (1)
@@ -1881,6 +1878,7 @@ S03-operators/basic-types.t 17 - it is a Bool type
 S03-operators/boolean-bitwise.t 44 - prefix ?^ (+)
 S03-operators/boolean-bitwise.t 45 - prefix ?^ (-)
 S14-roles/mixin.rakudo.jvm 44 - but with (1, "x") provides a .Str method returning "x"
+S15-literals/numbers.rakudo.jvm aborted 46 test(s)
 S32-scalar/defined.t 55 - defined is a listop, not a prefix op
 S32-str/lines.t 11 - CRLF .lines without trailing
 S32-str/lines.t 12 - CRLF .lines with trailing
@@ -1893,3 +1891,4 @@ S32-str/lines.t 35 - CRLF .lines with Inf
 S32-str/lines.t 36 - CRLF .lines with *
 S32-str/lines.t 37 - CRLF .lines with limit
 integration/advent2010-day19.rakudo.jvm 6 - True but False
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
