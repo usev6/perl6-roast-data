@@ -560,9 +560,9 @@ S03-operators/buf.t................................Use of uninitialized value of
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S03-operators/buf.t:94
   55    0    0    0   55
 S03-operators/chained-declarators.t................   5    0    0    0    5
-S03-operators/cmp.t................................  31    0    0    0   31
+S03-operators/cmp.t................................  53    0    0    0   53
 S03-operators/comparison-simple.t..................  24    0    0    0   24
-S03-operators/comparison.t.........................  41    0    0    0   41
+S03-operators/comparison.t.........................  49    0    0    0   49
 S03-operators/composition.t........................  10    0    0    0   10
 S03-operators/context-forcers.rakudo.moar.......... 104    0    0    2  106
      2 skipped: failure modes of Str.Numeric RT #124540
@@ -819,8 +819,8 @@ S03-operators/mix.rakudo.moar...................... 102    0   26    0  128
      8 todo   : Rakudo update in progress, but not done yet RT \#124541
      4 todo   : Wrong answer at the moment
      8 todo   : submix behavior still under discussion
-S03-operators/names.t..............................Sub+{<anon|34475810688>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
-Sub+{<anon|34475810688>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
+S03-operators/names.t..............................Sub+{<anon|34475909632>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
+Sub+{<anon|34475909632>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
    7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -840,7 +840,7 @@ S03-operators/reduce-le1arg.rakudo.moar............  51    0    0    3   54
      1 skipped: expected Any but got Mu instead RT #124552
      1 skipped: ~< NYI RT #124531
      1 skipped: ~> NYI RT #124531
-S03-operators/relational.rakudo.moar............... 120    0    4    0  124
+S03-operators/relational.rakudo.moar............... 128    0    4    0  132
      2 todo   : RT \#121987
      2 todo   : RT \#81336
 S03-operators/repeat.t.............................  32    0    0    0   32
@@ -1598,13 +1598,9 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
      2 todo   : NYI RT \#123660
      3 todo   : NYI RT \#124924
 S06-signature/closure-over-parameters.t............   4    0    0    0    4
-S06-signature/closure-parameters.rakudo.moar.......    
-# Failed test ''testit(&testintint)' died'
-# at t/spec/S06-signature/closure-parameters.rakudo.moar line 44
-    # Looks like you failed 1 test of 2
-  11    0    1    5   17
+S06-signature/closure-parameters.rakudo.moar.......  11    0    1    5   17
      5 skipped: subsignatures dont factor into multi candidates yet RT #124935
-     1 todo   : code does not die
+     1 todo PASSED: code does not die
 S06-signature/code.rakudo.moar.....................   7    0    1    0    8
      1 todo   : RT \#67932
 S06-signature/defaults.t...........................   9    0    0    0    9
@@ -1753,10 +1749,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 Use of uninitialized value $_ of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S10-packages/precompilation.rakudo.moar:138
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-3729-160314.code:4
+#   in block <unit> at getout-49267-543749.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-3729-160314.code:4
+#   in block <unit> at getout-49267-543749.code:4
 
 
   33    0    3    0   36
@@ -1823,7 +1819,7 @@ Use of uninitialized value %!h of type Int in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at lib/Test.pm:144
 Use of uninitialized value %!h of type Int in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at lib/Test.pm:144
- 140    0    6    1  147
+ 143    0    6    1  150
      1 skipped: dubious test - the initializer becomes a submethod here, implying a scope RT #124908
      1 todo   : huh?
      1 todo   : over-eager auto-vivification bugs
@@ -1838,14 +1834,14 @@ S12-attributes/undeclared.t........................  11    0    0    0   11
 S12-class/anonymous.rakudo.moar....................  17    0    1    0   18
      1 todo   : Anonymous class stringification (?) RT \#125045
 S12-class/attributes-required.t....................   5    0    0    0    5
-S12-class/attributes.t.............................  33    0    0    0   33
+S12-class/attributes.t.............................  35    0    0    0   35
 S12-class/augment-supersede.rakudo.moar............  11    0    0    2   13
      2 skipped: redeclaration of symbol Bar RT #125046
 S12-class/basic.t..................................  43    0    0    0   43
 S12-class/declaration-order.t......................   2    0    0    0    2
 S12-class/extending-arrays.t.......................  11    0    0    0   11
 S12-class/inheritance-class-methods.t..............   5    0    0    0    5
-S12-class/inheritance.t............................  39    0    0    0   39
+S12-class/inheritance.t............................  40    0    0    0   40
 S12-class/instantiate.rakudo.moar..................   6    0    1    0    7
      1 todo   : error reporting
 S12-class/interface-consistency.t..................   9    0    0    0    9
@@ -1989,7 +1985,7 @@ S14-roles/crony.t..................................   4    0    0    0    4
 S14-roles/instantiation.t..........................  19    0    0    0   19
 S14-roles/lexical.t................................   9    0    0    0    9
 S14-roles/mixin.t..................................Use of uninitialized value of type Any in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any throw at src/Perl6/World.nqp:3722
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any throw at src/Perl6/World.nqp:3710
 Use of uninitialized value of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any try_select at gen/moar/m-Metamodel.nqp:2503
   48    0    0    0   48
@@ -2088,8 +2084,8 @@ S15-unicode-information/uniprop.t..................   6    0    0    0    6
 S15-unicode-information/unival.t...................  40    0    0    0   40
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  12    0    0    0   12
-S16-filehandles/chmod.t............................# Using file temp_1448670511
-# Using file temp_1448670511
+S16-filehandles/chmod.t............................# Using file temp_1448756915
+# Using file temp_1448756915
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2944,11 +2940,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
   16    0    0    0   16
 S32-container/zip.rakudo.moar......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
-S32-exceptions/misc.rakudo.moar....................Sub object coerced to string (please use .gist or .perl to do that)  in any throw at src/Perl6/World.nqp:3722
+S32-exceptions/misc.rakudo.moar....................Use of uninitialized value of type Any in string context
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any throw at src/Perl6/World.nqp:3710
 Use of uninitialized value of type Any in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any throw at src/Perl6/World.nqp:3722
-Use of uninitialized value of type Any in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any throw at src/Perl6/World.nqp:3722
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in any throw at src/Perl6/World.nqp:3710
     
 # Failed test ''#`' died'
 # at t/spec/S32-exceptions/misc.rakudo.moar line 180
@@ -4108,8 +4103,7 @@ S32-io/other.t.....................................  60    0    0    0   60
 S32-io/pipe.t......................................  14    0    0    0   14
 S32-io/rename.t....................................  29    0    0    0   29
 S32-io/slurp.t.....................................  17    0    0    0   17
-S32-io/socket-recv-vs-read.t.......................  11    0    0    0    0
-    11 tests more than planned were run
+S32-io/socket-recv-vs-read.t.......................  11    0    0    0   11
 S32-io/spurt.t.....................................  35    0    0    0   35
 S32-list/categorize.t..............................  28    0    0    0   28
 S32-list/classify.rakudo.moar......................  36    0    1    3   40
@@ -4230,43 +4224,7 @@ S32-list/tail.t....................................  24    0    0    0   24
 S32-list/unique.t..................................  34    0    0    0   34
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  44    0    0    0   44
-S32-num/complex.t..................................WARNING: unhandled Failure detected in DESTROY:
-Can not convert 2+4i to Real: imaginary part not zero
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1359
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1317
-  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1307
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
-  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
-  in any optimize at src/Perl6/Compiler.nqp:70
-
-WARNING: unhandled Failure detected in DESTROY:
-Can not convert 2+2i to Real: imaginary part not zero
-  in block <unit> at EVAL_0:1
-  in block  at lib/Test.pm:445
-  in sub subtest at lib/Test.pm:294
-  in sub throws-like at lib/Test.pm:472
-  in block <unit> at t/spec/S32-num/complex.t:21
-
-WARNING: unhandled Failure detected in DESTROY:
-Can not convert 2+2i to Real: imaginary part not zero
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1359
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1317
-  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1307
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
-  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
-  in any optimize at src/Perl6/Compiler.nqp:70
-
- 488    0    0    0  488
+S32-num/complex.t.................................. 512    0    0    0  512
 S32-num/cool-num.rakudo.moar.......................  39    0    0    4   43
      4 skipped: angle conversion RT #124816
 S32-num/exp.t......................................  72    0    0    0   72
@@ -4334,13 +4292,13 @@ S32-str/comb.rakudo.moar...........................  77    0    0    1   78
 S32-str/contains.t.................................  20    0    0    0   20
 S32-str/encode.rakudo.moar.........................    
 # Failed test '.message matches rx:s:i/line 1 col\w* 2|term/'
-# at gen/moar/m-CORE.setting line 3517
+# at gen/moar/m-CORE.setting line 3514
     # Expected: rx:s:i/line 1 col\w* 2|term/
     # Got:      Malformed UTF-16; odd number of bytes
     # Looks like you failed 1 test of 3
     
 # Failed test '.message matches rx:s:i/line 1 col\w* 2/'
-# at gen/moar/m-CORE.setting line 3517
+# at gen/moar/m-CORE.setting line 3514
     # Expected: rx:s:i/line 1 col\w* 2/
     # Got:      Malformed UTF-16; unexpected low surrogate
     # Looks like you failed 1 test of 3
@@ -4558,14 +4516,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.3308943 seconds
-# gerdr: 0.35270260 seconds
-# recursive-ternary: 0.4709634 seconds
-# loop: 0.4850848 seconds
-# hand-memoization: 0.72787705 seconds
-# sequence-ternary: 1.02424558 seconds
-# recursive-ternary-hand-cached: 1.96257762 seconds
-# sequence: 2.2971370 seconds
+integration/advent2012-day21.t.....................# kaz: 0.3318087 seconds
+# gerdr: 0.3495768 seconds
+# recursive-ternary: 0.4719731 seconds
+# loop: 0.4798591 seconds
+# hand-memoization: 0.7274139 seconds
+# sequence-ternary: 1.02176725 seconds
+# recursive-ternary-hand-cached: 1.96948156 seconds
+# sequence: 2.3080462 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -4627,7 +4585,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 338
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmodDFA92373/p6testmod716E33DC.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod71BB01E5/p6testmodB665ACDE.pm6')
     # Looks like you failed 1 test of 2
    5    0    2    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -4654,7 +4612,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        6796,     0,    90,   339,  7225,  7224
-"S03",        5519,     0,   110,    75,  5704,  5722
+"S03",        5557,     0,   110,    75,  5742,  5760
 "S04",        1407,     0,    38,    28,  1473,  1505
 "S05",        5788,     1,    90,    94,  5973,  6143
 "S06",        2118,     0,    51,    80,  2249,  2295
@@ -4662,7 +4620,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2247,     0,    10,    37,  2294,  2294
 "S10",         125,     0,     3,     1,   129,   186
 "S11",         113,     0,     6,    11,   130,   149
-"S12",        1611,     0,    31,   126,  1768,  1823
+"S12",        1617,     0,    31,   126,  1774,  1829
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         349,     0,     7,     5,   361,   374
 "S15",       79040,     0,     3,    18, 79061, 79081
@@ -4674,14 +4632,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",          13,     0,     0,     0,    13,    13
 "S29",         364,     0,     3,     2,   369,   369
-"S32",       12665,     1,   186,   159, 13000, 11205
+"S32",       12689,     1,   186,   159, 13035, 11240
 "int",        1272,     7,    10,    13,  1302,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",    123145,    11,   654,  1322,125121,123989
+"total",    123213,    11,   654,  1322,125200,124068
 ----------------
 Failure summary:
 S05-substitution/subst.rakudo.moar 87 - ss/.../.../ preserves whitespace
 S17-supply/head.t aborted 2 test(s)
 S32-hash/adverbs.t 23 - did we throws-like Exception?
-S32-io/socket-recv-vs-read.t passed 11 unplanned test(s)
 integration/advent2014-day05.rakudo.moar aborted 7 test(s)

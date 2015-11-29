@@ -352,9 +352,9 @@ S03-operators/brainos.t............................   9    0    0    0    9
 S03-operators/buf.rakudo.jvm.......................  52    1    0    2   55
      2 skipped: RT #126530
 S03-operators/chained-declarators.t................   5    0    0    0    5
-S03-operators/cmp.t................................  31    0    0    0   31
+S03-operators/cmp.t................................  53    0    0    0   53
 S03-operators/comparison-simple.t..................  24    0    0    0   24
-S03-operators/comparison.t.........................  41    0    0    0   41
+S03-operators/comparison.t.........................  49    0    0    0   49
 S03-operators/composition.t........................  10    0    0    0   10
 S03-operators/context-forcers.rakudo.jvm...........  96    8    0    2  106
      2 skipped: failure modes of Str.Numeric RT #124540
@@ -404,7 +404,7 @@ S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: expected Any but got Mu instead RT #124552
      1 skipped: ~< NYI RT #124531
      1 skipped: ~> NYI RT #124531
-S03-operators/relational.rakudo.jvm................ 120    0    4    0  124
+S03-operators/relational.rakudo.jvm................ 128    0    4    0  132
      2 todo   : RT \#121987
      2 todo   : RT \#81336
 S03-operators/repeat.t.............................  32    0    0    0   32
@@ -886,7 +886,7 @@ S06-signature/caller-param.rakudo.jvm..............   2    0    5    0    7
 S06-signature/closure-over-parameters.t............   4    0    0    0    4
 S06-signature/closure-parameters.rakudo.jvm........  11    0    1    5   17
      5 skipped: subsignatures dont factor into multi candidates yet RT #124935
-     1 todo   : code does not die
+     1 todo PASSED: code does not die
 S06-signature/code.rakudo.jvm......................   7    0    1    0    8
      1 todo   : RT \#67932
 S06-signature/defaults.t...........................   9    0    0    0    9
@@ -1026,7 +1026,7 @@ S12-attributes/clone.rakudo.jvm....................  39    0    2    0   41
 S12-attributes/defaults.t..........................  34    0    0    0   34
 S12-attributes/delegation.t........................  65    0    0    0   65
 S12-attributes/inheritance.t.......................   7    0    0    0    7
-S12-attributes/instance.rakudo.jvm................. 140    0    6    1  147
+S12-attributes/instance.rakudo.jvm................. 143    0    6    1  150
      1 skipped: dubious test - the initializer becomes a submethod here, implying a scope RT #124908
      1 todo   : huh?
      1 todo   : over-eager auto-vivification bugs
@@ -1041,7 +1041,7 @@ S12-attributes/undeclared.t........................  11    0    0    0   11
 S12-class/anonymous.rakudo.jvm.....................  17    0    1    0   18
      1 todo   : Anonymous class stringification (?) RT \#125045
 S12-class/attributes-required.t....................   5    0    0    0    5
-S12-class/attributes.t.............................  33    0    0    0   33
+S12-class/attributes.t.............................  35    0    0    0   35
 S12-class/augment-supersede.rakudo.jvm.............  11    0    0    2   13
      2 skipped: redeclaration of symbol Bar RT #125046
 S12-class/basic.t..................................   1   42    0    0   43
@@ -1049,7 +1049,7 @@ S12-class/basic.t..................................   1   42    0    0   43
 S12-class/declaration-order.t......................   2    0    0    0    2
 S12-class/extending-arrays.t.......................  11    0    0    0   11
 S12-class/inheritance-class-methods.t..............   5    0    0    0    5
-S12-class/inheritance.t............................  39    0    0    0   39
+S12-class/inheritance.t............................  40    0    0    0   40
 S12-class/instantiate.rakudo.jvm...................   6    0    1    0    7
      1 todo   : error reporting
 S12-class/interface-consistency.t..................   9    0    0    0    9
@@ -1290,9 +1290,10 @@ S17-supply/from-list.t.............................  13    0    0    0   13
 S17-supply/grab.t..................................   5    0    0    0    5
 S17-supply/grep.t..................................   7    0    0    0    7
 S17-supply/head.t..................................   8    0    0    0    8
-S17-supply/interval.t..............................   4    0    0    0    4
+S17-supply/interval.t..............................   3    1    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1483,10 +1484,8 @@ S32-io/other.t.....................................  60    0    0    0   60
 S32-io/pipe.t......................................  14    0    0    0   14
 S32-io/rename.t....................................  29    0    0    0   29
 S32-io/slurp.t.....................................  17    0    0    0   17
-S32-io/socket-recv-vs-read.t.......................  11    0    0    0    0
-    11 tests more than planned were run
-S32-io/spurt.rakudo.jvm............................  10    0    0   25   35
-    25 skipped: RT #126495 - This type does not support positional operations
+S32-io/socket-recv-vs-read.t.......................  11    0    0    0   11
+S32-io/spurt.t.....................................  35    0    0    0   35
 S32-list/categorize.t..............................  28    0    0    0   28
 S32-list/classify.rakudo.jvm.......................  36    0    1    3   40
      3 skipped: Cannot use bind operator with this LHS RT #124751
@@ -1553,7 +1552,7 @@ S32-list/unique.rakudo.jvm.........................  32    0    0    2   34
      2 skipped: This Seq has already been iterated, and its values consumed
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  44    0    0    0   44
-S32-num/complex.t.................................. 488    0    0    0  488
+S32-num/complex.t.................................. 512    0    0    0  512
 S32-num/cool-num.rakudo.jvm........................  39    0    0    4   43
      4 skipped: angle conversion RT #124816
 S32-num/exp.t......................................  72    0    0    0   72
@@ -1864,7 +1863,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        5767,  1016,    76,   366,  7225,  7224
-"S03",        5071,   457,    94,    82,  5704,  5722
+"S03",        5109,   457,    94,    82,  5742,  5760
 "S04",        1355,    25,    57,    36,  1473,  1505
 "S05",        5591,    10,   107,   234,  5942,  6143
 "S06",        1853,   233,    61,   102,  2249,  2295
@@ -1872,22 +1871,22 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2193,    53,    11,    37,  2294,  2294
 "S10",         124,     0,     4,     1,   129,   186
 "S11",         112,     1,     6,    11,   130,   149
-"S12",        1499,   107,    40,   122,  1768,  1823
+"S12",        1505,   107,    40,   122,  1774,  1829
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         346,     1,     9,     5,   361,   374
 "S15",          24,    46,     5,    21,    96, 79081
 "S16",         360,   530,    19,    15,   924,   980
-"S17",         820,    24,    18,    20,   882,   931
+"S17",         819,    25,    18,    20,   882,   931
 "S19",          13,     1,     0,     0,    14,    18
 "S22",          23,     0,     0,     1,    24,    24
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           7,     0,     0,     0,     7,    13
 "S29",         362,     1,     3,     3,   369,   369
-"S32",        9857,  2501,   189,   234, 12770, 11055
+"S32",        9906,  2501,   189,   209, 12805, 11090
 "int",        1225,    48,     9,    13,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38593,  5076,   716,  1450, 45824,123830
+"total",     38685,  5077,   716,  1425, 45903,123909
 ----------------
 Failure summary:
 S02-literals/adverbs.rakudo.jvm aborted 19 test(s)
@@ -1959,6 +1958,7 @@ S16-io/bare-say.t 3 - say ()
 S16-io/bare-say.t 7 - for %h { .say } (RT #74822)
 S16-io/lines.rakudo.jvm aborted 527 test(s)
 S16-io/say-and-ref.t 1 - Can say array ref
+S17-supply/interval.t 4 - Exception thrown in a timer and unhandled terminates program
 S17-supply/rotor.rakudo.jvm aborted 24 test(s)
 S19-command-line/dash-e.t 4 - -e works correctly as a stopper
 S29-conversions/hash.t 6 - hash() on list of pairs lives (RT #76826)
@@ -1972,7 +1972,6 @@ S32-io/io-spec-cygwin.t aborted 85 test(s)
 S32-io/io-spec-win.t aborted 168 test(s)
 S32-io/note.t 3 - note array
 S32-io/note.t 4 - note an array reference
-S32-io/socket-recv-vs-read.t passed 11 unplanned test(s)
 S32-list/combinations.t aborted 8 test(s)
 S32-list/permutations.t aborted 2 test(s)
 S32-list/produce.rakudo.jvm aborted 14 test(s)
