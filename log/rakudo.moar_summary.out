@@ -219,7 +219,7 @@ S02-names/indirect.t...............................  10    0    0    0   10
 S02-names/is_cached.t..............................  38    0    0    0   38
 S02-names/is_default.rakudo.moar...................    
 # Failed test 'right exception type (X::Comp::Trait::NotOnNative)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::Comp::Trait::NotOnNative
     # Got:      X::Comp::NYI
     # Exception message: native value types for hashes not yet implemented. Sorry. 
@@ -232,15 +232,7 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  24    0    0    0   24
 S02-names/our.rakudo.moar..........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.moar.......................WARNING: unhandled Failure detected in DESTROY:
-No such symbol 'OUR::A43'
-  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:184
-
-WARNING: unhandled Failure detected in DESTROY:
-No such symbol 'OUR::A42'
-  in block <unit> at t/spec/S02-names/pseudo.rakudo.moar:180
-
-  71    0    6   67  144
+S02-names/pseudo.rakudo.moar.......................  71    0    6   67  144
      4 skipped: Cannot bind to &::("CORE")::foo RT #126113
      4 skipped: the binding in here is NYI RT #124914
     23 skipped: various issues to resolve RT #124917
@@ -275,25 +267,25 @@ S02-types/array-shapes.rakudo.moar.................
      2 todo   : code does not die, array shapes RT \#124502
 S02-types/array.rakudo.moar........................    
 # Failed test 'code dies'
-# at t/spec/S02-types/array.rakudo.moar line 269
+# at t/spec/S02-types/array.rakudo.moar line 270
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Item)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::Item
     # Got:      X::AdHoc
     # Exception message: Cannot coerce Inf or NaN to an Int
     # Looks like you failed 1 test of 4
     
 # Failed test 'right exception type (X::Item)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::Item
     # Got:      X::AdHoc
     # Exception message: Cannot coerce Inf or NaN to an Int
     # Looks like you failed 1 test of 4
 Use of uninitialized value @bar of type Str in string context
-Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S02-types/array.rakudo.moar:366
-  92    0    3    2   97
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S02-types/array.rakudo.moar:367
+  93    0    3    2   98
      2 skipped: multi-dim arrays NYI RT #124508
      1 todo   : bind_pos NYI
      2 todo   : regression to AdHoc exception RT \#124509
@@ -402,7 +394,9 @@ S02-types/pair.rakudo.moar.........................# checking Pair.new(:key,:val
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t..................................Use of uninitialized value of type Range in numeric context  in block <unit> at t/spec/S02-types/range.t:87
- 168    0    0    0  168
+Use of uninitialized value $desc of type Any in string context
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in sub proclaim at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm:506
+ 172    0    0    0  172
 S02-types/set.rakudo.moar..........................Potential difficulties:
     Redeclaration of symbol $inner-list
     at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S02-types/set.rakudo.moar:315
@@ -521,7 +515,7 @@ S03-operators/andthen.t............................   8    0    0    0    8
 S03-operators/arith.t..............................Use of uninitialized value of type Int in numeric context  in block  at t/spec/S03-operators/arith.t:379
  157    0    0    0  157
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
-S03-operators/assign.rakudo.moar................... 264    0   16   14  294
+S03-operators/assign.rakudo.moar................... 265    0   16   14  295
      3 skipped: ,= needs to be special cased after GLR to compile to push(@a, 3, 4)
      2 skipped: RT #76734
      3 skipped: cannot modify an immutable value RT #124533
@@ -823,8 +817,8 @@ S03-operators/mix.rakudo.moar...................... 102    0   26    0  128
      8 todo   : Rakudo update in progress, but not done yet RT \#124541
      4 todo   : Wrong answer at the moment
      8 todo   : submix behavior still under discussion
-S03-operators/names.t..............................Sub+{<anon|34477686016>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
-Sub+{<anon|34477686016>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
+S03-operators/names.t..............................Sub+{<anon|34477665536>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:14
+Sub+{<anon|34477665536>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t:16
    7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -1125,11 +1119,84 @@ S04-statements/once.t..............................Use of Nil in string context 
 S04-statements/quietly.t...........................   4    0    0    0    4
 S04-statements/redo.t..............................  12    0    0    0   12
 S04-statements/repeat.t............................  19    0    0    0   19
-S04-statements/return.rakudo.moar..................  19    0    1    0   20
-     1 todo   : lexotic return
+S04-statements/return.t............................  20    0    0    0   20
 S04-statements/sink.t..............................   2    0    0    0    2
 S04-statements/terminator.t........................  20    0    0    0   20
-S04-statements/try.t...............................  40    0    0    0   40
+S04-statements/try.t...............................WARNING: unhandled Failure detected in DESTROY:
+Cannot convert string to number: base-10 number must begin with valid digits or '.' in '[32m[33m⏏[31mfoo[0m' (indicated by [33m⏏[0m)
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1359
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1355
+  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1317
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1852
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_want at gen/moar/m-Perl6-Optimizer.nqp:1677
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
+  in any visit_handle at gen/moar/m-Perl6-Optimizer.nqp:1641
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1855
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
+  in any optimize at src/Perl6/Compiler.nqp:70
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot convert string to number: base-10 number must begin with valid digits or '.' in '[32m[33m⏏[31mfoo[0m' (indicated by [33m⏏[0m)
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1359
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1355
+  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1317
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1852
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_want at gen/moar/m-Perl6-Optimizer.nqp:1677
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
+  in any optimize at src/Perl6/Compiler.nqp:70
+
+WARNING: unhandled Failure detected in DESTROY:
+Cannot convert string to number: base-10 number must begin with valid digits or '.' in '[32m[33m⏏[31mfoo[0m' (indicated by [33m⏏[0m)
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1359
+  in any  at gen/moar/m-Perl6-Optimizer.nqp:1355
+  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1317
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1852
+  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1027
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1864
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
+  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
+  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
+  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
+  in any optimize at src/Perl6/Compiler.nqp:70
+
+  40    0    0    0   40
 S04-statements/unless.t............................  11    0    0    0   11
 S04-statements/until.t.............................   4    0    0    0    4
 S04-statements/when.t..............................  24    0    0    0   24
@@ -1749,7 +1816,7 @@ S10-packages/precompilation.rakudo.moar............
 # expected: '3'
 #      got: '0'
 # error: Can't serialize an object of type Failure
-#   in block <unit> at getout-88929-938962.code:6
+#   in block <unit> at getout-7155-21936.code:6
 
 
 
@@ -1758,10 +1825,10 @@ S10-packages/precompilation.rakudo.moar............
 # expected: '3'
 #      got: '0'
 # error: Could not find symbol '&C1'
-#   in block <unit> at getout-88929-383852.code:4
+#   in block <unit> at getout-7155-474450.code:4
 
 # Actually thrown at:
-#   in block <unit> at getout-88929-383852.code:4
+#   in block <unit> at getout-7155-474450.code:4
 
 
 # Looks like you planned 22 tests, but ran 16
@@ -1803,7 +1870,11 @@ S11-modules/require.rakudo.moar....................  14    0    2    1   17
      1 skipped: Trying to import from 'InnerModule', but the following symbols are missing: quux RT #118407
      1 todo   : creation of stub package symbol NYI RT \#125083
      1 todo   : variable form plus imports NYI RT \#125084
-S11-repository/curli-install.t.....................  18    0    0    0   18
+S11-repository/curli-install.t.....................WARNING: unhandled Failure detected in DESTROY:
+No such symbol 'Foo'
+  in block <unit> at t/spec/S11-repository/curli-install.t:36
+
+  18    0    0    0   18
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  23    0    0    0   23
 S12-attributes/clone.t.............................  41    0    0    0   41
@@ -1849,7 +1920,7 @@ S12-attributes/undeclared.t........................  11    0    0    0   11
 S12-class/anonymous.rakudo.moar....................  17    0    1    0   18
      1 todo   : Anonymous class stringification (?) RT \#125045
 S12-class/attributes-required.t....................   5    0    0    0    5
-S12-class/attributes.t.............................  35    0    0    0   35
+S12-class/attributes.t.............................  36    0    0    0   36
 S12-class/augment-supersede.rakudo.moar............  11    0    0    2   13
      2 skipped: redeclaration of symbol Bar RT #125046
 S12-class/basic.t..................................  43    0    0    0   43
@@ -2099,8 +2170,8 @@ S15-unicode-information/uniprop.t..................   6    0    0    0    6
 S15-unicode-information/unival.t...................  40    0    0    0   40
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  12    0    0    0   12
-S16-filehandles/chmod.t............................# Using file temp_1448929771
-# Using file temp_1448929771
+S16-filehandles/chmod.t............................# Using file temp_1449016161
+# Using file temp_1449016161
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -2142,7 +2213,19 @@ S16-unfiled/rebindstdhandles.rakudo.moar...........   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
 S17-channel/earliest.t.............................   7    0    0    0    7
-S17-lowlevel/lock.t................................  23    0    0    0   23
+S17-lowlevel/lock.t................................Use of uninitialized value of type Any in string context
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm:134
+
+# Failed test 'Correct result and no crash in lock/condvar use (13)'
+# at t/spec/S17-lowlevel/lock.t line 152
+Use of uninitialized value of type Any in string context
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in code  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm:137
+# expected: '10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200 210 220 230 240 250 260 270 280 290 300 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 510 520 530 540 550 560 570 580 590 600 610 620 630 640 650 660 670 680 690 700 710 720 730 740 750 760 770 780 790 800 810 820 830 840 850 860 870 880 890 900 910 920 930 940 950 960 970 980 990 1000'
+Use of uninitialized value of type Any in string context
+Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm:144
+#      got: '10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200 210 220 230 240 250 260 270 280 290 300 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 510 520 530 540 550 560 570 580 590 600 610 620 630 640 650  670 680 690 700 710 720 730 740 750 760 770 780 790 800 810 820 830 840 850 860 870 880 890 900 910 920 930 940 950 960 970 980 990 1000'
+# Looks like you failed 1 test of 23
+  22    1    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-procasync/basic.rakudo.moar....................  27    0    0    3   30
@@ -2281,8 +2364,8 @@ S17-supply/stable.rakudo.moar......................# **** scheduling with Thread
    5    0    0    2    7
      2 skipped: doesn't work or can't test RT #124822
 S17-supply/start.t.................................   8    0    0    0    8
-S17-supply/syntax.t................................  45    8    0    0   53
-     8 tests aborted (missing ok/not ok)
+S17-supply/syntax.t................................  39   14    0    0   53
+    14 tests aborted (missing ok/not ok)
 S17-supply/tail.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    8    0    0    0    8
@@ -2835,84 +2918,84 @@ S32-array/rotate.t.................................  29    0    0    0   29
 S32-array/shift.t..................................  33    0    0    0   33
 S32-array/splice.rakudo.moar.......................    
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/A7D314CC30FA0D73B4AEBCB4D1B98BAB6E5697D7.1448928870.611/EE/EE1D5C2B51F52ADE144E98FCA15A2AD069B334E3 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/5AF218BA645645038917D5D9018B5BE9758143B3.1449015267.50132/4D/4D9F70410F7341125CBCFBA03DA21F9743E291B2 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
@@ -2963,16 +3046,9 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 
 Use of uninitialized value of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at t/spec/S32-exceptions/misc.rakudo.moar:599
- 352    0    1    0  353
+ 355    0    1    0  356
      1 todo   : parsing regression RT \#124679
-S32-hash/adverbs.t.................................    
-# Failed test ''%h<b>:zorp' died'
-# at t/spec/S32-hash/adverbs.t line 58
-    # Looks like you failed 1 test of 2
-
-# Failed test 'did we throws-like Exception?'
-# at t/spec/S32-hash/adverbs.t line 58
-Use of uninitialized value %a of type Any in string context
+S32-hash/adverbs.t.................................Use of uninitialized value %a of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm:134
 Use of uninitialized value $T of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm:134
@@ -4044,8 +4120,7 @@ Use of uninitialized value %j of type Int in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm:133
 Use of uninitialized value $T of type Int in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm:133
-# Looks like you failed 1 test of 1124
-1123    1    0    0 1124
+1124    0    0    0 1124
 S32-hash/antipairs.t...............................   5    0    0    0    5
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
@@ -4342,68 +4417,6 @@ S32-str/rindex.t...................................Use of uninitialized value $d
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in sub proclaim at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm:506
 Use of uninitialized value $desc of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in sub proclaim at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm:506
-WARNING: unhandled Failure detected in DESTROY:
-Position in rindex out of range. Is: -99999999999999996863366107917975552, should be in 0..5
-  in block  at t/spec/S32-str/rindex.t:78
-  in block <unit> at t/spec/S32-str/rindex.t:75
-
-WARNING: unhandled Failure detected in DESTROY:
-Position in rindex out of range. Is: -99999999999999996863366107917975552, should be in 0..5
-  in block  at t/spec/S32-str/rindex.t:77
-  in block <unit> at t/spec/S32-str/rindex.t:75
-
-WARNING: unhandled Failure detected in DESTROY:
-Position in rindex out of range. Is: -10000000000000000608673814477275136, should be in 0..5
-  in block  at t/spec/S32-str/rindex.t:78
-  in block <unit> at t/spec/S32-str/rindex.t:75
-
-WARNING: unhandled Failure detected in DESTROY:
-Position in rindex out of range. Is: -10000000000000000608673814477275136, should be in 0..5
-  in block  at t/spec/S32-str/rindex.t:77
-  in block <unit> at t/spec/S32-str/rindex.t:75
-
-WARNING: unhandled Failure detected in DESTROY:
-Position in rindex out of range. Is: -1, should be in 0..5
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1359
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1355
-  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1317
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1267
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
-  in any visit_want at gen/moar/m-Perl6-Optimizer.nqp:1677
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1867
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
-  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
-  in any optimize at src/Perl6/Compiler.nqp:70
-
-WARNING: unhandled Failure detected in DESTROY:
-Position in rindex out of range. Is: -1, should be in 0..5
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1359
-  in any  at gen/moar/m-Perl6-Optimizer.nqp:1355
-  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp:1317
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1267
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1852
-  in any visit_op_children at gen/moar/m-Perl6-Optimizer.nqp:1287
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1172
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1871
-  in any visit_op_children at gen/moar/m-Perl6-Optimizer.nqp:1287
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1172
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1852
-  in any visit_op_children at gen/moar/m-Perl6-Optimizer.nqp:1287
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp:1172
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
-  in any visit_want at gen/moar/m-Perl6-Optimizer.nqp:1677
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1843
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp:1873
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp:902
-  in any optimize at gen/moar/m-Perl6-Optimizer.nqp:882
-  in any optimize at src/Perl6/Compiler.nqp:70
-
 Use of uninitialized value $desc of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in sub proclaim at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm:506
 Use of uninitialized value $desc of type Any in string context
@@ -4600,14 +4613,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.3251003 seconds
-# gerdr: 0.34428804 seconds
-# loop: 0.46326748 seconds
-# recursive-ternary: 0.468880 seconds
-# hand-memoization: 0.7090357 seconds
-# sequence-ternary: 1.0194438 seconds
-# recursive-ternary-hand-cached: 1.9418729 seconds
-# sequence: 2.2923839 seconds
+integration/advent2012-day21.t.....................# kaz: 0.32365298 seconds
+# gerdr: 0.34256170 seconds
+# recursive-ternary: 0.457288 seconds
+# loop: 0.4721375 seconds
+# hand-memoization: 0.711531 seconds
+# sequence-ternary: 1.0094275 seconds
+# recursive-ternary-hand-cached: 1.941067 seconds
+# sequence: 2.2595996 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -4659,7 +4672,7 @@ Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm line 228
-    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod9CBC84C7/p6testmod8520DAE8.pm6')
+    # Missing or wrong version of dependency '<unit-outer>' (from '/tmp/p6testmod34AA54C5/p6testmod6E521C89.pm6')
     # Looks like you failed 1 test of 2
    6    0    1    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
@@ -4684,38 +4697,38 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6800,     0,    90,   339,  7229,  7228
-"S03",        5573,     0,   110,    75,  5758,  5776
-"S04",        1407,     0,    38,    28,  1473,  1505
+"S02",        6805,     0,    90,   339,  7234,  7233
+"S03",        5574,     0,   110,    75,  5759,  5777
+"S04",        1408,     0,    37,    28,  1473,  1505
 "S05",        5789,     0,    90,    94,  5973,  6143
 "S06",        2123,     1,    50,    80,  2254,  2300
 "S07",          22,     0,     0,     0,    22,   118
 "S09",        2247,     0,    10,    37,  2294,  2294
 "S10",         103,     8,     2,     2,   115,   172
 "S11",         154,     0,     6,    11,   171,   190
-"S12",        1618,     0,    31,   126,  1775,  1830
+"S12",        1619,     0,    31,   126,  1776,  1831
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         349,     0,     7,     5,   361,   374
 "S15",       79040,     0,     3,    18, 79061, 79081
 "S16",         763,     0,     3,   159,   925,   981
-"S17",         899,     8,     5,    28,   940,   940
+"S17",         892,    15,     5,    28,   940,   940
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          19,     0,     0,     0,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           8,     0,     0,     0,     8,     8
 "S29",         364,     0,     3,     2,   369,   369
-"S32",       12712,     2,   178,   159, 13051, 11256
+"S32",       12716,     1,   178,   159, 13054, 11259
 "int",        1273,     7,     9,    13,  1302,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",    123268,    26,   643,  1323,125260,124128
+"total",    123273,    32,   642,  1323,125270,124138
 ----------------
 Failure summary:
 S06-other/main-usage.rakudo.moar 24 - multiple occurence for named array param
 S10-packages/precompilation.rakudo.moar 1 - 
 S10-packages/precompilation.rakudo.moar 7 - tried to precompile all 3 modules
 S10-packages/precompilation.rakudo.moar aborted 6 test(s)
-S17-supply/syntax.t aborted 8 test(s)
+S17-lowlevel/lock.t 21 - Correct result and no crash in lock/condvar use (13)
+S17-supply/syntax.t aborted 14 test(s)
 S32-array/adverbs.t 21 - did we throws-like Exception?
-S32-hash/adverbs.t 23 - did we throws-like Exception?
 integration/advent2014-day05.rakudo.moar aborted 7 test(s)
