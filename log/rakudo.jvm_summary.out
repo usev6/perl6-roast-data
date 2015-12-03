@@ -758,8 +758,8 @@ S05-modifier/global.t..............................   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
 S05-modifier/ignorecase.rakudo.jvm.................   0   25    0    0   25
     25 tests aborted (missing ok/not ok)
-S05-modifier/ii.rakudo.jvm.........................   0   21    0    0   21
-    21 tests aborted (missing ok/not ok)
+S05-modifier/ii.rakudo.jvm.........................   0   23    0    0   23
+    23 tests aborted (missing ok/not ok)
 S05-modifier/my.rakudo.jvm.........................   0   24    0    0   24
     24 tests aborted (missing ok/not ok)
 S05-modifier/overlapping.t.........................   0   22    0    0   22
@@ -796,8 +796,8 @@ S05-substitution/67222.t...........................   0    1    0    0    1
      1 tests aborted (missing ok/not ok)
 S05-substitution/match.t...........................   0   13    0    0   13
     13 tests aborted (missing ok/not ok)
-S05-substitution/subst.rakudo.jvm..................   0  163    0    0  163
-   163 tests aborted (missing ok/not ok)
+S05-substitution/subst.rakudo.jvm..................   0  179    0    0  179
+   179 tests aborted (missing ok/not ok)
 S05-transliteration/79778.t........................   0    1    0    0    1
      1 tests aborted (missing ok/not ok)
 S05-transliteration/trans.rakudo.jvm...............   0   62    0    0   62
@@ -1846,8 +1846,8 @@ S32-str/rindex.t...................................   0   45    0    0   45
     45 tests aborted (missing ok/not ok)
 S32-str/samecase.t.................................   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S32-str/samemark.rakudo.jvm........................   0    7    0    0    7
-     7 tests aborted (missing ok/not ok)
+S32-str/samemark.t.................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
 S32-str/split-simple.t.............................   0   29    0    0   29
     29 tests aborted (missing ok/not ok)
 S32-str/split.rakudo.jvm...........................   0   57    0    0   57
@@ -2141,7 +2141,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S02",           0,  5411,     0,     0,  5411,  5411
 "S03",           0,  5759,     0,     0,  5759,  5777
 "S04",           0,  1459,     0,     0,  1459,  1511
-"S05",           0,  5942,     0,     0,  5942,  6143
+"S05",           0,  5960,     0,     0,  5960,  6161
 "S06",           0,  2244,     0,     0,  2244,  2300
 "S07",           0,    22,     0,     0,    22,   118
 "S09",           0,   804,     0,     0,   804,   804
@@ -2159,10 +2159,10 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S26",           0,  1989,     0,     0,  1989,  1989
 "S28",           0,     2,     0,     0,     2,     8
 "S29",           0,   165,     0,     0,   165,   165
-"S32",           0,  8949,     0,     0,  8949,  9013
+"S32",           0,  8950,     0,     0,  8950,  9014
 "int",           0,  1282,     0,     0,  1282,  1278
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 38010,     0,     0, 38010,117829
+"total",         0, 38029,     0,     0, 38029,117848
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2541,7 +2541,7 @@ S05-modifier/counted-match.rakudo.jvm aborted 28 test(s)
 S05-modifier/counted.rakudo.jvm aborted 126 test(s)
 S05-modifier/global.t aborted 8 test(s)
 S05-modifier/ignorecase.rakudo.jvm aborted 25 test(s)
-S05-modifier/ii.rakudo.jvm aborted 21 test(s)
+S05-modifier/ii.rakudo.jvm aborted 23 test(s)
 S05-modifier/my.rakudo.jvm aborted 24 test(s)
 S05-modifier/overlapping.t aborted 22 test(s)
 S05-modifier/perl5_0.rakudo.jvm aborted 24 test(s)
@@ -2560,7 +2560,7 @@ S05-modifier/repetition.rakudo.jvm aborted 12 test(s)
 S05-modifier/sigspace.t aborted 16 test(s)
 S05-substitution/67222.t aborted 1 test(s)
 S05-substitution/match.t aborted 13 test(s)
-S05-substitution/subst.rakudo.jvm aborted 163 test(s)
+S05-substitution/subst.rakudo.jvm aborted 179 test(s)
 S05-transliteration/79778.t aborted 1 test(s)
 S05-transliteration/trans.rakudo.jvm aborted 62 test(s)
 S05-transliteration/with-closure.rakudo.jvm aborted 18 test(s)
@@ -3075,7 +3075,7 @@ S32-str/pack.t aborted 7 test(s)
 S32-str/pos.t aborted 2 test(s)
 S32-str/rindex.t aborted 45 test(s)
 S32-str/samecase.t aborted 8 test(s)
-S32-str/samemark.rakudo.jvm aborted 7 test(s)
+S32-str/samemark.t aborted 8 test(s)
 S32-str/split-simple.t aborted 29 test(s)
 S32-str/split.rakudo.jvm aborted 57 test(s)
 S32-str/sprintf-b.rakudo.jvm aborted 165 test(s)
