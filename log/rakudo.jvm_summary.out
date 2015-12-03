@@ -543,8 +543,8 @@ S04-phasers/enter-leave.rakudo.jvm.................   0   30    0    0   30
     30 tests aborted (missing ok/not ok)
 S04-phasers/eval-in-begin.t........................   0    3    0    0    3
      3 tests aborted (missing ok/not ok)
-S04-phasers/first.rakudo.jvm.......................   0    4    0    0    4
-     4 tests aborted (missing ok/not ok)
+S04-phasers/first.rakudo.jvm.......................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
 S04-phasers/in-eval.rakudo.jvm.....................   0   35    0    0   35
     35 tests aborted (missing ok/not ok)
 S04-phasers/in-loop.rakudo.jvm.....................   0    5    0    0    5
@@ -555,8 +555,8 @@ S04-phasers/keep-undo.rakudo.jvm...................   0   16    0    0   16
     16 tests aborted (missing ok/not ok)
 S04-phasers/multiple.t.............................   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S04-phasers/next.rakudo.jvm........................   0   13    0    0   13
-    13 tests aborted (missing ok/not ok)
+S04-phasers/next.rakudo.jvm........................   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
 S04-phasers/pre-post.rakudo.jvm....................   0   22    0    0   22
     22 tests aborted (missing ok/not ok)
 S04-phasers/rvalue.t...............................   0   16    0    0   16
@@ -1165,8 +1165,8 @@ S12-introspection/roles.rakudo.jvm.................   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
 S12-introspection/walk.t...........................   0   11    0    0   11
     11 tests aborted (missing ok/not ok)
-S12-meta/exporthow.t...............................   0    9    0    0    9
-     9 tests aborted (missing ok/not ok)
+S12-meta/exporthow.rakudo.jvm......................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
 S12-meta/grammarhow.t..............................   0    1    0    0    1
      1 tests aborted (missing ok/not ok)
 S12-meta/primitives.rakudo.jvm.....................   0   17    0    0   17
@@ -2140,14 +2140,14 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S01",           0,    75,     0,     0,    75,    86
 "S02",           0,  5411,     0,     0,  5411,  5411
 "S03",           0,  5759,     0,     0,  5759,  5777
-"S04",           0,  1453,     0,     0,  1453,  1505
+"S04",           0,  1459,     0,     0,  1459,  1511
 "S05",           0,  5942,     0,     0,  5942,  6143
 "S06",           0,  2244,     0,     0,  2244,  2300
 "S07",           0,    22,     0,     0,    22,   118
 "S09",           0,   804,     0,     0,   804,   804
 "S10",           0,   115,     0,     0,   115,   172
 "S11",           0,   171,     0,     0,   171,   190
-"S12",           0,  1776,     0,     0,  1776,  1831
+"S12",           0,  1777,     0,     0,  1777,  1832
 "S13",           0,    62,     0,     0,    62,    72
 "S14",           0,   361,     0,     0,   361,   374
 "S15",           0,    96,     0,     0,    96, 79081
@@ -2162,7 +2162,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0,  8949,     0,     0,  8949,  9013
 "int",           0,  1282,     0,     0,  1282,  1278
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 38003,     0,     0, 38003,117822
+"total",         0, 38010,     0,     0, 38010,117829
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2434,13 +2434,13 @@ S04-phasers/descending-order.t aborted 7 test(s)
 S04-phasers/end.t aborted 8 test(s)
 S04-phasers/enter-leave.rakudo.jvm aborted 30 test(s)
 S04-phasers/eval-in-begin.t aborted 3 test(s)
-S04-phasers/first.rakudo.jvm aborted 4 test(s)
+S04-phasers/first.rakudo.jvm aborted 7 test(s)
 S04-phasers/in-eval.rakudo.jvm aborted 35 test(s)
 S04-phasers/in-loop.rakudo.jvm aborted 5 test(s)
 S04-phasers/init.t aborted 13 test(s)
 S04-phasers/keep-undo.rakudo.jvm aborted 16 test(s)
 S04-phasers/multiple.t aborted 2 test(s)
-S04-phasers/next.rakudo.jvm aborted 13 test(s)
+S04-phasers/next.rakudo.jvm aborted 16 test(s)
 S04-phasers/pre-post.rakudo.jvm aborted 22 test(s)
 S04-phasers/rvalue.t aborted 16 test(s)
 S04-statement-modifiers/for.t aborted 30 test(s)
@@ -2741,7 +2741,7 @@ S12-introspection/methods.rakudo.jvm aborted 57 test(s)
 S12-introspection/parents.t aborted 59 test(s)
 S12-introspection/roles.rakudo.jvm aborted 12 test(s)
 S12-introspection/walk.t aborted 11 test(s)
-S12-meta/exporthow.t aborted 9 test(s)
+S12-meta/exporthow.rakudo.jvm aborted 10 test(s)
 S12-meta/grammarhow.t aborted 1 test(s)
 S12-meta/primitives.rakudo.jvm aborted 17 test(s)
 S12-methods/accessors.t aborted 8 test(s)
