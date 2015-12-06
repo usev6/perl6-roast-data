@@ -1765,8 +1765,8 @@ S32-num/is-prime.t.................................   0   35    0    0   35
     35 tests aborted (missing ok/not ok)
 S32-num/log.rakudo.jvm.............................   0   29    0    0   29
     29 tests aborted (missing ok/not ok)
-S32-num/narrow.t...................................   0   13    0    0   13
-    13 tests aborted (missing ok/not ok)
+S32-num/narrow.rakudo.jvm..........................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
 S32-num/pi.t.......................................   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
 S32-num/polar.t....................................   0   48    0    0   48
@@ -1783,8 +1783,8 @@ S32-num/real-bridge.t..............................   0  200    0    0  200
    200 tests aborted (missing ok/not ok)
 S32-num/roots.t....................................   0   55    0    0   55
     55 tests aborted (missing ok/not ok)
-S32-num/rounders.rakudo.jvm........................   0  130    0    0  130
-   130 tests aborted (missing ok/not ok)
+S32-num/rounders.rakudo.jvm........................   0  134    0    0  134
+   134 tests aborted (missing ok/not ok)
 S32-num/rshift_pos_amount.t........................   0  189    0    0  189
    189 tests aborted (missing ok/not ok)
 S32-num/sign.t.....................................   0   35    0    0   35
@@ -2157,10 +2157,10 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S26",           0,  1989,     0,     0,  1989,  1989
 "S28",           0,     2,     0,     0,     2,     8
 "S29",           0,   165,     0,     0,   165,   165
-"S32",           0,  8957,     0,     0,  8957,  9044
+"S32",           0,  8963,     0,     0,  8963,  9050
 "int",           0,  1282,     0,     0,  1282,  1278
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 38032,     0,     0, 38032,117875
+"total",         0, 38038,     0,     0, 38038,117881
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3033,7 +3033,7 @@ S32-num/fatrat.rakudo.jvm aborted 282 test(s)
 S32-num/int.rakudo.jvm aborted 107 test(s)
 S32-num/is-prime.t aborted 35 test(s)
 S32-num/log.rakudo.jvm aborted 29 test(s)
-S32-num/narrow.t aborted 13 test(s)
+S32-num/narrow.rakudo.jvm aborted 15 test(s)
 S32-num/pi.t aborted 5 test(s)
 S32-num/polar.t aborted 48 test(s)
 S32-num/polymod.t aborted 4 test(s)
@@ -3042,7 +3042,7 @@ S32-num/rand.rakudo.jvm aborted 113 test(s)
 S32-num/rat.rakudo.jvm aborted 830 test(s)
 S32-num/real-bridge.t aborted 200 test(s)
 S32-num/roots.t aborted 55 test(s)
-S32-num/rounders.rakudo.jvm aborted 130 test(s)
+S32-num/rounders.rakudo.jvm aborted 134 test(s)
 S32-num/rshift_pos_amount.t aborted 189 test(s)
 S32-num/sign.t aborted 35 test(s)
 S32-num/sqrt.t aborted 18 test(s)
