@@ -320,9 +320,10 @@ S03-metaops/hyper.rakudo.jvm....................... 393    0    2    7  402
      1 todo   : RT \#126527
      1 todo   : can_meta check for meta operators NYI
 S03-metaops/not.t..................................  46    0    0    0   46
-S03-metaops/reduce.rakudo.jvm......................   0  376    0    0  376
-   376 tests aborted (missing ok/not ok)
-S03-metaops/reverse.t..............................  50    0    0    0   50
+S03-metaops/reduce.rakudo.jvm...................... 375    0    1    0  376
+     1 todo   : item context
+S03-metaops/reverse.rakudo.jvm.....................  66    0    1    0   67
+     1 todo   : needs &infix:<orelse> to not use **@a as a param
 S03-metaops/zip.rakudo.jvm.........................  49    0    0    4   53
      4 skipped: RT #126493
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
@@ -818,7 +819,7 @@ S06-currying/misc.rakudo.jvm.......................  11    0    0    2   13
 S06-currying/named.t...............................  27    0    0    0   27
 S06-currying/positional.t.......................... 227    0    0    0  227
 S06-currying/slurpy.t..............................  32    0    0    0   32
-S06-macros/errors.t................................   2    0    0    0    2
+S06-macros/errors.t................................   1    1    0    0    2
 S06-macros/opaque-ast.rakudo.jvm...................   3    0    0    4    7
      3 skipped: :COMPILING flag RT #124964
      1 skipped: return from macro RT #124965
@@ -994,11 +995,8 @@ S09-typed-arrays/native.t..........................   3    0    0    0    3
 S10-packages/basic.rakudo.jvm......................  80    0    0    1   81
      1 skipped: RT #59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  11    8    2    1   22
-     1 skipped: RT #122896
-     1 todo   : RT \#123276
-     1 todo   : no 6model parametrics interning yet
-     6 tests aborted (missing ok/not ok)
+S10-packages/precompilation.rakudo.jvm.............   0   22    0    0   22
+    21 tests aborted (missing ok/not ok)
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
 S11-compunit/compunit-dependencyspecification.t....   6    0    0    0    6
@@ -1250,8 +1248,8 @@ S16-io/print.t.....................................  13    0    0    0   13
 S16-io/say-and-ref.t...............................   3    0    0    0    3
 S16-io/say.t.......................................   5    0    0    0    5
 S16-io/split.t.....................................  18    0    0    0   18
-S16-io/supply.rakudo.jvm...........................   5    0    2    0    7
-     2 todo   : got: $["ab", "cd", "e"]
+S16-io/supply.rakudo.jvm...........................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
 S16-io/tmpdir.t....................................   3    0    0    0    3
 S16-io/words.t.....................................   9    0    0    0    9
 S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
@@ -1283,50 +1281,78 @@ S17-supply/Channel.t...............................  12    0    0    0   12
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  88    0    0    0   88
-S17-supply/batch.t.................................  11    0    0    0   11
-S17-supply/categorize.t............................  63    0    0    0   63
-S17-supply/classify.t..............................  33    0    0    0   33
-S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
-     4 skipped: doesn't work or can't test RT #124826
-     4 skipped: doesn't work or can't test RT #124827
-S17-supply/do.t....................................   5    0    0    0    5
-S17-supply/elems.t.................................   5    0    0    0    5
-S17-supply/flat.t..................................  17    0    0    0   17
-S17-supply/from-list.t.............................  13    0    0    0   13
-S17-supply/grab.t..................................   5    0    0    0    5
-S17-supply/grep.t..................................   7    0    0    0    7
-S17-supply/head.t..................................   8    0    0    0    8
-S17-supply/interval.t..............................   4    0    0    0    4
-S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+S17-supply/batch.t.................................   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
+S17-supply/categorize.t............................   0   63    0    0   63
+    63 tests aborted (missing ok/not ok)
+S17-supply/classify.t..............................   0   33    0    0   33
+    33 tests aborted (missing ok/not ok)
+S17-supply/delayed.rakudo.jvm......................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+S17-supply/do.t....................................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S17-supply/elems.t.................................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S17-supply/flat.t..................................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+S17-supply/from-list.t.............................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+S17-supply/grab.t..................................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S17-supply/grep.t..................................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S17-supply/head.t..................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S17-supply/interval.t..............................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S17-supply/lines.rakudo.jvm........................   0   23    0    0   23
+    23 tests aborted (missing ok/not ok)
 S17-supply/list.t..................................   5    0    0    0    5
-S17-supply/map.t...................................   7    0    0    0    7
-S17-supply/max.t...................................  10    0    0    0   10
-S17-supply/merge.t.................................  10    0    0    0   10
+S17-supply/map.t...................................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S17-supply/max.t...................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S17-supply/merge.t.................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
 S17-supply/migrate.t...............................  13    0    0    0   13
-S17-supply/min.t...................................  10    0    0    0   10
-S17-supply/minmax.t................................  10    0    0    0   10
-S17-supply/on-demand.t.............................   7    0    0    0    7
-S17-supply/produce.t...............................  10    0    0    0   10
-S17-supply/reduce.t................................  10    0    0    0   10
-S17-supply/reverse.t...............................   3    0    0    0    3
-S17-supply/rotor.rakudo.jvm........................  31    0    1    0   32
-     1 todo   : only deprecated so far RT \#124823
-S17-supply/schedule-on.t...........................   5    0    0    0    5
-S17-supply/sort.t..................................   7    0    0    0    7
-S17-supply/squish.t................................  15    0    0    0   15
-S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
-     2 skipped: doesn't work or can't test RT #124822
+S17-supply/min.t...................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S17-supply/minmax.t................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S17-supply/on-demand.t.............................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S17-supply/produce.t...............................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S17-supply/reduce.t................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S17-supply/reverse.t...............................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+S17-supply/rotor.rakudo.jvm........................   0   32    0    0   32
+    32 tests aborted (missing ok/not ok)
+S17-supply/schedule-on.t...........................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S17-supply/sort.t..................................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S17-supply/squish.t................................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+S17-supply/stable.rakudo.jvm.......................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  55    0    0    0   55
-S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  47    0    0    0   47
-S17-supply/unique.t................................  17    0    0    0   17
+S17-supply/tail.t..................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S17-supply/throttle.t..............................   0   47    0    0   47
+    47 tests aborted (missing ok/not ok)
+S17-supply/unique.t................................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
-S17-supply/words.t.................................   5    0    0    0    5
-S17-supply/zip-latest.t............................  12    0    0    0   12
-S17-supply/zip.t...................................  10    0    0    0   10
+S17-supply/words.t.................................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S17-supply/zip-latest.t............................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+S17-supply/zip.t...................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S19-command-line-options/02-dash-n.t...............   3    0    0    0    3
 S19-command-line-options/03-dash-p.t...............   2    0    0    0    2
@@ -1352,7 +1378,8 @@ S26-documentation/07-tables.t......................  38    0    0    0   38
 S26-documentation/08-formattingcodes.t.............  45    0    0    0   45
 S26-documentation/09-configuration.rakudo.jvm......  13    0    4    0   17
      4 todo   : non-string colonpair pod options RT \#124281
-S26-documentation/10-doc-cli.t.....................   2    0    0    0    2
+S26-documentation/10-doc-cli.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
 S26-documentation/block-leading.t.................. 320    0    0   14  334
      7 skipped: declaration comments are NYI on constants
      7 skipped: declaration comments are NYI on variables
@@ -1561,8 +1588,7 @@ S32-num/int.rakudo.jvm............................. 104    0    3    0  107
 S32-num/is-prime.t.................................  35    0    0    0   35
 S32-num/log.rakudo.jvm.............................  28    0    1    0   29
      1 todo   : HugeInt.log RT \#124821
-S32-num/narrow.rakudo.jvm..........................  13    0    0    2   15
-     2 skipped: RT #126828
+S32-num/narrow.t...................................  17    0    0    0   17
 S32-num/pi.t.......................................   8    0    0    0    8
 S32-num/polar.t....................................  48    0    0    0   48
 S32-num/polymod.t..................................   4    0    0    0    4
@@ -1802,7 +1828,7 @@ integration/advent2012-day15.rakudo.jvm............  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1858,37 +1884,70 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        6729,     0,   102,   409,  7240,  7239
-"S03",        5172,   377,   111,   102,  5762,  5780
+"S03",        5563,     1,   113,   102,  5779,  5797
 "S04",        1383,     0,    57,    39,  1479,  1511
 "S05",        5603,     0,   102,   255,  5960,  6162
-"S06",        2090,     0,    61,   104,  2255,  2301
+"S06",        2089,     1,    61,   104,  2255,  2301
 "S07",          22,     0,     0,     0,    22,   118
 "S09",        2246,     0,    11,    37,  2294,  2294
-"S10",         103,     8,     2,     2,   115,   172
+"S10",          92,    22,     0,     1,   115,   172
 "S11",         139,    18,     4,    10,   171,   190
 "S12",        1609,     0,    40,   128,  1777,  1832
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         346,     0,    10,     5,   361,   374
 "S15",          42,     0,     7,    47,    96, 79081
-"S16",         699,     0,    67,   159,   925,   981
-"S17",         881,     0,    15,    20,   916,   965
+"S16",         694,     7,    65,   159,   925,   981
+"S17",         457,   449,     0,    10,   916,   965
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
-"S26",        1909,     0,     8,    72,  1989,  1989
+"S26",        1907,     2,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       12410,     0,   206,   225, 12841, 11153
-"int",        1269,     1,    11,    14,  1295,  1288
+"S32",       12414,     0,   206,   223, 12843, 11155
+"int",        1270,     0,    11,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43131,   404,   817,  1707, 46059,124093
+"total",     43084,   500,   800,  1694, 46078,124112
 ----------------
 Failure summary:
-S03-metaops/reduce.rakudo.jvm aborted 376 test(s)
 S03-smartmatch/signature-signature.rakudo.jvm 17 - :(:$x, *%_) ~~ :(:$x, *%_)
+S06-macros/errors.t 1 - macro returning AST.new doesn't blow up
 S10-packages/precompilation.rakudo.jvm 1 - 
-S10-packages/precompilation.rakudo.jvm 7 - tried to precompile all 3 modules
-S10-packages/precompilation.rakudo.jvm aborted 6 test(s)
+S10-packages/precompilation.rakudo.jvm aborted 21 test(s)
 S11-modules/require.rakudo.jvm aborted 17 test(s)
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+S16-io/supply.rakudo.jvm aborted 7 test(s)
+S17-supply/batch.t aborted 11 test(s)
+S17-supply/categorize.t aborted 63 test(s)
+S17-supply/classify.t aborted 33 test(s)
+S17-supply/delayed.rakudo.jvm aborted 13 test(s)
+S17-supply/do.t aborted 5 test(s)
+S17-supply/elems.t aborted 5 test(s)
+S17-supply/flat.t aborted 17 test(s)
+S17-supply/from-list.t aborted 13 test(s)
+S17-supply/grab.t aborted 5 test(s)
+S17-supply/grep.t aborted 7 test(s)
+S17-supply/head.t aborted 8 test(s)
+S17-supply/interval.t aborted 4 test(s)
+S17-supply/lines.rakudo.jvm aborted 23 test(s)
+S17-supply/map.t aborted 7 test(s)
+S17-supply/max.t aborted 10 test(s)
+S17-supply/merge.t aborted 10 test(s)
+S17-supply/min.t aborted 10 test(s)
+S17-supply/minmax.t aborted 10 test(s)
+S17-supply/on-demand.t aborted 7 test(s)
+S17-supply/produce.t aborted 10 test(s)
+S17-supply/reduce.t aborted 10 test(s)
+S17-supply/reverse.t aborted 3 test(s)
+S17-supply/rotor.rakudo.jvm aborted 32 test(s)
+S17-supply/schedule-on.t aborted 5 test(s)
+S17-supply/sort.t aborted 7 test(s)
+S17-supply/squish.t aborted 15 test(s)
+S17-supply/stable.rakudo.jvm aborted 7 test(s)
+S17-supply/tail.t aborted 8 test(s)
+S17-supply/throttle.t aborted 47 test(s)
+S17-supply/unique.t aborted 17 test(s)
+S17-supply/words.t aborted 5 test(s)
+S17-supply/zip-latest.t aborted 12 test(s)
+S17-supply/zip.t aborted 10 test(s)
+S26-documentation/10-doc-cli.t aborted 2 test(s)
