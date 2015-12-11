@@ -222,7 +222,7 @@ S02-types/infinity.rakudo.jvm......................   6    0    3    4   13
      2 skipped: integer Inf RT #124451
      2 skipped: integer Inf RT #124452
      3 todo   : Int conversion of NaN and Inf RT \#124453
-S02-types/instants-and-durations.t.................  12    0    0    0   12
+S02-types/instants-and-durations.t.................  15    0    0    0   15
 S02-types/int-uint.t...............................   1    0    0    0    1
 S02-types/is-type.rakudo.jvm.......................  10    0    0    2   12
      2 skipped: state variables with `is BagHash`
@@ -308,7 +308,7 @@ S03-junctions/autothreading.rakudo.jvm............. 103    0    1    0  104
      1 todo   : got (Int) instead of (Bool)
 S03-junctions/boolean-context.t....................  74    0    0    0   74
 S03-junctions/misc.t............................... 142    0    0    0  142
-S03-metaops/cross.rakudo.jvm.......................  49    0    1    3   53
+S03-metaops/cross.rakudo.jvm.......................  67    0    1    3   71
      3 skipped: RT #126493
      1 todo   : code does not die
 S03-metaops/eager-hyper.rakudo.jvm.................   7    0    1    0    8
@@ -320,14 +320,10 @@ S03-metaops/hyper.rakudo.jvm....................... 393    0    2    7  402
      1 todo   : RT \#126527
      1 todo   : can_meta check for meta operators NYI
 S03-metaops/not.t..................................  46    0    0    0   46
-S03-metaops/reduce.rakudo.jvm...................... 375   32  113    0  520
-     1 todo   : item context
-    74 todo   : need thunkyreduce branch
-    38 todo PASSED: need thunkyreduce branch
-    32 tests aborted (missing ok/not ok)
-S03-metaops/reverse.rakudo.jvm.....................  66    0    1    0   67
-     1 todo   : needs &infix:<orelse> to not use **@a as a param
-S03-metaops/zip.rakudo.jvm.........................  49    0    0    4   53
+S03-metaops/reduce.rakudo.jvm......................   0  522    0    0  522
+   522 tests aborted (missing ok/not ok)
+S03-metaops/reverse.t..............................  67    0    0    0   67
+S03-metaops/zip.rakudo.jvm.........................  67    0    0    4   71
      4 skipped: RT #126493
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
      1 todo   : Multi colonpair syntax not yet understood RT \#124553
@@ -422,9 +418,8 @@ S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: expected Any but got Mu instead RT #124552
      1 skipped: ~< NYI RT #124531
      1 skipped: ~> NYI RT #124531
-S03-operators/relational.rakudo.jvm................ 140    0    4    0  144
+S03-operators/relational.rakudo.jvm................ 154    0    2    0  156
      2 todo   : RT \#121987
-     2 todo   : RT \#81336
 S03-operators/repeat.t.............................  32    0    0    0   32
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set.t................................ 292    0    0    0  292
@@ -634,9 +629,9 @@ S05-interpolation/regex-in-variable.rakudo.jvm.....  36    0    3    0   39
      1 todo   : escaping characters before EVAL is the wrong way to fix this RT \#100232
      1 todo   : warn on undef
 S05-mass/charsets.rakudo.jvm.......................  14    0    3    0   17
-     1 todo   : Unicode 6.1 -- :Punctuation characters
-     1 todo   : Unicode 6.1 -- punct characters
      1 todo   : Unicode 6.3 -- lower characters
+     1 todo PASSED: Unicode 6.1 -- :Punctuation characters
+     1 todo PASSED: Unicode 6.1 -- punct characters
 S05-mass/named-chars.t............................. 431    0    0    0  431
 S05-mass/properties-block.t........................ 670    0    0    0  670
 S05-mass/properties-derived.rakudo.jvm............. 232    0    1   21  254
@@ -644,7 +639,7 @@ S05-mass/properties-derived.rakudo.jvm............. 232    0    1   21  254
     10 skipped: isCommon NYI RT #124884
      7 skipped: isGraphemeLink RT #124874
      1 todo   : isUnassigned NYI RT \#124883
-S05-mass/properties-general.rakudo.jvm............. 589    3    4   10  606
+S05-mass/properties-general.rakudo.jvm............. 592    0    4   10  606
     10 skipped: RT #124500
      3 todo   : Unions of properties of non-existent codepoints RT \#124863
      1 todo   : Unions of properties of non-existent codepoints RT \#124866
@@ -1259,8 +1254,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  16    2    0    0   17
-     1 tests more than planned were run
+S17-channel/basic.t................................  17    0    0    0   17
 S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -1342,8 +1336,7 @@ S17-supply/squish.t................................   0   15    0    0   15
 S17-supply/stable.rakudo.jvm.......................   0    7    0    0    7
      7 tests aborted (missing ok/not ok)
 S17-supply/start.t.................................   8    0    0    0    8
-S17-supply/syntax.t................................  53    2    0    0   55
-     2 tests aborted (missing ok/not ok)
+S17-supply/syntax.t................................  55    0    0    0   55
 S17-supply/tail.t..................................   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
 S17-supply/throttle.t..............................   0   47    0    0   47
@@ -1421,7 +1414,7 @@ S29-context/eval.rakudo.jvm........................  21    0    0    2   23
 S29-context/evalfile.t.............................   2    0    0    0    2
 S29-context/exit-in-if.t...........................   1    0    0    0    1
 S29-context/exit.t.................................   3    0    0    0    3
-S29-context/sleep.t................................  21    1    0    0   22
+S29-context/sleep.t................................  22    0    0    0   22
 S29-conversions/hash.t.............................   8    0    0    0    8
 S29-conversions/ord_and_chr.rakudo.jvm............. 254    0    2    1  257
      1 skipped: high character name lookup RT #124838
@@ -1725,8 +1718,8 @@ S32-str/unpack.t...................................  24    0    0    0   24
 S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT \#124739
 S32-temporal/Date.t................................  77    0    0    0   77
-S32-temporal/DateTime-Instant-Duration.t...........  33    0    0    0   33
-S32-temporal/DateTime.t............................ 238    0    0    0  238
+S32-temporal/DateTime-Instant-Duration.t...........  55    0    0    0   55
+S32-temporal/DateTime.t............................ 239    0    0    0  239
 S32-temporal/calendar.t............................ 130    0    0    0  130
 S32-temporal/local.rakudo.jvm......................  16    0    9    0   25
      9 todo   : RT \#122702
@@ -1833,7 +1826,7 @@ integration/advent2012-day15.rakudo.jvm............  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1846,8 +1839,7 @@ integration/advent2013-day09.t.....................  21    0    0    0   21
 integration/advent2013-day10.rakudo.jvm............  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.t.....................  32    0    0    0   32
-integration/advent2013-day14.t.....................   6    4    0    0   10
-     4 tests aborted (missing ok/not ok)
+integration/advent2013-day14.t.....................  10    0    0    0   10
 integration/advent2013-day15.rakudo.jvm............  29    0    1    0   30
      1 todo   : jvm rounding quirks
 integration/advent2013-day18.t.....................  10    0    0    0   10
@@ -1889,10 +1881,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6729,     0,   102,   409,  7240,  7239
-"S03",        5566,    32,   225,   102,  5925,  5943
+"S02",        6732,     0,   102,   409,  7243,  7242
+"S03",        5242,   522,   109,   102,  5975,  5993
 "S04",        1383,     0,    57,    39,  1479,  1511
-"S05",        5600,     3,   102,   255,  5960,  6162
+"S05",        5603,     0,   102,   255,  5960,  6162
 "S06",        2090,     0,    61,   104,  2255,  2301
 "S07",          22,     0,     0,     0,    22,   118
 "S09",        2246,     0,    11,    37,  2294,  2294
@@ -1903,31 +1895,25 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         346,     0,    10,     5,   361,   374
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         694,     7,    65,   159,   925,   981
-"S17",         454,   453,     0,    10,   916,   965
+"S17",         457,   449,     0,    10,   916,   965
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1907,     2,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
-"S29",         362,     1,     3,     3,   369,   369
-"S32",       12414,     0,   206,   223, 12843, 11155
-"int",        1266,     4,    11,    14,  1295,  1288
+"S29",         363,     0,     3,     3,   369,   369
+"S32",       12437,     0,   206,   223, 12866, 11178
+"int",        1269,     1,    11,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43078,   542,   912,  1694, 46225,124259
+"total",     42790,  1021,   796,  1694, 46301,124335
 ----------------
 Failure summary:
-S03-metaops/reduce.rakudo.jvm aborted 32 test(s)
-S05-mass/properties-general.rakudo.jvm 596 - Don't match unrelated <Format>
-S05-mass/properties-general.rakudo.jvm 597 - Match unrelated negated <Format>
-S05-mass/properties-general.rakudo.jvm 598 - Match unrelated inverted <Format>
+S03-metaops/reduce.rakudo.jvm aborted 522 test(s)
 S10-packages/precompilation.rakudo.jvm 1 - 
 S10-packages/precompilation.rakudo.jvm aborted 21 test(s)
 S11-modules/require.rakudo.jvm aborted 17 test(s)
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
 S16-io/supply.rakudo.jvm aborted 7 test(s)
-S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t passed 1 unplanned test(s)
 S17-supply/batch.t aborted 11 test(s)
 S17-supply/categorize.t aborted 63 test(s)
 S17-supply/classify.t aborted 33 test(s)
@@ -1955,7 +1941,6 @@ S17-supply/schedule-on.t aborted 5 test(s)
 S17-supply/sort.t aborted 7 test(s)
 S17-supply/squish.t aborted 15 test(s)
 S17-supply/stable.rakudo.jvm aborted 7 test(s)
-S17-supply/syntax.t aborted 2 test(s)
 S17-supply/tail.t aborted 8 test(s)
 S17-supply/throttle.t aborted 47 test(s)
 S17-supply/unique.t aborted 17 test(s)
@@ -1963,5 +1948,4 @@ S17-supply/words.t aborted 5 test(s)
 S17-supply/zip-latest.t aborted 12 test(s)
 S17-supply/zip.t aborted 10 test(s)
 S26-documentation/10-doc-cli.t aborted 2 test(s)
-S29-context/sleep.t 18 - did we actually wait (DateTime)
-integration/advent2013-day14.t aborted 4 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
