@@ -461,8 +461,8 @@ S03-junctions/misc.t...............................nice: ./perl6-m: No such file
    0  142    0    0  142
    142 tests aborted (missing ok/not ok)
 S03-metaops/cross.rakudo.moar......................nice: ./perl6-m: No such file or directory
-   0   71    0    0   71
-    71 tests aborted (missing ok/not ok)
+   0   75    0    0   75
+    75 tests aborted (missing ok/not ok)
 S03-metaops/eager-hyper.rakudo.moar................nice: ./perl6-m: No such file or directory
    0    8    0    0    8
      8 tests aborted (missing ok/not ok)
@@ -479,8 +479,8 @@ S03-metaops/reverse.t..............................nice: ./perl6-m: No such file
    0   67    0    0   67
     67 tests aborted (missing ok/not ok)
 S03-metaops/zip.t..................................nice: ./perl6-m: No such file or directory
-   0   71    0    0   71
-    71 tests aborted (missing ok/not ok)
+   0   75    0    0   75
+    75 tests aborted (missing ok/not ok)
 S03-operators/adverbial-modifiers.rakudo.moar......nice: ./perl6-m: No such file or directory
    0   42    0    0   42
     42 tests aborted (missing ok/not ok)
@@ -632,8 +632,8 @@ S03-operators/relational.rakudo.moar...............nice: ./perl6-m: No such file
    0  156    0    0  156
    156 tests aborted (missing ok/not ok)
 S03-operators/repeat.t.............................nice: ./perl6-m: No such file or directory
-   0   32    0    0   32
-    32 tests aborted (missing ok/not ok)
+   0   38    0    0   38
+    38 tests aborted (missing ok/not ok)
 S03-operators/scalar-assign.t......................nice: ./perl6-m: No such file or directory
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -1747,9 +1747,9 @@ S12-introspection/can.t............................nice: ./perl6-m: No such file
 S12-introspection/definite.t.......................nice: ./perl6-m: No such file or directory
    0    6    0    0    6
      6 tests aborted (missing ok/not ok)
-S12-introspection/meta-class.rakudo.moar...........nice: ./perl6-m: No such file or directory
-   0   14    0    0   14
-    14 tests aborted (missing ok/not ok)
+S12-introspection/meta-class.t.....................nice: ./perl6-m: No such file or directory
+   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
 S12-introspection/methods.rakudo.moar..............nice: ./perl6-m: No such file or directory
    0   57    0    0   57
     57 tests aborted (missing ok/not ok)
@@ -1879,8 +1879,8 @@ S14-roles/attributes.t.............................nice: ./perl6-m: No such file
    0    7    0    0    7
      7 tests aborted (missing ok/not ok)
 S14-roles/basic.rakudo.moar........................nice: ./perl6-m: No such file or directory
-   0   49    0    0   49
-    49 tests aborted (missing ok/not ok)
+   0   51    0    0   51
+    51 tests aborted (missing ok/not ok)
 S14-roles/bool.t...................................nice: ./perl6-m: No such file or directory
    0    3    0    0    3
      3 tests aborted (missing ok/not ok)
@@ -1927,8 +1927,8 @@ S14-traits/attributes.t............................nice: ./perl6-m: No such file
    0    8    0    0    8
      8 tests aborted (missing ok/not ok)
 S14-traits/routines.rakudo.moar....................nice: ./perl6-m: No such file or directory
-   0   15    0    0   15
-    15 tests aborted (missing ok/not ok)
+   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S15-literals/identifiers.t.........................nice: ./perl6-m: No such file or directory
    0    7    0    0    7
@@ -2624,8 +2624,8 @@ S32-container/cat.rakudo.moar......................nice: ./perl6-m: No such file
    0    6    0    0    6
      6 tests aborted (missing ok/not ok)
 S32-container/roundrobin.t.........................nice: ./perl6-m: No such file or directory
-   0    4    0    0    4
-     4 tests aborted (missing ok/not ok)
+   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
 S32-container/stringify.t..........................nice: ./perl6-m: No such file or directory
    0   16    0    0   16
     16 tests aborted (missing ok/not ok)
@@ -3456,7 +3456,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    75,     0,     0,    75,    86
 "S02",           0,  5427,     0,     0,  5427,  5427
-"S03",           0,  5975,     0,     0,  5975,  5993
+"S03",           0,  5989,     0,     0,  5989,  6007
 "S04",           0,  1473,     0,     0,  1473,  1525
 "S05",           0,  5992,     0,     0,  5992,  6162
 "S06",           0,  2252,     0,     0,  2252,  2308
@@ -3464,9 +3464,9 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "S09",           0,   860,     0,     0,   860,   860
 "S10",           0,   115,     0,     0,   115,   172
 "S11",           0,   163,     0,     0,   163,   183
-"S12",           0,  1782,     0,     0,  1782,  1837
+"S12",           0,  1783,     0,     0,  1783,  1838
 "S13",           0,    62,     0,     0,    62,    72
-"S14",           0,   375,     0,     0,   375,   388
+"S14",           0,   378,     0,     0,   378,   391
 "S15",           0, 79061,     0,     0, 79061, 79081
 "S16",           0,   390,     0,     0,   390,   446
 "S17",           0,   974,     0,     0,   974,   974
@@ -3476,10 +3476,10 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "S26",           0,  1989,     0,     0,  1989,  1989
 "S28",           0,     8,     0,     0,     8,     8
 "S29",           0,   165,     0,     0,   165,   165
-"S32",           0,  9051,     0,     0,  9051,  9099
+"S32",           0,  9053,     0,     0,  9053,  9101
 "int",           0,  1289,     0,     0,  1289,  1278
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0,117565,     0,     0,117565,118311
+"total",         0,117585,     0,     0,117585,118331
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.moar aborted 17 test(s)
@@ -3634,13 +3634,13 @@ S03-junctions/associative.t aborted 10 test(s)
 S03-junctions/autothreading.t aborted 104 test(s)
 S03-junctions/boolean-context.t aborted 74 test(s)
 S03-junctions/misc.t aborted 142 test(s)
-S03-metaops/cross.rakudo.moar aborted 71 test(s)
+S03-metaops/cross.rakudo.moar aborted 75 test(s)
 S03-metaops/eager-hyper.rakudo.moar aborted 8 test(s)
 S03-metaops/hyper.rakudo.moar aborted 402 test(s)
 S03-metaops/not.t aborted 46 test(s)
 S03-metaops/reduce.rakudo.moar aborted 522 test(s)
 S03-metaops/reverse.t aborted 67 test(s)
-S03-metaops/zip.t aborted 71 test(s)
+S03-metaops/zip.t aborted 75 test(s)
 S03-operators/adverbial-modifiers.rakudo.moar aborted 42 test(s)
 S03-operators/also.rakudo.moar aborted 8 test(s)
 S03-operators/andthen.t aborted 8 test(s)
@@ -3691,7 +3691,7 @@ S03-operators/range-int.t aborted 506 test(s)
 S03-operators/range.t aborted 125 test(s)
 S03-operators/reduce-le1arg.rakudo.moar aborted 54 test(s)
 S03-operators/relational.rakudo.moar aborted 156 test(s)
-S03-operators/repeat.t aborted 32 test(s)
+S03-operators/repeat.t aborted 38 test(s)
 S03-operators/scalar-assign.t aborted 4 test(s)
 S03-operators/set.t aborted 292 test(s)
 S03-operators/short-circuit.t aborted 83 test(s)
@@ -4059,7 +4059,7 @@ S12-introspection/WHAT.rakudo.moar aborted 37 test(s)
 S12-introspection/attributes.rakudo.moar aborted 30 test(s)
 S12-introspection/can.t aborted 29 test(s)
 S12-introspection/definite.t aborted 6 test(s)
-S12-introspection/meta-class.rakudo.moar aborted 14 test(s)
+S12-introspection/meta-class.t aborted 15 test(s)
 S12-introspection/methods.rakudo.moar aborted 57 test(s)
 S12-introspection/parents.t aborted 59 test(s)
 S12-introspection/roles.t aborted 15 test(s)
@@ -4102,7 +4102,7 @@ S13-overloading/typecasting-long.t aborted 32 test(s)
 S13-type-casting/methods.t aborted 13 test(s)
 S14-roles/anonymous.t aborted 13 test(s)
 S14-roles/attributes.t aborted 7 test(s)
-S14-roles/basic.rakudo.moar aborted 49 test(s)
+S14-roles/basic.rakudo.moar aborted 51 test(s)
 S14-roles/bool.t aborted 3 test(s)
 S14-roles/composition.rakudo.moar aborted 26 test(s)
 S14-roles/conflicts.t aborted 11 test(s)
@@ -4118,7 +4118,7 @@ S14-roles/parameterized-type.t aborted 32 test(s)
 S14-roles/stubs.rakudo.moar aborted 28 test(s)
 S14-roles/submethods.t aborted 4 test(s)
 S14-traits/attributes.t aborted 8 test(s)
-S14-traits/routines.rakudo.moar aborted 15 test(s)
+S14-traits/routines.rakudo.moar aborted 16 test(s)
 S15-literals/identifiers.t aborted 7 test(s)
 S15-literals/numbers.t aborted 46 test(s)
 S15-nfg/case-change.t aborted 52 test(s)
@@ -4347,7 +4347,7 @@ S32-basics/xxKEY.rakudo.moar aborted 129 test(s)
 S32-basics/xxPOS-native.t aborted 10 test(s)
 S32-basics/xxPOS.rakudo.moar aborted 60 test(s)
 S32-container/cat.rakudo.moar aborted 6 test(s)
-S32-container/roundrobin.t aborted 4 test(s)
+S32-container/roundrobin.t aborted 6 test(s)
 S32-container/stringify.t aborted 16 test(s)
 S32-container/zip.rakudo.moar aborted 14 test(s)
 S32-exceptions/misc.rakudo.moar aborted 356 test(s)
