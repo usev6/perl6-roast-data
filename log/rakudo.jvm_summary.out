@@ -58,8 +58,12 @@ S02-literals/listquote.rakudo.jvm..................  23    0    1    0   24
      1 todo   : meta operators RT \#124558
 S02-literals/misc-interpolation.rakudo.jvm.........  49    0    1    0   50
      1 todo   : RT \#122583
-S02-literals/numeric.rakudo.jvm....................   0   58    0    0   58
-    58 tests aborted (missing ok/not ok)
+S02-literals/numeric.rakudo.jvm....................  49    0    4    5   58
+     1 skipped: Prefix - requires an argument, but no valid term found
+     3 skipped: bogus term
+     1 skipped: is not a valid number
+     2 todo   : Adverbial numbers in Rat literals not supported
+     2 todo   : Unsure of what's acceptable for val()
 S02-literals/pair-boolean.t........................   6    0    0    0    6
 S02-literals/pairs.t...............................  76    0    0    0   76
 S02-literals/pod.rakudo.jvm........................   0    0    0    5    5
@@ -187,9 +191,10 @@ S02-types/autovivification.t.......................  25    0    0    0   25
 S02-types/bag.rakudo.jvm........................... 203    0    2    0  205
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT \#124454
-S02-types/baghash.rakudo.jvm....................... 237    0    2   21  260
+S02-types/baghash.rakudo.jvm....................... 220   17    2   21  260
     21 skipped: 'is TypeObject' NYI RT #124490
      2 todo   : in flux
+    17 tests aborted (missing ok/not ok)
 S02-types/bool.t...................................  53    0    0    0   53
 S02-types/built-in.t...............................   1    0    0    0    1
 S02-types/capture.t................................  32    0    0    0   32
@@ -225,7 +230,7 @@ S02-types/instants-and-durations.t.................  15    0    0    0   15
 S02-types/int-uint.t...............................   1    0    0    0    1
 S02-types/is-type.rakudo.jvm.......................  10    0    0    2   12
      2 skipped: state variables with `is BagHash`
-S02-types/isDEPRECATED.rakudo.jvm..................   9    4    8    0   21
+S02-types/isDEPRECATED.rakudo.jvm..................  13    0    8    0   21
      8 todo   : NYI
 S02-types/keyhash.rakudo.jvm.......................   0    0    0   59   59
     59 skipped: 'is ObjectType' NYI RT #124490
@@ -239,7 +244,7 @@ S02-types/mix.rakudo.jvm........................... 190    0    2    0  192
 S02-types/mixed_multi_dimensional.rakudo.jvm.......  77    0    3    0   80
      1 todo   : isa hash
      2 todo   : unknown
-S02-types/mixhash.rakudo.jvm....................... 206    0    2   21  229
+S02-types/mixhash.rakudo.jvm....................... 205    1    2   21  229
     21 skipped: 'is TypeObject' NYI RT #124490
      2 todo   : in flux
 S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
@@ -247,9 +252,12 @@ S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
      4 skipped: multi-dim sized arrays NYI RT #124483
 S02-types/nan.rakudo.jvm...........................  20    0    0    1   21
      1 skipped: RT #83446
-S02-types/native.rakudo.jvm........................  61    6    1    3   71
+S02-types/native.rakudo.jvm........................  64    0   16    3   83
      3 skipped: cannot unbox to a native number
      1 todo   : RT \#102416 - though maybe wrong test? Not sure .WHAT is *that* magic
+     3 todo   : native int args do not truncate, yet
+     3 todo   : native int does not truncate, yet
+     9 todo   : signed/unsigned native ints RT \#124294
 S02-types/nested_arrays.t..........................  10    0    0    0   10
 S02-types/nested_pairs.t...........................  14    0    0    0   14
 S02-types/nil.rakudo.jvm...........................  46    0    5    1   52
@@ -398,8 +406,9 @@ S03-operators/lcm.t................................  15    0    0    0   15
 S03-operators/list-quote-junction.t................  16    0    0    0   16
 S03-operators/minmax.rakudo.jvm....................  28    0    0    2   30
      2 skipped: Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious RT #124539
-S03-operators/misc.rakudo.jvm......................   0   44    0    0   44
-    44 tests aborted (missing ok/not ok)
+S03-operators/misc.rakudo.jvm......................  42    0    1    1   44
+     1 skipped: Bogus term
+     1 todo   : RT \#93978
 S03-operators/mix.rakudo.jvm....................... 102    0   26    0  128
      2 todo   : Crashing
      4 todo   : NYI
@@ -632,9 +641,9 @@ S05-interpolation/regex-in-variable.rakudo.jvm.....  36    0    3    0   39
      1 todo   : escaping characters before EVAL is the wrong way to fix this RT \#100232
      1 todo   : warn on undef
 S05-mass/charsets.rakudo.jvm.......................  14    0    3    0   17
-     1 todo   : Unicode 6.1 -- :Punctuation characters
-     1 todo   : Unicode 6.1 -- punct characters
      1 todo   : Unicode 6.3 -- lower characters
+     1 todo PASSED: Unicode 6.1 -- :Punctuation characters
+     1 todo PASSED: Unicode 6.1 -- punct characters
 S05-mass/named-chars.t............................. 431    0    0    0  431
 S05-mass/properties-block.t........................ 670    0    0    0  670
 S05-mass/properties-derived.rakudo.jvm............. 232    0    1   21  254
@@ -642,7 +651,7 @@ S05-mass/properties-derived.rakudo.jvm............. 232    0    1   21  254
     10 skipped: isCommon NYI RT #124884
      7 skipped: isGraphemeLink RT #124874
      1 todo   : isUnassigned NYI RT \#124883
-S05-mass/properties-general.rakudo.jvm............. 589    3    4   10  606
+S05-mass/properties-general.rakudo.jvm............. 592    0    4   10  606
     10 skipped: RT #124500
      3 todo   : Unions of properties of non-existent codepoints RT \#124863
      1 todo   : Unions of properties of non-existent codepoints RT \#124866
@@ -797,7 +806,7 @@ S05-transliteration/with-closure.rakudo.jvm........  15    0    2    1   18
      1 skipped: Unable to resolve method ord in class Any RT #124659
      2 todo   : nom regression
                                                    pass fail todo skip plan
-S06-advanced/callframe.rakudo.jvm..................  12    1    0    2   15
+S06-advanced/callframe.rakudo.jvm..................  13    0    0    2   15
      1 skipped: NullPointerException RT #77752
      1 skipped: Unable to resolve method inline in type CallFrame
 S06-advanced/callsame.t............................   3    0    0    0    3
@@ -1090,9 +1099,9 @@ S12-construction/BUILD.rakudo.jvm..................   9    0    1    0   10
 S12-construction/autopairs.t.......................   4    0    0    0    4
 S12-construction/construction.t....................  18    0    0    0   18
 S12-construction/named-params-in-BUILD.t...........   3    0    0    0    3
-S12-construction/new.rakudo.jvm....................  16    0   10    0   26
+S12-construction/new.rakudo.jvm....................  16    0    1    9   26
+     9 skipped: parent attributes in initialization RT #76490
      1 todo   : nested package handling does't quite get this one right
-     9 todo   : parent attributes in initialization RT \#76490
 S12-enums/anonymous.t..............................  10    0    0    0   10
 S12-enums/as-role.t................................   9    0    0    0    9
 S12-enums/basic.rakudo.jvm.........................  32    0    0    5   37
@@ -1177,7 +1186,7 @@ S14-roles/basic.rakudo.jvm.........................  47    0    1    3   51
      3 skipped: RT #67768
      1 todo   : Type check failed in assignment to $x; expected C but got Int
 S14-roles/bool.t...................................   3    0    0    0    3
-S14-roles/composition.rakudo.jvm...................  24    0    0    2   26
+S14-roles/composition.rakudo.jvm...................  29    0    0    2   31
      2 skipped: diamond composition RT #124749
 S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
@@ -1266,8 +1275,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  16    2    0    0   17
-     1 tests more than planned were run
+S17-channel/basic.t................................  17    0    0    0   17
 S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -1330,7 +1338,8 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  55    0    0    0   55
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  47    0    0    0   47
+S17-supply/throttle.t..............................   9   38    0    0   47
+    38 tests aborted (missing ok/not ok)
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1350,7 +1359,7 @@ S22-package-format/local.rakudo.jvm................  18    0    0    1   19
                                                    pass fail todo skip plan
 S24-testing/0-compile.t............................   1    0    0    0    1
 S24-testing/3-output.t.............................   4    0    0    0    4
-S24-testing/line-numbers.t.........................   0   13    0    0   13
+S24-testing/line-numbers.t.........................  13    0    0    0   13
                                                    pass fail todo skip plan
 S26-documentation/01-delimited.t...................  40    0    0    0   40
 S26-documentation/02-paragraph.t...................  27    0    0    0   27
@@ -1441,7 +1450,7 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
-S32-exceptions/misc.rakudo.jvm..................... 370    1    1    1  373
+S32-exceptions/misc.rakudo.jvm..................... 380    1    1    1  383
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 todo   : parsing regression RT \#124679
 S32-hash/adverbs.t.................................1128    0    0    0 1128
@@ -1705,7 +1714,7 @@ S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT \#124739
 S32-temporal/Date.t................................  77    0    0    0   77
 S32-temporal/DateTime-Instant-Duration.t...........  55    0    0    0   55
-S32-temporal/DateTime.t............................ 239    0    0    0  239
+S32-temporal/DateTime.t............................ 241    0    0    0  241
 S32-temporal/calendar.t............................ 130    0    0    0  130
 S32-temporal/local.rakudo.jvm......................  16    0    9    0   25
      9 todo   : RT \#122702
@@ -1826,7 +1835,8 @@ integration/advent2013-day10.rakudo.jvm............  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.t.....................  32    0    0    0   32
 integration/advent2013-day14.t.....................  10    0    0    0   10
-integration/advent2013-day15.rakudo.jvm............  28    1    1    0   30
+integration/advent2013-day15.rakudo.jvm............  28    0    2    0   30
+     1 todo   : got (Int) instead of (Bool)
      1 todo   : jvm rounding quirks
 integration/advent2013-day18.t.....................  10    0    0    0   10
 integration/advent2013-day19.t.....................   4    0    0    0    4
@@ -1839,7 +1849,7 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  18    3    1    0   22
+integration/error-reporting.rakudo.jvm.............  21    0    1    0   22
      1 todo   : nigh
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1867,75 +1877,42 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6675,    72,    98,   409,  7254,  7253
-"S03",        5723,    44,   109,   143,  6019,  6037
+"S02",        6713,    22,   117,   414,  7266,  7265
+"S03",        5765,     0,   110,   144,  6019,  6037
 "S04",        1394,     0,    57,    48,  1499,  1531
-"S05",        5605,     3,   103,   249,  5960,  6162
-"S06",        2098,     1,    59,   104,  2262,  2308
+"S05",        5608,     0,   103,   249,  5960,  6162
+"S06",        2099,     0,    59,   104,  2262,  2308
 "S07",          30,     0,     4,     0,    34,   130
 "S09",        2302,     0,    11,    37,  2350,  2350
 "S10",         106,     5,     2,     2,   115,   172
 "S11",         145,     1,     7,    11,   164,   183
-"S12",        1620,     0,    40,   123,  1783,  1838
+"S12",        1620,     0,    31,   132,  1783,  1838
 "S13",          62,     0,     0,     0,    62,    72
-"S14",         363,     0,    10,     5,   378,   391
+"S14",         368,     0,    10,     5,   383,   396
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         880,     2,    15,    20,   916,   965
+"S17",         843,    38,    15,    20,   916,   965
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
-"S24",           5,    13,     0,     0,    18,    89
+"S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       12470,     3,   206,   219, 12898, 11214
-"int",        1266,     4,    11,    14,  1295,  1288
+"S32",       12482,     3,   206,   219, 12910, 11226
+"int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43753,   148,   817,  1717, 46434,124472
+"total",     43833,    69,   829,  1732, 46463,124501
 ----------------
 Failure summary:
-S02-literals/numeric.rakudo.jvm aborted 58 test(s)
-S02-types/isDEPRECATED.rakudo.jvm 2 - right deprecation for a()
-S02-types/isDEPRECATED.rakudo.jvm 4 - right deprecation for awith()
-S02-types/isDEPRECATED.rakudo.jvm 12 - right deprecation for C.new.foo
-S02-types/isDEPRECATED.rakudo.jvm 14 - right deprecation Cwith.new.foo
-S02-types/native.rakudo.jvm 58 - assigning out-of-range value to int8 truncates
-S02-types/native.rakudo.jvm 60 - assigning out-of-range value to int16 truncates
-S02-types/native.rakudo.jvm 62 - assigning out-of-range value to int32 truncates
-S02-types/native.rakudo.jvm 69 - sub with int8 arg will see it truncated
-S02-types/native.rakudo.jvm 70 - sub with int8 arg will see it truncated
-S02-types/native.rakudo.jvm 71 - sub with int8 arg will see it truncated
+S02-types/baghash.rakudo.jvm aborted 17 test(s)
+S02-types/mixhash.rakudo.jvm 131 - .roll(*)[^100] (2)
 S02-types/resolved-in-setting.t aborted 4 test(s)
-S03-operators/misc.rakudo.jvm aborted 44 test(s)
-S05-mass/properties-general.rakudo.jvm 596 - Don't match unrelated <Format>
-S05-mass/properties-general.rakudo.jvm 597 - Match unrelated negated <Format>
-S05-mass/properties-general.rakudo.jvm 598 - Match unrelated inverted <Format>
-S06-advanced/callframe.rakudo.jvm 2 - callframe().line
 S10-packages/precompilation.rakudo.jvm 2 - 
 S10-packages/precompilation.rakudo.jvm 3 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
 S10-packages/precompilation.rakudo.jvm 12 - 
 S10-packages/precompilation.rakudo.jvm 13 - 
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t passed 1 unplanned test(s)
-S24-testing/line-numbers.t 1 - failing test with cmp-ok reports correct line number 9
-S24-testing/line-numbers.t 2 - failing test with dies-ok reports correct line number 9
-S24-testing/line-numbers.t 3 - failing test with eval-dies-ok reports correct line number 9
-S24-testing/line-numbers.t 4 - failing test with eval-lives-ok reports correct line number 9
-S24-testing/line-numbers.t 5 - failing test with isa-ok reports correct line number 9
-S24-testing/line-numbers.t 6 - failing test with is_approx reports correct line number 9
-S24-testing/line-numbers.t 7 - failing test with is-deeply reports correct line number 9
-S24-testing/line-numbers.t 8 - failing test with isnt reports correct line number 9
-S24-testing/line-numbers.t 9 - failing test with is reports correct line number 9
-S24-testing/line-numbers.t 10 - failing test with lives-ok reports correct line number 9
-S24-testing/line-numbers.t 11 - failing test with nok reports correct line number 9
-S24-testing/line-numbers.t 12 - failing test with ok reports correct line number 9
-S24-testing/line-numbers.t 13 - failing test with throws-like reports correct line number 9
+S17-supply/throttle.t aborted 38 test(s)
 S32-exceptions/misc.rakudo.jvm 364 - sink warns on num
 S32-io/IO-Socket-Async-UDP.t aborted 2 test(s)
-integration/advent2013-day15.rakudo.jvm 15 - (\o/)
-integration/error-reporting.rakudo.jvm 2 - Runtime error contains line number
-integration/error-reporting.rakudo.jvm 3 - Method not found error mentions method name and line number
-integration/error-reporting.rakudo.jvm 8 - got the right line number for accessors
