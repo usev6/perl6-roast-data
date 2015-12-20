@@ -58,7 +58,7 @@ S02-literals/listquote.rakudo.jvm..................  23    0    1    0   24
      1 todo   : meta operators RT \#124558
 S02-literals/misc-interpolation.rakudo.jvm.........  49    0    1    0   50
      1 todo   : RT \#122583
-S02-literals/numeric.rakudo.jvm....................  49    0    4    5   58
+S02-literals/numeric.rakudo.jvm....................  50    0    4    5   59
      1 skipped: Prefix - requires an argument, but no valid term found
      3 skipped: bogus term
      1 skipped: is not a valid number
@@ -191,10 +191,9 @@ S02-types/autovivification.t.......................  25    0    0    0   25
 S02-types/bag.rakudo.jvm........................... 203    0    2    0  205
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT \#124454
-S02-types/baghash.rakudo.jvm....................... 220   17    2   21  260
+S02-types/baghash.rakudo.jvm....................... 237    0    2   21  260
     21 skipped: 'is TypeObject' NYI RT #124490
      2 todo   : in flux
-    17 tests aborted (missing ok/not ok)
 S02-types/bool.t...................................  53    0    0    0   53
 S02-types/built-in.t...............................   1    0    0    0    1
 S02-types/capture.t................................  32    0    0    0   32
@@ -244,7 +243,7 @@ S02-types/mix.rakudo.jvm........................... 190    0    2    0  192
 S02-types/mixed_multi_dimensional.rakudo.jvm.......  77    0    3    0   80
      1 todo   : isa hash
      2 todo   : unknown
-S02-types/mixhash.rakudo.jvm....................... 205    1    2   21  229
+S02-types/mixhash.rakudo.jvm....................... 206    0    2   21  229
     21 skipped: 'is TypeObject' NYI RT #124490
      2 todo   : in flux
 S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
@@ -636,9 +635,7 @@ S05-grammar/signatures.t...........................  10    0    0    0   10
 S05-grammar/ws.rakudo.jvm..........................  10    0    0    2   12
      2 skipped: infinite loop: RT #64094 (noauto)
 S05-interpolation/lexicals.t.......................  14    0    0    0   14
-S05-interpolation/regex-in-variable.rakudo.jvm.....  36    0    3    0   39
-     1 todo   : and no need to go all Bobby Tables either RT \#124633
-     1 todo   : escaping characters before EVAL is the wrong way to fix this RT \#100232
+S05-interpolation/regex-in-variable.rakudo.jvm.....  53    0    1    0   54
      1 todo   : warn on undef
 S05-mass/charsets.rakudo.jvm.......................  14    0    3    0   17
      1 todo   : Unicode 6.3 -- lower characters
@@ -700,17 +697,14 @@ S05-metachars/line-anchors.rakudo.jvm..............  23    0    1    0   24
      1 todo   : NFG
 S05-metachars/newline.t............................  15    0    0    0   15
 S05-metachars/tilde.t..............................  29    0    0    0   29
-S05-metasyntax/angle-brackets.rakudo.jvm...........  69    0    2   20   91
+S05-metasyntax/angle-brackets.rakudo.jvm...........  43   40    0    8   91
      1 skipped: <&foo()> NYI RT #124523
-    11 skipped: <*literal> RT #124525
      1 skipped: <test()> NYI RT #124519
      1 skipped: <test()> NYI RT #124520
-     1 skipped: <~~ ... >
      2 skipped: The use of a hash as an assertion is reserved.
      2 skipped: angle quotes in regexes RT #124521
      1 skipped: colon arguments NYI RT #124522
-     1 todo   : !!! in regexes
-     1 todo   : <$subrule> NYI RT \#124524
+    40 tests aborted (missing ok/not ok)
 S05-metasyntax/assertions.t........................   4    0    0    0    4
 S05-metasyntax/changed.t...........................  12    0    0    0   12
 S05-metasyntax/charset.rakudo.jvm..................  48    0    2    3   53
@@ -1010,7 +1004,7 @@ S09-typed-arrays/native.t..........................   3    0    0    0    3
 S10-packages/basic.rakudo.jvm......................  80    0    0    1   81
      1 skipped: RT #59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  14    5    2    1   22
+S10-packages/precompilation.rakudo.jvm.............  16    8    2    1   27
      1 skipped: RT #122896
      1 todo   : RT \#123276
      1 todo   : no 6model parametrics interning yet
@@ -1186,7 +1180,7 @@ S14-roles/basic.rakudo.jvm.........................  47    0    1    3   51
      3 skipped: RT #67768
      1 todo   : Type check failed in assignment to $x; expected C but got Int
 S14-roles/bool.t...................................   3    0    0    0    3
-S14-roles/composition.rakudo.jvm...................  29    0    0    2   31
+S14-roles/composition.rakudo.jvm...................  36    0    0    2   38
      2 skipped: diamond composition RT #124749
 S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
@@ -1201,8 +1195,7 @@ S14-roles/parameterized-basic.t....................  36    0    0    0   36
 S14-roles/parameterized-mixin.rakudo.jvm...........  26    0    4    0   30
      4 todo   : .does with parametric roles RT \#124746
 S14-roles/parameterized-type.t.....................  32    0    0    0   32
-S14-roles/stubs.rakudo.jvm.........................  26    0    2    0   28
-     2 todo   : RT\#124393 Stubbing individual multis as role interface NYI
+S14-roles/stubs.t..................................  28    0    0    0   28
 S14-roles/submethods.t.............................   4    0    0    0    4
 S14-traits/attributes.t............................   8    0    0    0    8
 S14-traits/routines.rakudo.jvm.....................  15    0    1    0   16
@@ -1276,7 +1269,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
-S17-lowlevel/lock.t................................  23    0    0    0   23
+S17-lowlevel/lock.t................................  22    1    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  11    0    0    0   11
@@ -1294,7 +1287,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      3 skipped: waiting for new '.loads' semantics RT #124776
      2 skipped: waiting for new '.loads' semantics RT #124777
 S17-scheduler/every.t..............................  20    0    0    0   20
-S17-scheduler/in.t.................................  14    0    0    0   14
+S17-scheduler/in.t.................................  13    1    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.t...............................  12    0    0    0   12
 S17-supply/Promise.t...............................  13    0    0    0   13
@@ -1315,8 +1308,7 @@ S17-supply/grep.t..................................   7    0    0    0    7
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1336,10 +1328,9 @@ S17-supply/squish.t................................  15    0    0    0   15
 S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
      2 skipped: doesn't work or can't test RT #124822
 S17-supply/start.t.................................   8    0    0    0    8
-S17-supply/syntax.t................................  55    0    0    0   55
+S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................   9   38    0    0   47
-    38 tests aborted (missing ok/not ok)
+S17-supply/throttle.t..............................  47    0    0    0   47
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1450,9 +1441,10 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
-S32-exceptions/misc.rakudo.jvm..................... 380    1    1    1  383
+S32-exceptions/misc.rakudo.jvm..................... 381    4    1    1  387
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 todo   : parsing regression RT \#124679
+     3 tests aborted (missing ok/not ok)
 S32-hash/adverbs.t.................................1128    0    0    0 1128
 S32-hash/antipairs.t...............................   5    0    0    0    5
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
@@ -1877,42 +1869,46 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6713,    22,   117,   414,  7266,  7265
+"S02",        6732,     4,   117,   414,  7267,  7266
 "S03",        5765,     0,   110,   144,  6019,  6037
 "S04",        1394,     0,    57,    48,  1499,  1531
-"S05",        5608,     0,   103,   249,  5960,  6162
+"S05",        5599,    40,    99,   237,  5975,  6177
 "S06",        2099,     0,    59,   104,  2262,  2308
 "S07",          30,     0,     4,     0,    34,   130
 "S09",        2302,     0,    11,    37,  2350,  2350
-"S10",         106,     5,     2,     2,   115,   172
+"S10",         108,     8,     2,     2,   120,   177
 "S11",         145,     1,     7,    11,   164,   183
 "S12",        1620,     0,    31,   132,  1783,  1838
 "S13",          62,     0,     0,     0,    62,    72
-"S14",         368,     0,    10,     5,   383,   396
+"S14",         377,     0,     8,     5,   390,   403
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         843,    38,    15,    20,   916,   965
+"S17",         884,     2,    15,    20,   921,   970
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       12482,     3,   206,   219, 12910, 11226
+"S32",       12483,     6,   206,   219, 12914, 11230
 "int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43833,    69,   829,  1732, 46463,124501
+"total",     43896,    61,   823,  1720, 46500,124538
 ----------------
 Failure summary:
-S02-types/baghash.rakudo.jvm aborted 17 test(s)
-S02-types/mixhash.rakudo.jvm 131 - .roll(*)[^100] (2)
 S02-types/resolved-in-setting.t aborted 4 test(s)
+S05-metasyntax/angle-brackets.rakudo.jvm aborted 40 test(s)
 S10-packages/precompilation.rakudo.jvm 2 - 
 S10-packages/precompilation.rakudo.jvm 3 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
-S10-packages/precompilation.rakudo.jvm 12 - 
-S10-packages/precompilation.rakudo.jvm 13 - 
+S10-packages/precompilation.rakudo.jvm 7 - 
+S10-packages/precompilation.rakudo.jvm 8 - 
+S10-packages/precompilation.rakudo.jvm 9 - 
+S10-packages/precompilation.rakudo.jvm 17 - 
+S10-packages/precompilation.rakudo.jvm 18 - 
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-supply/throttle.t aborted 38 test(s)
+S17-lowlevel/lock.t 9 - Correct result and no crash in lock/condvar use (1)
+S17-scheduler/in.t 4 - Timer tasks on ThreadPoolScheduler with :in ran in right order
 S32-exceptions/misc.rakudo.jvm 364 - sink warns on num
+S32-exceptions/misc.rakudo.jvm aborted 3 test(s)
 S32-io/IO-Socket-Async-UDP.t aborted 2 test(s)
