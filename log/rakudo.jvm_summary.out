@@ -638,9 +638,9 @@ S05-interpolation/lexicals.t.......................  14    0    0    0   14
 S05-interpolation/regex-in-variable.rakudo.jvm.....  51    0    1    0   52
      1 todo   : warn on undef
 S05-mass/charsets.rakudo.jvm.......................  14    0    3    0   17
-     1 todo   : Unicode 6.1 -- :Punctuation characters
-     1 todo   : Unicode 6.1 -- punct characters
      1 todo   : Unicode 6.3 -- lower characters
+     1 todo PASSED: Unicode 6.1 -- :Punctuation characters
+     1 todo PASSED: Unicode 6.1 -- punct characters
 S05-mass/named-chars.t............................. 431    0    0    0  431
 S05-mass/properties-block.t........................ 670    0    0    0  670
 S05-mass/properties-derived.rakudo.jvm............. 232    0    1   21  254
@@ -648,7 +648,7 @@ S05-mass/properties-derived.rakudo.jvm............. 232    0    1   21  254
     10 skipped: isCommon NYI RT #124884
      7 skipped: isGraphemeLink RT #124874
      1 todo   : isUnassigned NYI RT \#124883
-S05-mass/properties-general.rakudo.jvm............. 589    3    4   10  606
+S05-mass/properties-general.rakudo.jvm............. 592    0    4   10  606
     10 skipped: RT #124500
      3 todo   : Unions of properties of non-existent codepoints RT \#124863
      1 todo   : Unions of properties of non-existent codepoints RT \#124866
@@ -809,8 +809,8 @@ S06-advanced/callframe.rakudo.jvm..................  13    0    0    2   15
 S06-advanced/callsame.t............................   3    0    0    0    3
 S06-advanced/lexical-subs.t........................  13    0    0    0   13
 S06-advanced/recurse.t.............................  13    0    0    0   13
-S06-advanced/return.rakudo.jvm.....................  83   15    0    0   98
-    15 tests aborted (missing ok/not ok)
+S06-advanced/return.rakudo.jvm.....................  97    0    1    0   98
+     1 todo   : RT \#61732
 S06-advanced/stub.rakudo.jvm.......................   9    0    0    1   10
      1 skipped: supersede NYI
 S06-advanced/wrap.rakudo.jvm.......................  78    0    4    3   85
@@ -1183,7 +1183,7 @@ S14-roles/basic.rakudo.jvm.........................  47    0    1    3   51
      3 skipped: RT #67768
      1 todo   : Type check failed in assignment to $x; expected C but got Int
 S14-roles/bool.t...................................   3    0    0    0    3
-S14-roles/composition.rakudo.jvm...................  36    0    0    2   38
+S14-roles/composition.rakudo.jvm...................  41    0    0    2   43
      2 skipped: diamond composition RT #124749
 S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
@@ -1271,8 +1271,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  16    2    0    0   17
-     1 tests more than planned were run
+S17-channel/basic.t................................  17    0    0    0   17
 S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -1445,10 +1444,10 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
-S32-exceptions/misc.rakudo.jvm..................... 381    4    1    1  387
+S32-exceptions/misc.rakudo.jvm..................... 384    0    1    2  387
      1 skipped: Error while compiling, type X::TooLateForREPR
+     1 skipped: failure assignment still blows up on JVM, RT #125769
      1 todo   : parsing regression RT \#124679
-     3 tests aborted (missing ok/not ok)
 S32-hash/adverbs.t.................................1128    0    0    0 1128
 S32-hash/antipairs.t...............................   5    0    0    0    5
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
@@ -1876,35 +1875,31 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        6732,     4,   117,   414,  7267,  7266
 "S03",        5765,     0,   110,   144,  6019,  6037
 "S04",        1394,     0,    57,    48,  1499,  1531
-"S05",        5620,     3,   101,   249,  5973,  6175
-"S06",        2085,    15,    58,   104,  2262,  2308
+"S05",        5623,     0,   101,   249,  5973,  6175
+"S06",        2099,     0,    59,   104,  2262,  2308
 "S07",          30,     0,     4,     0,    34,   130
 "S09",        2302,     0,    11,    37,  2350,  2350
 "S10",         108,     8,     2,     2,   120,   177
 "S11",         145,     1,     7,    11,   164,   183
 "S12",        1620,     0,    31,   132,  1783,  1838
 "S13",          62,     0,     0,     0,    62,    72
-"S14",         377,     0,     8,     5,   390,   403
+"S14",         382,     0,     8,     5,   395,   408
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         885,     2,    15,    20,   921,   970
+"S17",         886,     0,    15,    20,   921,   970
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       12483,     6,   206,   219, 12914, 11230
+"S32",       12486,     2,   206,   220, 12914, 11230
 "int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43904,    39,   824,  1732, 46498,124536
+"total",     43930,    15,   825,  1733, 46503,124541
 ----------------
 Failure summary:
 S02-types/resolved-in-setting.t aborted 4 test(s)
-S05-mass/properties-general.rakudo.jvm 596 - Don't match unrelated <Format>
-S05-mass/properties-general.rakudo.jvm 597 - Match unrelated negated <Format>
-S05-mass/properties-general.rakudo.jvm 598 - Match unrelated inverted <Format>
-S06-advanced/return.rakudo.jvm aborted 15 test(s)
 S10-packages/precompilation.rakudo.jvm 2 - 
 S10-packages/precompilation.rakudo.jvm 3 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
@@ -1914,9 +1909,4 @@ S10-packages/precompilation.rakudo.jvm 9 -
 S10-packages/precompilation.rakudo.jvm 17 - 
 S10-packages/precompilation.rakudo.jvm 18 - 
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t passed 1 unplanned test(s)
-S32-exceptions/misc.rakudo.jvm 364 - sink warns on num
-S32-exceptions/misc.rakudo.jvm aborted 3 test(s)
 S32-io/IO-Socket-Async-UDP.t aborted 2 test(s)
