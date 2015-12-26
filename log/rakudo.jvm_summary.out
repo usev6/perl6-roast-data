@@ -1310,9 +1310,10 @@ S17-supply/from-list.t.............................  13    0    0    0   13
 S17-supply/grab.t..................................   5    0    0    0    5
 S17-supply/grep.t..................................   7    0    0    0    7
 S17-supply/head.t..................................   8    0    0    0    8
-S17-supply/interval.t..............................   3    1    0    0    4
+S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1334,7 +1335,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  46    1    0    0   47
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1411,7 +1412,8 @@ S29-conversions/ord_and_chr.rakudo.jvm............. 254    0    2    1  257
      1 todo   : chr surrogate RT \#124834
 S29-os/system.t....................................  20    0    0    0   20
                                                    pass fail todo skip plan
-S32-array/adverbs.t................................  82  524    0    0  606
+S32-array/adverbs.rakudo.jvm.......................  78  524    0    4  606
+     4 skipped: does not die reliably, not reproducable alas
    524 tests aborted (missing ok/not ok)
 S32-array/bool.t...................................  15    0    0    0   15
 S32-array/create.t.................................   6    0    0    0    6
@@ -1450,7 +1452,8 @@ S32-exceptions/misc.rakudo.jvm..................... 386    0    1    2  389
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: failure assignment still blows up on JVM, RT #125769
      1 todo   : parsing regression RT \#124679
-S32-hash/adverbs.t.................................1128    0    0    0 1128
+S32-hash/adverbs.rakudo.jvm........................1076    0    0   52 1128
+    52 skipped: does not die reliably, not reproducable alas
 S32-hash/antipairs.t...............................   5    0    0    0    5
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
 S32-hash/delete.t..................................   8    0    0    0    8
@@ -1886,17 +1889,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         884,     2,    15,    20,   921,   970
+"S17",         856,     0,    15,    20,   891,   940
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       11971,   524,   206,   220, 12921, 11239
+"S32",       11915,   524,   206,   276, 12921, 11239
 "int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43451,   549,   825,  1735, 46560,124600
+"total",     43367,   547,   825,  1791, 46530,124570
 ----------------
 Failure summary:
 S02-types/resolved-in-setting.t aborted 4 test(s)
@@ -1919,6 +1922,4 @@ S10-packages/precompilation.rakudo.jvm 21 -
 S10-packages/precompilation.rakudo.jvm 29 - 
 S10-packages/precompilation.rakudo.jvm 30 - 
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-supply/interval.t 4 - Exception thrown in a timer and unhandled terminates program
-S17-supply/throttle.t 28 - parallelism as expected with 6
-S32-array/adverbs.t aborted 524 test(s)
+S32-array/adverbs.rakudo.jvm aborted 524 test(s)
