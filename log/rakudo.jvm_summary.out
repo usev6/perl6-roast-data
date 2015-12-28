@@ -1274,7 +1274,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  16    2    0    0   17
      1 tests more than planned were run
-S17-lowlevel/lock.t................................  23    0    0    0   23
+S17-lowlevel/lock.t................................  22    1    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  12    0    0    0   12
@@ -1576,7 +1576,7 @@ S32-num/fatrat.rakudo.jvm.......................... 279    0    1    2  282
      1 todo   : unknown RT \#124815
 S32-num/int.rakudo.jvm............................. 104    0    3    0  107
      3 todo   : Inf and NaN NYI for Int RT \#124818
-S32-num/is-prime.t.................................  35    0    0    0   35
+S32-num/is-prime.t.................................  39    0    0    0   39
 S32-num/log.rakudo.jvm.............................  28    0    1    0   29
      1 todo   : HugeInt.log RT \#124821
 S32-num/narrow.t...................................  17    0    0    0   17
@@ -1889,17 +1889,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         855,     2,    15,    20,   891,   940
+"S17",         854,     3,    15,    20,   891,   940
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       11915,   524,   206,   276, 12921, 11239
+"S32",       11919,   524,   206,   276, 12925, 11243
 "int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43366,   549,   825,  1791, 46530,124570
+"total",     43369,   550,   825,  1791, 46534,124574
 ----------------
 Failure summary:
 S02-types/resolved-in-setting.t aborted 4 test(s)
@@ -1925,4 +1925,5 @@ S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $
 S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
 S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
 S17-channel/basic.t passed 1 unplanned test(s)
+S17-lowlevel/lock.t 9 - Correct result and no crash in lock/condvar use (1)
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
