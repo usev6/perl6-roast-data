@@ -1290,7 +1290,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT #124775
      3 skipped: waiting for new '.loads' semantics RT #124776
      2 skipped: waiting for new '.loads' semantics RT #124777
-S17-scheduler/every.t..............................  20    0    0    0   20
+S17-scheduler/every.t..............................  19    1    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.t...............................  12    0    0    0   12
@@ -1709,7 +1709,7 @@ S32-str/uc.rakudo.jvm..............................  17    0    0    2   19
 S32-str/unpack.t...................................  24    0    0    0   24
 S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT \#124739
-S32-temporal/Date.t................................  79    0    0    0   79
+S32-temporal/Date.t................................  81    0    0    0   81
 S32-temporal/DateTime-Instant-Duration.t...........  55    0    0    0   55
 S32-temporal/DateTime.t............................ 246    0    0    0  246
 S32-temporal/calendar.t............................ 130    0    0    0  130
@@ -1888,17 +1888,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         856,     0,    15,    20,   891,   940
+"S17",         855,     1,    15,    20,   891,   940
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       11919,   524,   206,   276, 12925, 11243
+"S32",       11921,   524,   206,   276, 12927, 11245
 "int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43371,   547,   825,  1791, 46534,124574
+"total",     43372,   548,   825,  1791, 46536,124576
 ----------------
 Failure summary:
 S02-types/resolved-in-setting.t aborted 4 test(s)
@@ -1921,4 +1921,5 @@ S10-packages/precompilation.rakudo.jvm 21 -
 S10-packages/precompilation.rakudo.jvm 29 - 
 S10-packages/precompilation.rakudo.jvm 30 - 
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
+S17-scheduler/every.t 4 - Cue with :every :stop schedules repeatedly
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
