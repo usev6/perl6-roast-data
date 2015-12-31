@@ -171,7 +171,7 @@ S02-names/symbolic-deref.rakudo.jvm................  32    0    2    2   36
      1 todo   : no such symbol
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.rakudo.jvm.........................1580    0    0   44 1624
+S02-types/WHICH.rakudo.jvm.........................1576    0    0   44 1620
     44 skipped: NYI on jvm - RT #126524 / RT #124500
 S02-types/anon_block.rakudo.jvm....................  36    0    4    2   42
      2 skipped: tests don't work if previous test fails
@@ -1290,7 +1290,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT #124775
      3 skipped: waiting for new '.loads' semantics RT #124776
      2 skipped: waiting for new '.loads' semantics RT #124777
-S17-scheduler/every.t..............................  19    1    0    0   20
+S17-scheduler/every.t..............................  20    0    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.t...............................  12    0    0    0   12
@@ -1498,7 +1498,8 @@ S32-io/io-spec-win.t............................... 206    0    0    3  209
 S32-io/move.t......................................  29    0    0    0   29
 S32-io/note.t......................................   6    0    0    0    6
 S32-io/other.t.....................................  60    0    0    0   60
-S32-io/pipe.t......................................  14    0    0    0   14
+S32-io/pipe.t......................................  10    4    0    0   14
+     4 tests aborted (missing ok/not ok)
 S32-io/rename.t....................................  29    0    0    0   29
 S32-io/slurp.t.....................................  17    0    0    0   17
 S32-io/socket-recv-vs-read.t.......................  11    0    0    0   11
@@ -1874,7 +1875,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6744,     4,   117,   414,  7279,  7278
+"S02",        6740,     4,   117,   414,  7275,  7274
 "S03",        5766,     0,   110,   144,  6020,  6038
 "S04",        1408,     2,    57,    50,  1517,  1549
 "S05",        5623,     0,   101,   249,  5973,  6175
@@ -1888,17 +1889,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         855,     1,    15,    20,   891,   940
+"S17",         856,     0,    15,    20,   891,   940
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       11921,   524,   206,   276, 12927, 11245
+"S32",       11917,   528,   206,   276, 12927, 11245
 "int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43372,   548,   825,  1791, 46536,124576
+"total",     43365,   551,   825,  1791, 46532,124572
 ----------------
 Failure summary:
 S02-types/resolved-in-setting.t aborted 4 test(s)
@@ -1921,5 +1922,5 @@ S10-packages/precompilation.rakudo.jvm 21 -
 S10-packages/precompilation.rakudo.jvm 29 - 
 S10-packages/precompilation.rakudo.jvm 30 - 
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-scheduler/every.t 4 - Cue with :every :stop schedules repeatedly
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
+S32-io/pipe.t aborted 4 test(s)
