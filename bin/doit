@@ -4,8 +4,9 @@
 ./bin/git.p5
 
 ## for each backend: build and run spectest
-./bin/rakudo.moar.sh
-./bin/rakudo.jvm.sh
+#./bin/rakudo.moar.sh
+./bin/rakudo.moar-6c.sh
+#./bin/rakudo.jvm.sh
 #./bin/rakudo.parrot.sh
 
 ## commit file with pass rates and spectest logs
@@ -20,6 +21,6 @@ mv $TEMPFILE $PASSFILE
 git commit -m "today (automated commit)" "$PASSFILE" log/
 
 ## panda smoking on rakudo.moar
-./bin/panda.rakudo.moar.sh
+#./bin/panda.rakudo.moar.sh
 #./bin/panda.rakudo.parrot.sh
-./bin/panda.rakudo.jvm.sh
+#./bin/panda.rakudo.jvm.sh
