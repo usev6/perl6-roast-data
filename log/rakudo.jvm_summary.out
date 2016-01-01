@@ -423,7 +423,7 @@ S03-operators/overflow.t...........................  98    0    0    0   98
 S03-operators/precedence.rakudo.jvm................  62    0    2    0   64
      2 todo   : Inequality (!=) misparsed as assignment RT \#121108
 S03-operators/range-basic.t........................ 110    0    0    0  110
-S03-operators/range-int.t.......................... 506    0    0    0  506
+S03-operators/range-int.t.......................... 507    0    0    0  507
 S03-operators/range.t.............................. 125    0    0    0  125
 S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: expected Any but got Mu instead RT #124552
@@ -597,8 +597,7 @@ S04-statements/try.t...............................  40    0    0    0   40
 S04-statements/unless.t............................  11    0    0    0   11
 S04-statements/until.t.............................   4    0    0    0    4
 S04-statements/when.t..............................  24    0    0    0   24
-S04-statements/while.rakudo.jvm....................  24    2    0    2   28
-     2 skipped: bug, loops
+S04-statements/while.t.............................  31    0    0    0   31
 S04-statements/with.rakudo.jvm.....................  75    0    4    1   80
      1 skipped: Failure from oops is thrown
      2 todo   : $foo is not "$()", but Failure
@@ -1272,12 +1271,13 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  17    0    0    0   17
-S17-lowlevel/lock.t................................  23    0    0    0   23
+S17-channel/basic.t................................  16    2    0    0   17
+     1 tests more than planned were run
+S17-lowlevel/lock.t................................  22    1    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
-S17-promise/allof.t................................  12    0    0    0   12
-S17-promise/anyof.t................................   9    0    0    0    9
+S17-promise/allof.t................................  13    0    0    0   13
+S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
 S17-promise/basic.t................................  23    0    0    0   23
 S17-promise/in.t...................................   3    0    0    0    3
@@ -1312,7 +1312,8 @@ S17-supply/grep.t..................................   7    0    0    0    7
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1447,7 +1448,7 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT #124907
-S32-exceptions/misc.rakudo.jvm..................... 386    0    1    2  389
+S32-exceptions/misc.rakudo.jvm..................... 387    0    1    2  390
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: failure assignment still blows up on JVM, RT #125769
      1 todo   : parsing regression RT \#124679
@@ -1498,8 +1499,7 @@ S32-io/io-spec-win.t............................... 206    0    0    3  209
 S32-io/move.t......................................  29    0    0    0   29
 S32-io/note.t......................................   6    0    0    0    6
 S32-io/other.t.....................................  60    0    0    0   60
-S32-io/pipe.t......................................  10    4    0    0   14
-     4 tests aborted (missing ok/not ok)
+S32-io/pipe.t......................................  14    0    0    0   14
 S32-io/rename.t....................................  29    0    0    0   29
 S32-io/slurp.t.....................................  17    0    0    0   17
 S32-io/socket-recv-vs-read.t.......................  11    0    0    0   11
@@ -1876,8 +1876,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        6740,     4,   117,   414,  7275,  7274
-"S03",        5766,     0,   110,   144,  6020,  6038
-"S04",        1408,     2,    57,    50,  1517,  1549
+"S03",        5767,     0,   110,   144,  6021,  6039
+"S04",        1415,     0,    57,    48,  1520,  1552
 "S05",        5623,     0,   101,   249,  5973,  6175
 "S06",        2099,     0,    59,   104,  2262,  2308
 "S07",          30,     0,     4,     0,    34,   130
@@ -1889,22 +1889,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         856,     0,    15,    20,   891,   940
+"S17",         856,     3,    15,    20,   893,   942
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       11917,   528,   206,   276, 12927, 11245
+"S32",       11922,   524,   206,   276, 12928, 11246
 "int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43365,   551,   825,  1791, 46532,124572
+"total",     43378,   548,   825,  1789, 46539,124579
 ----------------
 Failure summary:
 S02-types/resolved-in-setting.t aborted 4 test(s)
-S04-statements/while.rakudo.jvm 13 - can return undefined values from a while
-S04-statements/while.rakudo.jvm 17 - can return undefined values from an until
 S10-packages/precompilation.rakudo.jvm 2 - 
 S10-packages/precompilation.rakudo.jvm 3 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
@@ -1922,5 +1920,8 @@ S10-packages/precompilation.rakudo.jvm 21 -
 S10-packages/precompilation.rakudo.jvm 29 - 
 S10-packages/precompilation.rakudo.jvm 30 - 
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
+S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
+S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
+S17-channel/basic.t passed 1 unplanned test(s)
+S17-lowlevel/lock.t 20 - Correct result and no crash in lock/condvar use (12)
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
-S32-io/pipe.t aborted 4 test(s)
