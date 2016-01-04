@@ -1271,7 +1271,8 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  17    0    0    0   17
+S17-channel/basic.t................................  16    2    0    0   17
+     1 tests more than planned were run
 S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -1289,7 +1290,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT #124775
      3 skipped: waiting for new '.loads' semantics RT #124776
      2 skipped: waiting for new '.loads' semantics RT #124777
-S17-scheduler/every.t..............................  19    1    0    0   20
+S17-scheduler/every.t..............................  20    0    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.t...............................  12    0    0    0   12
@@ -1887,7 +1888,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         857,     1,    15,    20,   893,   942
+"S17",         857,     2,    15,    20,   893,   942
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1897,7 +1898,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       11922,   524,   206,   276, 12928, 11246
 "int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43380,   546,   825,  1789, 46540,124580
+"total",     43380,   547,   825,  1789, 46540,124580
 ----------------
 Failure summary:
 S02-types/resolved-in-setting.t aborted 4 test(s)
@@ -1918,5 +1919,7 @@ S10-packages/precompilation.rakudo.jvm 21 -
 S10-packages/precompilation.rakudo.jvm 29 - 
 S10-packages/precompilation.rakudo.jvm 30 - 
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-scheduler/every.t 2 - Cue with :every schedules repeatedly
+S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
+S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
+S17-channel/basic.t passed 1 unplanned test(s)
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
