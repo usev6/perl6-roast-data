@@ -251,12 +251,15 @@ S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
      4 skipped: multi-dim sized arrays NYI RT #124483
 S02-types/nan.rakudo.jvm...........................  20    0    0    1   21
      1 skipped: RT #83446
-S02-types/native.rakudo.jvm........................  64    0   16    3   83
+S02-types/native.rakudo.jvm........................  65    0   19    3   87
      3 skipped: cannot unbox to a native number
      1 todo   : RT \#102416 - though maybe wrong test? Not sure .WHAT is *that* magic
      3 todo   : native int args do not truncate, yet
      3 todo   : native int does not truncate, yet
      9 todo   : signed/unsigned native ints RT \#124294
+     1 todo   : uint16 increment in sink context doesn't work
+     1 todo   : uint32 increment in sink context doesn't work
+     1 todo   : uint8 increment in sink context doesn't work
 S02-types/nested_arrays.t..........................  10    0    0    0   10
 S02-types/nested_pairs.t...........................  14    0    0    0   14
 S02-types/nil.rakudo.jvm...........................  46    0    5    1   52
@@ -1128,7 +1131,7 @@ S12-introspection/methods.rakudo.jvm...............  45    0    0   12   57
 S12-introspection/parents.t........................  59    0    0    0   59
 S12-introspection/roles.t..........................  15    0    0    0   15
 S12-introspection/walk.t...........................  11    0    0    0   11
-S12-meta/exporthow.rakudo.jvm......................   8    0    0    2   10
+S12-meta/exporthow.rakudo.jvm......................   9    0    0    2   11
      2 skipped: RT #126759
 S12-meta/grammarhow.t..............................   1    0    0    0    1
 S12-meta/primitives.rakudo.jvm.....................  11    0    6    0   17
@@ -1271,8 +1274,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  16    2    0    0   17
-     1 tests more than planned were run
+S17-channel/basic.t................................  17    0    0    0   17
 S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -1874,7 +1876,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6740,     4,   117,   414,  7275,  7274
+"S02",        6741,     4,   120,   414,  7279,  7278
 "S03",        5767,     0,   110,   144,  6021,  6039
 "S04",        1415,     0,    57,    48,  1520,  1552
 "S05",        5624,     0,   101,   249,  5974,  6176
@@ -1883,12 +1885,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2302,     0,    11,    37,  2350,  2350
 "S10",         112,    16,     2,     2,   132,   189
 "S11",         145,     1,     7,    11,   164,   183
-"S12",        1621,     0,    31,   132,  1784,  1839
+"S12",        1622,     0,    31,   132,  1785,  1840
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         857,     2,    15,    20,   893,   942
+"S17",         858,     0,    15,    20,   893,   942
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1898,7 +1900,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       11922,   524,   206,   276, 12928, 11246
 "int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43380,   547,   825,  1789, 46540,124580
+"total",     43383,   545,   828,  1789, 46545,124585
 ----------------
 Failure summary:
 S02-types/resolved-in-setting.t aborted 4 test(s)
@@ -1919,7 +1921,4 @@ S10-packages/precompilation.rakudo.jvm 21 -
 S10-packages/precompilation.rakudo.jvm 29 - 
 S10-packages/precompilation.rakudo.jvm 30 - 
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t passed 1 unplanned test(s)
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
