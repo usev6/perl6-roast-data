@@ -273,10 +273,10 @@ S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t.................................. 179    0    0    0  179
 S02-types/resolved-in-setting.t....................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
-S02-types/set.rakudo.jvm........................... 165    0    1    9  175
+S02-types/set.rakudo.jvm........................... 166    0    1    9  176
      9 skipped: Hypers not yet Set compatible RT #124487
      1 todo   : we have not secured .WHICH creation yet RT \#124489
-S02-types/sethash.rakudo.jvm....................... 193    0    0   10  203
+S02-types/sethash.rakudo.jvm....................... 194    0    0   10  204
     10 skipped: 'is TypeObject' NYI RT #124490
 S02-types/sigils-and-types.rakudo.jvm..............  25    0    2    0   27
      1 todo   : Capture does Associative RT \#124485
@@ -856,7 +856,8 @@ S06-multi/syntax.t.................................  44    0    0    0   44
 S06-multi/type-based.rakudo.jvm....................  62    0    4    0   66
      4 todo   : coercions need to fail like constraints RT \#124772
 S06-multi/unpackability.t..........................  10    0    0    0   10
-S06-multi/value-based.t............................  13    0    0    0   13
+S06-multi/value-based.rakudo.jvm...................  19    0    2    0   21
+     2 todo   : Wrong tiebreaker order (S12, actually)
 S06-operator-overloading/imported-subs.t...........  20    0    0    0   20
 S06-operator-overloading/methods.rakudo.jvm........   2    0    1    0    3
      1 todo   : nom regression RT \#124988
@@ -1274,7 +1275,8 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  17    0    0    0   17
+S17-channel/basic.t................................  16    2    0    0   17
+     1 tests more than planned were run
 S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -1471,7 +1473,7 @@ S32-hash/slice.rakudo.jvm..........................  19    0   10    0   29
      6 todo   : binding on hash elements unimplemented
      2 todo   : binding on hash elements unimplemented RT \#124779
      2 todo   : binding on hash elements unimplemented RT \#124780
-S32-io/IO-Socket-Async.t...........................   6    0    0    0    6
+S32-io/IO-Socket-Async.t...........................   5    1    0    0    6
 S32-io/IO-Socket-INET.t............................   0    0    0   50   50
     50 skipped: Operating system not yet supported
 S32-io/chdir.rakudo.jvm............................   8    0    0    2   10
@@ -1711,7 +1713,7 @@ S32-str/uc.rakudo.jvm..............................  17    0    0    2   19
 S32-str/unpack.t...................................  24    0    0    0   24
 S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT \#124739
-S32-temporal/Date.t................................  81    0    0    0   81
+S32-temporal/Date.t................................  87    0    0    0   87
 S32-temporal/DateTime-Instant-Duration.t...........  55    0    0    0   55
 S32-temporal/DateTime.t............................ 246    0    0    0  246
 S32-temporal/calendar.t............................ 130    0    0    0  130
@@ -1876,11 +1878,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6741,     4,   120,   414,  7279,  7278
+"S02",        6743,     4,   120,   414,  7281,  7280
 "S03",        5767,     0,   110,   144,  6021,  6039
 "S04",        1415,     0,    57,    48,  1520,  1552
 "S05",        5624,     0,   101,   249,  5974,  6176
-"S06",        2099,     0,    59,   104,  2262,  2308
+"S06",        2105,     0,    61,   104,  2270,  2316
 "S07",          30,     0,     4,     0,    34,   130
 "S09",        2302,     0,    11,    37,  2350,  2350
 "S10",         112,    16,     2,     2,   132,   189
@@ -1890,17 +1892,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         858,     0,    15,    20,   893,   942
+"S17",         857,     2,    15,    20,   893,   942
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       11922,   524,   206,   276, 12928, 11246
+"S32",       11927,   525,   206,   276, 12934, 11252
 "int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43383,   545,   828,  1789, 46545,124585
+"total",     43395,   548,   830,  1789, 46561,124601
 ----------------
 Failure summary:
 S02-types/resolved-in-setting.t aborted 4 test(s)
@@ -1921,4 +1923,8 @@ S10-packages/precompilation.rakudo.jvm 21 -
 S10-packages/precompilation.rakudo.jvm 29 - 
 S10-packages/precompilation.rakudo.jvm 30 - 
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
+S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
+S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
+S17-channel/basic.t passed 1 unplanned test(s)
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
+S32-io/IO-Socket-Async.t 6 - bytes-supply
