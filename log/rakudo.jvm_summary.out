@@ -1278,8 +1278,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  16    2    0    0   17
-     1 tests more than planned were run
+S17-channel/basic.t................................  17    0    0    0   17
 S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -1341,7 +1340,8 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................   8    9    0    0   17
+     7 tests aborted (missing ok/not ok)
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1410,7 +1410,7 @@ S29-context/eval.rakudo.jvm........................  21    0    0    2   23
 S29-context/evalfile.t.............................   2    0    0    0    2
 S29-context/exit-in-if.t...........................   1    0    0    0    1
 S29-context/exit.t.................................   3    0    0    0    3
-S29-context/sleep.t................................  21    1    0    0   22
+S29-context/sleep.t................................  22    0    0    0   22
 S29-conversions/hash.t.............................   8    0    0    0    8
 S29-conversions/ord_and_chr.rakudo.jvm............. 254    0    2    1  257
      1 skipped: high character name lookup RT #124838
@@ -1476,7 +1476,7 @@ S32-hash/slice.rakudo.jvm..........................  19    0   10    0   29
      6 todo   : binding on hash elements unimplemented
      2 todo   : binding on hash elements unimplemented RT \#124779
      2 todo   : binding on hash elements unimplemented RT \#124780
-S32-io/IO-Socket-Async.t...........................   6    0    0    0    6
+S32-io/IO-Socket-Async.t...........................   5    1    0    0    6
 S32-io/IO-Socket-INET.t............................   0    0    0   50   50
     50 skipped: Operating system not yet supported
 S32-io/chdir.rakudo.jvm............................   8    0    0    2   10
@@ -1812,8 +1812,9 @@ integration/advent2011-day23.t.....................  55    0    0    0   55
 integration/advent2011-day24.t.....................   8    0    0    0    8
 integration/advent2012-day02.t.....................   4    0    0    0    4
 integration/advent2012-day03.t.....................   2    0    0    0    2
-integration/advent2012-day04.rakudo.jvm............   7    0    1    0    8
+integration/advent2012-day04.rakudo.jvm............   6    1    1    0    8
      1 todo   : failing during 2015.09 release...
+     1 tests aborted (missing ok/not ok)
 integration/advent2012-day06.t.....................   2    0    0    0    2
 integration/advent2012-day09.t.....................   8    0    0    0    8
 integration/advent2012-day10.t.....................  26    0    0    0   26
@@ -1838,7 +1839,7 @@ integration/advent2013-day09.t.....................  21    0    0    0   21
 integration/advent2013-day10.rakudo.jvm............  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.t.....................  32    0    0    0   32
-integration/advent2013-day14.t.....................  10    0    0    0   10
+integration/advent2013-day14.t.....................   9    1    0    0   10
 integration/advent2013-day15.rakudo.jvm............  28    0    2    0   30
      1 todo   : got (Int) instead of (Bool)
      1 todo   : jvm rounding quirks
@@ -1895,17 +1896,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         859,     2,    15,    20,   895,   944
+"S17",         851,     9,    15,    20,   895,   944
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
-"S29",         362,     1,     3,     3,   369,   369
-"S32",       11930,   524,   205,   277, 12936, 11254
-"int",        1269,     0,    12,    14,  1295,  1288
+"S29",         363,     0,     3,     3,   369,   369
+"S32",       11929,   525,   205,   277, 12936, 11254
+"int",        1267,     2,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43474,   546,   832,  1792, 46643,124687
+"total",     43464,   555,   832,  1792, 46643,124687
 ----------------
 Failure summary:
 S02-types/int-uint.rakudo.jvm 3 - int8 overflows to -128
@@ -1924,8 +1925,10 @@ S02-types/resolved-in-setting.t aborted 4 test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t passed 1 unplanned test(s)
-S29-context/sleep.t 18 - did we actually wait (DateTime)
+S17-supply/throttle.t 9 - did we see all in the right order?
+S17-supply/throttle.t 10 - did we get the final status?
+S17-supply/throttle.t aborted 7 test(s)
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
+S32-io/IO-Socket-Async.t 6 - bytes-supply
+integration/advent2012-day04.rakudo.jvm aborted 1 test(s)
+integration/advent2013-day14.t 2 - quotes example
