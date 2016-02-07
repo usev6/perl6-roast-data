@@ -4,9 +4,9 @@
 ./bin/git.p5
 
 ## for each backend: build and run spectest
-#./bin/rakudo.moar.sh
+./bin/rakudo.moar.sh
 ./bin/rakudo.moar-6c.sh
-#./bin/rakudo.jvm.sh
+./bin/rakudo.jvm.sh
 #./bin/rakudo.parrot.sh
 
 ## commit file with pass rates and spectest logs
