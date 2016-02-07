@@ -5,7 +5,7 @@ This project contains tools for running the perl6 spec test suite
 results of those runs.
 
 See "perl6\_pass\_rates.csv" for the data, with a pretty version here:
-https://github.com/coke/perl6-roast-data/blob/master/perl6\_pass\_rates.csv
+https://github.com/usev6/perl6-roast-data/blob/master/perl6\_pass\_rates.csv
 
 Each implementation's last run is checked in under a corresponding
 ".out" file in the log/ directory. Check your implementation's file for
@@ -46,10 +46,12 @@ are from a regression, or from a newly added or changed test that doesn't
 pass. In either case, please open an RT (email to rakudobug at perl
 dot org), get a ticket number, and fudge the test, giving the ticket #.
 
-There are 3 backends (parrot, jvm, and moar), and a test may fail on
-any or all of these backends. Be sure to mark the ticket in RT with
-the appropriate vm, and only fudge the test for the appropriate backend.
-(#?rakudo for all backends, #?rakudo.jvm for, e.g. the JVM backend)
+There are currently two backends (MoarVM, JVM). MoarVM is run with 
+HEAD and with the 6.c branch of roast. JVM is run with HEAD only.
+
+A a test may fail on any or all of these backends. Be sure to mark the ticket
+in RT with the appropriate vm, and only fudge the test for the appropriate
+backend.  (#?rakudo for all backends, #?rakudo.jvm for, e.g. the JVM backend)
 
 ## pugs
 
