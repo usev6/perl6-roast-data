@@ -145,11 +145,12 @@ S02-names/identifier.t.............................  22    0    0    0   22
 S02-names/indirect.t...............................  10    0    0    0   10
 S02-names/is_cached.rakudo.jvm.....................  36    0    2    0   38
      2 todo   : is cached is only a hint: RT \#122425
-S02-names/is_default.rakudo.jvm.................... 106    0    2    2  110
+S02-names/is_default.rakudo.jvm.................... 104    2    2    2  110
      2 skipped: is default on attributes
      1 todo   : RT \#126519
      1 todo   : fails first on native int hashes being NYI
-S02-names/is_dynamic.t.............................  22    0    0    0   22
+S02-names/is_dynamic.t.............................  21    1    0    0   22
+     1 tests aborted (missing ok/not ok)
 S02-names/name.t...................................  24    0    0    0   24
 S02-names/our.rakudo.jvm...........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
@@ -289,8 +290,9 @@ S02-types/subscripts_and_context.t.................   8    0    0    0    8
 S02-types/subset.t.................................  44    0    0    0   44
 S02-types/type.rakudo.jvm..........................  73    0    1    0   74
      1 todo   : nigh
-S02-types/undefined-types.rakudo.jvm...............  45    0    4    0   49
-     4 todo   : .clone doesn't copy typedness
+S02-types/undefined-types.rakudo.jvm...............  21   25    3    0   49
+     3 todo   : .clone doesn't copy typedness
+    25 tests aborted (missing ok/not ok)
 S02-types/unicode.rakudo.jvm.......................   2    0    3    0    5
      1 todo   : NFG on JVM RT \#124500
      2 todo   : NFG on JVM RT \#124501
@@ -970,10 +972,12 @@ S06-traits/precedence.rakudo.jvm...................  14    0    1    0   15
      1 todo   : changing precedence of already declared op
 S06-traits/slurpy-is-rw.t..........................   3    0    0    0    3
                                                    pass fail todo skip plan
-S07-hyperrace/hyper.rakudo.jvm.....................   8    0    2    0   10
-     2 todo   : hyper and race cause lists to become empty RT \#126597
-S07-hyperrace/race.rakudo.jvm......................   8    0    2    0   10
-     2 todo   : hyper and race cause lists to become empty RT \#126597
+S07-hyperrace/hyper.rakudo.jvm.....................   8    0    4    0   10
+     4 todo   : hyper and race cause lists to become empty RT \#126597
+     2 tests more than planned were run
+S07-hyperrace/race.rakudo.jvm......................   9    0    3    0   10
+     3 todo   : hyper and race cause lists to become empty RT \#126597
+     2 tests more than planned were run
 S07-slip/slip.t....................................  22    0    0    0   22
                                                    pass fail todo skip plan
 S09-autovivification/autoincrement.t...............   7    0    0    0    7
@@ -1318,8 +1322,8 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1341,8 +1345,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................   8    9    0    0   17
-     7 tests aborted (missing ok/not ok)
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1477,7 +1480,7 @@ S32-hash/slice.rakudo.jvm..........................  19    0   10    0   29
      6 todo   : binding on hash elements unimplemented
      2 todo   : binding on hash elements unimplemented RT \#124779
      2 todo   : binding on hash elements unimplemented RT \#124780
-S32-io/IO-Socket-Async.t...........................   5    1    0    0    6
+S32-io/IO-Socket-Async.t...........................   6    0    0    0    6
 S32-io/IO-Socket-INET.t............................   0    0    0   50   50
     50 skipped: Operating system not yet supported
 S32-io/chdir.rakudo.jvm............................   8    0    0    2   10
@@ -1597,7 +1600,7 @@ S32-num/power.rakudo.jvm...........................  65    0    5    6   76
      2 todo   : wrong results for "NaN" used with "**" RT \#124800
 S32-num/rand.rakudo.jvm............................ 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect RT #124812
-S32-num/rat.rakudo.jvm............................. 829    0    0    1  830
+S32-num/rat.rakudo.jvm............................. 831    0    0    1  832
      1 skipped: RT #74648
 S32-num/real-bridge.t.............................. 200    0    0    0  200
 S32-num/roots.t....................................  55    0    0    0   55
@@ -1882,12 +1885,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6796,    16,   123,   416,  7351,  7350
+"S02",        6769,    44,   122,   416,  7351,  7350
 "S03",        5767,     0,   110,   144,  6021,  6043
 "S04",        1415,     0,    57,    48,  1520,  1552
 "S05",        5624,     0,   101,   249,  5974,  6176
 "S06",        2105,     0,    61,   104,  2270,  2316
-"S07",          38,     0,     4,     0,    42,   138
+"S07",          39,     0,     7,     0,    42,   138
 "S09",        2302,     0,    11,    37,  2350,  2350
 "S10",         126,     2,     2,     2,   132,   189
 "S11",         145,     1,     7,    11,   164,   183
@@ -1896,19 +1899,22 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         851,     9,    15,    20,   895,   944
+"S17",         860,     0,    15,    20,   895,   944
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       11929,   525,   205,   277, 12936, 11254
+"S32",       11932,   524,   205,   277, 12938, 11256
 "int",        1269,     0,    12,    14,  1295,  1288
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43466,   553,   832,  1792, 46643,124687
+"total",     43452,   571,   834,  1792, 46645,124689
 ----------------
 Failure summary:
+S02-names/is_default.rakudo.jvm 90 - assign Nil to hash array element
+S02-names/is_default.rakudo.jvm 91 - typed hash element returned to its default with Nil
+S02-names/is_dynamic.t aborted 1 test(s)
 S02-types/int-uint.rakudo.jvm 3 - int8 overflows to -128
 S02-types/int-uint.rakudo.jvm 4 - int8 underflows to 127
 S02-types/int-uint.rakudo.jvm 12 - uint8 overflows to 0
@@ -1922,11 +1928,10 @@ S02-types/int-uint.rakudo.jvm 40 - int32 underflows to 2147483647
 S02-types/int-uint.rakudo.jvm 48 - uint32 overflows to 0
 S02-types/int-uint.rakudo.jvm 49 - uint32 underflows to 4294967295
 S02-types/resolved-in-setting.t aborted 4 test(s)
+S02-types/undefined-types.rakudo.jvm aborted 25 test(s)
+S07-hyperrace/hyper.rakudo.jvm passed 2 unplanned test(s)
+S07-hyperrace/race.rakudo.jvm passed 2 unplanned test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-supply/throttle.t 9 - did we see all in the right order?
-S17-supply/throttle.t 10 - did we get the final status?
-S17-supply/throttle.t aborted 7 test(s)
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
-S32-io/IO-Socket-Async.t 6 - bytes-supply
