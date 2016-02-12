@@ -1340,8 +1340,8 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
-S17-supply/unique.t................................  16    1    0    0   17
+S17-supply/throttle.t..............................  16    1    0    0   17
+S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
 S17-supply/words.t.................................   5    0    0    0    5
@@ -1924,5 +1924,5 @@ S02-types/resolved-in-setting.t aborted 4 test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-supply/unique.t 16 - unique with with and expiry works
+S17-supply/throttle.t 5 - did we see all of the element
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
