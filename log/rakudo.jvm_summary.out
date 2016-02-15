@@ -1040,10 +1040,10 @@ S11-modules/importing.t............................  16    0    0    0   16
 S11-modules/lexical.t..............................   2    0    0    0    2
 S11-modules/need.t.................................   2    0    0    0    2
 S11-modules/nested.t...............................   6    0    0    0    6
-S11-modules/require.rakudo.jvm.....................  14    0    2    1   17
+S11-modules/require.rakudo.jvm.....................  19    0    1    2   22
      1 skipped: Trying to import from 'InnerModule', but the following symbols are missing: quux RT #118407
+     1 skipped: import require at compile time RT #127538
      1 todo   : creation of stub package symbol NYI RT \#125083
-     1 todo   : variable form plus imports NYI RT \#125084
 S11-repository/curli-install.t.....................  17    1    0    0   18
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  23    0    0    0   23
@@ -1279,7 +1279,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
-S17-lowlevel/lock.t................................  23    0    0    0   23
+S17-lowlevel/lock.t................................  22    1    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
@@ -1559,7 +1559,7 @@ S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
      1 todo   : RT \#77914
 S32-list/roll.t....................................  49    0    0    0   49
 S32-list/rotor.t...................................   9    0    0    0    9
-S32-list/seq.rakudo.jvm............................  25    0    1    0   26
+S32-list/seq.rakudo.jvm............................  27    0    1    0   28
      1 todo   : Cannot assign immutable
 S32-list/sort.t....................................  30    0    0    0   30
 S32-list/squish.rakudo.jvm.........................  22    0    1   17   40
@@ -1889,23 +1889,23 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S07",          39,     0,     7,     0,    46,   142
 "S09",        2302,     0,    11,    37,  2350,  2350
 "S10",         126,     2,     2,     2,   132,   189
-"S11",         145,     1,     7,    11,   164,   183
+"S11",         150,     1,     6,    12,   169,   188
 "S12",        1622,     0,    31,   132,  1785,  1840
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         860,     0,    15,    20,   895,   944
+"S17",         859,     1,    15,    20,   895,   944
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       11927,   524,   210,   277, 12938, 11256
+"S32",       11929,   524,   210,   277, 12940, 11258
 "int",        1270,     0,    12,    14,  1296,  1289
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43493,   543,   840,  1792, 46668,124712
+"total",     43499,   544,   839,  1793, 46675,124719
 ----------------
 Failure summary:
 S02-types/int-uint.rakudo.jvm 3 - int8 overflows to -128
@@ -1924,4 +1924,5 @@ S02-types/resolved-in-setting.t aborted 4 test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
+S17-lowlevel/lock.t 17 - Correct result and no crash in lock/condvar use (9)
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
