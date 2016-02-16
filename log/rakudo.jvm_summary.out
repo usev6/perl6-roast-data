@@ -1279,7 +1279,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  17    0    0    0   17
-S17-lowlevel/lock.t................................  22    1    0    0   23
+S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
@@ -1290,7 +1290,7 @@ S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  40    0    0    0   40
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
-S17-scheduler/at.t.................................  15    0    0    0   15
+S17-scheduler/at.t.................................  14    1    0    0   15
 S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      3 skipped: waiting for new '.loads' semantics RT #124774
      2 skipped: waiting for new '.loads' semantics RT #124775
@@ -1924,5 +1924,5 @@ S02-types/resolved-in-setting.t aborted 4 test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-lowlevel/lock.t 17 - Correct result and no crash in lock/condvar use (9)
+S17-scheduler/at.t 4 - Timer tasks on ThreadPoolScheduler with :at ran in right order
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
