@@ -276,10 +276,10 @@ S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t.................................. 179    0    0    0  179
 S02-types/resolved-in-setting.t....................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
-S02-types/set.rakudo.jvm........................... 166    0    1    9  176
+S02-types/set.rakudo.jvm........................... 167    0    1    9  177
      9 skipped: Hypers not yet Set compatible RT #124487
      1 todo   : we have not secured .WHICH creation yet RT \#124489
-S02-types/sethash.rakudo.jvm....................... 194    0    0   10  204
+S02-types/sethash.rakudo.jvm....................... 195    0    0   10  205
     10 skipped: 'is TypeObject' NYI RT #124490
 S02-types/sigils-and-types.rakudo.jvm..............  25    0    2    0   27
      1 todo   : Capture does Associative RT \#124485
@@ -377,7 +377,7 @@ S03-operators/bit.t................................  38    0    0    0   38
 S03-operators/boolean-bitwise.rakudo.jvm...........  43    0    2    0   45
      2 todo   : got (Int) instead of (Bool)
 S03-operators/brainos.t............................   9    0    0    0    9
-S03-operators/buf.rakudo.jvm.......................  53    0    0    2   55
+S03-operators/buf.rakudo.jvm.......................  99    0    0    2  101
      2 skipped: RT #126530
 S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  53    0    0    0   53
@@ -1043,7 +1043,7 @@ S11-modules/importing.t............................  16    0    0    0   16
 S11-modules/lexical.t..............................   2    0    0    0    2
 S11-modules/need.t.................................   2    0    0    0    2
 S11-modules/nested.t...............................   6    0    0    0    6
-S11-modules/require.rakudo.jvm.....................  22    0    1    2   25
+S11-modules/require.rakudo.jvm.....................  24    0    1    2   27
      1 skipped: Trying to import from 'InnerModule', but the following symbols are missing: quux RT #118407
      1 skipped: import require at compile time RT #127538
      1 todo   : creation of stub package symbol NYI RT \#125083
@@ -1299,8 +1299,8 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT #124775
      3 skipped: waiting for new '.loads' semantics RT #124776
      2 skipped: waiting for new '.loads' semantics RT #124777
-S17-scheduler/every.t..............................  20    0    0    0   20
-S17-scheduler/in.t.................................  12    2    0    0   14
+S17-scheduler/every.t..............................  18    2    0    0   20
+S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.t...............................  12    0    0    0   12
 S17-supply/Promise.t...............................  13    0    0    0   13
@@ -1321,7 +1321,8 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1343,7 +1344,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  16    1    0    0   17
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1654,7 +1655,7 @@ S32-str/samecase.t.................................   8    0    0    0    8
 S32-str/samemark.rakudo.jvm........................   0    0    0    8    8
      8 skipped: samemark NYI
 S32-str/split-simple.t.............................  29    0    0    0   29
-S32-str/split.rakudo.jvm...........................  37    0    0   20   57
+S32-str/split.rakudo.jvm...........................  38    0    0   20   58
      1 skipped: No such method null for invocant of type Cursor RT #124685
     19 skipped: UnwindException RT #124279
 S32-str/sprintf-b.rakudo.jvm.......................  68    0   90    7  165
@@ -1719,9 +1720,9 @@ S32-str/uc.rakudo.jvm..............................  17    0    0    2   19
 S32-str/unpack.t...................................  24    0    0    0   24
 S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT \#124739
-S32-temporal/Date.t................................  88    0    0    0   88
+S32-temporal/Date.t................................ 100    0    0    0  100
 S32-temporal/DateTime-Instant-Duration.t...........  55    0    0    0   55
-S32-temporal/DateTime.t............................ 247    0    0    0  247
+S32-temporal/DateTime.t............................ 268    0    0    0  268
 S32-temporal/calendar.t............................ 130    0    0    0  130
 S32-temporal/local.rakudo.jvm......................  16    0    9    0   25
      9 todo   : RT \#122702
@@ -1884,31 +1885,31 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        6814,    16,   123,   416,  7369,  7368
-"S03",        5767,     0,   110,   144,  6021,  6043
+"S02",        6816,    16,   123,   416,  7371,  7370
+"S03",        5813,     0,   110,   144,  6067,  6089
 "S04",        1415,     0,    57,    48,  1520,  1552
 "S05",        5624,     0,   101,   249,  5974,  6176
 "S06",        2105,     0,    61,   104,  2270,  2316
 "S07",          39,     0,     7,     0,    46,   142
 "S09",        2302,     0,    11,    37,  2350,  2350
 "S10",         126,     2,     2,     2,   132,   189
-"S11",         153,     1,     6,    12,   172,   191
+"S11",         155,     1,     6,    12,   174,   193
 "S12",        1622,     0,    31,   132,  1785,  1840
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         857,     3,    15,    20,   895,   944
+"S17",         858,     2,    15,    20,   895,   944
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       11928,   525,   210,   277, 12940, 11258
+"S32",       11962,   525,   210,   277, 12974, 11292
 "int",        1270,     0,    12,    14,  1296,  1289
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43499,   547,   839,  1793, 46678,124722
+"total",     43584,   546,   839,  1793, 46762,124806
 ----------------
 Failure summary:
 S02-types/int-uint.rakudo.jvm 3 - int8 overflows to -128
@@ -1927,8 +1928,7 @@ S02-types/resolved-in-setting.t aborted 4 test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-scheduler/in.t 7 - Cue on ThreadPoolScheduler with :in/:catch doesn't schedule immediately
-S17-scheduler/in.t 8 - Timer tasks on ThreadPoolScheduler :in/:catch ran in right order
-S17-supply/throttle.t 10 - did we get the final status?
+S17-scheduler/every.t 12 - Cue with :every/:in/:catch schedules repeatedly (1)
+S17-scheduler/every.t 13 - Cue with :every/:in/:catch schedules repeatedly (2)
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
 S32-io/IO-Socket-Async.t 6 - bytes-supply
