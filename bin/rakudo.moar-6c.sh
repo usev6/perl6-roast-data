@@ -9,7 +9,7 @@ git clone repos/nqp.git rakudo.moar-6c/nqp
 git clone repos/MoarVM.git rakudo.moar-6c/nqp/MoarVM
 git clone repos/roast.git rakudo.moar-6c/t/spec
 cd rakudo.moar-6c
-(cd t/spec; git checkout 6.c)
+(cd t/spec; git checkout 6.c-errata)
 perl Configure.pl --gen-moar --gen-nqp --backends=moar
 make -j 2 all
 
