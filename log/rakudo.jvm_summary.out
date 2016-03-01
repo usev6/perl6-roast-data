@@ -1306,7 +1306,7 @@ S17-supply/Channel.t...............................  12    0    0    0   12
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  88    0    0    0   88
-S17-supply/batch.t.................................  11    0    0    0   11
+S17-supply/batch.t.................................  10    1    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1723,7 +1723,7 @@ S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT \#124739
 S32-temporal/Date.t................................ 100    0    0    0  100
 S32-temporal/DateTime-Instant-Duration.t...........  55    0    0    0   55
-S32-temporal/DateTime.t............................ 267    1    0    0  268
+S32-temporal/DateTime.t............................ 268    0    0    0  268
 S32-temporal/calendar.t............................ 130    0    0    0  130
 S32-temporal/local.rakudo.jvm......................  16    0    9    0   25
      9 todo   : RT \#122702
@@ -1900,14 +1900,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         860,     0,    15,    20,   895,   944
+"S17",         859,     1,    15,    20,   895,   944
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       11945,   542,   210,   277, 12974, 11292
+"S32",       11946,   541,   210,   277, 12974, 11292
 "int",        1270,     0,    12,    14,  1296,  1289
 "ros",           2,     0,     0,     0,     2,     2
 "total",     43569,   561,   839,  1793, 46762,124806
@@ -1929,8 +1929,8 @@ S02-types/resolved-in-setting.t aborted 4 test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
+S17-supply/batch.t 4 - we can batch by time and elems
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
 S32-io/IO-Socket-Async.t 6 - bytes-supply
 S32-io/socket-recv-vs-read.t aborted 2 test(s)
 S32-str/pack.t aborted 14 test(s)
-S32-temporal/DateTime.t 114 - DateTime.now uses current time
