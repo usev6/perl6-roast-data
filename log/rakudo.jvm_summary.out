@@ -1281,7 +1281,8 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  17    0    0    0   17
+S17-channel/basic.t................................  16    2    0    0   17
+     1 tests more than planned were run
 S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -1306,7 +1307,7 @@ S17-supply/Channel.t...............................  12    0    0    0   12
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  88    0    0    0   88
-S17-supply/batch.t.................................  10    1    0    0   11
+S17-supply/batch.t.................................  11    0    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1900,7 +1901,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         859,     1,    15,    20,   895,   944
+"S17",         859,     2,    15,    20,   895,   944
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1910,7 +1911,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       11946,   541,   210,   277, 12974, 11292
 "int",        1270,     0,    12,    14,  1296,  1289
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43569,   561,   839,  1793, 46762,124806
+"total",     43569,   562,   839,  1793, 46762,124806
 ----------------
 Failure summary:
 S02-types/int-uint.rakudo.jvm 3 - int8 overflows to -128
@@ -1929,7 +1930,9 @@ S02-types/resolved-in-setting.t aborted 4 test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
 S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-supply/batch.t 4 - we can batch by time and elems
+S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
+S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
+S17-channel/basic.t passed 1 unplanned test(s)
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
 S32-io/IO-Socket-Async.t 6 - bytes-supply
 S32-io/socket-recv-vs-read.t aborted 2 test(s)
