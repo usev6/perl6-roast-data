@@ -1047,7 +1047,7 @@ S11-modules/require.rakudo.jvm.....................  24    0    1    2   27
      1 skipped: Trying to import from 'InnerModule', but the following symbols are missing: quux RT #118407
      1 skipped: import require at compile time RT #127538
      1 todo   : creation of stub package symbol NYI RT \#125083
-S11-repository/curli-install.t.....................  17    1    0    0   18
+S11-repository/curli-install.t.....................  18    0    0    0   18
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  23    0    0    0   23
 S12-attributes/clone.rakudo.jvm....................  39    0    2    0   41
@@ -1064,7 +1064,7 @@ S12-attributes/instance.rakudo.jvm................. 143    0    6    1  150
      2 todo   : ro on list attributes
 S12-attributes/mutators.rakudo.jvm.................   5    0    0    5   10
      5 skipped: RT #126198
-S12-attributes/native.t............................  43    0    0    0   43
+S12-attributes/native.t............................  45    0    0    0   45
 S12-attributes/recursive.t.........................  23    0    0    0   23
 S12-attributes/smiley.t............................  54    0    0    0   54
 S12-attributes/undeclared.t........................  11    0    0    0   11
@@ -1281,8 +1281,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  16    2    0    0   17
-     1 tests more than planned were run
+S17-channel/basic.t................................  17    0    0    0   17
 S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -1345,7 +1344,7 @@ S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
 S17-supply/throttle.t..............................  17    0    0    0   17
-S17-supply/unique.t................................  17    0    0    0   17
+S17-supply/unique.t................................  16    1    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
 S17-supply/words.t.................................   5    0    0    0    5
@@ -1895,13 +1894,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S07",          39,     0,     7,     0,    46,   142
 "S09",        2302,     0,    11,    37,  2350,  2350
 "S10",         126,     2,     2,     2,   132,   189
-"S11",         155,     1,     6,    12,   174,   193
-"S12",        1622,     0,    31,   132,  1785,  1840
+"S11",         156,     0,     6,    12,   174,   193
+"S12",        1624,     0,    31,   132,  1787,  1842
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         388,     0,     8,     5,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         659,     0,    67,   135,   861,   917
-"S17",         859,     2,    15,    20,   895,   944
+"S17",         859,     1,    15,    20,   895,   944
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1911,7 +1910,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       11946,   541,   210,   277, 12974, 11292
 "int",        1270,     0,    12,    14,  1296,  1289
 "ros",           2,     0,     0,     0,     2,     2
-"total",     43569,   562,   839,  1793, 46762,124806
+"total",     43572,   560,   839,  1793, 46764,124808
 ----------------
 Failure summary:
 S02-types/int-uint.rakudo.jvm 3 - int8 overflows to -128
@@ -1929,10 +1928,7 @@ S02-types/int-uint.rakudo.jvm 49 - uint32 underflows to 4294967295
 S02-types/resolved-in-setting.t aborted 4 test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
-S11-repository/curli-install.t 18 - the loaded CompUnit is the one returned by $*REPO.need
-S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
-S17-channel/basic.t passed 1 unplanned test(s)
+S17-supply/unique.t 15 - unique with as and expiry works
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
 S32-io/IO-Socket-Async.t 6 - bytes-supply
 S32-io/socket-recv-vs-read.t aborted 2 test(s)
