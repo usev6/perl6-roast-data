@@ -1321,7 +1321,8 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1343,8 +1344,8 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
-S17-supply/unique.t................................  16    1    0    0   17
+S17-supply/throttle.t..............................  16    1    0    0   17
+S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
 S17-supply/words.t.................................   5    0    0    0    5
@@ -1928,7 +1929,7 @@ S02-types/int-uint.rakudo.jvm 49 - uint32 underflows to 4294967295
 S02-types/resolved-in-setting.t aborted 4 test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
-S17-supply/unique.t 15 - unique with as and expiry works
+S17-supply/throttle.t 5 - did we see all of the element
 S32-array/adverbs.rakudo.jvm aborted 524 test(s)
 S32-io/IO-Socket-Async.t 6 - bytes-supply
 S32-io/socket-recv-vs-read.t aborted 2 test(s)
