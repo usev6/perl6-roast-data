@@ -1478,9 +1478,10 @@ S32-hash/slice.rakudo.jvm..........................  19    0   10    0   29
      2 todo   : binding on hash elements unimplemented RT \#124780
 S32-io/IO-Socket-Async.t...........................   1    5    0    0    6
      4 tests aborted (missing ok/not ok)
-S32-io/IO-Socket-INET.t............................   0    0    0   50   50
-    50 skipped: Operating system not yet supported
-S32-io/chdir.rakudo.jvm............................   8    0    0    2   10
+S32-i   3    3    0    0    6
+     3 tests aborted (missing ok/not ok)
+Can't read t/spec/S32-io/IO-Socket-INET.t: No such file or directory
+rakudo.jvm............................   8    0    0    2   10
      2 skipped: spec non-conformance due to missing sink context
 S32-io/copy.t......................................  41    0    0    0   41
 S32-io/dir.rakudo.jvm..............................   9    0    3    1   13
