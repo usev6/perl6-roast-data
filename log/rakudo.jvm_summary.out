@@ -1328,7 +1328,8 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................   8    9    0    0   17
+     7 tests aborted (missing ok/not ok)
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1476,12 +1477,11 @@ S32-hash/slice.rakudo.jvm..........................  19    0   10    0   29
      6 todo   : binding on hash elements unimplemented
      2 todo   : binding on hash elements unimplemented RT \#124779
      2 todo   : binding on hash elements unimplemented RT \#124780
-S32-io/IO-Socket-Async.t...........................   1    5    0    0    6
-     4 tests aborted (missing ok/not ok)
-S32-i   3    3    0    0    6
+S32-io/IO-Socket-Async.t...........................   3    3    0    0    6
      3 tests aborted (missing ok/not ok)
-Can't read t/spec/S32-io/IO-Socket-INET.t: No such file or directory
-rakudo.jvm............................   8    0    0    2   10
+S32-io/IO-Socket-INET.t............................   0    0    0   50   50
+    50 skipped: Operating system not yet supported
+S32-io/chdir.rakudo.jvm............................   8    0    0    2   10
      2 skipped: spec non-conformance due to missing sink context
 S32-io/copy.t......................................  41    0    0    0   41
 S32-io/dir.rakudo.jvm..............................   9    0    3    1   13
@@ -1916,17 +1916,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         223,   167,     8,     3,   401,   414
 "S15",          42,     0,     7,    47,    96, 79081
 "S16",         458,   219,    49,   135,   861,   917
-"S17",         837,    23,    15,    20,   895,   944
+"S17",         828,    32,    15,    20,   895,   944
 "S19",           1,    13,     0,     0,    14,    18
 "S22",          14,     4,     0,     1,    19,    19
 "S24",          14,     4,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         324,    40,     2,     3,   369,   369
-"S32",        8288,  1516,   183,   250, 10237, 10334
+"S32",        8290,  1514,   183,   250, 10237, 10334
 "int",        1101,   171,    10,    14,  1296,  1289
 "ros",           2,     0,     0,     0,     2,     2
-"total",     35118,  6525,   714,  1669, 44026,123849
+"total",     35111,  6532,   714,  1669, 44026,123849
 ----------------
 Failure summary:
 S02-literals/string-interpolation.t aborted 16 test(s)
@@ -2047,6 +2047,9 @@ S16-io/split.t aborted 18 test(s)
 S16-io/supply.rakudo.jvm aborted 5 test(s)
 S16-io/words.t aborted 8 test(s)
 S17-promise/start.t aborted 23 test(s)
+S17-supply/throttle.t 9 - did we see all in the right order?
+S17-supply/throttle.t 10 - did we get the final status?
+S17-supply/throttle.t aborted 7 test(s)
 S19-command-line-options/02-dash-n.t aborted 3 test(s)
 S19-command-line-options/03-dash-p.t aborted 2 test(s)
 S19-command-line/arguments.t aborted 3 test(s)
@@ -2068,8 +2071,7 @@ S32-array/unshift.t aborted 76 test(s)
 S32-basics/warn.t aborted 7 test(s)
 S32-basics/xxPOS.rakudo.jvm aborted 60 test(s)
 S32-exceptions/misc.rakudo.jvm aborted 390 test(s)
-S32-io/IO-Socket-Async.t 2 - Async connect to unavailable server breaks promise
-S32-io/IO-Socket-Async.t aborted 4 test(s)
+S32-io/IO-Socket-Async.t aborted 3 test(s)
 S32-io/note.t aborted 6 test(s)
 S32-io/other.t aborted 60 test(s)
 S32-io/slurp.t aborted 8 test(s)
