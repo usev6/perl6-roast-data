@@ -349,8 +349,8 @@ S03-operators/boolean-bitwise.rakudo.jvm...........   0   45    0    0   45
     45 tests aborted (missing ok/not ok)
 S03-operators/brainos.t............................   0    9    0    0    9
      9 tests aborted (missing ok/not ok)
-S03-operators/buf.rakudo.jvm.......................   0  103    0    0  103
-   103 tests aborted (missing ok/not ok)
+S03-operators/buf.rakudo.jvm.......................   0  105    0    0  105
+   105 tests aborted (missing ok/not ok)
 S03-operators/chained-declarators.t................   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
 S03-operators/cmp.t................................   0   53    0    0   53
@@ -1376,8 +1376,8 @@ S17-promise/basic.t................................   0   23    0    0   23
     23 tests aborted (missing ok/not ok)
 S17-promise/in.t...................................   0    3    0    0    3
      3 tests aborted (missing ok/not ok)
-S17-promise/start.t................................   0   40    0    0   40
-    40 tests aborted (missing ok/not ok)
+S17-promise/start.t................................   0   42    0    0   42
+    42 tests aborted (missing ok/not ok)
 S17-promise/stress.t...............................   0    1    0    0    1
      1 tests aborted (missing ok/not ok)
 S17-promise/then.t.................................   0   14    0    0   14
@@ -1645,8 +1645,8 @@ S32-hash/perl.t....................................   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
 S32-hash/push.t....................................   0   10    0    0   10
     10 tests aborted (missing ok/not ok)
-S32-hash/slice.rakudo.jvm..........................   0   29    0    0   29
-    29 tests aborted (missing ok/not ok)
+S32-hash/slice.rakudo.jvm..........................   0   31    0    0   31
+    31 tests aborted (missing ok/not ok)
 S32-io/IO-Socket-Async.t...........................   0    6    0    0    6
      6 tests aborted (missing ok/not ok)
 S32-io/IO-Socket-INET.t............................   0   50    0    0   50
@@ -2155,7 +2155,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    75,     0,     0,    75,    86
 "S02",           0,  5502,     0,     0,  5502,  5502
-"S03",           0,  6069,     0,     0,  6069,  6091
+"S03",           0,  6071,     0,     0,  6071,  6093
 "S04",           0,  1500,     0,     0,  1500,  1552
 "S05",           0,  5974,     0,     0,  5974,  6176
 "S06",           0,  2257,     0,     0,  2257,  2313
@@ -2168,17 +2168,17 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S14",           0,   403,     0,     0,   403,   416
 "S15",           0,    96,     0,     0,    96, 79084
 "S16",           0,   390,     0,     0,   390,   446
-"S17",           0,   897,     0,     0,   897,   946
+"S17",           0,   899,     0,     0,   899,   948
 "S19",           0,    14,     0,     0,    14,    18
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    18,     0,     0,    18,    89
 "S26",           0,  1989,     0,     0,  1989,  1989
 "S28",           0,     2,     0,     0,     2,     8
 "S29",           0,   165,     0,     0,   165,   165
-"S32",           0,  9091,     0,     0,  9091,  9188
+"S32",           0,  9093,     0,     0,  9093,  9190
 "int",           0,  1283,     0,     0,  1283,  1279
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 38811,     0,     0, 38811,118671
+"total",         0, 38817,     0,     0, 38817,118677
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2354,7 +2354,7 @@ S03-operators/basic-types.rakudo.jvm aborted 19 test(s)
 S03-operators/bit.t aborted 38 test(s)
 S03-operators/boolean-bitwise.rakudo.jvm aborted 45 test(s)
 S03-operators/brainos.t aborted 9 test(s)
-S03-operators/buf.rakudo.jvm aborted 103 test(s)
+S03-operators/buf.rakudo.jvm aborted 105 test(s)
 S03-operators/chained-declarators.t aborted 5 test(s)
 S03-operators/cmp.t aborted 53 test(s)
 S03-operators/comparison-simple.t aborted 24 test(s)
@@ -2860,7 +2860,7 @@ S17-promise/anyof.t aborted 10 test(s)
 S17-promise/at.t aborted 3 test(s)
 S17-promise/basic.t aborted 23 test(s)
 S17-promise/in.t aborted 3 test(s)
-S17-promise/start.t aborted 40 test(s)
+S17-promise/start.t aborted 42 test(s)
 S17-promise/stress.t aborted 1 test(s)
 S17-promise/then.t aborted 14 test(s)
 S17-scheduler/at.t aborted 15 test(s)
@@ -2991,7 +2991,7 @@ S32-hash/kv.t aborted 27 test(s)
 S32-hash/pairs.t aborted 25 test(s)
 S32-hash/perl.t aborted 12 test(s)
 S32-hash/push.t aborted 10 test(s)
-S32-hash/slice.rakudo.jvm aborted 29 test(s)
+S32-hash/slice.rakudo.jvm aborted 31 test(s)
 S32-io/IO-Socket-Async.t aborted 6 test(s)
 S32-io/IO-Socket-INET.t aborted 50 test(s)
 S32-io/chdir.rakudo.jvm aborted 10 test(s)
