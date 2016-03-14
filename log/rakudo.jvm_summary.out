@@ -51,8 +51,8 @@ S02-lists/tree.t...................................   0   10    0    0   10
     10 tests aborted (missing ok/not ok)
 S02-literals/adverbs.rakudo.jvm....................   0   32    0    0   32
     32 tests aborted (missing ok/not ok)
-S02-literals/allomorphic.t.........................   0   99    0    0   99
-    99 tests aborted (missing ok/not ok)
+S02-literals/allomorphic.t.........................   0  101    0    0  101
+   101 tests aborted (missing ok/not ok)
 S02-literals/array-interpolation.t.................   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
 S02-literals/autoref.t.............................   0   38    0    0   38
@@ -2154,7 +2154,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    75,     0,     0,    75,    86
-"S02",           0,  5502,     0,     0,  5502,  5502
+"S02",           0,  5504,     0,     0,  5504,  5504
 "S03",           0,  6071,     0,     0,  6071,  6093
 "S04",           0,  1500,     0,     0,  1500,  1552
 "S05",           0,  5974,     0,     0,  5974,  6176
@@ -2178,7 +2178,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0,  9093,     0,     0,  9093,  9190
 "int",           0,  1283,     0,     0,  1283,  1279
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 38817,     0,     0, 38817,118677
+"total",         0, 38819,     0,     0, 38819,118679
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2206,7 +2206,7 @@ S02-lexical-conventions/unspace.rakudo.jvm aborted 87 test(s)
 S02-lists/indexing.t aborted 2 test(s)
 S02-lists/tree.t aborted 10 test(s)
 S02-literals/adverbs.rakudo.jvm aborted 32 test(s)
-S02-literals/allomorphic.t aborted 99 test(s)
+S02-literals/allomorphic.t aborted 101 test(s)
 S02-literals/array-interpolation.t aborted 12 test(s)
 S02-literals/autoref.t aborted 38 test(s)
 S02-literals/char-by-name.rakudo.jvm aborted 10 test(s)
