@@ -419,8 +419,8 @@ S03-operators/range.t..............................   0  125    0    0  125
    125 tests aborted (missing ok/not ok)
 S03-operators/reduce-le1arg.rakudo.jvm.............   0   54    0    0   54
     54 tests aborted (missing ok/not ok)
-S03-operators/relational.rakudo.jvm................   0  159    0    0  159
-   159 tests aborted (missing ok/not ok)
+S03-operators/relational.rakudo.jvm................   0  163    0    0  163
+   163 tests aborted (missing ok/not ok)
 S03-operators/repeat.t.............................   0   38    0    0   38
     38 tests aborted (missing ok/not ok)
 S03-operators/scalar-assign.t......................   0    4    0    0    4
@@ -1073,8 +1073,8 @@ S11-repository/curli-install.t.....................   0   18    0    0   18
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................   0   23    0    0   23
     23 tests aborted (missing ok/not ok)
-S12-attributes/clone.rakudo.jvm....................   0   41    0    0   41
-    41 tests aborted (missing ok/not ok)
+S12-attributes/clone.rakudo.jvm....................   0   42    0    0   42
+    42 tests aborted (missing ok/not ok)
 S12-attributes/defaults.t..........................   0   34    0    0   34
     34 tests aborted (missing ok/not ok)
 S12-attributes/delegation.t........................   0   65    0    0   65
@@ -2155,7 +2155,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    75,     0,     0,    75,    86
 "S02",           0,  5504,     0,     0,  5504,  5504
-"S03",           0,  6071,     0,     0,  6071,  6093
+"S03",           0,  6075,     0,     0,  6075,  6097
 "S04",           0,  1500,     0,     0,  1500,  1552
 "S05",           0,  5974,     0,     0,  5974,  6176
 "S06",           0,  2257,     0,     0,  2257,  2313
@@ -2163,7 +2163,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S09",           0,   860,     0,     0,   860,   860
 "S10",           0,   132,     0,     0,   132,   189
 "S11",           0,   174,     0,     0,   174,   193
-"S12",           0,  1791,     0,     0,  1791,  1846
+"S12",           0,  1792,     0,     0,  1792,  1847
 "S13",           0,    62,     0,     0,    62,    72
 "S14",           0,   403,     0,     0,   403,   416
 "S15",           0,    96,     0,     0,    96, 79084
@@ -2178,7 +2178,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0,  9093,     0,     0,  9093,  9190
 "int",           0,  1283,     0,     0,  1283,  1279
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 38819,     0,     0, 38819,118679
+"total",         0, 38824,     0,     0, 38824,118684
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2389,7 +2389,7 @@ S03-operators/range-basic.t aborted 110 test(s)
 S03-operators/range-int.t aborted 507 test(s)
 S03-operators/range.t aborted 125 test(s)
 S03-operators/reduce-le1arg.rakudo.jvm aborted 54 test(s)
-S03-operators/relational.rakudo.jvm aborted 159 test(s)
+S03-operators/relational.rakudo.jvm aborted 163 test(s)
 S03-operators/repeat.t aborted 38 test(s)
 S03-operators/scalar-assign.t aborted 4 test(s)
 S03-operators/set.t aborted 292 test(s)
@@ -2711,7 +2711,7 @@ S11-modules/nested.t aborted 6 test(s)
 S11-modules/require.rakudo.jvm aborted 27 test(s)
 S11-repository/curli-install.t aborted 18 test(s)
 S12-attributes/class.t aborted 23 test(s)
-S12-attributes/clone.rakudo.jvm aborted 41 test(s)
+S12-attributes/clone.rakudo.jvm aborted 42 test(s)
 S12-attributes/defaults.t aborted 34 test(s)
 S12-attributes/delegation.t aborted 65 test(s)
 S12-attributes/inheritance.t aborted 7 test(s)
