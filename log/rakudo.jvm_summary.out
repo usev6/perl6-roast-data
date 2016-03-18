@@ -256,8 +256,8 @@ S02-types/pair.rakudo.jvm..........................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 S02-types/parsing-bool.t...........................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
-S02-types/range.t..................................   0  179    0    0  179
-   179 tests aborted (missing ok/not ok)
+S02-types/range.t..................................   0  183    0    0  183
+   183 tests aborted (missing ok/not ok)
 S02-types/resolved-in-setting.t....................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 S02-types/set.rakudo.jvm...........................   0  177    0    0  177
@@ -2154,12 +2154,12 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    75,     0,     0,    75,    86
-"S02",           0,  5504,     0,     0,  5504,  5504
+"S02",           0,  5508,     0,     0,  5508,  5508
 "S03",           0,  6075,     0,     0,  6075,  6097
 "S04",           0,  1500,     0,     0,  1500,  1552
 "S05",           0,  5974,     0,     0,  5974,  6176
 "S06",           0,  2257,     0,     0,  2257,  2313
-"S07",           0,    46,     0,     0,    46,   142
+"S07",           0,    46,     0,     0,    46,   151
 "S09",           0,   860,     0,     0,   860,   860
 "S10",           0,   132,     0,     0,   132,   189
 "S11",           0,   174,     0,     0,   174,   193
@@ -2178,7 +2178,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0,  9093,     0,     0,  9093,  9190
 "int",           0,  1283,     0,     0,  1283,  1279
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 38824,     0,     0, 38824,118684
+"total",         0, 38828,     0,     0, 38828,118697
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2308,7 +2308,7 @@ S02-types/nil.rakudo.jvm aborted 52 test(s)
 S02-types/num.t aborted 66 test(s)
 S02-types/pair.rakudo.jvm aborted 4 test(s)
 S02-types/parsing-bool.t aborted 4 test(s)
-S02-types/range.t aborted 179 test(s)
+S02-types/range.t aborted 183 test(s)
 S02-types/resolved-in-setting.t aborted 4 test(s)
 S02-types/set.rakudo.jvm aborted 177 test(s)
 S02-types/sethash.rakudo.jvm aborted 205 test(s)
