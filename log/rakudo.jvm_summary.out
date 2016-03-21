@@ -1028,10 +1028,10 @@ S09-typed-arrays/hashes.t..........................   0   37    0    0   37
     37 tests aborted (missing ok/not ok)
 S09-typed-arrays/native-decl.t.....................   0   10    0    0   10
     10 tests aborted (missing ok/not ok)
-S09-typed-arrays/native-int.rakudo.jvm.............   0  136    0    0  136
-   136 tests aborted (missing ok/not ok)
-S09-typed-arrays/native-num.rakudo.jvm.............   0  128    0    0  128
-   128 tests aborted (missing ok/not ok)
+S09-typed-arrays/native-int.rakudo.jvm.............   0  157    0    0  157
+   157 tests aborted (missing ok/not ok)
+S09-typed-arrays/native-num.rakudo.jvm.............   0  145    0    0  145
+   145 tests aborted (missing ok/not ok)
 S09-typed-arrays/native.t..........................   0    3    0    0    3
      3 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
@@ -2160,7 +2160,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S05",           0,  5974,     0,     0,  5974,  6176
 "S06",           0,  2257,     0,     0,  2257,  2313
 "S07",           0,    46,     0,     0,    46,   151
-"S09",           0,   860,     0,     0,   860,   860
+"S09",           0,   898,     0,     0,   898,   898
 "S10",           0,   132,     0,     0,   132,   189
 "S11",           0,   174,     0,     0,   174,   193
 "S12",           0,  1792,     0,     0,  1792,  1847
@@ -2178,7 +2178,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0,  9095,     0,     0,  9095,  9192
 "int",           0,  1283,     0,     0,  1283,  1279
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 38830,     0,     0, 38830,118699
+"total",         0, 38868,     0,     0, 38868,118737
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2690,8 +2690,8 @@ S09-subscript/slice.rakudo.jvm aborted 31 test(s)
 S09-typed-arrays/arrays.rakudo.jvm aborted 81 test(s)
 S09-typed-arrays/hashes.t aborted 37 test(s)
 S09-typed-arrays/native-decl.t aborted 10 test(s)
-S09-typed-arrays/native-int.rakudo.jvm aborted 136 test(s)
-S09-typed-arrays/native-num.rakudo.jvm aborted 128 test(s)
+S09-typed-arrays/native-int.rakudo.jvm aborted 157 test(s)
+S09-typed-arrays/native-num.rakudo.jvm aborted 145 test(s)
 S09-typed-arrays/native.t aborted 3 test(s)
 S10-packages/basic.rakudo.jvm aborted 81 test(s)
 S10-packages/joined-namespaces.t aborted 3 test(s)
