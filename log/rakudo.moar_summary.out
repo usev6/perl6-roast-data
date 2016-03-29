@@ -356,7 +356,7 @@ S02-names/indirect.t...............................  10    0    0    0   10
 S02-names/is_cached.t..............................  38    0    0    0   38
 S02-names/is_default.rakudo.moar...................    
 # Failed test 'right exception type (X::Comp::Trait::NotOnNative)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::Comp::Trait::NotOnNative
     # Got:      X::Comp::NYI
     # Exception message: native value types for hashes not yet implemented. Sorry. 
@@ -419,14 +419,14 @@ S02-types/array.rakudo.moar........................
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Item)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::Item
     # Got:      X::AdHoc
     # Exception message: Cannot coerce Inf or NaN to an Int
     # Looks like you failed 1 test of 4
     
 # Failed test 'right exception type (X::Item)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::Item
     # Got:      X::AdHoc
     # Exception message: Cannot coerce Inf or NaN to an Int
@@ -977,29 +977,6 @@ S03-operators/inplace.rakudo.moar..................  27    0    0    4   31
 S03-operators/is-divisible-by.rakudo.moar..........    
 # Failed test 'code dies'
 # at t/spec/S03-operators/is-divisible-by.rakudo.moar line 41
-WARNING: unhandled Failure detected in DESTROY:
-Attempt to divide 9 by zero using infix:<%%>
-  in any  at gen/moar/m-Perl6-Optimizer.nqp line 1406
-  in any  at gen/moar/m-Perl6-Optimizer.nqp line 1402
-  in any optimize_call at gen/moar/m-Perl6-Optimizer.nqp line 1354
-  in any visit_op at gen/moar/m-Perl6-Optimizer.nqp line 1303
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp line 1955
-  in any visit_want at gen/moar/m-Perl6-Optimizer.nqp line 1732
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp line 1958
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp line 1973
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp line 1967
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp line 913
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp line 1964
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp line 1967
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp line 1973
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp line 913
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp line 1964
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp line 1967
-  in any visit_children at gen/moar/m-Perl6-Optimizer.nqp line 1973
-  in any visit_block at gen/moar/m-Perl6-Optimizer.nqp line 913
-  in any optimize at gen/moar/m-Perl6-Optimizer.nqp line 891
-  in any optimize at src/Perl6/Compiler.nqp line 34
-
     # Looks like you failed 1 test of 4
   14    0    1    0   15
      1 todo   : not sure why this doesn't fire
@@ -1021,8 +998,8 @@ S03-operators/mix.rakudo.moar...................... 102    0   26    0  128
      8 todo   : Rakudo update in progress, but not done yet RT \#124541
      4 todo   : Wrong answer at the moment
      8 todo   : submix behavior still under discussion
-S03-operators/names.t..............................Sub+{<anon|34457129088>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t line 14
-Sub+{<anon|34457129088>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t line 16
+S03-operators/names.t..............................Sub+{<anon|34457112704>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t line 14
+Sub+{<anon|34457112704>}+{Precedence} object coerced to string (please use .gist or .perl to do that)  in block <unit> at t/spec/S03-operators/names.t line 16
    7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -2065,10 +2042,6 @@ S11-modules/require.rakudo.moar....................  24    0    1    2   27
      1 todo   : creation of stub package symbol NYI RT \#125083
 S11-repository/curli-install.t.....................Use of uninitialized value % of type Any in string context
 Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed.  in block <unit> at t/spec/S11-repository/curli-install.t line 38
-WARNING: unhandled Failure detected in DESTROY:
-No such symbol 'Foo'
-  in block <unit> at t/spec/S11-repository/curli-install.t line 36
-
   18    0    0    0   18
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  23    0    0    0   23
@@ -2373,8 +2346,8 @@ S15-unicode-information/uniprop.t..................   6    0    0    0    6
 S15-unicode-information/unival.t...................  40    0    0    0   40
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  12    0    0    0   12
-S16-filehandles/chmod.t............................# Using file temp_1459121504
-# Using file temp_1459121504
+S16-filehandles/chmod.t............................# Using file temp_1459207884
+# Using file temp_1459207884
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  10    0    0    0   10
@@ -3104,84 +3077,84 @@ S32-array/rotate.t.................................  29    0    0    0   29
 S32-array/shift.t..................................  33    0    0    0   33
 S32-array/splice.rakudo.moar.......................    
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/7E8F5A17B2516A1ED40D0216AB8AAF19890E32B9.1459120551.67089/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/CCCEB6AE282B8A3EB6E4E1D3C99524D2AACC3242.1459206951.96928/4B/4B212034D8F2A63AA03FE1E5D53D61EA643B3B86 line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
@@ -4825,14 +4798,14 @@ integration/advent2012-day15.rakudo.moar...........  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.3385006 seconds
-# gerdr: 0.3546745 seconds
-# recursive-ternary: 0.4667972 seconds
-# loop: 0.475439940 seconds
-# hand-memoization: 0.71083819 seconds
-# sequence-ternary: 1.18457600 seconds
-# recursive-ternary-hand-cached: 1.6323605 seconds
-# sequence: 2.2467412 seconds
+integration/advent2012-day21.t.....................# kaz: 0.33720910 seconds
+# gerdr: 0.3494837 seconds
+# recursive-ternary: 0.4680056 seconds
+# loop: 0.47941530 seconds
+# hand-memoization: 0.7167541 seconds
+# sequence-ternary: 1.3834827 seconds
+# recursive-ternary-hand-cached: 1.7573216 seconds
+# sequence: 2.2507722 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................Weird node visited: QAST::BVal
@@ -4875,14 +4848,14 @@ integration/no-indirect-new.t......................   2    0    0    0    2
 integration/packages.t.............................   3    0    0    0    3
 integration/pair-in-array.t........................   3    0    0    0    3
 integration/passing-pair-class-to-sub.t............   2    0    0    0    2
-integration/precompiled.rakudo.moar................WARNINGS for /tmp/p6testmod09298EB0/p6testmodEB027742.pm6 (p6testmodEB027742):
+integration/precompiled.rakudo.moar................WARNINGS for /tmp/p6testmodBC8E017D/p6testmodA8893CAD.pm6 (p6testmodA8893CAD):
 Useless use of constant integer 42 in sink context (line 1)
-WARNINGS for /tmp/p6testmod09298EB0/p6testmod278BE60A.pm6 (p6testmod278BE60A):
+WARNINGS for /tmp/p6testmodBC8E017D/p6testmodCE43F8C4.pm6 (p6testmodCE43F8C4):
 Useless use of constant integer 42 in sink context (line 1)
     
 # Failed test 'precompiled EVAL in BEGIN (Compiled)'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test/Compile.pm (Test::Compile) line 229
-    # Missing or wrong version of dependency '9' (from '/tmp/p6testmod09298EB0/p6testmod09503CDE.pm6 (p6testmod09503CDE)')
+    # Missing or wrong version of dependency '9' (from '/tmp/p6testmodBC8E017D/p6testmod61EAD06C.pm6 (p6testmod61EAD06C)')
     # Looks like you failed 1 test of 2
    6    0    1    0    7
      1 todo   : RT \#124324 Missing or wrong version of dependency
