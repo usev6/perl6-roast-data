@@ -2406,9 +2406,10 @@ Any of .^name, .perl, .gist, or .say can stringify undefined things, if needed. 
 # Looks like you failed 3 tests of 23
   20    3    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
-S17-lowlevel/thread.t..............................  25    0    0    0   25
-S17-procasync/basic.rakudo.moar....................  27    0    0    3   30
-     3 skipped: returns Nil (flapping tests) RT #125047
+S17-lowlevel/thread.t.............................  12    2    0    0   14
+     2 tests aborted (missing ok/not ok)
+Can't read t/spec/S17-supply/Promise.t: No such file or directory
+lapping tests) RT #125047
 S17-procasync/kill.rakudo.moar.....................   8    0    1    0    9
      1 todo   : RT \#126425 - order of operations for Proc::Async is nondeterminstic
 S17-procasync/many-processes-no-close-stdin.t......   1    0    0    0    1
