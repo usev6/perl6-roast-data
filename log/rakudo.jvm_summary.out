@@ -1019,7 +1019,8 @@ S11-modules/import-tag.t...........................  12    0    0    0   12
 S11-modules/import.rakudo.jvm......................  13    0    0    4   17
      2 skipped: import plus inline module RT #125087
      2 skipped: import plus inline module RT #125088
-S11-modules/importing.t............................  16    0    0    0   16
+S11-modules/importing.t............................   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
 S11-modules/lexical.t..............................   2    0    0    0    2
 S11-modules/need.t.................................   2    0    0    0    2
 S11-modules/nested.t...............................   0    6    0    0    6
@@ -1280,7 +1281,8 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
 S17-scheduler/every.t..............................  20    0    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
-S17-supply/Channel.t...............................  14    0    0    0   14
+S17-supply/Channel.t...............................  12    2    0    0   14
+     2 tests aborted (missing ok/not ok)
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  88    0    0    0   88
@@ -1299,7 +1301,8 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1891,13 +1894,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S07",          39,     0,     7,     0,    46,   151
 "S09",         170,  2627,     6,     7,  2810,  2810
 "S10",          85,    44,     1,     2,   132,   189
-"S11",         127,    32,     5,    10,   174,   193
+"S11",         111,    48,     5,    10,   174,   193
 "S12",        1366,   279,    21,   126,  1792,  1847
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         225,   167,     8,     3,   403,   416
 "S15",          42,     0,     7,    47,    96, 79084
 "S16",         568,   108,    50,   135,   861,   917
-"S17",         839,    25,    15,    20,   899,   948
+"S17",         837,    27,    15,    20,   899,   948
 "S19",          13,     1,     0,     0,    14,    18
 "S22",          14,     4,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1907,7 +1910,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        8905,   938,   198,   248, 10289, 10387
 "int",        1234,    37,    12,    14,  1297,  1290
 "ros",           2,     0,     0,     0,     2,     2
-"total",     36389,  5801,   755,  1639, 44584,124420
+"total",     36371,  5819,   755,  1639, 44584,124420
 ----------------
 Failure summary:
 S02-literals/adverbs.rakudo.jvm aborted 15 test(s)
@@ -1981,6 +1984,7 @@ S10-packages/basic.rakudo.jvm aborted 31 test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
 S10-packages/precompilation.rakudo.jvm aborted 8 test(s)
+S11-modules/importing.t aborted 16 test(s)
 S11-modules/nested.t aborted 6 test(s)
 S11-modules/require.rakudo.jvm aborted 26 test(s)
 S12-attributes/instance.rakudo.jvm aborted 152 test(s)
@@ -2001,6 +2005,7 @@ S16-io/split.t aborted 18 test(s)
 S16-io/supply.rakudo.jvm aborted 5 test(s)
 S16-io/words.t aborted 8 test(s)
 S17-promise/start.t aborted 25 test(s)
+S17-supply/Channel.t aborted 2 test(s)
 S19-command-line/repl.t 1 - exit(42) in executed REPL got run
 S22-package-format/local.rakudo.jvm aborted 4 test(s)
 S32-array/adverbs.rakudo.jvm aborted 2 test(s)
