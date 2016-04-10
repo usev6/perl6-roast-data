@@ -1010,9 +1010,7 @@ S11-repository/curli-install.t.....................  12    6    0    0   18
      6 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  23    0    0    0   23
-S12-attributes/clone.rakudo.jvm....................  40    0    2    0   42
-     1 todo PASSED: cloned object has @.array as List instead of Array RT \#125577
-     1 todo PASSED: cloned object has @.hash as Pair instead of Hash RT \#125577
+S12-attributes/clone.t.............................  42    0    0    0   42
 S12-attributes/defaults.t..........................  34    0    0    0   34
 S12-attributes/delegation.t........................  60    5    0    0   65
      5 tests aborted (missing ok/not ok)
@@ -1287,7 +1285,8 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1554,9 +1553,8 @@ S32-list/seq.rakudo.jvm............................   7   21    0    0   28
     21 tests aborted (missing ok/not ok)
 S32-list/sort.t....................................   0   30    0    0   30
     30 tests aborted (missing ok/not ok)
-S32-list/squish.rakudo.jvm.........................  44    0    1   17   62
+S32-list/squish.rakudo.jvm.........................  45    0    1   16   62
     16 skipped: RT #126493 - expected Positional but got Seq
-     1 skipped: hangs because squish gives back infinite list with Mu.new
      1 todo   : fails due to above failure
 S32-list/tail.t....................................  24    0    0    0   24
 S32-list/unique.rakudo.jvm.........................   7   27    0    0   34
@@ -1908,7 +1906,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",          79,  2731,     0,     0,  2810,  2810
 "S10",          80,    49,     1,     2,   132,   189
 "S11",         121,    38,     5,    10,   174,   193
-"S12",        1350,   297,    21,   126,  1794,  1849
+"S12",        1352,   297,    19,   126,  1794,  1849
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         205,   187,     8,     3,   403,   416
 "S15",          42,     0,     7,    47,    96, 79084
@@ -1920,10 +1918,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1896,    17,     4,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         362,     1,     3,     3,   369,   369
-"S32",        7225,  2720,   186,   187, 10318, 10416
+"S32",        7226,  2720,   186,   186, 10318, 10416
 "int",        1093,   179,    12,    13,  1297,  1290
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31136, 11392,   622,  1465, 44615,124451
+"total",     31139, 11392,   620,  1464, 44615,124451
 ----------------
 Failure summary:
 S02-literals/adverbs.rakudo.jvm aborted 15 test(s)
