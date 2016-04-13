@@ -977,9 +977,8 @@ S10-packages/basic.rakudo.jvm......................  41   39    0    1   81
      1 skipped: RT #59484
     31 tests aborted (missing ok/not ok)
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  27   10    1    1   39
+S10-packages/precompilation.rakudo.jvm.............  27   11    0    1   39
      1 skipped: RT #122896
-     1 todo   : RT \#123276
      8 tests aborted (missing ok/not ok)
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
@@ -1285,7 +1284,8 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1903,7 +1903,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S06",        1577,   548,    53,    89,  2267,  2313
 "S07",          30,    12,     4,     0,    46,   151
 "S09",          79,  2732,     0,     0,  2811,  2811
-"S10",          80,    49,     1,     2,   132,   189
+"S10",          80,    50,     0,     2,   132,   189
 "S11",         121,    38,     5,    10,   174,   193
 "S12",        1352,   297,    19,   126,  1794,  1849
 "S13",          62,     0,     0,     0,    62,    72
@@ -1920,7 +1920,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        7231,  2720,   186,   186, 10323, 10421
 "int",        1093,   179,    12,    13,  1297,  1290
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31144, 11397,   620,  1464, 44625,124461
+"total",     31144, 11398,   619,  1464, 44625,124461
 ----------------
 Failure summary:
 S02-literals/adverbs.rakudo.jvm aborted 15 test(s)
@@ -2055,6 +2055,7 @@ S10-packages/basic.rakudo.jvm 50 - can load a module ending in .pm6
 S10-packages/basic.rakudo.jvm aborted 31 test(s)
 S10-packages/precompilation.rakudo.jvm 5 - Diamond relationship
 S10-packages/precompilation.rakudo.jvm 22 - Twisty maze of dependencies, all different
+S10-packages/precompilation.rakudo.jvm 31 - RT123276
 S10-packages/precompilation.rakudo.jvm aborted 8 test(s)
 S11-modules/nested.t aborted 6 test(s)
 S11-modules/require.rakudo.jvm aborted 26 test(s)
