@@ -1264,8 +1264,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
 S17-scheduler/every.t..............................  20    0    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
-S17-supply/Channel.t...............................  12    2    0    0   14
-     2 tests aborted (missing ok/not ok)
+S17-supply/Channel.t...............................  14    0    0    0   14
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  88    0    0    0   88
@@ -1307,7 +1306,8 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................   8    9    0    0   17
+     7 tests aborted (missing ok/not ok)
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1909,7 +1909,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         205,   187,     8,     3,   403,   416
 "S15",          42,     0,     7,    47,    96, 79084
 "S16",         567,   109,    50,   135,   861,   917
-"S17",         822,    42,    15,    20,   899,   948
+"S17",         815,    49,    15,    20,   899,   948
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          14,     4,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1919,7 +1919,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        7231,  2720,   186,   186, 10323, 10421
 "int",        1093,   180,    12,    13,  1298,  1291
 "ros",           2,     0,     0,     0,     2,     2
-"total",     31144, 11399,   619,  1464, 44626,124462
+"total",     31137, 11406,   619,  1464, 44626,124462
 ----------------
 Failure summary:
 S02-literals/adverbs.rakudo.jvm aborted 15 test(s)
@@ -2085,7 +2085,6 @@ S16-io/split.t aborted 18 test(s)
 S16-io/supply.rakudo.jvm aborted 5 test(s)
 S16-io/words.t aborted 8 test(s)
 S17-promise/start.t aborted 25 test(s)
-S17-supply/Channel.t aborted 2 test(s)
 S17-supply/merge.t aborted 9 test(s)
 S17-supply/sort.t 2 - we can sort numbers
 S17-supply/sort.t 3 - we can sort strings
@@ -2093,6 +2092,9 @@ S17-supply/sort.t 4 - we can sort in special ways
 S17-supply/sort.t 5 - we can sort numbers
 S17-supply/sort.t 6 - we can sort strings
 S17-supply/sort.t 7 - we can sort in special ways
+S17-supply/throttle.t 9 - did we see all in the right order?
+S17-supply/throttle.t 10 - did we get the final status?
+S17-supply/throttle.t aborted 7 test(s)
 S22-package-format/local.rakudo.jvm aborted 4 test(s)
 S26-documentation/09-configuration.rakudo.jvm aborted 17 test(s)
 S29-conversions/hash.t 6 - hash() on list of pairs lives (RT #76826)
