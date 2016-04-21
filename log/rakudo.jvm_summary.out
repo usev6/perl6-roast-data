@@ -1288,7 +1288,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      3 skipped: waiting for new '.loads' semantics RT #124776
      2 skipped: waiting for new '.loads' semantics RT #124777
 S17-scheduler/every.t..............................  20    0    0    0   20
-S17-scheduler/in.t.................................  13    1    0    0   14
+S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
      2 skipped: hangs (sometimes) RT #127629
@@ -1332,7 +1332,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................  16    1    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1992,7 +1992,7 @@ S16-io/split.t aborted 18 test(s)
 S16-io/supply.rakudo.jvm aborted 5 test(s)
 S16-io/words.t aborted 8 test(s)
 S17-promise/start.t aborted 25 test(s)
-S17-scheduler/in.t 4 - Timer tasks on ThreadPoolScheduler with :in ran in right order
+S17-supply/throttle.t 5 - did we see all of the element
 S22-package-format/local.rakudo.jvm aborted 4 test(s)
 S32-array/adverbs.rakudo.jvm aborted 2 test(s)
 S32-array/create.t aborted 6 test(s)
