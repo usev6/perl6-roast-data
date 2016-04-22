@@ -422,8 +422,7 @@ S03-operators/spaceship.t..........................   5    0    0    0    5
 S03-operators/subscript-adverbs.t.................. 110    0    0    0  110
 S03-operators/subscript-vs-lt.t....................   4    0    0    0    4
 S03-operators/ternary.t............................  27    0    0    0   27
-S03-operators/value_equivalence.rakudo.jvm.........  84    0    1    0   85
-     1 todo   : .WHICH based on type names
+S03-operators/value_equivalence.t..................  85    0    0    0   85
 S03-sequence/arity-2-or-more.t.....................  20    0    0    0   20
 S03-sequence/arity0.t..............................  13    0    0    0   13
 S03-sequence/basic.t............................... 143    0    0    0  143
@@ -1051,7 +1050,7 @@ S12-attributes/mutators.rakudo.jvm.................   5    0    0    5   10
 S12-attributes/native.t............................  45    0    0    0   45
 S12-attributes/recursive.t.........................   0   23    0    0   23
     23 tests aborted (missing ok/not ok)
-S12-attributes/smiley.t............................  54    0    0    0   54
+S12-attributes/smiley.t............................  49    5    0    0   54
 S12-attributes/undeclared.t........................  11    0    0    0   11
 S12-class/anonymous.rakudo.jvm.....................  17    0    1    0   18
      1 todo   : Anonymous class stringification (?) RT \#125045
@@ -1268,7 +1267,8 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT #125041
      1 skipped: contextual rebinding regression RT #125042
                                                    pass fail todo skip plan
-S17-channel/basic.t................................  17    0    0    0   17
+S17-channel/basic.t................................  16    2    0    0   17
+     1 tests more than planned were run
 S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  25    0    0    0   25
@@ -1291,7 +1291,7 @@ S17-scheduler/every.t..............................  20    0    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
-     2 skipped: hangs (sometimes) RT #127629
+     2 skipped: hangs (sometimes) RT #127947
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  88    0    0    0   88
@@ -1310,7 +1310,8 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1332,7 +1333,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  16    1    0    0   17
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1473,7 +1474,7 @@ S32-hash/slice.rakudo.jvm..........................  21    0   10    0   31
      6 todo   : binding on hash elements unimplemented
      2 todo   : binding on hash elements unimplemented RT \#124779
      2 todo   : binding on hash elements unimplemented RT \#124780
-S32-io/IO-Socket-Async.t...........................   3    3    0    0    6
+S32-io/IO-Socket-Async.rakudo.jvm..................   3    3    0    0    6
      3 tests aborted (missing ok/not ok)
 S32-io/IO-Socket-INET.t............................   0    0    0   50   50
     50 skipped: Operating system not yet supported
@@ -1896,7 +1897,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        6196,   693,   109,   379,  7377,  7380
-"S03",        5728,   117,   110,   140,  6095,  6117
+"S03",        5729,   117,   109,   140,  6095,  6117
 "S04",        1334,    80,    57,    49,  1520,  1552
 "S05",        5619,     0,   101,   254,  5974,  6176
 "S06",        1689,   420,    55,   103,  2267,  2313
@@ -1904,12 +1905,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",         171,  2627,     6,     7,  2811,  2811
 "S10",          85,    42,     3,     2,   132,   189
 "S11",         127,    32,     5,    10,   174,   193
-"S12",        1369,   279,    19,   127,  1794,  1849
+"S12",        1364,   284,    19,   127,  1794,  1849
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         225,   167,     8,     3,   403,   416
 "S15",          42,     0,     7,    47,    96, 79084
 "S16",         568,   108,    50,   135,   861,   917
-"S17",         836,    26,    15,    22,   899,   948
+"S17",         836,    27,    15,    22,   899,   948
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          14,     4,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1919,7 +1920,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        8982,   859,   198,   284, 10323, 10421
 "int",        1234,    37,    13,    14,  1298,  1291
 "ros",           2,     0,     0,     0,     2,     2
-"total",     36628,  5491,   774,  1727, 44620,124460
+"total",     36624,  5497,   773,  1727, 44620,124460
 ----------------
 Failure summary:
 S02-literals/allomorphic.rakudo.jvm aborted 101 test(s)
@@ -1976,6 +1977,11 @@ S11-modules/nested.t aborted 6 test(s)
 S11-modules/require.rakudo.jvm aborted 26 test(s)
 S12-attributes/instance.rakudo.jvm aborted 152 test(s)
 S12-attributes/recursive.t aborted 23 test(s)
+S12-attributes/smiley.t 7 - can Int:U be on its own
+S12-attributes/smiley.t 19 - with :_, can Int:U be on its own
+S12-attributes/smiley.t 25 - with :U, can Int   be on its own
+S12-attributes/smiley.t 31 - with :U, can Int:U be on its own
+S12-attributes/smiley.t 43 - with :D, can Int:U be on its own
 S12-class/attributes.t aborted 36 test(s)
 S12-introspection/WHAT.rakudo.jvm aborted 37 test(s)
 S12-methods/multi.rakudo.jvm aborted 31 test(s)
@@ -1991,8 +1997,10 @@ S16-io/newline.t aborted 6 test(s)
 S16-io/split.t aborted 18 test(s)
 S16-io/supply.rakudo.jvm aborted 5 test(s)
 S16-io/words.t aborted 8 test(s)
+S17-channel/basic.t 17 - Timeout while receiving from a closed shared channel
+S17-channel/basic.t 18 - Timeout while receiving from a closed shared channel
+S17-channel/basic.t passed 1 unplanned test(s)
 S17-promise/start.t aborted 25 test(s)
-S17-supply/throttle.t 5 - did we see all of the element
 S22-package-format/local.rakudo.jvm aborted 4 test(s)
 S32-array/adverbs.rakudo.jvm aborted 2 test(s)
 S32-array/create.t aborted 6 test(s)
@@ -2005,7 +2013,7 @@ S32-array/unshift.t aborted 76 test(s)
 S32-basics/xxPOS.rakudo.jvm aborted 60 test(s)
 S32-exceptions/misc.rakudo.jvm 2 - did we throws-like X::Buf::AsStr?
 S32-exceptions/misc.rakudo.jvm 4 - did we throws-like X::Buf::Pack?
-S32-io/IO-Socket-Async.t aborted 3 test(s)
+S32-io/IO-Socket-Async.rakudo.jvm aborted 3 test(s)
 S32-io/slurp.t aborted 8 test(s)
 S32-io/socket-recv-vs-read.rakudo.jvm aborted 11 test(s)
 S32-io/spurt.t aborted 35 test(s)
