@@ -799,9 +799,8 @@ S06-advanced/return.rakudo.jvm.....................  97    0    1    0   98
      1 todo   : RT \#61732
 S06-advanced/stub.rakudo.jvm.......................   9    0    0    1   10
      1 skipped: supersede NYI
-S06-advanced/wrap.rakudo.jvm.......................  77    0    4    4   85
-     1 skipped: control operator crossed continuation barrier
-     3 skipped: was 122259, but were all fixed on moar
+S06-advanced/wrap.rakudo.jvm.......................  80    0    4    1   85
+     1 skipped: control operator crossed continuation barrier RT \#127967
      1 todo   : ?
      1 todo   : callwith RT \#124653
      1 todo   : temp and wrap
@@ -1309,7 +1308,8 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    12 todo   : \r\n not yet handled as grapheme
+     2 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1836,7 +1836,7 @@ integration/advent2012-day15.rakudo.jvm............  10    0    1    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1898,7 +1898,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        5729,   117,   109,   140,  6095,  6117
 "S04",        1334,    80,    57,    49,  1520,  1552
 "S05",        5619,     0,   101,   254,  5974,  6176
-"S06",        1689,   420,    55,   103,  2267,  2313
+"S06",        1692,   420,    55,   100,  2267,  2313
 "S07",          39,     0,     7,     0,    46,   151
 "S09",         171,  2627,     6,     7,  2811,  2811
 "S10",          85,    42,     3,     2,   132,   189
@@ -1916,9 +1916,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
 "S32",        8982,   859,   198,   284, 10323, 10421
-"int",        1233,    38,    13,    14,  1298,  1291
+"int",        1234,    37,    13,    14,  1298,  1291
 "ros",           2,     0,     0,     0,     2,     2
-"total",     36624,  5496,   773,  1727, 44620,124460
+"total",     36628,  5495,   773,  1724, 44620,124460
 ----------------
 Failure summary:
 S02-literals/allomorphic.rakudo.jvm aborted 101 test(s)
@@ -2019,5 +2019,4 @@ integration/advent2009-day21.t aborted 2 test(s)
 integration/advent2011-day03.t aborted 2 test(s)
 integration/advent2011-day11.t aborted 9 test(s)
 integration/advent2012-day03.t aborted 2 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
 integration/advent2013-day20.t aborted 22 test(s)
