@@ -499,7 +499,8 @@ S04-declarations/multiple.rakudo.jvm...............   5    0    1    0    6
 S04-declarations/my.rakudo.jvm.....................  97    0    0    8  105
      8 skipped: RuntimeException: java.lang.ArrayIndexOutOfBoundsException: -1
 S04-declarations/our.t.............................  31    0    0    0   31
-S04-declarations/smiley.t..........................  55    5    0    0   60
+S04-declarations/smiley.rakudo.jvm.................  55    0    5    0   60
+     5 todo   : got '?.?' RT \#128031
 S04-declarations/state.rakudo.jvm..................  40    0    1    0   41
      1 todo   : initialization happens only on first call(?) RT \#102994
 S04-declarations/will.rakudo.jvm...................   9    0    8    3   20
@@ -1076,7 +1077,8 @@ S12-attributes/mutators.rakudo.jvm.................   5    0    0    5   10
      5 skipped: RT \#126198
 S12-attributes/native.t............................  45    0    0    0   45
 S12-attributes/recursive.t.........................  23    0    0    0   23
-S12-attributes/smiley.t............................  49    5    0    0   54
+S12-attributes/smiley.rakudo.jvm...................  49    0    5    0   54
+     5 todo   : got '?.?' RT \#128031
 S12-attributes/undeclared.t........................  11    0    0    0   11
 S12-class/anonymous.rakudo.jvm.....................  17    0    1    0   18
      1 todo   : Anonymous class stringification (?) RT \#125045
@@ -1210,8 +1212,9 @@ S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
 S14-roles/instantiation.t..........................  19    0    0    0   19
 S14-roles/lexical.t................................   9    0    0    0    9
-S14-roles/mixin.rakudo.jvm.........................  48    1    2    0   51
+S14-roles/mixin.rakudo.jvm.........................  48    0    3    0   51
      1 todo   : RT \#100782
+     1 todo   : RT \#127916
      1 todo   : got '1' instead of 'x'
 S14-roles/namespaced.t.............................  11    0    0    0   11
 S14-roles/parameter-subtyping.t....................  22    0    0    0   22
@@ -1284,7 +1287,8 @@ S16-io/print.t.....................................  13    0    0    0   13
 S16-io/say-and-ref.t...............................   3    0    0    0    3
 S16-io/say.t.......................................   5    0    0    0    5
 S16-io/split.t.....................................  18    0    0    0   18
-S16-io/supply.rakudo.jvm...........................   3    2    2    0    7
+S16-io/supply.rakudo.jvm...........................   3    0    4    0    7
+     2 todo   : RT \#128041
      2 todo   : got: $["ab", "cd", "e"]
 S16-io/tmpdir.t....................................   3    0    0    0    3
 S16-io/words.t.....................................   9    0    0    0    9
@@ -1333,8 +1337,7 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1911,18 +1914,18 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        8857,     0,   136,   419,  9412,  9415
 "S03",        5844,     0,   109,   142,  6095,  6117
-"S04",        1409,     5,    57,    49,  1520,  1552
+"S04",        1409,     0,    62,    49,  1520,  1552
 "S05",        5619,     0,   101,   254,  5974,  6176
 "S06",        2104,     0,    62,   102,  2268,  2314
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2747,     0,    25,    39,  2811,  2811
 "S10",         126,     0,     4,     2,   132,   189
 "S11",         156,     0,     6,    12,   174,   193
-"S12",        1627,     5,    29,   133,  1794,  1849
+"S12",        1627,     0,    34,   133,  1794,  1849
 "S13",          62,     0,     0,     0,    62,    72
-"S14",         390,     1,     8,     5,   404,   417
+"S14",         390,     0,     9,     5,   404,   417
 "S15",          42,     0,     7,    47,    96, 79084
-"S16",         657,     2,    67,   135,   861,   917
+"S16",         657,     0,    69,   135,   861,   917
 "S17",         862,     0,    15,    22,   899,   948
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
@@ -1933,20 +1936,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12613,    11,   217,   256, 13097, 11379
 "int",        1271,     0,    13,    14,  1298,  1291
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46751,    24,   874,  1782, 49431,127455
+"total",     46751,    11,   887,  1782, 49431,127455
 ----------------
 Failure summary:
-S04-declarations/smiley.t 10 - can Int:U be on its own
-S04-declarations/smiley.t 22 - with :_, can Int:U be on its own
-S04-declarations/smiley.t 28 - with :U, can Int   be on its own
-S04-declarations/smiley.t 34 - with :U, can Int:U be on its own
-S04-declarations/smiley.t 46 - with :D, can Int:U be on its own
-S12-attributes/smiley.t 7 - can Int:U be on its own
-S12-attributes/smiley.t 19 - with :_, can Int:U be on its own
-S12-attributes/smiley.t 25 - with :U, can Int   be on its own
-S12-attributes/smiley.t 31 - with :U, can Int:U be on its own
-S12-attributes/smiley.t 43 - with :D, can Int:U be on its own
-S14-roles/mixin.rakudo.jvm 51 - mixing in a role from a deeper namespace doesn't clobber the targets shortname
-S16-io/supply.rakudo.jvm 4 - we can get bytes from a supply
-S16-io/supply.rakudo.jvm 7 - we can get bytes from a supply
 S32-io/socket-recv-vs-read.rakudo.jvm aborted 11 test(s)
