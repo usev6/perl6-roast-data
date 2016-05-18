@@ -212,7 +212,7 @@ S02-types/flattening.t.............................   0   46    0    0   46
     46 tests aborted (missing ok/not ok)
 S02-types/hash.rakudo.jvm..........................   0   95    0    0   95
     95 tests aborted (missing ok/not ok)
-S02-types/hash_ref.rakudo.jvm......................   0   31    0    0   31
+S02-types/hash_ref.t...............................   0   31    0    0   31
     31 tests aborted (missing ok/not ok)
 S02-types/infinity.rakudo.jvm......................   0   13    0    0   13
     13 tests aborted (missing ok/not ok)
@@ -348,8 +348,8 @@ S03-operators/boolean-bitwise.rakudo.jvm...........   0   45    0    0   45
     45 tests aborted (missing ok/not ok)
 S03-operators/brainos.t............................   0    9    0    0    9
      9 tests aborted (missing ok/not ok)
-S03-operators/buf.rakudo.jvm.......................   0  124    0    0  124
-   124 tests aborted (missing ok/not ok)
+S03-operators/buf.t................................   0  125    0    0  125
+   125 tests aborted (missing ok/not ok)
 S03-operators/chained-declarators.t................   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
 S03-operators/cmp.t................................   0   53    0    0   53
@@ -1688,7 +1688,7 @@ S32-io/rename.t....................................   0   29    0    0   29
     29 tests aborted (missing ok/not ok)
 S32-io/slurp.t.....................................   0   17    0    0   17
     17 tests aborted (missing ok/not ok)
-S32-io/socket-recv-vs-read.rakudo.jvm..............   0   11    0    0   11
+S32-io/socket-recv-vs-read.t.......................   0   11    0    0   11
     11 tests aborted (missing ok/not ok)
 S32-io/spurt.t.....................................   0   35    0    0   35
     35 tests aborted (missing ok/not ok)
@@ -2160,7 +2160,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    75,     0,     0,    75,    86
 "S02",           0,  5508,     0,     0,  5508,  5512
-"S03",           0,  6095,     0,     0,  6095,  6117
+"S03",           0,  6096,     0,     0,  6096,  6118
 "S04",           0,  1502,     0,     0,  1502,  1554
 "S05",           0,  5974,     0,     0,  5974,  6176
 "S06",           0,  2259,     0,     0,  2259,  2315
@@ -2183,7 +2183,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0,  9185,     0,     0,  9185,  9283
 "int",           0,  1285,     0,     0,  1285,  1281
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 39155,     0,     0, 39155,119029
+"total",         0, 39156,     0,     0, 39156,119030
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2291,7 +2291,7 @@ S02-types/declare.rakudo.jvm aborted 70 test(s)
 S02-types/fatrat.t aborted 1 test(s)
 S02-types/flattening.t aborted 46 test(s)
 S02-types/hash.rakudo.jvm aborted 95 test(s)
-S02-types/hash_ref.rakudo.jvm aborted 31 test(s)
+S02-types/hash_ref.t aborted 31 test(s)
 S02-types/infinity.rakudo.jvm aborted 13 test(s)
 S02-types/instants-and-durations.t aborted 33 test(s)
 S02-types/int-uint.rakudo.jvm aborted 1 test(s)
@@ -2358,7 +2358,7 @@ S03-operators/basic-types.rakudo.jvm aborted 19 test(s)
 S03-operators/bit.t aborted 38 test(s)
 S03-operators/boolean-bitwise.rakudo.jvm aborted 45 test(s)
 S03-operators/brainos.t aborted 9 test(s)
-S03-operators/buf.rakudo.jvm aborted 124 test(s)
+S03-operators/buf.t aborted 125 test(s)
 S03-operators/chained-declarators.t aborted 5 test(s)
 S03-operators/cmp.t aborted 53 test(s)
 S03-operators/comparison-simple.t aborted 24 test(s)
@@ -3017,7 +3017,7 @@ S32-io/other.t aborted 60 test(s)
 S32-io/pipe.t aborted 14 test(s)
 S32-io/rename.t aborted 29 test(s)
 S32-io/slurp.t aborted 17 test(s)
-S32-io/socket-recv-vs-read.rakudo.jvm aborted 11 test(s)
+S32-io/socket-recv-vs-read.t aborted 11 test(s)
 S32-io/spurt.t aborted 35 test(s)
 S32-list/categorize.t aborted 28 test(s)
 S32-list/classify.rakudo.jvm aborted 40 test(s)
