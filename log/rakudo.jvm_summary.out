@@ -500,7 +500,7 @@ S04-declarations/smiley.rakudo.jvm.................  55    0    5    0   60
      5 todo   : got '?.?' RT \#128031
 S04-declarations/state.rakudo.jvm..................  40    0    1    0   41
      1 todo   : initialization happens only on first call(?) RT \#102994
-S04-declarations/will.rakudo.jvm...................   9    0    8    3   20
+S04-declarations/will.rakudo.jvm...................  13    0    4    3   20
      1 skipped: declared variable not visible in block yet RT \#125061
      1 skipped: declared variable not visible in block yet RT \#125063
      1 skipped: declared variable not visible in block yet RT \#125066
@@ -508,7 +508,6 @@ S04-declarations/will.rakudo.jvm...................   9    0    8    3   20
      1 todo   : declared variable not visible in block yet RT \#125067
      1 todo   : will init NYI
      1 todo   : will post NYI RT \#125062
-     4 todo PASSED: "will first" not working
 S04-exception-handlers/catch.t.....................  30    0    0    0   30
 S04-exception-handlers/control.t...................  10    0    0    0   10
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
@@ -524,16 +523,13 @@ S04-phasers/begin.rakudo.jvm.......................  12    0    1    0   13
 S04-phasers/check.t................................   5    0    0    0    5
 S04-phasers/descending-order.t.....................   7    0    0    0    7
 S04-phasers/end.t..................................   8    0    0    0    8
-S04-phasers/enter-leave.rakudo.jvm.................  24    0    3    3   30
-     2 skipped: java.lang.NullPointerException (second one only with is())
+S04-phasers/enter-leave.rakudo.jvm.................  26    0    3    1   30
      1 skipped: leave NYI RT \#124960
      1 todo   : RT \#121530
      1 todo   : is this spec? why would LEAVE not see outer $!? fossil?
      1 todo   : nigh
 S04-phasers/eval-in-begin.t........................   3    0    0    0    3
-S04-phasers/first.rakudo.jvm.......................   3    0    4    0    7
-     3 todo PASSED: RT \#126701
-     1 todo PASSED: got '123' instead of 'Here'
+S04-phasers/first.t................................   7    0    0    0    7
 S04-phasers/in-eval.rakudo.jvm.....................  34    0    1    0   35
      1 todo   : not sure
 S04-phasers/in-loop.rakudo.jvm.....................   3    0    3    0    6
@@ -943,8 +939,7 @@ S06-signature/positional-placeholders.t............  12    0    0    0   12
 S06-signature/positional.t.........................  13    0    0    0   13
 S06-signature/scalar-type.t........................   8    0    0    0    8
 S06-signature/shape.t..............................  34    0    0    0   34
-S06-signature/sigilless.rakudo.jvm.................   9    0    0    1   10
-     1 skipped: issue with harness, tests passes when test file is executed manually
+S06-signature/sigilless.t..........................  10    0    0    0   10
 S06-signature/slurpy-and-interpolation.t...........  12    0    0    0   12
 S06-signature/slurpy-params.rakudo.jvm.............  84    0    0    1   85
      1 skipped: RT \#126493
@@ -1025,13 +1020,13 @@ S09-typed-arrays/native.t..........................   3    0    0    0    3
 S10-packages/basic.rakudo.jvm......................  80    0    0    1   81
      1 skipped: RT \#59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  21   14    4    1   40
+S10-packages/precompilation.rakudo.jvm.............  21   15    4    1   41
      1 skipped: RT \#122896
      1 todo   : got: $["B", "C"]
      1 todo   : got: $["C", "K"]
      1 todo   : got: $[]
      1 todo   : no 6model parametrics interning yet
-    12 tests aborted (missing ok/not ok)
+    13 tests aborted (missing ok/not ok)
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
 S11-compunit/compunit-dependencyspecification.t....   6    0    0    0    6
@@ -1616,9 +1611,9 @@ S32-num/rand.rakudo.jvm............................ 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect RT \#124812
 S32-num/rat.rakudo.jvm............................. 828    0    3    1  832
      1 skipped: RT \#74648
-     1 todo   : -Inf.Rat dies
-     1 todo   : Inf.Rat dies
-     1 todo   : NaN.Rat dies
+     1 todo PASSED: -Inf.Rat dies
+     1 todo PASSED: Inf.Rat dies
+     1 todo PASSED: NaN.Rat dies
 S32-num/real-bridge.t.............................. 200    0    0    0  200
 S32-num/roots.t....................................  55    0    0    0   55
 S32-num/rounders.rakudo.jvm........................ 133    0    1    0  134
@@ -1850,8 +1845,7 @@ integration/advent2012-day10.t.....................  26    0    0    0   26
 integration/advent2012-day12.t.....................   5    0    0    0    5
 integration/advent2012-day13.t.....................  42    0    0    0   42
 integration/advent2012-day14.t.....................   6    0    0    0    6
-integration/advent2012-day15.rakudo.jvm............  10    0    1    0   11
-     1 todo PASSED: RT \#126701
+integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
@@ -1903,9 +1897,10 @@ integration/say-crash.t............................   4    0    0    0    4
 integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.rakudo.jvm................  20    1    2    0   23
+integration/weird-errors.rakudo.jvm................  20    0    3    0   23
      1 todo   : Feels like a bogus test in light of recent changes
      1 todo   : Unknown encoding 'utf8-c8' RT \#127878
+     1 todo   : strange problem with prefix:<++> RT \#128123
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
@@ -1914,12 +1909,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        8860,     0,   136,   412,  9408,  9411
 "S03",        5847,     0,   109,   140,  6096,  6118
-"S04",        1411,     0,    62,    49,  1522,  1554
+"S04",        1421,     0,    54,    47,  1522,  1554
 "S05",        5619,     0,   101,   254,  5974,  6176
-"S06",        2105,     0,    62,   102,  2269,  2315
+"S06",        2106,     0,    62,   101,  2269,  2315
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2747,     0,    25,    39,  2811,  2811
-"S10",         113,    14,     4,     2,   133,   190
+"S10",         113,    15,     4,     2,   134,   191
 "S11",         156,     0,     6,    12,   174,   193
 "S12",        1627,     0,    34,   133,  1794,  1849
 "S13",          62,     0,     0,     0,    62,    72
@@ -1934,13 +1929,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
 "S32",       12619,    11,   220,   255, 13105, 11387
-"int",        1270,     1,    13,    14,  1298,  1291
+"int",        1271,     0,    13,    14,  1298,  1291
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46752,    26,   890,  1772, 49440,127464
+"total",     46764,    26,   882,  1769, 49441,127465
 ----------------
 Failure summary:
 S10-packages/precompilation.rakudo.jvm 1 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
-S10-packages/precompilation.rakudo.jvm aborted 12 test(s)
+S10-packages/precompilation.rakudo.jvm aborted 13 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
-integration/weird-errors.rakudo.jvm 9 - can recurse many times into &EVAL
