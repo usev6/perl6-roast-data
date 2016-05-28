@@ -1100,7 +1100,7 @@ S12-class/self-inheritance.t.......................   2    0    0    0    2
 S12-class/stubs.rakudo.jvm.........................   9    0    1    0   10
      1 todo   : nom regression RT \#125044
 S12-class/type-object.t............................   6    0    0    0    6
-S12-coercion/coercion-types.rakudo.jvm.............   7    0    1   12   20
+S12-coercion/coercion-types.rakudo.jvm.............   8    0    1   12   21
      1 skipped: Could not find symbol '&Async:U' RT \#127841
      3 skipped: NYI RT \#124840
      2 skipped: NYI RT \#124841
@@ -1354,7 +1354,7 @@ S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
 S17-supply/throttle.t..............................  17    0    0    0   17
-S17-supply/unique.t................................  17    0    0    0   17
+S17-supply/unique.t................................  16    1    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
 S17-supply/words.t.................................   5    0    0    0    5
@@ -1612,9 +1612,9 @@ S32-num/power.rakudo.jvm...........................  60    0   10    6   76
      2 todo   : wrong results for "NaN" used with "**" RT \#124800
 S32-num/rand.rakudo.jvm............................ 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect RT \#124812
-S32-num/rat.rakudo.jvm............................. 800   31    0    1  832
+S32-num/rat.rakudo.jvm............................. 829    0    0    3  832
      1 skipped: RT \#74648
-    31 tests aborted (missing ok/not ok)
+     2 skipped: java.lang.ArithmeticException: BigInteger divide by zero RT \#128264
 S32-num/real-bridge.t.............................. 200    0    0    0  200
 S32-num/roots.t....................................  55    0    0    0   55
 S32-num/rounders.rakudo.jvm........................ 133    0    1    0  134
@@ -1917,26 +1917,26 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2747,     0,    25,    39,  2811,  2811
 "S10",         113,    15,     4,     2,   134,   191
 "S11",         156,     0,     6,    12,   174,   193
-"S12",        1627,     0,    34,   133,  1794,  1849
+"S12",        1628,     0,    34,   133,  1795,  1850
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          42,     0,     7,    47,    96, 79084
 "S16",         657,     0,    69,   135,   861,   917
-"S17",         862,     0,    15,    22,   899,   948
+"S17",         861,     1,    15,    22,   899,   948
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       12597,    42,   226,   255, 13120, 11402
+"S32",       12626,    11,   226,   257, 13120, 11402
 "int",        1271,     0,    13,    14,  1298,  1291
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46742,    57,   888,  1769, 49456,127480
+"total",     46771,    27,   888,  1771, 49457,127481
 ----------------
 Failure summary:
 S10-packages/precompilation.rakudo.jvm 1 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
 S10-packages/precompilation.rakudo.jvm aborted 13 test(s)
+S17-supply/unique.t 14 - unique with expiry works
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
-S32-num/rat.rakudo.jvm aborted 31 test(s)
