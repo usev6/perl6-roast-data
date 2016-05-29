@@ -1330,8 +1330,7 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1354,7 +1353,7 @@ S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
 S17-supply/throttle.t..............................  17    0    0    0   17
-S17-supply/unique.t................................  16    1    0    0   17
+S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
 S17-supply/words.t.................................   5    0    0    0    5
@@ -1922,7 +1921,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          42,     0,     7,    47,    96, 79084
 "S16",         657,     0,    69,   135,   861,   917
-"S17",         861,     1,    15,    22,   899,   948
+"S17",         862,     0,    15,    22,   899,   948
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1932,11 +1931,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12626,    11,   226,   257, 13120, 11402
 "int",        1271,     0,    13,    14,  1298,  1291
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46771,    27,   888,  1771, 49457,127481
+"total",     46772,    26,   888,  1771, 49457,127481
 ----------------
 Failure summary:
 S10-packages/precompilation.rakudo.jvm 1 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
 S10-packages/precompilation.rakudo.jvm aborted 13 test(s)
-S17-supply/unique.t 14 - unique with expiry works
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
