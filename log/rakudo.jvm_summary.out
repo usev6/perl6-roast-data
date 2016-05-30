@@ -1330,7 +1330,8 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1434,7 +1435,7 @@ S32-array/bool.t...................................  15    0    0    0   15
 S32-array/create.t.................................   6    0    0    0    6
 S32-array/delete-adverb-native.t................... 138    0    0    0  138
 S32-array/delete-adverb.t.......................... 218    0    0    0  218
-S32-array/delete.t.................................  32    0    0    0   32
+S32-array/delete.t.................................  31    1    0    0   32
 S32-array/elems.t..................................  11    0    0    0   11
 S32-array/end.t....................................  12    0    0    0   12
 S32-array/exists-adverb.t..........................  52    0    0    0   52
@@ -1928,13 +1929,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
-"S32",       12626,    11,   226,   257, 13120, 11402
+"S32",       12625,    12,   226,   257, 13120, 11402
 "int",        1271,     0,    13,    14,  1298,  1291
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46772,    26,   888,  1771, 49457,127481
+"total",     46771,    27,   888,  1771, 49457,127481
 ----------------
 Failure summary:
 S10-packages/precompilation.rakudo.jvm 1 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
 S10-packages/precompilation.rakudo.jvm aborted 13 test(s)
+S32-array/delete.t 29 - map @array lives after delete
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
