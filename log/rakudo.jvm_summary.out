@@ -992,7 +992,8 @@ S09-multidim/decl.t................................  39    0    0    0   39
 S09-multidim/indexing.t............................  31    0    0    0   31
 S09-multidim/methods.t.............................  82    0    0    0   82
 S09-multidim/subs.t................................  46    0    0    0   46
-S09-subscript/multidim-assignment.t................  10    0    0    0   10
+S09-subscript/multidim-assignment.t................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
 S09-subscript/slice.rakudo.jvm.....................  27    0    0    4   31
      2 skipped: RT \#120383
      2 skipped: RT \#61844
@@ -1380,8 +1381,7 @@ S26-documentation/03-abbreviated.t.................  30    0    0    0   30
 S26-documentation/04-code.t........................  50    0    0    0   50
 S26-documentation/05-comment.t.....................   9    0    0    0    9
 S26-documentation/06-lists.t.......................  39    0    0    0   39
-S26-documentation/07-tables.t......................   0   39    0    0   39
-    39 tests aborted (missing ok/not ok)
+S26-documentation/07-tables.t......................  38    0    0    0   38
 S26-documentation/08-formattingcodes.t.............  45    0    0    0   45
 S26-documentation/09-configuration.rakudo.jvm......  13    0    4    0   17
      4 todo   : non-string colonpair pod options RT \#124281
@@ -1914,7 +1914,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S05",        5619,     0,   101,   254,  5974,  6176
 "S06",        2106,     0,    62,   101,  2269,  2315
 "S07",          39,     0,     7,     0,    46,   151
-"S09",        2747,     0,    25,    39,  2811,  2811
+"S09",        2737,    10,    25,    39,  2811,  2811
 "S10",         113,    15,     4,     2,   134,   191
 "S11",         156,     0,     6,    12,   174,   193
 "S12",        1628,     0,    34,   133,  1795,  1850
@@ -1926,18 +1926,18 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
-"S26",        1871,    39,     8,    72,  1990,  1990
+"S26",        1909,     0,     8,    72,  1989,  1989
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         363,     0,     3,     3,   369,   369
 "S32",       12625,    12,   226,   257, 13120, 11402
 "int",        1271,     0,    13,    14,  1298,  1291
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46733,    66,   888,  1771, 49458,127482
+"total",     46761,    37,   888,  1771, 49457,127481
 ----------------
 Failure summary:
+S09-subscript/multidim-assignment.t aborted 10 test(s)
 S10-packages/precompilation.rakudo.jvm 1 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
 S10-packages/precompilation.rakudo.jvm aborted 13 test(s)
-S26-documentation/07-tables.t aborted 39 test(s)
 S32-array/delete.t 29 - map @array lives after delete
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
