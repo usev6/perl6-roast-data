@@ -1308,7 +1308,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT \#124775
      3 skipped: waiting for new '.loads' semantics RT \#124776
      2 skipped: waiting for new '.loads' semantics RT \#124777
-S17-scheduler/every.t..............................  20    0    0    0   20
+S17-scheduler/every.t..............................  19    1    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
@@ -1922,7 +1922,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          42,     0,     7,    47,    96, 79084
 "S16",         657,     0,    69,   135,   861,   917
-"S17",         862,     0,    15,    22,   899,   948
+"S17",         861,     1,    15,    22,   899,   948
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1932,12 +1932,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12625,    12,   226,   257, 13120, 11402
 "int",        1271,     0,    13,    14,  1298,  1291
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46761,    37,   888,  1771, 49457,127481
+"total",     46760,    38,   888,  1771, 49457,127481
 ----------------
 Failure summary:
 S09-subscript/multidim-assignment.t aborted 10 test(s)
 S10-packages/precompilation.rakudo.jvm 1 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
 S10-packages/precompilation.rakudo.jvm aborted 13 test(s)
+S17-scheduler/every.t 15 - Cue with :every/:at schedules repeatedly
 S32-array/delete.t 29 - map @array lives after delete
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
