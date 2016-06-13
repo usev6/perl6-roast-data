@@ -1021,13 +1021,13 @@ S09-typed-arrays/native.t..........................   3    0    0    0    3
 S10-packages/basic.rakudo.jvm......................  80    0    0    1   81
      1 skipped: RT \#59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  21   15    4    1   41
+S10-packages/precompilation.rakudo.jvm.............  21   17    4    1   43
      1 skipped: RT \#122896
      1 todo   : got: $["B", "C"]
      1 todo   : got: $["C", "K"]
      1 todo   : got: $[]
      1 todo   : no 6model parametrics interning yet
-    13 tests aborted (missing ok/not ok)
+    15 tests aborted (missing ok/not ok)
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
 S11-compunit/compunit-dependencyspecification.t....   6    0    0    0    6
@@ -1331,7 +1331,8 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1354,7 +1355,7 @@ S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
 S17-supply/throttle.t..............................  17    0    0    0   17
-S17-supply/unique.t................................  16    1    0    0   17
+S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
 S17-supply/words.t.................................   5    0    0    0    5
@@ -1917,14 +1918,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S06",        2106,     0,    62,   101,  2269,  2315
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2747,     0,    26,    39,  2812,  2812
-"S10",         113,    15,     4,     2,   134,   191
+"S10",         113,    17,     4,     2,   136,   193
 "S11",         156,     0,     6,    12,   174,   193
 "S12",        1628,     0,    34,   133,  1795,  1850
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          42,     0,     7,    47,    96, 79084
 "S16",         657,     0,    69,   135,   861,   917
-"S17",         861,     1,    15,    22,   899,   948
+"S17",         862,     0,    15,    22,   899,   948
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1934,11 +1935,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12625,    11,   227,   257, 13120, 11402
 "int",        1272,     0,    13,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46771,    27,   890,  1772, 49460,127484
+"total",     46772,    28,   890,  1772, 49462,127486
 ----------------
 Failure summary:
 S10-packages/precompilation.rakudo.jvm 1 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
-S10-packages/precompilation.rakudo.jvm aborted 13 test(s)
-S17-supply/unique.t 8 - unique with with and expiry works
+S10-packages/precompilation.rakudo.jvm aborted 15 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
