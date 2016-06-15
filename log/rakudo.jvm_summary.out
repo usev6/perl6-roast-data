@@ -270,8 +270,7 @@ S02-types/nil.rakudo.jvm...........................  46    0    5    1   52
      1 skipped: triage
      5 todo   : triage
 S02-types/num.t....................................  66    0    0    0   66
-S02-types/pair.rakudo.jvm.......................... 175    0    2    0  177
-     1 todo   : RT \#126369
+S02-types/pair.rakudo.jvm.......................... 176    0    1    0  177
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t.................................. 183    0    0    0  183
@@ -1309,7 +1308,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      3 skipped: waiting for new '.loads' semantics RT \#124776
      2 skipped: waiting for new '.loads' semantics RT \#124777
 S17-scheduler/every.t..............................  20    0    0    0   20
-S17-scheduler/in.t.................................  12    2    0    0   14
+S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
      2 skipped: hangs (sometimes) RT \#127947
@@ -1911,7 +1910,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        8860,     0,   136,   412,  9408,  9411
+"S02",        8861,     0,   135,   412,  9408,  9411
 "S03",        5847,     0,   109,   140,  6096,  6118
 "S04",        1421,     0,    54,    47,  1522,  1554
 "S05",        5619,     0,   101,   254,  5974,  6176
@@ -1925,7 +1924,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          42,     0,     7,    47,    96, 79084
 "S16",         657,     0,    69,   135,   861,   917
-"S17",         860,     2,    15,    22,   899,   948
+"S17",         862,     0,    15,    22,   899,   948
 "S19",          14,     0,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1935,12 +1934,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12625,    11,   227,   257, 13120, 11402
 "int",        1272,     0,    13,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46772,    30,   890,  1772, 49464,127488
+"total",     46775,    28,   889,  1772, 49464,127488
 ----------------
 Failure summary:
 S10-packages/precompilation.rakudo.jvm 1 - 
 S10-packages/precompilation.rakudo.jvm 4 - 
 S10-packages/precompilation.rakudo.jvm aborted 15 test(s)
-S17-scheduler/in.t 3 - Cue on ThreadPoolScheduler with :in doesn't schedule immediately
-S17-scheduler/in.t 4 - Timer tasks on ThreadPoolScheduler with :in ran in right order
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
