@@ -1048,7 +1048,8 @@ S11-modules/require.rakudo.jvm.....................  23    1    1    2   27
      1 skipped: Trying to import from 'InnerModule', but the following symbols are missing: quux RT \#118407
      1 skipped: import require at compile time RT \#127538
      1 todo   : creation of stub package symbol NYI RT \#125083
-S11-repository/curli-install.t.....................  18    0    0    0   18
+S11-repository/curli-install.t.....................   5   13    0    0   18
+    13 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  21    2    0    0   23
      2 tests aborted (missing ok/not ok)
@@ -1381,7 +1382,7 @@ S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   2    6    0    0    8
      6 tests aborted (missing ok/not ok)
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................  16    1    0    0   17
 S17-supply/unique.t................................   1   16    0    0   17
     16 tests aborted (missing ok/not ok)
 S17-supply/wait.t..................................   4    0    0    0    4
@@ -1416,8 +1417,8 @@ S26-documentation/03-abbreviated.t.................  30    0    0    0   30
 S26-documentation/04-code.t........................  50    0    0    0   50
 S26-documentation/05-comment.t.....................   9    0    0    0    9
 S26-documentation/06-lists.t.......................  39    0    0    0   39
-S26-documentation/07-tables.t......................  38    0    0    1   39
-     1 skipped: issue \#128221 not yet fixed
+S26-documentation/07-tables.t......................  38    0    0   13   51
+    13 skipped: issue \#128221 not yet fixed
 S26-documentation/08-formattingcodes.t.............  45    0    0    0   45
 S26-documentation/09-configuration.rakudo.jvm......  13    0    4    0   17
      4 todo   : non-string colonpair pod options RT \#124281
@@ -1690,10 +1691,11 @@ S32-str/capitalize.rakudo.jvm......................  15    0    2    0   17
 S32-str/chomp.rakudo.jvm...........................  32    0    7    0   39
      7 todo   : \r\n not yet handled as grapheme
 S32-str/chop.t.....................................  32    0    0    0   32
-S32-str/comb.rakudo.jvm............................  70    0    2    6   78
+S32-str/comb.rakudo.jvm............................  31   39    2    6   78
      5 skipped: RT \#124279 - UnwindException
      1 skipped: cannot call match, no signature matches RT \#124738
      2 todo   : NFG on JVM RT \#124737
+    39 tests aborted (missing ok/not ok)
 S32-str/contains.t.................................  20    0    0    0   20
 S32-str/encode.rakudo.jvm..........................  25    0    7    5   37
      4 skipped: Only moar handles this
@@ -1990,23 +1992,23 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S07",          22,    24,     0,     0,    46,   151
 "S09",        2648,   107,    24,    33,  2812,  2812
 "S10",         114,    19,     4,     2,   139,   196
-"S11",         149,     9,     6,    12,   176,   195
+"S11",         136,    22,     6,    12,   176,   195
 "S12",        1540,    96,    33,   128,  1797,  1852
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          42,     0,     7,    47,    96, 79084
 "S16",         345,   483,    17,    16,   861,   932
-"S17",         533,   348,     1,    17,   899,   948
+"S17",         532,   349,     1,    17,   899,   948
 "S19",           6,     8,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
-"S26",        1907,     2,     8,    73,  1990,  1990
+"S26",        1907,     2,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         352,    11,     3,     3,   369,   369
-"S32",        9347,  2487,   214,   247, 12235, 11404
+"S32",        9308,  2526,   214,   247, 12235, 11404
 "int",        1070,   206,     9,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     39032,  7381,   742,  1493, 48586,127512
+"total",     38979,  7434,   742,  1505, 48598,127524
 ----------------
 Failure summary:
 S02-lexical-conventions/minimal-whitespace.t aborted 18 test(s)
@@ -2107,6 +2109,7 @@ S10-packages/precompilation.rakudo.jvm 4 -
 S10-packages/precompilation.rakudo.jvm aborted 17 test(s)
 S11-modules/nested.t aborted 8 test(s)
 S11-modules/require.rakudo.jvm 19 - throws correct exception
+S11-repository/curli-install.t aborted 13 test(s)
 S12-attributes/class.t aborted 2 test(s)
 S12-class/attributes.t aborted 9 test(s)
 S12-construction/BUILD.rakudo.jvm aborted 5 test(s)
@@ -2148,6 +2151,7 @@ S17-supply/sort.t aborted 6 test(s)
 S17-supply/squish.t aborted 14 test(s)
 S17-supply/stable.rakudo.jvm aborted 4 test(s)
 S17-supply/tail.t aborted 6 test(s)
+S17-supply/throttle.t 5 - did we see all of the element
 S17-supply/unique.t aborted 16 test(s)
 S17-supply/words.t aborted 4 test(s)
 S17-supply/zip-latest.t aborted 12 test(s)
@@ -2175,6 +2179,7 @@ S32-list/rotor.rakudo.jvm aborted 9 test(s)
 S32-list/squish.rakudo.jvm aborted 25 test(s)
 S32-num/base.t aborted 28 test(s)
 S32-num/polymod.t aborted 1 test(s)
+S32-str/comb.rakudo.jvm aborted 39 test(s)
 S32-str/indent.t aborted 21 test(s)
 S32-trig/atan2.t passed 12 unplanned test(s)
 S32-trig/cosech.t passed 12 unplanned test(s)
