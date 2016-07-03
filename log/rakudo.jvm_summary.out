@@ -473,7 +473,8 @@ S03-smartmatch/any-pair.t..........................  10    0    0    0   10
 S03-smartmatch/any-str.t...........................   5    0    0    0    5
 S03-smartmatch/any-sub.t...........................   8    0    0    0    8
 S03-smartmatch/any-type.t..........................  15    0    0    0   15
-S03-smartmatch/array-array.t.......................  68    0    0    0   68
+S03-smartmatch/array-array.t.......................  34   34    0    0   68
+    34 tests aborted (missing ok/not ok)
 S03-smartmatch/array-hash.rakudo.jvm...............   0    0    0    6    6
      6 skipped: RT \#124444
 S03-smartmatch/capture-signature.t.................   6    0    0    0    6
@@ -945,7 +946,7 @@ S06-signature/tree-node-parameters.rakudo.jvm......  16    0    0    4   20
      4 skipped: signature binding of return values NYI RT \#124945
 S06-signature/type-capture.rakudo.jvm..............  10    0    0    2   12
      2 skipped: Method 'T' not found for invocant of class 'Rat', RT \#126383
-S06-signature/types.t..............................  10    0    0    0   10
+S06-signature/types.t..............................  12    0    0    0   12
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
 S06-signature/unspecified.t........................  18    0    0    0   18
@@ -1984,10 +1985,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        8029,   858,   123,   399,  9409,  9412
-"S03",        4898,  1000,   101,    97,  6096,  6118
+"S03",        4864,  1034,   101,    97,  6096,  6118
 "S04",        1118,   330,    41,    35,  1522,  1554
 "S05",        4642,  1053,    90,   190,  5975,  6177
-"S06",        1778,   340,    52,    99,  2269,  2315
+"S06",        1780,   340,    52,    99,  2271,  2317
 "S07",          22,    24,     0,     0,    46,   151
 "S09",        2648,   107,    24,    33,  2812,  2812
 "S10",         114,    19,     4,     2,   139,   196
@@ -2007,7 +2008,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9308,  2526,   214,   247, 12235, 11404
 "int",        1070,   206,     9,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38993,  7420,   742,  1505, 48598,127524
+"total",     38961,  7454,   742,  1505, 48600,127526
 ----------------
 Failure summary:
 S02-lexical-conventions/minimal-whitespace.t aborted 18 test(s)
@@ -2043,6 +2044,7 @@ S03-operators/value_equivalence.t aborted 85 test(s)
 S03-sequence/arity0.t aborted 10 test(s)
 S03-sequence/basic.t aborted 123 test(s)
 S03-sequence/nonnumeric.rakudo.jvm aborted 20 test(s)
+S03-smartmatch/array-array.t aborted 34 test(s)
 S04-declarations/multiple.rakudo.jvm aborted 6 test(s)
 S04-declarations/my.rakudo.jvm aborted 105 test(s)
 S04-exception-handlers/control.t 1 - next with CONTROL gives error mentioning next
