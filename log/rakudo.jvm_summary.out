@@ -1015,13 +1015,13 @@ S09-typed-arrays/native.t..........................   3    0    0    0    3
 S10-packages/basic.rakudo.jvm......................  80    0    0    1   81
      1 skipped: RT \#59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  22   19    4    1   46
+S10-packages/precompilation.rakudo.jvm.............  36    5    4    1   46
      1 skipped: RT \#122896
      1 todo   : got: $["B", "C"]
      1 todo   : got: $["C", "K"]
      1 todo   : got: $[]
      1 todo   : no 6model parametrics interning yet
-    17 tests aborted (missing ok/not ok)
+     5 tests aborted (missing ok/not ok)
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
 S11-compunit/compunit-dependencyspecification.t....   6    0    0    0    6
@@ -1043,8 +1043,7 @@ S11-modules/import.rakudo.jvm......................  13    0    0    4   17
 S11-modules/importing.t............................  16    0    0    0   16
 S11-modules/lexical.t..............................   2    0    0    0    2
 S11-modules/need.t.................................   2    0    0    0    2
-S11-modules/nested.t...............................   0    8    0    0    8
-     8 tests aborted (missing ok/not ok)
+S11-modules/nested.t...............................   7    1    0    0    8
 S11-modules/require.rakudo.jvm.....................  23    1    1    2   27
      1 skipped: Trying to import from 'InnerModule', but the following symbols are missing: quux RT \#118407
      1 skipped: import require at compile time RT \#127538
@@ -1310,7 +1309,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT \#124775
      3 skipped: waiting for new '.loads' semantics RT \#124776
      2 skipped: waiting for new '.loads' semantics RT \#124777
-S17-scheduler/every.t..............................  20    0    0    0   20
+S17-scheduler/every.t..............................  18    2    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
@@ -1991,14 +1990,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S06",        1780,   340,    52,    99,  2271,  2317
 "S07",          22,    24,     0,     0,    46,   151
 "S09",        2648,   107,    24,    33,  2812,  2812
-"S10",         114,    19,     4,     2,   139,   196
-"S11",         149,     9,     6,    12,   176,   195
+"S10",         128,     5,     4,     2,   139,   196
+"S11",         156,     2,     6,    12,   176,   195
 "S12",        1540,    96,    33,   128,  1797,  1852
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          42,     0,     7,    47,    96, 79084
 "S16",         345,   483,    17,    16,   861,   932
-"S17",         533,   348,     1,    17,   899,   948
+"S17",         531,   350,     1,    17,   899,   948
 "S19",           6,     8,     0,     0,    14,    18
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -2008,7 +2007,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",        9308,  2526,   214,   247, 12235, 11404
 "int",        1070,   206,     9,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38961,  7454,   742,  1505, 48600,127526
+"total",     38980,  7435,   742,  1505, 48600,127526
 ----------------
 Failure summary:
 S02-lexical-conventions/minimal-whitespace.t aborted 18 test(s)
@@ -2105,10 +2104,8 @@ S07-hyperrace/race.rakudo.jvm aborted 12 test(s)
 S09-hashes/objecthash.rakudo.jvm aborted 37 test(s)
 S09-multidim/methods.t aborted 50 test(s)
 S09-subscript/slice.rakudo.jvm aborted 20 test(s)
-S10-packages/precompilation.rakudo.jvm 1 - 
-S10-packages/precompilation.rakudo.jvm 4 - 
-S10-packages/precompilation.rakudo.jvm aborted 17 test(s)
-S11-modules/nested.t aborted 8 test(s)
+S10-packages/precompilation.rakudo.jvm aborted 5 test(s)
+S11-modules/nested.t 7 - All nested modules available
 S11-modules/require.rakudo.jvm 19 - throws correct exception
 S12-attributes/class.t aborted 2 test(s)
 S12-class/attributes.t aborted 9 test(s)
@@ -2123,6 +2120,8 @@ S16-io/print.t aborted 13 test(s)
 S16-io/say-and-ref.t aborted 1 test(s)
 S16-io/supply.rakudo.jvm aborted 5 test(s)
 S17-promise/start.t aborted 1 test(s)
+S17-scheduler/every.t 2 - Cue with :every schedules repeatedly
+S17-scheduler/every.t 15 - Cue with :every/:at schedules repeatedly
 S17-supply/batch.t aborted 10 test(s)
 S17-supply/categorize.t aborted 57 test(s)
 S17-supply/classify.t aborted 27 test(s)
