@@ -513,8 +513,7 @@ S04-exception-handlers/catch.t.....................  30    0    0    0   30
 S04-exception-handlers/control.t...................   9    1    0    0   10
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
 S04-exceptions/control_across_runloop.t............   1    0    0    0    1
-S04-exceptions/fail.t..............................  28    3    0    0   31
-     3 tests aborted (missing ok/not ok)
+S04-exceptions/fail.t..............................  31    0    0    0   31
 S04-exceptions/pending.rakudo.jvm..................   6    0    1   14   21
     13 skipped: $!.pending
      1 skipped: $object.handled
@@ -594,8 +593,7 @@ S04-statements/quietly.t...........................   4    0    0    0    4
 S04-statements/redo.rakudo.jvm.....................  10    1    0    1   12
      1 skipped: control exception without handler, RT \#126490
 S04-statements/repeat.t............................  19    0    0    0   19
-S04-statements/return.t............................   8   12    0    0   20
-     6 tests aborted (missing ok/not ok)
+S04-statements/return.t............................  20    0    0    0   20
 S04-statements/sink.t..............................   2    0    0    0    2
 S04-statements/terminator.t........................  20    0    0    0   20
 S04-statements/try.t...............................  40    0    0    0   40
@@ -1227,7 +1225,7 @@ S14-traits/routines.rakudo.jvm.....................  15    0    1    0   16
 S15-literals/identifiers.rakudo.jvm................   5    0    1    1    7
      1 skipped: fails due to above failure
      1 todo   : parsing issue: X::Syntax::Confused
-S15-literals/numbers.rakudo.jvm....................  18    0    2   26   46
+S15-literals/numbers.rakudo.jvm....................  21    0    2   26   49
      7 skipped: Bogus term
      9 skipped: Confused
      3 skipped: Malformed radix number
@@ -1301,8 +1299,7 @@ S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
 S17-promise/basic.t................................  27    0    0    0   27
 S17-promise/in.t...................................   3    0    0    0    3
-S17-promise/start.t................................  41    1    0    0   42
-     1 tests aborted (missing ok/not ok)
+S17-promise/start.t................................  42    0    0    0   42
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
 S17-scheduler/at.t.................................  15    0    0    0   15
@@ -1370,7 +1367,8 @@ S19-command-line-options/03-dash-p.t...............   2    0    0    0    2
 S19-command-line/arguments.t.......................   3    0    0    0    3
 S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
-S19-command-line/repl.t............................   1    0    0    0    1
+S19-command-line/repl.t............................   1    3    0    0    4
+     3 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S22-package-format/local.rakudo.jvm................  18    0    0    1   19
      1 skipped: cannot do signals in JVM RT \#124628
@@ -1916,7 +1914,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        8862,     0,   136,   412,  9410,  9414
 "S03",        5813,    35,   109,   140,  6097,  6119
-"S04",        1401,    20,    54,    47,  1522,  1554
+"S04",        1416,     5,    54,    47,  1522,  1554
 "S05",        5620,     0,   101,   254,  5975,  6177
 "S06",        2103,     8,    60,   101,  2272,  2318
 "S07",          39,     0,     7,     0,    46,   151
@@ -1926,10 +1924,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S12",        1631,     0,    34,   133,  1798,  1853
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
-"S15",          42,     0,     7,    47,    96, 79084
+"S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
-"S17",         867,     1,    15,    22,   905,   954
-"S19",          14,     0,     0,     0,    14,    18
+"S17",         868,     0,    15,    22,   905,   954
+"S19",          14,     3,     0,     0,    17,    21
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    85,  2002,  2002
@@ -1938,28 +1936,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12425,   219,   227,   255, 13126, 11410
 "int",        1271,     1,    13,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46542,   290,   888,  1782, 49502,127546
+"total",     46561,   277,   888,  1782, 49508,127552
 ----------------
 Failure summary:
 S03-operators/arith.t 86 - extremely large exponents must throw numeric overflow
 S03-smartmatch/array-array.t aborted 34 test(s)
 S04-exception-handlers/control.t 1 - next with CONTROL gives error mentioning next
-S04-exceptions/fail.t aborted 3 test(s)
 S04-statements/do.rakudo.jvm 25 - bare block can't take 'next'
 S04-statements/do.rakudo.jvm 26 - bare block can't take 'last'
 S04-statements/do.rakudo.jvm 27 - bare block can't take 'last'
 S04-statements/redo.rakudo.jvm 11 - redo without loop construct dies
-S04-statements/return.t 9 - bare return fails (2)
-S04-statements/return.t 10 - cannot return out of a bare for block
-S04-statements/return.t 11 - cannot return out of a bare while
-S04-statements/return.t 12 - cannot return out of a bare until
-S04-statements/return.t 13 - cannot return out of a bare loop
-S04-statements/return.t 14 - cannot return out of a do block
-S04-statements/return.t aborted 6 test(s)
 S06-advanced/recurse.t aborted 8 test(s)
 S10-packages/precompilation.rakudo.jvm aborted 5 test(s)
 S11-modules/nested.t 7 - All nested modules available
-S17-promise/start.t aborted 1 test(s)
+S19-command-line/repl.t aborted 3 test(s)
 S32-exceptions/misc.rakudo.jvm 235 - did we throws-like X::ControlFlow?
 S32-exceptions/misc.rakudo.jvm 236 - did we throws-like X::ControlFlow?
 S32-exceptions/misc.rakudo.jvm 237 - did we throws-like X::ControlFlow?
