@@ -407,8 +407,9 @@ S03-operators/is-divisible-by.rakudo.jvm...........  14    0    1    0   15
      1 todo   : not sure why this doesn't fire
 S03-operators/lcm.t................................  15    0    0    0   15
 S03-operators/list-quote-junction.t................  16    0    0    0   16
-S03-operators/minmax.rakudo.jvm....................  28    0    0    2   30
+S03-operators/minmax.rakudo.jvm....................  30    0    0    8   38
      2 skipped: Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious RT \#124539
+     6 skipped: Awaiting merge of PR https://github.com/rakudo/rakudo/pull/815
 S03-operators/misc.rakudo.jvm......................  42    0    1    1   44
      1 skipped: Bogus term
      1 todo   : RT \#93978
@@ -1137,7 +1138,7 @@ S12-introspection/attributes.rakudo.jvm............  25    0    0    5   30
      5 skipped: :tree NYI for .^attributes RT \#125014
 S12-introspection/can.t............................  29    0    0    0   29
 S12-introspection/definite.t.......................   7    0    0    0    7
-S12-introspection/meta-class.t.....................  15    0    0    0   15
+S12-introspection/meta-class.t.....................  16    1    0    0   17
 S12-introspection/methods.rakudo.jvm...............  45    0    0   12   57
      8 skipped: nom regression RT \#125011
      2 skipped: nom regression RT \#125012
@@ -1331,8 +1332,7 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1367,8 +1367,8 @@ S19-command-line-options/03-dash-p.t...............   2    0    0    0    2
 S19-command-line/arguments.t.......................   3    0    0    0    3
 S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
-S19-command-line/repl.t............................   1    3    0    0    4
-     3 tests aborted (missing ok/not ok)
+S19-command-line/repl.t............................   1    5    0    0    6
+     5 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S22-package-format/local.rakudo.jvm................  18    0    0    1   19
      1 skipped: cannot do signals in JVM RT \#124628
@@ -1468,11 +1468,14 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT \#124907
-S32-exceptions/misc.rakudo.jvm..................... 227  169   10    0  406
+S32-exceptions/misc.rakudo.jvm..................... 390    0   13    3  406
+     1 skipped: Error while compiling, type X::TooLateForREPR
+     1 skipped: UnwindException
+     1 skipped: failure assignment still blows up on JVM, RT \#125769
+     3 todo   : NullPointerException instead of "XYZ without loop construct"
      8 todo   : awesome error message is not printed because these are parsed differently
      1 todo   : good error message, but not the one that we are expecting
      1 todo   : parsing regression RT \#124679
-   166 tests aborted (missing ok/not ok)
 S32-hash/adverbs.t.................................1128    0    0    0 1128
 S32-hash/antipairs.t...............................   5    0    0    0    5
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
@@ -1643,12 +1646,11 @@ S32-str/capitalize.rakudo.jvm......................  15    0    2    0   17
      2 todo   : NFG on JVM RT \#124741
 S32-str/chomp.rakudo.jvm...........................  32    0    7    0   39
      7 todo   : \r\n not yet handled as grapheme
-S32-str/chop.t.....................................  32    0    0    0   32
-S32-str/comb.rakudo.jvm............................  31   39    2    6   78
-     5 skipped: RT \#124279 - UnwindException
+S32-str/chop.t.....................................  36    0    0    0   36
+S32-str/comb.rakudo.jvm............................  69    0    2    7   78
      1 skipped: cannot call match, no signature matches RT \#124738
+     6 skipped: weird error, looks like wrong multi is used, RT \#128580
      2 todo   : NFG on JVM RT \#124737
-    39 tests aborted (missing ok/not ok)
 S32-str/contains.t.................................  20    0    0    0   20
 S32-str/encode.rakudo.jvm..........................  25    0    7    5   37
      4 skipped: Only moar handles this
@@ -1747,7 +1749,7 @@ S32-str/unpack.t...................................  24    0    0    0   24
 S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT \#124739
 S32-temporal/Date.t................................ 100    0    0    0  100
-S32-temporal/DateTime-Instant-Duration.t...........  55    0    0    0   55
+S32-temporal/DateTime-Instant-Duration.t...........  54    1    0    0   55
 S32-temporal/DateTime.t............................ 268    0    0    0  268
 S32-temporal/calendar.t............................ 130    0    0    0  130
 S32-temporal/local.rakudo.jvm......................  16    0    9    0   25
@@ -1913,7 +1915,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        8862,     0,   136,   412,  9410,  9414
-"S03",        5813,    35,   109,   140,  6097,  6119
+"S03",        5815,    35,   109,   146,  6105,  6127
 "S04",        1416,     5,    54,    47,  1522,  1554
 "S05",        5620,     0,   101,   254,  5975,  6177
 "S06",        2103,     8,    60,   101,  2272,  2318
@@ -1921,22 +1923,22 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2747,     0,    26,    39,  2812,  2812
 "S10",         128,     5,     4,     2,   139,   196
 "S11",         157,     1,     6,    12,   176,   195
-"S12",        1631,     0,    34,   133,  1798,  1853
+"S12",        1632,     1,    34,   133,  1800,  1855
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
 "S17",         868,     0,    15,    22,   905,   954
-"S19",          14,     3,     0,     0,    17,    21
+"S19",          14,     5,     0,     0,    19,    23
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,     3,     3,   370,   370
-"S32",       12425,   219,   227,   255, 13126, 11410
+"S32",       12629,    12,   230,   259, 13130, 11414
 "int",        1271,     1,    13,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46561,   277,   888,  1782, 49508,127552
+"total",     46768,    73,   891,  1792, 49524,127568
 ----------------
 Failure summary:
 S03-operators/arith.t 86 - extremely large exponents must throw numeric overflow
@@ -1949,11 +1951,8 @@ S04-statements/redo.rakudo.jvm 11 - redo without loop construct dies
 S06-advanced/recurse.t aborted 8 test(s)
 S10-packages/precompilation.rakudo.jvm aborted 5 test(s)
 S11-modules/nested.t 7 - All nested modules available
-S19-command-line/repl.t aborted 3 test(s)
-S32-exceptions/misc.rakudo.jvm 235 - did we throws-like X::ControlFlow?
-S32-exceptions/misc.rakudo.jvm 236 - did we throws-like X::ControlFlow?
-S32-exceptions/misc.rakudo.jvm 237 - did we throws-like X::ControlFlow?
-S32-exceptions/misc.rakudo.jvm aborted 166 test(s)
+S12-introspection/meta-class.t 12 - ID metamethods on a package are absent by design
+S19-command-line/repl.t aborted 5 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
-S32-str/comb.rakudo.jvm aborted 39 test(s)
+S32-temporal/DateTime-Instant-Duration.t 31 - DateTime.new(now)
 integration/error-reporting.rakudo.jvm 21 - Correct error and a backtrace for return in mainline code
