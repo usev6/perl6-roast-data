@@ -295,7 +295,7 @@ S02-types/unicode.rakudo.jvm.......................   2    0    3    0    5
      2 todo   : NFG on JVM RT \#124501
 S02-types/version-stress.rakudo.jvm................2032    0    0    3 2035
      3 skipped: RT \#126493 - expected Positional but got Seq
-S02-types/version.t................................  36    0    0    0   36
+S02-types/version.t................................  43    0    0    0   43
 S02-types/whatever.rakudo.jvm...................... 108    0    1    1  110
      1 skipped: currying plus R meta op RT \#124486
      1 todo   : * as dummy
@@ -436,7 +436,7 @@ S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: ~> NYI RT \#124531
 S03-operators/relational.rakudo.jvm................ 161    0    2    0  163
      2 todo   : RT \#121987
-S03-operators/repeat.t.............................  38    0    0    0   38
+S03-operators/repeat.t.............................  39    0    0    0   39
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set.t................................ 292    0    0    0  292
 S03-operators/short-circuit.t......................  83    0    0    0   83
@@ -923,7 +923,7 @@ S06-signature/definite-return.rakudo.jvm...........  17    0    0    2   19
      2 skipped: variables as return specifications dont parse yet RT \#124927
 S06-signature/errors.rakudo.jvm....................  25    0    6    0   31
      6 todo   : unival NYI RT \#124920
-S06-signature/introspection.rakudo.jvm............. 127    0    1    1  129
+S06-signature/introspection.rakudo.jvm............. 132    0    1    1  134
      1 skipped: expected Any but got Mu instead
      1 todo   : needs/find RT: Logic to make :a($a) into :$a makes :a(:b($a) into ::b(:$a)
 S06-signature/mixed-placeholders.t.................  18    0    0    0   18
@@ -953,7 +953,7 @@ S06-signature/tree-node-parameters.rakudo.jvm......  16    0    0    4   20
      4 skipped: signature binding of return values NYI RT \#124945
 S06-signature/type-capture.rakudo.jvm..............  10    0    0    2   12
      2 skipped: Method 'T' not found for invocant of class 'Rat', RT \#126383
-S06-signature/types.t..............................  12    0    0    0   12
+S06-signature/types.t..............................  10    0    0    0   10
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
 S06-signature/unspecified.t........................  18    0    0    0   18
@@ -1138,7 +1138,7 @@ S12-introspection/attributes.rakudo.jvm............  25    0    0    5   30
      5 skipped: :tree NYI for .^attributes RT \#125014
 S12-introspection/can.t............................  29    0    0    0   29
 S12-introspection/definite.t.......................   7    0    0    0    7
-S12-introspection/meta-class.t.....................  16    1    0    0   17
+S12-introspection/meta-class.t.....................  17    0    0    0   17
 S12-introspection/methods.rakudo.jvm...............  45    0    0   12   57
      8 skipped: nom regression RT \#125011
      2 skipped: nom regression RT \#125012
@@ -1367,7 +1367,7 @@ S19-command-line-options/03-dash-p.t...............   2    0    0    0    2
 S19-command-line/arguments.t.......................   3    0    0    0    3
 S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
-S19-command-line/repl.t............................   1    5    0    0    6
+S19-command-line/repl.rakudo.jvm...................   1    5    0    0    6
      5 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S22-package-format/local.rakudo.jvm................  18    0    0    1   19
@@ -1734,7 +1734,7 @@ S32-str/starts-with.t..............................   8    0    0    0    8
 S32-str/substr-eq.t................................  12    0    0    0   12
 S32-str/substr-rw.rakudo.jvm.......................  31    0    8    0   39
      8 todo   : NYI
-S32-str/substr.rakudo.jvm..........................  55    0    1    2   58
+S32-str/substr.rakudo.jvm..........................  56    0    1    2   59
      2 skipped: java.nio.charset.MalformedInputException RT \#124692
      1 todo   : codepoints greater than 0xFFFF RT \#124692
 S32-str/tc.rakudo.jvm..............................   6    0    3    0    9
@@ -1749,7 +1749,7 @@ S32-str/unpack.t...................................  24    0    0    0   24
 S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT \#124739
 S32-temporal/Date.t................................ 100    0    0    0  100
-S32-temporal/DateTime-Instant-Duration.t...........  54    1    0    0   55
+S32-temporal/DateTime-Instant-Duration.t...........  55    0    0    0   55
 S32-temporal/DateTime.t............................ 268    0    0    0  268
 S32-temporal/calendar.t............................ 130    0    0    0  130
 S32-temporal/local.rakudo.jvm......................  16    0    9    0   25
@@ -1914,31 +1914,31 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        8862,     0,   136,   412,  9410,  9414
-"S03",        5815,    35,   109,   146,  6105,  6127
+"S02",        8869,     0,   136,   412,  9417,  9423
+"S03",        5816,    35,   109,   146,  6106,  6128
 "S04",        1416,     5,    54,    47,  1522,  1554
 "S05",        5620,     0,   101,   254,  5975,  6177
-"S06",        2103,     8,    60,   101,  2272,  2318
+"S06",        2106,     8,    60,   101,  2275,  2321
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2747,     0,    26,    39,  2812,  2812
 "S10",         128,     5,     4,     2,   139,   196
 "S11",         157,     1,     6,    12,   176,   195
-"S12",        1632,     1,    34,   133,  1800,  1855
+"S12",        1633,     0,    34,   133,  1800,  1855
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
 "S17",         868,     0,    15,    22,   905,   954
-"S19",          14,     5,     0,     0,    19,    23
+"S19",          14,     5,     0,     0,    19,    24
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,     3,     3,   370,   370
-"S32",       12629,    12,   230,   259, 13130, 11414
+"S32",       12631,    11,   230,   259, 13131, 11415
 "int",        1271,     1,    13,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46768,    73,   891,  1792, 49524,127568
+"total",     46782,    71,   891,  1792, 49536,127583
 ----------------
 Failure summary:
 S03-operators/arith.t 86 - extremely large exponents must throw numeric overflow
@@ -1951,8 +1951,6 @@ S04-statements/redo.rakudo.jvm 11 - redo without loop construct dies
 S06-advanced/recurse.t aborted 8 test(s)
 S10-packages/precompilation.rakudo.jvm aborted 5 test(s)
 S11-modules/nested.t 7 - All nested modules available
-S12-introspection/meta-class.t 12 - ID metamethods on a package are absent by design
-S19-command-line/repl.t aborted 5 test(s)
+S19-command-line/repl.rakudo.jvm aborted 5 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
-S32-temporal/DateTime-Instant-Duration.t 31 - DateTime.new(now)
 integration/error-reporting.rakudo.jvm 21 - Correct error and a backtrace for return in mainline code
