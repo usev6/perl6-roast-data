@@ -1367,8 +1367,8 @@ S19-command-line-options/03-dash-p.t...............   2    0    0    0    2
 S19-command-line/arguments.t.......................   3    0    0    0    3
 S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
-S19-command-line/repl.rakudo.jvm...................   1    5    0    0    6
-     5 tests aborted (missing ok/not ok)
+S19-command-line/repl.rakudo.jvm...................   1    7    0    0    8
+     7 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S22-package-format/local.rakudo.jvm................  18    0    0    1   19
      1 skipped: cannot do signals in JVM RT \#124628
@@ -1929,7 +1929,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
 "S17",         868,     0,    15,    22,   905,   954
-"S19",          14,     5,     0,     0,    19,    24
+"S19",          14,     7,     0,     0,    21,    26
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    85,  2002,  2002
@@ -1938,7 +1938,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12631,    11,   230,   259, 13131, 11415
 "int",        1271,     1,    13,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46782,    71,   891,  1792, 49536,127583
+"total",     46782,    73,   891,  1792, 49538,127585
 ----------------
 Failure summary:
 S03-operators/arith.t 86 - extremely large exponents must throw numeric overflow
@@ -1951,6 +1951,6 @@ S04-statements/redo.rakudo.jvm 11 - redo without loop construct dies
 S06-advanced/recurse.t aborted 8 test(s)
 S10-packages/precompilation.rakudo.jvm aborted 5 test(s)
 S11-modules/nested.t 7 - All nested modules available
-S19-command-line/repl.rakudo.jvm aborted 5 test(s)
+S19-command-line/repl.rakudo.jvm aborted 7 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
 integration/error-reporting.rakudo.jvm 21 - Correct error and a backtrace for return in mainline code
