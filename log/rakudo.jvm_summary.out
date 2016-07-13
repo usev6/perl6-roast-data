@@ -34,10 +34,11 @@ S02-lexical-conventions/sub-block-parsing.t........  11    0    0    0   11
 S02-lexical-conventions/unicode-whitespace.t.......  50    0    0    0   50
 S02-lexical-conventions/unicode.rakudo.jvm.........  42    0    0    2   44
      2 skipped: Bogus postfix RT \#122340
-S02-lexical-conventions/unspace.rakudo.jvm.........  79    0    1    7   87
+S02-lexical-conventions/unspace.rakudo.jvm.........  79    0    2    7   88
      4 skipped: =for pod NYI (in STD.pm): RT \#122343
      3 skipped: pod and unspace: RT \#122343
      1 todo   : NYI RT \#125072
+     1 todo   : RT 128462
 S02-lists/indexing.t...............................   3    0    0    0    3
 S02-lists/tree.t...................................  10    0    0    0   10
 S02-literals/adverbs.rakudo.jvm....................  27    0    3    3   33
@@ -72,7 +73,8 @@ S02-literals/pod.rakudo.jvm........................   0    0    0    5    5
      3 skipped: isn't the iterator exhausted already, since it's been used previously?
      2 skipped: postcircumfix:<{ }> not defined for type Array RT \#125130
 S02-literals/quoting-unicode.t.....................  89    0    0    0   89
-S02-literals/quoting.t............................. 184    0    0    0  184
+S02-literals/quoting.rakudo.jvm.................... 184    0    1    0  185
+     1 todo   : RT 128304
 S02-literals/radix.rakudo.jvm...................... 151    0    1    2  154
      1 skipped: RT \#123862 - negative radix
      1 skipped: Really?!
@@ -348,7 +350,8 @@ S03-operators/also.rakudo.jvm......................   4    0    4    0    8
      1 todo   : nom regression RT \#124546
      1 todo   : nom regression RT \#124547
 S03-operators/andthen.t............................   8    0    0    0    8
-S03-operators/arith.t.............................. 157    1    0    0  158
+S03-operators/arith.rakudo.jvm..................... 157    0    1    0  158
+     1 todo   : overflow exception is not thrown on JVM RT \#127500
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
 S03-operators/assign.rakudo.jvm.................... 266    0   16   12  294
      3 skipped: ,= needs to be special cased after GLR to compile to push(@a, 3, 4)
@@ -406,9 +409,8 @@ S03-operators/is-divisible-by.rakudo.jvm...........  14    0    1    0   15
      1 todo   : not sure why this doesn't fire
 S03-operators/lcm.t................................  15    0    0    0   15
 S03-operators/list-quote-junction.t................  16    0    0    0   16
-S03-operators/minmax.rakudo.jvm....................  30    0    0    8   38
+S03-operators/minmax.rakudo.jvm....................  36    0    0    2   38
      2 skipped: Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious RT \#124539
-     6 skipped: Awaiting merge of PR https://github.com/rakudo/rakudo/pull/815
 S03-operators/misc.rakudo.jvm......................  42    0    1    1   44
      1 skipped: Bogus term
      1 todo   : RT \#93978
@@ -510,7 +512,8 @@ S04-declarations/will.rakudo.jvm...................  13    0    4    3   20
      1 todo   : will init NYI
      1 todo   : will post NYI RT \#125062
 S04-exception-handlers/catch.t.....................  30    0    0    0   30
-S04-exception-handlers/control.t...................   9    1    0    0   10
+S04-exception-handlers/control.rakudo.jvm..........   9    0    1    0   10
+     1 todo   : NullPointerException
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
 S04-exceptions/control_across_runloop.t............   1    0    0    0    1
 S04-exceptions/fail.t..............................  31    0    0    0   31
@@ -557,11 +560,12 @@ S04-statement-modifiers/with.rakudo.jvm............  34    0    1    0   35
      1 todo   : parenless with/for doesn't work yet
 S04-statement-modifiers/without.t..................   9    0    0    0    9
 S04-statement-parsing/hash.t.......................   8    0    0    0    8
-S04-statements/do.rakudo.jvm.......................  18    3    1    7   29
+S04-statements/do.rakudo.jvm.......................  18    0    4    7   29
      3 skipped: Undeclared name A RT \#124574
      1 skipped: last without loop construct RT \#124575
      2 skipped: next without loop construct RT \#124573
      1 skipped: redo without loop construct RT \#124576
+     3 todo   : NullPointerException
      1 todo   : Rakudo still uses Nil here RT \#124572
 S04-statements/for-scope.t.........................  16    0    0    0   16
 S04-statements/for.rakudo.jvm......................  93    0    5    0   98
@@ -590,9 +594,11 @@ S04-statements/next.rakudo.jvm.....................  11    0    0    1   12
 S04-statements/no-implicit-block.t.................  12    0    0    0   12
 S04-statements/once.t..............................  23    0    0    0   23
 S04-statements/quietly.t...........................   4    0    0    0    4
-S04-statements/redo.rakudo.jvm.....................  10    1    0    1   12
+S04-statements/redo.rakudo.jvm.....................  10    0    1    1   12
      1 skipped: control exception without handler, RT \#126490
-S04-statements/repeat.t............................  19    0    0    0   19
+     1 todo   : NullPointerException
+S04-statements/repeat.rakudo.jvm...................  19    0    1    0   20
+     1 todo   : RT 128596
 S04-statements/return.t............................  20    0    0    0   20
 S04-statements/sink.t..............................   2    0    0    0    2
 S04-statements/terminator.t........................  20    0    0    0   20
@@ -1049,7 +1055,8 @@ S11-modules/import.rakudo.jvm......................  13    0    0    4   17
 S11-modules/importing.t............................  16    0    0    0   16
 S11-modules/lexical.t..............................   2    0    0    0    2
 S11-modules/need.t.................................   2    0    0    0    2
-S11-modules/nested.t...............................   7    1    0    0    8
+S11-modules/nested.rakudo.jvm......................   7    0    1    0    8
+     1 todo   : got: $("GNUC",)
 S11-modules/require.rakudo.jvm.....................  24    0    1    2   27
      1 skipped: Trying to import from 'InnerModule', but the following symbols are missing: quux RT \#118407
      1 skipped: import require at compile time RT \#127538
@@ -1297,7 +1304,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  27    0    0    0   27
+S17-promise/basic.t................................  26    1    0    0   27
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  42    0    0    0   42
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -1331,8 +1338,7 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1884,7 +1890,8 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  20    1    1    0   22
+integration/error-reporting.rakudo.jvm.............  20    0    2    0   22
+     1 todo   : UnwindException
      1 todo   : nigh
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1914,21 +1921,21 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        8879,     0,   133,   412,  9424,  9430
-"S03",        5848,     1,   109,   148,  6106,  6128
-"S04",        1416,     5,    54,    47,  1522,  1554
+"S02",        8879,     0,   135,   412,  9426,  9432
+"S03",        5854,     0,   110,   142,  6106,  6128
+"S04",        1416,     0,    60,    47,  1523,  1555
 "S05",        5620,     0,   101,   254,  5975,  6177
 "S06",        2106,     0,    60,   109,  2275,  2321
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2747,     0,    26,    39,  2812,  2812
 "S10",         128,     5,     4,     2,   139,   196
-"S11",         157,     1,     6,    12,   176,   195
+"S11",         157,     0,     7,    12,   176,   195
 "S12",        1633,     0,    34,   133,  1800,  1855
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
-"S17",         868,     0,    15,    22,   905,   954
+"S17",         867,     1,    15,    22,   905,   954
 "S19",          17,     0,     0,     4,    21,    26
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
@@ -1936,18 +1943,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,     3,     3,   370,   370
 "S32",       12631,    11,   230,   259, 13131, 11415
-"int",        1271,     1,    13,    14,  1299,  1292
+"int",        1271,     0,    14,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46827,    24,   888,  1806, 49545,127592
+"total",     46832,    17,   899,  1800, 49548,127595
 ----------------
 Failure summary:
-S03-operators/arith.t 86 - extremely large exponents must throw numeric overflow
-S04-exception-handlers/control.t 1 - next with CONTROL gives error mentioning next
-S04-statements/do.rakudo.jvm 25 - bare block can't take 'next'
-S04-statements/do.rakudo.jvm 26 - bare block can't take 'last'
-S04-statements/do.rakudo.jvm 27 - bare block can't take 'last'
-S04-statements/redo.rakudo.jvm 11 - redo without loop construct dies
 S10-packages/precompilation.rakudo.jvm aborted 5 test(s)
-S11-modules/nested.t 7 - All nested modules available
+S17-promise/basic.t 27 - promises execute asynchronously [try 3]
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
-integration/error-reporting.rakudo.jvm 21 - Correct error and a backtrace for return in mainline code
