@@ -1304,7 +1304,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  26    1    0    0   27
+S17-promise/basic.t................................  27    0    0    0   27
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  42    0    0    0   42
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -1338,7 +1338,8 @@ S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.t..............................   4    0    0    0    4
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1360,7 +1361,8 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................   8    9    0    0   17
+     7 tests aborted (missing ok/not ok)
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1373,8 +1375,9 @@ S19-command-line-options/03-dash-p.t...............   2    0    0    0    2
 S19-command-line/arguments.t.......................   3    0    0    0    3
 S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
-S19-command-line/repl.rakudo.jvm...................   4    0    0    4    8
+S19-command-line/repl.rakudo.jvm...................   4    1    0    4    9
      4 skipped: is_run_repl hangs on JVM
+     1 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S22-package-format/local.rakudo.jvm................  18    0    0    1   19
      1 skipped: cannot do signals in JVM RT \#124628
@@ -1677,7 +1680,7 @@ S32-str/length.rakudo.jvm..........................  28    0    1    0   29
      1 todo   : .codes weirdness on JVM, possibly NYI? RT \#124742
 S32-str/lines.rakudo.jvm...........................  38    0   10    0   48
     10 todo   : \r\n not yet handled as grapheme
-S32-str/numeric.rakudo.jvm......................... 163    0    5    0  168
+S32-str/numeric.rakudo.jvm......................... 167    0    5    0  172
      5 todo   : Unsure of what val() should accept
 S32-str/ords.t.....................................   8    0    0    0    8
 S32-str/pack.rakudo.jvm............................   2    0    0   12   14
@@ -1685,7 +1688,7 @@ S32-str/pack.rakudo.jvm............................   2    0    0   12   14
 S32-str/pos.t......................................   2    0    0    0    2
 S32-str/rindex.t...................................  45    0    0    0   45
 S32-str/samecase.t.................................   8    0    0    0    8
-S32-str/samemark.rakudo.jvm........................   0    0    0    8    8
+S32-str/samemark.rakudo.jvm........................   0    1    0    8    9
      8 skipped: samemark NYI
 S32-str/split-simple.rakudo.jvm....................  29    0    0    1   30
      1 skipped: UnwindException RT \#124279
@@ -1935,19 +1938,23 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
-"S17",         867,     1,    15,    22,   905,   954
-"S19",          17,     0,     0,     4,    21,    26
+"S17",         859,     9,    15,    22,   905,   954
+"S19",          17,     1,     0,     4,    22,    27
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,     3,     3,   370,   370
-"S32",       12631,    11,   230,   259, 13131, 11415
+"S32",       12635,    12,   230,   259, 13136, 11422
 "int",        1271,     0,    14,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46832,    17,   899,  1800, 49548,127595
+"total",     46828,    27,   899,  1800, 49554,127603
 ----------------
 Failure summary:
 S10-packages/precompilation.rakudo.jvm aborted 5 test(s)
-S17-promise/basic.t 27 - promises execute asynchronously [try 3]
+S17-supply/throttle.t 9 - did we see all in the right order?
+S17-supply/throttle.t 10 - did we get the final status?
+S17-supply/throttle.t aborted 7 test(s)
+S19-command-line/repl.rakudo.jvm aborted 1 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
+S32-str/samemark.rakudo.jvm 9 - .samemark with empty-string argument throws
