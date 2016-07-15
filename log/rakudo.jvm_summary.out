@@ -324,7 +324,7 @@ S03-junctions/autothreading.rakudo.jvm............. 103    0    1    0  104
      1 todo   : got (Int) instead of (Bool)
 S03-junctions/boolean-context.t....................  74    0    0    0   74
 S03-junctions/misc.t............................... 142    0    0    0  142
-S03-metaops/cross.rakudo.jvm.......................  71    0    1    3   75
+S03-metaops/cross.rakudo.jvm.......................  72    0    1    3   76
      3 skipped: RT \#126493
      1 todo   : code does not die
 S03-metaops/eager-hyper.rakudo.jvm.................   7    0    1    0    8
@@ -1323,7 +1323,7 @@ S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  90    0    0    0   90
-S17-supply/batch.t.................................  11    0    0    0   11
+S17-supply/batch.t.................................  10    1    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1336,10 +1336,10 @@ S17-supply/from-list.t.............................  13    0    0    0   13
 S17-supply/grab.t..................................   5    0    0    0    5
 S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
-S17-supply/interval.t..............................   4    0    0    0    4
+S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
+     3 skipped: RT 128595
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1361,8 +1361,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................   8    9    0    0   17
-     7 tests aborted (missing ok/not ok)
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1440,7 +1439,8 @@ S29-conversions/ord_and_chr.rakudo.jvm............. 254    0    2    1  257
      1 skipped: high character name lookup RT \#124838
      1 todo   : NFG on JVM
      1 todo   : chr surrogate RT \#124834
-S29-os/system.t....................................  20    0    0    0   20
+S29-os/system.t....................................  18   13    0    0   31
+     3 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S32-array/adverbs.t................................ 606    0    0    0  606
 S32-array/bool.t...................................  15    0    0    0   15
@@ -1660,7 +1660,8 @@ S32-str/comb.rakudo.jvm............................  69    0    2    7   78
      1 skipped: cannot call match, no signature matches RT \#124738
      6 skipped: weird error, looks like wrong multi is used, RT \#128580
      2 todo   : NFG on JVM RT \#124737
-S32-str/contains.t.................................  20    0    0    0   20
+S32-str/contains.t.................................  16    4    0    0   20
+     4 tests aborted (missing ok/not ok)
 S32-str/encode.rakudo.jvm..........................  25    0    7    5   37
      4 skipped: Only moar handles this
      1 skipped: We do not handle NDF yet RT \#124687
@@ -1688,8 +1689,8 @@ S32-str/pack.rakudo.jvm............................   2    0    0   12   14
 S32-str/pos.t......................................   2    0    0    0    2
 S32-str/rindex.t...................................  45    0    0    0   45
 S32-str/samecase.t.................................   8    0    0    0    8
-S32-str/samemark.rakudo.jvm........................   0    1    0    8    9
-     8 skipped: samemark NYI
+S32-str/samemark.rakudo.jvm........................   0    0    0    9    9
+     9 skipped: samemark NYI
 S32-str/split-simple.rakudo.jvm....................  29    0    0    1   30
      1 skipped: UnwindException RT \#124279
 S32-str/split.rakudo.jvm...........................  26    0    0   33   59
@@ -1925,7 +1926,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        8879,     0,   135,   412,  9426,  9432
-"S03",        5854,     0,   110,   142,  6106,  6128
+"S03",        5855,     0,   110,   142,  6107,  6129
 "S04",        1416,     0,    60,    47,  1523,  1555
 "S05",        5620,     0,   101,   254,  5975,  6177
 "S06",        2106,     0,    60,   109,  2275,  2321
@@ -1938,23 +1939,32 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
-"S17",         859,     9,    15,    22,   905,   954
+"S17",         867,     1,    15,    25,   908,   957
 "S19",          17,     1,     0,     4,    22,    27
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
-"S29",         364,     0,     3,     3,   370,   370
-"S32",       12635,    12,   230,   259, 13136, 11422
+"S29",         362,    13,     3,     3,   381,   381
+"S32",       12631,    15,   230,   260, 13136, 11422
 "int",        1271,     0,    14,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46828,    27,   899,  1800, 49554,127603
+"total",     46831,    35,   899,  1804, 49569,127618
 ----------------
 Failure summary:
 S10-packages/precompilation.rakudo.jvm aborted 5 test(s)
-S17-supply/throttle.t 9 - did we see all in the right order?
-S17-supply/throttle.t 10 - did we get the final status?
-S17-supply/throttle.t aborted 7 test(s)
+S17-supply/batch.t 4 - we can batch by time and elems
 S19-command-line/repl.rakudo.jvm aborted 1 test(s)
+S29-os/system.t 19 - :merge with run on non-existent program does not crash [attempt 0]
+S29-os/system.t 20 - :merge with run on non-existent program does not crash [attempt 1]
+S29-os/system.t 21 - :merge with run on non-existent program does not crash [attempt 2]
+S29-os/system.t 22 - :merge with run on non-existent program does not crash [attempt 3]
+S29-os/system.t 23 - :merge with run on non-existent program does not crash [attempt 4]
+S29-os/system.t 24 - :merge with run on non-existent program does not crash [attempt 5]
+S29-os/system.t 25 - :merge with run on non-existent program does not crash [attempt 6]
+S29-os/system.t 26 - :merge with run on non-existent program does not crash [attempt 7]
+S29-os/system.t 27 - :merge with run on non-existent program does not crash [attempt 8]
+S29-os/system.t 28 - :merge with run on non-existent program does not crash [attempt 9]
+S29-os/system.t aborted 3 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
-S32-str/samemark.rakudo.jvm 9 - .samemark with empty-string argument throws
+S32-str/contains.t aborted 4 test(s)
