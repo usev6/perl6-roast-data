@@ -1027,8 +1027,7 @@ S09-typed-arrays/native.t..........................   3    0    0    0    3
 S10-packages/basic.rakudo.jvm......................  80    0    0    1   81
      1 skipped: RT \#59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  36    5    4    1   46
-     1 skipped: RT \#122896
+S10-packages/precompilation.rakudo.jvm.............  37    5    4    0   46
      1 todo   : got: $["B", "C"]
      1 todo   : got: $["C", "K"]
      1 todo   : got: $[]
@@ -1109,9 +1108,9 @@ S12-class/stubs.rakudo.jvm.........................   9    0    1    0   10
      1 todo   : nom regression RT \#125044
 S12-class/type-object.t............................   6    0    0    0    6
 S12-coercion/coercion-types.rakudo.jvm.............   8    0    1   12   21
-     1 skipped: Could not find symbol '&Async:U' RT \#127841
      3 skipped: NYI RT \#124840
      2 skipped: NYI RT \#124841
+     1 skipped: Proc::Async NYI
      1 skipped: dies
      5 skipped: dies RT \#124839 / RT\#123770
      1 todo   : missing checks
@@ -1323,7 +1322,7 @@ S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  90    0    0    0   90
-S17-supply/batch.t.................................  10    1    0    0   11
+S17-supply/batch.t.................................  11    0    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1374,9 +1373,9 @@ S19-command-line-options/03-dash-p.t...............   2    0    0    0    2
 S19-command-line/arguments.t.......................   3    0    0    0    3
 S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
-S19-command-line/repl.rakudo.jvm...................   4    1    0    4    9
+S19-command-line/repl.rakudo.jvm...................   4    0    0    5    9
+     1 skipped: Proc::Async NYI
      4 skipped: is_run_repl hangs on JVM
-     1 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S22-package-format/local.rakudo.jvm................  18    0    0    1   19
      1 skipped: cannot do signals in JVM RT \#124628
@@ -1439,8 +1438,9 @@ S29-conversions/ord_and_chr.rakudo.jvm............. 254    0    2    1  257
      1 skipped: high character name lookup RT \#124838
      1 todo   : NFG on JVM
      1 todo   : chr surrogate RT \#124834
-S29-os/system.t....................................  18   13    0    0   31
-     3 tests aborted (missing ok/not ok)
+S29-os/system.rakudo.jvm...........................  20    0   10    1   31
+     1 skipped: Proc::Async NYI
+    10 todo   : IOException "no such file" RT 128594
                                                    pass fail todo skip plan
 S32-array/adverbs.t................................ 606    0    0    0  606
 S32-array/bool.t...................................  15    0    0    0   15
@@ -1570,8 +1570,7 @@ S32-list/grep.rakudo.jvm...........................  25    0    0   12   37
      6 skipped: adverbial block RT \#124756
 S32-list/head.t....................................  24    0    0    0   24
 S32-list/join.t....................................  38    0    0    0   38
-S32-list/map.rakudo.jvm............................  51    0    0    7   58
-     1 skipped: This Seq has already been iterated, and its values consumed
+S32-list/map.rakudo.jvm............................  52    0    0    6   58
      1 skipped: Too few positionals passed; expected 3 arguments but got 1; RT \#125146
      1 skipped: Too few positionals passed; expected 5 arguments but got 4; RT \#125146
      2 skipped: adverbial block RT \#124752
@@ -1660,8 +1659,7 @@ S32-str/comb.rakudo.jvm............................  69    0    2    7   78
      1 skipped: cannot call match, no signature matches RT \#124738
      6 skipped: weird error, looks like wrong multi is used, RT \#128580
      2 todo   : NFG on JVM RT \#124737
-S32-str/contains.t.................................  16    4    0    0   20
-     4 tests aborted (missing ok/not ok)
+S32-str/contains.t.................................  20    0    0    0   20
 S32-str/encode.rakudo.jvm..........................  25    0    7    5   37
      4 skipped: Only moar handles this
      1 skipped: We do not handle NDF yet RT \#124687
@@ -1932,39 +1930,25 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S06",        2106,     0,    60,   109,  2275,  2321
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2747,     0,    26,    39,  2812,  2812
-"S10",         128,     5,     4,     2,   139,   196
+"S10",         129,     5,     4,     1,   139,   196
 "S11",         157,     0,     7,    12,   176,   195
 "S12",        1633,     0,    34,   133,  1800,  1855
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
-"S17",         867,     1,    15,    25,   908,   957
-"S19",          17,     1,     0,     4,    22,    27
+"S17",         868,     0,    15,    25,   908,   957
+"S19",          17,     0,     0,     5,    22,    27
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
-"S29",         362,    13,     3,     3,   381,   381
-"S32",       12631,    15,   230,   260, 13136, 11422
+"S29",         364,     0,    13,     4,   381,   381
+"S32",       12636,    11,   230,   259, 13136, 11422
 "int",        1271,     0,    14,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46831,    35,   899,  1804, 49569,127618
+"total",     46840,    16,   909,  1804, 49569,127618
 ----------------
 Failure summary:
 S10-packages/precompilation.rakudo.jvm aborted 5 test(s)
-S17-supply/batch.t 4 - we can batch by time and elems
-S19-command-line/repl.rakudo.jvm aborted 1 test(s)
-S29-os/system.t 19 - :merge with run on non-existent program does not crash [attempt 0]
-S29-os/system.t 20 - :merge with run on non-existent program does not crash [attempt 1]
-S29-os/system.t 21 - :merge with run on non-existent program does not crash [attempt 2]
-S29-os/system.t 22 - :merge with run on non-existent program does not crash [attempt 3]
-S29-os/system.t 23 - :merge with run on non-existent program does not crash [attempt 4]
-S29-os/system.t 24 - :merge with run on non-existent program does not crash [attempt 5]
-S29-os/system.t 25 - :merge with run on non-existent program does not crash [attempt 6]
-S29-os/system.t 26 - :merge with run on non-existent program does not crash [attempt 7]
-S29-os/system.t 27 - :merge with run on non-existent program does not crash [attempt 8]
-S29-os/system.t 28 - :merge with run on non-existent program does not crash [attempt 9]
-S29-os/system.t aborted 3 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
-S32-str/contains.t aborted 4 test(s)
