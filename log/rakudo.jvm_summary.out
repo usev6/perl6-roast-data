@@ -91,9 +91,10 @@ S02-magicals/DISTRO.rakudo.jvm.....................  12    0    2   14   28
     14 skipped: unimpl $?DISTRO RT \#124616
      1 todo   : no Distro.signature yet RT \#124617
      1 todo   : no Distro.signature yet RT \#124621
-S02-magicals/KERNEL.rakudo.jvm.....................  13    0    3   24   40
-     8 skipped: jvm doesn't know about signals RT \#124628
+S02-magicals/KERNEL.rakudo.jvm.....................  19    0    4   17   40
+     1 skipped: limited signal handling on jvm RT \#124628
     16 skipped: unimpl $?KERNEL RT \#124624
+     1 todo   : limited signal handling on jvm RT \#124628
      1 todo   : no Kernel.desc yet RT \#124626
      1 todo   : no Kernel.signature yet RT \#124625
      1 todo   : no Kernel.signature yet RT \#124627
@@ -128,9 +129,8 @@ S02-names-vars/contextual.t........................  26    0    0    0   26
 S02-names-vars/fmt.t...............................  21    0    0    0   21
 S02-names-vars/list_array_perl.rakudo.jvm..........  24    0    0    1   25
      1 skipped: RT \#126518
-S02-names-vars/names.rakudo.jvm.................... 140    0    0    9  149
+S02-names-vars/names.rakudo.jvm.................... 141    0    0    8  149
      4 skipped: ::{ } package lookup NYI RT \#124638
-     1 skipped: RT \#75646
      2 skipped: package variable autovivification RT \#124637
      2 skipped: this kind of lookup NYI RT \#125659
 S02-names-vars/perl.rakudo.jvm..................... 114    0    1    1  116
@@ -294,8 +294,7 @@ S02-types/undefined-types.rakudo.jvm...............  45    0    4    0   49
 S02-types/unicode.rakudo.jvm.......................   2    0    3    0    5
      1 todo   : NFG on JVM RT \#124500
      2 todo   : NFG on JVM RT \#124501
-S02-types/version-stress.rakudo.jvm................2032    0    0    3 2035
-     3 skipped: RT \#126493 - expected Positional but got Seq
+S02-types/version-stress.t.........................2035    0    0    0 2035
 S02-types/version.t................................  43    0    0    0   43
 S02-types/whatever.rakudo.jvm...................... 108    0    1    1  110
      1 skipped: currying plus R meta op RT \#124486
@@ -324,8 +323,7 @@ S03-junctions/autothreading.rakudo.jvm............. 103    0    1    0  104
      1 todo   : got (Int) instead of (Bool)
 S03-junctions/boolean-context.t....................  74    0    0    0   74
 S03-junctions/misc.t............................... 142    0    0    0  142
-S03-metaops/cross.rakudo.jvm.......................  72    0    1    3   76
-     3 skipped: RT \#126493
+S03-metaops/cross.rakudo.jvm.......................  75    0    1    0   76
      1 todo   : code does not die
 S03-metaops/eager-hyper.rakudo.jvm.................   7    0    1    0    8
      1 todo   : hyper NYI entirely, I guess RT \#124517
@@ -335,13 +333,11 @@ S03-metaops/hyper.rakudo.jvm....................... 394    0    1    7  402
      1 skipped: doesn't seem to see the nodal
      1 todo   : can_meta check for meta operators NYI
 S03-metaops/not.t..................................  46    0    0    0   46
-S03-metaops/reduce.rakudo.jvm...................... 500    0    1   41  542
-     8 skipped: RT \#126493 - expected Positional but got Seq
+S03-metaops/reduce.rakudo.jvm...................... 508    0    1   33  542
     33 skipped: RT \#126899 - Method 'orig'1 not found for invocant of class 'QAST::Op'
      1 todo   : item context
 S03-metaops/reverse.t..............................  67    0    0    0   67
-S03-metaops/zip.rakudo.jvm.........................  71    0    0    4   75
-     4 skipped: RT \#126493
+S03-metaops/zip.t..................................  75    0    0    0   75
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
      1 todo   : Multi colonpair syntax not yet understood RT \#124553
 S03-operators/also.rakudo.jvm......................   4    0    4    0    8
@@ -517,9 +513,10 @@ S04-exception-handlers/control.rakudo.jvm..........   9    0    1    0   10
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
 S04-exceptions/control_across_runloop.t............   1    0    0    0    1
 S04-exceptions/fail.t..............................  31    0    0    0   31
-S04-exceptions/pending.rakudo.jvm..................   6    0    1   14   21
-    13 skipped: $!.pending
+S04-exceptions/pending.rakudo.jvm..................  16    0    2    3   21
+     2 skipped: $!.pending
      1 skipped: $object.handled
+     1 todo   : $!.pending
      1 todo   : $object.handled
 S04-phasers/ascending-order.t......................   7    0    0    0    7
 S04-phasers/begin.rakudo.jvm.......................  12    0    1    0   13
@@ -581,8 +578,7 @@ S04-statements/gather.rakudo.jvm...................  35    0    0    3   38
 S04-statements/given.t.............................  51    0    0    0   51
 S04-statements/if.rakudo.jvm.......................  39    0    4    0   43
      4 todo   : RT\#105872
-S04-statements/label.rakudo.jvm....................   2    0    2    2    6
-     1 skipped: SEGV on moar, wrong Exception type on jvm, RT \#126490
+S04-statements/label.rakudo.jvm....................   3    0    2    1    6
      1 skipped: control exception without handler, RT \#126490
      2 todo   : redo of outer labels broken, related to RT \#126490
 S04-statements/last.rakudo.jvm.....................   8    0    0    1    9
@@ -815,7 +811,7 @@ S05-transliteration/with-closure.rakudo.jvm........  15    0    2    1   18
      2 todo   : nom regression
                                                    pass fail todo skip plan
 S06-advanced/callframe.rakudo.jvm..................  13    0    0    2   15
-     1 skipped: NullPointerException RT \#77752
+     1 skipped: ContextRef representation does not implement elems RT \#77752
      1 skipped: Unable to resolve method inline in type CallFrame
 S06-advanced/callsame.t............................   3    0    0    0    3
 S06-advanced/lexical-subs.t........................  13    0    0    0   13
@@ -845,9 +841,10 @@ S06-macros/opaque-ast.rakudo.jvm...................   3    0    0    4    7
 S06-macros/quasi-blocks.rakudo.jvm.................  12    0    0    2   14
      2 skipped: Method 'succ' not found RT \#124967
 S06-macros/unquoting.t.............................   6    0    0    0    6
-S06-multi/by-trait.rakudo.jvm......................   0    0    0   13   13
-     3 skipped: Ambiguous dispatch
-    10 skipped: Ambiguous dispatch for &uno_mas
+S06-multi/by-trait.rakudo.jvm......................   8    0    4    1   13
+     1 skipped: Ambiguous dispatch for &uno_mas
+     1 todo   : expected 1, got 2
+     3 todo   : fails due to above skipped test
 S06-multi/lexical-multis.rakudo.jvm................  14    0    1    0   15
      1 todo   : lexical scope as tie breaker
 S06-multi/positional-vs-named.t....................  31    0    0    0   31
@@ -905,8 +902,8 @@ S06-other/main-usage.rakudo.jvm....................  22    0    7    0   29
      1 todo   : nom regression RT \#124668
 S06-other/main.t...................................   7    0    0    0    7
 S06-other/misc.t...................................  12    0    0    0   12
-S06-other/pairs-as-lvalues.rakudo.jvm..............   3    0    0    2    5
-     2 skipped: Flattening named argument must have VMHash REPR RT \#124661
+S06-other/pairs-as-lvalues.rakudo.jvm..............   3    0    2    0    5
+     2 todo   : NYI RT \#124660
 S06-parameters/smiley.rakudo.jvm...................  18    0    0   17   35
     17 skipped: use parameters is NYI until further notice
 S06-routine-modifiers/lvalue-subroutines.t.........  14    0    0    0   14
@@ -948,8 +945,8 @@ S06-signature/scalar-type.t........................   8    0    0    0    8
 S06-signature/shape.t..............................  34    0    0    0   34
 S06-signature/sigilless.t..........................  10    0    0    0   10
 S06-signature/slurpy-and-interpolation.t...........  12    0    0    0   12
-S06-signature/slurpy-params.rakudo.jvm.............  84    0    0    1   85
-     1 skipped: RT \#126493
+S06-signature/slurpy-params.rakudo.jvm.............  85    0    0    1   86
+     1 skipped: Proc::Async NYI RT 128201
 S06-signature/slurpy-placeholders.t................   8    0    0    0    8
 S06-signature/sub-ref.rakudo.jvm...................  28    0    2    4   34
      4 skipped: macros, compile time binding RT \#124919
@@ -1027,12 +1024,12 @@ S09-typed-arrays/native.t..........................   3    0    0    0    3
 S10-packages/basic.rakudo.jvm......................  80    0    0    1   81
      1 skipped: RT \#59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  37    5    4    0   46
+S10-packages/precompilation.rakudo.jvm.............  40    0    6    0   46
+     2 todo   : ClassCastException: __P6opaque__73 cannot be cast to P6OpaqueDelegateInstance
      1 todo   : got: $["B", "C"]
      1 todo   : got: $["C", "K"]
      1 todo   : got: $[]
      1 todo   : no 6model parametrics interning yet
-     5 tests aborted (missing ok/not ok)
 S10-packages/use-with-class.t......................   9    0    0    0    9
                                                    pass fail todo skip plan
 S11-compunit/compunit-dependencyspecification.t....   6    0    0    0    6
@@ -1056,10 +1053,11 @@ S11-modules/lexical.t..............................   2    0    0    0    2
 S11-modules/need.t.................................   2    0    0    0    2
 S11-modules/nested.rakudo.jvm......................   7    0    1    0    8
      1 todo   : got: $("GNUC",)
-S11-modules/require.rakudo.jvm.....................  24    0    1    2   27
+S11-modules/require.rakudo.jvm.....................  22    2    1    2   27
      1 skipped: Trying to import from 'InnerModule', but the following symbols are missing: quux RT \#118407
      1 skipped: import require at compile time RT \#127538
      1 todo   : creation of stub package symbol NYI RT \#125083
+     2 tests aborted (missing ok/not ok)
 S11-repository/curli-install.t.....................  18    0    0    0   18
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  23    0    0    0   23
@@ -1338,7 +1336,8 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: RT 128595
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    12 todo   : \r\n not yet handled as grapheme
+     2 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1542,7 +1541,8 @@ S32-list/categorize.t..............................  28    0    0    0   28
 S32-list/classify.rakudo.jvm.......................  36    0    1    3   40
      3 skipped: Cannot use bind operator with this LHS RT \#124751
      1 todo   : Not sure how this should be fixed
-S32-list/combinations.t............................  13    0    0    0   13
+S32-list/combinations.t............................   6    7    0    0   13
+     7 tests aborted (missing ok/not ok)
 S32-list/create.t..................................   6    0    0    0    6
 S32-list/end.t.....................................  14    0    0    0   14
 S32-list/first-end-k.rakudo.jvm....................  24    0    0    2   26
@@ -1580,8 +1580,7 @@ S32-list/minmax.rakudo.jvm.........................  99    0    0    2  101
      2 skipped: post-GLR
 S32-list/permutations.t............................   9    0    0    0    9
 S32-list/pick.t....................................  57    0    0    0   57
-S32-list/produce.rakudo.jvm........................  20    0    0    5   25
-     5 skipped: RT \#126493 - expected Positional but got Seq
+S32-list/produce.t.................................  25    0    0    0   25
 S32-list/reduce.t..................................  15    0    0    0   15
 S32-list/repeated.rakudo.jvm.......................  32    0    0    2   34
      2 skipped: This Seq has already been iterated, and its values consumed
@@ -1593,8 +1592,7 @@ S32-list/rotor.rakudo.jvm..........................   6    0    0    3    9
 S32-list/seq.rakudo.jvm............................  34    0    1    0   35
      1 todo   : Cannot assign immutable
 S32-list/sort.t....................................  30    0    0    0   30
-S32-list/squish.rakudo.jvm.........................  45    0    1   16   62
-    16 skipped: RT \#126493 - expected Positional but got Seq
+S32-list/squish.rakudo.jvm.........................  61    0    1    0   62
      1 todo   : fails due to above failure
 S32-list/tail.t....................................  24    0    0    0   24
 S32-list/unique.rakudo.jvm.........................  32    0    0    2   34
@@ -1660,9 +1658,10 @@ S32-str/comb.rakudo.jvm............................  69    0    2    7   78
      6 skipped: weird error, looks like wrong multi is used, RT \#128580
      2 todo   : NFG on JVM RT \#124737
 S32-str/contains.t.................................  20    0    0    0   20
-S32-str/encode.rakudo.jvm..........................  25    0    7    5   37
-     4 skipped: Only moar handles this
+S32-str/encode.rakudo.jvm..........................  25    0    7   12   44
+     5 skipped: Only moar handles this
      1 skipped: We do not handle NDF yet RT \#124687
+     6 skipped: uft8-c8 NIY
      2 todo   : JVM builtin code folds these RT \#124686
      1 todo   : RT\#107204 should say line and column
      1 todo   : RT\#107204 should say line and column or mention term(ination)
@@ -1682,8 +1681,7 @@ S32-str/lines.rakudo.jvm...........................  38    0   10    0   48
 S32-str/numeric.rakudo.jvm......................... 167    0    5    0  172
      5 todo   : Unsure of what val() should accept
 S32-str/ords.t.....................................   8    0    0    0    8
-S32-str/pack.rakudo.jvm............................   2    0    0   12   14
-    12 skipped: RT \#126493 - expected Positional but got Seq
+S32-str/pack.t.....................................  14    0    0    0   14
 S32-str/pos.t......................................   2    0    0    0    2
 S32-str/rindex.t...................................  45    0    0    0   45
 S32-str/samecase.t.................................   8    0    0    0    8
@@ -1923,15 +1921,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        8879,     0,   135,   412,  9426,  9432
-"S03",        5855,     0,   110,   142,  6107,  6129
-"S04",        1416,     0,    60,    47,  1523,  1555
+"S02",        8889,     0,   136,   401,  9426,  9432
+"S03",        5870,     0,   110,   127,  6107,  6129
+"S04",        1427,     0,    61,    35,  1523,  1555
 "S05",        5620,     0,   101,   254,  5975,  6177
-"S06",        2106,     0,    60,   109,  2275,  2321
+"S06",        2115,     0,    66,    95,  2276,  2322
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2747,     0,    26,    39,  2812,  2812
-"S10",         129,     5,     4,     1,   139,   196
-"S11",         157,     0,     7,    12,   176,   195
+"S10",         132,     0,     6,     1,   139,   196
+"S11",         155,     2,     7,    12,   176,   195
 "S12",        1633,     0,    34,   133,  1800,  1855
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
@@ -1944,11 +1942,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,    13,     4,   381,   381
-"S32",       12636,    11,   230,   259, 13136, 11422
+"S32",       12662,    18,   230,   233, 13143, 11466
 "int",        1271,     0,    14,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46840,    16,   909,  1804, 49569,127618
+"total",     46912,    20,   919,  1726, 49577,127663
 ----------------
 Failure summary:
-S10-packages/precompilation.rakudo.jvm aborted 5 test(s)
+S11-modules/require.rakudo.jvm aborted 2 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
+S32-list/combinations.t aborted 7 test(s)
