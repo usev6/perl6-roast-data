@@ -374,7 +374,7 @@ S03-operators/bit.t................................  38    0    0    0   38
 S03-operators/boolean-bitwise.rakudo.jvm...........  43    0    2    0   45
      2 todo   : got (Int) instead of (Bool)
 S03-operators/brainos.t............................   9    0    0    0    9
-S03-operators/buf.t................................ 125    0    0    0  125
+S03-operators/buf.t................................ 131    0    0    0  131
 S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  53    0    0    0   53
 S03-operators/comparison-simple.t..................  24    0    0    0   24
@@ -533,7 +533,7 @@ S04-phasers/eval-in-begin.t........................   3    0    0    0    3
 S04-phasers/first.t................................   7    0    0    0    7
 S04-phasers/in-eval.rakudo.jvm.....................  34    0    1    0   35
      1 todo   : not sure
-S04-phasers/in-loop.rakudo.jvm.....................   3    0    3    0    6
+S04-phasers/in-loop.rakudo.jvm.....................   5    0    3    0    8
      2 todo   : NEXT/LEAVE ordering RT \#124952
      1 todo   : this test works "standalone", but not after previous test; RT \#121145
 S04-phasers/init.t.................................  13    0    0    0   13
@@ -565,7 +565,8 @@ S04-statements/do.rakudo.jvm.......................  18    0    4    7   29
      3 todo   : NullPointerException
      1 todo   : Rakudo still uses Nil here RT \#124572
 S04-statements/for-scope.t.........................  16    0    0    0   16
-S04-statements/for.rakudo.jvm......................  93    0    5    0   98
+S04-statements/for.rakudo.jvm......................  93    0    6    0   99
+     1 todo   : RT 128054
      1 todo   : RT \#126531
      1 todo   : Rakudo still uses Nil here RT \#124568
      1 todo   : Rakudo still uses Nil here RT \#124569
@@ -1053,11 +1054,10 @@ S11-modules/lexical.t..............................   2    0    0    0    2
 S11-modules/need.t.................................   2    0    0    0    2
 S11-modules/nested.rakudo.jvm......................   7    0    1    0    8
      1 todo   : got: $("GNUC",)
-S11-modules/require.rakudo.jvm.....................  22    2    1    2   27
+S11-modules/require.rakudo.jvm.....................  24    0    1    2   27
      1 skipped: Trying to import from 'InnerModule', but the following symbols are missing: quux RT \#118407
      1 skipped: import require at compile time RT \#127538
      1 todo   : creation of stub package symbol NYI RT \#125083
-     2 tests aborted (missing ok/not ok)
 S11-repository/curli-install.t.....................  18    0    0    0   18
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  23    0    0    0   23
@@ -1336,8 +1336,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: RT 128595
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1359,7 +1358,8 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................   8    9    0    0   17
+     7 tests aborted (missing ok/not ok)
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1541,8 +1541,8 @@ S32-list/categorize.t..............................  28    0    0    0   28
 S32-list/classify.rakudo.jvm.......................  36    0    1    3   40
      3 skipped: Cannot use bind operator with this LHS RT \#124751
      1 todo   : Not sure how this should be fixed
-S32-list/combinations.t............................   6    7    0    0   13
-     7 tests aborted (missing ok/not ok)
+S32-list/combinations.rakudo.jvm...................  12    0    0    1   13
+     1 skipped: weird error related to previous tests RT \#128123
 S32-list/create.t..................................   6    0    0    0    6
 S32-list/end.t.....................................  14    0    0    0   14
 S32-list/first-end-k.rakudo.jvm....................  24    0    0    2   26
@@ -1615,7 +1615,7 @@ S32-num/log.rakudo.jvm.............................  28    0    1    0   29
 S32-num/narrow.t...................................  17    0    0    0   17
 S32-num/pi.t.......................................   8    0    0    0    8
 S32-num/polar.t....................................  48    0    0    0   48
-S32-num/polymod.t..................................   4    0    0    0    4
+S32-num/polymod.t..................................   9    0    0    0    9
 S32-num/power.rakudo.jvm...........................  60    0   10    6   76
      6 skipped: parsing issue on JVM: Missing required term after infix
      4 todo   : big exponents RT \#124798 and RT \#127493
@@ -1922,32 +1922,33 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        8889,     0,   136,   401,  9426,  9432
-"S03",        5870,     0,   110,   127,  6107,  6129
-"S04",        1427,     0,    61,    35,  1523,  1555
+"S03",        5876,     0,   110,   127,  6113,  6135
+"S04",        1429,     0,    62,    35,  1526,  1558
 "S05",        5620,     0,   101,   254,  5975,  6177
 "S06",        2115,     0,    66,    95,  2276,  2322
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2747,     0,    26,    39,  2812,  2812
 "S10",         132,     0,     6,     1,   139,   196
-"S11",         155,     2,     7,    12,   176,   195
+"S11",         157,     0,     7,    12,   176,   195
 "S12",        1633,     0,    34,   133,  1800,  1855
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
-"S17",         868,     0,    15,    25,   908,   957
+"S17",         859,     9,    15,    25,   908,   957
 "S19",          17,     0,     0,     5,    22,    27
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    89
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,    13,     4,   381,   381
-"S32",       12662,    18,   230,   233, 13143, 11466
+"S32",       12673,    11,   230,   234, 13148, 11471
 "int",        1271,     0,    14,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46912,    20,   919,  1726, 49577,127663
+"total",     46924,    20,   920,  1727, 49591,127677
 ----------------
 Failure summary:
-S11-modules/require.rakudo.jvm aborted 2 test(s)
+S17-supply/throttle.t 9 - did we see all in the right order?
+S17-supply/throttle.t 10 - did we get the final status?
+S17-supply/throttle.t aborted 7 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
-S32-list/combinations.t aborted 7 test(s)
