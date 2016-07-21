@@ -258,7 +258,7 @@ S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
      4 skipped: multi-dim sized arrays NYI RT \#124483
 S02-types/nan.rakudo.jvm...........................  22    0    0    1   23
      1 skipped: RT \#83446
-S02-types/native.rakudo.jvm........................  65    0   19    3   87
+S02-types/native.rakudo.jvm........................  66    0   19    3   88
      3 skipped: cannot unbox to a native number
      1 todo   : RT \#102416 - though maybe wrong test? Not sure .WHAT is *that* magic
      3 todo   : native int args do not truncate, yet
@@ -346,7 +346,8 @@ S03-operators/also.rakudo.jvm......................   4    0    4    0    8
      1 todo   : nom regression RT \#124545
      1 todo   : nom regression RT \#124546
      1 todo   : nom regression RT \#124547
-S03-operators/andthen.t............................   8    0    0    0    8
+S03-operators/andthen.rakudo.jvm...................   8    0    1    0    9
+     1 todo   : RT 127822
 S03-operators/arith.rakudo.jvm..................... 157    0    1    0  158
      1 todo   : overflow exception is not thrown on JVM RT \#127500
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
@@ -627,8 +628,9 @@ S05-capture/named.rakudo.jvm.......................   9    0    0    2   11
      2 skipped: assigning to match object RT \#125000
 S05-capture/subrule.t..............................  46    0    0    0   46
 S05-grammar/action-stubs.t.........................  24    0    0    0   24
-S05-grammar/example.rakudo.jvm.....................   5    0    0    2    7
+S05-grammar/example.rakudo.jvm.....................   5    0    2    2    9
      2 skipped: Method "speaker" not found for invocant of class "Cursor" RT \#124795
+     2 todo   : RT 127945
 S05-grammar/inheritance.rakudo.jvm.................  30    0    2    0   32
      1 todo   : RT \#77350
      1 todo   : automatic Grammar superclass
@@ -1303,7 +1305,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  27    0    0    0   27
+S17-promise/basic.t................................  26    1    0    0   27
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  42    0    0    0   42
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -1338,8 +1340,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: RT 128595
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1374,9 +1375,10 @@ S19-command-line-options/03-dash-p.t...............   2    0    0    0    2
 S19-command-line/arguments.t.......................   3    0    0    0    3
 S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
-S19-command-line/repl.rakudo.jvm...................   4    0    0    5    9
+S19-command-line/repl.rakudo.jvm...................   4    0    1    5   10
      1 skipped: Proc::Async NYI
      4 skipped: is_run_repl hangs on JVM
+     1 todo PASSED: RT 127933
                                                    pass fail todo skip plan
 S22-package-format/local.rakudo.jvm................  18    0    0    1   19
      1 skipped: cannot do signals in JVM RT \#124628
@@ -1923,10 +1925,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        8889,     0,   137,   401,  9427,  9433
-"S03",        5876,     0,   111,   127,  6114,  6136
+"S02",        8890,     0,   137,   401,  9428,  9434
+"S03",        5876,     0,   112,   127,  6115,  6137
 "S04",        1429,     0,    62,    35,  1526,  1558
-"S05",        5620,     0,   101,   254,  5975,  6177
+"S05",        5620,     0,   103,   254,  5977,  6179
 "S06",        2115,     0,    66,    95,  2276,  2322
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2747,     0,    26,    39,  2812,  2812
@@ -1937,17 +1939,18 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
-"S17",         868,     0,    15,    25,   908,   957
-"S19",          17,     0,     0,     5,    22,    27
+"S17",         867,     1,    15,    25,   908,   957
+"S19",          17,     0,     1,     5,    23,    28
 "S22",          18,     0,     0,     1,    19,    19
-"S24",          18,     0,     0,     0,    18,    89
+"S24",          18,     0,     0,     0,    18,    92
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,    13,     4,   381,   381
 "S32",       12674,    11,   230,   234, 13149, 11472
 "int",        1271,     0,    14,    14,  1299,  1292
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46934,    11,   922,  1727, 49594,127680
+"total",     46934,    12,   926,  1727, 49599,127688
 ----------------
 Failure summary:
+S17-promise/basic.t 27 - promises execute asynchronously [try 3]
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
