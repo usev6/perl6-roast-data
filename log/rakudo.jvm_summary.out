@@ -720,8 +720,10 @@ S05-metasyntax/angle-brackets.rakudo.jvm...........  69    0    2   20   91
      1 todo   : <$subrule> NYI RT \#124524
 S05-metasyntax/assertions.t........................   4    0    0    0    4
 S05-metasyntax/changed.t...........................  12    0    0    0   12
-S05-metasyntax/charset.rakudo.jvm..................   0   55    0    0   55
-    55 tests aborted (missing ok/not ok)
+S05-metasyntax/charset.rakudo.jvm..................  49    0    2    4   55
+     3 skipped: "ordbaseat NYI", ignorecase and character ranges RT \#125753
+     1 skipped: ordbaseat NYI
+     2 todo   : ignorecase and character ranges RT \#125753
 S05-metasyntax/delimiters.t........................  21    0    0    0   21
 S05-metasyntax/interpolating-closure.rakudo.jvm....   6    0    1    0    7
      1 todo   : dunno RT \#124527
@@ -1341,8 +1343,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: RT 128595
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1928,7 +1929,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        8890,     0,   137,   401,  9428,  9434
 "S03",        5877,     0,   112,   127,  6116,  6138
 "S04",        1429,     0,    62,    35,  1526,  1558
-"S05",        5572,    55,   101,   251,  5979,  6181
+"S05",        5621,     0,   103,   255,  5979,  6181
 "S06",        2118,     0,    66,    95,  2279,  2325
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2751,     0,    26,    39,  2816,  2816
@@ -1949,8 +1950,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12676,    11,   230,   234, 13151, 11474
 "int",        1275,     0,    14,    14,  1303,  1296
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46921,    66,   923,  1720, 49630,127709
+"total",     46970,    11,   925,  1724, 49630,127709
 ----------------
 Failure summary:
-S05-metasyntax/charset.rakudo.jvm aborted 55 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
