@@ -498,7 +498,7 @@ S04-declarations/multiple.rakudo.jvm...............   5    0    1    0    6
 S04-declarations/my.rakudo.jvm.....................  97    0    0    8  105
      8 skipped: RuntimeException: java.lang.ArrayIndexOutOfBoundsException: -1
 S04-declarations/our.t.............................  31    0    0    0   31
-S04-declarations/smiley.rakudo.jvm.................  55    0    5    0   60
+S04-declarations/smiley.rakudo.jvm.................  55    3    5    0   63
      5 todo   : got '?.?' RT \#128031
 S04-declarations/state.rakudo.jvm..................  40    0    1    0   41
      1 todo   : initialization happens only on first call(?) RT \#102994
@@ -1343,8 +1343,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: RT 128595
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1366,7 +1365,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................  16    1    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1929,7 +1928,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        8890,     0,   137,   401,  9428,  9434
 "S03",        5877,     0,   112,   127,  6116,  6138
-"S04",        1429,     0,    62,    35,  1526,  1558
+"S04",        1429,     3,    62,    35,  1529,  1561
 "S05",        5621,     0,   103,   255,  5979,  6181
 "S06",        2118,     0,    66,    95,  2279,  2325
 "S07",          39,     0,     7,     0,    46,   151
@@ -1941,7 +1940,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
-"S17",         868,     0,    15,    25,   908,   957
+"S17",         867,     1,    15,    25,   908,   957
 "S19",          22,     0,     0,     1,    23,    28
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    92
@@ -1951,7 +1950,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12676,    11,   230,   234, 13151, 11474
 "int",        1275,     0,    14,    14,  1303,  1296
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46970,    11,   925,  1724, 49630,127709
+"total",     46969,    15,   925,  1724, 49633,127712
 ----------------
 Failure summary:
+S04-declarations/smiley.rakudo.jvm 61 - Int:D $x = Nil; throws a typecheck
+S04-declarations/smiley.rakudo.jvm 62 - Int:D @x = Nil; throws a typecheck
+S04-declarations/smiley.rakudo.jvm 63 - Int:D %x = foo => Nil; throws a typecheck
+S17-supply/throttle.t 10 - did we get the final status?
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
