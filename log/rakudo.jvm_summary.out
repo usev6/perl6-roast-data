@@ -1365,7 +1365,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  16    1    0    0   17
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1940,7 +1940,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
-"S17",         867,     1,    15,    25,   908,   957
+"S17",         868,     0,    15,    25,   908,   957
 "S19",          22,     0,     0,     1,    23,    28
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    92
@@ -1950,11 +1950,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12676,    11,   230,   234, 13151, 11474
 "int",        1275,     0,    14,    14,  1303,  1296
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46969,    15,   925,  1724, 49633,127712
+"total",     46970,    14,   925,  1724, 49633,127712
 ----------------
 Failure summary:
 S04-declarations/smiley.rakudo.jvm 61 - Int:D $x = Nil; throws a typecheck
 S04-declarations/smiley.rakudo.jvm 62 - Int:D @x = Nil; throws a typecheck
 S04-declarations/smiley.rakudo.jvm 63 - Int:D %x = foo => Nil; throws a typecheck
-S17-supply/throttle.t 10 - did we get the final status?
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
