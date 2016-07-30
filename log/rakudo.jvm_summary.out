@@ -1312,7 +1312,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  27    0    0    0   27
+S17-promise/basic.t................................  26    1    0    0   27
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  42    0    0    0   42
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -1347,8 +1347,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: RT 128595
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1370,7 +1369,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  16    1    0    0   17
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1958,5 +1957,5 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "total",     46968,    12,   930,  1726, 49636,127711
 ----------------
 Failure summary:
-S17-supply/throttle.t 9 - did we see all in the right order?
+S17-promise/basic.t 26 - promises execute asynchronously [try 2]
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
