@@ -410,7 +410,7 @@ S03-operators/is-divisible-by.rakudo.jvm...........  14    0    1    0   15
      1 todo   : not sure why this doesn't fire
 S03-operators/lcm.t................................  15    0    0    0   15
 S03-operators/list-quote-junction.t................  16    0    0    0   16
-S03-operators/minmax.rakudo.jvm....................  36    0    0    2   38
+S03-operators/minmax.rakudo.jvm....................  37    0    0    2   39
      2 skipped: Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious RT \#124539
 S03-operators/misc.rakudo.jvm......................  42    0    1    1   44
      1 skipped: Bogus term
@@ -604,7 +604,7 @@ S04-statements/redo.rakudo.jvm.....................  10    0    1    1   12
 S04-statements/repeat.rakudo.jvm...................  19    0    1    0   20
      1 todo   : RT 128596
 S04-statements/return.t............................  20    0    0    0   20
-S04-statements/sink.t..............................   2    0    0    0    2
+S04-statements/sink.t..............................   3    0    0    0    3
 S04-statements/terminator.t........................  20    0    0    0   20
 S04-statements/try.t...............................  40    0    0    0   40
 S04-statements/unless.t............................  11    0    0    0   11
@@ -1312,7 +1312,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  26    1    0    0   27
+S17-promise/basic.t................................  27    0    0    0   27
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  42    0    0    0   42
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -1369,7 +1369,8 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................   8    9    0    0   17
+     7 tests aborted (missing ok/not ok)
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1574,7 +1575,7 @@ S32-list/grep-k.rakudo.jvm.........................  22    0    6   12   40
 S32-list/grep-kv.t.................................  17    0    0    0   17
 S32-list/grep-p.t..................................  17    0    0    0   17
 S32-list/grep-v.t..................................  17    0    0    0   17
-S32-list/grep.rakudo.jvm...........................  25    0    0   12   37
+S32-list/grep.rakudo.jvm...........................  27    0    0   12   39
      6 skipped: adverbial block RT \#124755
      6 skipped: adverbial block RT \#124756
 S32-list/head.t....................................  24    0    0    0   24
@@ -1600,7 +1601,7 @@ S32-list/rotor.rakudo.jvm..........................   6    0    0    3    9
      3 skipped: UnwindException RT \#124279
 S32-list/seq.rakudo.jvm............................  34    0    1    0   35
      1 todo   : Cannot assign immutable
-S32-list/sort.t....................................  30    0    0    0   30
+S32-list/sort.t....................................  33    0    0    0   33
 S32-list/squish.rakudo.jvm.........................  61    0    1    0   62
      1 todo   : fails due to above failure
 S32-list/tail.t....................................  24    0    0    0   24
@@ -1923,7 +1924,7 @@ integration/variables-in-do.t......................   3    0    0    0    3
 integration/weird-errors.rakudo.jvm................  25    0    3    0   28
      1 todo   : Feels like a bogus test in light of recent changes
      1 todo   : Unknown encoding 'utf8-c8' RT \#127878
-     1 todo   : strange problem with prefix:<++> RT \#128123
+     1 todo PASSED: strange problem with prefix:<++> RT \#128123
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
@@ -1931,8 +1932,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        8890,     0,   137,   401,  9428,  9434
-"S03",        5878,     0,   114,   129,  6121,  6139
-"S04",        1429,     0,    65,    35,  1529,  1561
+"S03",        5879,     0,   114,   129,  6122,  6140
+"S04",        1430,     0,    65,    35,  1530,  1562
 "S05",        5621,     0,   103,   255,  5979,  6181
 "S06",        2118,     0,    66,    95,  2279,  2325
 "S07",          39,     0,     7,     0,    46,   151
@@ -1944,18 +1945,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
-"S17",         867,     1,    15,    25,   908,   957
+"S17",         859,     9,    15,    25,   908,   957
 "S19",          22,     0,     0,     1,    23,    28
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    92
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,    13,     4,   381,   381
-"S32",       12676,    11,   230,   234, 13151, 11474
+"S32",       12681,    11,   230,   234, 13156, 11479
 "int",        1275,     0,    14,    14,  1303,  1296
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46968,    12,   930,  1726, 49636,127711
+"total",     46967,    20,   930,  1726, 49643,127718
 ----------------
 Failure summary:
-S17-promise/basic.t 26 - promises execute asynchronously [try 2]
+S17-supply/throttle.t 9 - did we see all in the right order?
+S17-supply/throttle.t 10 - did we get the final status?
+S17-supply/throttle.t aborted 7 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
