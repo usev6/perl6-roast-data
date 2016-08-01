@@ -1369,8 +1369,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................   8    9    0    0   17
-     7 tests aborted (missing ok/not ok)
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1945,7 +1944,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
 "S16",         657,     0,    69,   135,   861,   934
-"S17",         859,     9,    15,    25,   908,   957
+"S17",         868,     0,    15,    25,   908,   957
 "S19",          22,     0,     0,     1,    23,    28
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    92
@@ -1955,10 +1954,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12681,    11,   230,   234, 13156, 11479
 "int",        1275,     0,    14,    14,  1303,  1296
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46967,    20,   930,  1726, 49643,127718
+"total",     46976,    11,   930,  1726, 49643,127718
 ----------------
 Failure summary:
-S17-supply/throttle.t 9 - did we see all in the right order?
-S17-supply/throttle.t 10 - did we get the final status?
-S17-supply/throttle.t aborted 7 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
