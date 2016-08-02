@@ -820,7 +820,7 @@ S05-transliteration/with-closure.rakudo.jvm........  15    0    2    1   18
      1 skipped: Unable to resolve method ord in class Any RT \#124659
      2 todo   : nom regression
                                                    pass fail todo skip plan
-S06-advanced/callframe.rakudo.jvm..................  13    0    0    2   15
+S06-advanced/callframe.rakudo.jvm..................  13    1    0    2   16
      1 skipped: ContextRef representation does not implement elems RT \#77752
      1 skipped: Unable to resolve method inline in type CallFrame
 S06-advanced/callsame.t............................   3    0    0    0    3
@@ -946,7 +946,7 @@ S06-signature/named-parameters.rakudo.jvm..........  83    0    0   16   99
 S06-signature/named-placeholders.t.................   3    0    0    0    3
 S06-signature/named-renaming.t.....................  11    0    0    0   11
 S06-signature/optional.t...........................  31    0    0    0   31
-S06-signature/outside-subroutine.t.................   2    0    0    0    2
+S06-signature/outside-subroutine.t.................   4    0    0    0    4
 S06-signature/passing-arrays.t.....................  11    0    0    0   11
 S06-signature/passing-hashes.t.....................   3    0    0    0    3
 S06-signature/positional-placeholders.t............  12    0    0    0   12
@@ -1596,7 +1596,7 @@ S32-list/repeated.rakudo.jvm.......................  32    0    0    2   34
 S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
      1 todo   : RT \#77914
 S32-list/roll.t....................................  49    0    0    0   49
-S32-list/rotor.rakudo.jvm..........................   6    0    0    3    9
+S32-list/rotor.rakudo.jvm..........................   8    0    0    3   11
      3 skipped: UnwindException RT \#124279
 S32-list/seq.rakudo.jvm............................  34    0    1    0   35
      1 todo   : Cannot assign immutable
@@ -1899,7 +1899,7 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  20    0    2    0   22
+integration/error-reporting.rakudo.jvm.............  20    1    2    0   23
      1 todo   : UnwindException
      1 todo   : nigh
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
@@ -1934,7 +1934,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        5879,     0,   114,   129,  6122,  6140
 "S04",        1430,     0,    65,    35,  1530,  1562
 "S05",        5621,     0,   103,   255,  5979,  6181
-"S06",        2118,     0,    66,    95,  2279,  2325
+"S06",        2120,     1,    66,    95,  2282,  2328
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2749,     0,    26,    39,  2814,  2814
 "S10",         132,     0,     6,     1,   139,   196
@@ -1951,10 +1951,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,    13,     4,   381,   381
-"S32",       12681,    11,   230,   234, 13156, 11479
-"int",        1275,     0,    14,    14,  1303,  1296
+"S32",       12683,    11,   230,   234, 13158, 11481
+"int",        1275,     1,    14,    14,  1304,  1297
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46976,    11,   930,  1726, 49643,127718
+"total",     46980,    13,   930,  1726, 49649,127724
 ----------------
 Failure summary:
+S06-advanced/callframe.rakudo.jvm 16 - .perl on callframe in a sub does not crash
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
+integration/error-reporting.rakudo.jvm 23 - `Actually thrown at` portion of exception not printed when empty
