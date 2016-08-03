@@ -192,10 +192,10 @@ S02-types/array_extending.t........................  21    0    0    0   21
 S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  25    0    0    0   25
-S02-types/bag.rakudo.jvm........................... 203    0    2    0  205
+S02-types/bag.rakudo.jvm........................... 204    0    2    0  206
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT \#124454
-S02-types/baghash.rakudo.jvm....................... 237    0    2   21  260
+S02-types/baghash.rakudo.jvm....................... 238    0    2   21  261
     21 skipped: 'is TypeObject' NYI RT \#124490
      2 todo   : in flux
 S02-types/bool.t...................................  53    0    0    0   53
@@ -244,13 +244,13 @@ S02-types/lazy-lists.t.............................  23    0    0    0   23
 S02-types/list.t...................................  65    0    0    0   65
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding RT \#124494
-S02-types/mix.rakudo.jvm........................... 190    0    2    0  192
+S02-types/mix.rakudo.jvm........................... 191    0    2    0  193
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT \#124496
 S02-types/mixed_multi_dimensional.rakudo.jvm.......  77    0    3    0   80
      1 todo   : isa hash
      2 todo   : unknown
-S02-types/mixhash.rakudo.jvm....................... 206    0    2   21  229
+S02-types/mixhash.rakudo.jvm....................... 207    0    2   21  230
     21 skipped: 'is TypeObject' NYI RT \#124490
      2 todo   : in flux
 S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
@@ -277,10 +277,10 @@ S02-types/pair.rakudo.jvm.......................... 176    0    1    0  177
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t.................................. 184    0    0    0  184
-S02-types/set.rakudo.jvm........................... 167    0    1    9  177
+S02-types/set.rakudo.jvm........................... 168    0    1    9  178
      9 skipped: Hypers not yet Set compatible RT \#124487
      1 todo   : we have not secured .WHICH creation yet RT \#124489
-S02-types/sethash.rakudo.jvm....................... 195    0    0   10  205
+S02-types/sethash.rakudo.jvm....................... 196    0    0   10  206
     10 skipped: 'is TypeObject' NYI RT \#124490
 S02-types/sigils-and-types.rakudo.jvm..............  25    0    2    0   27
      1 todo   : Capture does Associative RT \#124485
@@ -427,7 +427,7 @@ S03-operators/not.t................................  22    0    0    0   22
 S03-operators/numeric-shift.t......................  38    0    0    0   38
 S03-operators/orelse.t.............................  10    0    0    0   10
 S03-operators/overflow.t...........................  98    0    0    0   98
-S03-operators/precedence.rakudo.jvm................  62    0    3    0   65
+S03-operators/precedence.rakudo.jvm................  66    0    3    0   69
      2 todo   : Inequality (!=) misparsed as assignment RT \#121108
      1 todo   : RT 128042
 S03-operators/range-basic.t........................ 110    0    0    0  110
@@ -1201,7 +1201,7 @@ S12-methods/trusts.t...............................   4    0    0    0    4
 S12-methods/typed-attributes.t.....................   7    0    0    0    7
 S12-methods/what.t.................................  33    0    0    0   33
 S12-subset/multi-dispatch.t........................   6    0    0    0    6
-S12-subset/subtypes.rakudo.jvm.....................  81    0    1    0   82
+S12-subset/subtypes.rakudo.jvm.....................  82    0    1    0   83
      1 todo   : mixin of role does not work correctly
                                                    pass fail todo skip plan
 S13-overloading/metaoperators.t....................  11    0    0    0   11
@@ -1930,8 +1930,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
-"S02",        8890,     0,   137,   401,  9428,  9434
-"S03",        5879,     0,   114,   129,  6122,  6140
+"S02",        8896,     0,   137,   401,  9434,  9440
+"S03",        5883,     0,   114,   129,  6126,  6144
 "S04",        1430,     0,    65,    35,  1530,  1562
 "S05",        5621,     0,   103,   255,  5979,  6181
 "S06",        2120,     1,    66,    95,  2282,  2328
@@ -1939,7 +1939,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2749,     0,    26,    39,  2814,  2814
 "S10",         132,     0,     6,     1,   139,   196
 "S11",         169,     0,     7,    12,   188,   197
-"S12",        1636,     0,    34,   133,  1803,  1858
+"S12",        1637,     0,    34,   133,  1804,  1859
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79087
@@ -1954,7 +1954,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12683,    11,   230,   234, 13158, 11481
 "int",        1275,     1,    14,    14,  1304,  1297
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46980,    13,   930,  1726, 49649,127724
+"total",     46991,    13,   930,  1726, 49660,127735
 ----------------
 Failure summary:
 S06-advanced/callframe.rakudo.jvm 16 - .perl on callframe in a sub does not crash
