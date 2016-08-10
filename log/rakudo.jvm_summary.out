@@ -489,9 +489,8 @@ S04-blocks-and-statements/let.rakudo.jvm...........  11    0    1    0   12
 S04-blocks-and-statements/pointy-rw.t..............  10    0    0    0   10
 S04-blocks-and-statements/pointy.rakudo.jvm........  19    0    1    0   20
      1 todo   : pointy blocks and last/redo RT \#124973
-S04-blocks-and-statements/temp.rakudo.jvm..........  30    0    6    4   40
+S04-blocks-and-statements/temp.rakudo.jvm..........  30    0    6    2   38
      2 skipped: RT \#126447
-     2 skipped: RT \#128544
      6 todo   : TEMP phasers NYI
 S04-declarations/constant.rakudo.jvm...............  66    0    4    0   70
      3 todo   : COMPILING RT \#125054
@@ -1490,13 +1489,14 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT \#124907
-S32-exceptions/misc.rakudo.jvm..................... 323   72   13    1  409
+S32-exceptions/misc.rakudo.jvm..................... 393    0   13    3  409
+     1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
+     1 skipped: failure assignment still blows up on JVM, RT \#125769
      3 todo   : NullPointerException instead of "XYZ without loop construct"
      8 todo   : awesome error message is not printed because these are parsed differently
      1 todo   : good error message, but not the one that we are expecting
      1 todo   : parsing regression RT \#124679
-    72 tests aborted (missing ok/not ok)
 S32-hash/adverbs.t.................................1128    0    0    0 1128
 S32-hash/antipairs.t...............................   5    0    0    0    5
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
@@ -1936,7 +1936,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        8896,     0,   137,   401,  9434,  9440
 "S03",        5892,     0,   114,   129,  6135,  6153
-"S04",        1431,     0,    65,    35,  1531,  1563
+"S04",        1431,     0,    65,    33,  1529,  1561
 "S05",        5621,     0,   103,   255,  5979,  6181
 "S06",        2120,     0,    67,    95,  2282,  2328
 "S07",          39,     0,     7,     0,    46,   151
@@ -1955,11 +1955,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,    13,     4,   381,   381
-"S32",       12595,    83,   230,   232, 13140, 11463
+"S32",       12665,    11,   230,   234, 13140, 11463
 "int",        1276,     0,    14,    14,  1304,  1297
 "ros",           2,     0,     0,     0,     2,     2
-"total",     46922,    83,   931,  1725, 49661,127736
+"total",     46992,    11,   931,  1725, 49659,127734
 ----------------
 Failure summary:
-S32-exceptions/misc.rakudo.jvm aborted 72 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
