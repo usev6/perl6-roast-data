@@ -340,7 +340,7 @@ S03-metaops/not.t..................................  46    0    0    0   46
 S03-metaops/reduce.rakudo.jvm...................... 508    0    1   33  542
     33 skipped: RT \#126899 - Method 'orig'1 not found for invocant of class 'QAST::Op'
      1 todo   : item context
-S03-metaops/reverse.t..............................  67    0    0    0   67
+S03-metaops/reverse.t..............................  68    0    0    0   68
 S03-metaops/zip.t..................................  75    0    0    0   75
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
      1 todo   : Multi colonpair syntax not yet understood RT \#124553
@@ -1327,7 +1327,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT \#124775
      3 skipped: waiting for new '.loads' semantics RT \#124776
      2 skipped: waiting for new '.loads' semantics RT \#124777
-S17-scheduler/every.t..............................  20    0    0    0   20
+S17-scheduler/every.t..............................  19    1    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
@@ -1335,7 +1335,7 @@ S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  90    0    0    0   90
-S17-supply/batch.t.................................  11    0    0    0   11
+S17-supply/batch.t.................................  10    1    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1386,8 +1386,8 @@ S19-command-line-options/03-dash-p.t...............   2    0    0    0    2
 S19-command-line/arguments.t.......................   3    0    0    0    3
 S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
-S19-command-line/repl.rakudo.jvm...................   9    0    0    1   10
-     1 skipped: Proc::Async NYI
+S19-command-line/repl.rakudo.jvm...................   0    8    0    0    8
+     7 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S22-package-format/local.rakudo.jvm................  18    0    0    1   19
      1 skipped: cannot do signals in JVM RT \#124628
@@ -1901,42 +1901,56 @@ integration/advent2013-day22.t.....................   9    0    0    0    9
 integration/advent2013-day23.t.....................   9    0    0    0    9
 integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
      1 skipped: sometimes hangs, sometimes segfaults
-integration/advent2014-day13.t.....................  13    0    0    0   13
-integration/advent2014-day16.t.....................  21    0    0    0   21
-integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  20    0    3    0   23
-     1 todo   : RT \#127425
-     1 todo   : UnwindException
-     1 todo   : nigh
-integration/lazy-bentley-generator.t...............   1    0    0    0    1
-integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
-integration/lexicals-and-attributes.t..............   8    0    0    0    8
-integration/man-or-boy.t...........................  10    0    0    0   10
-integration/method-calls-and-instantiation.t.......   2    0    0    0    2
-integration/no-indirect-new.t......................   2    0    0    0    2
-integration/packages.t.............................   3    0    0    0    3
-integration/pair-in-array.t........................   3    0    0    0    3
-integration/passing-pair-class-to-sub.t............   2    0    0    0    2
-integration/real-strings.t.........................  20    0    0    0   20
-integration/role-composition-vs-attribute.rakudo...   6    0    0    4   10
-     2 skipped: alas, no visibility of native private attributes yet
-     2 skipped: alas, no visibility of private attributes in other role
-integration/rule-in-class-Str.t....................   3    0    0    0    3
-integration/say-crash.t............................   4    0    0    0    4
-integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
-integration/topic_in_double_loop.t.................   5    0    0    0    5
-integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.rakudo.jvm................  26    0    2    0   28
-     1 todo   : Feels like a bogus test in light of recent changes
-     1 todo   : Unknown encoding 'utf8-c8' RT \#127878
+integration/advent2014-day13.t.....................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+integration/advent2014-day16.t.....................   0   21    0    0   21
+    21 tests aborted (missing ok/not ok)
+integration/code-blocks-as-sub-args.t..............   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/error-reporting.rakudo.jvm.............   0   23    0    0   23
+    23 tests aborted (missing ok/not ok)
+integration/lazy-bentley-generator.t...............   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+integration/lexical-array-in-inner-block.t.........   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/lexicals-and-attributes.t..............   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/man-or-boy.t...........................   0    0    0    0    0
+integration/method-calls-and-instantiation.t.......   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/no-indirect-new.t......................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/packages.t.............................   0    0    0    0    0
+integration/pair-in-array.t........................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/passing-pair-class-to-sub.t............   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/real-strings.t.........................   0   20    0    0   20
+    20 tests aborted (missing ok/not ok)
+integration/role-composition-vs-attribute.rakudo...   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+integration/rule-in-class-Str.t....................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/say-crash.t............................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/substr-after-match-in-gather-in-for.t..   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+integration/topic_in_double_loop.t.................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+integration/variables-in-do.t......................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/weird-errors.rakudo.jvm................   0   28    0    0   28
+    28 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
-rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
+rosettacode/greatest_element_of_a_list.t...........   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    75,    75,    86
 "S02",        8889,     0,   137,   401,  9427,  9433
-"S03",        5892,     0,   114,   129,  6135,  6153
+"S03",        5893,     0,   114,   129,  6136,  6154
 "S04",        1433,     0,    65,    33,  1531,  1563
 "S05",        5621,     0,   103,   255,  5979,  6181
 "S06",        2120,     0,    67,    95,  2282,  2328
@@ -1949,17 +1963,42 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    47,    99, 79088
 "S16",         658,     0,    69,   136,   863,   936
-"S17",         875,     0,    15,    25,   915,   964
-"S19",          22,     0,     0,     1,    23,    28
+"S17",         873,     2,    15,    25,   915,   964
+"S19",          13,     8,     0,     0,    21,    26
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          18,     0,     0,     0,    18,    92
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,    13,     4,   381,   381
 "S32",       12663,    11,   230,   237, 13141, 11464
-"int",        1276,     0,    14,    14,  1304,  1297
-"ros",           2,     0,     0,     0,     2,     2
-"total",     46985,    11,   931,  1728, 49655,127731
+"int",        1117,   155,     9,    10,  1291,  1287
+"ros",           0,     2,     0,     0,     2,     2
+"total",     46814,   178,   926,  1723, 49641,127720
 ----------------
 Failure summary:
+S17-scheduler/every.t 4 - Cue with :every :stop schedules repeatedly
+S17-supply/batch.t 3 - we can batch by time
+S19-command-line/repl.rakudo.jvm 1 - exit(42) in executed REPL got run
+S19-command-line/repl.rakudo.jvm aborted 7 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
+integration/advent2014-day13.t aborted 13 test(s)
+integration/advent2014-day16.t aborted 21 test(s)
+integration/code-blocks-as-sub-args.t aborted 4 test(s)
+integration/error-reporting.rakudo.jvm aborted 23 test(s)
+integration/lazy-bentley-generator.t aborted 1 test(s)
+integration/lexical-array-in-inner-block.t aborted 2 test(s)
+integration/lexicals-and-attributes.t aborted 8 test(s)
+integration/method-calls-and-instantiation.t aborted 2 test(s)
+integration/no-indirect-new.t aborted 2 test(s)
+integration/pair-in-array.t aborted 3 test(s)
+integration/passing-pair-class-to-sub.t aborted 2 test(s)
+integration/real-strings.t aborted 20 test(s)
+integration/role-composition-vs-attribute.rakudo. aborted 10 test(s)
+integration/rule-in-class-Str.t aborted 3 test(s)
+integration/say-crash.t aborted 4 test(s)
+integration/substr-after-match-in-gather-in-for.t aborted 1 test(s)
+integration/topic_in_double_loop.t aborted 5 test(s)
+integration/variables-in-do.t aborted 3 test(s)
+integration/weird-errors.rakudo.jvm aborted 28 test(s)
+rosettacode/greatest_element_of_a_list.t aborted 1 test(s)
+rosettacode/sierpinski_triangle.t aborted 1 test(s)
