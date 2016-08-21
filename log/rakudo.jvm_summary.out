@@ -6,10 +6,10 @@ S01-perl-5-integration/basic.rakudo.jvm............   0    0    0   15   15
     15 skipped: <unknown>
 S01-perl-5-integration/class.rakudo.jvm............   0    0    0    3    3
      3 skipped: <unknown>
-S01-perl-5-integration/context.rakudo.jvm..........   0   10    0    0   10
-    10 tests aborted (missing ok/not ok)
-S01-perl-5-integration/eval_lex.rakudo.jvm.........   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
+S01-perl-5-integration/context.rakudo.jvm..........   0    0    0   10   10
+    10 skipped: <unknown>
+S01-perl-5-integration/eval_lex.rakudo.jvm.........   0    0    0    1    1
+     1 skipped: <unknown>
 S01-perl-5-integration/exception_handling.t........   0    0    0    3    3
      3 skipped: no perl 5 support
 S01-perl-5-integration/hash.rakudo.jvm.............   0    0    0    6    6
@@ -264,12 +264,13 @@ S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
      4 skipped: multi-dim sized arrays NYI RT \#124483
 S02-types/nan.rakudo.jvm...........................  22    0    0    1   23
      1 skipped: RT \#83446
-S02-types/native.rakudo.jvm........................  69    1   19    3   92
+S02-types/native.rakudo.jvm........................  69    0   20    3   92
      3 skipped: cannot unbox to a native number
      1 todo   : RT \#102416 - though maybe wrong test? Not sure .WHAT is *that* magic
      3 todo   : native int args do not truncate, yet
      3 todo   : native int does not truncate, yet
      9 todo   : signed/unsigned native ints RT \#124294
+     1 todo   : the value gets sign-extended
      1 todo   : uint16 increment in sink context doesn't work
      1 todo   : uint32 increment in sink context doesn't work
      1 todo   : uint8 increment in sink context doesn't work
@@ -807,8 +808,8 @@ S05-modifier/repetition-exhaustive.rakudo.jvm......   1    0    0    4    5
 S05-modifier/repetition.rakudo.jvm.................   8    0    0    4   12
      3 skipped: RT \#124279
      1 skipped: UnwindException RT \#124279
-S05-modifier/samemark.t............................   0    8    0    0    8
-     8 tests aborted (missing ok/not ok)
+S05-modifier/samemark.rakudo.jvm...................   0    0    0    8    8
+     8 skipped: ordbaseat NYI
 S05-modifier/sigspace.t............................  16    0    0    0   16
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  13    0    0    0   13
@@ -1309,8 +1310,7 @@ S16-io/cwd.t.......................................   3    0    0    0    3
 S16-io/eof.t.......................................   1    0    0    1    2
      1 skipped: Don't test reading /proc file if not in Linux
 S16-io/getc.t......................................   2    0    0    0    2
-S16-io/handles-between-threads.rakudo.jvm..........   7    0    1    0    8
-     1 todo PASSED: RT12405
+S16-io/handles-between-threads.t...................   8    0    0    0    8
 S16-io/lines.rakudo.jvm............................ 296    0   48  120  464
    120 skipped: test will be run below with fine grained fudging
     48 todo   : :nl-in and :chomp not working yet
@@ -1347,7 +1347,7 @@ S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  47    0    0    0   47
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
-S17-scheduler/at.t.................................  15    0    0    0   15
+S17-scheduler/at.t.................................  14    1    0    0   15
 S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      3 skipped: waiting for new '.loads' semantics RT \#124774
      2 skipped: waiting for new '.loads' semantics RT \#124775
@@ -1377,8 +1377,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: RT 128595
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1578,7 +1577,8 @@ S32-io/io-spec-win.t............................... 206    0    0    3  209
      3 skipped: Win32ish on-platform tests
 S32-io/move.t......................................  29    0    0    0   29
 S32-io/note.t......................................   6    0    0    0    6
-S32-io/open.t......................................  26    1    0    0   27
+S32-io/open.rakudo.jvm.............................  26    0    1    0   27
+     1 todo   : got 4512345
 S32-io/other.t.....................................  60    0    0    0   60
 S32-io/pipe.t......................................  14    0    0    0   14
 S32-io/rename.t....................................  29    0    0    0   29
@@ -1799,8 +1799,8 @@ S32-str/tc.rakudo.jvm..............................   6    0    3    0    9
 S32-str/tclc.rakudo.jvm............................   5    0    1    0    6
      1 todo   : RT \#121377
 S32-str/trim.t.....................................  36    0    0    0   36
-S32-str/uc.rakudo.jvm..............................  17    0    0    2   19
-     2 skipped: NFG
+S32-str/uc.rakudo.jvm..............................  18    0    1    0   19
+     1 todo   : got 3
 S32-str/unpack.t...................................  24    0    0    0   24
 S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT \#124739
@@ -1937,8 +1937,7 @@ integration/advent2013-day22.t.....................   9    0    0    0    9
 integration/advent2013-day23.t.....................   9    0    0    0    9
 integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
      1 skipped: sometimes hangs, sometimes segfaults
-integration/advent2014-day13.t.....................   0   13    0    0   13
-    13 tests aborted (missing ok/not ok)
+integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............  20    0    2    0   22
@@ -1970,11 +1969,11 @@ rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
-"S01",           0,    11,     0,    75,    86,    86
-"S02",        8897,     1,   137,   401,  9436,  9440
+"S01",           0,     0,     0,    86,    86,    86
+"S02",        8897,     0,   138,   401,  9436,  9440
 "S03",        5895,     0,   114,   127,  6136,  6154
 "S04",        1433,     0,    65,    33,  1531,  1563
-"S05",        5622,     8,   103,   263,  5996,  6182
+"S05",        5622,     0,   103,   271,  5996,  6182
 "S06",        2120,     0,    67,    95,  2282,  2328
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2749,     0,    26,    39,  2814,  2814
@@ -1984,26 +1983,21 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    67,   119, 79088
-"S16",         682,     0,    70,   147,   899,   936
-"S17",         875,     0,    15,    25,   915,   964
+"S16",         683,     0,    69,   147,   899,   936
+"S17",         874,     1,    15,    25,   915,   964
 "S19",          14,    10,     4,     0,    28,    28
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          23,     0,     0,     0,    23,    94
 "S26",        1909,     0,     8,    85,  2002,  2002
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,    13,     4,   381,   381
-"S32",       12691,    12,   230,   237, 13170, 11464
-"int",        1263,    13,    13,    14,  1303,  1296
+"S32",       12692,    11,   232,   235, 13170, 11464
+"int",        1276,     0,    13,    14,  1303,  1296
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47035,    55,   939,  1764, 49793,127741
+"total",     47049,    22,   941,  1781, 49793,127741
 ----------------
 Failure summary:
-S01-perl-5-integration/context.rakudo.jvm aborted 10 test(s)
-S01-perl-5-integration/eval_lex.rakudo.jvm aborted 1 test(s)
-S02-types/native.rakudo.jvm 41 - uint64 attributes don't get sign-extended
-S05-modifier/samemark.t aborted 8 test(s)
+S17-scheduler/at.t 8 - Timer tasks on ThreadPoolScheduler :at/:catch ran in right order
 S19-command-line/repl.rakudo.jvm 1 - exit(42) in executed REPL got run
 S19-command-line/repl.rakudo.jvm aborted 9 test(s)
-S32-io/open.t 16 - have used :update successfully
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
-integration/advent2014-day13.t aborted 13 test(s)
