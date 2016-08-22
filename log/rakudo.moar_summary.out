@@ -6,9 +6,9 @@ S01-perl-5-integration/array.rakudo.moar...........Could not find Inline::Perl5 
     /home/christian/bin/rakudo.moar/share/perl6/site
     /home/christian/bin/rakudo.moar/share/perl6/vendor
     /home/christian/bin/rakudo.moar/share/perl6
-    CompUnit::Repository::AbsolutePath<34463842064>
-    CompUnit::Repository::NQP<34476091344>
-    CompUnit::Repository::Perl5<34476091384>
+    CompUnit::Repository::AbsolutePath<34463837968>
+    CompUnit::Repository::NQP<34476124112>
+    CompUnit::Repository::Perl5<34476124152>
   in block <unit> at t/spec/S01-perl-5-integration/array.rakudo.moar line 7
 
    0    0    0   17   17
@@ -19,7 +19,7 @@ S01-perl-5-integration/basic.rakudo.moar...........Could not find Inline::Perl5 
     /home/christian/bin/rakudo.moar/share/perl6/site
     /home/christian/bin/rakudo.moar/share/perl6/vendor
     /home/christian/bin/rakudo.moar/share/perl6
-    CompUnit::Repository::AbsolutePath<34463830944>
+    CompUnit::Repository::AbsolutePath<34463826848>
     CompUnit::Repository::NQP<34473387064>
     CompUnit::Repository::Perl5<34473387104>
   in block <unit> at t/spec/S01-perl-5-integration/basic.rakudo.moar line 5
@@ -32,7 +32,7 @@ S01-perl-5-integration/class.rakudo.moar...........Could not find Inline::Perl5 
     /home/christian/bin/rakudo.moar/share/perl6/site
     /home/christian/bin/rakudo.moar/share/perl6/vendor
     /home/christian/bin/rakudo.moar/share/perl6
-    CompUnit::Repository::AbsolutePath<34463814560>
+    CompUnit::Repository::AbsolutePath<34463810464>
     CompUnit::Repository::NQP<34473276472>
     CompUnit::Repository::Perl5<34473276512>
   in block <unit> at t/spec/S01-perl-5-integration/class.rakudo.moar line 7
@@ -84,9 +84,9 @@ S01-perl-5-integration/hash.rakudo.moar............Could not find Inline::Perl5 
     /home/christian/bin/rakudo.moar/share/perl6/site
     /home/christian/bin/rakudo.moar/share/perl6/vendor
     /home/christian/bin/rakudo.moar/share/perl6
-    CompUnit::Repository::AbsolutePath<34463830944>
-    CompUnit::Repository::NQP<34467927096>
-    CompUnit::Repository::Perl5<34467927136>
+    CompUnit::Repository::AbsolutePath<34463826848>
+    CompUnit::Repository::NQP<34473387064>
+    CompUnit::Repository::Perl5<34473387104>
   in block <unit> at t/spec/S01-perl-5-integration/hash.rakudo.moar line 7
 
    0    0    0    6    6
@@ -97,7 +97,7 @@ S01-perl-5-integration/import.rakudo.moar..........Could not find Inline::Perl5 
     /home/christian/bin/rakudo.moar/share/perl6/site
     /home/christian/bin/rakudo.moar/share/perl6/vendor
     /home/christian/bin/rakudo.moar/share/perl6
-    CompUnit::Repository::AbsolutePath<34463814560>
+    CompUnit::Repository::AbsolutePath<34463810464>
     CompUnit::Repository::NQP<34473276472>
     CompUnit::Repository::Perl5<34473276512>
   in block <unit> at t/spec/S01-perl-5-integration/import.rakudo.moar line 12
@@ -110,7 +110,7 @@ S01-perl-5-integration/method.rakudo.moar..........Could not find Inline::Perl5 
     /home/christian/bin/rakudo.moar/share/perl6/site
     /home/christian/bin/rakudo.moar/share/perl6/vendor
     /home/christian/bin/rakudo.moar/share/perl6
-    CompUnit::Repository::AbsolutePath<34463839136>
+    CompUnit::Repository::AbsolutePath<34463835040>
     CompUnit::Repository::NQP<34473387064>
     CompUnit::Repository::Perl5<34473387104>
   in block <unit> at t/spec/S01-perl-5-integration/method.rakudo.moar line 7
@@ -123,7 +123,7 @@ S01-perl-5-integration/return.rakudo.moar..........Could not find Inline::Perl5 
     /home/christian/bin/rakudo.moar/share/perl6/site
     /home/christian/bin/rakudo.moar/share/perl6/vendor
     /home/christian/bin/rakudo.moar/share/perl6
-    CompUnit::Repository::AbsolutePath<34463814560>
+    CompUnit::Repository::AbsolutePath<34463810464>
     CompUnit::Repository::NQP<34473276472>
     CompUnit::Repository::Perl5<34473276512>
   in block <unit> at t/spec/S01-perl-5-integration/return.rakudo.moar line 7
@@ -136,7 +136,7 @@ S01-perl-5-integration/roundtrip.t.................Could not find Inline::Perl5 
     /home/christian/bin/rakudo.moar/share/perl6/site
     /home/christian/bin/rakudo.moar/share/perl6/vendor
     /home/christian/bin/rakudo.moar/share/perl6
-    CompUnit::Repository::AbsolutePath<34463822752>
+    CompUnit::Repository::AbsolutePath<34463818656>
     CompUnit::Repository::NQP<34473759800>
     CompUnit::Repository::Perl5<34473759840>
   in block <unit> at t/spec/S01-perl-5-integration/roundtrip.t line 7
@@ -162,7 +162,7 @@ S01-perl-5-integration/subs.t......................Could not find Inline::Perl5 
     /home/christian/bin/rakudo.moar/share/perl6/site
     /home/christian/bin/rakudo.moar/share/perl6/vendor
     /home/christian/bin/rakudo.moar/share/perl6
-    CompUnit::Repository::AbsolutePath<34463814560>
+    CompUnit::Repository::AbsolutePath<34463810464>
     CompUnit::Repository::NQP<34473276472>
     CompUnit::Repository::Perl5<34473276512>
   in block <unit> at t/spec/S01-perl-5-integration/subs.t line 5
@@ -398,7 +398,7 @@ S02-names/indirect.t...............................  10    0    0    0   10
 S02-names/is_cached.t..............................  38    0    0    0   38
 S02-names/is_default.rakudo.moar...................    
 # Failed test 'right exception type (X::Comp::Trait::NotOnNative)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Comp::Trait::NotOnNative
     # Got:      X::Comp::NYI
     # Exception message: native value types for hashes not yet implemented. Sorry. 
@@ -457,7 +457,7 @@ S02-types/array-shapes.rakudo.moar.................
      2 todo   : code does not die, array shapes RT \#124502
 S02-types/array.rakudo.moar........................    
 # Failed test 'right exception type (X::Subscript::Negative)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Subscript::Negative
     # Got:      X::OutOfRange
     # Exception message: Index out of range. Is: -1, should be in 0..Inf
@@ -468,14 +468,14 @@ Index out of range. Is: 1, should be in 0..0
 
     
 # Failed test 'right exception type (X::Item)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Item
     # Got:      X::AdHoc
     # Exception message: Cannot coerce Inf to an Int
     # Looks like you failed 1 test of 4
     
 # Failed test 'right exception type (X::Item)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Item
     # Got:      X::AdHoc
     # Exception message: Cannot coerce NaN to an Int
@@ -675,14 +675,14 @@ S03-binding/hashes.t...............................  39    0    0    0   39
 S03-binding/nested.t...............................  43    0    0    0   43
 S03-binding/nonsense.rakudo.moar...................    
 # Failed test 'right exception type (X::Bind)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Bind
     # Got:      X::AdHoc
     # Exception message: Invocant requires an instance of type List, but a type object was passed.  Did you forget a .new?
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Bind)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Bind
     # Got:      X::Multi::NoMatch
     # Exception message: Cannot resolve caller BIND-POS(Int: Int, Int); none of these signatures match:
@@ -2414,12 +2414,12 @@ S10-packages/basic.rakudo.moar.....................  80    0    0    1   81
      1 skipped: RT \#59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
 S10-packages/precompilation.rakudo.moar............#      got status: 1
-#      got err: "Cannot invoke this object (REPR: Null; VMNull)\n  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/experimental.pm6 (experimental) line 10\n  in any enter at gen/moar/m-Metamodel.nqp line 4012\n  in block <unit> at getout-55360-533088.code line 3\n\n"
+#      got err: "Cannot invoke this object (REPR: Null; VMNull)\n  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/experimental.pm6 (experimental) line 10\n  in any enter at gen/moar/m-Metamodel.nqp line 4012\n  in block <unit> at getout-88264-808545.code line 3\n\n"
 # expected err: ""
 #      got status: 1
 #      got out: ""
 # expected out: "True"
-#      got err: "===SORRY!===\nCould not find InternArrayA at line 1 in:\n    /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages\n    /home/christian/perl6/perl6-roast-data/rakudo.moar/lib\n    /home/christian/.perl6\n    /home/christian/bin/rakudo.moar/share/perl6/site\n    /home/christian/bin/rakudo.moar/share/perl6/vendor\n    /home/christian/bin/rakudo.moar/share/perl6\n    CompUnit::Repository::AbsolutePath<34462576112>\n    CompUnit::Repository::NQP<34455975096>\n    CompUnit::Repository::Perl5<34455975136>\n"
+#      got err: "===SORRY!===\nCould not find InternArrayA at line 1 in:\n    /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages\n    /home/christian/perl6/perl6-roast-data/rakudo.moar/lib\n    /home/christian/.perl6\n    /home/christian/bin/rakudo.moar/share/perl6/site\n    /home/christian/bin/rakudo.moar/share/perl6/vendor\n    /home/christian/bin/rakudo.moar/share/perl6\n    CompUnit::Repository::AbsolutePath<34462592496>\n    CompUnit::Repository::NQP<34455983288>\n    CompUnit::Repository::Perl5<34455983328>\n"
 # expected err: ""
   44    0    2    0   46
      1 todo   : RT \#122896
@@ -2777,13 +2777,13 @@ S15-unicode-information/uniprop.t..................   6    0    0    0    6
 S15-unicode-information/unival.t...................  40    0    0    0   40
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  12    0    0    0   12
-S16-filehandles/chmod.t............................# Using file temp_1471735924
-# Using file temp_1471735924
-# Using file temp_1471735924
+S16-filehandles/chmod.t............................# Using file temp_1471822320
+# Using file temp_1471822320
+# Using file temp_1471822320
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.t.........................# Using file temp-16-filehandles-filestat-55685-1.temp
-# Using file temp-16-filehandles-filestat-55685-2.temp
+S16-filehandles/filestat.t.........................# Using file temp-16-filehandles-filestat-88588-1.temp
+# Using file temp-16-filehandles-filestat-88588-2.temp
   10    0    0    0   10
 S16-filehandles/filetest.rakudo.moar...............  34    0    0    9   43
      6 skipped: :M, :C, :A
@@ -2794,11 +2794,11 @@ S16-filehandles/io.rakudo.moar..................... 110    0    2    0  112
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-307175
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-505853
   14    0    0    0   14
-S16-filehandles/mode.t.............................# Using file temp_1471735967.037949
-# Using file temp_1471735967.050150
-# Using file temp_1471735967.053660
+S16-filehandles/mode.t.............................# Using file temp_1471822363.415484
+# Using file temp_1471822363.428910
+# Using file temp_1471822363.432931
   15    0    0    0   15
 S16-filehandles/open.t.............................   4    0    0    1    5
      1 skipped: open('nonexisting') => undefined is waiting on 'use fatal'
@@ -3586,84 +3586,84 @@ S32-array/rotate.t.................................  29    0    0    0   29
 S32-array/shift.t..................................  33    0    0    0   33
 S32-array/splice.rakudo.moar.......................    
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding to @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding to @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding to @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding to @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding to @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::TypeCheck::Binding
     # Exception message: Type check failed in binding to @arr; expected Positional but got Mu (Mu)
     # Looks like you failed 1 test of 5
     
 # Failed test 'right exception type (X::TypeCheck::Splice)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::TypeCheck::Splice
     # Got:      X::AdHoc
     # Exception message: Cannot call method 'splice' on a null object
@@ -3712,28 +3712,28 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Syntax::Perl5Var)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Syntax::Perl5Var
     # Got:      X::Syntax::InfixInTermPosition
     # Exception message: Preceding context expects a term, but found infix = instead
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Syntax::Perl5Var)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Syntax::Perl5Var
     # Got:      X::Syntax::Confused
     # Exception message: Unexpected closing bracket
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Syntax::Perl5Var)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Syntax::Perl5Var
     # Got:      X::Comp::AdHoc
     # Exception message: Unable to parse quote-words subscript; couldn't find right angle quote
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Syntax::Perl5Var)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Syntax::Perl5Var
     # Got:      X::Syntax::InfixInTermPosition
     # Exception message: Preceding context expects a term, but found infix = instead
@@ -3744,28 +3744,28 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Syntax::Perl5Var)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Syntax::Perl5Var
     # Got:      X::Syntax::InfixInTermPosition
     # Exception message: Preceding context expects a term, but found infix = instead
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Syntax::Perl5Var)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Syntax::Perl5Var
     # Got:      X::Syntax::InfixInTermPosition
     # Exception message: Preceding context expects a term, but found infix = instead
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Syntax::Perl5Var)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Syntax::Perl5Var
     # Got:      X::Syntax::InfixInTermPosition
     # Exception message: Preceding context expects a term, but found infix = instead
     # Looks like you failed 1 test of 2
     
 # Failed test 'right exception type (X::Syntax::Perl5Var)'
-# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471734960.90542/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
+# at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/.precomp/026F5FF0D50D31E65B0E358F4766BDD1CBA96EF0.1471821359.34732/64/640AB2BAE07BEDC4C163F679A746F7AB7FB5D1FA line 1
     # Expected: X::Syntax::Perl5Var
     # Got:      X::Obsolete
     # Exception message: Unsupported use of $#variable; in Perl 6 please use @variable.end
@@ -5631,14 +5631,14 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 0.293819779 seconds
-# gerdr: 0.2981227 seconds
-# hand-memoization: 0.3066001 seconds
-# recursive-ternary: 0.37892327 seconds
-# loop: 0.40742502 seconds
-# sequence-ternary: 0.7700383 seconds
-# recursive-ternary-hand-cached: 1.3808616 seconds
-# sequence: 1.8065209 seconds
+integration/advent2012-day21.t.....................# kaz: 0.2871511 seconds
+# gerdr: 0.2972408 seconds
+# hand-memoization: 0.3068481 seconds
+# recursive-ternary: 0.3795116 seconds
+# loop: 0.4061656 seconds
+# sequence-ternary: 0.773139 seconds
+# recursive-ternary-hand-cached: 1.3751259 seconds
+# sequence: 1.8032967 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -5674,7 +5674,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.moar............# Error message: Constraint type check failed for parameter '$x'
-#      got err: "Use of uninitialized value of type Any in numeric context  in sub mysub at getout-58703-990293.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context  in sub mysub at getout-91606-73347.code line 1\n"
   21    0    1    0   22
      1 todo   : nigh
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
@@ -5686,13 +5686,13 @@ integration/no-indirect-new.t......................   2    0    0    0    2
 integration/packages.t.............................   3    0    0    0    3
 integration/pair-in-array.t........................   3    0    0    0    3
 integration/passing-pair-class-to-sub.t............   2    0    0    0    2
-integration/precompiled.t..........................WARNINGS for /tmp/p6testmodD2CD5C3C/p6testmod19B5BC35.pm6 (p6testmod19B5BC35):
+integration/precompiled.t..........................WARNINGS for /tmp/p6testmod7C5D814C/p6testmod7FDBEA42.pm6 (p6testmod7FDBEA42):
 Useless use of constant integer 42 in sink context (line 1)
-WARNINGS for /tmp/p6testmodD2CD5C3C/p6testmod19B5BC35.pm6:
+WARNINGS for /tmp/p6testmod7C5D814C/p6testmod7FDBEA42.pm6:
 Useless use of constant integer 42 in sink context (line 1)
-WARNINGS for /tmp/p6testmodD2CD5C3C/p6testmod091E5CC1.pm6 (p6testmod091E5CC1):
+WARNINGS for /tmp/p6testmod7C5D814C/p6testmodCC866242.pm6 (p6testmodCC866242):
 Useless use of constant integer 42 in sink context (line 1)
-WARNINGS for /tmp/p6testmodD2CD5C3C/p6testmod091E5CC1.pm6:
+WARNINGS for /tmp/p6testmod7C5D814C/p6testmodCC866242.pm6:
 Useless use of constant integer 42 in sink context (line 1)
 Use of uninitialized value $repo-id of type Any in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.  in any load_module at src/Perl6/World.nqp line 1193
