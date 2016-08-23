@@ -941,14 +941,13 @@ S06-signature/closure-parameters.rakudo.jvm........  13    0    0    5   18
      5 skipped: subsignatures dont factor into multi candidates yet RT \#124935
 S06-signature/code.rakudo.jvm......................   7    0    1    0    8
      1 todo   : RT \#67932
-S06-signature/defaults.t...........................   9    0    0    0    9
+S06-signature/defaults.t...........................  11    0    0    0   11
 S06-signature/definite-return.rakudo.jvm...........  17    0    0    2   19
      2 skipped: variables as return specifications dont parse yet RT \#124927
 S06-signature/errors.rakudo.jvm....................  25    0    6    0   31
      6 todo   : unival NYI RT \#124920
-S06-signature/introspection.rakudo.jvm............. 132    0    1    1  134
-     1 skipped: expected Any but got Mu instead
-     1 todo   : needs/find RT: Logic to make :a($a) into :$a makes :a(:b($a) into ::b(:$a)
+S06-signature/introspection.rakudo.jvm.............   0  134    0    0  134
+   134 tests aborted (missing ok/not ok)
 S06-signature/mixed-placeholders.t.................  18    0    0    0   18
 S06-signature/multi-invocant.t.....................  25    0    0    0   25
 S06-signature/multidimensional.t...................  10    0    0    0   10
@@ -1342,7 +1341,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  26    1    0    0   27
+S17-promise/basic.t................................  27    0    0    0   27
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  47    0    0    0   47
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -1377,8 +1376,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: RT 128595
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1975,7 +1973,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        5895,     0,   114,   127,  6136,  6154
 "S04",        1433,     0,    65,    33,  1531,  1563
 "S05",        5622,     0,   103,   271,  5996,  6182
-"S06",        2120,     0,    67,    95,  2282,  2328
+"S06",        1990,   134,    66,    94,  2284,  2330
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2749,     0,    26,    39,  2814,  2814
 "S10",         132,     0,     6,     1,   139,   196
@@ -1985,7 +1983,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    67,   119, 79088
 "S16",         683,     0,    69,   147,   899,   936
-"S17",         874,     1,    15,    25,   915,   964
+"S17",         875,     0,    15,    25,   915,   964
 "S19",          14,    10,     4,     0,    28,    28
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          23,     0,     0,     0,    23,    94
@@ -1995,10 +1993,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12692,    11,   232,   235, 13170, 11464
 "int",        1276,     0,    13,    14,  1303,  1296
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47049,    22,   941,  1781, 49793,127741
+"total",     46920,   155,   940,  1780, 49795,127743
 ----------------
 Failure summary:
-S17-promise/basic.t 27 - promises execute asynchronously [try 3]
+S06-signature/introspection.rakudo.jvm aborted 134 test(s)
 S19-command-line/repl.rakudo.jvm 1 - exit(42) in executed REPL got run
 S19-command-line/repl.rakudo.jvm aborted 9 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
