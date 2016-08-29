@@ -976,7 +976,8 @@ S06-signature/tree-node-parameters.rakudo.jvm......  16    0    0    4   20
      4 skipped: signature binding of return values NYI RT \#124945
 S06-signature/type-capture.rakudo.jvm..............  10    0    0    2   12
      2 skipped: Method 'T' not found for invocant of class 'Rat', RT \#126383
-S06-signature/types.t..............................  10    2    0    0   12
+S06-signature/types.rakudo.jvm.....................  10    0    2    0   12
+     2 todo   : no mention of type 'Mu', yet
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
 S06-signature/unspecified.t........................  18    0    0    0   18
@@ -1418,9 +1419,8 @@ S19-command-line-options/06-dash-rxtrace.t.........   1    0    0    0    1
 S19-command-line/arguments.t.......................   3    0    0    0    3
 S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
-S19-command-line/repl.rakudo.jvm...................   6    3    1    0   10
-     1 todo PASSED: RT\#127933
-     3 tests aborted (missing ok/not ok)
+S19-command-line/repl.rakudo.jvm...................   9    0    0    1   10
+     1 skipped: Proc::Async NYI
                                                    pass fail todo skip plan
 S22-package-format/local.rakudo.jvm................  18    0    0    1   19
      1 skipped: cannot do signals in JVM RT \#124628
@@ -1976,7 +1976,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        5899,     0,   114,   127,  6140,  6158
 "S04",        1433,     0,    65,    33,  1531,  1563
 "S05",        5622,     0,   103,   271,  5996,  6182
-"S06",        2120,     2,    67,    95,  2284,  2330
+"S06",        2120,     0,    69,    95,  2284,  2330
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2749,     0,    26,    39,  2814,  2814
 "S10",         132,     0,     6,     1,   139,   196
@@ -1987,7 +1987,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S15",          45,     0,     7,    67,   119, 79088
 "S16",         683,     0,    69,   147,   899,   936
 "S17",         875,     0,    15,    25,   915,   964
-"S19",          20,     3,     5,     0,    28,    28
+"S19",          23,     0,     4,     1,    28,    28
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          23,     0,     0,     0,    23,    94
 "S26",        1909,     0,     8,    85,  2002,  2002
@@ -1996,10 +1996,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12692,    11,   232,   235, 13170, 11464
 "int",        1276,     0,    13,    14,  1303,  1296
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47062,    16,   942,  1781, 49801,127749
+"total",     47065,    11,   943,  1782, 49801,127749
 ----------------
 Failure summary:
-S06-signature/types.t 11 - type shown in the exception message is the right one
-S06-signature/types.t 12 - type shown in the exception message is the right one
-S19-command-line/repl.rakudo.jvm aborted 3 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
