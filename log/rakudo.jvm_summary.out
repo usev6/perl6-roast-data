@@ -343,9 +343,10 @@ S03-metaops/hyper.rakudo.jvm....................... 394    0    1    7  402
      1 skipped: doesn't seem to see the nodal
      1 todo   : can_meta check for meta operators NYI
 S03-metaops/not.t..................................  46    0    0    0   46
-S03-metaops/reduce.rakudo.jvm...................... 508    0    1   33  542
+S03-metaops/reduce.rakudo.jvm...................... 487   21    1   33  542
     33 skipped: RT \#126899 - Method 'orig'1 not found for invocant of class 'QAST::Op'
      1 todo   : item context
+    21 tests aborted (missing ok/not ok)
 S03-metaops/reverse.t..............................  68    0    0    0   68
 S03-metaops/zip.t..................................  75    0    0    0   75
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
@@ -502,7 +503,7 @@ S04-declarations/constant.rakudo.jvm...............  66    0    4    0   70
      3 todo   : COMPILING RT \#125054
      1 todo   : constants as type constraints
 S04-declarations/implicit-parameter.t..............  20    0    0    0   20
-S04-declarations/multiple.rakudo.jvm...............   5    0    1    0    6
+S04-declarations/multiple.rakudo.jvm...............   7    0    1    0    8
      1 todo   : nom regression RT \#125053
 S04-declarations/my.rakudo.jvm.....................  97    0    0    8  105
      8 skipped: RuntimeException: java.lang.ArrayIndexOutOfBoundsException: -1
@@ -1973,8 +1974,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        8899,     0,   138,   401,  9438,  9442
-"S03",        5899,     0,   114,   127,  6140,  6158
-"S04",        1433,     0,    65,    33,  1531,  1563
+"S03",        5878,    21,   114,   127,  6140,  6158
+"S04",        1435,     0,    65,    33,  1533,  1565
 "S05",        5622,     0,   103,   271,  5996,  6182
 "S06",        2120,     0,    69,    95,  2284,  2330
 "S07",          39,     0,     7,     0,    46,   151
@@ -1996,7 +1997,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12692,    11,   232,   235, 13170, 11464
 "int",        1276,     0,    13,    14,  1303,  1296
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47065,    11,   943,  1782, 49801,127749
+"total",     47046,    32,   943,  1782, 49803,127751
 ----------------
 Failure summary:
+S03-metaops/reduce.rakudo.jvm aborted 21 test(s)
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
