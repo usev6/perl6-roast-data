@@ -45,7 +45,7 @@ S02-lexical-conventions/unspace.rakudo.jvm.........  79    0    2    7   88
      1 todo   : RT 128462
 S02-lists/indexing.t...............................   3    0    0    0    3
 S02-lists/tree.t...................................  10    0    0    0   10
-S02-literals/adverbs.rakudo.jvm....................  27    0    3    3   33
+S02-literals/adverbs.rakudo.jvm....................  28    0    3    3   34
      3 skipped: Type check failed; expected 'Any' but got 'Mu'
      2 todo   : :@<...> and :%<...> broken needs RT
      1 todo   : RT \#128306
@@ -1973,7 +1973,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        8899,     0,   138,   401,  9438,  9442
+"S02",        8900,     0,   138,   401,  9439,  9443
 "S03",        5898,     0,   114,   128,  6140,  6158
 "S04",        1435,     0,    65,    33,  1533,  1565
 "S05",        5622,     0,   103,   271,  5996,  6182
@@ -1997,7 +1997,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12692,    11,   232,   235, 13170, 11464
 "int",        1276,     0,    13,    14,  1303,  1296
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47066,    11,   943,  1783, 49803,127751
+"total",     47067,    11,   943,  1783, 49804,127752
 ----------------
 Failure summary:
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
