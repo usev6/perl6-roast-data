@@ -814,7 +814,7 @@ S05-modifier/samemark.rakudo.jvm...................   0    0    0    8    8
 S05-modifier/sigspace.t............................  16    0    0    0   16
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  13    0    0    0   13
-S05-substitution/subst.rakudo.jvm.................. 135    0    2   43  180
+S05-substitution/subst.rakudo.jvm.................. 134    1    2   43  180
      6 skipped: "ordbaseat NYI" RT \#125753
      1 skipped: RT \#114388 -- No such method 'subst-mutate' for invocant of type 'Any'
     22 skipped: RT \#124279
@@ -943,9 +943,9 @@ S06-signature/closure-parameters.rakudo.jvm........  13    0    0    5   18
 S06-signature/code.rakudo.jvm......................   7    0    1    0    8
      1 todo   : RT \#67932
 S06-signature/defaults.t...........................  11    0    0    0   11
-S06-signature/definite-return.rakudo.jvm...........  17    1    0    2   20
+S06-signature/definite-return.rakudo.jvm...........  17    0    0    3   20
+     1 skipped: RT \#128964 Type check failed for return value; expected ?(?) but got Int (42)
      2 skipped: variables as return specifications dont parse yet RT \#124927
-     1 tests aborted (missing ok/not ok)
 S06-signature/errors.rakudo.jvm....................  25    0    6    0   31
      6 todo   : unival NYI RT \#124920
 S06-signature/introspection.rakudo.jvm............. 130    0    1    1  132
@@ -1364,7 +1364,7 @@ S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  90    0    0    0   90
-S17-supply/batch.t.................................  11    0    0    0   11
+S17-supply/batch.t.................................  10    1    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1380,8 +1380,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: RT 128595
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1403,8 +1402,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................   8    9    0    0   17
-     7 tests aborted (missing ok/not ok)
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1978,8 +1976,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        8900,     0,   138,   401,  9439,  9443
 "S03",        5898,     0,   114,   128,  6140,  6158
 "S04",        1438,     0,    65,    33,  1536,  1568
-"S05",        5622,     0,   103,   271,  5996,  6182
-"S06",        2120,     1,    69,    95,  2285,  2331
+"S05",        5621,     1,   103,   271,  5996,  6182
+"S06",        2120,     0,    69,    96,  2285,  2331
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2751,     0,    26,    39,  2816,  2816
 "S10",         132,     0,     6,     1,   139,   196
@@ -1989,7 +1987,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    67,   119, 79088
 "S16",         683,     0,    69,   147,   899,   936
-"S17",         866,     9,    15,    25,   915,   964
+"S17",         874,     1,    15,    25,   915,   964
 "S19",          23,     0,     4,     1,    28,    28
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          23,     0,     0,     0,    23,    94
@@ -1999,11 +1997,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12697,    11,   232,   235, 13175, 11469
 "int",        1277,     0,    13,    14,  1304,  1297
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47073,    21,   940,  1783, 49817,127765
+"total",     47080,    13,   940,  1784, 49817,127765
 ----------------
 Failure summary:
-S06-signature/definite-return.rakudo.jvm aborted 1 test(s)
-S17-supply/throttle.t 9 - did we see all in the right order?
-S17-supply/throttle.t 10 - did we get the final status?
-S17-supply/throttle.t aborted 7 test(s)
+S05-substitution/subst.rakudo.jvm 180 - code in replacement part of s/// has correct scoping
+S17-supply/batch.t 4 - we can batch by time and elems
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
