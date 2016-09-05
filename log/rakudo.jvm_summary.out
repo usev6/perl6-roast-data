@@ -814,7 +814,7 @@ S05-modifier/samemark.rakudo.jvm...................   0    0    0    8    8
 S05-modifier/sigspace.t............................  16    0    0    0   16
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  13    0    0    0   13
-S05-substitution/subst.rakudo.jvm.................. 134    1    2   43  180
+S05-substitution/subst.rakudo.jvm.................. 135    0    2   43  180
      6 skipped: "ordbaseat NYI" RT \#125753
      1 skipped: RT \#114388 -- No such method 'subst-mutate' for invocant of type 'Any'
     22 skipped: RT \#124279
@@ -1364,7 +1364,7 @@ S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  90    0    0    0   90
-S17-supply/batch.t.................................  10    1    0    0   11
+S17-supply/batch.t.................................  11    0    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1976,7 +1976,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        8900,     0,   138,   401,  9439,  9443
 "S03",        5898,     0,   114,   128,  6140,  6158
 "S04",        1438,     0,    65,    33,  1536,  1568
-"S05",        5621,     1,   103,   271,  5996,  6182
+"S05",        5622,     0,   103,   271,  5996,  6182
 "S06",        2120,     0,    69,    96,  2285,  2331
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2751,     0,    26,    39,  2816,  2816
@@ -1987,7 +1987,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    67,   119, 79088
 "S16",         683,     0,    69,   147,   899,   936
-"S17",         874,     1,    15,    25,   915,   964
+"S17",         875,     0,    15,    25,   915,   964
 "S19",          23,     0,     4,     1,    28,    28
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          23,     0,     0,     0,    23,    94
@@ -1997,9 +1997,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12697,    11,   232,   235, 13175, 11469
 "int",        1277,     0,    13,    14,  1304,  1297
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47080,    13,   940,  1784, 49817,127765
+"total",     47082,    11,   940,  1784, 49817,127765
 ----------------
 Failure summary:
-S05-substitution/subst.rakudo.jvm 180 - code in replacement part of s/// has correct scoping
-S17-supply/batch.t 4 - we can batch by time and elems
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
