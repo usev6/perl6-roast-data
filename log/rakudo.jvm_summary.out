@@ -880,7 +880,7 @@ S06-multi/subsignature.rakudo.jvm..................  86    0    9    5  100
      5 todo   : Multimethod sort does not descend into subsignatures
      1 todo   : RT \#126702
      1 todo   : operator protos
-S06-multi/syntax.t.................................  44    0    0    0   44
+S06-multi/syntax.t.................................  45    0    0    0   45
 S06-multi/type-based.rakudo.jvm....................  62    0    4    0   66
      4 todo   : coercions need to fail like constraints RT \#124772
 S06-multi/unpackability.t..........................  10    0    0    0   10
@@ -1915,7 +1915,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1977,7 +1977,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        5903,     0,   114,   128,  6145,  6163
 "S04",        1438,     0,    65,    33,  1536,  1568
 "S05",        5622,     0,   103,   271,  5996,  6182
-"S06",        2120,     0,    69,    96,  2285,  2331
+"S06",        2121,     0,    69,    96,  2286,  2332
 "S07",          39,     0,     7,     0,    46,   151
 "S09",        2751,     0,    26,    39,  2816,  2816
 "S10",         132,     0,     6,     1,   139,   196
@@ -1995,9 +1995,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,    13,     4,   381,   381
 "S32",       12697,    11,   232,   235, 13175, 11469
-"int",        1277,     0,    13,    14,  1304,  1297
+"int",        1276,     1,    13,    14,  1304,  1297
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47090,    11,   940,  1784, 49825,127773
+"total",     47090,    12,   940,  1784, 49826,127774
 ----------------
 Failure summary:
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
