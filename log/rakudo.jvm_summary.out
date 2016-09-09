@@ -449,7 +449,7 @@ S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: ~> NYI RT \#124531
 S03-operators/relational.rakudo.jvm................ 165    0    2    0  167
      2 todo   : RT \#121987
-S03-operators/repeat.t.............................  44    0    0    0   44
+S03-operators/repeat.t.............................  47    0    0    0   47
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set.t................................ 291    1    0    0  292
      1 tests aborted (missing ok/not ok)
@@ -1341,7 +1341,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  26    1    0    0   27
+S17-promise/basic.t................................  27    0    0    0   27
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  18   29    0    0   47
     29 tests aborted (missing ok/not ok)
@@ -1560,7 +1560,7 @@ S32-hash/exists.rakudo.jvm.........................  14    0    0    1   15
 S32-hash/invert.t..................................   5    0    0    0    5
 S32-hash/keys_values.t.............................  14    0    0    0   14
 S32-hash/kv.t......................................  27    0    0    0   27
-S32-hash/map.t.....................................   2    0    0    0    2
+S32-hash/map.t.....................................   3    0    0    0    3
 S32-hash/pairs.t...................................  25    0    0    0   25
 S32-hash/perl.t....................................  12    0    0    0   12
 S32-hash/push.t....................................  10    0    0    0   10
@@ -1568,8 +1568,8 @@ S32-hash/slice.rakudo.jvm..........................  21    0   10    0   31
      6 todo   : binding on hash elements unimplemented
      2 todo   : binding on hash elements unimplemented RT \#124779
      2 todo   : binding on hash elements unimplemented RT \#124780
-S32-io/IO-Socket-Async.rakudo.jvm..................   6    0    0    1    7
-     1 skipped: hangs (sometimes) RT \#127948
+S32-io/IO-Socket-Async.rakudo.jvm..................   4    6    0    0   10
+     6 tests aborted (missing ok/not ok)
 S32-io/IO-Socket-INET.t............................   0    0    0   50   50
     50 skipped: Operating system not yet supported
 S32-io/chdir.rakudo.jvm............................   8    0    0    2   10
@@ -1638,10 +1638,10 @@ S32-list/grep-k.rakudo.jvm.........................  20    2    6   12   40
 S32-list/grep-kv.t.................................  15    2    0    0   17
 S32-list/grep-p.t..................................  15    2    0    0   17
 S32-list/grep-v.t..................................  15    2    0    0   17
-S32-list/grep.rakudo.jvm...........................  24    3    0   12   39
+S32-list/grep.rakudo.jvm...........................  24    5    0   12   41
      6 skipped: adverbial block RT \#124755
      6 skipped: adverbial block RT \#124756
-     3 tests aborted (missing ok/not ok)
+     5 tests aborted (missing ok/not ok)
 S32-list/head.t....................................  24    0    0    0   24
 S32-list/join.t....................................  38    0    0    0   38
 S32-list/map.rakudo.jvm............................  52    0    0    6   58
@@ -1656,7 +1656,7 @@ S32-list/permutations.t............................   9    0    0    0    9
 S32-list/pick.t....................................  57    0    0    0   57
 S32-list/produce.t.................................  25    0    0    0   25
 S32-list/reduce.t..................................  15    0    0    0   15
-S32-list/repeated.rakudo.jvm.......................  33    0    0    1   34
+S32-list/repeated.rakudo.jvm.......................  37    0    0    1   38
      1 skipped: This Seq has already been iterated, RT \#128720
 S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
      1 todo   : RT \#77914
@@ -1671,7 +1671,7 @@ S32-list/sort.t....................................  33    0    0    0   33
 S32-list/squish.rakudo.jvm.........................  61    0    1    0   62
      1 todo   : fails due to above failure
 S32-list/tail.t....................................  24    0    0    0   24
-S32-list/unique.rakudo.jvm.........................  33    0    0    1   34
+S32-list/unique.rakudo.jvm.........................  37    0    0    1   38
      1 skipped: This Seq has already been iterated, RT \#128720
 S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.t.....................................  44    0    0    0   44
@@ -1835,9 +1835,9 @@ S32-str/uc.rakudo.jvm..............................  18    0    1    0   19
 S32-str/unpack.t...................................  24    0    0    0   24
 S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT \#124739
-S32-temporal/Date.t................................ 100    0    0    0  100
+S32-temporal/Date.t................................ 101    0    0    0  101
 S32-temporal/DateTime-Instant-Duration.t...........  55    0    0    0   55
-S32-temporal/DateTime.t............................ 268    0    0    0  268
+S32-temporal/DateTime.t............................ 269    0    0    0  269
 S32-temporal/calendar.t............................ 130    0    0    0  130
 S32-temporal/local.rakudo.jvm......................  16    0    9    0   25
      9 todo   : RT \#122702
@@ -2004,7 +2004,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        7551,  1425,   116,   347,  9439,  9443
-"S03",        5511,   425,    90,   119,  6145,  6163
+"S03",        5514,   425,    90,   119,  6148,  6166
 "S04",        1195,   269,    47,    25,  1536,  1568
 "S05",        4650,  1078,    82,   186,  5996,  6182
 "S06",        1870,   283,    56,    77,  2286,  2332
@@ -2017,17 +2017,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         320,    75,     7,     2,   404,   417
 "S15",           9,    65,     4,    41,   119, 79088
 "S16",         677,     7,    68,   147,   899,   936
-"S17",         632,   260,     1,    22,   915,   964
+"S17",         633,   259,     1,    22,   915,   964
 "S19",          23,     0,     4,     1,    28,    28
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          26,     0,     0,     0,    26,    97
 "S26",        1913,     0,     5,    85,  2003,  2003
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         359,    16,     3,     3,   381,   381
-"S32",        9646,  3116,   197,   226, 13185, 11479
+"S32",        9655,  3124,   197,   225, 13201, 11496
 "int",        1201,    78,    11,    14,  1304,  1297
 "ros",           2,     0,     0,     0,     2,     2
-"total",     38223,  9326,   754,  1534, 49837,127785
+"total",     38236,  9333,   754,  1533, 49856,127805
 ----------------
 Failure summary:
 S02-lexical-conventions/minimal-whitespace.t aborted 17 test(s)
@@ -2231,11 +2231,11 @@ S06-signature/introspection.rakudo.jvm 114 - .perl of (% (:a($)) = { ... }, % (:
 S06-signature/introspection.rakudo.jvm 115 - .perl of ($ is raw, & is raw, % is raw, | is raw) is idempotent
 S06-signature/introspection.rakudo.jvm 116 - .perl of (::T  $a, T $b) is idempotent
 S06-signature/introspection.rakudo.jvm 117 - .perl of (::T T $a, T $b) is idempotent
-S06-signature/introspection.rakudo.jvm 118 - .perl of -> $a { \#`(Block|832357613) ... } is idempotent
-S06-signature/introspection.rakudo.jvm 119 - .perl of ->  { \#`(Block|1392069684) ... } is idempotent
-S06-signature/introspection.rakudo.jvm 120 - .perl of -> $ ($a) { \#`(Block|57352836) ... } is idempotent
-S06-signature/introspection.rakudo.jvm 121 - .perl of -> $ { \#`(Block|1053898818) ... } is idempotent
-S06-signature/introspection.rakudo.jvm 122 - .perl of -> $a ($b) { \#`(Block|165978788) ... } is idempotent
+S06-signature/introspection.rakudo.jvm 118 - .perl of -> $a { \#`(Block|1973562981) ... } is idempotent
+S06-signature/introspection.rakudo.jvm 119 - .perl of ->  { \#`(Block|1283546218) ... } is idempotent
+S06-signature/introspection.rakudo.jvm 120 - .perl of -> $ ($a) { \#`(Block|1787805301) ... } is idempotent
+S06-signature/introspection.rakudo.jvm 121 - .perl of -> $ { \#`(Block|1870552310) ... } is idempotent
+S06-signature/introspection.rakudo.jvm 122 - .perl of -> $a ($b) { \#`(Block|632598928) ... } is idempotent
 S06-signature/introspection.rakudo.jvm aborted 9 test(s)
 S06-signature/optional.t aborted 20 test(s)
 S06-signature/positional-placeholders.t aborted 6 test(s)
@@ -2300,7 +2300,6 @@ S15-literals/numbers.rakudo.jvm aborted 23 test(s)
 S15-unicode-information/uniname.rakudo.jvm aborted 34 test(s)
 S16-io/bare-say.t aborted 6 test(s)
 S16-io/comb.rakudo.jvm aborted 1 test(s)
-S17-promise/basic.t 27 - promises execute asynchronously [try 3]
 S17-promise/start.t aborted 29 test(s)
 S17-supply/batch.t aborted 10 test(s)
 S17-supply/do.t aborted 4 test(s)
@@ -2336,6 +2335,7 @@ S32-array/splice.rakudo.jvm aborted 304 test(s)
 S32-array/unshift.t aborted 5 test(s)
 S32-exceptions/misc.rakudo.jvm aborted 407 test(s)
 S32-hash/adverbs.t aborted 1105 test(s)
+S32-io/IO-Socket-Async.rakudo.jvm aborted 6 test(s)
 S32-io/io-path-cygwin.rakudo.jvm aborted 14 test(s)
 S32-io/io-path-unix.rakudo.jvm aborted 13 test(s)
 S32-io/io-path-win.rakudo.jvm aborted 13 test(s)
@@ -2349,7 +2349,7 @@ S32-list/grep-p.t 13 - did we throws-like X::Match::Bool?
 S32-list/grep-p.t 14 - did we throws-like X::Match::Bool?
 S32-list/grep-v.t 13 - did we throws-like X::Match::Bool?
 S32-list/grep-v.t 14 - did we throws-like X::Match::Bool?
-S32-list/grep.rakudo.jvm aborted 3 test(s)
+S32-list/grep.rakudo.jvm aborted 5 test(s)
 S32-list/rotor.rakudo.jvm aborted 3 test(s)
 S32-list/seq.rakudo.jvm aborted 4 test(s)
 S32-num/complex.t aborted 502 test(s)
