@@ -624,7 +624,7 @@ S04-statements/with.rakudo.jvm.....................  75    0    4    1   80
      2 todo   : $foo is not "$()", but Failure
      2 todo   : $foo is not a Failure, but "$()"
                                                    pass fail todo skip plan
-S05-capture/alias.rakudo.jvm.......................  25    0    3    2   30
+S05-capture/alias.rakudo.jvm.......................  27    0    3    2   32
      2 skipped: Package variable capture RT \#125122
      3 todo   : Package variable capture RT \#125122
 S05-capture/array-alias.rakudo.jvm.................  40    0    0   10   50
@@ -1934,7 +1934,7 @@ integration/advent2013-day09.t.....................  21    0    0    0   21
 integration/advent2013-day10.rakudo.jvm............  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.t.....................  32    0    0    0   32
-integration/advent2013-day14.t.....................  10    0    0    0   10
+integration/advent2013-day14.t.....................   9    1    0    0   10
 integration/advent2013-day15.rakudo.jvm............  28    0    2    0   30
      1 todo   : got (Int) instead of (Bool)
      1 todo   : jvm rounding quirks
@@ -1983,7 +1983,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        8928,     0,   137,   401,  9466,  9469
 "S03",        5908,     0,   114,   129,  6151,  6169
 "S04",        1438,     0,    65,    33,  1536,  1568
-"S05",        5627,     0,   103,   271,  6001,  6187
+"S05",        5629,     0,   103,   271,  6003,  6189
 "S06",        2122,     0,    69,    96,  2287,  2333
 "S07",         140,     0,     7,     5,   152,   152
 "S09",        2753,     0,    26,    39,  2818,  2818
@@ -2002,9 +2002,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         364,     0,    13,     4,   381,   381
 "S32",       12720,    11,   232,   244, 13207, 11502
-"int",        1282,     0,    13,    15,  1310,  1303
+"int",        1281,     1,    13,    15,  1310,  1303
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47273,    11,   941,  1799, 50024,127867
+"total",     47274,    12,   941,  1799, 50026,127869
 ----------------
 Failure summary:
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
+integration/advent2013-day14.t 2 - quotes example
