@@ -12,7 +12,7 @@ S01-perl-5-integration/eval_lex.rakudo.jvm.........   0    0    0    1    1
      1 skipped: <unknown>
 S01-perl-5-integration/exception_handling.t........   0    0    0    3    3
      3 skipped: no perl 5 support
-S01-perl-5-integration/hash.rakudo.jvm.............   0    0    0    6    6
+S01-perl-5-integration/hash.t......................   0    0    0    6    6
      6 skipped: <unknown>
 S01-perl-5-integration/import.rakudo.jvm...........   0    0    0    3    3
      3 skipped: <unknown>
@@ -708,7 +708,7 @@ S05-match/capturing-contexts.rakudo.jvm............  56    0    4    0   60
      1 todo   : RT #70007
 S05-match/make.t...................................   4    0    0    0    4
 S05-match/non-capturing.t..........................   9    0    0    0    9
-S05-match/perl.rakudo.jvm..........................   4    0    1    5   10
+S05-match/perl.rakudo.jvm..........................   5    0    1    5   11
      4 skipped: <foo::bar> RT \#124745
      1 skipped: RT \#125293 - .perl does not roundtrip as expected - operator is null
      1 todo   : RT #125293 - .perl does not roundtrip as expected
@@ -1308,7 +1308,7 @@ S16-filehandles/mode.t.............................  15    0    0    0   15
 S16-filehandles/open.t.............................   4    0    0    1    5
      1 skipped: open('nonexisting') => undefined is waiting on 'use fatal'
 S16-filehandles/unlink.t...........................   3    0    0    0    3
-S16-io/bare-say.t..................................   7    0    0    0    7
+S16-io/bare-say.t..................................   9    0    0    0    9
 S16-io/basic-open.rakudo.jvm.......................  11    0    1    0   12
      1 todo   : end of file flag is set too early
 S16-io/bom.rakudo.jvm..............................   1    0    9    0   10
@@ -1386,8 +1386,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1988,7 +1987,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        8926,     0,   137,   407,  9470,  9473
 "S03",        5910,     0,   114,   128,  6152,  6170
 "S04",        1438,     0,    65,    33,  1536,  1568
-"S05",        5630,     0,   103,   271,  6004,  6190
+"S05",        5631,     0,   103,   271,  6005,  6191
 "S06",        2125,     0,    70,    96,  2291,  2334
 "S07",         140,     0,     7,     5,   152,   152
 "S09",        2753,     0,    26,    39,  2818,  2818
@@ -1998,7 +1997,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    67,   119, 79088
-"S16",         684,     0,    69,   147,   900,   937
+"S16",         686,     0,    69,   147,   902,   939
 "S17",         875,     0,    15,    25,   915,   964
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
@@ -2009,7 +2008,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12721,    11,   232,   244, 13208, 11503
 "int",        1282,     0,    13,    15,  1310,  1303
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47311,    11,   942,  1804, 50068,127908
+"total",     47314,    11,   942,  1804, 50071,127911
 ----------------
 Failure summary:
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
