@@ -190,7 +190,7 @@ S02-types/anon_block.rakudo.jvm....................  36    0    4    2   42
 S02-types/array-shapes.rakudo.jvm..................  24    0    2    1   27
      1 skipped: array shapes NYI RT \#124502
      2 todo   : code does not die, array shapes RT #124502
-S02-types/array.rakudo.jvm.........................  95    0    4    2  101
+S02-types/array.rakudo.jvm.........................  96    0    4    2  102
      2 skipped: multi-dim arrays NYI RT \#124508
      1 todo   : RT 128005
      1 todo   : bind_pos NYI
@@ -1188,7 +1188,8 @@ S12-meta/grammarhow.t..............................   1    0    0    0    1
 S12-meta/primitives.rakudo.jvm.....................  11    0    6    0   17
      6 todo   : RT #123426
 S12-methods/accessors.t............................   8    0    0    0    8
-S12-methods/attribute-params.t.....................  16    0    0    0   16
+S12-methods/attribute-params.t.....................  16    4    0    0   20
+     4 tests aborted (missing ok/not ok)
 S12-methods/calling_sets.t.........................  38    0    0    0   38
 S12-methods/calling_syntax.t.......................  11    0    0    0   11
 S12-methods/chaining.t.............................  17    0    0    0   17
@@ -1500,7 +1501,7 @@ S29-os/system.rakudo.jvm...........................  20    0   10    1   31
 S32-array/adverbs.rakudo.jvm....................... 599    0    0    7  606
      7 skipped: wrong multi postcircumfix:<[ ]> selected RT \#128123
 S32-array/bool.t...................................  15    0    0    0   15
-S32-array/create.t.................................   6    0    0    0    6
+S32-array/create.t.................................   8    0    0    0    8
 S32-array/delete-adverb-native.t................... 138    0    0    0  138
 S32-array/delete-adverb.t.......................... 218    0    0    0  218
 S32-array/delete.rakudo.jvm........................  31    0    1    0   32
@@ -1518,7 +1519,7 @@ S32-array/pop.rakudo.jvm...........................  35    0    2    0   37
 S32-array/push.t...................................  52    0    0    0   52
 S32-array/rotate.t.................................  29    0    0    0   29
 S32-array/shift.t..................................  33    0    0    0   33
-S32-array/splice.rakudo.jvm........................ 326    0   12    0  338
+S32-array/splice.rakudo.jvm........................ 375    0   12    0  387
     12 todo   : somehow the test causes different typecheck error
 S32-array/unshift.t................................  76    0    0    0   76
 S32-basics/warn.t..................................   7    0    0    0    7
@@ -1533,7 +1534,7 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT \#124907
-S32-exceptions/misc.rakudo.jvm..................... 394    0   13    3  410
+S32-exceptions/misc.rakudo.jvm..................... 394    1   13    3  411
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
      1 skipped: failure assignment still blows up on JVM, RT \#125769
@@ -1715,9 +1716,10 @@ S32-str/capitalize.rakudo.jvm......................  15    0    2    0   17
 S32-str/chomp.rakudo.jvm...........................  32    0    7    0   39
      7 todo   : \r\n not yet handled as grapheme
 S32-str/chop.t.....................................  36    0    0    0   36
-S32-str/comb.rakudo.jvm............................  64    1    2   12   79
+S32-str/comb.rakudo.jvm............................  64    0    2   13   79
      5 skipped: UnwindException
      1 skipped: cannot call match, no signature matches RT \#124738
+     1 skipped: ordbaseat NYI
      6 skipped: weird error, looks like wrong multi is used, RT \#128580
      2 todo   : NFG on JVM RT #124737
 S32-str/contains.t.................................  20    0    0    0   20
@@ -1984,7 +1986,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        8926,     0,   137,   407,  9470,  9473
+"S02",        8927,     0,   137,   407,  9471,  9474
 "S03",        5918,     0,   114,   128,  6160,  6178
 "S04",        1438,     0,    65,    33,  1536,  1568
 "S05",        5631,     0,   103,   271,  6005,  6191
@@ -1993,7 +1995,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2753,     0,    26,    39,  2818,  2818
 "S10",         137,     0,     8,     1,   146,   203
 "S11",         170,     0,     7,    11,   188,   197
-"S12",        1640,     0,    38,   133,  1811,  1860
+"S12",        1640,     4,    38,   133,  1815,  1864
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    67,   119, 79088
@@ -2005,11 +2007,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1913,     0,     5,    85,  2003,  2003
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         402,     0,    13,     4,   419,   419
-"S32",       12723,    12,   232,   244, 13211, 11506
+"S32",       12774,    12,   232,   245, 13263, 11558
 "int",        1282,     0,    13,    15,  1310,  1303
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47329,    12,   942,  1804, 50087,127927
+"total",     47381,    16,   942,  1805, 50144,127984
 ----------------
 Failure summary:
+S12-methods/attribute-params.t aborted 4 test(s)
+S32-exceptions/misc.rakudo.jvm 411 - did we throws-like X::TypeCheck::Binding?
 S32-io/socket-recv-vs-read.t aborted 11 test(s)
-S32-str/comb.rakudo.jvm 79 - .comb(/:m <[o]>/) construct does not die
