@@ -1170,7 +1170,7 @@ S12-introspection/WHAT.rakudo.jvm..................  32    0    3    2   37
      2 skipped: Foo[Int].new on scalars fails
      1 todo   : Foo[Int,Str].new on scalars fails
      2 todo   : Foo[Int].new on scalars fails
-S12-introspection/attributes.rakudo.jvm............  25    0    0    5   30
+S12-introspection/attributes.rakudo.jvm............  26    0    0    5   31
      5 skipped: :tree NYI for .^attributes RT \#125014
 S12-introspection/can.t............................  29    0    0    0   29
 S12-introspection/definite.t.......................   7    0    0    0    7
@@ -1188,8 +1188,8 @@ S12-meta/grammarhow.t..............................   1    0    0    0    1
 S12-meta/primitives.rakudo.jvm.....................  11    0    6    0   17
      6 todo   : RT #123426
 S12-methods/accessors.t............................   8    0    0    0    8
-S12-methods/attribute-params.t.....................  16    4    0    0   20
-     4 tests aborted (missing ok/not ok)
+S12-methods/attribute-params.rakudo.jvm............  16    0    0    4   20
+     4 skipped: BadReferenceRuntimeException: Cannot access a native attribute as a reference attribute
 S12-methods/calling_sets.t.........................  38    0    0    0   38
 S12-methods/calling_syntax.t.......................  11    0    0    0   11
 S12-methods/chaining.t.............................  17    0    0    0   17
@@ -1387,7 +1387,8 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1534,12 +1535,13 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT \#124907
-S32-exceptions/misc.rakudo.jvm..................... 394    1   13    3  411
+S32-exceptions/misc.rakudo.jvm..................... 394    0   14    3  411
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
      1 skipped: failure assignment still blows up on JVM, RT \#125769
      3 todo   : NullPointerException instead of "XYZ without loop construct"
      8 todo   : awesome error message is not printed because these are parsed differently
+     1 todo   : dies with X::AdHoc -- __P6opaque__77@3dc2adf9 in sub-signature of parameter @array
      1 todo   : good error message, but not the one that we are expecting
      1 todo   : parsing regression RT #124679
 S32-hash/adverbs.t.................................1128    0    0    0 1128
@@ -1598,8 +1600,7 @@ S32-io/pipe.t......................................  14    0    0    0   14
 S32-io/rename.t....................................  29    0    0    0   29
 S32-io/slurp.t.....................................  17    0    0    0   17
 S32-io/socket-accept-and-working-threads.t.........  10    0    0    0   10
-S32-io/socket-recv-vs-read.t.......................   0   11    0    0   11
-    11 tests aborted (missing ok/not ok)
+S32-io/socket-recv-vs-read.t.......................  11    0    0    0   11
 S32-io/spurt.t.....................................  36    0    0    0   36
 S32-list/categorize.t..............................  28    0    0    0   28
 S32-list/classify.rakudo.jvm.......................  37    0    1    3   41
@@ -1995,24 +1996,21 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2753,     0,    26,    39,  2818,  2818
 "S10",         137,     0,     8,     1,   146,   203
 "S11",         170,     0,     7,    11,   188,   197
-"S12",        1640,     4,    38,   133,  1815,  1864
+"S12",        1641,     0,    38,   137,  1816,  1865
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    67,   119, 79088
 "S16",         686,     0,    69,   147,   902,   939
-"S17",         875,     0,    15,    25,   915,   964
+"S17",         875,     0,    15,    25,   915,   965
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          26,     0,     0,     0,    26,    97
 "S26",        1913,     0,     5,    85,  2003,  2003
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         402,     0,    13,     4,   419,   419
-"S32",       12774,    12,   232,   245, 13263, 11558
+"S32",       12785,     0,   233,   245, 13263, 11558
 "int",        1282,     0,    13,    15,  1310,  1303
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47381,    16,   942,  1805, 50144,127984
+"total",     47393,     0,   943,  1809, 50145,127986
 ----------------
-Failure summary:
-S12-methods/attribute-params.t aborted 4 test(s)
-S32-exceptions/misc.rakudo.jvm 411 - did we throws-like X::TypeCheck::Binding?
-S32-io/socket-recv-vs-read.t aborted 11 test(s)
+No failures!
