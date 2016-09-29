@@ -78,7 +78,7 @@ S02-literals/pod.rakudo.jvm........................   0    0    0    5    5
      2 skipped: postcircumfix:<{ }> not defined for type Array RT \#125130
 S02-literals/quoting-unicode.t.....................  90    0    0    0   90
 S02-literals/quoting.t............................. 185    0    0    0  185
-S02-literals/radix.rakudo.jvm...................... 149    2    1    3  155
+S02-literals/radix.rakudo.jvm...................... 151    0    1    3  155
      1 skipped: Error while compiling: Radix 0 out of range (allowed: 2..36)
      1 skipped: RT \#123862 - negative radix
      1 skipped: Really?!
@@ -87,7 +87,7 @@ S02-literals/string-interpolation.t................  40    0    0    0   40
 S02-literals/sub-calls.t...........................  20    0    0    0   20
 S02-literals/subscript.t...........................   2    0    0    0    2
 S02-literals/types.t...............................   7    0    0    0    7
-S02-literals/underscores.t.........................  15    4    0    0   19
+S02-literals/underscores.t.........................  19    0    0    0   19
 S02-literals/version.rakudo.jvm....................  28    0    3    0   31
      3 todo   : trailing zeroes fail RT #124562
 S02-magicals/78258.t...............................   1    0    0    0    1
@@ -251,7 +251,7 @@ S02-types/keyhash.rakudo.jvm.......................   0    0    0   59   59
     59 skipped: 'is ObjectType' NYI RT \#124490
 S02-types/lazy-lists.t.............................  23    0    0    0   23
 S02-types/list.t...................................  67    0    0    0   67
-S02-types/lists.rakudo.jvm.........................  28    1    0    3   32
+S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding RT \#124494
 S02-types/mix.rakudo.jvm........................... 191    0    2    0  193
      1 todo   : ?
@@ -282,7 +282,7 @@ S02-types/nested_pairs.t...........................  14    0    0    0   14
 S02-types/nil.rakudo.jvm...........................  46    0    5    1   52
      1 skipped: triage
      5 todo   : triage
-S02-types/num.t....................................  65    1    0    0   66
+S02-types/num.t....................................  66    0    0    0   66
 S02-types/pair.rakudo.jvm.......................... 177    0    1    0  178
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
@@ -340,7 +340,7 @@ S03-metaops/cross.rakudo.jvm.......................  76    0    1    0   77
      1 todo   : code does not die
 S03-metaops/eager-hyper.rakudo.jvm.................   7    0    1    0    8
      1 todo   : hyper NYI entirely, I guess RT #124517
-S03-metaops/hyper.rakudo.jvm....................... 392    3    1    7  403
+S03-metaops/hyper.rakudo.jvm....................... 395    0    1    7  403
      1 skipped: EVAL(Buf) RT \#122256
      5 skipped: RT \#126528
      1 skipped: doesn't seem to see the nodal
@@ -722,7 +722,7 @@ S05-metachars/line-anchors.rakudo.jvm..............  23    0    1    0   24
      1 todo   : NFG
 S05-metachars/newline.t............................  15    0    0    0   15
 S05-metachars/tilde.t..............................  29    0    0    0   29
-S05-metasyntax/angle-brackets.rakudo.jvm...........  68    1    2   20   91
+S05-metasyntax/angle-brackets.rakudo.jvm...........  69    0    2   20   91
      1 skipped: <&foo()> NYI RT \#124523
     11 skipped: <*literal> RT \#124525
      1 skipped: <test()> NYI RT \#124519
@@ -818,15 +818,15 @@ S05-modifier/samemark.rakudo.jvm...................   0    0    0    8    8
 S05-modifier/sigspace.t............................  16    0    0    0   16
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  13    0    0    0   13
-S05-substitution/subst.rakudo.jvm.................. 135    3    2   43  183
+S05-substitution/subst.rakudo.jvm.................. 137    0    2   44  183
      6 skipped: "ordbaseat NYI" RT \#125753
      1 skipped: RT \#114388 -- No such method 'subst-mutate' for invocant of type 'Any'
     22 skipped: RT \#124279
      4 skipped: UnwindException RT \#124279
+     1 skipped: at least one of the sub-tests leads to an UnwindException
     10 skipped: samemark NYI
      1 todo   : Code does not die
      1 todo   : be smarter about constant detection
-     3 tests aborted (missing ok/not ok)
 S05-syntactic-categories/new-symbols.rakudo.jvm....   0    0    0    8    8
      8 skipped: RT \#126142 - NYI
 S05-transliteration/79778.t........................   1    0    0    0    1
@@ -848,8 +848,7 @@ S06-advanced/return.rakudo.jvm.....................  97    0    1    0   98
      1 todo   : RT #61732
 S06-advanced/stub.rakudo.jvm.......................  12    0    0    1   13
      1 skipped: supersede NYI
-S06-advanced/wrap.rakudo.jvm.......................  81    0    4    1   86
-     1 skipped: control operator crossed continuation barrier RT \#127967
+S06-advanced/wrap.rakudo.jvm.......................  82    0    4    0   86
      1 todo   : ?
      1 todo   : callwith RT #124653
      1 todo   : temp and wrap
@@ -1053,7 +1052,7 @@ S09-typed-arrays/native-str.rakudo.jvm............. 157    0    1    2  160
      1 todo   : RT #127756
 S09-typed-arrays/native.t..........................   3    0    0    0    3
                                                    pass fail todo skip plan
-S10-packages/basic.rakudo.jvm......................  79    1    0    1   81
+S10-packages/basic.rakudo.jvm......................  80    0    0    1   81
      1 skipped: RT \#59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
 S10-packages/precompilation.rakudo.jvm.............  43    0    8    0   51
@@ -1093,7 +1092,7 @@ S11-modules/require.rakudo.jvm.....................  25    0    1    1   27
      1 todo   : creation of stub package symbol NYI RT #125083
 S11-repository/curli-install.t.....................  18    0    0    0   18
                                                    pass fail todo skip plan
-S12-attributes/class.t.............................  22    1    0    0   23
+S12-attributes/class.t.............................  23    0    0    0   23
 S12-attributes/clone.t.............................  42    0    0    0   42
 S12-attributes/defaults.t..........................  34    0    0    0   34
 S12-attributes/delegation.t........................  65    0    0    0   65
@@ -1176,7 +1175,7 @@ S12-introspection/attributes.rakudo.jvm............  26    0    0    5   31
      5 skipped: :tree NYI for .^attributes RT \#125014
 S12-introspection/can.t............................  29    0    0    0   29
 S12-introspection/definite.t.......................   7    0    0    0    7
-S12-introspection/meta-class.rakudo.jvm............  17    0    0    0   17
+S12-introspection/meta-class.t.....................  17    0    0    0   17
 S12-introspection/methods.rakudo.jvm...............  45    0    0   12   57
      8 skipped: nom regression RT \#125011
      2 skipped: nom regression RT \#125012
@@ -1226,7 +1225,7 @@ S12-methods/trusts.t...............................   4    0    0    0    4
 S12-methods/typed-attributes.t.....................   7    0    0    0    7
 S12-methods/what.t.................................  33    0    0    0   33
 S12-subset/multi-dispatch.t........................   6    0    0    0    6
-S12-subset/subtypes.rakudo.jvm.....................  82    0    1    0   83
+S12-subset/subtypes.rakudo.jvm.....................  84    0    1    0   85
      1 todo   : mixin of role does not work correctly
                                                    pass fail todo skip plan
 S13-overloading/metaoperators.t....................  11    0    0    0   11
@@ -1240,9 +1239,8 @@ S14-roles/basic.rakudo.jvm.........................  47    0    1    3   51
      3 skipped: RT \#67768
      1 todo   : Type check failed in assignment to $x; expected C but got Int
 S14-roles/bool.t...................................   3    0    0    0    3
-S14-roles/composition.rakudo.jvm...................  46    0    1    2   49
+S14-roles/composition.rakudo.jvm...................  47    0    0    2   49
      2 skipped: diamond composition RT \#124749
-     1 todo   : RT #64766
 S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
 S14-roles/instantiation.t..........................  19    0    0    0   19
@@ -1260,8 +1258,7 @@ S14-roles/parameterized-type.t.....................  32    0    0    0   32
 S14-roles/stubs.t..................................  28    0    0    0   28
 S14-roles/submethods.t.............................   4    0    0    0    4
 S14-traits/attributes.t............................   8    0    0    0    8
-S14-traits/routines.rakudo.jvm.....................  14    0    2    0   16
-     1 todo   : RT #129375
+S14-traits/routines.rakudo.jvm.....................  15    0    1    0   16
      1 todo   : trait mod / .wrap interaction
                                                    pass fail todo skip plan
 S15-literals/identifiers.rakudo.jvm................   5    0    1    1    7
@@ -1283,11 +1280,12 @@ S15-string-types/Str.rakudo.jvm....................   1    0    2    1    4
      1 skipped: :nfg adverb NYI RT \#124991
      1 todo   : NFG on JVM RT #124992
      1 todo   : NFG on JVM RT #124994
-S15-unicode-information/uniname.rakudo.jvm.........  18    0    2   19   39
+S15-unicode-information/uniname.rakudo.jvm.........  18    0    2   20   40
      5 skipped: :either NYI RT \#125070
      5 skipped: :either and :one NYI RT \#one NYI RT\#:125071
      5 skipped: :one NYI RT \#125069
      4 skipped: Method 'NFC' not found for invocant of class 'Str' RT \#124500
+     1 skipped: No Unicode 9 yet
      1 todo   : RT #122470
      1 todo   : RT #122471
                                                    pass fail todo skip plan
@@ -1356,7 +1354,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  27    0    0    0   27
+S17-promise/basic.t................................  28    0    0    0   28
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  47    0    0    0   47
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -1391,8 +1389,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1518,12 +1515,12 @@ S32-array/keys_values.t............................   8    0    0    0    8
 S32-array/kv.t.....................................  18    0    0    0   18
 S32-array/pairs.t..................................  14    0    0    0   14
 S32-array/perl.t...................................   6    0    0    0    6
-S32-array/pop.rakudo.jvm...........................  34    1    2    0   37
+S32-array/pop.rakudo.jvm...........................  35    0    2    0   37
      1 todo   : RT #111720
      1 todo   : code does not die
 S32-array/push.t...................................  52    0    0    0   52
 S32-array/rotate.t.................................  29    0    0    0   29
-S32-array/shift.t..................................  32    1    0    0   33
+S32-array/shift.t..................................  33    0    0    0   33
 S32-array/splice.rakudo.jvm........................ 375    0   12    0  387
     12 todo   : somehow the test causes different typecheck error
 S32-array/unshift.t................................  76    0    0    0   76
@@ -1540,7 +1537,7 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT \#124907
-S32-exceptions/misc.rakudo.jvm..................... 400    5   14    3  422
+S32-exceptions/misc.rakudo.jvm..................... 405    0   14    3  422
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
      1 skipped: failure assignment still blows up on JVM, RT \#125769
@@ -1748,7 +1745,7 @@ S32-str/indent.t...................................  62    0    0    0   62
 S32-str/index.t....................................  46    0    0    0   46
 S32-str/indices.t..................................  24    0    0    0   24
 S32-str/lc.t.......................................  18    0    0    0   18
-S32-str/length.rakudo.jvm..........................  27    1    1    0   29
+S32-str/length.rakudo.jvm..........................  28    0    1    0   29
      1 todo   : .codes weirdness on JVM, possibly NYI? RT #124742
 S32-str/lines.rakudo.jvm...........................  38    0   10    0   48
     10 todo   : \r\n not yet handled as grapheme
@@ -1756,7 +1753,7 @@ S32-str/numeric.rakudo.jvm......................... 167    0    5    0  172
      5 todo   : Unsure of what val() should accept
 S32-str/ords.t.....................................   8    0    0    0    8
 S32-str/pack.t.....................................  14    0    0    0   14
-S32-str/pos.t......................................   1    1    0    0    2
+S32-str/pos.t......................................   2    0    0    0    2
 S32-str/rindex.t...................................  45    0    0    0   45
 S32-str/samecase.t.................................   8    0    0    0    8
 S32-str/samemark.rakudo.jvm........................   0    0    0    9    9
@@ -1828,7 +1825,7 @@ S32-str/uc.rakudo.jvm..............................  18    0    1    0   19
 S32-str/unpack.t...................................  24    0    0    0   24
 S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT #124739
-S32-temporal/Date.t................................ 101    0    0    0  101
+S32-temporal/Date.t................................ 104    0    0    0  104
 S32-temporal/DateTime-Instant-Duration.t...........  55    0    0    0   55
 S32-temporal/DateTime.t............................ 269    0    0    0  269
 S32-temporal/calendar.t............................ 130    0    0    0  130
@@ -1985,7 +1982,7 @@ integration/say-crash.t............................   4    0    0    0    4
 integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.rakudo.jvm................  26    1    2    1   30
+integration/weird-errors.rakudo.jvm................  27    0    2    1   30
      1 skipped: RT127208
      1 todo   : Feels like a bogus test in light of recent changes
      1 todo   : Unknown encoding 'utf8-c8' RT #127878
@@ -1995,55 +1992,30 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        8936,     8,   137,   407,  9488,  9491
-"S03",        5918,     3,   114,   128,  6163,  6181
+"S02",        8944,     0,   137,   407,  9488,  9491
+"S03",        5921,     0,   114,   128,  6163,  6181
 "S04",        1439,     0,    65,    33,  1537,  1569
-"S05",        5630,     4,   103,   271,  6008,  6194
-"S06",        2126,     0,    70,    96,  2292,  2335
+"S05",        5633,     0,   103,   272,  6008,  6194
+"S06",        2127,     0,    70,    95,  2292,  2335
 "S07",         140,     0,     7,     5,   152,   152
 "S09",        2753,     0,    26,    39,  2818,  2818
-"S10",         136,     1,     8,     1,   146,   203
+"S10",         137,     0,     8,     1,   146,   203
 "S11",         170,     0,     7,    11,   188,   197
-"S12",        1640,     1,    38,   137,  1816,  1865
+"S12",        1643,     0,    38,   137,  1818,  1867
 "S13",          62,     0,     0,     0,    62,    72
-"S14",         388,     0,    11,     5,   404,   417
-"S15",          45,     0,     7,    67,   119, 79088
+"S14",         390,     0,     9,     5,   404,   417
+"S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         877,     0,    15,    25,   917,   969
+"S17",         878,     0,    15,    25,   918,   970
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          27,     0,     0,     0,    27,    98
 "S26",        1913,     0,     5,    85,  2003,  2003
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         402,     0,    13,     4,   419,   419
-"S32",       12892,     9,   233,   245, 13379, 11674
-"int",        1281,     1,    13,    15,  1310,  1303
+"S32",       12904,     0,   233,   245, 13382, 11677
+"int",        1282,     0,    13,    15,  1310,  1303
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47509,    27,   945,  1809, 50290,128133
+"total",     47544,     0,   943,  1810, 50297,128140
 ----------------
-Failure summary:
-S02-literals/radix.rakudo.jvm 112 - 2.e123 parses as method call
-S02-literals/radix.rakudo.jvm 113 - 2.foo  parses as method call
-S02-literals/underscores.t 6 - Underscore after . fails
-S02-literals/underscores.t 17 - 2._foo parses as method call
-S02-literals/underscores.t 18 - 2._123 parses as method call
-S02-literals/underscores.t 19 - 2._23  parses as method call
-S02-types/lists.rakudo.jvm 22 - call to user-declared sub in List:: class dies
-S02-types/num.t 61 - single underscores are not ok directly after the dot
-S03-metaops/hyper.rakudo.jvm 68 - wordy postfix operator: dotted form not allowed
-S03-metaops/hyper.rakudo.jvm 69 - wordy postfix operator, ASCII: dotted form not allowed
-S03-metaops/hyper.rakudo.jvm 74 - dotted form of postfix:<i> fails
-S05-metasyntax/angle-brackets.rakudo.jvm 3 - <...> without whitespace calls a method (not quote words)
-S05-substitution/subst.rakudo.jvm aborted 3 test(s)
-S10-packages/basic.rakudo.jvm 5 - Non-existent method with package
-S12-attributes/class.t 21 - cannot declare attribute inside of an EVAL in class
-S32-array/pop.rakudo.jvm 31 - .pop should not work on scalars
-S32-array/shift.t 29 - .shift should not work on scalars
-S32-exceptions/misc.rakudo.jvm 207 - did we throws-like X::Method::NotFound?
-S32-exceptions/misc.rakudo.jvm 210 - did we throws-like X::Method::NotFound?
-S32-exceptions/misc.rakudo.jvm 232 - did we throws-like X::Method::NotFound?
-S32-exceptions/misc.rakudo.jvm 282 - did we throws-like X::Method::NotFound?
-S32-exceptions/misc.rakudo.jvm 291 - did we throws-like X::Method::NotFound?
-S32-str/length.rakudo.jvm 1 - Str.length properly unimplemented
-S32-str/pos.t 1 - Str.pos superseeded by $/.to
-integration/weird-errors.rakudo.jvm 8 - Typed, non-internal exception
+No failures!
