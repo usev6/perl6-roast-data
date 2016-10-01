@@ -984,7 +984,7 @@ S06-signature/type-capture.rakudo.jvm..............  10    0    0    2   12
      2 skipped: Method 'T' not found for invocant of class 'Rat', RT \#126383
 S06-signature/types.rakudo.jvm.....................  11    0    3    0   14
      1 todo   : Constraint type check failed for parameter 'null'
-     2 todo   : no mention of type 'Mu', yet
+     2 todo PASSED: no mention of type 'Mu', yet
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
 S06-signature/unspecified.t........................  18    0    0    0   18
@@ -1354,7 +1354,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  27    1    0    0   28
+S17-promise/basic.t................................  28    0    0    0   28
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  47    0    0    0   47
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -1677,8 +1677,8 @@ S32-num/expmod.t................................... 117    0    0    0  117
 S32-num/fatrat.rakudo.jvm.......................... 279    0    1    2  282
      2 skipped: FatRat arith + type objects RT \#124814
      1 todo   : unknown RT #124815
-S32-num/int.rakudo.jvm.............................   0  108    0    0  108
-   108 tests aborted (missing ok/not ok)
+S32-num/int.rakudo.jvm............................. 105    0    3    0  108
+     3 todo   : Inf and NaN NYI for Int RT #124818
 S32-num/is-prime.t.................................  39    0    0    0   39
 S32-num/log.rakudo.jvm.............................  28    0    1    0   29
      1 todo   : HugeInt.log RT #124821
@@ -2007,18 +2007,16 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         390,     0,     9,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         877,     1,    15,    25,   918,   970
+"S17",         878,     0,    15,    25,   918,   970
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          27,     0,     0,     0,    27,    98
 "S26",        1913,     0,     5,    85,  2003,  2003
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         402,     0,    13,     4,   419,   419
-"S32",       12801,   108,   230,   245, 13384, 11678
+"S32",       12906,     0,   233,   245, 13384, 11678
 "int",        1282,     0,    13,    15,  1310,  1303
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47440,   109,   940,  1810, 50299,128141
+"total",     47546,     0,   943,  1810, 50299,128141
 ----------------
-Failure summary:
-S17-promise/basic.t 26 - promises execute asynchronously [try 2]
-S32-num/int.rakudo.jvm aborted 108 test(s)
+No failures!
