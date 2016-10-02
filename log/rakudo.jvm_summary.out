@@ -333,7 +333,7 @@ S03-feeds/basic.rakudo.jvm.........................   9    0    6    8   23
      1 todo   : isn't lazy
 S03-junctions/associative.t........................  10    0    0    0   10
 S03-junctions/autothreading.rakudo.jvm............. 103    0    1    0  104
-     1 todo   : got (Int) instead of (Bool)
+     1 todo   : got (Int) instead of (Bool) RT #129782
 S03-junctions/boolean-context.t....................  74    0    0    0   74
 S03-junctions/misc.t............................... 143    0    0    0  143
 S03-metaops/cross.rakudo.jvm.......................  76    0    1    0   77
@@ -384,10 +384,10 @@ S03-operators/bag.rakudo.jvm....................... 110    0   18    0  128
      8 todo   : Rakudo update in progress, but not done yet RT #124529
      4 todo   : Wrong answer at the moment
 S03-operators/basic-types.rakudo.jvm...............  18    0    1    0   19
-     1 todo   : got (Int) instead of (Bool)
+     1 todo   : got (Int) instead of (Bool) RT #129782
 S03-operators/bit.t................................  38    0    0    0   38
 S03-operators/boolean-bitwise.rakudo.jvm...........  43    0    2    0   45
-     2 todo   : got (Int) instead of (Bool)
+     2 todo   : got (Int) instead of (Bool) RT #129782
 S03-operators/brainos.t............................   9    0    0    0    9
 S03-operators/buf.t................................ 133    0    0    0  133
 S03-operators/chained-declarators.t................   5    0    0    0    5
@@ -982,9 +982,8 @@ S06-signature/tree-node-parameters.rakudo.jvm......  16    0    0    4   20
      4 skipped: signature binding of return values NYI RT \#124945
 S06-signature/type-capture.rakudo.jvm..............  10    0    0    2   12
      2 skipped: Method 'T' not found for invocant of class 'Rat', RT \#126383
-S06-signature/types.rakudo.jvm.....................  11    0    3    0   14
+S06-signature/types.rakudo.jvm.....................  13    0    1    0   14
      1 todo   : Constraint type check failed for parameter 'null'
-     2 todo PASSED: no mention of type 'Mu', yet
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
 S06-signature/unspecified.t........................  18    0    0    0   18
@@ -1521,14 +1520,13 @@ S32-array/pop.rakudo.jvm...........................  35    0    2    0   37
 S32-array/push.t...................................  52    0    0    0   52
 S32-array/rotate.t.................................  29    0    0    0   29
 S32-array/shift.t..................................  33    0    0    0   33
-S32-array/splice.rakudo.jvm........................ 375    0   12    0  387
+S32-array/splice.rakudo.jvm........................ 380    0   12    0  392
     12 todo   : somehow the test causes different typecheck error
 S32-array/unshift.t................................  76    0    0    0   76
 S32-basics/pairup.t................................   1    0    0    0    1
 S32-basics/warn.t..................................   7    0    0    0    7
-S32-basics/xxKEY.rakudo.jvm........................ 125    0    4    0  129
+S32-basics/xxKEY.rakudo.jvm........................ 127    0    2    0  129
      2 todo   : binding to a key in an undefine doesn't work?
-     2 todo   : still mentions "value" instead of "Int"
 S32-basics/xxPOS.rakudo.jvm........................  55    0    0    5   60
      5 skipped: No such method 'BIND-POS' for invocant of type 'Any' RT \#124766
 S32-container/buf.t................................  18    0    0    0   18
@@ -1708,7 +1706,7 @@ S32-num/stringify.rakudo.jvm....................... 108    0    0    4  112
      4 skipped: big stuff RT \#124796
 S32-num/unpolar.t.................................. 199    0    0    0  199
 S32-scalar/defined.rakudo.jvm......................  55    0    1    0   56
-     1 todo   : got (Int) instead of (Bool)
+     1 todo   : got (Int) instead of (Bool) RT #129782
 S32-scalar/perl.rakudo.jvm.........................   5    0    2    0    7
      2 todo   : cannot roundtrip constrained scalars yet
 S32-scalar/undef.rakudo.jvm........................  73    0    2   16   91
@@ -1949,7 +1947,7 @@ integration/advent2013-day10.rakudo.jvm............  43    0    1    0   44
 integration/advent2013-day12.t.....................  32    0    0    0   32
 integration/advent2013-day14.t.....................  10    0    0    0   10
 integration/advent2013-day15.rakudo.jvm............  28    0    2    0   30
-     1 todo   : got (Int) instead of (Bool)
+     1 todo   : got (Int) instead of (Bool) RT #129782
      1 todo   : jvm rounding quirks
 integration/advent2013-day18.t.....................  10    0    0    0   10
 integration/advent2013-day19.t.....................   4    0    0    0    4
@@ -1997,7 +1995,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        5921,     0,   114,   128,  6163,  6181
 "S04",        1439,     0,    65,    33,  1537,  1569
 "S05",        5633,     0,   103,   272,  6008,  6194
-"S06",        2127,     0,    70,    95,  2292,  2335
+"S06",        2129,     0,    68,    95,  2292,  2335
 "S07",         140,     0,     7,     5,   152,   152
 "S09",        2753,     0,    26,    39,  2818,  2818
 "S10",         137,     0,     8,     1,   146,   203
@@ -2014,9 +2012,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1913,     0,     5,    85,  2003,  2003
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         402,     0,    13,     4,   419,   419
-"S32",       12906,     0,   233,   245, 13384, 11678
+"S32",       12913,     0,   231,   245, 13389, 11683
 "int",        1282,     0,    13,    15,  1310,  1303
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47546,     0,   943,  1810, 50299,128141
+"total",     47555,     0,   939,  1810, 50304,128146
 ----------------
 No failures!
