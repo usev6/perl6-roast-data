@@ -927,7 +927,7 @@ S06-other/main-usage.rakudo.jvm....................  22    0    7    0   29
      1 todo   : nom regression RT #124667
      1 todo   : nom regression RT #124668
 S06-other/main.t...................................   7    0    0    0    7
-S06-other/misc.t...................................  12    0    0    0   12
+S06-other/misc.t...................................  16    0    0    0   16
 S06-other/pairs-as-lvalues.rakudo.jvm..............   3    0    2    0    5
      2 todo   : NYI RT #124660
 S06-parameters/smiley.rakudo.jvm...................  18    0    0   17   35
@@ -1388,7 +1388,8 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1995,7 +1996,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        5921,     0,   114,   128,  6163,  6181
 "S04",        1439,     0,    65,    33,  1537,  1569
 "S05",        5633,     0,   103,   272,  6008,  6194
-"S06",        2129,     0,    68,    95,  2292,  2335
+"S06",        2133,     0,    68,    95,  2296,  2339
 "S07",         140,     0,     7,     5,   152,   152
 "S09",        2753,     0,    26,    39,  2818,  2818
 "S10",         137,     0,     8,     1,   146,   203
@@ -2015,6 +2016,6 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12913,     0,   231,   245, 13389, 11683
 "int",        1282,     0,    13,    15,  1310,  1303
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47555,     0,   939,  1810, 50304,128146
+"total",     47559,     0,   939,  1810, 50308,128150
 ----------------
 No failures!
