@@ -1024,7 +1024,7 @@ S09-typed-arrays/arrays.rakudo.jvm.................  79    0    2    3   84
      1 skipped: need parameterized Lists
      1 skipped: type on our-variables RT \#124677
      2 todo   : nested typechecks are borked
-S09-typed-arrays/hashes.t..........................  41    2    0    0   43
+S09-typed-arrays/hashes.t..........................  43    0    0    0   43
 S09-typed-arrays/native-decl.t.....................  10    0    0    0   10
 S09-typed-arrays/native-int.rakudo.jvm.............1597    0   13    0 1610
     10 todo   : RT #127756
@@ -1348,7 +1348,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT \#124775
      3 skipped: waiting for new '.loads' semantics RT \#124776
      2 skipped: waiting for new '.loads' semantics RT \#124777
-S17-scheduler/every.t..............................  20    0    0    0   20
+S17-scheduler/every.t..............................  19    1    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
@@ -1372,8 +1372,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1982,7 +1981,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S05",        5637,     0,   103,   268,  6008,  6194
 "S06",        2136,     0,    68,    95,  2299,  2342
 "S07",         140,     0,     7,     5,   152,   152
-"S09",        2753,     2,    26,    39,  2820,  2820
+"S09",        2755,     0,    26,    39,  2820,  2820
 "S10",         137,     0,     8,     1,   146,   203
 "S11",         170,     0,     7,    11,   188,   197
 "S12",        1647,     0,    37,   137,  1821,  1870
@@ -1990,7 +1989,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         878,     0,    15,    25,   918,   970
+"S17",         877,     1,    15,    25,   918,   970
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -2000,8 +1999,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       12985,     0,   232,   245, 13462, 11756
 "int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47669,     2,   921,  1799, 50391,128233
+"total",     47670,     1,   921,  1799, 50391,128233
 ----------------
 Failure summary:
-S09-typed-arrays/hashes.t 42 - .antipairs on typed Hash
-S09-typed-arrays/hashes.t 43 - .invert on typed Hash
+S17-scheduler/every.t 2 - Cue with :every schedules repeatedly
