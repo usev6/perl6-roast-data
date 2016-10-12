@@ -478,8 +478,8 @@ S03-junctions/boolean-context.t....................Can't open perl script "eval-
    0   74    0    0   74
     74 tests aborted (missing ok/not ok)
 S03-junctions/misc.t...............................Can't open perl script "eval-client.pl": No such file or directory
-   0  143    0    0  143
-   143 tests aborted (missing ok/not ok)
+   0  144    0    0  144
+   144 tests aborted (missing ok/not ok)
 S03-metaops/cross.rakudo.jvm.......................Can't open perl script "eval-client.pl": No such file or directory
    0   77    0    0   77
     77 tests aborted (missing ok/not ok)
@@ -652,8 +652,8 @@ S03-operators/relational.rakudo.jvm................Can't open perl script "eval-
    0  171    0    0  171
    171 tests aborted (missing ok/not ok)
 S03-operators/repeat.t.............................Can't open perl script "eval-client.pl": No such file or directory
-   0   47    0    0   47
-    47 tests aborted (missing ok/not ok)
+   0   52    0    0   52
+    52 tests aborted (missing ok/not ok)
 S03-operators/scalar-assign.t......................Can't open perl script "eval-client.pl": No such file or directory
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -1082,8 +1082,8 @@ S05-match/perl.rakudo.jvm..........................Can't open perl script "eval-
    0   11    0    0   11
     11 tests aborted (missing ok/not ok)
 S05-match/positions.t..............................Can't open perl script "eval-client.pl": No such file or directory
-   0   10    0    0   10
-    10 tests aborted (missing ok/not ok)
+   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
 S05-metachars/closure.rakudo.jvm...................Can't open perl script "eval-client.pl": No such file or directory
    0   12    0    0   12
     12 tests aborted (missing ok/not ok)
@@ -2545,8 +2545,8 @@ S32-hash/kv.t......................................Can't open perl script "eval-
    0   27    0    0   27
     27 tests aborted (missing ok/not ok)
 S32-hash/map.t.....................................Can't open perl script "eval-client.pl": No such file or directory
-   0    3    0    0    3
-     3 tests aborted (missing ok/not ok)
+   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
 S32-hash/pairs.t...................................Can't open perl script "eval-client.pl": No such file or directory
    0   26    0    0   26
     26 tests aborted (missing ok/not ok)
@@ -2953,14 +2953,14 @@ S32-str/words.rakudo.jvm...........................Can't open perl script "eval-
    0   16    0    0   16
     16 tests aborted (missing ok/not ok)
 S32-temporal/Date.t................................Can't open perl script "eval-client.pl": No such file or directory
-   0  109    0    0  109
-   109 tests aborted (missing ok/not ok)
+   0  113    0    0  113
+   113 tests aborted (missing ok/not ok)
 S32-temporal/DateTime-Instant-Duration.t...........Can't open perl script "eval-client.pl": No such file or directory
    0   61    0    0   61
     61 tests aborted (missing ok/not ok)
 S32-temporal/DateTime.t............................Can't open perl script "eval-client.pl": No such file or directory
-   0  271    0    0  271
-   271 tests aborted (missing ok/not ok)
+   0  275    0    0  275
+   275 tests aborted (missing ok/not ok)
 S32-temporal/calendar.t............................Can't open perl script "eval-client.pl": No such file or directory
    0  130    0    0  130
    130 tests aborted (missing ok/not ok)
@@ -3351,9 +3351,9 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
 "S02",           0,  5595,     0,     0,  5595,  5599
-"S03",           0,  6163,     0,     0,  6163,  6181
+"S03",           0,  6169,     0,     0,  6169,  6187
 "S04",           0,  1520,     0,     0,  1520,  1572
-"S05",           0,  6008,     0,     0,  6008,  6194
+"S05",           0,  6010,     0,     0,  6010,  6196
 "S06",           0,  2286,     0,     0,  2286,  2342
 "S07",           0,   152,     0,     0,   152,   152
 "S09",           0,  1074,     0,     0,  1074,  1074
@@ -3371,10 +3371,10 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S26",           0,  2003,     0,     0,  2003,  2003
 "S28",           0,     2,     0,     0,     2,     8
 "S29",           0,   215,     0,     0,   215,   215
-"S32",           0,  9545,     0,     0,  9545,  9618
+"S32",           0,  9559,     0,     0,  9559,  9632
 "int",           0,  1298,     0,     0,  1298,  1294
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40118,     0,     0, 40118,119776
+"total",         0, 40140,     0,     0, 40140,119798
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3534,7 +3534,7 @@ S03-feeds/basic.rakudo.jvm aborted 23 test(s)
 S03-junctions/associative.t aborted 10 test(s)
 S03-junctions/autothreading.t aborted 104 test(s)
 S03-junctions/boolean-context.t aborted 74 test(s)
-S03-junctions/misc.t aborted 143 test(s)
+S03-junctions/misc.t aborted 144 test(s)
 S03-metaops/cross.rakudo.jvm aborted 77 test(s)
 S03-metaops/eager-hyper.rakudo.jvm aborted 8 test(s)
 S03-metaops/hyper.rakudo.jvm aborted 403 test(s)
@@ -3592,7 +3592,7 @@ S03-operators/range-int.t aborted 507 test(s)
 S03-operators/range.t aborted 125 test(s)
 S03-operators/reduce-le1arg.rakudo.jvm aborted 54 test(s)
 S03-operators/relational.rakudo.jvm aborted 171 test(s)
-S03-operators/repeat.t aborted 47 test(s)
+S03-operators/repeat.t aborted 52 test(s)
 S03-operators/scalar-assign.t aborted 4 test(s)
 S03-operators/set.t aborted 292 test(s)
 S03-operators/short-circuit.t aborted 83 test(s)
@@ -3734,7 +3734,7 @@ S05-match/capturing-contexts.rakudo.jvm aborted 60 test(s)
 S05-match/make.t aborted 4 test(s)
 S05-match/non-capturing.t aborted 9 test(s)
 S05-match/perl.rakudo.jvm aborted 11 test(s)
-S05-match/positions.t aborted 10 test(s)
+S05-match/positions.t aborted 12 test(s)
 S05-metachars/closure.rakudo.jvm aborted 12 test(s)
 S05-metachars/line-anchors.rakudo.jvm aborted 24 test(s)
 S05-metachars/newline.t aborted 15 test(s)
@@ -4215,7 +4215,7 @@ S32-hash/exists.rakudo.jvm aborted 15 test(s)
 S32-hash/invert.t aborted 5 test(s)
 S32-hash/keys_values.t aborted 14 test(s)
 S32-hash/kv.t aborted 27 test(s)
-S32-hash/map.t aborted 3 test(s)
+S32-hash/map.t aborted 9 test(s)
 S32-hash/pairs.t aborted 26 test(s)
 S32-hash/perl.t aborted 12 test(s)
 S32-hash/push.t aborted 10 test(s)
@@ -4351,9 +4351,9 @@ S32-str/trim.t aborted 36 test(s)
 S32-str/uc.rakudo.jvm aborted 19 test(s)
 S32-str/unpack.t aborted 2 test(s)
 S32-str/words.rakudo.jvm aborted 16 test(s)
-S32-temporal/Date.t aborted 109 test(s)
+S32-temporal/Date.t aborted 113 test(s)
 S32-temporal/DateTime-Instant-Duration.t aborted 61 test(s)
-S32-temporal/DateTime.t aborted 271 test(s)
+S32-temporal/DateTime.t aborted 275 test(s)
 S32-temporal/calendar.t aborted 130 test(s)
 S32-temporal/local.rakudo.jvm aborted 25 test(s)
 S32-trig/e.t aborted 5 test(s)
