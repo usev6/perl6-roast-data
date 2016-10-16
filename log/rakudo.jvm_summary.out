@@ -1023,8 +1023,8 @@ S09-typed-arrays/arrays.rakudo.jvm.................  79    0    2    3   84
      1 skipped: need parameterized Lists
      1 skipped: type on our-variables RT \#124677
      2 todo   : nested typechecks are borked
-S09-typed-arrays/hashes.t..........................  41    2    0    0   43
-S09-typed-arrays/native-decl.t.....................  10    0    0    0   10
+S09-typed-arrays/hashes.t..........................  43    0    0    0   43
+S09-typed-arrays/native-decl.t.....................  14    0    0    0   14
 S09-typed-arrays/native-int.rakudo.jvm.............1597    0   13    0 1610
     10 todo   : RT #127756
      2 todo   : highest bit length stays negative, RT #124088
@@ -1177,7 +1177,7 @@ S12-meta/primitives.rakudo.jvm.....................  11    0    6    0   17
      6 todo   : RT #123426
 S12-methods/accessors.t............................   8    0    0    0    8
 S12-methods/attribute-params.rakudo.jvm............  16    0    0    4   20
-     4 skipped: BadReferenceRuntimeException: Cannot access a native attribute as a reference attribute
+     4 skipped: RT \#129278 BadReferenceRuntimeException: Cannot access a native attribute as a reference attribute
 S12-methods/calling_sets.t.........................  38    0    0    0   38
 S12-methods/calling_syntax.t.......................  11    0    0    0   11
 S12-methods/chaining.t.............................  17    0    0    0   17
@@ -1371,8 +1371,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1482,7 +1481,7 @@ S29-conversions/ord_and_chr.rakudo.jvm............. 254    0    2    1  257
      1 skipped: high character name lookup RT \#124838
      1 todo   : NFG on JVM
      1 todo   : chr surrogate RT #124834
-S29-os/system.rakudo.jvm...........................  20    0   10    1   31
+S29-os/system.rakudo.jvm...........................  24    0   10    1   35
      1 skipped: Proc::Async NYI
     10 todo   : IOException "no such file" RT 128594
                                                    pass fail todo skip plan
@@ -1624,8 +1623,8 @@ S32-list/grep-v.t..................................  17    0    0    0   17
 S32-list/grep.rakudo.jvm...........................  29    0    0   12   41
      6 skipped: adverbial block RT \#124755
      6 skipped: adverbial block RT \#124756
-S32-list/head.t....................................   5   19    0    0   24
-    19 tests aborted (missing ok/not ok)
+S32-list/head.rakudo.jvm...........................  13    0    0   11   24
+    11 skipped: RT \#129278 BadReferenceRuntimeException: Cannot access a native attribute as a reference attribute
 S32-list/join.t....................................  38    0    0    0   38
 S32-list/map.rakudo.jvm............................  52    0    0    6   58
      1 skipped: Too few positionals passed; expected 3 arguments but got 1; RT \#125146
@@ -1664,9 +1663,8 @@ S32-num/expmod.t................................... 117    0    0    0  117
 S32-num/fatrat.rakudo.jvm.......................... 279    0    1    2  282
      2 skipped: FatRat arith + type objects RT \#124814
      1 todo   : unknown RT #124815
-S32-num/int.rakudo.jvm............................. 159    1    4    0  164
+S32-num/int.rakudo.jvm............................. 159    0    3    0  162
      3 todo   : Inf and NaN NYI for Int RT #124818
-     1 todo   : RT 129373
 S32-num/is-prime.t.................................  39    0    0    0   39
 S32-num/log.rakudo.jvm.............................  28    0    1    0   29
      1 todo   : HugeInt.log RT #124821
@@ -1983,7 +1981,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S05",        5641,     0,   101,   268,  6010,  6196
 "S06",        2137,     0,    68,    95,  2300,  2343
 "S07",         140,     0,     7,     5,   152,   152
-"S09",        2753,     2,    26,    39,  2820,  2820
+"S09",        2759,     0,    26,    39,  2824,  2824
 "S10",         137,     0,     8,     1,   146,   203
 "S11",         170,     0,     7,    11,   188,   197
 "S12",        1649,     0,    37,   137,  1823,  1872
@@ -1997,14 +1995,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
-"S29",         402,     0,    13,     4,   419,   419
-"S32",       12985,    20,   231,   245, 13481, 11775
+"S29",         406,     0,    13,     4,   423,   423
+"S32",       12993,     0,   230,   256, 13479, 11773
 "int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     47755,    22,   918,  1767, 50462,128317
+"total",     47773,     0,   917,  1778, 50468,128323
 ----------------
-Failure summary:
-S09-typed-arrays/hashes.t 42 - .antipairs on typed Hash
-S09-typed-arrays/hashes.t 43 - .invert on typed Hash
-S32-list/head.t aborted 19 test(s)
-S32-num/int.rakudo.jvm 130 - overflowing int with * throws correct exception
+No failures!
