@@ -279,7 +279,7 @@ S02-types/nested_pairs.t...........................  14    0    0    0   14
 S02-types/nil.rakudo.jvm...........................  59    0    5    1   65
      1 skipped: triage
      5 todo   : triage
-S02-types/num.t....................................  79    1    0    0   80
+S02-types/num.rakudo.jvm...........................  86    0    0    0   86
 S02-types/pair.rakudo.jvm.......................... 177    0    1    0  178
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
@@ -1336,7 +1336,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  28    0    0    0   28
+S17-promise/basic.t................................  27    1    0    0   28
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  49    0    0    0   49
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -1371,8 +1371,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1624,8 +1623,7 @@ S32-list/grep-v.t..................................  17    0    0    0   17
 S32-list/grep.rakudo.jvm...........................  29    0    0   12   41
      6 skipped: adverbial block RT \#124755
      6 skipped: adverbial block RT \#124756
-S32-list/head.rakudo.jvm...........................  13    0    0   11   24
-    11 skipped: RT \#129278 BadReferenceRuntimeException: Cannot access a native attribute as a reference attribute
+S32-list/head.t....................................  24    0    0    0   24
 S32-list/join.t....................................  38    0    0    0   38
 S32-list/map.rakudo.jvm............................  52    0    0    6   58
      1 skipped: Too few positionals passed; expected 3 arguments but got 1; RT \#125146
@@ -1918,7 +1916,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1976,7 +1974,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        8992,     1,   133,   401,  9527,  9530
+"S02",        8999,     0,   133,   401,  9533,  9536
 "S03",        5971,     0,   110,    94,  6175,  6193
 "S04",        1445,     0,    62,    33,  1540,  1572
 "S05",        5641,     0,   101,   268,  6010,  6196
@@ -1990,17 +1988,18 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         880,     0,    15,    26,   921,   986
+"S17",         879,     1,    15,    26,   921,   986
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         406,     0,    13,     4,   423,   423
-"S32",       13252,     0,   230,   256, 13738, 12032
-"int",        1286,     0,    10,    15,  1311,  1304
+"S32",       13263,     0,   230,   245, 13738, 12032
+"int",        1285,     1,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48045,     1,   917,  1778, 50741,128596
+"total",     48061,     2,   917,  1767, 50747,128602
 ----------------
 Failure summary:
-S02-types/num.t 78 - infix:<**>(num, num)
+S17-promise/basic.t 24 - promises execute asynchronously [try 0]
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
