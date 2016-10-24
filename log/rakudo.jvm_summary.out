@@ -749,14 +749,13 @@ S05-metasyntax/unicode-property-pair.rakudo.jvm....   2    0    0    3    5
 S05-metasyntax/unknown.rakudo.jvm..................  12    0    1    0   13
      1 todo   : RT #74832
 S05-modifier/continue.t............................  13    0    0    0   13
-S05-modifier/counted-match.rakudo.jvm..............  11    0    4   13   28
-    13 skipped: RT \#124279
-     2 todo   : RT #125026
-     2 todo   : RT #125815
+S05-modifier/counted-match.rakudo.jvm..............  15    1    2   10   28
+    10 skipped: RT \#124279
+     2 todo PASSED: RT #125815
 S05-modifier/counted.rakudo.jvm.................... 106    0    6   14  126
     14 skipped: RT \#124279
-     5 todo   : RT #125815
-     1 todo   : got: 'False', expected: 'D'
+     5 todo PASSED: RT #125815
+     1 todo PASSED: got: 'False', expected: 'D'
 S05-modifier/global.t..............................   8    0    0    0    8
 S05-modifier/ignorecase.rakudo.jvm.................  23    0    2    0   25
      2 todo   : ignorecase and SS/&szlig; RT #121377
@@ -814,8 +813,8 @@ S05-substitution/subst.rakudo.jvm.................. 137    0    2   44  183
      4 skipped: UnwindException RT \#124279
      1 skipped: at least one of the sub-tests leads to an UnwindException
     10 skipped: samemark NYI
-     1 todo   : Code does not die
      1 todo   : be smarter about constant detection
+     1 todo PASSED: Code does not die
 S05-syntactic-categories/new-symbols.rakudo.jvm....   0    0    0    8    8
      8 skipped: RT \#126142 - NYI
 S05-transliteration/79778.t........................   1    0    0    0    1
@@ -1979,7 +1978,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        8921,    97,   133,   401,  9552,  9555
 "S03",        5979,     0,   110,    94,  6183,  6201
 "S04",        1445,     0,    62,    33,  1540,  1572
-"S05",        5641,     0,   101,   268,  6010,  6196
+"S05",        5645,     1,    99,   265,  6010,  6196
 "S06",        2139,     0,    68,    95,  2302,  2345
 "S07",         140,     0,     7,     5,   152,   152
 "S09",        2759,     0,    26,    39,  2824,  2824
@@ -2000,8 +1999,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       13270,     1,   230,   245, 13746, 12040
 "int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48004,    98,   917,  1767, 50786,128641
+"total",     48008,    99,   915,  1764, 50786,128641
 ----------------
 Failure summary:
 S02-types/num.rakudo.jvm aborted 97 test(s)
+S05-modifier/counted-match.rakudo.jvm 28 - :nth does not accept Mu param
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
