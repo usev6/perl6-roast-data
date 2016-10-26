@@ -279,8 +279,7 @@ S02-types/nested_pairs.t...........................  14    0    0    0   14
 S02-types/nil.rakudo.jvm...........................  59    0    5    1   65
      1 skipped: triage
      5 todo   : triage
-S02-types/num.rakudo.jvm...........................   0   97    0    0   97
-    97 tests aborted (missing ok/not ok)
+S02-types/num.rakudo.jvm...........................  97    0    0    0   97
 S02-types/pair.rakudo.jvm.......................... 177    0    1    0  178
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
@@ -395,7 +394,7 @@ S03-operators/context.t............................  39    0    0    0   39
 S03-operators/custom.t.............................   1    0    0    0    1
 S03-operators/div.t................................   7    0    0    0    7
 S03-operators/equality.t...........................  46    0    0    0   46
-S03-operators/eqv.rakudo.jvm.......................  50    0    3    1   54
+S03-operators/eqv.rakudo.jvm.......................  51    0    3    1   55
      1 skipped: huh?
      3 todo   : huh?
 S03-operators/flip-flop.rakudo.jvm.................  37    0    0    3   40
@@ -749,13 +748,8 @@ S05-metasyntax/unicode-property-pair.rakudo.jvm....   2    0    0    3    5
 S05-metasyntax/unknown.rakudo.jvm..................  12    0    1    0   13
      1 todo   : RT #74832
 S05-modifier/continue.t............................  13    0    0    0   13
-S05-modifier/counted-match.rakudo.jvm..............  17    0    2   10   29
-    10 skipped: RT \#124279
-     2 todo PASSED: RT #125815
-S05-modifier/counted.rakudo.jvm.................... 106    0    6   14  126
-    14 skipped: RT \#124279
-     5 todo PASSED: RT #125815
-     1 todo PASSED: got: 'False', expected: 'D'
+S05-modifier/counted-match.t.......................  29    0    0    0   29
+S05-modifier/counted.t............................. 126    0    0    0  126
 S05-modifier/global.t..............................   8    0    0    0    8
 S05-modifier/ignorecase.rakudo.jvm.................  23    0    2    0   25
      2 todo   : ignorecase and SS/&szlig; RT #121377
@@ -796,25 +790,20 @@ S05-modifier/pos.rakudo.jvm........................  37    0    3    0   40
      1 todo   : m:g
      1 todo   : m:p:i:g// NYI
      1 todo   : s:pos/// NYI
-S05-modifier/repetition-exhaustive.rakudo.jvm......   1    0    0    4    5
-     4 skipped: RT \#124279
-S05-modifier/repetition.rakudo.jvm.................   8    0    0    4   12
-     3 skipped: RT \#124279
-     1 skipped: UnwindException RT \#124279
+S05-modifier/repetition-exhaustive.rakudo.jvm......   4    0    1    0    5
+     1 todo   : exhaustive capture too greedy RT #125133
+S05-modifier/repetition.t..........................  12    0    0    0   12
 S05-modifier/samemark.rakudo.jvm...................   0    0    0    8    8
      8 skipped: ordbaseat NYI
 S05-modifier/sigspace.t............................  16    0    0    0   16
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  13    0    0    0   13
-S05-substitution/subst.rakudo.jvm.................. 137    0    2   44  183
+S05-substitution/subst.rakudo.jvm.................. 164    0    1   18  183
      6 skipped: "ordbaseat NYI" RT \#125753
      1 skipped: RT \#114388 -- No such method 'subst-mutate' for invocant of type 'Any'
-    22 skipped: RT \#124279
-     4 skipped: UnwindException RT \#124279
      1 skipped: at least one of the sub-tests leads to an UnwindException
     10 skipped: samemark NYI
      1 todo   : be smarter about constant detection
-     1 todo PASSED: Code does not die
 S05-syntactic-categories/new-symbols.rakudo.jvm....   0    0    0    8    8
      8 skipped: RT \#126142 - NYI
 S05-transliteration/79778.t........................   1    0    0    0    1
@@ -1072,7 +1061,7 @@ S11-modules/lexical.t..............................   2    0    0    0    2
 S11-modules/module-file.t..........................   4    0    0    0    4
 S11-modules/module.t...............................   8    0    0    0    8
 S11-modules/need.t.................................   2    0    0    0    2
-S11-modules/nested.rakudo.jvm......................   7    0    1    0    8
+S11-modules/nested.rakudo.jvm......................   9    0    1    0   10
      1 todo   : got: $("GNUC",)
 S11-modules/require.rakudo.jvm.....................  25    0    1    1   27
      1 skipped: import require at compile time RT \#127538
@@ -1371,8 +1360,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1708,8 +1696,7 @@ S32-str/capitalize.rakudo.jvm......................  15    0    2    0   17
 S32-str/chomp.rakudo.jvm...........................  32    0    7    0   39
      7 todo   : \r\n not yet handled as grapheme
 S32-str/chop.t.....................................  36    0    0    0   36
-S32-str/comb.rakudo.jvm............................  64    0    2   13   79
-     5 skipped: UnwindException
+S32-str/comb.rakudo.jvm............................  69    0    2    8   79
      1 skipped: cannot call match, no signature matches RT \#124738
      1 skipped: ordbaseat NYI
      6 skipped: weird error, looks like wrong multi is used, RT \#128580
@@ -1744,11 +1731,9 @@ S32-str/rindex.t...................................  45    0    0    0   45
 S32-str/samecase.t.................................   8    0    0    0    8
 S32-str/samemark.rakudo.jvm........................   0    0    0    9    9
      9 skipped: samemark NYI
-S32-str/split-simple.rakudo.jvm....................  29    0    0    1   30
-     1 skipped: UnwindException RT \#124279
-S32-str/split.rakudo.jvm...........................  27    0    0   33   60
+S32-str/split-simple.t.............................  30    0    0    0   30
+S32-str/split.rakudo.jvm...........................  59    0    0    1   60
      1 skipped: No such method null for invocant of type Cursor RT \#124685
-    32 skipped: UnwindException RT \#124279
 S32-str/sprintf-b.rakudo.jvm.......................  68    0   90    7  165
      1 skipped: "%+ 010b" dies with "unsupported use of %+ variable;" RT \#124718
      1 skipped: "%+ 10b" dies with "Unsupported use of %+ variable;" RT \#124710
@@ -1975,15 +1960,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        8921,    97,   133,   401,  9552,  9555
-"S03",        5979,     0,   110,    94,  6183,  6201
+"S02",        9018,     0,   133,   401,  9552,  9555
+"S03",        5980,     0,   110,    94,  6184,  6202
 "S04",        1445,     0,    62,    33,  1540,  1572
-"S05",        5647,     0,    99,   265,  6011,  6197
+"S05",        5713,     0,    91,   207,  6011,  6197
 "S06",        2139,     0,    68,    95,  2302,  2345
 "S07",         140,     0,     7,     5,   152,   152
 "S09",        2759,     0,    26,    39,  2824,  2824
 "S10",         137,     0,     8,     1,   146,   203
-"S11",         170,     0,     7,    11,   188,   197
+"S11",         172,     0,     7,    11,   190,   200
 "S12",        1650,     0,    37,   137,  1824,  1873
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
@@ -1996,11 +1981,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         406,     0,    13,     4,   423,   423
-"S32",       13270,     1,   230,   245, 13746, 12040
+"S32",       13308,     1,   230,   207, 13746, 12040
 "int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48010,    98,   915,  1764, 50787,128642
+"total",     48214,     1,   907,  1668, 50790,128646
 ----------------
 Failure summary:
-S02-types/num.rakudo.jvm aborted 97 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
