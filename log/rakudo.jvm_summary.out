@@ -346,7 +346,7 @@ S03-metaops/reduce.rakudo.jvm...................... 544    0    1    1  546
      1 skipped: RT \#129153 Type check failed in binding to &b; expected Callable but got Int (2)
      1 todo   : item context
 S03-metaops/reverse.t..............................  68    0    0    0   68
-S03-metaops/zip.t..................................  75    0    0    0   75
+S03-metaops/zip.t..................................  76    0    0    0   76
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
      1 todo   : Multi colonpair syntax not yet understood RT #124553
 S03-operators/also.rakudo.jvm......................   4    0    4    0    8
@@ -1061,7 +1061,7 @@ S11-modules/lexical.t..............................   2    0    0    0    2
 S11-modules/module-file.t..........................   4    0    0    0    4
 S11-modules/module.t...............................   8    0    0    0    8
 S11-modules/need.t.................................   2    0    0    0    2
-S11-modules/nested.rakudo.jvm......................   9    0    1    0   10
+S11-modules/nested.rakudo.jvm......................  10    0    1    0   11
      1 todo   : got: $("GNUC",)
 S11-modules/require.rakudo.jvm.....................  25    0    1    1   27
      1 skipped: import require at compile time RT \#127538
@@ -1382,7 +1382,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................  16    1    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1511,7 +1511,7 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT \#124907
-S32-exceptions/misc.rakudo.jvm..................... 406    0   14    3  423
+S32-exceptions/misc.rakudo.jvm..................... 408    0   14    3  425
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
      1 skipped: failure assignment still blows up on JVM, RT \#125769
@@ -1961,30 +1961,31 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9018,     0,   133,   401,  9552,  9555
-"S03",        5980,     0,   110,    94,  6184,  6202
+"S03",        5981,     0,   110,    94,  6185,  6203
 "S04",        1445,     0,    62,    33,  1540,  1572
 "S05",        5713,     0,    91,   207,  6011,  6197
 "S06",        2139,     0,    68,    95,  2302,  2345
 "S07",         140,     0,     7,     5,   152,   152
 "S09",        2759,     0,    26,    39,  2824,  2824
 "S10",         137,     0,     8,     1,   146,   203
-"S11",         172,     0,     7,    11,   190,   200
+"S11",         173,     0,     7,    11,   191,   201
 "S12",        1650,     0,    37,   137,  1824,  1873
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         881,     0,    15,    26,   922,   987
+"S17",         880,     1,    15,    26,   922,   987
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         406,     0,    13,     4,   423,   423
-"S32",       13308,     1,   230,   207, 13746, 12040
+"S32",       13310,     1,   230,   207, 13748, 12042
 "int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48214,     1,   907,  1668, 50790,128646
+"total",     48217,     2,   907,  1668, 50794,128650
 ----------------
 Failure summary:
+S17-supply/throttle.t 2 - did we see all of the element
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
