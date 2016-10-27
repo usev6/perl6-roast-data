@@ -1090,7 +1090,7 @@ S12-class/anonymous.rakudo.jvm.....................  17    0    1    0   18
      1 todo   : Anonymous class stringification (?) RT #125045
 S12-class/attributes-required.t....................   5    0    0    0    5
 S12-class/attributes.t.............................  38    0    0    0   38
-S12-class/augment-supersede.rakudo.jvm.............  11    0    0    2   13
+S12-class/augment-supersede.rakudo.jvm.............  12    0    0    2   14
      2 skipped: redeclaration of symbol Bar RT \#125046
 S12-class/basic.t..................................  43    0    0    0   43
 S12-class/declaration-order.t......................   2    0    0    0    2
@@ -1382,7 +1382,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  16    1    0    0   17
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1511,7 +1511,7 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT \#124907
-S32-exceptions/misc.rakudo.jvm..................... 408    0   14    3  425
+S32-exceptions/misc.rakudo.jvm..................... 409    0   14    3  426
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
      1 skipped: failure assignment still blows up on JVM, RT \#125769
@@ -1969,23 +1969,22 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2759,     0,    26,    39,  2824,  2824
 "S10",         137,     0,     8,     1,   146,   203
 "S11",         173,     0,     7,    11,   191,   201
-"S12",        1650,     0,    37,   137,  1824,  1873
+"S12",        1651,     0,    37,   137,  1825,  1874
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         880,     1,    15,    26,   922,   987
+"S17",         881,     0,    15,    26,   922,   987
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         406,     0,    13,     4,   423,   423
-"S32",       13310,     1,   230,   207, 13748, 12042
+"S32",       13311,     1,   230,   207, 13749, 12043
 "int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48217,     2,   907,  1668, 50794,128650
+"total",     48220,     1,   907,  1668, 50796,128652
 ----------------
 Failure summary:
-S17-supply/throttle.t 2 - did we see all of the element
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
