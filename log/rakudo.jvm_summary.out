@@ -43,7 +43,7 @@ S02-lexical-conventions/unspace.rakudo.jvm.........  79    0    2    7   88
      3 skipped: pod and unspace: RT \#122343
      1 todo   : NYI RT #125072
      1 todo   : RT 128462
-S02-lists/indexing.t...............................   3    0    0    0    3
+S02-lists/indexing.t...............................   4    0    0    0    4
 S02-lists/tree.t...................................  14    0    0    0   14
 S02-literals/adverbs.rakudo.jvm....................  28    0    3    3   34
      3 skipped: Type check failed; expected 'Any' but got 'Mu'
@@ -1360,8 +1360,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1626,7 +1625,7 @@ S32-list/minmax.rakudo.jvm.........................  99    0    0    2  101
 S32-list/permutations.t............................   9    0    0    0    9
 S32-list/pick.t.................................... 316    0    0    0  316
 S32-list/produce.t.................................  25    0    0    0   25
-S32-list/reduce.t..................................  15    0    0    0   15
+S32-list/reduce.t..................................  16    0    0    0   16
 S32-list/repeated.rakudo.jvm.......................  37    0    0    1   38
      1 skipped: This Seq has already been iterated, RT \#128720
 S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
@@ -1961,7 +1960,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9018,     0,   133,   401,  9552,  9555
+"S02",        9019,     0,   133,   401,  9553,  9556
 "S03",        5981,     0,   110,    94,  6185,  6203
 "S04",        1445,     0,    62,    33,  1540,  1572
 "S05",        5713,     0,    91,   207,  6011,  6197
@@ -1982,10 +1981,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         406,     0,    13,     4,   423,   423
-"S32",       13311,     1,   230,   207, 13749, 12043
+"S32",       13312,     1,   230,   207, 13750, 12044
 "int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48220,     1,   907,  1668, 50796,128652
+"total",     48222,     1,   907,  1668, 50798,128654
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
