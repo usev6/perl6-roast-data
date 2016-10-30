@@ -710,7 +710,7 @@ S05-metachars/line-anchors.rakudo.jvm..............  23    0    1    0   24
      1 todo   : NFG
 S05-metachars/newline.t............................  15    0    0    0   15
 S05-metachars/tilde.t..............................  29    0    0    0   29
-S05-metasyntax/angle-brackets.rakudo.jvm...........  69    0    2   20   91
+S05-metasyntax/angle-brackets.rakudo.jvm...........  72    0    2   20   94
      1 skipped: <&foo()> NYI RT \#124523
     11 skipped: <*literal> RT \#124525
      1 skipped: <test()> NYI RT \#124519
@@ -1344,7 +1344,7 @@ S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  90    0    0    0   90
-S17-supply/batch.t.................................  11    0    0    0   11
+S17-supply/batch.t.................................  10    1    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1360,7 +1360,8 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    12 todo   : \r\n not yet handled as grapheme
+     2 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1963,7 +1964,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9019,     0,   133,   401,  9553,  9556
 "S03",        5981,     0,   110,    94,  6185,  6203
 "S04",        1445,     0,    62,    33,  1540,  1572
-"S05",        5713,     0,    91,   207,  6011,  6197
+"S05",        5716,     0,    91,   207,  6014,  6200
 "S06",        2139,     0,    68,    95,  2302,  2345
 "S07",         140,     0,     7,     5,   152,   152
 "S09",        2759,     0,    26,    39,  2824,  2824
@@ -1974,7 +1975,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         881,     0,    15,    26,   922,   987
+"S17",         880,     1,    15,    26,   922,   987
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -1984,7 +1985,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       13312,     1,   230,   207, 13750, 12044
 "int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48222,     1,   907,  1668, 50798,128654
+"total",     48224,     2,   907,  1668, 50801,128657
 ----------------
 Failure summary:
+S17-supply/batch.t 8 - we can batch by time
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
