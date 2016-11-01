@@ -518,7 +518,7 @@ S04-declarations/will.rakudo.jvm...................  13    0    4    3   20
      1 todo   : will init NYI
      1 todo   : will post NYI RT #125062
 S04-exception-handlers/catch.t.....................  31    0    0    0   31
-S04-exception-handlers/control.rakudo.jvm..........   9    0    1    0   10
+S04-exception-handlers/control.rakudo.jvm..........  11    0    1    0   12
      1 todo   : NullPointerException
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
 S04-exceptions/control_across_runloop.t............   1    0    0    0    1
@@ -688,7 +688,7 @@ S05-mass/rx.rakudo.jvm............................. 722    0    4   14  740
      1 todo   : anchors and after RT #124898
      1 todo   : parse error RT #124903
 S05-mass/stdrules.t................................ 191    0    0    0  191
-S05-match/arrayhash.t..............................   8    0    0    0    8
+S05-match/arrayhash.t..............................   9    0    0    0    9
 S05-match/blocks.rakudo.jvm........................  18    0    1    0   19
      1 todo   : Assignment to matched string affects earlier match objects
 S05-match/capturing-contexts.rakudo.jvm............  56    0    4    0   60
@@ -747,7 +747,7 @@ S05-metasyntax/unicode-property-pair.rakudo.jvm....   2    0    0    3    5
      3 skipped: matching charnames in unicode property pair
 S05-metasyntax/unknown.rakudo.jvm..................  12    0    1    0   13
      1 todo   : RT #74832
-S05-modifier/continue.t............................  13    0    0    0   13
+S05-modifier/continue.t............................  14    0    0    0   14
 S05-modifier/counted-match.t.......................  29    0    0    0   29
 S05-modifier/counted.t............................. 126    0    0    0  126
 S05-modifier/global.t..............................   8    0    0    0    8
@@ -1360,7 +1360,8 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI RT \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1962,8 +1963,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9019,     0,   133,   401,  9553,  9556
 "S03",        5981,     0,   110,    94,  6185,  6203
-"S04",        1448,     0,    62,    33,  1543,  1575
-"S05",        5716,     0,    91,   207,  6014,  6200
+"S04",        1450,     0,    62,    33,  1545,  1577
+"S05",        5718,     0,    91,   207,  6016,  6202
 "S06",        2139,     0,    68,    95,  2302,  2345
 "S07",         140,     0,     7,     5,   152,   152
 "S09",        2759,     0,    26,    39,  2824,  2824
@@ -1984,7 +1985,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       13312,     1,   230,   207, 13750, 12044
 "int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48230,     1,   907,  1668, 50806,128662
+"total",     48234,     1,   907,  1668, 50810,128666
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
