@@ -284,7 +284,7 @@ S02-types/pair.rakudo.jvm.......................... 177    0    1    0  178
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t.................................. 184    0    0    0  184
-S02-types/set.rakudo.jvm........................... 169    0    1    9  179
+S02-types/set.rakudo.jvm........................... 171    0    1    9  181
      9 skipped: Hypers not yet Set compatible RT \#124487
      1 todo   : we have not secured .WHICH creation yet RT #124489
 S02-types/sethash.rakudo.jvm....................... 199    0    0   10  209
@@ -1318,7 +1318,7 @@ S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT \#125042
                                                    pass fail todo skip plan
 S17-channel/basic.t................................  19    0    0    0   19
-S17-channel/stress.t...............................   3    1    0    0    4
+S17-channel/stress.t...............................   4    1    0    0    5
      1 tests aborted (missing ok/not ok)
 S17-lowlevel/lock.t................................   0   23    0    0   23
     23 tests aborted (missing ok/not ok)
@@ -1338,8 +1338,8 @@ S17-promise/basic.t................................   0   28    0    0   28
     28 tests aborted (missing ok/not ok)
 S17-promise/in.t...................................   0    3    0    0    3
      3 tests aborted (missing ok/not ok)
-S17-promise/start.t................................   0   50    0    0   50
-    50 tests aborted (missing ok/not ok)
+S17-promise/start.t................................   0   53    0    0   53
+    53 tests aborted (missing ok/not ok)
 S17-promise/stress.t...............................   0    1    0    0    1
      1 tests aborted (missing ok/not ok)
 S17-promise/then.t.................................   0   14    0    0   14
@@ -1392,4 +1392,1201 @@ S17-supply/list.t..................................   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
 S17-supply/map.t...................................   0    7    0    0    7
      7 tests aborted (missing ok/not ok)
-S17-supply/max.t...................................
+S17-supply/max.t...................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S17-supply/merge.t.................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S17-supply/migrate.t...............................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+S17-supply/min.t...................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S17-supply/minmax.t................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S17-supply/on-demand.t.............................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S17-supply/produce.t...............................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S17-supply/reduce.t................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S17-supply/return-in-tap.t.........................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S17-supply/reverse.t...............................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+S17-supply/rotor.rakudo.jvm........................   0   32    0    0   32
+    32 tests aborted (missing ok/not ok)
+S17-supply/schedule-on.t...........................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S17-supply/sort.t..................................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S17-supply/squish.t................................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+S17-supply/stable.rakudo.jvm.......................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S17-supply/start.t.................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S17-supply/syntax.t................................   0   60    0    0   60
+    60 tests aborted (missing ok/not ok)
+S17-supply/tail.t..................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S17-supply/throttle.t..............................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+S17-supply/unique.t................................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+S17-supply/wait.t..................................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S17-supply/watch-path.rakudo.jvm...................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S17-supply/words.t.................................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S17-supply/zip-latest.rakudo.jvm...................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+S17-supply/zip.t...................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S19-command-line-options/02-dash-n.t...............   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+S19-command-line-options/03-dash-p.t...............   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S19-command-line-options/04-negation.rakudo.jvm....   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+S19-command-line-options/05-delimited-options.rak..   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S19-command-line-options/06-dash-rxtrace.t.........   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S19-command-line/arguments.t.......................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+S19-command-line/dash-e.t..........................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S19-command-line/help.t............................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S19-command-line/repl.rakudo.jvm...................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S22-package-format/local.rakudo.jvm................   0   19    0    0   19
+    19 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S24-testing/0-compile.t............................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S24-testing/3-output.t.............................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S24-testing/7-bail_out.t...........................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+S24-testing/8-die_on_fail.t........................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S24-testing/9-is_deeply.t..........................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S24-testing/line-numbers.t.........................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S26-documentation/01-delimited.t...................   0   40    0    0   40
+    40 tests aborted (missing ok/not ok)
+S26-documentation/02-paragraph.t...................   0   27    0    0   27
+    27 tests aborted (missing ok/not ok)
+S26-documentation/03-abbreviated.t.................   0   30    0    0   30
+    30 tests aborted (missing ok/not ok)
+S26-documentation/04-code.t........................   0   50    0    0   50
+    50 tests aborted (missing ok/not ok)
+S26-documentation/05-comment.t.....................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+S26-documentation/06-lists.t.......................   0   39    0    0   39
+    39 tests aborted (missing ok/not ok)
+S26-documentation/07-tables.t......................   0   42    0    0   42
+    42 tests aborted (missing ok/not ok)
+S26-documentation/07a-tables-todo-skipped.rakudo...   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+S26-documentation/08-formattingcodes.t.............   0   45    0    0   45
+    45 tests aborted (missing ok/not ok)
+S26-documentation/09-configuration.rakudo.jvm......   0   18    0    0   18
+    18 tests aborted (missing ok/not ok)
+S26-documentation/10-doc-cli.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S26-documentation/block-leading.t..................   0  334    0    0  334
+   334 tests aborted (missing ok/not ok)
+S26-documentation/block-trailing.t.................   0  327    0    0  327
+   327 tests aborted (missing ok/not ok)
+S26-documentation/module-comment.t.................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S26-documentation/multiline-leading.t..............   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S26-documentation/multiline-trailing.t.............   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S26-documentation/wacky.t..........................   0   30    0    0   30
+    30 tests aborted (missing ok/not ok)
+S26-documentation/why-both.t.......................   0  291    0    0  291
+   291 tests aborted (missing ok/not ok)
+S26-documentation/why-leading.t....................   0  355    0    0  355
+   355 tests aborted (missing ok/not ok)
+S26-documentation/why-trailing.t...................   0  348    0    0  348
+   348 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S28-named-variables/cwd.t..........................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S29-any/cmp.t......................................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S29-any/deg-trans.t................................   0   38    0    0   38
+    38 tests aborted (missing ok/not ok)
+S29-any/isa.t......................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S29-context/die.rakudo.jvm.........................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+S29-context/eval.rakudo.jvm........................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+S29-context/evalfile.t.............................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S29-context/exit-in-if.t...........................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S29-context/exit.t.................................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+S29-context/sleep.t................................   0   22    0    0   22
+    22 tests aborted (missing ok/not ok)
+S29-conversions/hash.t.............................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S29-conversions/ord_and_chr.rakudo.jvm.............   0   53    0    0   53
+    53 tests aborted (missing ok/not ok)
+S29-os/system.rakudo.jvm...........................   0   35    0    0   35
+    35 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+S32-array/adverbs.rakudo.jvm.......................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S32-array/bool.t...................................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+S32-array/create.t.................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S32-array/delete-adverb-native.t...................   0  138    0    0  138
+   138 tests aborted (missing ok/not ok)
+S32-array/delete-adverb.t..........................   0  218    0    0  218
+   218 tests aborted (missing ok/not ok)
+S32-array/delete.rakudo.jvm........................   0   32    0    0   32
+    32 tests aborted (missing ok/not ok)
+S32-array/elems.t..................................   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
+S32-array/end.t....................................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+S32-array/exists-adverb.t..........................   0   52    0    0   52
+    52 tests aborted (missing ok/not ok)
+S32-array/keys_values.t............................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S32-array/kv.t.....................................   0   18    0    0   18
+    18 tests aborted (missing ok/not ok)
+S32-array/pairs.t..................................   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
+S32-array/perl.t...................................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S32-array/pop.rakudo.jvm...........................   0   37    0    0   37
+    37 tests aborted (missing ok/not ok)
+S32-array/push.t...................................   0   52    0    0   52
+    52 tests aborted (missing ok/not ok)
+S32-array/rotate.t.................................   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
+S32-array/shift.t..................................   0   33    0    0   33
+    33 tests aborted (missing ok/not ok)
+S32-array/splice.rakudo.jvm........................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S32-array/unshift.t................................   0   76    0    0   76
+    76 tests aborted (missing ok/not ok)
+S32-basics/pairup.t................................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S32-basics/warn.t..................................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S32-basics/xxKEY.rakudo.jvm........................   0  129    0    0  129
+   129 tests aborted (missing ok/not ok)
+S32-basics/xxPOS.rakudo.jvm........................   0   60    0    0   60
+    60 tests aborted (missing ok/not ok)
+S32-container/buf.t................................   0   18    0    0   18
+    18 tests aborted (missing ok/not ok)
+S32-container/cat.rakudo.jvm.......................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S32-container/roundrobin.t.........................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S32-container/stringify.t..........................   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
+S32-container/zip.rakudo.jvm.......................   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
+S32-exceptions/misc.rakudo.jvm.....................   0  426    0    0  426
+   426 tests aborted (missing ok/not ok)
+S32-hash/adverbs.t.................................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S32-hash/antipairs.t...............................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S32-hash/delete-adverb.t...........................   0  131    0    0  131
+   131 tests aborted (missing ok/not ok)
+S32-hash/delete.t..................................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+S32-hash/exists-adverb.t...........................   0   48    0    0   48
+    48 tests aborted (missing ok/not ok)
+S32-hash/exists.rakudo.jvm.........................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+S32-hash/invert.t..................................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S32-hash/keys_values.t.............................   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
+S32-hash/kv.t......................................   0   27    0    0   27
+    27 tests aborted (missing ok/not ok)
+S32-hash/map.t.....................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S32-hash/pairs.t...................................   0   26    0    0   26
+    26 tests aborted (missing ok/not ok)
+S32-hash/perl.t....................................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+S32-hash/push.t....................................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S32-hash/slice.rakudo.jvm..........................   0   31    0    0   31
+    31 tests aborted (missing ok/not ok)
+S32-io/IO-Socket-Async.rakudo.jvm..................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+S32-io/IO-Socket-INET.t............................   0   50    0    0   50
+    50 tests aborted (missing ok/not ok)
+S32-io/chdir.rakudo.jvm............................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S32-io/copy.t......................................   0   41    0    0   41
+    41 tests aborted (missing ok/not ok)
+S32-io/dir.rakudo.jvm..............................   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
+S32-io/file-tests.t................................   0   34    0    0   34
+    34 tests aborted (missing ok/not ok)
+S32-io/io-handle.rakudo.jvm........................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+S32-io/io-path-cygwin.rakudo.jvm...................   0   52    0    0   52
+    52 tests aborted (missing ok/not ok)
+S32-io/io-path-unix.rakudo.jvm.....................   0   37    0    0   37
+    37 tests aborted (missing ok/not ok)
+S32-io/io-path-win.rakudo.jvm......................   0   51    0    0   51
+    51 tests aborted (missing ok/not ok)
+S32-io/io-path.t...................................   0   18    0    0   18
+    18 tests aborted (missing ok/not ok)
+S32-io/io-spec-cygwin.t............................   0  102    0    0  102
+   102 tests aborted (missing ok/not ok)
+S32-io/io-spec-unix.t..............................   0  130    0    0  130
+   130 tests aborted (missing ok/not ok)
+S32-io/io-spec-win.t...............................   0  209    0    0  209
+   209 tests aborted (missing ok/not ok)
+S32-io/move.t......................................   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
+S32-io/note.t......................................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S32-io/open.rakudo.jvm.............................   0   27    0    0   27
+    27 tests aborted (missing ok/not ok)
+S32-io/other.t.....................................   0   60    0    0   60
+    60 tests aborted (missing ok/not ok)
+S32-io/pipe.t......................................   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
+S32-io/rename.t....................................   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
+S32-io/slurp.t.....................................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+S32-io/socket-accept-and-working-threads.t.........   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+S32-io/socket-recv-vs-read.t.......................   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
+S32-io/spurt.t.....................................   0   36    0    0   36
+    36 tests aborted (missing ok/not ok)
+S32-list/categorize-list.t.........................   0   28    0    0   28
+    28 tests aborted (missing ok/not ok)
+S32-list/categorize.t..............................   0   28    0    0   28
+    28 tests aborted (missing ok/not ok)
+S32-list/classify-list.t...........................   0   19    0    0   19
+    19 tests aborted (missing ok/not ok)
+S32-list/classify.rakudo.jvm.......................   0   40    0    0   40
+    40 tests aborted (missing ok/not ok)
+S32-list/combinations.t............................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+S32-list/create.t..................................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S32-list/cross.t...................................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S32-list/duckmap.rakudo.jvm........................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S32-list/end.t.....................................   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
+S32-list/first-end-k.rakudo.jvm....................   0   26    0    0   26
+    26 tests aborted (missing ok/not ok)
+S32-list/first-end-kv.t............................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+S32-list/first-end-p.t.............................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+S32-list/first-end-v.t.............................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+S32-list/first-end.t...............................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+S32-list/first-k.rakudo.jvm........................   0   25    0    0   25
+    25 tests aborted (missing ok/not ok)
+S32-list/first-kv.t................................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+S32-list/first-p.t.................................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+S32-list/first-v.t.................................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+S32-list/first.rakudo.jvm..........................   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
+S32-list/grep-k.rakudo.jvm.........................   0   40    0    0   40
+    40 tests aborted (missing ok/not ok)
+S32-list/grep-kv.t.................................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+S32-list/grep-p.t..................................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+S32-list/grep-v.t..................................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+S32-list/grep.rakudo.jvm...........................   0   41    0    0   41
+    41 tests aborted (missing ok/not ok)
+S32-list/head.t....................................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+S32-list/join.t....................................   0   38    0    0   38
+    38 tests aborted (missing ok/not ok)
+S32-list/map.rakudo.jvm............................   0   58    0    0   58
+    58 tests aborted (missing ok/not ok)
+S32-list/map_function_return_values.t..............   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S32-list/minmax.rakudo.jvm.........................   0  101    0    0  101
+   101 tests aborted (missing ok/not ok)
+S32-list/permutations.t............................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+S32-list/pick.t....................................   0  316    0    0  316
+   316 tests aborted (missing ok/not ok)
+S32-list/produce.t.................................   0   25    0    0   25
+    25 tests aborted (missing ok/not ok)
+S32-list/reduce.t..................................   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
+S32-list/repeated.rakudo.jvm.......................   0   38    0    0   38
+    38 tests aborted (missing ok/not ok)
+S32-list/reverse.rakudo.jvm........................   0   19    0    0   19
+    19 tests aborted (missing ok/not ok)
+S32-list/roll.t....................................   0   51    0    0   51
+    51 tests aborted (missing ok/not ok)
+S32-list/rotor.rakudo.jvm..........................   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
+S32-list/seq.rakudo.jvm............................   0   35    0    0   35
+    35 tests aborted (missing ok/not ok)
+S32-list/sort.t....................................   0   33    0    0   33
+    33 tests aborted (missing ok/not ok)
+S32-list/squish.rakudo.jvm.........................   0   62    0    0   62
+    62 tests aborted (missing ok/not ok)
+S32-list/tail.t....................................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+S32-list/unique.rakudo.jvm.........................   0   38    0    0   38
+    38 tests aborted (missing ok/not ok)
+S32-num/abs.t......................................   0   49    0    0   49
+    49 tests aborted (missing ok/not ok)
+S32-num/base.t.....................................   0   44    0    0   44
+    44 tests aborted (missing ok/not ok)
+S32-num/complex.t..................................   0  552    0    0  552
+   552 tests aborted (missing ok/not ok)
+S32-num/cool-num.rakudo.jvm........................   0   43    0    0   43
+    43 tests aborted (missing ok/not ok)
+S32-num/exp.t......................................   0   72    0    0   72
+    72 tests aborted (missing ok/not ok)
+S32-num/expmod.t...................................   0  117    0    0  117
+   117 tests aborted (missing ok/not ok)
+S32-num/fatrat.rakudo.jvm..........................   0  282    0    0  282
+   282 tests aborted (missing ok/not ok)
+S32-num/int.rakudo.jvm.............................   0  162    0    0  162
+   162 tests aborted (missing ok/not ok)
+S32-num/is-prime.t.................................   0   39    0    0   39
+    39 tests aborted (missing ok/not ok)
+S32-num/log.rakudo.jvm.............................   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
+S32-num/narrow.t...................................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+S32-num/pi.t.......................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S32-num/polar.t....................................   0   48    0    0   48
+    48 tests aborted (missing ok/not ok)
+S32-num/polymod.t..................................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+S32-num/power.rakudo.jvm...........................   0   77    0    0   77
+    77 tests aborted (missing ok/not ok)
+S32-num/rand.rakudo.jvm............................   0  113    0    0  113
+   113 tests aborted (missing ok/not ok)
+S32-num/rat.rakudo.jvm.............................   0  832    0    0  832
+   832 tests aborted (missing ok/not ok)
+S32-num/real-bridge.t..............................   0  200    0    0  200
+   200 tests aborted (missing ok/not ok)
+S32-num/roots.t....................................   0   55    0    0   55
+    55 tests aborted (missing ok/not ok)
+S32-num/rounders.rakudo.jvm........................   0  134    0    0  134
+   134 tests aborted (missing ok/not ok)
+S32-num/rshift_pos_amount.t........................   0  189    0    0  189
+   189 tests aborted (missing ok/not ok)
+S32-num/sign.t.....................................   0   35    0    0   35
+    35 tests aborted (missing ok/not ok)
+S32-num/sqrt.t.....................................   0   18    0    0   18
+    18 tests aborted (missing ok/not ok)
+S32-num/stringify.rakudo.jvm.......................   0  112    0    0  112
+   112 tests aborted (missing ok/not ok)
+S32-num/unpolar.t..................................   0  199    0    0  199
+   199 tests aborted (missing ok/not ok)
+S32-scalar/defined.t...............................   0   56    0    0   56
+    56 tests aborted (missing ok/not ok)
+S32-scalar/perl.rakudo.jvm.........................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S32-scalar/undef.rakudo.jvm........................   0   91    0    0   91
+    91 tests aborted (missing ok/not ok)
+S32-str/append.t...................................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S32-str/bool.t.....................................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+S32-str/capitalize.rakudo.jvm......................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+S32-str/chomp.rakudo.jvm...........................   0   39    0    0   39
+    39 tests aborted (missing ok/not ok)
+S32-str/chop.t.....................................   0   36    0    0   36
+    36 tests aborted (missing ok/not ok)
+S32-str/comb.rakudo.jvm............................   0   79    0    0   79
+    79 tests aborted (missing ok/not ok)
+S32-str/contains.t.................................   0   20    0    0   20
+    20 tests aborted (missing ok/not ok)
+S32-str/encode.rakudo.jvm..........................   0   44    0    0   44
+    44 tests aborted (missing ok/not ok)
+S32-str/ends-with.t................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S32-str/flip.rakudo.jvm............................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+S32-str/indent.t...................................   0   62    0    0   62
+    62 tests aborted (missing ok/not ok)
+S32-str/index.t....................................   0   46    0    0   46
+    46 tests aborted (missing ok/not ok)
+S32-str/indices.t..................................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+S32-str/lc.t.......................................   0   18    0    0   18
+    18 tests aborted (missing ok/not ok)
+S32-str/length.rakudo.jvm..........................   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
+S32-str/lines.rakudo.jvm...........................   0   48    0    0   48
+    48 tests aborted (missing ok/not ok)
+S32-str/numeric.rakudo.jvm.........................   0  172    0    0  172
+   172 tests aborted (missing ok/not ok)
+S32-str/ords.t.....................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S32-str/pack.t.....................................   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
+S32-str/pos.t......................................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S32-str/rindex.t...................................   0   45    0    0   45
+    45 tests aborted (missing ok/not ok)
+S32-str/samecase.t.................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S32-str/samemark.rakudo.jvm........................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+S32-str/split-simple.t.............................   0   30    0    0   30
+    30 tests aborted (missing ok/not ok)
+S32-str/split.rakudo.jvm...........................   0   60    0    0   60
+    60 tests aborted (missing ok/not ok)
+S32-str/sprintf-b.rakudo.jvm.......................   0  165    0    0  165
+   165 tests aborted (missing ok/not ok)
+S32-str/sprintf.t..................................   0  160    0    0  160
+   160 tests aborted (missing ok/not ok)
+S32-str/starts-with.t..............................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S32-str/substr-eq.t................................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+S32-str/substr-rw.rakudo.jvm.......................   0   40    0    0   40
+    40 tests aborted (missing ok/not ok)
+S32-str/substr.rakudo.jvm..........................   0   59    0    0   59
+    59 tests aborted (missing ok/not ok)
+S32-str/tc.rakudo.jvm..............................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+S32-str/tclc.rakudo.jvm............................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S32-str/trim.t.....................................   0   36    0    0   36
+    36 tests aborted (missing ok/not ok)
+S32-str/uc.rakudo.jvm..............................   0   19    0    0   19
+    19 tests aborted (missing ok/not ok)
+S32-str/unpack.t...................................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S32-str/words.rakudo.jvm...........................   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
+S32-temporal/Date.t................................   0  113    0    0  113
+   113 tests aborted (missing ok/not ok)
+S32-temporal/DateTime-Instant-Duration.t...........   0   61    0    0   61
+    61 tests aborted (missing ok/not ok)
+S32-temporal/DateTime.t............................   0  275    0    0  275
+   275 tests aborted (missing ok/not ok)
+S32-temporal/calendar.t............................   0  130    0    0  130
+   130 tests aborted (missing ok/not ok)
+S32-temporal/local.rakudo.jvm......................   0   25    0    0   25
+    25 tests aborted (missing ok/not ok)
+S32-trig/atan2.t...................................   0    0    0    0    0
+S32-trig/cos.t.....................................   0    0    0    0    0
+S32-trig/cosec.t...................................   0    0    0    0    0
+S32-trig/cosech.t..................................   0    0    0    0    0
+S32-trig/cosh.t....................................   0    0    0    0    0
+S32-trig/cotan.t...................................   0    0    0    0    0
+S32-trig/cotanh.t..................................   0    0    0    0    0
+S32-trig/e.t.......................................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S32-trig/pi.t......................................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+S32-trig/sec.t.....................................   0    0    0    0    0
+S32-trig/sech.t....................................   0    0    0    0    0
+S32-trig/simple.t..................................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+S32-trig/sin.t.....................................   0    0    0    0    0
+S32-trig/sinh.t....................................   0    0    0    0    0
+S32-trig/tan.t.....................................   0    0    0    0    0
+S32-trig/tanh.t....................................   0    0    0    0    0
+                                                   pass fail todo skip plan
+integration/99problems-01-to-10.t..................   0   22    0    0   22
+    22 tests aborted (missing ok/not ok)
+integration/99problems-11-to-20.t..................   0   25    0    0   25
+    25 tests aborted (missing ok/not ok)
+integration/99problems-21-to-30.t..................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+integration/99problems-31-to-40.t..................   0   67    0    0   67
+    67 tests aborted (missing ok/not ok)
+integration/99problems-41-to-50.t..................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+integration/99problems-51-to-60.t..................   0   37    0    0   37
+    37 tests aborted (missing ok/not ok)
+integration/99problems-61-to-70.t..................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+integration/advent2009-day01.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/advent2009-day02.t.....................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+integration/advent2009-day03.t.....................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+integration/advent2009-day04.t.....................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+integration/advent2009-day05.t.....................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+integration/advent2009-day06.t.....................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+integration/advent2009-day07.t.....................   0   14    0    0   14
+    14 tests aborted (missing ok/not ok)
+integration/advent2009-day08.t.....................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/advent2009-day09.t.....................   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
+integration/advent2009-day10.t.....................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+integration/advent2009-day11.t.....................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+integration/advent2009-day12.t.....................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+integration/advent2009-day13.t.....................   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
+integration/advent2009-day14.t.....................   0   21    0    0   21
+    21 tests aborted (missing ok/not ok)
+integration/advent2009-day15.t.....................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/advent2009-day16.t.....................   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
+integration/advent2009-day17.t.....................   0   62    0    0   62
+    62 tests aborted (missing ok/not ok)
+integration/advent2009-day18.t.....................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+integration/advent2009-day19.t.....................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+integration/advent2009-day20.t.....................   0   21    0    0   21
+    21 tests aborted (missing ok/not ok)
+integration/advent2009-day21.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/advent2009-day22.t.....................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/advent2009-day23.t.....................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+integration/advent2009-day24.t.....................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/advent2010-day03.t.....................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+integration/advent2010-day04.t.....................   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
+integration/advent2010-day06.t.....................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+integration/advent2010-day07.t.....................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/advent2010-day08.t.....................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/advent2010-day10.rakudo.jvm............   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/advent2010-day11.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/advent2010-day12.t.....................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+integration/advent2010-day14.t.....................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+integration/advent2010-day16.t.....................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+integration/advent2010-day19.rakudo.jvm............   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+integration/advent2010-day21.t.....................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/advent2010-day22.t.....................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/advent2010-day23.t.....................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/advent2011-day03.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/advent2011-day04.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/advent2011-day05.t.....................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+integration/advent2011-day07.t.....................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/advent2011-day10.t.....................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+integration/advent2011-day11.t.....................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+integration/advent2011-day14.t.....................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/advent2011-day15.t.....................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+integration/advent2011-day16.t.....................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+integration/advent2011-day20.t.....................   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
+integration/advent2011-day22.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/advent2011-day23.t.....................   0   55    0    0   55
+    55 tests aborted (missing ok/not ok)
+integration/advent2011-day24.t.....................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/advent2012-day02.t.....................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/advent2012-day03.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/advent2012-day04.rakudo.jvm............   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/advent2012-day06.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/advent2012-day09.t.....................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/advent2012-day10.t.....................   0   26    0    0   26
+    26 tests aborted (missing ok/not ok)
+integration/advent2012-day12.t.....................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+integration/advent2012-day13.t.....................   0   42    0    0   42
+    42 tests aborted (missing ok/not ok)
+integration/advent2012-day14.t.....................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+integration/advent2012-day15.t.....................   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
+integration/advent2012-day16.t.....................   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
+integration/advent2012-day19.t.....................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+integration/advent2012-day20.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/advent2012-day21.t.....................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+integration/advent2012-day22.t.....................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+integration/advent2012-day23.t.....................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/advent2012-day24.t.....................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+integration/advent2013-day02.t.....................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
+integration/advent2013-day04.t.....................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+integration/advent2013-day06.t.....................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+integration/advent2013-day07.t.....................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+integration/advent2013-day08.t.....................   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
+integration/advent2013-day09.t.....................   0   21    0    0   21
+    21 tests aborted (missing ok/not ok)
+integration/advent2013-day10.rakudo.jvm............   0   44    0    0   44
+    44 tests aborted (missing ok/not ok)
+integration/advent2013-day12.t.....................   0   32    0    0   32
+    32 tests aborted (missing ok/not ok)
+integration/advent2013-day14.t.....................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+integration/advent2013-day15.rakudo.jvm............   0   30    0    0   30
+    30 tests aborted (missing ok/not ok)
+integration/advent2013-day18.t.....................   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+integration/advent2013-day19.t.....................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/advent2013-day20.t.....................   0   22    0    0   22
+    22 tests aborted (missing ok/not ok)
+integration/advent2013-day21.t.....................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
+integration/advent2013-day22.t.....................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+integration/advent2013-day23.t.....................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+integration/advent2014-day05.rakudo.jvm............   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+integration/advent2014-day13.t.....................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+integration/advent2014-day16.t.....................   0   21    0    0   21
+    21 tests aborted (missing ok/not ok)
+integration/code-blocks-as-sub-args.t..............   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/error-reporting.rakudo.jvm.............   0   28    0    0   28
+    28 tests aborted (missing ok/not ok)
+integration/lazy-bentley-generator.t...............   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+integration/lexical-array-in-inner-block.t.........   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/lexicals-and-attributes.t..............   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/man-or-boy.t...........................   0    0    0    0    0
+integration/method-calls-and-instantiation.t.......   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/no-indirect-new.t......................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/packages.t.............................   0    0    0    0    0
+integration/pair-in-array.t........................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/passing-pair-class-to-sub.t............   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/real-strings.t.........................   0   20    0    0   20
+    20 tests aborted (missing ok/not ok)
+integration/role-composition-vs-attribute.rakudo...   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+integration/rule-in-class-Str.t....................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/say-crash.t............................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/substr-after-match-in-gather-in-for.t..   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+integration/topic_in_double_loop.t.................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+integration/variables-in-do.t......................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/weird-errors.rakudo.jvm................   0   30    0    0   30
+    30 tests aborted (missing ok/not ok)
+                                                   pass fail todo skip plan
+rosettacode/greatest_element_of_a_list.t...........   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+----------------
+"Synopsis", "pass","fail","todo","skip","plan","spec"
+"S01",           0,     0,     0,    86,    86,    86
+"S02",        9021,     0,   133,   401,  9555,  9558
+"S03",        5981,     0,   110,    94,  6185,  6203
+"S04",        1450,     0,    62,    33,  1545,  1577
+"S05",        5718,     0,    91,   207,  6016,  6202
+"S06",        2139,     0,    68,    95,  2302,  2345
+"S07",         140,     0,     7,     5,   152,   152
+"S09",        2759,     0,    26,    39,  2824,  2824
+"S10",         137,     0,     8,     1,   146,   203
+"S11",         173,     0,     7,    11,   191,   201
+"S12",        1653,     0,    37,   137,  1827,  1876
+"S13",          62,     0,     0,     0,    62,    72
+"S14",         394,     0,     5,     5,   404,   417
+"S15",          45,     0,     7,    68,   120, 79089
+"S16",         687,     0,    69,   147,   903,   940
+"S17",          23,   908,     0,     0,   931,  1006
+"S19",           0,    30,     0,     0,    30,    30
+"S22",           0,    19,     0,     0,    19,    19
+"S24",           0,    28,     0,     0,    28,    99
+"S26",           0,  2007,     0,     0,  2007,  2007
+"S28",           0,     2,     0,     0,     2,     8
+"S29",           0,   219,     0,     0,   219,   219
+"S32",           0,  9832,     0,     0,  9832,  9905
+"int",           0,  1298,     0,     0,  1298,  1294
+"ros",           0,     2,     0,     0,     2,     2
+"total",     30382, 14345,   630,  1329, 46686,126334
+----------------
+Failure summary:
+S17-channel/stress.t aborted 1 test(s)
+S17-lowlevel/lock.t aborted 23 test(s)
+S17-lowlevel/semaphore.t aborted 2 test(s)
+S17-lowlevel/thread-start-join-stress.t aborted 1 test(s)
+S17-lowlevel/thread.t aborted 25 test(s)
+S17-promise/allof.t aborted 13 test(s)
+S17-promise/anyof.t aborted 10 test(s)
+S17-promise/at.t aborted 3 test(s)
+S17-promise/basic.t aborted 28 test(s)
+S17-promise/in.t aborted 3 test(s)
+S17-promise/start.t aborted 53 test(s)
+S17-promise/stress.t aborted 1 test(s)
+S17-promise/then.t aborted 14 test(s)
+S17-scheduler/at.t aborted 15 test(s)
+S17-scheduler/basic.rakudo.jvm aborted 34 test(s)
+S17-scheduler/every.t aborted 20 test(s)
+S17-scheduler/in.t aborted 14 test(s)
+S17-scheduler/times.t aborted 4 test(s)
+S17-supply/Channel.rakudo.jvm aborted 14 test(s)
+S17-supply/Promise.t aborted 13 test(s)
+S17-supply/act.t aborted 9 test(s)
+S17-supply/basic.t aborted 90 test(s)
+S17-supply/batch.t aborted 11 test(s)
+S17-supply/categorize.t aborted 63 test(s)
+S17-supply/classify.t aborted 33 test(s)
+S17-supply/delayed.rakudo.jvm aborted 13 test(s)
+S17-supply/do.t aborted 5 test(s)
+S17-supply/elems.t aborted 5 test(s)
+S17-supply/flat.t aborted 17 test(s)
+S17-supply/from-list.t aborted 13 test(s)
+S17-supply/grab.t aborted 5 test(s)
+S17-supply/grep.t aborted 9 test(s)
+S17-supply/head.t aborted 8 test(s)
+S17-supply/interval.rakudo.jvm aborted 7 test(s)
+S17-supply/lines.rakudo.jvm aborted 23 test(s)
+S17-supply/list.t aborted 5 test(s)
+S17-supply/map.t aborted 7 test(s)
+S17-supply/max.t aborted 10 test(s)
+S17-supply/merge.t aborted 10 test(s)
+S17-supply/migrate.t aborted 13 test(s)
+S17-supply/min.t aborted 10 test(s)
+S17-supply/minmax.t aborted 10 test(s)
+S17-supply/on-demand.t aborted 7 test(s)
+S17-supply/produce.t aborted 10 test(s)
+S17-supply/reduce.t aborted 10 test(s)
+S17-supply/return-in-tap.t aborted 1 test(s)
+S17-supply/reverse.t aborted 3 test(s)
+S17-supply/rotor.rakudo.jvm aborted 32 test(s)
+S17-supply/schedule-on.t aborted 5 test(s)
+S17-supply/sort.t aborted 7 test(s)
+S17-supply/squish.t aborted 15 test(s)
+S17-supply/stable.rakudo.jvm aborted 7 test(s)
+S17-supply/start.t aborted 8 test(s)
+S17-supply/syntax.t aborted 60 test(s)
+S17-supply/tail.t aborted 8 test(s)
+S17-supply/throttle.t aborted 17 test(s)
+S17-supply/unique.t aborted 17 test(s)
+S17-supply/wait.t aborted 4 test(s)
+S17-supply/watch-path.rakudo.jvm aborted 2 test(s)
+S17-supply/words.t aborted 5 test(s)
+S17-supply/zip-latest.rakudo.jvm aborted 13 test(s)
+S17-supply/zip.t aborted 10 test(s)
+S19-command-line-options/02-dash-n.t aborted 3 test(s)
+S19-command-line-options/03-dash-p.t aborted 2 test(s)
+S19-command-line-options/04-negation.rakudo.jvm aborted 3 test(s)
+S19-command-line-options/05-delimited-options.rak aborted 1 test(s)
+S19-command-line-options/06-dash-rxtrace.t aborted 1 test(s)
+S19-command-line/arguments.t aborted 3 test(s)
+S19-command-line/dash-e.t aborted 4 test(s)
+S19-command-line/help.t aborted 1 test(s)
+S19-command-line/repl.rakudo.jvm aborted 12 test(s)
+S22-package-format/local.rakudo.jvm aborted 19 test(s)
+S24-testing/0-compile.t aborted 1 test(s)
+S24-testing/3-output.t aborted 4 test(s)
+S24-testing/7-bail_out.t aborted 3 test(s)
+S24-testing/8-die_on_fail.t aborted 6 test(s)
+S24-testing/9-is_deeply.t aborted 1 test(s)
+S24-testing/line-numbers.t aborted 13 test(s)
+S26-documentation/01-delimited.t aborted 40 test(s)
+S26-documentation/02-paragraph.t aborted 27 test(s)
+S26-documentation/03-abbreviated.t aborted 30 test(s)
+S26-documentation/04-code.t aborted 50 test(s)
+S26-documentation/05-comment.t aborted 9 test(s)
+S26-documentation/06-lists.t aborted 39 test(s)
+S26-documentation/07-tables.t aborted 42 test(s)
+S26-documentation/07a-tables-todo-skipped.rakudo. aborted 13 test(s)
+S26-documentation/08-formattingcodes.t aborted 45 test(s)
+S26-documentation/09-configuration.rakudo.jvm aborted 18 test(s)
+S26-documentation/10-doc-cli.t aborted 2 test(s)
+S26-documentation/block-leading.t aborted 334 test(s)
+S26-documentation/block-trailing.t aborted 327 test(s)
+S26-documentation/module-comment.t aborted 1 test(s)
+S26-documentation/multiline-leading.t aborted 4 test(s)
+S26-documentation/multiline-trailing.t aborted 2 test(s)
+S26-documentation/wacky.t aborted 30 test(s)
+S26-documentation/why-both.t aborted 291 test(s)
+S26-documentation/why-leading.t aborted 355 test(s)
+S26-documentation/why-trailing.t aborted 348 test(s)
+S28-named-variables/cwd.t aborted 2 test(s)
+S29-any/cmp.t aborted 6 test(s)
+S29-any/deg-trans.t aborted 38 test(s)
+S29-any/isa.t aborted 10 test(s)
+S29-context/die.rakudo.jvm aborted 17 test(s)
+S29-context/eval.rakudo.jvm aborted 24 test(s)
+S29-context/evalfile.t aborted 2 test(s)
+S29-context/exit-in-if.t aborted 1 test(s)
+S29-context/exit.t aborted 3 test(s)
+S29-context/sleep.t aborted 22 test(s)
+S29-conversions/hash.t aborted 8 test(s)
+S29-conversions/ord_and_chr.rakudo.jvm aborted 53 test(s)
+S29-os/system.rakudo.jvm aborted 35 test(s)
+S32-array/adverbs.rakudo.jvm aborted 2 test(s)
+S32-array/bool.t aborted 15 test(s)
+S32-array/create.t aborted 8 test(s)
+S32-array/delete-adverb-native.t aborted 138 test(s)
+S32-array/delete-adverb.t aborted 218 test(s)
+S32-array/delete.rakudo.jvm aborted 32 test(s)
+S32-array/elems.t aborted 11 test(s)
+S32-array/end.t aborted 12 test(s)
+S32-array/exists-adverb.t aborted 52 test(s)
+S32-array/keys_values.t aborted 8 test(s)
+S32-array/kv.t aborted 18 test(s)
+S32-array/pairs.t aborted 14 test(s)
+S32-array/perl.t aborted 6 test(s)
+S32-array/pop.rakudo.jvm aborted 37 test(s)
+S32-array/push.t aborted 52 test(s)
+S32-array/rotate.t aborted 29 test(s)
+S32-array/shift.t aborted 33 test(s)
+S32-array/splice.rakudo.jvm aborted 4 test(s)
+S32-array/unshift.t aborted 76 test(s)
+S32-basics/pairup.t aborted 5 test(s)
+S32-basics/warn.t aborted 7 test(s)
+S32-basics/xxKEY.rakudo.jvm aborted 129 test(s)
+S32-basics/xxPOS.rakudo.jvm aborted 60 test(s)
+S32-container/buf.t aborted 18 test(s)
+S32-container/cat.rakudo.jvm aborted 6 test(s)
+S32-container/roundrobin.t aborted 6 test(s)
+S32-container/stringify.t aborted 16 test(s)
+S32-container/zip.rakudo.jvm aborted 14 test(s)
+S32-exceptions/misc.rakudo.jvm aborted 426 test(s)
+S32-hash/adverbs.t aborted 4 test(s)
+S32-hash/antipairs.t aborted 5 test(s)
+S32-hash/delete-adverb.t aborted 131 test(s)
+S32-hash/delete.t aborted 9 test(s)
+S32-hash/exists-adverb.t aborted 48 test(s)
+S32-hash/exists.rakudo.jvm aborted 15 test(s)
+S32-hash/invert.t aborted 5 test(s)
+S32-hash/keys_values.t aborted 14 test(s)
+S32-hash/kv.t aborted 27 test(s)
+S32-hash/map.t aborted 10 test(s)
+S32-hash/pairs.t aborted 26 test(s)
+S32-hash/perl.t aborted 12 test(s)
+S32-hash/push.t aborted 10 test(s)
+S32-hash/slice.rakudo.jvm aborted 31 test(s)
+S32-io/IO-Socket-Async.rakudo.jvm aborted 13 test(s)
+S32-io/IO-Socket-INET.t aborted 50 test(s)
+S32-io/chdir.rakudo.jvm aborted 10 test(s)
+S32-io/copy.t aborted 41 test(s)
+S32-io/dir.rakudo.jvm aborted 14 test(s)
+S32-io/file-tests.t aborted 34 test(s)
+S32-io/io-handle.rakudo.jvm aborted 3 test(s)
+S32-io/io-path-cygwin.rakudo.jvm aborted 52 test(s)
+S32-io/io-path-unix.rakudo.jvm aborted 37 test(s)
+S32-io/io-path-win.rakudo.jvm aborted 51 test(s)
+S32-io/io-path.t aborted 18 test(s)
+S32-io/io-spec-cygwin.t aborted 102 test(s)
+S32-io/io-spec-unix.t aborted 130 test(s)
+S32-io/io-spec-win.t aborted 209 test(s)
+S32-io/move.t aborted 29 test(s)
+S32-io/note.t aborted 6 test(s)
+S32-io/open.rakudo.jvm aborted 27 test(s)
+S32-io/other.t aborted 60 test(s)
+S32-io/pipe.t aborted 14 test(s)
+S32-io/rename.t aborted 29 test(s)
+S32-io/slurp.t aborted 17 test(s)
+S32-io/socket-accept-and-working-threads.t aborted 10 test(s)
+S32-io/socket-recv-vs-read.t aborted 11 test(s)
+S32-io/spurt.t aborted 36 test(s)
+S32-list/categorize-list.t aborted 28 test(s)
+S32-list/categorize.t aborted 28 test(s)
+S32-list/classify-list.t aborted 19 test(s)
+S32-list/classify.rakudo.jvm aborted 40 test(s)
+S32-list/combinations.t aborted 13 test(s)
+S32-list/create.t aborted 6 test(s)
+S32-list/cross.t aborted 2 test(s)
+S32-list/duckmap.rakudo.jvm aborted 5 test(s)
+S32-list/end.t aborted 14 test(s)
+S32-list/first-end-k.rakudo.jvm aborted 26 test(s)
+S32-list/first-end-kv.t aborted 24 test(s)
+S32-list/first-end-p.t aborted 24 test(s)
+S32-list/first-end-v.t aborted 24 test(s)
+S32-list/first-end.t aborted 24 test(s)
+S32-list/first-k.rakudo.jvm aborted 25 test(s)
+S32-list/first-kv.t aborted 24 test(s)
+S32-list/first-p.t aborted 24 test(s)
+S32-list/first-v.t aborted 24 test(s)
+S32-list/first.rakudo.jvm aborted 29 test(s)
+S32-list/grep-k.rakudo.jvm aborted 40 test(s)
+S32-list/grep-kv.t aborted 17 test(s)
+S32-list/grep-p.t aborted 17 test(s)
+S32-list/grep-v.t aborted 17 test(s)
+S32-list/grep.rakudo.jvm aborted 41 test(s)
+S32-list/head.t aborted 24 test(s)
+S32-list/join.t aborted 38 test(s)
+S32-list/map.rakudo.jvm aborted 58 test(s)
+S32-list/map_function_return_values.t aborted 2 test(s)
+S32-list/minmax.rakudo.jvm aborted 101 test(s)
+S32-list/permutations.t aborted 9 test(s)
+S32-list/pick.t aborted 316 test(s)
+S32-list/produce.t aborted 25 test(s)
+S32-list/reduce.t aborted 16 test(s)
+S32-list/repeated.rakudo.jvm aborted 38 test(s)
+S32-list/reverse.rakudo.jvm aborted 19 test(s)
+S32-list/roll.t aborted 51 test(s)
+S32-list/rotor.rakudo.jvm aborted 11 test(s)
+S32-list/seq.rakudo.jvm aborted 35 test(s)
+S32-list/sort.t aborted 33 test(s)
+S32-list/squish.rakudo.jvm aborted 62 test(s)
+S32-list/tail.t aborted 24 test(s)
+S32-list/unique.rakudo.jvm aborted 38 test(s)
+S32-num/abs.t aborted 49 test(s)
+S32-num/base.t aborted 44 test(s)
+S32-num/complex.t aborted 552 test(s)
+S32-num/cool-num.rakudo.jvm aborted 43 test(s)
+S32-num/exp.t aborted 72 test(s)
+S32-num/expmod.t aborted 117 test(s)
+S32-num/fatrat.rakudo.jvm aborted 282 test(s)
+S32-num/int.rakudo.jvm aborted 162 test(s)
+S32-num/is-prime.t aborted 39 test(s)
+S32-num/log.rakudo.jvm aborted 29 test(s)
+S32-num/narrow.t aborted 17 test(s)
+S32-num/pi.t aborted 8 test(s)
+S32-num/polar.t aborted 48 test(s)
+S32-num/polymod.t aborted 9 test(s)
+S32-num/power.rakudo.jvm aborted 77 test(s)
+S32-num/rand.rakudo.jvm aborted 113 test(s)
+S32-num/rat.rakudo.jvm aborted 832 test(s)
+S32-num/real-bridge.t aborted 200 test(s)
+S32-num/roots.t aborted 55 test(s)
+S32-num/rounders.rakudo.jvm aborted 134 test(s)
+S32-num/rshift_pos_amount.t aborted 189 test(s)
+S32-num/sign.t aborted 35 test(s)
+S32-num/sqrt.t aborted 18 test(s)
+S32-num/stringify.rakudo.jvm aborted 112 test(s)
+S32-num/unpolar.t aborted 199 test(s)
+S32-scalar/defined.t aborted 56 test(s)
+S32-scalar/perl.rakudo.jvm aborted 7 test(s)
+S32-scalar/undef.rakudo.jvm aborted 91 test(s)
+S32-str/append.t aborted 7 test(s)
+S32-str/bool.t aborted 12 test(s)
+S32-str/capitalize.rakudo.jvm aborted 17 test(s)
+S32-str/chomp.rakudo.jvm aborted 39 test(s)
+S32-str/chop.t aborted 36 test(s)
+S32-str/comb.rakudo.jvm aborted 79 test(s)
+S32-str/contains.t aborted 20 test(s)
+S32-str/encode.rakudo.jvm aborted 44 test(s)
+S32-str/ends-with.t aborted 8 test(s)
+S32-str/flip.rakudo.jvm aborted 13 test(s)
+S32-str/indent.t aborted 62 test(s)
+S32-str/index.t aborted 46 test(s)
+S32-str/indices.t aborted 24 test(s)
+S32-str/lc.t aborted 18 test(s)
+S32-str/length.rakudo.jvm aborted 29 test(s)
+S32-str/lines.rakudo.jvm aborted 48 test(s)
+S32-str/numeric.rakudo.jvm aborted 172 test(s)
+S32-str/ords.t aborted 8 test(s)
+S32-str/pack.t aborted 14 test(s)
+S32-str/pos.t aborted 2 test(s)
+S32-str/rindex.t aborted 45 test(s)
+S32-str/samecase.t aborted 8 test(s)
+S32-str/samemark.rakudo.jvm aborted 9 test(s)
+S32-str/split-simple.t aborted 30 test(s)
+S32-str/split.rakudo.jvm aborted 60 test(s)
+S32-str/sprintf-b.rakudo.jvm aborted 165 test(s)
+S32-str/sprintf.t aborted 160 test(s)
+S32-str/starts-with.t aborted 8 test(s)
+S32-str/substr-eq.t aborted 12 test(s)
+S32-str/substr-rw.rakudo.jvm aborted 40 test(s)
+S32-str/substr.rakudo.jvm aborted 59 test(s)
+S32-str/tc.rakudo.jvm aborted 9 test(s)
+S32-str/tclc.rakudo.jvm aborted 6 test(s)
+S32-str/trim.t aborted 36 test(s)
+S32-str/uc.rakudo.jvm aborted 19 test(s)
+S32-str/unpack.t aborted 2 test(s)
+S32-str/words.rakudo.jvm aborted 16 test(s)
+S32-temporal/Date.t aborted 113 test(s)
+S32-temporal/DateTime-Instant-Duration.t aborted 61 test(s)
+S32-temporal/DateTime.t aborted 275 test(s)
+S32-temporal/calendar.t aborted 130 test(s)
+S32-temporal/local.rakudo.jvm aborted 25 test(s)
+S32-trig/e.t aborted 5 test(s)
+S32-trig/pi.t aborted 3 test(s)
+S32-trig/simple.t aborted 12 test(s)
+integration/99problems-01-to-10.t aborted 22 test(s)
+integration/99problems-11-to-20.t aborted 25 test(s)
+integration/99problems-21-to-30.t aborted 15 test(s)
+integration/99problems-31-to-40.t aborted 67 test(s)
+integration/99problems-41-to-50.t aborted 13 test(s)
+integration/99problems-51-to-60.t aborted 37 test(s)
+integration/99problems-61-to-70.t aborted 15 test(s)
+integration/advent2009-day01.t aborted 2 test(s)
+integration/advent2009-day02.t aborted 10 test(s)
+integration/advent2009-day03.t aborted 6 test(s)
+integration/advent2009-day04.t aborted 6 test(s)
+integration/advent2009-day05.t aborted 17 test(s)
+integration/advent2009-day06.t aborted 15 test(s)
+integration/advent2009-day07.t aborted 14 test(s)
+integration/advent2009-day08.t aborted 8 test(s)
+integration/advent2009-day09.t aborted 17 test(s)
+integration/advent2009-day10.t aborted 5 test(s)
+integration/advent2009-day11.t aborted 6 test(s)
+integration/advent2009-day12.t aborted 9 test(s)
+integration/advent2009-day13.t aborted 16 test(s)
+integration/advent2009-day14.t aborted 21 test(s)
+integration/advent2009-day15.t aborted 4 test(s)
+integration/advent2009-day16.t aborted 11 test(s)
+integration/advent2009-day17.t aborted 62 test(s)
+integration/advent2009-day18.t aborted 7 test(s)
+integration/advent2009-day19.t aborted 6 test(s)
+integration/advent2009-day20.t aborted 21 test(s)
+integration/advent2009-day21.t aborted 2 test(s)
+integration/advent2009-day22.t aborted 4 test(s)
+integration/advent2009-day23.t aborted 10 test(s)
+integration/advent2009-day24.t aborted 4 test(s)
+integration/advent2010-day03.t aborted 12 test(s)
+integration/advent2010-day04.t aborted 11 test(s)
+integration/advent2010-day06.t aborted 12 test(s)
+integration/advent2010-day07.t aborted 8 test(s)
+integration/advent2010-day08.t aborted 8 test(s)
+integration/advent2010-day10.rakudo.jvm aborted 4 test(s)
+integration/advent2010-day11.t aborted 2 test(s)
+integration/advent2010-day12.t aborted 13 test(s)
+integration/advent2010-day14.t aborted 5 test(s)
+integration/advent2010-day16.t aborted 13 test(s)
+integration/advent2010-day19.rakudo.jvm aborted 6 test(s)
+integration/advent2010-day21.t aborted 4 test(s)
+integration/advent2010-day22.t aborted 3 test(s)
+integration/advent2010-day23.t aborted 8 test(s)
+integration/advent2011-day03.t aborted 2 test(s)
+integration/advent2011-day04.t aborted 2 test(s)
+integration/advent2011-day05.t aborted 5 test(s)
+integration/advent2011-day07.t aborted 3 test(s)
+integration/advent2011-day10.t aborted 5 test(s)
+integration/advent2011-day11.t aborted 9 test(s)
+integration/advent2011-day14.t aborted 8 test(s)
+integration/advent2011-day15.t aborted 9 test(s)
+integration/advent2011-day16.t aborted 12 test(s)
+integration/advent2011-day20.t aborted 16 test(s)
+integration/advent2011-day22.t aborted 2 test(s)
+integration/advent2011-day23.t aborted 55 test(s)
+integration/advent2011-day24.t aborted 8 test(s)
+integration/advent2012-day02.t aborted 4 test(s)
+integration/advent2012-day03.t aborted 2 test(s)
+integration/advent2012-day04.rakudo.jvm aborted 8 test(s)
+integration/advent2012-day06.t aborted 2 test(s)
+integration/advent2012-day09.t aborted 8 test(s)
+integration/advent2012-day10.t aborted 26 test(s)
+integration/advent2012-day12.t aborted 5 test(s)
+integration/advent2012-day13.t aborted 42 test(s)
+integration/advent2012-day14.t aborted 6 test(s)
+integration/advent2012-day15.t aborted 11 test(s)
+integration/advent2012-day16.t aborted 11 test(s)
+integration/advent2012-day19.t aborted 10 test(s)
+integration/advent2012-day20.t aborted 2 test(s)
+integration/advent2012-day21.t aborted 9 test(s)
+integration/advent2012-day22.t aborted 6 test(s)
+integration/advent2012-day23.t aborted 2 test(s)
+integration/advent2012-day24.t aborted 1 test(s)
+integration/advent2013-day02.t aborted 12 test(s)
+integration/advent2013-day04.t aborted 7 test(s)
+integration/advent2013-day06.t aborted 1 test(s)
+integration/advent2013-day07.t aborted 6 test(s)
+integration/advent2013-day08.t aborted 11 test(s)
+integration/advent2013-day09.t aborted 21 test(s)
+integration/advent2013-day10.rakudo.jvm aborted 44 test(s)
+integration/advent2013-day12.t aborted 32 test(s)
+integration/advent2013-day14.t aborted 10 test(s)
+integration/advent2013-day15.rakudo.jvm aborted 30 test(s)
+integration/advent2013-day18.t aborted 10 test(s)
+integration/advent2013-day19.t aborted 4 test(s)
+integration/advent2013-day20.t aborted 22 test(s)
+integration/advent2013-day21.t aborted 24 test(s)
+integration/advent2013-day22.t aborted 9 test(s)
+integration/advent2013-day23.t aborted 9 test(s)
+integration/advent2014-day05.rakudo.jvm aborted 7 test(s)
+integration/advent2014-day13.t aborted 13 test(s)
+integration/advent2014-day16.t aborted 21 test(s)
+integration/code-blocks-as-sub-args.t aborted 4 test(s)
+integration/error-reporting.rakudo.jvm aborted 28 test(s)
+integration/lazy-bentley-generator.t aborted 1 test(s)
+integration/lexical-array-in-inner-block.t aborted 2 test(s)
+integration/lexicals-and-attributes.t aborted 8 test(s)
+integration/method-calls-and-instantiation.t aborted 2 test(s)
+integration/no-indirect-new.t aborted 2 test(s)
+integration/pair-in-array.t aborted 3 test(s)
+integration/passing-pair-class-to-sub.t aborted 2 test(s)
+integration/real-strings.t aborted 20 test(s)
+integration/role-composition-vs-attribute.rakudo. aborted 10 test(s)
+integration/rule-in-class-Str.t aborted 3 test(s)
+integration/say-crash.t aborted 4 test(s)
+integration/substr-after-match-in-gather-in-for.t aborted 1 test(s)
+integration/topic_in_double_loop.t aborted 5 test(s)
+integration/variables-in-do.t aborted 3 test(s)
+integration/weird-errors.rakudo.jvm aborted 30 test(s)
+rosettacode/greatest_element_of_a_list.t aborted 1 test(s)
+rosettacode/sierpinski_triangle.t aborted 1 test(s)
