@@ -183,8 +183,7 @@ S02-types/WHICH.rakudo.jvm.........................1561    0    0   44 1605
 S02-types/anon_block.rakudo.jvm....................  39    0    1    2   42
      2 skipped: tests don't work if previous test fails
      1 todo   : Parrot support for zero-arg subs?
-S02-types/array-shapes.rakudo.jvm..................  24    0    2    1   27
-     1 skipped: array shapes NYI RT \#124502
+S02-types/array-shapes.rakudo.jvm..................  25    0    2    0   27
      2 todo   : code does not die, array shapes RT #124502
 S02-types/array.rakudo.jvm.........................  96    0    4    2  102
      2 skipped: multi-dim arrays NYI RT \#124508
@@ -1362,8 +1361,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI RT \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1906,7 +1904,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1964,7 +1962,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9021,     0,   133,   401,  9555,  9558
+"S02",        9022,     0,   133,   400,  9555,  9558
 "S03",        5981,     0,   110,    94,  6185,  6203
 "S04",        1450,     0,    62,    33,  1545,  1577
 "S05",        5718,     0,    91,   207,  6016,  6202
@@ -1986,9 +1984,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         406,     0,    13,     4,   423,   423
 "S32",       13312,     1,   230,   207, 13750, 12044
-"int",        1286,     0,    10,    15,  1311,  1304
+"int",        1285,     1,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48241,     1,   907,  1672, 50821,128687
+"total",     48241,     2,   907,  1671, 50821,128687
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
