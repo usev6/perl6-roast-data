@@ -203,7 +203,7 @@ S02-types/baghash.rakudo.jvm....................... 242    0    2   21  265
      2 todo   : in flux
 S02-types/bool.t...................................  66    0    0    0   66
 S02-types/built-in.t...............................   1    0    0    0    1
-S02-types/capture.t................................  33    0    0    0   33
+S02-types/capture.t................................  32    1    0    0   33
 S02-types/catch_type_cast_mismatch.t...............  11    0    0    0   11
 S02-types/compact.rakudo.jvm.......................   2    0    3    5   10
      5 skipped: cat NYI RT \#124456
@@ -1013,7 +1013,7 @@ S09-typed-arrays/arrays.rakudo.jvm.................  79    0    2    3   84
      2 todo   : nested typechecks are borked
 S09-typed-arrays/hashes.t..........................  43    0    0    0   43
 S09-typed-arrays/native-decl.t.....................  14    0    0    0   14
-S09-typed-arrays/native-int.rakudo.jvm.............1597    0   13    0 1610
+S09-typed-arrays/native-int.rakudo.jvm.............1587   10   13    0 1610
     10 todo   : RT #127756
      2 todo   : highest bit length stays negative, RT #124088
      1 todo   : missing an invert? (-1 --> 0, -2 --> -1)
@@ -1022,7 +1022,7 @@ S09-typed-arrays/native-num.rakudo.jvm............. 414    0    3   27  444
      6 skipped: cannot approx test Parcels
     18 skipped: nativeint.list loops on itself
      3 todo   : RT #127756
-S09-typed-arrays/native-str.rakudo.jvm............. 157    0    1    2  160
+S09-typed-arrays/native-str.rakudo.jvm............. 156    1    1    2  160
      2 skipped: non-existing str elements return null_s
      1 todo   : RT #127756
 S09-typed-arrays/native.t..........................   3    0    0    0    3
@@ -1904,7 +1904,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1962,13 +1962,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9022,     0,   133,   400,  9555,  9558
+"S02",        9021,     1,   133,   400,  9555,  9558
 "S03",        5981,     0,   110,    94,  6185,  6203
 "S04",        1450,     0,    62,    33,  1545,  1577
 "S05",        5718,     0,    91,   207,  6016,  6202
 "S06",        2139,     0,    68,    95,  2302,  2345
 "S07",         140,     0,     7,     5,   152,   152
-"S09",        2759,     0,    26,    39,  2824,  2824
+"S09",        2748,    11,    26,    39,  2824,  2824
 "S10",         137,     0,     8,     1,   146,   203
 "S11",         173,     0,     7,    11,   191,   201
 "S12",        1653,     0,    37,   137,  1827,  1876
@@ -1984,10 +1984,21 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         406,     0,    13,     4,   423,   423
 "S32",       13312,     1,   230,   207, 13750, 12044
-"int",        1285,     1,    10,    15,  1311,  1304
+"int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48241,     2,   907,  1671, 50821,128687
+"total",     48230,    13,   907,  1671, 50821,128687
 ----------------
 Failure summary:
+S02-types/capture.t 33 - .antipairs returns correct result
+S09-typed-arrays/native-int.rakudo.jvm 78 - .antipairs from a int array
+S09-typed-arrays/native-int.rakudo.jvm 238 - .antipairs from a int8 array
+S09-typed-arrays/native-int.rakudo.jvm 398 - .antipairs from a int16 array
+S09-typed-arrays/native-int.rakudo.jvm 558 - .antipairs from a int32 array
+S09-typed-arrays/native-int.rakudo.jvm 718 - .antipairs from a int64 array
+S09-typed-arrays/native-int.rakudo.jvm 878 - .antipairs from a uint array
+S09-typed-arrays/native-int.rakudo.jvm 1038 - .antipairs from a uint8 array
+S09-typed-arrays/native-int.rakudo.jvm 1198 - .antipairs from a uint16 array
+S09-typed-arrays/native-int.rakudo.jvm 1358 - .antipairs from a uint32 array
+S09-typed-arrays/native-int.rakudo.jvm 1518 - .antipairs from a uint64 array
+S09-typed-arrays/native-str.rakudo.jvm 78 - .antipairs from a str array
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
