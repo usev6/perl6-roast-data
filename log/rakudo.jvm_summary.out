@@ -248,13 +248,13 @@ S02-types/lazy-lists.t.............................  23    0    0    0   23
 S02-types/list.t...................................  67    0    0    0   67
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding RT \#124494
-S02-types/mix.rakudo.jvm........................... 195    0    2    0  197
+S02-types/mix.rakudo.jvm........................... 197    0    2    0  199
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT #124496
 S02-types/mixed_multi_dimensional.rakudo.jvm.......  77    0    3    0   80
      1 todo   : isa hash
      2 todo   : unknown
-S02-types/mixhash.rakudo.jvm....................... 211    0    2   21  234
+S02-types/mixhash.rakudo.jvm....................... 213    0    2   21  236
     21 skipped: 'is TypeObject' NYI RT \#124490
      2 todo   : in flux
 S02-types/mu.t.....................................   8    0    0    0    8
@@ -1384,7 +1384,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................  16    1    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1962,7 +1962,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9021,     1,   133,   400,  9555,  9558
+"S02",        9025,     1,   133,   400,  9559,  9562
 "S03",        5981,     0,   110,    94,  6185,  6203
 "S04",        1450,     0,    62,    33,  1545,  1577
 "S05",        5718,     0,    91,   207,  6016,  6202
@@ -1971,12 +1971,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2748,    11,    26,    39,  2824,  2824
 "S10",         137,     0,     8,     1,   146,   203
 "S11",         173,     0,     7,    11,   191,   201
-"S12",        1653,     0,    37,   137,  1827,  1876
+"S12",        1653,     0,    37,   137,  1827,  1879
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         886,     0,    15,    30,   931,  1006
+"S17",         885,     1,    15,    30,   931,  1006
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -1986,7 +1986,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       13312,     1,   230,   207, 13750, 12044
 "int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48230,    13,   907,  1671, 50821,128687
+"total",     48233,    14,   907,  1671, 50825,128694
 ----------------
 Failure summary:
 S02-types/capture.t 33 - .antipairs returns correct result
@@ -2001,4 +2001,5 @@ S09-typed-arrays/native-int.rakudo.jvm 1198 - .antipairs from a uint16 array
 S09-typed-arrays/native-int.rakudo.jvm 1358 - .antipairs from a uint32 array
 S09-typed-arrays/native-int.rakudo.jvm 1518 - .antipairs from a uint64 array
 S09-typed-arrays/native-str.rakudo.jvm 78 - .antipairs from a str array
+S17-supply/throttle.t 5 - did we see all of the element
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
