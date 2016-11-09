@@ -278,7 +278,7 @@ S02-types/nested_pairs.t...........................  14    0    0    0   14
 S02-types/nil.rakudo.jvm...........................  59    0    5    1   65
      1 skipped: triage
      5 todo   : triage
-S02-types/num.rakudo.jvm...........................  97    0    0    0   97
+S02-types/num.rakudo.jvm...........................  98    0    0    0   98
 S02-types/pair.rakudo.jvm.......................... 177    0    1    0  178
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
@@ -1384,7 +1384,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  16    1    0    0   17
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1800,7 +1800,7 @@ S32-str/words.rakudo.jvm...........................  14    0    2    0   16
      2 todo   : NFG on JVM RT #124739
 S32-temporal/Date.t................................ 113    0    0    0  113
 S32-temporal/DateTime-Instant-Duration.t...........  61    0    0    0   61
-S32-temporal/DateTime.t............................ 275    0    0    0  275
+S32-temporal/DateTime.t............................ 276    0    0    0  276
 S32-temporal/calendar.t............................ 130    0    0    0  130
 S32-temporal/local.rakudo.jvm......................  16    0    9    0   25
      9 todo   : RT #122702
@@ -1962,7 +1962,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9025,     1,   133,   400,  9559,  9562
+"S02",        9026,     1,   133,   400,  9560,  9563
 "S03",        5981,     0,   110,    94,  6185,  6203
 "S04",        1450,     0,    62,    33,  1545,  1577
 "S05",        5718,     0,    91,   207,  6016,  6202
@@ -1976,17 +1976,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         885,     1,    15,    30,   931,  1006
+"S17",         886,     0,    15,    30,   931,  1006
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         406,     0,    13,     4,   423,   423
-"S32",       13312,     1,   230,   207, 13750, 12044
+"S32",       13313,     1,   230,   207, 13751, 12045
 "int",        1286,     0,    10,    15,  1311,  1304
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48233,    14,   907,  1671, 50825,128694
+"total",     48236,    13,   907,  1671, 50827,128696
 ----------------
 Failure summary:
 S02-types/capture.t 33 - .antipairs returns correct result
@@ -2001,5 +2001,4 @@ S09-typed-arrays/native-int.rakudo.jvm 1198 - .antipairs from a uint16 array
 S09-typed-arrays/native-int.rakudo.jvm 1358 - .antipairs from a uint32 array
 S09-typed-arrays/native-int.rakudo.jvm 1518 - .antipairs from a uint64 array
 S09-typed-arrays/native-str.rakudo.jvm 78 - .antipairs from a str array
-S17-supply/throttle.t 5 - did we see all of the element
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
