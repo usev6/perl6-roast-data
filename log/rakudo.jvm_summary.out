@@ -1472,7 +1472,7 @@ S29-context/exit-in-if.t...........................   1    0    0    0    1
 S29-context/exit.t.................................   3    0    0    0    3
 S29-context/sleep.t................................  22    0    0    0   22
 S29-conversions/hash.t.............................   8    0    0    0    8
-S29-conversions/ord_and_chr.rakudo.jvm............. 254    0    2    1  257
+S29-conversions/ord_and_chr.rakudo.jvm............. 255    0    2    1  258
      1 skipped: high character name lookup RT \#124838
      1 todo   : NFG on JVM
      1 todo   : chr surrogate RT #124834
@@ -1728,8 +1728,9 @@ S32-str/length.rakudo.jvm..........................  28    0    1    0   29
      1 todo   : .codes weirdness on JVM, possibly NYI? RT #124742
 S32-str/lines.rakudo.jvm...........................  38    0   10    0   48
     10 todo   : \r\n not yet handled as grapheme
-S32-str/numeric.rakudo.jvm......................... 167    0    5    0  172
+S32-str/numeric.rakudo.jvm......................... 167    0    6    0  173
      5 todo   : Unsure of what val() should accept
+     1 todo PASSED: Need proper Str.codes on JVM
 S32-str/ords.t.....................................   8    0    0    0    8
 S32-str/pack.t.....................................  14    0    0    0   14
 S32-str/pos.t......................................   2    0    0    0    2
@@ -1908,7 +1909,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1938,7 +1939,6 @@ integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............  26    1    2    0   29
      1 todo   : UnwindException
      1 todo   : nigh
-     1 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
@@ -1987,11 +1987,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
-"S29",         406,     0,    13,     4,   423,   423
-"S32",       13323,     1,   229,   207, 13760, 12054
-"int",        1285,     2,    10,    15,  1312,  1305
+"S29",         407,     0,    13,     4,   424,   424
+"S32",       13323,     1,   230,   207, 13761, 12055
+"int",        1286,     1,    10,    15,  1312,  1305
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48213,    43,   916,  1671, 50843,128709
+"total",     48215,    42,   917,  1671, 50845,128711
 ----------------
 Failure summary:
 S02-types/capture.t 33 - .antipairs returns correct result
@@ -1999,5 +1999,4 @@ S09-multidim/assign.t 17 - Can assign shaped to shaped if shapes match exactly
 S09-multidim/assign.t aborted 37 test(s)
 S09-typed-arrays/native-str.rakudo.jvm 78 - .antipairs from a str array
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/error-reporting.rakudo.jvm aborted 1 test(s)
+integration/error-reporting.rakudo.jvm 29 - composition errors do not crash when printing (RT129906)
