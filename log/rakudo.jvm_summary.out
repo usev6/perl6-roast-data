@@ -203,7 +203,7 @@ S02-types/baghash.rakudo.jvm....................... 242    0    2   21  265
      2 todo   : in flux
 S02-types/bool.t...................................  66    0    0    0   66
 S02-types/built-in.t...............................   1    0    0    0    1
-S02-types/capture.t................................  32    1    0    0   33
+S02-types/capture.t................................  33    0    0    0   33
 S02-types/catch_type_cast_mismatch.t...............  11    0    0    0   11
 S02-types/compact.rakudo.jvm.......................   2    0    3    5   10
      5 skipped: cat NYI RT \#124456
@@ -945,7 +945,7 @@ S06-signature/passing-hashes.t.....................   3    0    0    0    3
 S06-signature/positional-placeholders.t............  12    0    0    0   12
 S06-signature/positional.t.........................  13    0    0    0   13
 S06-signature/scalar-type.t........................   8    0    0    0    8
-S06-signature/shape.t..............................  34    0    0    0   34
+S06-signature/shape.t..............................  35    0    0    0   35
 S06-signature/sigilless.t..........................  10    0    0    0   10
 S06-signature/slurpy-and-interpolation.t...........  12    0    0    0   12
 S06-signature/slurpy-params.rakudo.jvm.............  85    0    0    1   86
@@ -1016,15 +1016,15 @@ S09-typed-arrays/hashes.t..........................  43    0    0    0   43
 S09-typed-arrays/native-decl.t.....................  14    0    0    0   14
 S09-typed-arrays/native-int.rakudo.jvm.............1587    0   23    0 1610
     10 todo   : RT #127756
-    10 todo   : got: (22=>3,32=>3,26=>3,34=>3)
      2 todo   : highest bit length stays negative, RT #124088
      1 todo   : missing an invert? (-1 --> 0, -2 --> -1)
+    10 todo PASSED: got: (22=>3,32=>3,26=>3,34=>3)
 S09-typed-arrays/native-num.rakudo.jvm............. 414    0    3   27  444
      3 skipped: borkedness with num and iteration RT \#124678
      6 skipped: cannot approx test Parcels
     18 skipped: nativeint.list loops on itself
      3 todo   : RT #127756
-S09-typed-arrays/native-str.rakudo.jvm............. 156    1    1    2  160
+S09-typed-arrays/native-str.rakudo.jvm............. 157    0    1    2  160
      2 skipped: non-existing str elements return null_s
      1 todo   : RT #127756
 S09-typed-arrays/native.t..........................   3    0    0    0    3
@@ -1364,8 +1364,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI RT \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1939,6 +1938,7 @@ integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............  26    1    2    0   29
      1 todo   : UnwindException
      1 todo   : nigh
+     1 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
@@ -1967,13 +1967,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9026,     1,   133,   400,  9560,  9563
+"S02",        9027,     0,   133,   400,  9560,  9563
 "S03",        5981,     0,   110,    94,  6185,  6203
 "S04",        1450,     0,    62,    33,  1545,  1577
 "S05",        5718,     0,    91,   207,  6016,  6202
-"S06",        2139,     0,    68,    95,  2302,  2345
+"S06",        2140,     0,    68,    95,  2303,  2346
 "S07",         143,     0,     7,     5,   155,   155
-"S09",        2710,    39,    36,    39,  2824,  2824
+"S09",        2711,    38,    36,    39,  2824,  2824
 "S10",         137,     0,     8,     1,   146,   203
 "S11",         173,     0,     7,    11,   191,   201
 "S12",        1656,     0,    37,   137,  1830,  1879
@@ -1991,12 +1991,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       13323,     1,   230,   207, 13761, 12055
 "int",        1286,     1,    10,    15,  1312,  1305
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48215,    42,   917,  1671, 50845,128711
+"total",     48218,    40,   917,  1671, 50846,128712
 ----------------
 Failure summary:
-S02-types/capture.t 33 - .antipairs returns correct result
 S09-multidim/assign.t 17 - Can assign shaped to shaped if shapes match exactly
 S09-multidim/assign.t aborted 37 test(s)
-S09-typed-arrays/native-str.rakudo.jvm 78 - .antipairs from a str array
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
-integration/error-reporting.rakudo.jvm 29 - composition errors do not crash when printing (RT129906)
+integration/error-reporting.rakudo.jvm aborted 1 test(s)
