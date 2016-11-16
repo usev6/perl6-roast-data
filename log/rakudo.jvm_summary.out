@@ -75,7 +75,7 @@ S02-literals/pod.rakudo.jvm........................   0    0    0    5    5
      3 skipped: isn't the iterator exhausted already, since it's been used previously?
      2 skipped: postcircumfix:<{ }> not defined for type Array RT \#125130
 S02-literals/quoting-unicode.t.....................  90    0    0    0   90
-S02-literals/quoting.t............................. 185    0    0    0  185
+S02-literals/quoting.t............................. 189    0    0    0  189
 S02-literals/radix.rakudo.jvm...................... 151    0    1    3  155
      1 skipped: Error while compiling: Radix 0 out of range (allowed: 2..36)
      1 skipped: RT \#123862 - negative radix
@@ -1541,8 +1541,10 @@ S32-hash/slice.rakudo.jvm..........................  21    0   10    0   31
      6 todo   : binding on hash elements unimplemented
      2 todo   : binding on hash elements unimplemented RT #124779
      2 todo   : binding on hash elements unimplemented RT #124780
-S32-io/IO-Socket-Async.rakudo.jvm..................   3   10    0    0   13
-    10 tests aborted (missing ok/not ok)
+S32-io/IO-Socket-Async.rakudo.jvm..................   9    0    0    4   13
+     2 skipped: NullPointerException
+     1 skipped: hangs (sometimes) RT \#127948
+     1 skipped: hangs on JVM
 S32-io/IO-Socket-INET.t............................   0    0    0   50   50
     50 skipped: Operating system not yet supported
 S32-io/chdir.rakudo.jvm............................   8    0    0    2   10
@@ -1728,8 +1730,7 @@ S32-str/numeric.rakudo.jvm......................... 167    0    6    0  173
      1 todo PASSED: Need proper Str.codes on JVM
 S32-str/ords.t.....................................   8    0    0    0    8
 S32-str/pack.t.....................................  14    0    0    0   14
-S32-str/parse-base.t...............................   0    2    0    0    2
-     2 tests aborted (missing ok/not ok)
+S32-str/parse-base.rakudo.jvm......................   2    0    0    0    2
 S32-str/pos.t......................................   2    0    0    0    2
 S32-str/rindex.t...................................  45    0    0    0   45
 S32-str/samecase.t.................................   8    0    0    0    8
@@ -1933,9 +1934,10 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  27    0    2    0   29
+integration/error-reporting.rakudo.jvm.............  26    1    2    0   29
      1 todo   : UnwindException
      1 todo   : nigh
+     1 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
@@ -1964,7 +1966,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9027,     0,   133,   400,  9560,  9563
+"S02",        9031,     0,   133,   400,  9564,  9567
 "S03",        5985,     0,   110,    94,  6189,  6207
 "S04",        1450,     0,    62,    33,  1545,  1577
 "S05",        5718,     0,    91,   207,  6016,  6202
@@ -1985,12 +1987,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         407,     0,    13,     4,   424,   424
-"S32",       13319,    13,   230,   203, 13765, 12059
-"int",        1287,     0,    10,    15,  1312,  1305
+"S32",       13327,     1,   230,   207, 13765, 12059
+"int",        1286,     1,    10,    15,  1312,  1305
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48268,    13,   906,  1667, 50854,128720
+"total",     48279,     2,   906,  1671, 50858,128724
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
-S32-io/IO-Socket-Async.rakudo.jvm aborted 10 test(s)
-S32-str/parse-base.t aborted 2 test(s)
+integration/error-reporting.rakudo.jvm aborted 1 test(s)
