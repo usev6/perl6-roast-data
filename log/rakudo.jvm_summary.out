@@ -518,7 +518,7 @@ S04-declarations/will.rakudo.jvm...................  13    0    4    3   20
      1 todo   : will post NYI RT #125062
 S04-exception-handlers/catch.t.....................  31    0    0    0   31
 S04-exception-handlers/control.rakudo.jvm..........  11    0    1    0   12
-     1 todo   : NullPointerException
+     1 todo PASSED: NullPointerException
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
 S04-exceptions/control_across_runloop.t............   1    0    0    0    1
 S04-exceptions/exceptions-json.t...................   3    0    0    0    3
@@ -640,7 +640,7 @@ S05-grammar/inheritance.rakudo.jvm.................  30    0    2    0   32
      1 todo   : automatic Grammar superclass
 S05-grammar/methods.t..............................   8    0    0    0    8
 S05-grammar/namespace.t............................   5    0    0    0    5
-S05-grammar/parse_and_parsefile.t..................  16    0    0    0   16
+S05-grammar/parse_and_parsefile.t..................  17    0    0    0   17
 S05-grammar/polymorphism.t.........................  28    0    0    0   28
 S05-grammar/protoregex.rakudo.jvm..................  29    0    2    0   31
      2 todo   : RT #120146
@@ -1326,9 +1326,9 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  28    0    0    0   28
+S17-promise/basic.t................................  29    0    0    0   29
 S17-promise/in.t...................................   3    0    0    0    3
-S17-promise/start.t................................  53    0    0    0   53
+S17-promise/start.t................................  54    0    0    0   54
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
 S17-scheduler/at.t.................................  15    0    0    0   15
@@ -1361,8 +1361,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI RT \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1502,7 +1501,7 @@ S32-array/splice.rakudo.jvm........................ 380    1   12    0  393
     12 todo   : somehow the test causes different typecheck error
 S32-array/unshift.t................................  76    0    0    0   76
 S32-basics/pairup.t................................   5    0    0    0    5
-S32-basics/warn.t..................................   7    0    0    0    7
+S32-basics/warn.t..................................   6    1    0    0    7
 S32-basics/xxKEY.rakudo.jvm........................ 127    0    2    0  129
      2 todo   : binding to a key in an undefine doesn't work?
 S32-basics/xxPOS.rakudo.jvm........................  55    0    0    5   60
@@ -1934,7 +1933,7 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  26    1    2    0   29
+integration/error-reporting.rakudo.jvm.............  25    2    2    0   29
      1 todo   : UnwindException
      1 todo   : nigh
      1 tests aborted (missing ok/not ok)
@@ -1956,7 +1955,7 @@ integration/say-crash.t............................   4    0    0    0    4
 integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.rakudo.jvm................  27    0    2    1   30
+integration/weird-errors.rakudo.jvm................  28    0    2    1   31
      1 skipped: RT127208
      1 todo   : Feels like a bogus test in light of recent changes
      1 todo   : Unknown encoding 'utf8-c8' RT #127878
@@ -1969,7 +1968,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9031,     0,   133,   400,  9564,  9567
 "S03",        5985,     0,   110,    94,  6189,  6207
 "S04",        1450,     0,    62,    33,  1545,  1577
-"S05",        5718,     0,    91,   207,  6016,  6202
+"S05",        5719,     0,    91,   207,  6017,  6203
 "S06",        2140,     0,    68,    95,  2303,  2346
 "S07",         143,     0,     7,     5,   155,   155
 "S09",        2760,     0,    25,    39,  2824,  2824
@@ -1980,18 +1979,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         886,     0,    15,    30,   931,  1006
+"S17",         888,     0,    15,    30,   933,  1008
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         407,     0,    13,     4,   424,   424
-"S32",       13327,     1,   230,   207, 13765, 12059
-"int",        1286,     1,    10,    15,  1312,  1305
+"S32",       13326,     2,   230,   207, 13765, 12059
+"int",        1286,     2,    10,    15,  1313,  1306
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48279,     2,   906,  1671, 50858,128724
+"total",     48281,     4,   906,  1671, 50862,128728
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
+S32-basics/warn.t 5 - warn() with arguments; line number
+integration/error-reporting.rakudo.jvm 20 - Thrown Failure outputs dual backtraces
 integration/error-reporting.rakudo.jvm aborted 1 test(s)
