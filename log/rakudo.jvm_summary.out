@@ -902,7 +902,7 @@ S06-other/main-usage.rakudo.jvm....................  22    0    7    0   29
      1 todo   : nom regression RT #124666
      1 todo   : nom regression RT #124667
      1 todo   : nom regression RT #124668
-S06-other/main.t...................................   7    0    0    0    7
+S06-other/main.t...................................   8    0    0    0    8
 S06-other/misc.t...................................  16    0    0    0   16
 S06-other/pairs-as-lvalues.rakudo.jvm..............   3    0    2    0    5
      2 todo   : NYI RT #124660
@@ -1326,7 +1326,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  28    1    0    0   29
+S17-promise/basic.t................................  29    0    0    0   29
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  54    0    0    0   54
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -1361,8 +1361,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI RT \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1385,7 +1384,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................  16    1    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1502,7 +1501,8 @@ S32-array/splice.rakudo.jvm........................ 380    1   12    0  393
     12 todo   : somehow the test causes different typecheck error
 S32-array/unshift.t................................  76    0    0    0   76
 S32-basics/pairup.t................................   5    0    0    0    5
-S32-basics/warn.t..................................   6    1    0    0    7
+S32-basics/warn.rakudo.jvm.........................   6    0    1    0    7
+     1 todo   : wrong line number (reference to gen/jvm/CORE.setting)
 S32-basics/xxKEY.rakudo.jvm........................ 127    0    2    0  129
      2 todo   : binding to a key in an undefine doesn't work?
 S32-basics/xxPOS.rakudo.jvm........................  55    0    0    5   60
@@ -1671,7 +1671,7 @@ S32-num/power.rakudo.jvm...........................  61    0   10    6   77
      2 todo   : wrong results for "NaN" used with "**" RT #124800
 S32-num/rand.rakudo.jvm............................ 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect RT \#124812
-S32-num/rat.rakudo.jvm............................. 829    0    0    3  832
+S32-num/rat.rakudo.jvm............................. 830    0    0    3  833
      1 skipped: RT \#74648
      2 skipped: java.lang.ArithmeticException: BigInteger divide by zero RT \#128264
 S32-num/real-bridge.t.............................. 200    0    0    0  200
@@ -1934,10 +1934,9 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  25    2    2    0   29
+integration/error-reporting.rakudo.jvm.............  26    1    2    0   29
      1 todo   : UnwindException
      1 todo   : nigh
-     1 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
@@ -1970,7 +1969,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        5985,     0,   110,    94,  6189,  6207
 "S04",        1450,     0,    62,    33,  1545,  1577
 "S05",        5720,     0,    91,   207,  6018,  6204
-"S06",        2140,     0,    68,    95,  2303,  2346
+"S06",        2141,     0,    68,    95,  2304,  2347
 "S07",         143,     0,     7,     5,   155,   155
 "S09",        2762,     0,    25,    39,  2826,  2826
 "S10",         137,     0,     8,     1,   146,   203
@@ -1987,14 +1986,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         407,     0,    13,     4,   424,   424
-"S32",       13328,     2,   230,   207, 13767, 12061
-"int",        1286,     2,    10,    15,  1313,  1306
+"S32",       13329,     1,   231,   207, 13768, 12062
+"int",        1287,     1,    10,    15,  1313,  1306
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48285,     5,   906,  1671, 50867,128733
+"total",     48288,     3,   907,  1671, 50869,128735
 ----------------
 Failure summary:
-S17-promise/basic.t 24 - promises execute asynchronously [try 0]
+S17-supply/throttle.t 10 - did we get the final status?
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
-S32-basics/warn.t 5 - warn() with arguments; line number
 integration/error-reporting.rakudo.jvm 20 - Thrown Failure outputs dual backtraces
-integration/error-reporting.rakudo.jvm aborted 1 test(s)
