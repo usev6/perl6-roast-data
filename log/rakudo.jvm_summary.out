@@ -1164,8 +1164,7 @@ S12-meta/grammarhow.t..............................   1    0    0    0    1
 S12-meta/primitives.rakudo.jvm.....................  11    0    6    0   17
      6 todo   : RT #123426
 S12-methods/accessors.t............................   8    0    0    0    8
-S12-methods/attribute-params.rakudo.jvm............  16    0    0    4   20
-     4 skipped: RT \#129278 BadReferenceRuntimeException: Cannot access a native attribute as a reference attribute
+S12-methods/attribute-params.t.....................  20    0    0    0   20
 S12-methods/calling_sets.t.........................  38    0    0    0   38
 S12-methods/calling_syntax.t.......................  11    0    0    0   11
 S12-methods/chaining.t.............................  17    0    0    0   17
@@ -1384,7 +1383,8 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  16    1    0    0   17
+S17-supply/throttle.t..............................   8    9    0    0   17
+     7 tests aborted (missing ok/not ok)
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1907,7 +1907,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1974,12 +1974,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2762,     0,    25,    39,  2826,  2826
 "S10",         137,     0,     8,     1,   146,   203
 "S11",         173,     0,     7,    11,   191,   201
-"S12",        1656,     0,    37,   137,  1830,  1879
+"S12",        1660,     0,    37,   133,  1830,  1879
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         887,     1,    15,    30,   933,  1008
+"S17",         879,     9,    15,    30,   933,  1008
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -1987,11 +1987,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         407,     0,    13,     4,   424,   424
 "S32",       13329,     1,   231,   207, 13768, 12062
-"int",        1287,     1,    10,    15,  1313,  1306
+"int",        1286,     2,    10,    15,  1313,  1306
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48288,     3,   907,  1671, 50869,128735
+"total",     48283,    12,   907,  1667, 50869,128735
 ----------------
 Failure summary:
+S17-supply/throttle.t 9 - did we see all in the right order?
 S17-supply/throttle.t 10 - did we get the final status?
+S17-supply/throttle.t aborted 7 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
 integration/error-reporting.rakudo.jvm 20 - Thrown Failure outputs dual backtraces
