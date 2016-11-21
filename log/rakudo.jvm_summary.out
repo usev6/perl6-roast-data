@@ -625,7 +625,7 @@ S05-capture/caps.t.................................  43    0    0    0   43
 S05-capture/dot.rakudo.jvm.........................  55    0    6    0   61
      3 todo   : dubious test RT #125004
      3 todo   : dubious test RT #125005
-S05-capture/match-object.rakudo.jvm................  24    0    1    1   26
+S05-capture/match-object.rakudo.jvm................  29    0    1    1   31
      1 skipped: No such method pos for invocant of type Any RT \#124999
      1 todo   : Type of $¢ is Any instead of Cursor - RT #124998
 S05-capture/named.rakudo.jvm.......................   9    0    0    2   11
@@ -1383,8 +1383,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax.t................................  60    0    0    0   60
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................   8    9    0    0   17
-     7 tests aborted (missing ok/not ok)
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1907,7 +1906,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1934,9 +1933,10 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  26    1    2    0   29
+integration/error-reporting.rakudo.jvm.............  25    2    2    0   29
      1 todo   : UnwindException
      1 todo   : nigh
+     1 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
@@ -1968,7 +1968,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9031,     0,   133,   400,  9564,  9567
 "S03",        5985,     0,   110,    94,  6189,  6207
 "S04",        1450,     0,    62,    33,  1545,  1577
-"S05",        5720,     0,    91,   207,  6018,  6204
+"S05",        5725,     0,    91,   207,  6023,  6209
 "S06",        2141,     0,    68,    95,  2304,  2347
 "S07",         143,     0,     7,     5,   155,   155
 "S09",        2762,     0,    25,    39,  2826,  2826
@@ -1979,7 +1979,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         687,     0,    69,   147,   903,   940
-"S17",         879,     9,    15,    30,   933,  1008
+"S17",         888,     0,    15,    30,   933,  1008
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -1989,12 +1989,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       13329,     1,   231,   207, 13768, 12062
 "int",        1286,     2,    10,    15,  1313,  1306
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48283,    12,   907,  1667, 50869,128735
+"total",     48297,     3,   907,  1667, 50874,128740
 ----------------
 Failure summary:
-S17-supply/throttle.t 9 - did we see all in the right order?
-S17-supply/throttle.t 10 - did we get the final status?
-S17-supply/throttle.t aborted 7 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
 integration/error-reporting.rakudo.jvm 20 - Thrown Failure outputs dual backtraces
+integration/error-reporting.rakudo.jvm aborted 1 test(s)
