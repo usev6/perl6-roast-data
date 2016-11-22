@@ -49,7 +49,7 @@ S02-literals/adverbs.rakudo.jvm....................  28    0    3    3   34
      3 skipped: Type check failed; expected 'Any' but got 'Mu'
      2 todo   : :@<...> and :%<...> broken needs RT
      1 todo   : RT #128306
-S02-literals/allomorphic.t......................... 101    0    0    0  101
+S02-literals/allomorphic.t......................... 102    0    0    0  102
 S02-literals/array-interpolation.t.................  12    0    0    0   12
 S02-literals/autoref.t.............................  38    0    0    0   38
 S02-literals/char-by-name.rakudo.jvm...............   9    0    0    1   10
@@ -1258,7 +1258,7 @@ S15-unicode-information/uniname.rakudo.jvm.........  18    0    2   20   40
      1 todo   : RT #122470
      1 todo   : RT #122471
                                                    pass fail todo skip plan
-S16-filehandles/argfiles.rakudo.jvm................  11    0    1    0   12
+S16-filehandles/argfiles.rakudo.jvm................  12    0    1    0   13
      1 todo   : RT #123888
 S16-filehandles/chmod.t............................  16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
@@ -1724,9 +1724,9 @@ S32-str/length.rakudo.jvm..........................  28    0    1    0   29
      1 todo   : .codes weirdness on JVM, possibly NYI? RT #124742
 S32-str/lines.rakudo.jvm...........................  38    0   10    0   48
     10 todo   : \r\n not yet handled as grapheme
-S32-str/numeric.rakudo.jvm......................... 167    0    6    0  173
+S32-str/numeric.rakudo.jvm......................... 141   28    5    0  174
      5 todo   : Unsure of what val() should accept
-     1 todo PASSED: Need proper Str.codes on JVM
+    28 tests aborted (missing ok/not ok)
 S32-str/ords.t.....................................   8    0    0    0    8
 S32-str/pack.t.....................................  14    0    0    0   14
 S32-str/parse-base.rakudo.jvm......................   2    0    0    0    2
@@ -1933,10 +1933,9 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  25    2    2    0   29
+integration/error-reporting.rakudo.jvm.............  26    1    2    0   29
      1 todo   : UnwindException
      1 todo   : nigh
-     1 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
@@ -1965,7 +1964,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9031,     0,   133,   400,  9564,  9567
+"S02",        9032,     0,   133,   400,  9565,  9568
 "S03",        5985,     0,   110,    94,  6189,  6207
 "S04",        1450,     0,    62,    33,  1545,  1577
 "S05",        5725,     0,    91,   207,  6023,  6209
@@ -1978,7 +1977,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
-"S16",         687,     0,    69,   147,   903,   940
+"S16",         688,     0,    69,   147,   904,   941
 "S17",         888,     0,    15,    30,   933,  1008
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
@@ -1986,12 +1985,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         407,     0,    13,     4,   424,   424
-"S32",       13329,     1,   231,   207, 13768, 12062
-"int",        1286,     2,    10,    15,  1313,  1306
+"S32",       13303,    29,   230,   207, 13769, 12063
+"int",        1287,     1,    10,    15,  1313,  1306
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48297,     3,   907,  1667, 50874,128740
+"total",     48274,    30,   906,  1667, 50877,128743
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
+S32-str/numeric.rakudo.jvm aborted 28 test(s)
 integration/error-reporting.rakudo.jvm 20 - Thrown Failure outputs dual backtraces
-integration/error-reporting.rakudo.jvm aborted 1 test(s)
