@@ -1724,9 +1724,9 @@ S32-str/length.rakudo.jvm..........................  28    0    1    0   29
      1 todo   : .codes weirdness on JVM, possibly NYI? RT #124742
 S32-str/lines.rakudo.jvm...........................  38    0   10    0   48
     10 todo   : \r\n not yet handled as grapheme
-S32-str/numeric.rakudo.jvm......................... 141   28    5    0  174
+S32-str/numeric.rakudo.jvm......................... 168    0    6    0  174
      5 todo   : Unsure of what val() should accept
-    28 tests aborted (missing ok/not ok)
+     1 todo PASSED: Need proper Str.codes on JVM
 S32-str/ords.t.....................................   8    0    0    0    8
 S32-str/pack.t.....................................  14    0    0    0   14
 S32-str/parse-base.rakudo.jvm......................   2    0    0    0    2
@@ -1933,9 +1933,10 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  26    1    2    0   29
+integration/error-reporting.rakudo.jvm.............  25    2    2    0   29
      1 todo   : UnwindException
      1 todo   : nigh
+     1 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
@@ -1985,12 +1986,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         407,     0,    13,     4,   424,   424
-"S32",       13303,    29,   230,   207, 13769, 12063
-"int",        1287,     1,    10,    15,  1313,  1306
+"S32",       13330,     1,   231,   207, 13769, 12063
+"int",        1286,     2,    10,    15,  1313,  1306
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48274,    30,   906,  1667, 50877,128743
+"total",     48300,     3,   907,  1667, 50877,128743
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
-S32-str/numeric.rakudo.jvm aborted 28 test(s)
 integration/error-reporting.rakudo.jvm 20 - Thrown Failure outputs dual backtraces
+integration/error-reporting.rakudo.jvm aborted 1 test(s)
