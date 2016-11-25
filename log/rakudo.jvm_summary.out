@@ -245,7 +245,7 @@ S02-types/isDEPRECATED.rakudo.jvm..................  13    0    8    0   21
 S02-types/keyhash.rakudo.jvm.......................   0    0    0   59   59
     59 skipped: 'is ObjectType' NYI RT \#124490
 S02-types/lazy-lists.t.............................  23    0    0    0   23
-S02-types/list.t...................................  67    1    0    0   68
+S02-types/list.rakudo.jvm..........................  68    1    0    0   69
      1 tests aborted (missing ok/not ok)
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding RT \#124494
@@ -544,8 +544,10 @@ S04-phasers/eval-in-begin.t........................   3    0    0    0    3
 S04-phasers/first.t................................   7    0    0    0    7
 S04-phasers/in-eval.rakudo.jvm.....................  34    0    1    0   35
      1 todo   : not sure
-S04-phasers/in-loop.rakudo.jvm.....................   6    2    3    0   11
+S04-phasers/in-loop.rakudo.jvm.....................   6    0    5    0   11
      2 todo   : NEXT/LEAVE ordering RT #124952
+     1 todo   : got '2 2 3 2 2 3 2 2 3 3'
+     1 todo   : got '2 3 2 3 3 2 3 2 3 3 2 3 2 3 3'
      1 todo   : this test works "standalone", but not after previous test; RT #121145
 S04-phasers/init.t.................................  13    0    0    0   13
 S04-phasers/keep-undo.rakudo.jvm...................  14    0    2    0   16
@@ -1361,8 +1363,7 @@ S17-supply/head.t..................................   8    0    0    0    8
 S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
      3 skipped: Proc::Async NYI RT \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1383,7 +1384,8 @@ S17-supply/squish.t................................  15    0    0    0   15
 S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
      2 skipped: doesn't work or can't test RT \#124822
 S17-supply/start.t.................................   8    0    0    0    8
-S17-supply/syntax.t................................  65    2    0    0   67
+S17-supply/syntax.rakudo.jvm.......................  65    0    2    0   67
+     2 todo   : got: '42'
 S17-supply/tail.t..................................   8    0    0    0    8
 S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
@@ -1467,7 +1469,7 @@ S29-context/eval.rakudo.jvm........................  22    0    0    2   24
 S29-context/evalfile.t.............................   2    0    0    0    2
 S29-context/exit-in-if.t...........................   1    0    0    0    1
 S29-context/exit.t.................................   3    0    0    0    3
-S29-context/sleep.t................................  21    1    0    0   22
+S29-context/sleep.t................................  22    0    0    0   22
 S29-conversions/hash.t.............................   8    0    0    0    8
 S29-conversions/ord_and_chr.rakudo.jvm............. 255    0    2    1  258
      1 skipped: high character name lookup RT \#124838
@@ -1907,7 +1909,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1934,10 +1936,9 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  25    2    2    0   29
+integration/error-reporting.rakudo.jvm.............  26    1    2    0   29
      1 todo   : UnwindException
      1 todo   : nigh
-     1 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
@@ -1966,9 +1967,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9032,     1,   133,   400,  9566,  9569
+"S02",        9033,     1,   133,   400,  9567,  9570
 "S03",        5985,     0,   110,    94,  6189,  6207
-"S04",        1451,     2,    62,    33,  1548,  1580
+"S04",        1451,     0,    64,    33,  1548,  1580
 "S05",        5725,     0,    91,   207,  6023,  6209
 "S06",        2141,     0,    68,    95,  2304,  2347
 "S07",         143,     0,     7,     5,   155,   155
@@ -1980,25 +1981,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         688,     0,    69,   147,   904,   941
-"S17",         893,     2,    15,    30,   940,  1016
+"S17",         893,     0,    17,    30,   940,  1016
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
-"S29",         406,     1,    13,     4,   424,   424
+"S29",         407,     0,    13,     4,   424,   424
 "S32",       13331,     1,   230,   207, 13769, 12063
 "int",        1286,     2,    10,    15,  1313,  1306
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48306,     9,   906,  1667, 50888,128755
+"total",     48308,     4,   910,  1667, 50889,128756
 ----------------
 Failure summary:
-S02-types/list.t aborted 1 test(s)
-S04-phasers/in-loop.rakudo.jvm 10 - NEXT in loop works fine with recursion
-S04-phasers/in-loop.rakudo.jvm 11 - LAST in loop works fine with recursion
-S17-supply/syntax.t 62 - LAST in whenever triggered without iterations sees correct outer (2)
-S17-supply/syntax.t 65 - QUIT in whenever triggered without iterations sees correct outer (2)
-S29-context/sleep.t 18 - did we actually wait (DateTime)
+S02-types/list.rakudo.jvm aborted 1 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
 integration/error-reporting.rakudo.jvm 20 - Thrown Failure outputs dual backtraces
-integration/error-reporting.rakudo.jvm aborted 1 test(s)
