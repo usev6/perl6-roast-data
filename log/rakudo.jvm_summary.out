@@ -608,7 +608,7 @@ S04-statements/repeat.t............................  21    0    0    0   21
 S04-statements/return.t............................  20    0    0    0   20
 S04-statements/sink.t..............................   4    0    0    0    4
 S04-statements/terminator.rakudo.jvm...............  19    0    1    0   20
-     1 todo   : got: X::AdHoc; StringIndexOutOfBoundsException: String index out of range: -1
+     1 todo PASSED: got: X::AdHoc; StringIndexOutOfBoundsException: String index out of range: -1
 S04-statements/try.t...............................  40    0    0    0   40
 S04-statements/unless.t............................  11    0    0    0   11
 S04-statements/until.t.............................   4    0    0    0    4
@@ -999,7 +999,8 @@ S09-hashes/objecthash.rakudo.jvm...................  33    0    2    2   37
      2 todo   : oh noes, it dies
 S09-multidim/XX-POS-on-dimensioned.t...............  69    0    0    0   69
 S09-multidim/XX-POS-on-undimensioned.t.............  16    0    0    0   16
-S09-multidim/assign.t..............................  54    0    0    0   54
+S09-multidim/assign.t..............................  11   43    0    0   54
+    43 tests aborted (missing ok/not ok)
 S09-multidim/decl.t................................  40    0    0    0   40
 S09-multidim/indexing.t............................  31    0    0    0   31
 S09-multidim/methods.t.............................  82    0    0    0   82
@@ -1167,7 +1168,7 @@ S12-meta/grammarhow.t..............................   1    0    0    0    1
 S12-meta/primitives.rakudo.jvm.....................  11    0    6    0   17
      6 todo   : RT #123426
 S12-methods/accessors.t............................   8    0    0    0    8
-S12-methods/attribute-params.t.....................  20    0    0    0   20
+S12-methods/attribute-params.t.....................  21    0    0    0   21
 S12-methods/calling_sets.t.........................  38    0    0    0   38
 S12-methods/calling_syntax.t.......................  11    0    0    0   11
 S12-methods/chaining.t.............................  17    0    0    0   17
@@ -1666,7 +1667,7 @@ S32-num/negative-zero.t............................   9    0    0    0    9
 S32-num/pi.t.......................................   8    0    0    0    8
 S32-num/polar.t....................................  48    0    0    0   48
 S32-num/polymod.t..................................   9    0    0    0    9
-S32-num/power.rakudo.jvm...........................  61    0   10    6   77
+S32-num/power.rakudo.jvm...........................  61    1   10    6   78
      6 skipped: parsing issue on JVM: Missing required term after infix
      4 todo   : big exponents RT #124798 and RT #127493
      3 todo   : big exponents RT #127493
@@ -1784,7 +1785,7 @@ S32-str/sprintf-b.rakudo.jvm.......................  68    0   90    7  165
      1 todo   : "%b" with precision and negative argument not correct RT #124735
      1 todo   : "%b" with precision and negative argument not correct RT #124736
      1 todo   : RT #123979
-S32-str/sprintf.t.................................. 160    0    0    0  160
+S32-str/sprintf.t.................................. 161    0    0    0  161
 S32-str/starts-with.t..............................   8    0    0    0    8
 S32-str/substr-eq.t................................  12    0    0    0   12
 S32-str/substr-rw.rakudo.jvm.......................  32    0    8    0   40
@@ -1909,7 +1910,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1974,10 +1975,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S05",        5726,     0,    91,   207,  6024,  6210
 "S06",        2141,     0,    68,    95,  2304,  2347
 "S07",         143,     0,     7,     5,   155,   155
-"S09",        2762,     0,    25,    39,  2826,  2826
+"S09",        2719,    43,    25,    39,  2826,  2826
 "S10",         137,     0,     8,     1,   146,   203
 "S11",         173,     0,     7,    11,   191,   201
-"S12",        1660,     0,    37,   133,  1830,  1879
+"S12",        1661,     0,    37,   133,  1831,  1880
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
@@ -1989,13 +1990,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1917,     0,     5,    85,  2007,  2007
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13342,     1,   229,   207, 13779, 12073
-"int",        1285,     3,    10,    15,  1313,  1306
+"S32",       13343,     2,   229,   207, 13781, 12075
+"int",        1286,     2,    10,    15,  1313,  1306
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48323,     4,   909,  1668, 50904,128771
+"total",     48283,    47,   909,  1668, 50907,128774
 ----------------
 Failure summary:
+S09-multidim/assign.t aborted 43 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+S32-num/power.rakudo.jvm 78 - raising a Rat to a very large number throws
 integration/error-reporting.rakudo.jvm 20 - Thrown Failure outputs dual backtraces
 integration/error-reporting.rakudo.jvm aborted 1 test(s)
