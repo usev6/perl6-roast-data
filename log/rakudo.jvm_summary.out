@@ -63,10 +63,11 @@ S02-literals/listquote-whitespace.t................  12    0    0    0   12
 S02-literals/listquote.rakudo.jvm..................  23    0    1    0   24
      1 todo   : meta operators RT #124558
 S02-literals/misc-interpolation.t..................  50    0    0    0   50
-S02-literals/numeric.rakudo.jvm....................  50    0    4    5   59
+S02-literals/numeric.rakudo.jvm....................  50    0   12    5   67
      1 skipped: Prefix - requires an argument, but no valid term found
      3 skipped: bogus term
      1 skipped: is not a valid number
+     8 todo   : A fix for ticket #129915 should handle these as well
      2 todo   : Adverbial numbers in Rat literals not supported
      2 todo   : Unsure of what's acceptable for val()
 S02-literals/pair-boolean.t........................   6    0    0    0    6
@@ -194,7 +195,7 @@ S02-types/array_extending.t........................  21    0    0    0   21
 S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  22    0    0    0   22
-S02-types/bag.rakudo.jvm........................... 204    1    2    0  207
+S02-types/bag.rakudo.jvm........................... 205    0    2    0  207
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT #124454
 S02-types/baggy.t..................................   3    0    0    0    3
@@ -971,7 +972,7 @@ S06-traits/is-assoc.rakudo.jvm.....................   4    0    0    2    6
 S06-traits/is-copy.t...............................  27    0    0    0   27
 S06-traits/is-readonly.t...........................   1    0    0    0    1
 S06-traits/is-rw.t.................................   7    0    0    0    7
-S06-traits/misc.rakudo.jvm.........................  14    0    6    0   20
+S06-traits/misc.rakudo.jvm.........................  15    0    6    0   21
      4 todo   : RT #126531
      2 todo   : is readonly does not override
 S06-traits/native-is-copy.t........................  15    0    0    0   15
@@ -998,8 +999,7 @@ S09-hashes/objecthash.rakudo.jvm...................  33    0    2    2   37
      2 todo   : oh noes, it dies
 S09-multidim/XX-POS-on-dimensioned.t...............  69    0    0    0   69
 S09-multidim/XX-POS-on-undimensioned.t.............  16    0    0    0   16
-S09-multidim/assign.rakudo.jvm.....................  53    0    0    1   54
-     1 skipped: StackOverflowError
+S09-multidim/assign.t..............................  54    0    0    0   54
 S09-multidim/decl.t................................  40    0    0    0   40
 S09-multidim/indexing.t............................  31    0    0    0   31
 S09-multidim/methods.t.............................  82    0    0    0   82
@@ -1360,11 +1360,10 @@ S17-supply/from-list.t.............................  13    0    0    0   13
 S17-supply/grab.t..................................   5    0    0    0    5
 S17-supply/grep.t..................................   9    0    0    0    9
 S17-supply/head.t..................................   8    0    0    0    8
-S17-supply/interval.rakudo.jvm.....................   4    0    0    3    7
+S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1385,7 +1384,7 @@ S17-supply/squish.t................................  15    0    0    0   15
 S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
      2 skipped: doesn't work or can't test RT \#124822
 S17-supply/start.t.................................   8    0    0    0    8
-S17-supply/syntax.rakudo.jvm.......................  65    0    2    0   67
+S17-supply/syntax.rakudo.jvm.......................  66    0    2    0   68
      2 todo   : got: '42'
 S17-supply/tail.t..................................   8    0    0    0    8
 S17-supply/throttle.t..............................  17    0    0    0   17
@@ -1969,13 +1968,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9033,     1,   133,   401,  9568,  9571
+"S02",        9034,     0,   141,   401,  9576,  9579
 "S03",        5985,     0,   110,    94,  6189,  6207
 "S04",        1452,     0,    63,    33,  1548,  1580
 "S05",        5726,     0,    91,   207,  6024,  6210
-"S06",        2141,     0,    68,    95,  2304,  2347
+"S06",        2142,     0,    68,    95,  2305,  2348
 "S07",         143,     0,     7,     5,   155,   155
-"S09",        2761,     0,    25,    40,  2826,  2826
+"S09",        2762,     0,    25,    39,  2826,  2826
 "S10",         137,     0,     8,     1,   146,   203
 "S11",         173,     0,     7,    11,   191,   201
 "S12",        1661,     0,    37,   133,  1831,  1880
@@ -1983,7 +1982,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 79089
 "S16",         690,     0,    69,   147,   906,   943
-"S17",         893,     0,    17,    30,   940,  1016
+"S17",         895,     0,    17,    30,   942,  1018
 "S19",          25,     0,     4,     1,    30,    30
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -1993,10 +1992,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       13343,     2,   229,   207, 13781, 12075
 "int",        1285,     3,    10,    15,  1313,  1306
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48324,     6,   908,  1669, 50907,128774
+"total",     48329,     5,   916,  1668, 50918,128785
 ----------------
 Failure summary:
-S02-types/bag.rakudo.jvm 117 - .roll(100) (2)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-num/power.rakudo.jvm 78 - raising a Rat to a very large number throws
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
