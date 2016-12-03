@@ -1910,7 +1910,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1940,6 +1940,7 @@ integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............  26    1    2    0   29
      1 todo   : UnwindException
      1 todo   : nigh
+     1 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
@@ -1990,11 +1991,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
 "S32",       13343,     2,   229,   207, 13781, 12075
-"int",        1287,     1,    10,    15,  1313,  1306
+"int",        1286,     2,    10,    15,  1313,  1306
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48331,     3,   916,  1668, 50918,128785
+"total",     48330,     4,   916,  1668, 50918,128785
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-num/power.rakudo.jvm 78 - raising a Rat to a very large number throws
-integration/error-reporting.rakudo.jvm 20 - Thrown Failure outputs dual backtraces
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+integration/error-reporting.rakudo.jvm aborted 1 test(s)
