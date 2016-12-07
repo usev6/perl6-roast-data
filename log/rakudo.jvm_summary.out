@@ -964,8 +964,8 @@ S04-statements/try.t...............................Can't open perl script "eval-
    0   40    0    0   40
     40 tests aborted (missing ok/not ok)
 S04-statements/unless.t............................Can't open perl script "eval-client.pl": No such file or directory
-   0   11    0    0   11
-    11 tests aborted (missing ok/not ok)
+   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
 S04-statements/until.t.............................Can't open perl script "eval-client.pl": No such file or directory
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -976,8 +976,8 @@ S04-statements/while.t.............................Can't open perl script "eval-
    0   32    0    0   32
     32 tests aborted (missing ok/not ok)
 S04-statements/with.rakudo.jvm.....................Can't open perl script "eval-client.pl": No such file or directory
-   0   80    0    0   80
-    80 tests aborted (missing ok/not ok)
+   0   81    0    0   81
+    81 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S05-capture/alias.rakudo.jvm.......................Can't open perl script "eval-client.pl": No such file or directory
    0   32    0    0   32
@@ -1235,8 +1235,8 @@ S05-transliteration/79778.t........................Can't open perl script "eval-
    0    1    0    0    1
      1 tests aborted (missing ok/not ok)
 S05-transliteration/trans.rakudo.jvm...............Can't open perl script "eval-client.pl": No such file or directory
-   0   64    0    0   64
-    64 tests aborted (missing ok/not ok)
+   0   65    0    0   65
+    65 tests aborted (missing ok/not ok)
 S05-transliteration/with-closure.rakudo.jvm........Can't open perl script "eval-client.pl": No such file or directory
    0   18    0    0   18
     18 tests aborted (missing ok/not ok)
@@ -3377,7 +3377,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S02",           0,  5690,     0,     0,  5690,  5694
 "S03",           0,  6189,     0,     0,  6189,  6207
 "S04",           0,  1528,     0,     0,  1528,  1580
-"S05",           0,  6029,     0,     0,  6029,  6215
+"S05",           0,  6030,     0,     0,  6030,  6216
 "S06",           0,  2294,     0,     0,  2294,  2350
 "S07",           0,   155,     0,     0,   155,   155
 "S09",           0,  1080,     0,     0,  1080,  1080
@@ -3398,7 +3398,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S32",           0,  9875,     0,     0,  9875,  9948
 "int",           0,  1300,     0,     0,  1300,  1296
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40667,     0,     0, 40667,120350
+"total",         0, 40668,     0,     0, 40668,120351
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3719,11 +3719,11 @@ S04-statements/return.t aborted 20 test(s)
 S04-statements/sink.t aborted 4 test(s)
 S04-statements/terminator.t aborted 20 test(s)
 S04-statements/try.t aborted 40 test(s)
-S04-statements/unless.t aborted 11 test(s)
+S04-statements/unless.t aborted 10 test(s)
 S04-statements/until.t aborted 4 test(s)
 S04-statements/when.t aborted 25 test(s)
 S04-statements/while.t aborted 32 test(s)
-S04-statements/with.rakudo.jvm aborted 80 test(s)
+S04-statements/with.rakudo.jvm aborted 81 test(s)
 S05-capture/alias.rakudo.jvm aborted 32 test(s)
 S05-capture/array-alias.rakudo.jvm aborted 50 test(s)
 S05-capture/caps.t aborted 43 test(s)
@@ -3809,7 +3809,7 @@ S05-substitution/match.t aborted 13 test(s)
 S05-substitution/subst.rakudo.jvm aborted 184 test(s)
 S05-syntactic-categories/new-symbols.rakudo.jvm aborted 8 test(s)
 S05-transliteration/79778.t aborted 1 test(s)
-S05-transliteration/trans.rakudo.jvm aborted 64 test(s)
+S05-transliteration/trans.rakudo.jvm aborted 65 test(s)
 S05-transliteration/with-closure.rakudo.jvm aborted 18 test(s)
 S06-advanced/callframe.rakudo.jvm aborted 18 test(s)
 S06-advanced/callsame.t aborted 3 test(s)
