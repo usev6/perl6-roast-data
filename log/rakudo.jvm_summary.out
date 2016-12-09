@@ -817,8 +817,8 @@ S04-exceptions/exceptions-json.t...................Can't open perl script "eval-
    0    3    0    0    3
      3 tests aborted (missing ok/not ok)
 S04-exceptions/fail.t..............................Can't open perl script "eval-client.pl": No such file or directory
-   0   31    0    0   31
-    31 tests aborted (missing ok/not ok)
+   0   32    0    0   32
+    32 tests aborted (missing ok/not ok)
 S04-exceptions/pending.rakudo.jvm..................Can't open perl script "eval-client.pl": No such file or directory
    0   21    0    0   21
     21 tests aborted (missing ok/not ok)
@@ -2704,8 +2704,8 @@ S32-list/first-v.t.................................Can't open perl script "eval-
    0   24    0    0   24
     24 tests aborted (missing ok/not ok)
 S32-list/first.rakudo.jvm..........................Can't open perl script "eval-client.pl": No such file or directory
-   0   29    0    0   29
-    29 tests aborted (missing ok/not ok)
+   0   31    0    0   31
+    31 tests aborted (missing ok/not ok)
 S32-list/grep-k.rakudo.jvm.........................Can't open perl script "eval-client.pl": No such file or directory
    0   40    0    0   40
     40 tests aborted (missing ok/not ok)
@@ -3376,7 +3376,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S01",           0,    86,     0,     0,    86,    86
 "S02",           0,  5690,     0,     0,  5690,  5694
 "S03",           0,  6192,     0,     0,  6192,  6210
-"S04",           0,  1528,     0,     0,  1528,  1580
+"S04",           0,  1529,     0,     0,  1529,  1581
 "S05",           0,  6030,     0,     0,  6030,  6216
 "S06",           0,  2294,     0,     0,  2294,  2350
 "S07",           0,   155,     0,     0,   155,   155
@@ -3388,17 +3388,17 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S14",           0,   404,     0,     0,   404,   417
 "S15",           0,   120,     0,     0,   120, 79089
 "S16",           0,   434,     0,     0,   434,   471
-"S17",           0,   944,     0,     0,   944,  1020
+"S17",           0,   944,     0,     0,   944,  1021
 "S19",           0,    30,     0,     0,    30,    30
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    28,     0,     0,    28,    99
 "S26",           0,  2007,     0,     0,  2007,  2007
 "S28",           0,     2,     0,     0,     2,     8
 "S29",           0,   221,     0,     0,   221,   221
-"S32",           0,  9875,     0,     0,  9875,  9949
+"S32",           0,  9877,     0,     0,  9877,  9951
 "int",           0,  1301,     0,     0,  1301,  1297
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40672,     0,     0, 40672,120356
+"total",         0, 40675,     0,     0, 40675,120360
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3670,7 +3670,7 @@ S04-exception-handlers/control.rakudo.jvm aborted 12 test(s)
 S04-exception-handlers/top-level.t aborted 1 test(s)
 S04-exceptions/control_across_runloop.t aborted 1 test(s)
 S04-exceptions/exceptions-json.t aborted 3 test(s)
-S04-exceptions/fail.t aborted 31 test(s)
+S04-exceptions/fail.t aborted 32 test(s)
 S04-exceptions/pending.rakudo.jvm aborted 21 test(s)
 S04-phasers/ascending-order.t aborted 7 test(s)
 S04-phasers/begin.rakudo.jvm aborted 13 test(s)
@@ -4292,7 +4292,7 @@ S32-list/first-k.rakudo.jvm aborted 25 test(s)
 S32-list/first-kv.t aborted 24 test(s)
 S32-list/first-p.t aborted 24 test(s)
 S32-list/first-v.t aborted 24 test(s)
-S32-list/first.rakudo.jvm aborted 29 test(s)
+S32-list/first.rakudo.jvm aborted 31 test(s)
 S32-list/grep-k.rakudo.jvm aborted 40 test(s)
 S32-list/grep-kv.t aborted 17 test(s)
 S32-list/grep-p.t aborted 17 test(s)
