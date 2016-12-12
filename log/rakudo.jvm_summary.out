@@ -137,8 +137,8 @@ S02-literals/quoting.t.............................Can't open perl script "eval-
    0  189    0    0  189
    189 tests aborted (missing ok/not ok)
 S02-literals/radix.rakudo.jvm......................Can't open perl script "eval-client.pl": No such file or directory
-   0  157    0    0  157
-   157 tests aborted (missing ok/not ok)
+   0  156    0    0  156
+   156 tests aborted (missing ok/not ok)
 S02-literals/string-interpolation.t................Can't open perl script "eval-client.pl": No such file or directory
    0   40    0    0   40
     40 tests aborted (missing ok/not ok)
@@ -382,8 +382,8 @@ S02-types/multi_dimensional_array.rakudo.jvm.......Can't open perl script "eval-
    0   58    0    0   58
     58 tests aborted (missing ok/not ok)
 S02-types/nan.rakudo.jvm...........................Can't open perl script "eval-client.pl": No such file or directory
-   0   23    0    0   23
-    23 tests aborted (missing ok/not ok)
+   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
 S02-types/native.rakudo.jvm........................Can't open perl script "eval-client.pl": No such file or directory
    0   92    0    0   92
     92 tests aborted (missing ok/not ok)
@@ -992,8 +992,8 @@ S05-capture/dot.rakudo.jvm.........................Can't open perl script "eval-
    0   61    0    0   61
     61 tests aborted (missing ok/not ok)
 S05-capture/match-object.rakudo.jvm................Can't open perl script "eval-client.pl": No such file or directory
-   0   31    0    0   31
-    31 tests aborted (missing ok/not ok)
+   0   37    0    0   37
+    37 tests aborted (missing ok/not ok)
 S05-capture/named.rakudo.jvm.......................Can't open perl script "eval-client.pl": No such file or directory
    0   11    0    0   11
     11 tests aborted (missing ok/not ok)
@@ -1623,8 +1623,8 @@ S11-modules/import.rakudo.jvm......................Can't open perl script "eval-
    0   17    0    0   17
     17 tests aborted (missing ok/not ok)
 S11-modules/importing.t............................Can't open perl script "eval-client.pl": No such file or directory
-   0   16    0    0   16
-    16 tests aborted (missing ok/not ok)
+   0   17    0    0   17
+    17 tests aborted (missing ok/not ok)
 S11-modules/lexical.t..............................Can't open perl script "eval-client.pl": No such file or directory
    0    2    0    0    2
      2 tests aborted (missing ok/not ok)
@@ -1795,8 +1795,8 @@ S12-introspection/WHAT.rakudo.jvm..................Can't open perl script "eval-
    0   37    0    0   37
     37 tests aborted (missing ok/not ok)
 S12-introspection/attributes.rakudo.jvm............Can't open perl script "eval-client.pl": No such file or directory
-   0   33    0    0   33
-    33 tests aborted (missing ok/not ok)
+   0   36    0    0   36
+    36 tests aborted (missing ok/not ok)
 S12-introspection/can.t............................Can't open perl script "eval-client.pl": No such file or directory
    0   29    0    0   29
     29 tests aborted (missing ok/not ok)
@@ -3313,8 +3313,8 @@ integration/code-blocks-as-sub-args.t..............Can't open perl script "eval-
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 integration/error-reporting.rakudo.jvm.............Can't open perl script "eval-client.pl": No such file or directory
-   0   29    0    0   29
-    29 tests aborted (missing ok/not ok)
+   0   30    0    0   30
+    30 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............Can't open perl script "eval-client.pl": No such file or directory
    0    1    0    0    1
      1 tests aborted (missing ok/not ok)
@@ -3377,16 +3377,16 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S02",           0,  5690,     0,     0,  5690,  5694
 "S03",           0,  6192,     0,     0,  6192,  6210
 "S04",           0,  1529,     0,     0,  1529,  1581
-"S05",           0,  6031,     0,     0,  6031,  6217
+"S05",           0,  6037,     0,     0,  6037,  6223
 "S06",           0,  2294,     0,     0,  2294,  2350
 "S07",           0,   155,     0,     0,   155,   155
 "S09",           0,  1080,     0,     0,  1080,  1080
 "S10",           0,   146,     0,     0,   146,   203
-"S11",           0,   191,     0,     0,   191,   201
-"S12",           0,  1831,     0,     0,  1831,  1880
+"S11",           0,   192,     0,     0,   192,   202
+"S12",           0,  1834,     0,     0,  1834,  1883
 "S13",           0,    62,     0,     0,    62,    72
 "S14",           0,   404,     0,     0,   404,   417
-"S15",           0,   120,     0,     0,   120, 79089
+"S15",           0,   120,     0,     0,   120, 79092
 "S16",           0,   434,     0,     0,   434,   471
 "S17",           0,   944,     0,     0,   944,  1021
 "S19",           0,    30,     0,     0,    30,    30
@@ -3396,9 +3396,9 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S28",           0,     2,     0,     0,     2,     8
 "S29",           0,   221,     0,     0,   221,   221
 "S32",           0,  9877,     0,     0,  9877,  9951
-"int",           0,  1301,     0,     0,  1301,  1297
+"int",           0,  1302,     0,     0,  1302,  1298
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40676,     0,     0, 40676,120361
+"total",         0, 40687,     0,     0, 40687,120375
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3446,7 +3446,7 @@ S02-literals/pairs.t aborted 77 test(s)
 S02-literals/pod.rakudo.jvm aborted 5 test(s)
 S02-literals/quoting-unicode.t aborted 90 test(s)
 S02-literals/quoting.t aborted 189 test(s)
-S02-literals/radix.rakudo.jvm aborted 157 test(s)
+S02-literals/radix.rakudo.jvm aborted 156 test(s)
 S02-literals/string-interpolation.t aborted 40 test(s)
 S02-literals/sub-calls.t aborted 20 test(s)
 S02-literals/subscript.t aborted 2 test(s)
@@ -3527,7 +3527,7 @@ S02-types/mixed_multi_dimensional.rakudo.jvm aborted 80 test(s)
 S02-types/mixhash.rakudo.jvm aborted 236 test(s)
 S02-types/mu.t aborted 8 test(s)
 S02-types/multi_dimensional_array.rakudo.jvm aborted 58 test(s)
-S02-types/nan.rakudo.jvm aborted 23 test(s)
+S02-types/nan.rakudo.jvm aborted 24 test(s)
 S02-types/native.rakudo.jvm aborted 92 test(s)
 S02-types/nested_arrays.t aborted 10 test(s)
 S02-types/nested_pairs.t aborted 14 test(s)
@@ -3728,7 +3728,7 @@ S05-capture/alias.rakudo.jvm aborted 32 test(s)
 S05-capture/array-alias.rakudo.jvm aborted 50 test(s)
 S05-capture/caps.t aborted 43 test(s)
 S05-capture/dot.rakudo.jvm aborted 61 test(s)
-S05-capture/match-object.rakudo.jvm aborted 31 test(s)
+S05-capture/match-object.rakudo.jvm aborted 37 test(s)
 S05-capture/named.rakudo.jvm aborted 11 test(s)
 S05-capture/subrule.t aborted 46 test(s)
 S05-grammar/action-stubs.t aborted 24 test(s)
@@ -3936,7 +3936,7 @@ S11-modules/export.rakudo.jvm aborted 41 test(s)
 S11-modules/import-multi.rakudo.jvm aborted 17 test(s)
 S11-modules/import-tag.t aborted 12 test(s)
 S11-modules/import.rakudo.jvm aborted 17 test(s)
-S11-modules/importing.t aborted 16 test(s)
+S11-modules/importing.t aborted 17 test(s)
 S11-modules/lexical.t aborted 2 test(s)
 S11-modules/module-file.t aborted 4 test(s)
 S11-modules/module.t aborted 8 test(s)
@@ -3993,7 +3993,7 @@ S12-enums/non-int.rakudo.jvm aborted 6 test(s)
 S12-enums/pseudo-functional.t aborted 11 test(s)
 S12-enums/thorough.rakudo.jvm aborted 59 test(s)
 S12-introspection/WHAT.rakudo.jvm aborted 37 test(s)
-S12-introspection/attributes.rakudo.jvm aborted 33 test(s)
+S12-introspection/attributes.rakudo.jvm aborted 36 test(s)
 S12-introspection/can.t aborted 29 test(s)
 S12-introspection/definite.t aborted 7 test(s)
 S12-introspection/meta-class.t aborted 17 test(s)
@@ -4486,7 +4486,7 @@ integration/advent2014-day05.rakudo.jvm aborted 7 test(s)
 integration/advent2014-day13.t aborted 13 test(s)
 integration/advent2014-day16.t aborted 21 test(s)
 integration/code-blocks-as-sub-args.t aborted 4 test(s)
-integration/error-reporting.rakudo.jvm aborted 29 test(s)
+integration/error-reporting.rakudo.jvm aborted 30 test(s)
 integration/lazy-bentley-generator.t aborted 1 test(s)
 integration/lexical-array-in-inner-block.t aborted 2 test(s)
 integration/lexicals-and-attributes.t aborted 8 test(s)
