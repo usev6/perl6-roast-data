@@ -277,8 +277,8 @@ S02-packages/package-lookup.t......................Can't open perl script "eval-
    0    7    0    0    7
      7 tests aborted (missing ok/not ok)
 S02-types/WHICH.rakudo.jvm.........................Can't open perl script "eval-client.pl": No such file or directory
-   0    5    0    0    5
-     5 tests aborted (missing ok/not ok)
+   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
 S02-types/anon_block.rakudo.jvm....................Can't open perl script "eval-client.pl": No such file or directory
    0   42    0    0   42
     42 tests aborted (missing ok/not ok)
@@ -2758,8 +2758,8 @@ S32-list/roll.t....................................Can't open perl script "eval-
    0   51    0    0   51
     51 tests aborted (missing ok/not ok)
 S32-list/rotor.rakudo.jvm..........................Can't open perl script "eval-client.pl": No such file or directory
-   0   11    0    0   11
-    11 tests aborted (missing ok/not ok)
+   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
 S32-list/seq.rakudo.jvm............................Can't open perl script "eval-client.pl": No such file or directory
    0   35    0    0   35
     35 tests aborted (missing ok/not ok)
@@ -2797,8 +2797,8 @@ S32-num/fatrat.rakudo.jvm..........................Can't open perl script "eval-
    0  282    0    0  282
    282 tests aborted (missing ok/not ok)
 S32-num/int.rakudo.jvm.............................Can't open perl script "eval-client.pl": No such file or directory
-   0  164    0    0  164
-   164 tests aborted (missing ok/not ok)
+   0  165    0    0  165
+   165 tests aborted (missing ok/not ok)
 S32-num/is-prime.t.................................Can't open perl script "eval-client.pl": No such file or directory
    0   39    0    0   39
     39 tests aborted (missing ok/not ok)
@@ -2809,8 +2809,8 @@ S32-num/narrow.t...................................Can't open perl script "eval-
    0   17    0    0   17
     17 tests aborted (missing ok/not ok)
 S32-num/negative-zero.t............................Can't open perl script "eval-client.pl": No such file or directory
-   0    9    0    0    9
-     9 tests aborted (missing ok/not ok)
+   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
 S32-num/pi.t.......................................Can't open perl script "eval-client.pl": No such file or directory
    0    8    0    0    8
      8 tests aborted (missing ok/not ok)
@@ -2977,8 +2977,8 @@ S32-str/words.rakudo.jvm...........................Can't open perl script "eval-
    0   16    0    0   16
     16 tests aborted (missing ok/not ok)
 S32-temporal/Date.t................................Can't open perl script "eval-client.pl": No such file or directory
-   0  113    0    0  113
-   113 tests aborted (missing ok/not ok)
+   0  114    0    0  114
+   114 tests aborted (missing ok/not ok)
 S32-temporal/DateTime-Instant-Duration.t...........Can't open perl script "eval-client.pl": No such file or directory
    0   61    0    0   61
     61 tests aborted (missing ok/not ok)
@@ -3313,8 +3313,8 @@ integration/code-blocks-as-sub-args.t..............Can't open perl script "eval-
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 integration/error-reporting.rakudo.jvm.............Can't open perl script "eval-client.pl": No such file or directory
-   0   30    0    0   30
-    30 tests aborted (missing ok/not ok)
+   0   31    0    0   31
+    31 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............Can't open perl script "eval-client.pl": No such file or directory
    0    1    0    0    1
      1 tests aborted (missing ok/not ok)
@@ -3374,7 +3374,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
-"S02",           0,  5690,     0,     0,  5690,  5694
+"S02",           0,  5691,     0,     0,  5691,  5695
 "S03",           0,  6192,     0,     0,  6192,  6210
 "S04",           0,  1529,     0,     0,  1529,  1581
 "S05",           0,  6037,     0,     0,  6037,  6223
@@ -3386,7 +3386,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S12",           0,  1834,     0,     0,  1834,  1883
 "S13",           0,    62,     0,     0,    62,    72
 "S14",           0,   404,     0,     0,   404,   417
-"S15",           0,   120,     0,     0,   120, 79092
+"S15",           0,   120,     0,     0,   120, 79101
 "S16",           0,   434,     0,     0,   434,   471
 "S17",           0,   944,     0,     0,   944,  1021
 "S19",           0,    30,     0,     0,    30,    30
@@ -3395,10 +3395,10 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S26",           0,  2007,     0,     0,  2007,  2007
 "S28",           0,     2,     0,     0,     2,     8
 "S29",           0,   221,     0,     0,   221,   221
-"S32",           0,  9877,     0,     0,  9877,  9951
-"int",           0,  1302,     0,     0,  1302,  1298
+"S32",           0,  9882,     0,     0,  9882,  9956
+"int",           0,  1303,     0,     0,  1303,  1299
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40687,     0,     0, 40687,120375
+"total",         0, 40694,     0,     0, 40694,120391
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3492,7 +3492,7 @@ S02-names/symbolic-deref.rakudo.jvm aborted 36 test(s)
 S02-one-pass-parsing/less-than.t aborted 9 test(s)
 S02-one-pass-parsing/misc.t aborted 1 test(s)
 S02-packages/package-lookup.t aborted 7 test(s)
-S02-types/WHICH.rakudo.jvm aborted 5 test(s)
+S02-types/WHICH.rakudo.jvm aborted 6 test(s)
 S02-types/anon_block.rakudo.jvm aborted 42 test(s)
 S02-types/array-shapes.rakudo.jvm aborted 27 test(s)
 S02-types/array.rakudo.jvm aborted 102 test(s)
@@ -4310,7 +4310,7 @@ S32-list/reduce.t aborted 16 test(s)
 S32-list/repeated.rakudo.jvm aborted 38 test(s)
 S32-list/reverse.rakudo.jvm aborted 19 test(s)
 S32-list/roll.t aborted 51 test(s)
-S32-list/rotor.rakudo.jvm aborted 11 test(s)
+S32-list/rotor.rakudo.jvm aborted 12 test(s)
 S32-list/seq.rakudo.jvm aborted 35 test(s)
 S32-list/sort.t aborted 33 test(s)
 S32-list/squish.rakudo.jvm aborted 62 test(s)
@@ -4323,11 +4323,11 @@ S32-num/cool-num.rakudo.jvm aborted 43 test(s)
 S32-num/exp.t aborted 72 test(s)
 S32-num/expmod.t aborted 117 test(s)
 S32-num/fatrat.rakudo.jvm aborted 282 test(s)
-S32-num/int.rakudo.jvm aborted 164 test(s)
+S32-num/int.rakudo.jvm aborted 165 test(s)
 S32-num/is-prime.t aborted 39 test(s)
 S32-num/log.rakudo.jvm aborted 29 test(s)
 S32-num/narrow.t aborted 17 test(s)
-S32-num/negative-zero.t aborted 9 test(s)
+S32-num/negative-zero.t aborted 11 test(s)
 S32-num/pi.t aborted 8 test(s)
 S32-num/polar.t aborted 48 test(s)
 S32-num/polymod.t aborted 9 test(s)
@@ -4383,7 +4383,7 @@ S32-str/trim.t aborted 36 test(s)
 S32-str/uc.rakudo.jvm aborted 19 test(s)
 S32-str/unpack.t aborted 2 test(s)
 S32-str/words.rakudo.jvm aborted 16 test(s)
-S32-temporal/Date.t aborted 113 test(s)
+S32-temporal/Date.t aborted 114 test(s)
 S32-temporal/DateTime-Instant-Duration.t aborted 61 test(s)
 S32-temporal/DateTime.t aborted 276 test(s)
 S32-temporal/calendar.t aborted 130 test(s)
@@ -4486,7 +4486,7 @@ integration/advent2014-day05.rakudo.jvm aborted 7 test(s)
 integration/advent2014-day13.t aborted 13 test(s)
 integration/advent2014-day16.t aborted 21 test(s)
 integration/code-blocks-as-sub-args.t aborted 4 test(s)
-integration/error-reporting.rakudo.jvm aborted 30 test(s)
+integration/error-reporting.rakudo.jvm aborted 31 test(s)
 integration/lazy-bentley-generator.t aborted 1 test(s)
 integration/lexical-array-in-inner-block.t aborted 2 test(s)
 integration/lexicals-and-attributes.t aborted 8 test(s)
