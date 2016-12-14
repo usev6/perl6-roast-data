@@ -406,8 +406,8 @@ S02-types/parsing-bool.t...........................Can't open perl script "eval-
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 S02-types/range.t..................................Can't open perl script "eval-client.pl": No such file or directory
-   0  184    0    0  184
-   184 tests aborted (missing ok/not ok)
+   0  185    0    0  185
+   185 tests aborted (missing ok/not ok)
 S02-types/set.rakudo.jvm...........................Can't open perl script "eval-client.pl": No such file or directory
    0  181    0    0  181
    181 tests aborted (missing ok/not ok)
@@ -1001,8 +1001,8 @@ S05-capture/subrule.t..............................Can't open perl script "eval-
    0   46    0    0   46
     46 tests aborted (missing ok/not ok)
 S05-grammar/action-stubs.t.........................Can't open perl script "eval-client.pl": No such file or directory
-   0   24    0    0   24
-    24 tests aborted (missing ok/not ok)
+   0   25    0    0   25
+    25 tests aborted (missing ok/not ok)
 S05-grammar/example.rakudo.jvm.....................Can't open perl script "eval-client.pl": No such file or directory
    0   11    0    0   11
     11 tests aborted (missing ok/not ok)
@@ -3374,10 +3374,10 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
-"S02",           0,  5691,     0,     0,  5691,  5695
+"S02",           0,  5692,     0,     0,  5692,  5696
 "S03",           0,  6192,     0,     0,  6192,  6210
 "S04",           0,  1529,     0,     0,  1529,  1581
-"S05",           0,  6037,     0,     0,  6037,  6223
+"S05",           0,  6038,     0,     0,  6038,  6224
 "S06",           0,  2294,     0,     0,  2294,  2350
 "S07",           0,   155,     0,     0,   155,   155
 "S09",           0,  1080,     0,     0,  1080,  1080
@@ -3386,7 +3386,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S12",           0,  1834,     0,     0,  1834,  1883
 "S13",           0,    62,     0,     0,    62,    72
 "S14",           0,   404,     0,     0,   404,   417
-"S15",           0,   120,     0,     0,   120, 79101
+"S15",           0,   120,     0,     0,   120, 79131
 "S16",           0,   434,     0,     0,   434,   471
 "S17",           0,   944,     0,     0,   944,  1021
 "S19",           0,    30,     0,     0,    30,    30
@@ -3398,7 +3398,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S32",           0,  9882,     0,     0,  9882,  9956
 "int",           0,  1303,     0,     0,  1303,  1299
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40694,     0,     0, 40694,120391
+"total",         0, 40696,     0,     0, 40696,120423
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3535,7 +3535,7 @@ S02-types/nil.rakudo.jvm aborted 65 test(s)
 S02-types/num.rakudo.jvm aborted 98 test(s)
 S02-types/pair.rakudo.jvm aborted 4 test(s)
 S02-types/parsing-bool.t aborted 4 test(s)
-S02-types/range.t aborted 184 test(s)
+S02-types/range.t aborted 185 test(s)
 S02-types/set.rakudo.jvm aborted 181 test(s)
 S02-types/sethash.rakudo.jvm aborted 209 test(s)
 S02-types/sigils-and-types.rakudo.jvm aborted 27 test(s)
@@ -3731,7 +3731,7 @@ S05-capture/dot.rakudo.jvm aborted 61 test(s)
 S05-capture/match-object.rakudo.jvm aborted 37 test(s)
 S05-capture/named.rakudo.jvm aborted 11 test(s)
 S05-capture/subrule.t aborted 46 test(s)
-S05-grammar/action-stubs.t aborted 24 test(s)
+S05-grammar/action-stubs.t aborted 25 test(s)
 S05-grammar/example.rakudo.jvm aborted 11 test(s)
 S05-grammar/inheritance.rakudo.jvm aborted 32 test(s)
 S05-grammar/methods.t aborted 8 test(s)
