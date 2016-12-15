@@ -104,8 +104,8 @@ S02-literals/hash-interpolation.t..................Can't open perl script "eval-
    0   12    0    0   12
     12 tests aborted (missing ok/not ok)
 S02-literals/heredocs.t............................Can't open perl script "eval-client.pl": No such file or directory
-   0   22    0    0   22
-    22 tests aborted (missing ok/not ok)
+   0   23    0    0   23
+    23 tests aborted (missing ok/not ok)
 S02-literals/hex_chars.t...........................Can't open perl script "eval-client.pl": No such file or directory
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -631,8 +631,8 @@ S03-operators/numeric-shift.t......................Can't open perl script "eval-
    0   38    0    0   38
     38 tests aborted (missing ok/not ok)
 S03-operators/orelse.t.............................Can't open perl script "eval-client.pl": No such file or directory
-   0   10    0    0   10
-    10 tests aborted (missing ok/not ok)
+   0   11    0    0   11
+    11 tests aborted (missing ok/not ok)
 S03-operators/overflow.t...........................Can't open perl script "eval-client.pl": No such file or directory
    0  100    0    0  100
    100 tests aborted (missing ok/not ok)
@@ -1527,8 +1527,8 @@ S07-iterators/range-iterator.rakudo.jvm............Can't open perl script "eval-
    0  108    0    0  108
    108 tests aborted (missing ok/not ok)
 S07-slip/slip.t....................................Can't open perl script "eval-client.pl": No such file or directory
-   0   22    0    0   22
-    22 tests aborted (missing ok/not ok)
+   0   23    0    0   23
+    23 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S09-autovivification/autoincrement.t...............Can't open perl script "eval-client.pl": No such file or directory
    0    7    0    0    7
@@ -2566,8 +2566,8 @@ S32-hash/pairs.t...................................Can't open perl script "eval-
    0   26    0    0   26
     26 tests aborted (missing ok/not ok)
 S32-hash/perl.t....................................Can't open perl script "eval-client.pl": No such file or directory
-   0   12    0    0   12
-    12 tests aborted (missing ok/not ok)
+   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
 S32-hash/push.t....................................Can't open perl script "eval-client.pl": No such file or directory
    0   10    0    0   10
     10 tests aborted (missing ok/not ok)
@@ -3313,8 +3313,8 @@ integration/code-blocks-as-sub-args.t..............Can't open perl script "eval-
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 integration/error-reporting.rakudo.jvm.............Can't open perl script "eval-client.pl": No such file or directory
-   0   31    0    0   31
-    31 tests aborted (missing ok/not ok)
+   0   30    0    0   30
+    30 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............Can't open perl script "eval-client.pl": No such file or directory
    0    1    0    0    1
      1 tests aborted (missing ok/not ok)
@@ -3374,19 +3374,19 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
-"S02",           0,  5692,     0,     0,  5692,  5696
-"S03",           0,  6192,     0,     0,  6192,  6210
+"S02",           0,  5693,     0,     0,  5693,  5697
+"S03",           0,  6193,     0,     0,  6193,  6211
 "S04",           0,  1529,     0,     0,  1529,  1581
 "S05",           0,  6038,     0,     0,  6038,  6224
 "S06",           0,  2294,     0,     0,  2294,  2350
-"S07",           0,   155,     0,     0,   155,   155
+"S07",           0,   156,     0,     0,   156,   156
 "S09",           0,  1080,     0,     0,  1080,  1080
 "S10",           0,   146,     0,     0,   146,   203
 "S11",           0,   192,     0,     0,   192,   202
 "S12",           0,  1834,     0,     0,  1834,  1883
 "S13",           0,    62,     0,     0,    62,    72
 "S14",           0,   404,     0,     0,   404,   417
-"S15",           0,   120,     0,     0,   120, 79131
+"S15",           0,   120,     0,     0,   120, 79138
 "S16",           0,   434,     0,     0,   434,   471
 "S17",           0,   944,     0,     0,   944,  1021
 "S19",           0,    30,     0,     0,    30,    30
@@ -3395,10 +3395,10 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S26",           0,  2007,     0,     0,  2007,  2007
 "S28",           0,     2,     0,     0,     2,     8
 "S29",           0,   221,     0,     0,   221,   221
-"S32",           0,  9882,     0,     0,  9882,  9956
-"int",           0,  1303,     0,     0,  1303,  1299
+"S32",           0,  9883,     0,     0,  9883,  9957
+"int",           0,  1302,     0,     0,  1302,  1298
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40696,     0,     0, 40696,120423
+"total",         0, 40699,     0,     0, 40699,120433
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3435,7 +3435,7 @@ S02-literals/char-by-name.rakudo.jvm aborted 10 test(s)
 S02-literals/char-by-number.t aborted 38 test(s)
 S02-literals/fmt-interpolation.t aborted 11 test(s)
 S02-literals/hash-interpolation.t aborted 12 test(s)
-S02-literals/heredocs.t aborted 22 test(s)
+S02-literals/heredocs.t aborted 23 test(s)
 S02-literals/hex_chars.t aborted 4 test(s)
 S02-literals/listquote-whitespace.t aborted 3 test(s)
 S02-literals/listquote.rakudo.jvm aborted 24 test(s)
@@ -3609,7 +3609,7 @@ S03-operators/names.t aborted 7 test(s)
 S03-operators/nesting.t aborted 26 test(s)
 S03-operators/not.t aborted 22 test(s)
 S03-operators/numeric-shift.t aborted 38 test(s)
-S03-operators/orelse.t aborted 10 test(s)
+S03-operators/orelse.t aborted 11 test(s)
 S03-operators/overflow.t aborted 100 test(s)
 S03-operators/precedence.rakudo.jvm aborted 69 test(s)
 S03-operators/range-basic.t aborted 110 test(s)
@@ -3905,7 +3905,7 @@ S06-traits/slurpy-is-rw.t aborted 3 test(s)
 S07-hyperrace/hyper.rakudo.jvm aborted 13 test(s)
 S07-hyperrace/race.rakudo.jvm aborted 12 test(s)
 S07-iterators/range-iterator.rakudo.jvm aborted 108 test(s)
-S07-slip/slip.t aborted 22 test(s)
+S07-slip/slip.t aborted 23 test(s)
 S09-autovivification/autoincrement.t aborted 7 test(s)
 S09-autovivification/autovivification.rakudo.jvm aborted 44 test(s)
 S09-hashes/objecthash.rakudo.jvm aborted 37 test(s)
@@ -4246,7 +4246,7 @@ S32-hash/keys_values.t aborted 14 test(s)
 S32-hash/kv.t aborted 27 test(s)
 S32-hash/map.t aborted 10 test(s)
 S32-hash/pairs.t aborted 26 test(s)
-S32-hash/perl.t aborted 12 test(s)
+S32-hash/perl.t aborted 13 test(s)
 S32-hash/push.t aborted 10 test(s)
 S32-hash/slice.rakudo.jvm aborted 31 test(s)
 S32-io/IO-Socket-Async.rakudo.jvm aborted 13 test(s)
@@ -4486,7 +4486,7 @@ integration/advent2014-day05.rakudo.jvm aborted 7 test(s)
 integration/advent2014-day13.t aborted 13 test(s)
 integration/advent2014-day16.t aborted 21 test(s)
 integration/code-blocks-as-sub-args.t aborted 4 test(s)
-integration/error-reporting.rakudo.jvm aborted 31 test(s)
+integration/error-reporting.rakudo.jvm aborted 30 test(s)
 integration/lazy-bentley-generator.t aborted 1 test(s)
 integration/lexical-array-in-inner-block.t aborted 2 test(s)
 integration/lexicals-and-attributes.t aborted 8 test(s)
