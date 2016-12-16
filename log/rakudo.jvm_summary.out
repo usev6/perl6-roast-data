@@ -928,8 +928,8 @@ S04-statements/last.rakudo.jvm.....................Can't open perl script "eval-
    0    9    0    0    9
      9 tests aborted (missing ok/not ok)
 S04-statements/loop.t..............................Can't open perl script "eval-client.pl": No such file or directory
-   0   16    0    0   16
-    16 tests aborted (missing ok/not ok)
+   0   18    0    0   18
+    18 tests aborted (missing ok/not ok)
 S04-statements/map-and-sort-in-for.t...............Can't open perl script "eval-client.pl": No such file or directory
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -3313,8 +3313,8 @@ integration/code-blocks-as-sub-args.t..............Can't open perl script "eval-
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 integration/error-reporting.rakudo.jvm.............Can't open perl script "eval-client.pl": No such file or directory
-   0   30    0    0   30
-    30 tests aborted (missing ok/not ok)
+   0   31    0    0   31
+    31 tests aborted (missing ok/not ok)
 integration/lazy-bentley-generator.t...............Can't open perl script "eval-client.pl": No such file or directory
    0    1    0    0    1
      1 tests aborted (missing ok/not ok)
@@ -3376,7 +3376,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S01",           0,    86,     0,     0,    86,    86
 "S02",           0,  5693,     0,     0,  5693,  5697
 "S03",           0,  6193,     0,     0,  6193,  6211
-"S04",           0,  1529,     0,     0,  1529,  1581
+"S04",           0,  1531,     0,     0,  1531,  1583
 "S05",           0,  6038,     0,     0,  6038,  6224
 "S06",           0,  2294,     0,     0,  2294,  2350
 "S07",           0,   156,     0,     0,   156,   156
@@ -3396,9 +3396,9 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S28",           0,     2,     0,     0,     2,     8
 "S29",           0,   221,     0,     0,   221,   221
 "S32",           0,  9883,     0,     0,  9883,  9957
-"int",           0,  1302,     0,     0,  1302,  1298
+"int",           0,  1303,     0,     0,  1303,  1299
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40699,     0,     0, 40699,120433
+"total",         0, 40702,     0,     0, 40702,120436
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3707,7 +3707,7 @@ S04-statements/given.t aborted 51 test(s)
 S04-statements/if.rakudo.jvm aborted 43 test(s)
 S04-statements/label.rakudo.jvm aborted 6 test(s)
 S04-statements/last.rakudo.jvm aborted 9 test(s)
-S04-statements/loop.t aborted 16 test(s)
+S04-statements/loop.t aborted 18 test(s)
 S04-statements/map-and-sort-in-for.t aborted 4 test(s)
 S04-statements/next.rakudo.jvm aborted 12 test(s)
 S04-statements/no-implicit-block.t aborted 12 test(s)
@@ -4486,7 +4486,7 @@ integration/advent2014-day05.rakudo.jvm aborted 7 test(s)
 integration/advent2014-day13.t aborted 13 test(s)
 integration/advent2014-day16.t aborted 21 test(s)
 integration/code-blocks-as-sub-args.t aborted 4 test(s)
-integration/error-reporting.rakudo.jvm aborted 30 test(s)
+integration/error-reporting.rakudo.jvm aborted 31 test(s)
 integration/lazy-bentley-generator.t aborted 1 test(s)
 integration/lexical-array-in-inner-block.t aborted 2 test(s)
 integration/lexicals-and-attributes.t aborted 8 test(s)
