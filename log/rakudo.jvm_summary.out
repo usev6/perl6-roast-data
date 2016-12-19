@@ -382,8 +382,8 @@ S02-types/multi_dimensional_array.rakudo.jvm.......Can't open perl script "eval-
    0   58    0    0   58
     58 tests aborted (missing ok/not ok)
 S02-types/nan.rakudo.jvm...........................Can't open perl script "eval-client.pl": No such file or directory
-   0   24    0    0   24
-    24 tests aborted (missing ok/not ok)
+   0   26    0    0   26
+    26 tests aborted (missing ok/not ok)
 S02-types/native.rakudo.jvm........................Can't open perl script "eval-client.pl": No such file or directory
    0   92    0    0   92
     92 tests aborted (missing ok/not ok)
@@ -634,8 +634,8 @@ S03-operators/orelse.t.............................Can't open perl script "eval-
    0   11    0    0   11
     11 tests aborted (missing ok/not ok)
 S03-operators/overflow.t...........................Can't open perl script "eval-client.pl": No such file or directory
-   0  100    0    0  100
-   100 tests aborted (missing ok/not ok)
+   0  101    0    0  101
+   101 tests aborted (missing ok/not ok)
 S03-operators/precedence.rakudo.jvm................Can't open perl script "eval-client.pl": No such file or directory
    0   69    0    0   69
     69 tests aborted (missing ok/not ok)
@@ -2821,8 +2821,8 @@ S32-num/polymod.t..................................Can't open perl script "eval-
    0    9    0    0    9
      9 tests aborted (missing ok/not ok)
 S32-num/power.rakudo.jvm...........................Can't open perl script "eval-client.pl": No such file or directory
-   0   78    0    0   78
-    78 tests aborted (missing ok/not ok)
+   0   97    0    0   97
+    97 tests aborted (missing ok/not ok)
 S32-num/rand.rakudo.jvm............................Can't open perl script "eval-client.pl": No such file or directory
    0  113    0    0  113
    113 tests aborted (missing ok/not ok)
@@ -3374,8 +3374,8 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
-"S02",           0,  5694,     0,     0,  5694,  5698
-"S03",           0,  6193,     0,     0,  6193,  6211
+"S02",           0,  5696,     0,     0,  5696,  5700
+"S03",           0,  6194,     0,     0,  6194,  6212
 "S04",           0,  1531,     0,     0,  1531,  1583
 "S05",           0,  6038,     0,     0,  6038,  6224
 "S06",           0,  2294,     0,     0,  2294,  2350
@@ -3395,10 +3395,10 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S26",           0,  2007,     0,     0,  2007,  2007
 "S28",           0,     2,     0,     0,     2,     8
 "S29",           0,   221,     0,     0,   221,   221
-"S32",           0,  9885,     0,     0,  9885,  9959
+"S32",           0,  9904,     0,     0,  9904,  9978
 "int",           0,  1303,     0,     0,  1303,  1299
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40705,     0,     0, 40705,120447
+"total",         0, 40727,     0,     0, 40727,120469
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3527,7 +3527,7 @@ S02-types/mixed_multi_dimensional.rakudo.jvm aborted 80 test(s)
 S02-types/mixhash.rakudo.jvm aborted 236 test(s)
 S02-types/mu.t aborted 8 test(s)
 S02-types/multi_dimensional_array.rakudo.jvm aborted 58 test(s)
-S02-types/nan.rakudo.jvm aborted 24 test(s)
+S02-types/nan.rakudo.jvm aborted 26 test(s)
 S02-types/native.rakudo.jvm aborted 92 test(s)
 S02-types/nested_arrays.t aborted 10 test(s)
 S02-types/nested_pairs.t aborted 14 test(s)
@@ -3610,7 +3610,7 @@ S03-operators/nesting.t aborted 26 test(s)
 S03-operators/not.t aborted 22 test(s)
 S03-operators/numeric-shift.t aborted 38 test(s)
 S03-operators/orelse.t aborted 11 test(s)
-S03-operators/overflow.t aborted 100 test(s)
+S03-operators/overflow.t aborted 101 test(s)
 S03-operators/precedence.rakudo.jvm aborted 69 test(s)
 S03-operators/range-basic.t aborted 110 test(s)
 S03-operators/range-int.t aborted 507 test(s)
@@ -4331,7 +4331,7 @@ S32-num/negative-zero.t aborted 11 test(s)
 S32-num/pi.t aborted 8 test(s)
 S32-num/polar.t aborted 48 test(s)
 S32-num/polymod.t aborted 9 test(s)
-S32-num/power.rakudo.jvm aborted 78 test(s)
+S32-num/power.rakudo.jvm aborted 97 test(s)
 S32-num/rand.rakudo.jvm aborted 113 test(s)
 S32-num/rat.rakudo.jvm aborted 833 test(s)
 S32-num/real-bridge.t aborted 200 test(s)
