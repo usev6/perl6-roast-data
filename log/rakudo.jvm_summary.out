@@ -1037,8 +1037,8 @@ S05-interpolation/lexicals.t.......................Can't open perl script "eval-
    0   14    0    0   14
     14 tests aborted (missing ok/not ok)
 S05-interpolation/regex-in-variable.rakudo.jvm.....Can't open perl script "eval-client.pl": No such file or directory
-   0   52    0    0   52
-    52 tests aborted (missing ok/not ok)
+   0   53    0    0   53
+    53 tests aborted (missing ok/not ok)
 S05-mass/charsets.rakudo.jvm.......................Can't open perl script "eval-client.pl": No such file or directory
    0   17    0    0   17
     17 tests aborted (missing ok/not ok)
@@ -1626,8 +1626,8 @@ S11-modules/importing.t............................Can't open perl script "eval-
    0   17    0    0   17
     17 tests aborted (missing ok/not ok)
 S11-modules/lexical.t..............................Can't open perl script "eval-client.pl": No such file or directory
-   0    2    0    0    2
-     2 tests aborted (missing ok/not ok)
+   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
 S11-modules/module-file.t..........................Can't open perl script "eval-client.pl": No such file or directory
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -2292,9 +2292,9 @@ S17-supply/zip.t...................................Can't open perl script "eval-
    0   10    0    0   10
     10 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-S19-command-line-options/02-dash-n.t...............Can't open perl script "eval-client.pl": No such file or directory
-   0    3    0    0    3
-     3 tests aborted (missing ok/not ok)
+S19-command-line-options/02-dash-n.rakudo.jvm......Can't open perl script "eval-client.pl": No such file or directory
+   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
 S19-command-line-options/03-dash-p.t...............Can't open perl script "eval-client.pl": No such file or directory
    0    2    0    0    2
      2 tests aborted (missing ok/not ok)
@@ -3377,19 +3377,19 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S02",           0,  5696,     0,     0,  5696,  5700
 "S03",           0,  6194,     0,     0,  6194,  6212
 "S04",           0,  1531,     0,     0,  1531,  1583
-"S05",           0,  6038,     0,     0,  6038,  6224
+"S05",           0,  6039,     0,     0,  6039,  6225
 "S06",           0,  2294,     0,     0,  2294,  2350
 "S07",           0,   156,     0,     0,   156,   156
 "S09",           0,  1080,     0,     0,  1080,  1080
 "S10",           0,   146,     0,     0,   146,   203
-"S11",           0,   192,     0,     0,   192,   202
+"S11",           0,   193,     0,     0,   193,   203
 "S12",           0,  1834,     0,     0,  1834,  1883
 "S13",           0,    62,     0,     0,    62,    72
 "S14",           0,   404,     0,     0,   404,   417
 "S15",           0,   120,     0,     0,   120, 79146
 "S16",           0,   434,     0,     0,   434,   471
 "S17",           0,   944,     0,     0,   944,  1021
-"S19",           0,    30,     0,     0,    30,    30
+"S19",           0,    33,     0,     0,    33,    33
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    28,     0,     0,    28,    99
 "S26",           0,  2007,     0,     0,  2007,  2007
@@ -3398,7 +3398,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S32",           0,  9904,     0,     0,  9904,  9978
 "int",           0,  1303,     0,     0,  1303,  1299
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40727,     0,     0, 40727,120469
+"total",         0, 40732,     0,     0, 40732,120474
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3743,7 +3743,7 @@ S05-grammar/protos.t aborted 4 test(s)
 S05-grammar/signatures.t aborted 10 test(s)
 S05-grammar/ws.rakudo.jvm aborted 12 test(s)
 S05-interpolation/lexicals.t aborted 14 test(s)
-S05-interpolation/regex-in-variable.rakudo.jvm aborted 52 test(s)
+S05-interpolation/regex-in-variable.rakudo.jvm aborted 53 test(s)
 S05-mass/charsets.rakudo.jvm aborted 17 test(s)
 S05-mass/named-chars.t aborted 431 test(s)
 S05-mass/properties-block.t aborted 670 test(s)
@@ -3937,7 +3937,7 @@ S11-modules/import-multi.rakudo.jvm aborted 17 test(s)
 S11-modules/import-tag.t aborted 12 test(s)
 S11-modules/import.rakudo.jvm aborted 17 test(s)
 S11-modules/importing.t aborted 17 test(s)
-S11-modules/lexical.t aborted 2 test(s)
+S11-modules/lexical.t aborted 3 test(s)
 S11-modules/module-file.t aborted 4 test(s)
 S11-modules/module.t aborted 8 test(s)
 S11-modules/need.t aborted 2 test(s)
@@ -4157,7 +4157,7 @@ S17-supply/watch-path.rakudo.jvm aborted 2 test(s)
 S17-supply/words.t aborted 5 test(s)
 S17-supply/zip-latest.rakudo.jvm aborted 13 test(s)
 S17-supply/zip.t aborted 10 test(s)
-S19-command-line-options/02-dash-n.t aborted 3 test(s)
+S19-command-line-options/02-dash-n.rakudo.jvm aborted 6 test(s)
 S19-command-line-options/03-dash-p.t aborted 2 test(s)
 S19-command-line-options/04-negation.rakudo.jvm aborted 3 test(s)
 S19-command-line-options/05-delimited-options.rak aborted 1 test(s)
