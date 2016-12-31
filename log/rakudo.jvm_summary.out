@@ -553,8 +553,8 @@ S03-operators/chained-declarators.t................Can't open perl script "eval-
    0    5    0    0    5
      5 tests aborted (missing ok/not ok)
 S03-operators/cmp.t................................Can't open perl script "eval-client.pl": No such file or directory
-   0   53    0    0   53
-    53 tests aborted (missing ok/not ok)
+   0   59    0    0   59
+    59 tests aborted (missing ok/not ok)
 S03-operators/comparison-simple.t..................Can't open perl script "eval-client.pl": No such file or directory
    0   24    0    0   24
     24 tests aborted (missing ok/not ok)
@@ -3384,7 +3384,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
 "S02",           0,  5696,     0,     0,  5696,  5700
-"S03",           0,  6250,     0,     0,  6250,  6268
+"S03",           0,  6256,     0,     0,  6256,  6274
 "S04",           0,  1535,     0,     0,  1535,  1587
 "S05",           0,  6044,     0,     0,  6044,  6230
 "S06",           0,  2298,     0,     0,  2298,  2354
@@ -3407,7 +3407,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S32",           0,  9968,     0,     0,  9968, 10042
 "int",           0,  1305,     0,     0,  1305,  1301
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40871,     0,     0, 40871,120907
+"total",         0, 40877,     0,     0, 40877,120913
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3592,7 +3592,7 @@ S03-operators/boolean-bitwise.t aborted 45 test(s)
 S03-operators/brainos.t aborted 9 test(s)
 S03-operators/buf.t aborted 133 test(s)
 S03-operators/chained-declarators.t aborted 5 test(s)
-S03-operators/cmp.t aborted 53 test(s)
+S03-operators/cmp.t aborted 59 test(s)
 S03-operators/comparison-simple.t aborted 24 test(s)
 S03-operators/comparison.t aborted 53 test(s)
 S03-operators/composition.t aborted 10 test(s)
