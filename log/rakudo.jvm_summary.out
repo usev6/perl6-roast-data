@@ -1359,8 +1359,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1908,7 +1908,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1988,9 +1988,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
 "S32",       13501,    24,   217,   209, 13951, 12246
-"int",        1292,     0,    10,    15,  1317,  1311
+"int",        1291,     1,    10,    15,  1317,  1311
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48675,    30,   861,  1679, 51245,129466
+"total",     48674,    31,   861,  1679, 51245,129466
 ----------------
 Failure summary:
 S03-operators/cmp.t aborted 6 test(s)
@@ -1998,3 +1998,4 @@ S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-list/produce.t aborted 16 test(s)
 S32-num/fatrat.rakudo.jvm aborted 4 test(s)
 S32-num/rat.rakudo.jvm aborted 3 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
