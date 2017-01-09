@@ -661,25 +661,8 @@ S05-mass/properties-general.rakudo.jvm............. 593    0    4   10  607
 S05-mass/properties-script.rakudo.jvm.............. 325    0    0   35  360
     35 skipped: Unicode properties with arguments RT  \#124886
 S05-mass/recursive.t...............................  20    0    0    0   20
-S05-mass/rx.rakudo.jvm............................. 724    0    4   14  742
-     1 skipped: :: NYI RT  \#124889
-     1 skipped: :: NYI RT  \#124890
-     1 skipped: :: NYI RT  \#124891
-     1 skipped: :: NYI RT  \#124893
-     1 skipped: :: NYI RT  \#124894
-     1 skipped: :: NYI RT  \#124895
-     1 skipped: :: NYI RT  \#124900
-     1 skipped: :: NYI RT  \#124901
-     1 skipped: :: NYI RT  \#124902
-     1 skipped: ::: NYI RT  \#124892
-     1 skipped: ::: NYI RT  \#124896
-     1 skipped: :s() RT  \#124899
-     1 skipped: regex <name> RT  \#124904
-     1 skipped: regex <name> RT  \#124905
-     1 todo   : <commit> NYI RT #124897
-     1 todo   : RT #121307
-     1 todo   : anchors and after RT #124898
-     1 todo   : parse error RT #124903
+S05-mass/rx.rakudo.jvm.............................   0  743    0    0  743
+   743 tests aborted (missing ok/not ok)
 S05-mass/stdrules.t................................ 191    0    0    0  191
 S05-match/arrayhash.t..............................   9    0    0    0    9
 S05-match/blocks.rakudo.jvm........................  18    0    1    0   19
@@ -1358,8 +1341,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1616,10 +1598,9 @@ S32-list/grep-k.rakudo.jvm.........................  22    0    6   12   40
 S32-list/grep-kv.t.................................  17    0    0    0   17
 S32-list/grep-p.t..................................  17    0    0    0   17
 S32-list/grep-v.t..................................  17    0    0    0   17
-S32-list/grep.rakudo.jvm...........................  11   19    0   12   42
+S32-list/grep.rakudo.jvm...........................  30    0    0   12   42
      6 skipped: adverbial block RT  \#124755
      6 skipped: adverbial block RT  \#124756
-    19 tests aborted (missing ok/not ok)
 S32-list/head.t....................................  24    0    0    0   24
 S32-list/join.t....................................  38    0    0    0   38
 S32-list/map.rakudo.jvm............................  52    0    0    6   58
@@ -1909,7 +1890,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1972,7 +1953,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9059,     0,   132,   401,  9592,  9595
 "S03",        6101,     4,    74,    95,  6274,  6292
 "S04",        1462,     0,    60,    33,  1555,  1587
-"S05",        5748,     0,    93,   209,  6050,  6238
+"S05",        5024,   743,    89,   195,  6051,  6239
 "S06",        2148,     0,    67,    96,  2311,  2354
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2762,     0,    25,    40,  2827,  2827
@@ -1990,18 +1971,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1918,     0,     5,    85,  2008,  2008
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13519,    23,   218,   195, 13955, 12270
-"int",        1339,     3,    10,    15,  1367,  1361
+"S32",       13538,     4,   218,   195, 13955, 12270
+"int",        1340,     2,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48752,    30,   863,  1665, 51310,132060
+"total",     48048,   753,   859,  1651, 51311,132061
 ----------------
 Failure summary:
 S03-metaops/zip.t 72 - Z respects itemization of arguments (1)
 S03-metaops/zip.t 73 - Z respects itemization of arguments (2)
 S03-metaops/zip.t 74 - Z meta-op respects itemization of arguments (1)
 S03-metaops/zip.t 75 - Z meta-op respects itemization of arguments (2)
+S05-mass/rx.rakudo.jvm aborted 743 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
-S32-list/grep.rakudo.jvm aborted 19 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
 integration/error-reporting.rakudo.jvm aborted 2 test(s)
