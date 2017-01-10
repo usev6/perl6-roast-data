@@ -1496,7 +1496,7 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT  \#124907
-S32-exceptions/misc.rakudo.jvm..................... 412    0   12    3  427
+S32-exceptions/misc.rakudo.jvm..................... 413    0   11    3  427
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
      1 skipped: failure assignment still blows up on JVM, RT  \#125769
@@ -1504,7 +1504,6 @@ S32-exceptions/misc.rakudo.jvm..................... 412    0   12    3  427
      1 todo   : dies with X::AdHoc -- __P6opaque__77@3dc2adf9 in sub-signature of parameter @array
      1 todo   : good error message, but not the one that we are expecting
      1 todo   : parsing regression RT #124679
-     1 todo PASSED: Nd in special variables
 S32-hash/adverbs.t.................................1128    0    0    0 1128
 S32-hash/antipairs.t...............................   5    0    0    0    5
 S32-hash/delete-adverb.t........................... 131    0    0    0  131
@@ -1598,7 +1597,7 @@ S32-list/grep-k.rakudo.jvm.........................  22    0    6   12   40
 S32-list/grep-kv.t.................................  17    0    0    0   17
 S32-list/grep-p.t..................................  17    0    0    0   17
 S32-list/grep-v.t..................................  17    0    0    0   17
-S32-list/grep.rakudo.jvm...........................  30    0    0   12   42
+S32-list/grep.rakudo.jvm...........................  32    0    0   12   44
      6 skipped: adverbial block RT  \#124755
      6 skipped: adverbial block RT  \#124756
 S32-list/head.t....................................  24    0    0    0   24
@@ -1971,10 +1970,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1918,     0,     5,    85,  2008,  2008
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13538,     4,   218,   195, 13955, 12270
+"S32",       13541,     4,   217,   195, 13957, 12272
 "int",        1340,     2,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48048,   753,   859,  1651, 51311,132061
+"total",     48051,   753,   858,  1651, 51313,132063
 ----------------
 Failure summary:
 S03-metaops/zip.t 72 - Z respects itemization of arguments (1)
