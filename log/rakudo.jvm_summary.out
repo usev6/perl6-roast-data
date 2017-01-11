@@ -1325,7 +1325,7 @@ S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  92    0    0    0   92
-S17-supply/batch.t.................................  11    0    0    0   11
+S17-supply/batch.t.................................  10    1    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1382,8 +1382,7 @@ S19-command-line-options/04-negation.rakudo.jvm....   0    0    3    0    3
 S19-command-line-options/05-delimited-options.rak..   0    0    1    0    1
      1 todo   : delimited options NYI RT #125020
 S19-command-line-options/06-dash-rxtrace.t.........   1    0    0    0    1
-S19-command-line/arguments.rakudo.jvm..............   3    0    1    0    4
-     1 todo PASSED: https://github.com/MoarVM/MoarVM/issues/482
+S19-command-line/arguments.t.......................   4    0    0    0    4
 S19-command-line/dash-e.t..........................   4    0    0    0    4
 S19-command-line/help.t............................   1    0    0    0    1
 S19-command-line/repl.rakudo.jvm...................  11    0    0    1   12
@@ -1889,7 +1888,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1916,10 +1915,9 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  28    2    2    0   32
+integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
-     2 tests aborted (missing ok/not ok)
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1963,17 +1961,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 81947
 "S16",         693,     0,    69,   147,   909,   946
-"S17",         898,     0,    17,    30,   945,  1022
-"S19",          25,     0,     8,     1,    34,    34
+"S17",         897,     1,    17,    30,   945,  1022
+"S19",          26,     0,     7,     1,    34,    34
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1918,     0,     5,    85,  2008,  2008
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13541,     4,   217,   195, 13957, 12272
-"int",        1340,     2,    10,    15,  1367,  1361
+"S32",       13541,     4,   217,   195, 13957, 12274
+"int",        1341,     1,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48051,   753,   858,  1651, 51313,132063
+"total",     48052,   753,   857,  1651, 51313,132065
 ----------------
 Failure summary:
 S03-metaops/zip.t 72 - Z respects itemization of arguments (1)
@@ -1981,6 +1979,7 @@ S03-metaops/zip.t 73 - Z respects itemization of arguments (2)
 S03-metaops/zip.t 74 - Z meta-op respects itemization of arguments (1)
 S03-metaops/zip.t 75 - Z meta-op respects itemization of arguments (2)
 S05-mass/rx.rakudo.jvm aborted 743 test(s)
+S17-supply/batch.t 9 - we can batch by time and elems
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
-integration/error-reporting.rakudo.jvm aborted 2 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
