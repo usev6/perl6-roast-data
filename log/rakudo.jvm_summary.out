@@ -52,8 +52,9 @@ S02-literals/adverbs.rakudo.jvm....................  28    0    3    3   34
 S02-literals/allomorphic.t......................... 103    0    0    0  103
 S02-literals/array-interpolation.t.................  12    0    0    0   12
 S02-literals/autoref.t.............................  38    0    0    0   38
-S02-literals/char-by-name.rakudo.jvm...............   9    0    0    1   10
-     1 skipped: \c[LINE FEED] not valid: RT  \#117683
+S02-literals/char-by-name.rakudo.jvm...............   9    0    1    1   11
+     1 skipped: rakudo.jvm does not yet support Emoji Sequences
+     1 todo   : RT #130542 \c[BELL] returns the U+0007 control code not U+1F514 BELL
 S02-literals/char-by-number.t......................  38    0    0    0   38
 S02-literals/fmt-interpolation.t...................  11    0    0    0   11
 S02-literals/hash-interpolation.t..................  12    0    0    0   12
@@ -345,7 +346,8 @@ S03-metaops/reduce.rakudo.jvm...................... 545    0    1    1  547
      1 skipped: RT  \#129153 Type check failed in binding to &b; expected Callable but got Int (2)
      1 todo   : item context
 S03-metaops/reverse.t..............................  68    0    0    0   68
-S03-metaops/zip.t..................................  72    4    0    0   76
+S03-metaops/zip.rakudo.jvm.........................  72    3    1    0   76
+     1 todo   : RT #130532
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
      1 todo   : Multi colonpair syntax not yet understood RT #124553
 S03-operators/also.rakudo.jvm......................   4    0    4    0    8
@@ -661,8 +663,26 @@ S05-mass/properties-general.rakudo.jvm............. 593    0    4   10  607
 S05-mass/properties-script.rakudo.jvm.............. 325    0    0   35  360
     35 skipped: Unicode properties with arguments RT  \#124886
 S05-mass/recursive.t...............................  20    0    0    0   20
-S05-mass/rx.rakudo.jvm.............................   0  743    0    0  743
-   743 tests aborted (missing ok/not ok)
+S05-mass/rx.rakudo.jvm............................. 724    0    4   15  743
+     1 skipped: '۳' is not a valid number
+     1 skipped: :: NYI RT  \#124889
+     1 skipped: :: NYI RT  \#124890
+     1 skipped: :: NYI RT  \#124891
+     1 skipped: :: NYI RT  \#124893
+     1 skipped: :: NYI RT  \#124894
+     1 skipped: :: NYI RT  \#124895
+     1 skipped: :: NYI RT  \#124900
+     1 skipped: :: NYI RT  \#124901
+     1 skipped: :: NYI RT  \#124902
+     1 skipped: ::: NYI RT  \#124892
+     1 skipped: ::: NYI RT  \#124896
+     1 skipped: :s() RT  \#124899
+     1 skipped: regex <name> RT  \#124904
+     1 skipped: regex <name> RT  \#124905
+     1 todo   : <commit> NYI RT #124897
+     1 todo   : RT #121307
+     1 todo   : anchors and after RT #124898
+     1 todo   : parse error RT #124903
 S05-mass/stdrules.t................................ 191    0    0    0  191
 S05-match/arrayhash.t..............................   9    0    0    0    9
 S05-match/blocks.rakudo.jvm........................  18    0    1    0   19
@@ -1325,7 +1345,7 @@ S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  92    0    0    0   92
-S17-supply/batch.t.................................  10    1    0    0   11
+S17-supply/batch.t.................................  11    0    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1888,7 +1908,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1947,10 +1967,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9059,     0,   132,   401,  9592,  9595
-"S03",        6101,     4,    74,    95,  6274,  6292
+"S02",        9059,     0,   133,   401,  9593,  9596
+"S03",        6101,     3,    75,    95,  6274,  6292
 "S04",        1462,     0,    60,    33,  1555,  1587
-"S05",        5024,   743,    89,   195,  6051,  6239
+"S05",        5748,     0,    93,   210,  6051,  6239
 "S06",        2148,     0,    67,    96,  2311,  2354
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2762,     0,    25,    40,  2827,  2827
@@ -1961,7 +1981,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 81947
 "S16",         693,     0,    69,   147,   909,   946
-"S17",         897,     1,    17,    30,   945,  1022
+"S17",         898,     0,    17,    30,   945,  1022
 "S19",          26,     0,     7,     1,    34,    34
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -1969,17 +1989,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
 "S32",       13541,     4,   217,   195, 13957, 12274
-"int",        1341,     1,    10,    15,  1367,  1361
+"int",        1342,     0,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48052,   753,   857,  1651, 51313,132065
+"total",     48778,     7,   863,  1666, 51314,132066
 ----------------
 Failure summary:
-S03-metaops/zip.t 72 - Z respects itemization of arguments (1)
-S03-metaops/zip.t 73 - Z respects itemization of arguments (2)
-S03-metaops/zip.t 74 - Z meta-op respects itemization of arguments (1)
-S03-metaops/zip.t 75 - Z meta-op respects itemization of arguments (2)
-S05-mass/rx.rakudo.jvm aborted 743 test(s)
-S17-supply/batch.t 9 - we can batch by time and elems
+S03-metaops/zip.rakudo.jvm 73 - Z respects itemization of arguments (2)
+S03-metaops/zip.rakudo.jvm 74 - Z meta-op respects itemization of arguments (1)
+S03-metaops/zip.rakudo.jvm 75 - Z meta-op respects itemization of arguments (2)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
