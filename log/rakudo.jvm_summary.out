@@ -346,8 +346,8 @@ S03-metaops/reduce.rakudo.jvm...................... 545    0    1    1  547
      1 skipped: RT  \#129153 Type check failed in binding to &b; expected Callable but got Int (2)
      1 todo   : item context
 S03-metaops/reverse.t..............................  68    0    0    0   68
-S03-metaops/zip.rakudo.jvm.........................  72    3    1    0   76
-     1 todo   : RT #130532
+S03-metaops/zip.rakudo.jvm.........................  72    0    4    0   76
+     4 todo   : RT #130532
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
      1 todo   : Multi colonpair syntax not yet understood RT #124553
 S03-operators/also.rakudo.jvm......................   4    0    4    0    8
@@ -1361,7 +1361,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1908,7 +1909,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1968,7 +1969,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9059,     0,   133,   401,  9593,  9596
-"S03",        6101,     3,    75,    95,  6274,  6292
+"S03",        6101,     0,    78,    95,  6274,  6292
 "S04",        1462,     0,    60,    33,  1555,  1587
 "S05",        5748,     0,    93,   210,  6051,  6239
 "S06",        2148,     0,    67,    96,  2311,  2354
@@ -1989,13 +1990,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
 "S32",       13541,     4,   217,   195, 13957, 12274
-"int",        1342,     0,    10,    15,  1367,  1361
+"int",        1341,     1,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48778,     7,   863,  1666, 51314,132066
+"total",     48777,     5,   866,  1666, 51314,132066
 ----------------
 Failure summary:
-S03-metaops/zip.rakudo.jvm 73 - Z respects itemization of arguments (2)
-S03-metaops/zip.rakudo.jvm 74 - Z meta-op respects itemization of arguments (1)
-S03-metaops/zip.rakudo.jvm 75 - Z meta-op respects itemization of arguments (2)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
