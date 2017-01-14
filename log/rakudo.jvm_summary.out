@@ -1249,12 +1249,14 @@ S15-string-types/Str.rakudo.jvm....................   1    0    2    1    4
      1 skipped: :nfg adverb NYI RT  \#124991
      1 todo   : NFG on JVM RT #124992
      1 todo   : NFG on JVM RT #124994
-S15-unicode-information/uniname.rakudo.jvm.........  18    2    0   20   40
+S15-unicode-information/uniname.rakudo.jvm.........  18    0    2   20   40
      5 skipped: :either NYI RT  \#125070
      5 skipped: :either and :one NYI RT  \#one NYI RT \#:125071
      5 skipped: :one NYI RT  \#125069
      4 skipped: Method 'NFC' not found for invocant of class 'Str' RT  \#124500
      1 skipped: No Unicode 9 yet
+     1 todo   : RT #122470
+     1 todo   : RT #122471
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.rakudo.jvm................  15    0    1    0   16
      1 todo   : RT #123888
@@ -1323,7 +1325,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  28    1    0    0   29
+S17-promise/basic.t................................  29    0    0    0   29
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/start.t................................  57    0    0    0   57
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -1358,8 +1360,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1934,10 +1935,9 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  28    2    2    0   32
+integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
-     2 tests aborted (missing ok/not ok)
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1979,9 +1979,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S12",        1666,     0,    37,   137,  1840,  1889
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
-"S15",          45,     2,     5,    68,   120, 81947
+"S15",          45,     0,     7,    68,   120, 81947
 "S16",         693,     0,    69,   147,   909,   946
-"S17",         900,     1,    17,    30,   948,  1025
+"S17",         901,     0,    17,    30,   948,  1025
 "S19",          26,     0,     7,     1,    34,    34
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -1989,19 +1989,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
 "S32",       13532,    13,   217,   195, 13957, 12274
-"int",        1339,     3,    10,    15,  1367,  1361
+"int",        1341,     1,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48409,   386,   863,  1659, 51317,132069
+"total",     48412,   381,   865,  1659, 51317,132069
 ----------------
 Failure summary:
 S03-metaops/hyper.rakudo.jvm aborted 302 test(s)
 S09-multidim/methods.t aborted 56 test(s)
 S11-compunit/compunit-repository.t aborted 9 test(s)
-S15-unicode-information/uniname.rakudo.jvm 15 - uniname() returns codepoint label for control character without a current name.
-S15-unicode-information/uniname.rakudo.jvm 18 - uniname() returns codepoint label for control character without any name.
-S17-promise/basic.t 26 - promises execute asynchronously [try 2]
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
 S32-list/combinations.t aborted 9 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/error-reporting.rakudo.jvm aborted 2 test(s)
