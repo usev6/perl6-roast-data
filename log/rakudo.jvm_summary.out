@@ -184,7 +184,7 @@ S02-types/WHICH.rakudo.jvm.........................1562    0    0   44 1606
 S02-types/anon_block.rakudo.jvm....................  39    0    1    2   42
      2 skipped: tests don't work if previous test fails
      1 todo   : Parrot support for zero-arg subs?
-S02-types/array-shapes.rakudo.jvm..................  25    0    2    0   27
+S02-types/array-shapes.rakudo.jvm..................  27    0    2    0   29
      2 todo   : code does not die, array shapes RT #124502
 S02-types/array.rakudo.jvm.........................  97    0    3    2  102
      2 skipped: multi-dim arrays NYI RT  \#124508
@@ -1357,8 +1357,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1477,7 +1476,7 @@ S29-os/system.rakudo.jvm...........................  24    0   10    1   35
                                                    pass fail todo skip plan
 S32-array/adverbs.t................................ 606    0    0    0  606
 S32-array/bool.t...................................  15    0    0    0   15
-S32-array/create.t.................................   8    0    0    0    8
+S32-array/create.t.................................   9    0    0    0    9
 S32-array/delete-adverb-native.t................... 138    0    0    0  138
 S32-array/delete-adverb.t.......................... 218    0    0    0  218
 S32-array/delete.rakudo.jvm........................  31    0    1    0   32
@@ -1964,7 +1963,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9059,     0,   133,   401,  9593,  9596
+"S02",        9061,     0,   133,   401,  9595,  9598
 "S03",        6111,     0,    73,    95,  6279,  6297
 "S04",        1462,     0,    60,    33,  1555,  1587
 "S05",        5749,     0,    93,   210,  6052,  6240
@@ -1985,10 +1984,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1918,     0,     5,    85,  2008,  2008
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13541,     4,   217,   195, 13957, 12274
+"S32",       13542,     4,   217,   195, 13958, 12275
 "int",        1341,     1,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48789,     5,   857,  1666, 51317,131683
+"total",     48792,     5,   857,  1666, 51320,131686
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
