@@ -2268,8 +2268,8 @@ S17-supply/start.t.................................Can't open perl script "eval-
    0    8    0    0    8
      8 tests aborted (missing ok/not ok)
 S17-supply/syntax.rakudo.jvm.......................Can't open perl script "eval-client.pl": No such file or directory
-   0   68    0    0   68
-    68 tests aborted (missing ok/not ok)
+   0   70    0    0   70
+    70 tests aborted (missing ok/not ok)
 S17-supply/tail.t..................................Can't open perl script "eval-client.pl": No such file or directory
    0    8    0    0    8
      8 tests aborted (missing ok/not ok)
@@ -2839,8 +2839,8 @@ S32-num/rand.rakudo.jvm............................Can't open perl script "eval-
    0  113    0    0  113
    113 tests aborted (missing ok/not ok)
 S32-num/rat.rakudo.jvm.............................Can't open perl script "eval-client.pl": No such file or directory
-   0  837    0    0  837
-   837 tests aborted (missing ok/not ok)
+   0  838    0    0  838
+   838 tests aborted (missing ok/not ok)
 S32-num/real-bridge.t..............................Can't open perl script "eval-client.pl": No such file or directory
    0  200    0    0  200
    200 tests aborted (missing ok/not ok)
@@ -3403,17 +3403,17 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S14",           0,   404,     0,     0,   404,   417
 "S15",           0,   120,     0,     0,   120, 81555
 "S16",           0,   437,     0,     0,   437,   474
-"S17",           0,   948,     0,     0,   948,  1025
+"S17",           0,   950,     0,     0,   950,  1027
 "S19",           0,    34,     0,     0,    34,    34
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    28,     0,     0,    28,    99
 "S26",           0,  2008,     0,     0,  2008,  2008
 "S28",           0,     2,     0,     0,     2,     8
 "S29",           0,   221,     0,     0,   221,   221
-"S32",           0,  9988,     0,     0,  9988, 10084
+"S32",           0,  9989,     0,     0,  9989, 10085
 "int",           0,  1354,     0,     0,  1354,  1351
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40991,     0,     0, 40991,123173
+"total",         0, 40994,     0,     0, 40994,123176
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -4164,7 +4164,7 @@ S17-supply/sort.t aborted 7 test(s)
 S17-supply/squish.t aborted 15 test(s)
 S17-supply/stable.rakudo.jvm aborted 7 test(s)
 S17-supply/start.t aborted 8 test(s)
-S17-supply/syntax.rakudo.jvm aborted 68 test(s)
+S17-supply/syntax.rakudo.jvm aborted 70 test(s)
 S17-supply/tail.t aborted 8 test(s)
 S17-supply/throttle.t aborted 17 test(s)
 S17-supply/unique.t aborted 17 test(s)
@@ -4352,7 +4352,7 @@ S32-num/polar.t aborted 48 test(s)
 S32-num/polymod.t aborted 9 test(s)
 S32-num/power.rakudo.jvm aborted 97 test(s)
 S32-num/rand.rakudo.jvm aborted 113 test(s)
-S32-num/rat.rakudo.jvm aborted 837 test(s)
+S32-num/rat.rakudo.jvm aborted 838 test(s)
 S32-num/real-bridge.t aborted 200 test(s)
 S32-num/roots.t aborted 55 test(s)
 S32-num/rounders.rakudo.jvm aborted 134 test(s)
