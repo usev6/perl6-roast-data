@@ -427,7 +427,7 @@ S03-operators/precedence.rakudo.jvm................  71    0    4    2   77
      1 todo   : superscript exponent associativity RT #130414
 S03-operators/range-basic.t........................ 115    0    0    0  115
 S03-operators/range-int.t.......................... 507    0    0    0  507
-S03-operators/range.t.............................. 125    0    0    0  125
+S03-operators/range.t.............................. 129    0    0    0  129
 S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: expected Any but got Mu instead RT  \#124552
      1 skipped: ~< NYI RT  \#124531
@@ -1357,8 +1357,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1635,8 +1634,7 @@ S32-list/repeated.rakudo.jvm.......................  37    0    0    1   38
 S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
      1 todo   : RT #77914
 S32-list/roll.t....................................  51    0    0    0   51
-S32-list/rotor.rakudo.jvm..........................   9    0    0    3   12
-     3 skipped: UnwindException RT  \#124279
+S32-list/rotor.t...................................  12    0    0    0   12
 S32-list/seq.rakudo.jvm............................  34    0    1    0   35
      1 todo   : Cannot assign immutable
 S32-list/sort.t....................................  33    0    0    0   33
@@ -1671,7 +1669,7 @@ S32-num/power.rakudo.jvm...........................  88    0    3    6   97
      2 todo   : wrong results for "NaN" used with "**" RT #124800
 S32-num/rand.rakudo.jvm............................ 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect RT  \#124812
-S32-num/rat.rakudo.jvm............................. 837    0    0    1  838
+S32-num/rat.rakudo.jvm............................. 838    0    0    1  839
      1 skipped: RT  \#74648
 S32-num/real-bridge.t.............................. 200    0    0    0  200
 S32-num/roots.t....................................  55    0    0    0   55
@@ -1965,7 +1963,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9064,     0,   133,   401,  9598,  9601
-"S03",        6111,     0,    73,    95,  6279,  6297
+"S03",        6115,     0,    73,    95,  6283,  6301
 "S04",        1462,     0,    60,    33,  1555,  1587
 "S05",        5749,     0,    93,   210,  6052,  6240
 "S06",        2148,     0,    67,    96,  2311,  2354
@@ -1985,10 +1983,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1918,     0,     5,    85,  2008,  2008
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13546,     4,   217,   195, 13962, 12279
+"S32",       13550,     4,   217,   192, 13963, 12280
 "int",        1341,     1,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48802,     5,   857,  1666, 51330,131697
+"total",     48810,     5,   857,  1663, 51335,131702
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
