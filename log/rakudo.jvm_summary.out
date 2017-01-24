@@ -280,7 +280,7 @@ S02-types/nil.rakudo.jvm...........................  59    0    5    1   65
      1 skipped: triage
      5 todo   : triage
 S02-types/num.rakudo.jvm...........................  98    0    0    0   98
-S02-types/pair.rakudo.jvm.......................... 177    0    1    0  178
+S02-types/pair.rakudo.jvm.......................... 178    0    1    0  179
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range.t.................................. 187    0    0    0  187
@@ -1083,7 +1083,7 @@ S12-attributes/undeclared.t........................  11    0    0    0   11
 S12-class/anonymous.rakudo.jvm.....................  17    0    1    0   18
      1 todo   : Anonymous class stringification (?) RT #125045
 S12-class/attributes-required.t....................   5    0    0    0    5
-S12-class/attributes.t.............................  38    0    0    0   38
+S12-class/attributes.t.............................  39    0    0    0   39
 S12-class/augment-supersede.rakudo.jvm.............  12    0    0    2   14
      2 skipped: redeclaration of symbol Bar RT  \#125046
 S12-class/basic.t..................................  43    0    0    0   43
@@ -1357,7 +1357,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1965,7 +1966,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9064,     0,   133,   401,  9598,  9601
+"S02",        9065,     0,   133,   401,  9599,  9602
 "S03",        6116,     0,    73,    95,  6284,  6302
 "S04",        1462,     0,    60,    33,  1555,  1587
 "S05",        5749,     0,    93,   210,  6052,  6240
@@ -1974,7 +1975,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2762,     0,    25,    40,  2827,  2827
 "S10",         136,     0,     9,     1,   146,   203
 "S11",         175,     0,     7,    11,   193,   203
-"S12",        1664,     0,    33,   137,  1834,  1889
+"S12",        1665,     0,    33,   137,  1835,  1890
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 81556
@@ -1989,7 +1990,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       13588,     4,   217,   192, 14001, 12318
 "int",        1341,     1,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48857,     5,   857,  1663, 51382,131749
+"total",     48859,     5,   857,  1663, 51384,131751
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
