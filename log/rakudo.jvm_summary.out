@@ -21,13 +21,13 @@ S01-perl-5-integration/exception_handling.t........Can't open perl script "eval-
 S01-perl-5-integration/hash.t......................Can't open perl script "eval-client.pl": No such file or directory
    0    6    0    0    6
      6 tests aborted (missing ok/not ok)
-S01-perl-5-integration/import.rakudo.jvm...........Can't open perl script "eval-client.pl": No such file or directory
+S01-perl-5-integration/import.t....................Can't open perl script "eval-client.pl": No such file or directory
    0    3    0    0    3
      3 tests aborted (missing ok/not ok)
 S01-perl-5-integration/method.rakudo.jvm...........Can't open perl script "eval-client.pl": No such file or directory
    0   13    0    0   13
     13 tests aborted (missing ok/not ok)
-S01-perl-5-integration/return.rakudo.jvm...........Can't open perl script "eval-client.pl": No such file or directory
+S01-perl-5-integration/return.t....................Can't open perl script "eval-client.pl": No such file or directory
    0    2    0    0    2
      2 tests aborted (missing ok/not ok)
 S01-perl-5-integration/roundtrip.t.................Can't open perl script "eval-client.pl": No such file or directory
@@ -3459,9 +3459,9 @@ S01-perl-5-integration/context.rakudo.jvm aborted 10 test(s)
 S01-perl-5-integration/eval_lex.rakudo.jvm aborted 1 test(s)
 S01-perl-5-integration/exception_handling.t aborted 3 test(s)
 S01-perl-5-integration/hash.t aborted 6 test(s)
-S01-perl-5-integration/import.rakudo.jvm aborted 3 test(s)
+S01-perl-5-integration/import.t aborted 3 test(s)
 S01-perl-5-integration/method.rakudo.jvm aborted 13 test(s)
-S01-perl-5-integration/return.rakudo.jvm aborted 2 test(s)
+S01-perl-5-integration/return.t aborted 2 test(s)
 S01-perl-5-integration/roundtrip.t aborted 5 test(s)
 S01-perl-5-integration/strings.rakudo.jvm aborted 6 test(s)
 S01-perl-5-integration/subs.t aborted 2 test(s)
