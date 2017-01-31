@@ -1328,10 +1328,11 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  28    1    0    0   29
+S17-promise/basic.t................................  29    0    0    0   29
 S17-promise/in.t...................................   3    0    0    0    3
-S17-promise/nonblocking-await.rakudo.jvm...........   6    0    0    5   11
+S17-promise/nonblocking-await.rakudo.jvm...........   6    8    0    5   19
      5 skipped: hangs on JVM
+     8 tests aborted (missing ok/not ok)
 S17-promise/start.t................................  57    0    0    0   57
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
@@ -1387,10 +1388,9 @@ S17-supply/squish.t................................  15    0    0    0   15
 S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
      2 skipped: doesn't work or can't test RT  \#124822
 S17-supply/start.t.................................   8    0    0    0    8
-S17-supply/syntax-nonblocking-await.t..............   1    0    0    0    1
-S17-supply/syntax.rakudo.jvm.......................  64    4    2    0   70
+S17-supply/syntax-nonblocking-await.t..............   5    0    0    0    5
+S17-supply/syntax.rakudo.jvm.......................  68    0    2    0   70
      2 todo   : got: '42'
-     4 tests aborted (missing ok/not ok)
 S17-supply/tail.t..................................   8    0    0    0    8
 S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
@@ -1920,7 +1920,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1947,10 +1947,9 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  28    2    2    0   32
+integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
-     2 tests aborted (missing ok/not ok)
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1994,7 +1993,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 81556
 "S16",         695,     0,    70,   147,   912,   949
-"S17",         913,     5,    17,    35,   970,  1047
+"S17",         922,     8,    17,    35,   982,  1059
 "S19",          26,     0,     7,     1,    34,    34
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -2002,13 +2001,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
 "S32",       13673,     4,   216,   192, 14085, 12402
-"int",        1340,     2,    10,    15,  1367,  1361
+"int",        1341,     1,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48515,    11,   859,  1646, 51031,131398
+"total",     48525,    13,   859,  1646, 51043,131410
 ----------------
 Failure summary:
-S17-promise/basic.t 24 - promises execute asynchronously [try 0]
-S17-supply/syntax.rakudo.jvm aborted 4 test(s)
+S17-promise/nonblocking-await.rakudo.jvm aborted 8 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
-integration/error-reporting.rakudo.jvm aborted 2 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
