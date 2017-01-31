@@ -438,8 +438,8 @@ S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: ~> NYI RT  \#124531
 S03-operators/relational.rakudo.jvm................ 177    0    2    0  179
      2 todo   : RT #121987
-S03-operators/repeat.t.............................  16   44    0    0   60
-    43 tests aborted (missing ok/not ok)
+S03-operators/repeat.rakudo.jvm....................  58    0    0    2   60
+     2 skipped: OutOfMemoryError: Java heap space
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set.t................................ 292    0    0    0  292
 S03-operators/short-circuit.t......................  83    0    0    0   83
@@ -1294,9 +1294,10 @@ S16-io/eof.t.......................................   1    0    0    1    2
      1 skipped: Don't test reading /proc file if not in Linux
 S16-io/getc.t......................................   2    0    0    0    2
 S16-io/handles-between-threads.t...................   8    0    0    0    8
-S16-io/lines.rakudo.jvm............................ 300    1   48  120  469
+S16-io/lines.rakudo.jvm............................ 300    0   49  120  469
    120 skipped: test will be run below with fine grained fudging
     48 todo   : :nl-in and :chomp not working yet
+     1 todo   : readlinefh requires an object with the IOHandle REPR
 S16-io/newline.t...................................   6    0    0    0    6
 S16-io/note.t......................................   5    0    0    0    5
 S16-io/print.t.....................................  13    0    0    0   13
@@ -1327,10 +1328,10 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  29    0    0    0   29
+S17-promise/basic.t................................  28    1    0    0   29
 S17-promise/in.t...................................   3    0    0    0    3
-S17-promise/nonblocking-await.t....................   1   10    0    0   11
-    10 tests aborted (missing ok/not ok)
+S17-promise/nonblocking-await.rakudo.jvm...........   6    0    0    5   11
+     5 skipped: hangs on JVM
 S17-promise/start.t................................  57    0    0    0   57
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
@@ -1387,8 +1388,9 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
      2 skipped: doesn't work or can't test RT  \#124822
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax-nonblocking-await.t..............   1    0    0    0    1
-S17-supply/syntax.rakudo.jvm.......................  68    0    2    0   70
+S17-supply/syntax.rakudo.jvm.......................  64    4    2    0   70
      2 todo   : got: '42'
+     4 tests aborted (missing ok/not ok)
 S17-supply/tail.t..................................   8    0    0    0    8
 S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
@@ -1509,8 +1511,7 @@ S32-array/splice.rakudo.jvm........................ 380    1   12    0  393
     12 todo   : somehow the test causes different typecheck error
 S32-array/unshift.t................................  76    0    0    0   76
 S32-basics/pairup.t................................   5    0    0    0    5
-S32-basics/warn.rakudo.jvm.........................   6    0    1    0    7
-     1 todo PASSED: wrong line number (reference to gen/jvm/CORE.setting)
+S32-basics/warn.t..................................   7    0    0    0    7
 S32-basics/xxKEY.rakudo.jvm........................ 127    0    2    0  129
      2 todo   : binding to a key in an undefine doesn't work?
 S32-basics/xxPOS.rakudo.jvm........................  55    0    0    5   60
@@ -1919,7 +1920,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1946,9 +1947,10 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
+integration/error-reporting.rakudo.jvm.............  28    2    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
+     2 tests aborted (missing ok/not ok)
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1979,7 +1981,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9177,     0,   133,   401,  9711,  9714
-"S03",        6074,    44,    73,    95,  6286,  6304
+"S03",        6116,     0,    73,    97,  6286,  6304
 "S04",        1462,     0,    60,    33,  1555,  1587
 "S05",        5749,     0,    93,   210,  6052,  6240
 "S06",        2151,     0,    67,    96,  2314,  2357
@@ -1991,24 +1993,22 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 81556
-"S16",         695,     1,    69,   147,   912,   949
-"S17",         913,    10,    17,    30,   970,  1047
+"S16",         695,     0,    70,   147,   912,   949
+"S17",         913,     5,    17,    35,   970,  1047
 "S19",          26,     0,     7,     1,    34,    34
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13672,     4,   217,   192, 14085, 12402
-"int",        1341,     1,    10,    15,  1367,  1361
+"S32",       13673,     4,   216,   192, 14085, 12402
+"int",        1340,     2,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48473,    60,   859,  1639, 51031,131398
+"total",     48515,    11,   859,  1646, 51031,131398
 ----------------
 Failure summary:
-S03-operators/repeat.t 17 - repeat count equal to the NQP limit works
-S03-operators/repeat.t aborted 43 test(s)
-S16-io/lines.rakudo.jvm 468 - .lines does not crash when attempting to .pull-one on closed handle
-S17-promise/nonblocking-await.t aborted 10 test(s)
+S17-promise/basic.t 24 - promises execute asynchronously [try 0]
+S17-supply/syntax.rakudo.jvm aborted 4 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+integration/error-reporting.rakudo.jvm aborted 2 test(s)
