@@ -731,7 +731,7 @@ S05-metasyntax/interpolating-closure.rakudo.jvm....   6    0    1    0    7
      1 todo   : dunno RT #124527
 S05-metasyntax/litvar.rakudo.jvm...................  30    0    0    3   33
      3 skipped: :ignoremark needs NFG RT  \#124500
-S05-metasyntax/longest-alternative.rakudo.jvm......  50    0    1    5   56
+S05-metasyntax/longest-alternative.rakudo.jvm......  52    0    1    5   58
      1 skipped: :: RT  \#124526
      4 skipped: :ignoremark needs NFG RT  \#124500
      1 todo   : negative lookahead does not LTM properly, RT #122951
@@ -1389,8 +1389,9 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
      2 skipped: doesn't work or can't test RT  \#124822
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/syntax-nonblocking-await.t..............   5    0    0    0    5
-S17-supply/syntax.rakudo.jvm.......................  68    0    2    0   70
+S17-supply/syntax.rakudo.jvm.......................  63    5    2    0   70
      2 todo   : got: '42'
+     5 tests aborted (missing ok/not ok)
 S17-supply/tail.t..................................   8    0    0    0    8
 S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
@@ -1554,8 +1555,8 @@ S32-io/IO-Socket-Async.rakudo.jvm..................   9    0    0    4   13
      2 skipped: NullPointerException
      1 skipped: hangs (sometimes) RT  \#127948
      1 skipped: hangs on JVM
-S32-io/IO-Socket-INET.t............................   0    0    0   50   50
-    50 skipped: Operating system not yet supported
+S32-io/IO-Socket-INET.t............................   0    0    0   51   51
+    51 skipped: Operating system not yet supported
 S32-io/chdir.rakudo.jvm............................   8    0    0    2   10
      2 skipped: spec non-conformance due to missing sink context
 S32-io/copy.t......................................  41    0    0    0   41
@@ -1982,7 +1983,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9177,     0,   133,   401,  9711,  9714
 "S03",        6116,     0,    73,    97,  6286,  6304
 "S04",        1462,     0,    60,    33,  1555,  1587
-"S05",        5749,     0,    93,   210,  6052,  6240
+"S05",        5751,     0,    93,   210,  6054,  6242
 "S06",        2151,     0,    67,    96,  2314,  2357
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2762,     0,    25,    40,  2827,  2827
@@ -1993,20 +1994,21 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 81556
 "S16",         695,     0,    70,   147,   912,   949
-"S17",         922,     8,    17,    35,   982,  1059
+"S17",         917,    13,    17,    35,   982,  1059
 "S19",          26,     0,     7,     1,    34,    34
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13673,     4,   216,   192, 14085, 12402
+"S32",       13673,     4,   216,   193, 14086, 12403
 "int",        1341,     1,    10,    15,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48525,    13,   859,  1646, 51043,131410
+"total",     48522,    18,   859,  1647, 51046,131413
 ----------------
 Failure summary:
 S17-promise/nonblocking-await.rakudo.jvm aborted 8 test(s)
+S17-supply/syntax.rakudo.jvm aborted 5 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
