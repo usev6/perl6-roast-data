@@ -357,8 +357,7 @@ S03-operators/also.rakudo.jvm......................   4    0    4    0    8
      1 todo   : nom regression RT #124545
      1 todo   : nom regression RT #124546
      1 todo   : nom regression RT #124547
-S03-operators/andthen.rakudo.jvm...................   8    0    1    0    9
-     1 todo   : RT 127822
+S03-operators/andthen.t............................   9    0    0    0    9
 S03-operators/arith.t.............................. 158    0    0    0  158
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
 S03-operators/assign.rakudo.jvm.................... 266    0   16   12  294
@@ -797,7 +796,7 @@ S05-modifier/samemark.rakudo.jvm...................   0    0    0    8    8
 S05-modifier/sigspace.t............................  18    0    0    0   18
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  13    0    0    0   13
-S05-substitution/subst.rakudo.jvm.................. 166    0    1   18  185
+S05-substitution/subst.rakudo.jvm.................. 167    0    1   18  186
      6 skipped: "ordbaseat NYI" RT  \#125753
      1 skipped: RT  \#114388 -- No such method 'subst-mutate' for invocant of type 'Any'
      1 skipped: at least one of the sub-tests leads to an UnwindException
@@ -1679,8 +1678,8 @@ S32-num/narrow.t...................................  17    0    0    0   17
 S32-num/negative-zero.t............................  14    0    0    0   14
 S32-num/pi.t.......................................   8    0    0    0    8
 S32-num/polar.t....................................  48    0    0    0   48
-S32-num/polymod.t..................................   3    6    0    0    9
-     6 tests aborted (missing ok/not ok)
+S32-num/polymod.rakudo.jvm.........................   8    0    0    1    9
+     1 skipped: UnwindException, RT  \#130687
 S32-num/power.rakudo.jvm...........................  88    0    3    6   97
      6 skipped: parsing issue on JVM: Missing required term after infix
      1 todo   : i RT #124810
@@ -1905,8 +1904,8 @@ integration/advent2011-day15.t.....................   9    0    0    0    9
 integration/advent2011-day16.t.....................  12    0    0    0   12
 integration/advent2011-day20.t.....................  16    0    0    0   16
 integration/advent2011-day22.t.....................   2    0    0    0    2
-integration/advent2011-day23.t.....................  51    4    0    0   55
-     4 tests aborted (missing ok/not ok)
+integration/advent2011-day23.rakudo.jvm............  53    0    0    2   55
+     2 skipped: UnwindException, RT  \#130687
 integration/advent2011-day24.t.....................   8    0    0    0    8
 integration/advent2012-day02.t.....................   4    0    0    0    4
 integration/advent2012-day03.t.....................   2    0    0    0    2
@@ -1982,9 +1981,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9177,     0,   133,   401,  9711,  9714
-"S03",        6116,     0,    73,    97,  6286,  6304
+"S03",        6117,     0,    72,    97,  6286,  6304
 "S04",        1462,     0,    60,    33,  1555,  1587
-"S05",        5751,     0,    93,   210,  6054,  6242
+"S05",        5752,     0,    93,   210,  6055,  6243
 "S06",        2151,     0,    67,    96,  2314,  2357
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2762,     0,    25,    40,  2827,  2827
@@ -2002,14 +2001,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13667,    10,   216,   193, 14086, 12403
-"int",        1337,     5,    10,    15,  1367,  1361
+"S32",       13672,     4,   216,   194, 14086, 12403
+"int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48516,    15,   859,  1656, 51046,131413
+"total",     48525,     5,   858,  1659, 51047,131414
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
-S32-num/polymod.t aborted 6 test(s)
-integration/advent2011-day23.t aborted 4 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
