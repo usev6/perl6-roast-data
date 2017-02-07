@@ -1365,8 +1365,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1922,7 +1921,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -2003,11 +2002,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
 "S32",       13674,     4,   216,   194, 14088, 12405
-"int",        1339,     1,    10,    17,  1367,  1361
+"int",        1340,     0,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48532,     5,   858,  1659, 51054,131423
+"total",     48533,     4,   858,  1659, 51054,131423
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
