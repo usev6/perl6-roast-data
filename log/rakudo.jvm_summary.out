@@ -464,7 +464,8 @@ S03-smartmatch/any-callable.t......................   6    0    0    0    6
 S03-smartmatch/any-complex.t.......................  12    0    0    0   12
 S03-smartmatch/any-hash-pair.t.....................   7    0    0    0    7
 S03-smartmatch/any-method.t........................   4    0    0    0    4
-S03-smartmatch/any-num.t...........................  19    0    0    0   19
+S03-smartmatch/any-num.t...........................  19    1    0    0   20
+     1 tests aborted (missing ok/not ok)
 S03-smartmatch/any-pair.t..........................  10    0    0    0   10
 S03-smartmatch/any-str.t...........................   5    0    0    0    5
 S03-smartmatch/any-sub.t...........................   8    0    0    0    8
@@ -1365,8 +1366,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1550,10 +1550,11 @@ S32-hash/slice.rakudo.jvm..........................  21    0   10    0   31
      6 todo   : binding on hash elements unimplemented
      2 todo   : binding on hash elements unimplemented RT #124779
      2 todo   : binding on hash elements unimplemented RT #124780
-S32-io/IO-Socket-Async.rakudo.jvm..................   9    0    0    4   13
+S32-io/IO-Socket-Async.rakudo.jvm..................  11    1    0    4   16
      2 skipped: NullPointerException
      1 skipped: hangs (sometimes) RT  \#127948
      1 skipped: hangs on JVM
+     1 tests aborted (missing ok/not ok)
 S32-io/IO-Socket-INET.t............................   0    0    0   51   51
     51 skipped: Operating system not yet supported
 S32-io/chdir.rakudo.jvm............................   8    0    0    2   10
@@ -1661,7 +1662,7 @@ S32-list/tail.t....................................  24    0    0    0   24
 S32-list/unique.rakudo.jvm.........................  37    0    0    1   38
      1 skipped: This Seq has already been iterated, RT  \#128720
 S32-num/abs.t......................................  49    0    0    0   49
-S32-num/base.rakudo.jvm............................  46    0    1    0   47
+S32-num/base.rakudo.jvm............................  59    0    1    0   60
      1 todo   : code does not die, RT#125819
 S32-num/complex.t.................................. 553    0    0    0  553
 S32-num/cool-num.rakudo.jvm........................  39    0    0    4   43
@@ -1743,7 +1744,7 @@ S32-str/numeric.rakudo.jvm......................... 184    0    5    0  189
      5 todo   : Unsure of what val() should accept
 S32-str/ords.t.....................................   8    0    0    0    8
 S32-str/pack.t.....................................  14    0    0    0   14
-S32-str/parse-base.rakudo.jvm...................... 106    0    2    2  110
+S32-str/parse-base.rakudo.jvm...................... 107    0    2    2  111
      2 skipped: Cannot resolve caller is-approx(Failure, Rat, Str)
      2 todo   : Invalid base-10 character
 S32-str/pos.t......................................   2    0    0    0    2
@@ -1983,7 +1984,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9180,     0,   133,   401,  9714,  9717
-"S03",        6124,     0,    72,    97,  6293,  6311
+"S03",        6124,     1,    72,    97,  6294,  6312
 "S04",        1462,     0,    60,    33,  1555,  1587
 "S05",        5753,     0,    93,   210,  6056,  6244
 "S06",        2151,     0,    67,    96,  2314,  2357
@@ -2003,13 +2004,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     8
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13680,     4,   216,   194, 14094, 12411
+"S32",       13696,     5,   216,   194, 14111, 12428
 "int",        1337,     3,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48543,     7,   858,  1659, 51067,131436
+"total",     48559,     9,   858,  1659, 51085,131454
 ----------------
 Failure summary:
+S03-smartmatch/any-num.t aborted 1 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
+S32-io/IO-Socket-Async.rakudo.jvm aborted 1 test(s)
 S32-io/seek.t aborted 3 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
 integration/error-reporting.rakudo.jvm aborted 2 test(s)
