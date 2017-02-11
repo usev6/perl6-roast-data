@@ -246,8 +246,8 @@ S02-types/isDEPRECATED.rakudo.jvm..................  13    0    8    0   21
 S02-types/keyhash.rakudo.jvm.......................   0    0    0   59   59
     59 skipped: 'is ObjectType' NYI RT  \#124490
 S02-types/lazy-lists.t.............................  23    0    0    0   23
-S02-types/list.rakudo.jvm..........................  68    0    0    1   69
-     1 skipped: RT  \#130160 works when run standalone, maybe wrong multi selected
+S02-types/list.rakudo.jvm..........................   7   64    0    0   71
+    64 tests aborted (missing ok/not ok)
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding RT  \#124494
 S02-types/mix-iterator.t...........................  14    0    0    0   14
@@ -1294,10 +1294,9 @@ S16-io/eof.t.......................................   1    0    0    1    2
      1 skipped: Don't test reading /proc file if not in Linux
 S16-io/getc.t......................................   2    0    0    0    2
 S16-io/handles-between-threads.t...................   8    0    0    0    8
-S16-io/lines.rakudo.jvm............................ 300    0   49  120  469
+S16-io/lines.rakudo.jvm............................ 300    0   48  120  468
    120 skipped: test will be run below with fine grained fudging
     48 todo   : :nl-in and :chomp not working yet
-     1 todo   : readlinefh requires an object with the IOHandle REPR
 S16-io/newline.t...................................   6    0    0    0    6
 S16-io/note.t......................................   5    0    0    0    5
 S16-io/print.t.....................................  13    0    0    0   13
@@ -1366,7 +1365,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1651,7 +1651,7 @@ S32-list/repeated.rakudo.jvm.......................  37    0    0    1   38
 S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
      1 todo   : RT #77914
 S32-list/roll.t....................................  51    0    0    0   51
-S32-list/rotor.t...................................  12    0    0    0   12
+S32-list/rotor.t...................................  13    0    0    0   13
 S32-list/seq.rakudo.jvm............................  34    0    1    0   35
      1 todo   : Cannot assign immutable
 S32-list/skip.t....................................  24    0    0    0   24
@@ -1662,7 +1662,7 @@ S32-list/tail.t....................................  24    0    0    0   24
 S32-list/unique.rakudo.jvm.........................  37    0    0    1   38
      1 skipped: This Seq has already been iterated, RT  \#128720
 S32-num/abs.t......................................  49    0    0    0   49
-S32-num/base.rakudo.jvm............................  59    0    1    0   60
+S32-num/base.rakudo.jvm............................  60    0    1    0   61
      1 todo   : code does not die, RT#125819
 S32-num/complex.t.................................. 553    0    0    0  553
 S32-num/cool-num.rakudo.jvm........................  39    0    0    4   43
@@ -1744,7 +1744,7 @@ S32-str/numeric.rakudo.jvm......................... 184    0    5    0  189
      5 todo   : Unsure of what val() should accept
 S32-str/ords.t.....................................   8    0    0    0    8
 S32-str/pack.t.....................................  14    0    0    0   14
-S32-str/parse-base.rakudo.jvm...................... 107    0    2    2  111
+S32-str/parse-base.rakudo.jvm...................... 106    0    2    2  110
      2 skipped: Cannot resolve caller is-approx(Failure, Rat, Str)
      2 todo   : Invalid base-10 character
 S32-str/pos.t......................................   2    0    0    0    2
@@ -1950,10 +1950,9 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  28    2    2    0   32
+integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
-     2 tests aborted (missing ok/not ok)
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1983,7 +1982,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9180,     0,   133,   401,  9714,  9717
+"S02",        9119,    64,   133,   400,  9716,  9719
 "S03",        6124,     1,    72,    97,  6294,  6312
 "S04",        1462,     0,    60,    33,  1555,  1587
 "S05",        5753,     0,    93,   210,  6056,  6244
@@ -1996,23 +1995,23 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 81558
-"S16",         695,     0,    70,   147,   912,   949
+"S16",         695,     0,    69,   147,   911,   948
 "S17",         921,     0,    17,    44,   982,  1059
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1372,     0,     7,    61,  1440,  1440
-"S28",           2,     0,     0,     0,     2,     8
+"S28",           2,     0,     0,     0,     2,     6
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13696,     5,   216,   194, 14111, 12428
-"int",        1337,     3,    10,    17,  1367,  1361
+"S32",       13697,     5,   216,   194, 14112, 12429
+"int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48559,     9,   858,  1659, 51085,131454
+"total",     48501,    71,   857,  1658, 51087,131454
 ----------------
 Failure summary:
+S02-types/list.rakudo.jvm aborted 64 test(s)
 S03-smartmatch/any-num.t aborted 1 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/IO-Socket-Async.rakudo.jvm aborted 1 test(s)
 S32-io/seek.t aborted 3 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/error-reporting.rakudo.jvm aborted 2 test(s)
