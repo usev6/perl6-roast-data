@@ -1669,7 +1669,7 @@ S32-num/cool-num.rakudo.jvm........................  39    0    0    4   43
      4 skipped: angle conversion RT  \#124816
 S32-num/exp.t......................................  72    0    0    0   72
 S32-num/expmod.t................................... 117    0    0    0  117
-S32-num/fatrat.rakudo.jvm.......................... 283    0    1    2  286
+S32-num/fatrat.rakudo.jvm.......................... 284    0    1    2  287
      2 skipped: FatRat arith + type objects RT  \#124814
      1 todo   : unknown RT #124815
 S32-num/int.t...................................... 162    0    0    0  162
@@ -1688,7 +1688,7 @@ S32-num/power.rakudo.jvm...........................  88    0    3    6   97
      2 todo   : wrong results for "NaN" used with "**" RT #124800
 S32-num/rand.rakudo.jvm............................ 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect RT  \#124812
-S32-num/rat.rakudo.jvm............................. 838    0    0    1  839
+S32-num/rat.rakudo.jvm............................. 839    0    0    1  840
      1 skipped: RT  \#74648
 S32-num/real-bridge.t.............................. 200    0    0    0  200
 S32-num/roots.t....................................  55    0    0    0   55
@@ -2003,10 +2003,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13697,     5,   216,   194, 14112, 12429
+"S32",       13699,     5,   216,   194, 14114, 12431
 "int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48501,    71,   857,  1658, 51087,131454
+"total",     48503,    71,   857,  1658, 51089,131456
 ----------------
 Failure summary:
 S02-types/list.rakudo.jvm aborted 64 test(s)
