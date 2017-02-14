@@ -127,7 +127,8 @@ S02-magicals/env.rakudo.jvm........................  17    0    0    1   18
 S02-magicals/file_line.t...........................   2    0    0    0    2
 S02-magicals/pid.t.................................   2    0    0    0    2
 S02-magicals/progname.t............................   4    0    0    0    4
-S02-magicals/sub.t.................................  10    0    0    0   10
+S02-magicals/sub.rakudo.jvm........................  10    0    1    0   11
+     1 todo   : RT #130761
 S02-magicals/subname.t.............................   4    0    0    0    4
 S02-names-vars/contextual.t........................  26    0    0    0   26
 S02-names-vars/fmt.t...............................  21    0    0    0   21
@@ -246,8 +247,9 @@ S02-types/isDEPRECATED.rakudo.jvm..................  13    0    8    0   21
 S02-types/keyhash.rakudo.jvm.......................   0    0    0   59   59
     59 skipped: 'is ObjectType' NYI RT  \#124490
 S02-types/lazy-lists.t.............................  23    0    0    0   23
-S02-types/list.rakudo.jvm..........................   7   64    0    0   71
-    64 tests aborted (missing ok/not ok)
+S02-types/list.rakudo.jvm..........................  69    0    0    2   71
+     1 skipped: RT  \#130160 works when run standalone, maybe wrong multi selected
+     1 skipped: dies with t/harness5
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding RT  \#124494
 S02-types/mix-iterator.t...........................  14    0    0    0   14
@@ -464,8 +466,7 @@ S03-smartmatch/any-callable.t......................   6    0    0    0    6
 S03-smartmatch/any-complex.t.......................  12    0    0    0   12
 S03-smartmatch/any-hash-pair.t.....................   7    0    0    0    7
 S03-smartmatch/any-method.t........................   4    0    0    0    4
-S03-smartmatch/any-num.t...........................  19    1    0    0   20
-     1 tests aborted (missing ok/not ok)
+S03-smartmatch/any-num.rakudo.jvm..................  20    0    0    0   20
 S03-smartmatch/any-pair.t..........................  10    0    0    0   10
 S03-smartmatch/any-str.t...........................   5    0    0    0    5
 S03-smartmatch/any-sub.t...........................   8    0    0    0    8
@@ -609,9 +610,9 @@ S04-statements/until.t.............................   4    0    0    0    4
 S04-statements/when.t..............................  25    0    0    0   25
 S04-statements/while.t.............................  32    0    0    0   32
 S04-statements/with.rakudo.jvm.....................  76    0    4    1   81
-     1 skipped: Failure from oops is thrown
-     2 todo   : $foo is not "$()", but Failure
-     2 todo   : $foo is not a Failure, but "$()"
+     1 skipped: Failure from oops is thrown; RT  \#130775
+     2 todo   : $foo is not "$()", but Failure; RT #130775
+     2 todo   : $foo is not a Failure, but "$()"; RT #130775
                                                    pass fail todo skip plan
 S05-capture/alias.rakudo.jvm.......................  27    0    3    2   32
      2 skipped: Package variable capture RT  \#125122
@@ -1365,7 +1366,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1668,7 +1670,7 @@ S32-num/cool-num.rakudo.jvm........................  39    0    0    4   43
      4 skipped: angle conversion RT  \#124816
 S32-num/exp.t......................................  72    0    0    0   72
 S32-num/expmod.t................................... 117    0    0    0  117
-S32-num/fatrat.rakudo.jvm.......................... 284    0    1    2  287
+S32-num/fatrat.rakudo.jvm.......................... 285    0    1    2  288
      2 skipped: FatRat arith + type objects RT  \#124814
      1 todo   : unknown RT #124815
 S32-num/int.t...................................... 162    0    0    0  162
@@ -1687,7 +1689,7 @@ S32-num/power.rakudo.jvm...........................  88    0    3    6   97
      2 todo   : wrong results for "NaN" used with "**" RT #124800
 S32-num/rand.rakudo.jvm............................ 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect RT  \#124812
-S32-num/rat.rakudo.jvm............................. 839    0    0    1  840
+S32-num/rat.rakudo.jvm............................. 840    0    0    1  841
      1 skipped: RT  \#74648
 S32-num/real-bridge.t.............................. 200    0    0    0  200
 S32-num/roots.t....................................  55    0    0    0   55
@@ -1981,8 +1983,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9119,    64,   133,   400,  9716,  9719
-"S03",        6124,     1,    72,    97,  6294,  6312
+"S02",        9181,     0,   134,   402,  9717,  9720
+"S03",        6125,     0,    72,    97,  6294,  6312
 "S04",        1462,     0,    60,    33,  1555,  1587
 "S05",        5753,     0,    93,   210,  6056,  6244
 "S06",        2151,     0,    67,    96,  2314,  2357
@@ -2002,14 +2004,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13699,     5,   216,   194, 14114, 12431
+"S32",       13701,     5,   216,   194, 14116, 12433
 "int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48503,    71,   857,  1658, 51089,131456
+"total",     48568,     6,   858,  1660, 51092,131459
 ----------------
 Failure summary:
-S02-types/list.rakudo.jvm aborted 64 test(s)
-S03-smartmatch/any-num.t aborted 1 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/IO-Socket-Async.rakudo.jvm aborted 1 test(s)
 S32-io/seek.t aborted 3 test(s)
