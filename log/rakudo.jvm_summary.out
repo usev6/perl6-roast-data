@@ -851,7 +851,7 @@ S06-multi/by-trait.rakudo.jvm......................   8    0    4    1   13
 S06-multi/lexical-multis.rakudo.jvm................  14    0    1    0   15
      1 todo   : lexical scope as tie breaker
 S06-multi/positional-vs-named.t....................  31    0    0    0   31
-S06-multi/proto.rakudo.jvm.........................  22    0    4    0   26
+S06-multi/proto.rakudo.jvm.........................  23    0    4    0   27
      1 todo   : operator protos
      3 todo   : wrong multi candidate called
 S06-multi/redispatch.t.............................  14    0    0    0   14
@@ -1328,7 +1328,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  29    0    0    0   29
+S17-promise/basic.t................................  28    1    0    0   29
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/nonblocking-await.rakudo.jvm...........   5    0    0   14   19
     13 skipped: hangs on JVM
@@ -1366,8 +1366,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1551,11 +1550,11 @@ S32-hash/slice.rakudo.jvm..........................  21    0   10    0   31
      6 todo   : binding on hash elements unimplemented
      2 todo   : binding on hash elements unimplemented RT #124779
      2 todo   : binding on hash elements unimplemented RT #124780
-S32-io/IO-Socket-Async.rakudo.jvm..................  11    1    0    4   16
+S32-io/IO-Socket-Async.rakudo.jvm..................   9    0    0    7   16
      2 skipped: NullPointerException
+     3 skipped: dies/hangs on JVM, sometimes
      1 skipped: hangs (sometimes) RT  \#127948
      1 skipped: hangs on JVM
-     1 tests aborted (missing ok/not ok)
 S32-io/IO-Socket-INET.t............................   0    0    0   51   51
     51 skipped: Operating system not yet supported
 S32-io/chdir.rakudo.jvm............................   8    0    0    2   10
@@ -1987,7 +1986,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        6125,     0,    72,    97,  6294,  6312
 "S04",        1462,     0,    60,    33,  1555,  1587
 "S05",        5753,     0,    93,   210,  6056,  6244
-"S06",        2151,     0,    67,    96,  2314,  2357
+"S06",        2152,     0,    67,    96,  2315,  2358
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2762,     0,    25,    40,  2827,  2827
 "S10",         136,     0,     9,     1,   146,   203
@@ -1997,20 +1996,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         394,     0,     5,     5,   404,   417
 "S15",          45,     0,     7,    68,   120, 81558
 "S16",         695,     0,    69,   147,   911,   948
-"S17",         921,     0,    17,    44,   982,  1059
+"S17",         920,     1,    17,    44,   982,  1059
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13701,     5,   216,   194, 14116, 12433
+"S32",       13699,     4,   216,   197, 14116, 12433
 "int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48568,     6,   858,  1660, 51092,131459
+"total",     48566,     6,   858,  1663, 51093,131460
 ----------------
 Failure summary:
+S17-promise/basic.t 26 - promises execute asynchronously [try 2]
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
-S32-io/IO-Socket-Async.rakudo.jvm aborted 1 test(s)
 S32-io/seek.t aborted 3 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
