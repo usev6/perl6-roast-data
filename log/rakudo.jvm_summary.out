@@ -1951,9 +1951,10 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
+integration/error-reporting.rakudo.jvm.............  28    2    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
+     2 tests aborted (missing ok/not ok)
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -2005,11 +2006,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         408,     0,    13,     4,   425,   425
 "S32",       13705,     4,   216,   197, 14122, 12439
-"int",        1339,     1,    10,    17,  1367,  1361
+"int",        1337,     3,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48575,     5,   858,  1663, 51101,131468
+"total",     48573,     7,   858,  1663, 51101,131468
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+integration/error-reporting.rakudo.jvm aborted 2 test(s)
