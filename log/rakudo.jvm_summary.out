@@ -601,7 +601,7 @@ S04-statements/quietly.t...........................   4    0    0    0    4
 S04-statements/redo.rakudo.jvm.....................  11    0    0    1   12
      1 skipped: control exception without handler, RT  \#126490
 S04-statements/repeat.t............................  21    0    0    0   21
-S04-statements/return.t............................  20    0    0    0   20
+S04-statements/return.t............................  22    0    0    0   22
 S04-statements/sink.t..............................   4    0    0    0    4
 S04-statements/terminator.t........................  20    0    0    0   20
 S04-statements/try.t...............................  40    0    0    0   40
@@ -709,7 +709,7 @@ S05-metachars/closure.rakudo.jvm...................   6    0    1    5   12
 S05-metachars/line-anchors.rakudo.jvm..............  23    0    1    0   24
      1 todo   : NFG
 S05-metachars/newline.t............................  15    0    0    0   15
-S05-metachars/tilde.t..............................  29    0    0    0   29
+S05-metachars/tilde.t..............................  30    0    0    0   30
 S05-metasyntax/angle-brackets.rakudo.jvm...........  72    0    2   20   94
      1 skipped: <&foo()> NYI RT  \#124523
     11 skipped: <*literal> RT  \#124525
@@ -1716,7 +1716,7 @@ S32-str/capitalize.rakudo.jvm......................  15    0    2    0   17
 S32-str/chomp.rakudo.jvm...........................  32    0    7    0   39
      7 todo   : \r\n not yet handled as grapheme
 S32-str/chop.t.....................................  36    0    0    0   36
-S32-str/comb.rakudo.jvm............................  69    0    2    8   79
+S32-str/comb.rakudo.jvm............................  70    0    2    8   80
      1 skipped: cannot call match, no signature matches RT  \#124738
      1 skipped: ordbaseat NYI
      6 skipped: weird error, looks like wrong multi is used, RT  \#128580
@@ -1739,7 +1739,7 @@ S32-str/indices.t..................................  24    0    0    0   24
 S32-str/lc.t.......................................  18    0    0    0   18
 S32-str/length.rakudo.jvm..........................  28    0    1    0   29
      1 todo   : .codes weirdness on JVM, possibly NYI? RT #124742
-S32-str/lines.rakudo.jvm...........................  39    0   10    0   49
+S32-str/lines.rakudo.jvm...........................  40    0   10    0   50
     10 todo   : \r\n not yet handled as grapheme
 S32-str/numeric.rakudo.jvm......................... 184    0    5    0  189
      5 todo   : Unsure of what val() should accept
@@ -1815,7 +1815,7 @@ S32-str/trim.t.....................................  36    0    0    0   36
 S32-str/uc.rakudo.jvm..............................  18    0    1    0   19
      1 todo   : got 3
 S32-str/unpack.t...................................  24    0    0    0   24
-S32-str/words.rakudo.jvm...........................  14    0    2    0   16
+S32-str/words.rakudo.jvm...........................  15    0    2    0   17
      2 todo   : NFG on JVM RT #124739
 S32-temporal/Date.t................................ 114    0    0    0  114
 S32-temporal/DateTime-Instant-Duration.t...........  61    0    0    0   61
@@ -1951,9 +1951,10 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
+integration/error-reporting.rakudo.jvm.............  28    2    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
+     2 tests aborted (missing ok/not ok)
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1985,8 +1986,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9181,     0,   134,   402,  9717,  9720
 "S03",        6125,     0,    72,    97,  6294,  6312
-"S04",        1462,     0,    60,    33,  1555,  1587
-"S05",        5753,     0,    93,   210,  6056,  6244
+"S04",        1464,     0,    60,    33,  1557,  1589
+"S05",        5754,     0,    93,   210,  6057,  6245
 "S06",        2152,     0,    67,    96,  2315,  2358
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2762,     0,    25,    40,  2827,  2827
@@ -1995,7 +1996,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S12",        1665,     0,    33,   137,  1835,  1890
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         394,     0,     5,     5,   404,   417
-"S15",          45,     0,     7,    68,   120, 81558
+"S15",          45,     0,     7,    68,   120, 81559
 "S16",         695,     0,    69,   147,   911,   948
 "S17",         923,     0,    17,    44,   984,  1061
 "S19",          27,     0,     7,     1,    35,    35
@@ -2004,12 +2005,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13705,     4,   216,   197, 14122, 12439
-"int",        1339,     1,    10,    17,  1367,  1361
+"S32",       13708,     4,   216,   197, 14125, 12442
+"int",        1337,     3,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48575,     5,   858,  1663, 51101,131468
+"total",     48579,     7,   858,  1663, 51107,131475
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+integration/error-reporting.rakudo.jvm aborted 2 test(s)
