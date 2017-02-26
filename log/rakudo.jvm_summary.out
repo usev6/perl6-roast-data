@@ -199,7 +199,7 @@ S02-types/bag-iterator.t...........................  14    0    0    0   14
 S02-types/bag.rakudo.jvm........................... 205    0    2    0  207
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT #124454
-S02-types/baggy.t..................................   5    0    0    0    5
+S02-types/baggy.t..................................   6    0    0    0    6
 S02-types/baghash.rakudo.jvm....................... 242    0    2   21  265
     21 skipped: 'is TypeObject' NYI RT  \#124490
      2 todo   : in flux
@@ -1221,7 +1221,7 @@ S14-roles/conflicts.t..............................  11    0    0    0   11
 S14-roles/crony.t..................................   4    0    0    0    4
 S14-roles/instantiation.t..........................  19    0    0    0   19
 S14-roles/lexical.t................................   9    0    0    0    9
-S14-roles/mixin.t..................................  51    0    0    0   51
+S14-roles/mixin.t..................................  53    0    0    0   53
 S14-roles/namespaced.t.............................  11    0    0    0   11
 S14-roles/parameter-subtyping.t....................  22    0    0    0   22
 S14-roles/parameterized-basic.t....................  36    0    0    0   36
@@ -1367,7 +1367,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1690,8 +1691,9 @@ S32-num/power.rakudo.jvm...........................  88    0    3    6   97
      2 todo   : wrong results for "NaN" used with "**" RT #124800
 S32-num/rand.rakudo.jvm............................ 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect RT  \#124812
-S32-num/rat.rakudo.jvm............................. 840    0    0    1  841
+S32-num/rat.rakudo.jvm............................. 840    1    0    1  842
      1 skipped: RT  \#74648
+     1 tests aborted (missing ok/not ok)
 S32-num/real-bridge.t.............................. 200    0    0    0  200
 S32-num/roots.t....................................  55    0    0    0   55
 S32-num/rounders.rakudo.jvm........................ 133    0    1    0  134
@@ -1925,7 +1927,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1952,9 +1954,10 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
+integration/error-reporting.rakudo.jvm.............  28    2    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
+     2 tests aborted (missing ok/not ok)
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1984,7 +1987,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9181,     0,   134,   402,  9717,  9720
+"S02",        9182,     0,   134,   402,  9718,  9721
 "S03",        6133,     0,    72,    97,  6302,  6320
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5754,     0,    93,   210,  6057,  6245
@@ -1995,7 +1998,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S11",         175,     0,     7,    11,   193,   203
 "S12",        1665,     0,    33,   137,  1835,  1890
 "S13",          62,     0,     0,     0,    62,    72
-"S14",         394,     0,     5,     5,   404,   417
+"S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
 "S16",         695,     0,    69,   147,   911,   948
 "S17",         923,     0,    17,    44,   984,  1061
@@ -2005,11 +2008,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13709,     4,   216,   197, 14126, 12443
-"int",        1340,     0,    10,    17,  1367,  1361
+"S32",       13709,     5,   216,   197, 14127, 12444
+"int",        1337,     3,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48591,     4,   858,  1663, 51116,131484
+"total",     48591,     8,   858,  1663, 51120,131488
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
+S32-num/rat.rakudo.jvm aborted 1 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+integration/error-reporting.rakudo.jvm aborted 2 test(s)
