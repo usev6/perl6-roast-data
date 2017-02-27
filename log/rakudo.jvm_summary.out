@@ -180,7 +180,7 @@ S02-names/symbolic-deref.rakudo.jvm................  32    0    2    2   36
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-one-pass-parsing/misc.t........................   1    0    0    0    1
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.rakudo.jvm.........................1562    0    0   44 1606
+S02-types/WHICH.rakudo.jvm.........................1566    0    0   44 1610
     44 skipped: NYI on jvm - RT  \#126524 / RT  \#124500
 S02-types/anon_block.rakudo.jvm....................  39    0    1    2   42
      2 skipped: tests don't work if previous test fails
@@ -1367,8 +1367,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1587,7 +1586,7 @@ S32-io/io-spec-win.t............................... 206    0    0    3  209
 S32-io/move.t......................................  29    0    0    0   29
 S32-io/note.t......................................   6    0    0    0    6
 S32-io/open.t......................................  27    0    0    0   27
-S32-io/other.t.....................................  60    0    0    0   60
+S32-io/other.t.....................................  61    0    0    0   61
 S32-io/pipe.t......................................  14    0    0    0   14
 S32-io/rename.t....................................  29    0    0    0   29
 S32-io/seek.t......................................   0    3    0    0    3
@@ -1954,10 +1953,9 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  28    2    2    0   32
+integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
-     2 tests aborted (missing ok/not ok)
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1987,7 +1985,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9182,     0,   134,   402,  9718,  9721
+"S02",        9186,     0,   134,   402,  9722,  9725
 "S03",        6133,     0,    72,    97,  6302,  6320
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5754,     0,    93,   210,  6057,  6245
@@ -2008,14 +2006,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13709,     5,   216,   197, 14127, 12444
-"int",        1337,     3,    10,    17,  1367,  1361
+"S32",       13710,     5,   216,   197, 14128, 12445
+"int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48591,     8,   858,  1663, 51120,131488
+"total",     48598,     6,   858,  1663, 51125,131493
 ----------------
 Failure summary:
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
 S32-num/rat.rakudo.jvm aborted 1 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/error-reporting.rakudo.jvm aborted 2 test(s)
