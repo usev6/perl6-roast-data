@@ -362,11 +362,10 @@ S03-operators/also.rakudo.jvm......................   4    0    4    0    8
 S03-operators/andthen.t............................   9    0    0    0    9
 S03-operators/arith.t.............................. 158    0    0    0  158
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
-S03-operators/assign.rakudo.jvm.................... 271    0   16   12  299
+S03-operators/assign.rakudo.jvm.................... 273    0   14   12  299
      3 skipped: ,= needs to be special cased after GLR to compile to push(@a, 3, 4)
      3 skipped: cannot modify an immutable value RT  \#124533
      6 skipped: ~< and ~> NYI RT  \#124531
-     2 todo   : ,= needs to be special cased after GLR to compile to push(@a, 3, 4)
      2 todo   : item assignment
      1 todo   : item/list assignment
      2 todo   : list assignment
@@ -1013,7 +1012,7 @@ S09-typed-arrays/arrays.rakudo.jvm.................  79    0    2    3   84
      1 skipped: need parameterized Lists
      1 skipped: type on our-variables RT  \#124677
      2 todo   : nested typechecks are borked
-S09-typed-arrays/hashes.t..........................  43    0    0    0   43
+S09-typed-arrays/hashes.t..........................  39    4    0    0   43
 S09-typed-arrays/native-decl.t.....................  14    0    0    0   14
 S09-typed-arrays/native-int.rakudo.jvm.............1598    0   13    0 1611
     10 todo   : RT #127756
@@ -1074,9 +1073,8 @@ S12-attributes/clone.t.............................  42    0    0    0   42
 S12-attributes/defaults.t..........................  34    0    0    0   34
 S12-attributes/delegation.t........................  65    0    0    0   65
 S12-attributes/inheritance.t.......................   7    0    0    0    7
-S12-attributes/instance.rakudo.jvm................. 145    0    6    1  152
+S12-attributes/instance.rakudo.jvm................. 146    0    5    1  152
      1 skipped: dubious test - the initializer becomes a submethod here, implying a scope RT  \#124908
-     1 todo   : huh?
      1 todo   : over-eager auto-vivification bugs
      2 todo   : ro array/hash with accessor
      2 todo   : ro on list attributes
@@ -1986,15 +1984,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9186,     0,   134,   402,  9722,  9725
-"S03",        6133,     0,    72,    97,  6302,  6320
+"S03",        6135,     0,    70,    97,  6302,  6320
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5754,     0,    93,   210,  6057,  6245
 "S06",        2152,     0,    67,    96,  2315,  2358
 "S07",         144,     0,     7,     5,   156,   156
-"S09",        2762,     0,    25,    40,  2827,  2827
+"S09",        2758,     4,    25,    40,  2827,  2827
 "S10",         136,     0,     9,     1,   146,   203
 "S11",         175,     0,     7,    11,   193,   203
-"S12",        1665,     0,    33,   137,  1835,  1890
+"S12",        1666,     0,    32,   137,  1835,  1890
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
@@ -2009,9 +2007,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       13710,     5,   216,   197, 14128, 12445
 "int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48598,     6,   858,  1663, 51125,131493
+"total",     48597,    10,   855,  1663, 51125,131493
 ----------------
 Failure summary:
+S09-typed-arrays/hashes.t 12 - Make sure we did not create an empty container
+S09-typed-arrays/hashes.t 14 - Make sure we did not create an empty container
+S09-typed-arrays/hashes.t 16 - Make sure we did not create an empty container
+S09-typed-arrays/hashes.t 18 - Make sure we did not create an empty container
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
 S32-num/rat.rakudo.jvm aborted 1 test(s)
