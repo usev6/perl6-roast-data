@@ -403,7 +403,8 @@ S03-operators/identity.rakudo.jvm..................  37    0    8    0   45
      4 todo   : misuse of =:= RT #124537
      4 todo   : unspecced
 S03-operators/increment.rakudo.jvm.................  35    0    4    0   39
-     4 todo   : RT #126531
+     3 todo   : RT #126531
+     1 todo PASSED: RT #126531
 S03-operators/infixed-function.t...................   5    0    0    0    5
 S03-operators/inplace.rakudo.jvm...................  27    0    0    4   31
      4 skipped: Method '' not found for invocant of class 'Str' RT  \#124528
@@ -751,8 +752,7 @@ S05-modifier/continue.t............................  14    0    0    0   14
 S05-modifier/counted-match.t.......................  29    0    0    0   29
 S05-modifier/counted.t............................. 126    0    0    0  126
 S05-modifier/global.t..............................   8    0    0    0    8
-S05-modifier/ignorecase.rakudo.jvm.................  23    0    2    0   25
-     2 todo   : ignorecase and SS/&szlig; RT #121377
+S05-modifier/ignorecase.t..........................  23    2    0    0   25
 S05-modifier/ii.rakudo.jvm.........................  23    0    0    0   23
 S05-modifier/my.rakudo.jvm.........................  22    0    2    0   24
      1 todo   : :our variables in regexes
@@ -1012,7 +1012,7 @@ S09-typed-arrays/arrays.rakudo.jvm.................  79    0    2    3   84
      1 skipped: need parameterized Lists
      1 skipped: type on our-variables RT  \#124677
      2 todo   : nested typechecks are borked
-S09-typed-arrays/hashes.t..........................  39    4    0    0   43
+S09-typed-arrays/hashes.t..........................  44    0    0    0   44
 S09-typed-arrays/native-decl.t.....................  14    0    0    0   14
 S09-typed-arrays/native-int.rakudo.jvm.............1598    0   13    0 1611
     10 todo   : RT #127756
@@ -1389,7 +1389,7 @@ S17-supply/stable.rakudo.jvm.......................   5    0    0    2    7
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/supplier-preserving.rakudo.jvm..........   1    0    0    0    1
 S17-supply/syntax-nonblocking-await.t..............   5    0    0    0    5
-S17-supply/syntax.rakudo.jvm.......................  68    0    2    0   70
+S17-supply/syntax.rakudo.jvm.......................  69    0    2    0   71
      2 todo   : got: '42'
 S17-supply/tail.t..................................   8    0    0    0    8
 S17-supply/throttle.t..............................  17    0    0    0   17
@@ -1575,7 +1575,7 @@ S32-io/io-path-unix.rakudo.jvm.....................  36    0    1    0   37
      1 todo   : resolve NYI, needs nqp::readlink RT #124782
 S32-io/io-path-win.rakudo.jvm......................  50    0    1    0   51
      1 todo   : resolve NYI, needs nqp::readlink RT #124783
-S32-io/io-path.t...................................  20    0    0    0   20
+S32-io/io-path.t...................................  22    0    0    0   22
 S32-io/io-spec-cygwin.t............................ 100    0    0    2  102
      2 skipped: cygwin on-platform tests
 S32-io/io-spec-unix.t.............................. 130    0    0    0  130
@@ -1655,7 +1655,7 @@ S32-list/rotor.t...................................  13    0    0    0   13
 S32-list/seq.rakudo.jvm............................  34    0    1    0   35
      1 todo   : Cannot assign immutable
 S32-list/skip.t....................................  24    0    0    0   24
-S32-list/sort.t....................................  34    0    0    0   34
+S32-list/sort.t....................................  35    0    0    0   35
 S32-list/squish.rakudo.jvm.........................  61    0    1    0   62
      1 todo   : fails due to above failure
 S32-list/tail.t....................................  24    0    0    0   24
@@ -1986,10 +1986,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9186,     0,   134,   402,  9722,  9725
 "S03",        6135,     0,    70,    97,  6302,  6320
 "S04",        1464,     0,    60,    33,  1557,  1589
-"S05",        5754,     0,    93,   210,  6057,  6245
+"S05",        5754,     2,    91,   210,  6057,  6245
 "S06",        2152,     0,    67,    96,  2315,  2358
 "S07",         144,     0,     7,     5,   156,   156
-"S09",        2758,     4,    25,    40,  2827,  2827
+"S09",        2763,     0,    25,    40,  2828,  2828
 "S10",         136,     0,     9,     1,   146,   203
 "S11",         175,     0,     7,    11,   193,   203
 "S12",        1666,     0,    32,   137,  1835,  1890
@@ -1997,23 +1997,21 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
 "S16",         695,     0,    69,   147,   911,   948
-"S17",         923,     0,    17,    44,   984,  1061
+"S17",         924,     0,    17,    44,   985,  1063
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13710,     5,   216,   197, 14128, 12445
+"S32",       13713,     5,   216,   197, 14131, 12448
 "int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48597,    10,   855,  1663, 51125,131493
+"total",     48606,     8,   853,  1663, 51130,131499
 ----------------
 Failure summary:
-S09-typed-arrays/hashes.t 12 - Make sure we did not create an empty container
-S09-typed-arrays/hashes.t 14 - Make sure we did not create an empty container
-S09-typed-arrays/hashes.t 16 - Make sure we did not create an empty container
-S09-typed-arrays/hashes.t 18 - Make sure we did not create an empty container
+S05-modifier/ignorecase.t 12 - ß matches SS with :ignorecase
+S05-modifier/ignorecase.t 13 - SS matches ß with :ignorecase
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
 S32-num/rat.rakudo.jvm aborted 1 test(s)
