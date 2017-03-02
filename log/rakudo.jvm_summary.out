@@ -338,7 +338,7 @@ S03-junctions/associative.t........................  10    0    0    0   10
 S03-junctions/autothreading.t...................... 106    0    0    0  106
 S03-junctions/boolean-context.t....................  74    0    0    0   74
 S03-junctions/misc.t............................... 144    0    0    0  144
-S03-metaops/cross.t................................  77    0    0    0   77
+S03-metaops/cross.t................................  78    0    0    0   78
 S03-metaops/eager-hyper.rakudo.jvm.................   7    0    1    0    8
      1 todo   : hyper NYI entirely, I guess RT #124517
 S03-metaops/hyper.rakudo.jvm....................... 395    0    1    7  403
@@ -392,7 +392,7 @@ S03-operators/context.t............................  39    0    0    0   39
 S03-operators/custom.t.............................   1    0    0    0    1
 S03-operators/div.t................................   8    0    0    0    8
 S03-operators/equality.t...........................  46    0    0    0   46
-S03-operators/eqv.rakudo.jvm.......................  51    0    3    1   55
+S03-operators/eqv.rakudo.jvm.......................  52    0    3    1   56
      1 skipped: huh?
      3 todo   : huh?
 S03-operators/flip-flop.rakudo.jvm.................  37    0    0    3   40
@@ -813,7 +813,7 @@ S05-transliteration/with-closure.rakudo.jvm........  15    0    2    1   18
      1 skipped: Unable to resolve method ord in class Any RT  \#124659
      2 todo   : nom regression
                                                    pass fail todo skip plan
-S06-advanced/callframe.rakudo.jvm..................  15    0    1    2   18
+S06-advanced/callframe.rakudo.jvm..................  16    0    1    2   19
      1 skipped: ContextRef representation does not implement elems RT  \#77752
      1 skipped: Unable to resolve method inline in type CallFrame
      1 todo   : ContextRef representation does not implement elems RT #127479
@@ -949,8 +949,9 @@ S06-signature/scalar-type.t........................   8    0    0    0    8
 S06-signature/shape.t..............................  35    0    0    0   35
 S06-signature/sigilless.t..........................  10    0    0    0   10
 S06-signature/slurpy-and-interpolation.t...........  12    0    0    0   12
-S06-signature/slurpy-params.rakudo.jvm.............  85    0    0    1   86
+S06-signature/slurpy-params.rakudo.jvm.............  85    1    0    1   87
      1 skipped: Proc::Async NYI RT  \#126524 / RT  \#128201
+     1 tests aborted (missing ok/not ok)
 S06-signature/slurpy-placeholders.t................   8    0    0    0    8
 S06-signature/sub-ref.rakudo.jvm...................  28    0    2    4   34
      4 skipped: macros, compile time binding RT  \#124919
@@ -1001,8 +1002,8 @@ S09-multidim/assign.rakudo.jvm.....................  53    0    0    1   54
      1 skipped: StackOverflowError
 S09-multidim/decl.t................................  40    0    0    0   40
 S09-multidim/indexing.t............................  31    0    0    0   31
-S09-multidim/methods.t.............................  82    0    0    0   82
-S09-multidim/subs.t................................  46    0    0    0   46
+S09-multidim/methods.t.............................  80    0    0    0   80
+S09-multidim/subs.t................................  44    0    0    0   44
 S09-subscript/multidim-assignment.t................  11    0    0    0   11
 S09-subscript/slice.rakudo.jvm.....................  27    0    0    4   31
      2 skipped: RT  \#120383
@@ -1365,7 +1366,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1651,7 +1653,7 @@ S32-list/repeated.rakudo.jvm.......................  37    0    0    1   38
 S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
      1 todo   : RT #77914
 S32-list/roll.t....................................  51    0    0    0   51
-S32-list/rotor.t...................................  13    0    0    0   13
+S32-list/rotor.t...................................  14    0    0    0   14
 S32-list/seq.rakudo.jvm............................  34    0    1    0   35
      1 todo   : Cannot assign immutable
 S32-list/skip.t....................................  24    0    0    0   24
@@ -1984,12 +1986,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9186,     0,   134,   402,  9722,  9725
-"S03",        6135,     0,    70,    97,  6302,  6320
+"S03",        6137,     0,    70,    97,  6304,  6322
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5754,     2,    91,   210,  6057,  6245
-"S06",        2152,     0,    67,    96,  2315,  2358
+"S06",        2153,     1,    67,    96,  2317,  2360
 "S07",         144,     0,     7,     5,   156,   156
-"S09",        2763,     0,    25,    40,  2828,  2828
+"S09",        2759,     0,    25,    40,  2824,  2824
 "S10",         136,     0,     9,     1,   146,   203
 "S11",         175,     0,     7,    11,   193,   203
 "S12",        1666,     0,    32,   137,  1835,  1890
@@ -2004,14 +2006,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         408,     0,    13,     4,   425,   425
-"S32",       13713,     5,   216,   197, 14131, 12448
+"S32",       13714,     5,   216,   197, 14132, 12449
 "int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48606,     8,   853,  1663, 51130,131499
+"total",     48606,     9,   853,  1663, 51131,131500
 ----------------
 Failure summary:
 S05-modifier/ignorecase.t 12 - ß matches SS with :ignorecase
 S05-modifier/ignorecase.t 13 - SS matches ß with :ignorecase
+S06-signature/slurpy-params.rakudo.jvm aborted 1 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
 S32-num/rat.rakudo.jvm aborted 1 test(s)
