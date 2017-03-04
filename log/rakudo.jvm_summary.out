@@ -2995,8 +2995,8 @@ S32-str/split-simple.t.............................Can't open perl script "eval-
    0   30    0    0   30
     30 tests aborted (missing ok/not ok)
 S32-str/split.rakudo.jvm...........................Can't open perl script "eval-client.pl": No such file or directory
-   0   60    0    0   60
-    60 tests aborted (missing ok/not ok)
+   0   61    0    0   61
+    61 tests aborted (missing ok/not ok)
 S32-str/sprintf-b.rakudo.jvm.......................Can't open perl script "eval-client.pl": No such file or directory
    0  165    0    0  165
    165 tests aborted (missing ok/not ok)
@@ -3455,10 +3455,10 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S26",           0,  1440,     0,     0,  1440,  1440
 "S28",           0,     2,     0,     0,     2,     6
 "S29",           0,   221,     0,     0,   221,   221
-"S32",           0, 10100,     0,     0, 10100, 10196
+"S32",           0, 10101,     0,     0, 10101, 10197
 "int",           0,  1354,     0,     0,  1354,  1351
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40641,     0,     0, 40641,122826
+"total",         0, 40642,     0,     0, 40642,122827
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -4449,7 +4449,7 @@ S32-str/rindex.t aborted 45 test(s)
 S32-str/samecase.t aborted 8 test(s)
 S32-str/samemark.rakudo.jvm aborted 9 test(s)
 S32-str/split-simple.t aborted 30 test(s)
-S32-str/split.rakudo.jvm aborted 60 test(s)
+S32-str/split.rakudo.jvm aborted 61 test(s)
 S32-str/sprintf-b.rakudo.jvm aborted 165 test(s)
 S32-str/sprintf.t aborted 171 test(s)
 S32-str/starts-with.t aborted 8 test(s)
