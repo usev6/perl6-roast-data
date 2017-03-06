@@ -625,8 +625,8 @@ S03-operators/minmax.rakudo.jvm....................Can't open perl script "eval-
    0   39    0    0   39
     39 tests aborted (missing ok/not ok)
 S03-operators/misc.rakudo.jvm......................Can't open perl script "eval-client.pl": No such file or directory
-   0   44    0    0   44
-    44 tests aborted (missing ok/not ok)
+   0   55    0    0   55
+    55 tests aborted (missing ok/not ok)
 S03-operators/mix.rakudo.jvm.......................Can't open perl script "eval-client.pl": No such file or directory
    0  135    0    0  135
    135 tests aborted (missing ok/not ok)
@@ -3435,7 +3435,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
 "S02",           0,  5732,     0,     0,  5732,  5736
-"S03",           0,  6305,     0,     0,  6305,  6323
+"S03",           0,  6316,     0,     0,  6316,  6334
 "S04",           0,  1537,     0,     0,  1537,  1589
 "S05",           0,  6057,     0,     0,  6057,  6245
 "S06",           0,  2304,     0,     0,  2304,  2360
@@ -3458,7 +3458,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S32",           0, 10101,     0,     0, 10101, 10197
 "int",           0,  1354,     0,     0,  1354,  1351
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 40642,     0,     0, 40642,122827
+"total",         0, 40653,     0,     0, 40653,122838
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3667,7 +3667,7 @@ S03-operators/is-divisible-by.rakudo.jvm aborted 15 test(s)
 S03-operators/lcm.t aborted 15 test(s)
 S03-operators/list-quote-junction.t aborted 16 test(s)
 S03-operators/minmax.rakudo.jvm aborted 39 test(s)
-S03-operators/misc.rakudo.jvm aborted 44 test(s)
+S03-operators/misc.rakudo.jvm aborted 55 test(s)
 S03-operators/mix.rakudo.jvm aborted 135 test(s)
 S03-operators/names.t aborted 7 test(s)
 S03-operators/nesting.t aborted 26 test(s)
