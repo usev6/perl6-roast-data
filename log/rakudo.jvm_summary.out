@@ -385,7 +385,7 @@ S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  60    0    0    0   60
 S03-operators/comparison-simple.t..................  24    0    0    0   24
 S03-operators/comparison.t.........................  53    0    0    0   53
-S03-operators/composition.t........................  10    0    0    0   10
+S03-operators/composition.t........................  12    0    0    0   12
 S03-operators/context-forcers.rakudo.jvm........... 104    0    0    2  106
      2 skipped: failure modes of Str.Numeric RT  \#124540
 S03-operators/context.t............................  39    0    0    0   39
@@ -798,7 +798,8 @@ S05-modifier/samemark.rakudo.jvm...................   0    0    0    8    8
      8 skipped: ordbaseat NYI
 S05-modifier/sigspace.t............................  18    0    0    0   18
 S05-substitution/67222.t...........................   1    0    0    0    1
-S05-substitution/match.rakudo.jvm..................  14    0    0    0   14
+S05-substitution/match.rakudo.jvm..................  13    0    5    0   18
+     5 todo PASSED: RT130953
 S05-substitution/subst.rakudo.jvm.................. 167    0    1   18  186
      6 skipped: "ordbaseat NYI" RT  \#125753
      1 skipped: RT  \#114388 -- No such method 'subst-mutate' for invocant of type 'Any'
@@ -950,9 +951,9 @@ S06-signature/scalar-type.t........................   8    0    0    0    8
 S06-signature/shape.t..............................  35    0    0    0   35
 S06-signature/sigilless.t..........................  10    0    0    0   10
 S06-signature/slurpy-and-interpolation.t...........  12    0    0    0   12
-S06-signature/slurpy-params.rakudo.jvm.............  85    1    0    1   87
+S06-signature/slurpy-params.rakudo.jvm.............  85    0    0    2   87
      1 skipped: Proc::Async NYI RT  \#126524 / RT  \#128201
-     1 tests aborted (missing ok/not ok)
+     1 skipped: Proc::Async NYI RT  \#129175
 S06-signature/slurpy-placeholders.t................   8    0    0    0    8
 S06-signature/sub-ref.rakudo.jvm...................  28    0    2    4   34
      4 skipped: macros, compile time binding RT  \#124919
@@ -1065,8 +1066,8 @@ S11-modules/module.t...............................   8    0    0    0    8
 S11-modules/need.t.................................   2    0    0    0    2
 S11-modules/nested.rakudo.jvm......................  10    0    1    0   11
      1 todo   : got: $("GNUC",)
-S11-modules/require.t..............................   0   33    0    0   33
-    33 tests aborted (missing ok/not ok)
+S11-modules/require.t..............................  29    4    0    0   33
+     2 tests aborted (missing ok/not ok)
 S11-repository/curli-install.t.....................  18    0    0    0   18
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  23    0    0    0   23
@@ -1104,7 +1105,7 @@ S12-class/lexical.t................................  14    0    0    0   14
 S12-class/literal.t................................   2    0    0    0    2
 S12-class/magical-vars.t...........................  18    0    0    0   18
 S12-class/mro.t....................................   4    0    0    0    4
-S12-class/namespaced.t.............................  13    0    0    0   13
+S12-class/namespaced.t.............................  14    0    0    0   14
 S12-class/open.t...................................  10    0    0    0   10
 S12-class/parent_attributes.rakudo.jvm.............   1    0    0    2    3
      2 skipped: initialization of parent attributes RT  \#125129
@@ -1749,8 +1750,7 @@ S32-str/pack.t.....................................  14    0    0    0   14
 S32-str/parse-base.rakudo.jvm...................... 106    0    2    2  110
      2 skipped: Cannot resolve caller is-approx(Failure, Rat, Str)
      2 todo   : Invalid base-10 character
-S32-str/parse-names.rakudo.jvm.....................  10    0    0   10   20
-    10 skipped: chr codepoint cannot be negative
+S32-str/parse-names.t..............................  20    0    0    0   20
 S32-str/pos.t......................................   2    0    0    0    2
 S32-str/rindex.t...................................  45    0    0    0   45
 S32-str/samecase.t.................................   8    0    0    0    8
@@ -1927,7 +1927,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1987,15 +1987,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9188,     0,   134,   402,  9724,  9727
-"S03",        6149,     0,    70,    97,  6316,  6334
+"S03",        6151,     0,    70,    97,  6318,  6336
 "S04",        1464,     0,    60,    33,  1557,  1589
-"S05",        5755,     0,    93,   210,  6058,  6246
-"S06",        2153,     1,    67,    96,  2317,  2360
+"S05",        5754,     0,    98,   210,  6062,  6250
+"S06",        2153,     0,    67,    97,  2317,  2360
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2759,     0,    25,    40,  2824,  2824
 "S10",         136,     0,     9,     1,   146,   203
-"S11",         150,    33,     6,    10,   199,   209
-"S12",        1666,     0,    32,   137,  1835,  1890
+"S11",         179,     4,     6,    10,   199,   209
+"S12",        1667,     0,    32,   137,  1836,  1891
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
@@ -2007,15 +2007,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         409,     0,    13,     4,   426,   426
-"S32",       13726,     5,   216,   207, 14154, 12471
-"int",        1339,     1,    10,    17,  1367,  1361
+"S32",       13736,     5,   216,   197, 14154, 12471
+"int",        1340,     0,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48520,    40,   854,  1612, 51026,131400
+"total",     48562,     9,   859,  1603, 51033,131407
 ----------------
 Failure summary:
-S06-signature/slurpy-params.rakudo.jvm aborted 1 test(s)
-S11-modules/require.t aborted 33 test(s)
+S11-modules/require.t 29 - 1. multiple requires with top level package already defined
+S11-modules/require.t 30 - 2. multiple requires with top level package already defined
+S11-modules/require.t aborted 2 test(s)
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
 S32-num/rat.rakudo.jvm aborted 1 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
