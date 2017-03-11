@@ -440,8 +440,9 @@ S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: ~> NYI RT  \#124531
 S03-operators/relational.rakudo.jvm................ 177    0    2    0  179
      2 todo   : RT #121987
-S03-operators/repeat.rakudo.jvm....................  58    0    0    2   60
+S03-operators/repeat.rakudo.jvm....................  58    0    2    2   62
      2 skipped: OutOfMemoryError: Java heap space
+     2 todo PASSED: creating too large strings dies RT #127971,130924
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set.t................................ 292    0    0    0  292
 S03-operators/short-circuit.t......................  83    0    0    0   83
@@ -1367,7 +1368,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1987,7 +1989,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9188,     0,   134,   402,  9724,  9727
-"S03",        6151,     0,    70,    97,  6318,  6336
+"S03",        6151,     0,    72,    97,  6320,  6338
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5754,     0,    98,   210,  6062,  6250
 "S06",        2153,     0,    67,    97,  2317,  2360
@@ -2010,7 +2012,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       13736,     5,   216,   197, 14154, 12471
 "int",        1340,     0,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48562,     9,   859,  1603, 51033,131407
+"total",     48562,     9,   861,  1603, 51035,131409
 ----------------
 Failure summary:
 S11-modules/require.t 29 - 1. multiple requires with top level package already defined
