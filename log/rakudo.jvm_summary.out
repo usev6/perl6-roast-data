@@ -338,7 +338,8 @@ S03-junctions/associative.t........................  10    0    0    0   10
 S03-junctions/autothreading.t...................... 106    0    0    0  106
 S03-junctions/boolean-context.t....................  74    0    0    0   74
 S03-junctions/misc.t............................... 144    0    0    0  144
-S03-metaops/cross.t................................  78    0    0    0   78
+S03-metaops/cross.rakudo.jvm.......................  76    0    2    0   78
+     2 todo   : RT #130980
 S03-metaops/eager-hyper.rakudo.jvm.................   7    0    1    0    8
      1 todo   : hyper NYI entirely, I guess RT #124517
 S03-metaops/hyper.rakudo.jvm....................... 395    0    1    7  403
@@ -351,7 +352,8 @@ S03-metaops/reduce.rakudo.jvm...................... 545    0    1    1  547
      1 skipped: RT  \#129153 Type check failed in binding to &b; expected Callable but got Int (2)
      1 todo   : item context
 S03-metaops/reverse.t..............................  68    0    0    0   68
-S03-metaops/zip.t..................................  76    0    0    0   76
+S03-metaops/zip.rakudo.jvm.........................  74    0    2    0   76
+     2 todo   : RT #130980
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
      1 todo   : Multi colonpair syntax not yet understood RT #124553
 S03-operators/also.rakudo.jvm......................   4    0    4    0    8
@@ -440,9 +442,8 @@ S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: ~> NYI RT  \#124531
 S03-operators/relational.rakudo.jvm................ 177    0    2    0  179
      2 todo   : RT #121987
-S03-operators/repeat.rakudo.jvm....................  58    0    2    2   62
+S03-operators/repeat.rakudo.jvm....................  60    0    0    2   62
      2 skipped: OutOfMemoryError: Java heap space
-     2 todo PASSED: creating too large strings dies RT #127971,130924
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set.t................................ 292    0    0    0  292
 S03-operators/short-circuit.t......................  83    0    0    0   83
@@ -799,8 +800,7 @@ S05-modifier/samemark.rakudo.jvm...................   0    0    0    8    8
      8 skipped: ordbaseat NYI
 S05-modifier/sigspace.t............................  18    0    0    0   18
 S05-substitution/67222.t...........................   1    0    0    0    1
-S05-substitution/match.rakudo.jvm..................  13    0    5    0   18
-     5 todo PASSED: RT130953
+S05-substitution/match.t...........................  18    0    0    0   18
 S05-substitution/subst.rakudo.jvm.................. 167    0    1   18  186
      6 skipped: "ordbaseat NYI" RT  \#125753
      1 skipped: RT  \#114388 -- No such method 'subst-mutate' for invocant of type 'Any'
@@ -1344,7 +1344,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT  \#124775
      3 skipped: waiting for new '.loads' semantics RT  \#124776
      2 skipped: waiting for new '.loads' semantics RT  \#124777
-S17-scheduler/every.t..............................  20    0    0    0   20
+S17-scheduler/every.t..............................  19    1    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
@@ -1368,8 +1368,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1929,7 +1928,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1956,9 +1955,10 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
+integration/error-reporting.rakudo.jvm.............  28    2    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
+     2 tests aborted (missing ok/not ok)
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1989,9 +1989,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9188,     0,   134,   402,  9724,  9727
-"S03",        6151,     0,    72,    97,  6320,  6338
+"S03",        6149,     0,    74,    97,  6320,  6338
 "S04",        1464,     0,    60,    33,  1557,  1589
-"S05",        5754,     0,    98,   210,  6062,  6250
+"S05",        5759,     0,    93,   210,  6062,  6250
 "S06",        2153,     0,    67,    97,  2317,  2360
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2759,     0,    25,    40,  2824,  2824
@@ -2002,7 +2002,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
 "S16",         605,     0,    69,    87,   761,   798
-"S17",         925,     0,    17,    44,   986,  1069
+"S17",         924,     1,    17,    44,   986,  1069
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -2010,14 +2010,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         409,     0,    13,     4,   426,   426
 "S32",       13736,     5,   216,   197, 14154, 12471
-"int",        1340,     0,    10,    17,  1367,  1361
+"int",        1337,     3,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48562,     9,   861,  1603, 51035,131409
+"total",     48561,    13,   858,  1603, 51035,131409
 ----------------
 Failure summary:
 S11-modules/require.t 29 - 1. multiple requires with top level package already defined
 S11-modules/require.t 30 - 2. multiple requires with top level package already defined
 S11-modules/require.t aborted 2 test(s)
+S17-scheduler/every.t 17 - Cue with :every/:times schedules repeatedly for 10 times
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
 S32-num/rat.rakudo.jvm aborted 1 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+integration/error-reporting.rakudo.jvm aborted 2 test(s)
