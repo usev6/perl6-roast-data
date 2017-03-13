@@ -404,9 +404,8 @@ S03-operators/gcd.t................................  19    0    0    0   19
 S03-operators/identity.rakudo.jvm..................  37    0    8    0   45
      4 todo   : misuse of =:= RT #124537
      4 todo   : unspecced
-S03-operators/increment.rakudo.jvm.................  35    0    4    0   39
+S03-operators/increment.rakudo.jvm.................  36    0    3    0   39
      3 todo   : RT #126531
-     1 todo PASSED: RT #126531
 S03-operators/infixed-function.t...................   5    0    0    0    5
 S03-operators/inplace.rakudo.jvm...................  27    0    0    4   31
      4 skipped: Method '' not found for invocant of class 'Str' RT  \#124528
@@ -1035,13 +1034,12 @@ S09-typed-arrays/native.t..........................   3    0    0    0    3
 S10-packages/basic.rakudo.jvm......................  80    0    0    1   81
      1 skipped: RT  \#59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  42    0    9    0   51
+S10-packages/precompilation.rakudo.jvm.............  44    0    7    0   51
      2 todo   : ContextRef representation does not implement elems, RT #128156
      2 todo   : Invalid typename 'RT112626::Class1' in parameter declaration
      1 todo   : got: $["B", "C"]
      1 todo   : got: $["C", "K"]
      1 todo   : no 6model parametrics interning yet
-     2 todo PASSED: ClassCastException: __P6opaque__73 cannot be cast to P6OpaqueDelegateInstance
 S10-packages/use-with-class.t......................  11    0    0    0   11
                                                    pass fail todo skip plan
 S11-compunit/compunit-dependencyspecification.t....   6    0    0    0    6
@@ -1067,8 +1065,10 @@ S11-modules/module.t...............................   8    0    0    0    8
 S11-modules/need.t.................................   2    0    0    0    2
 S11-modules/nested.rakudo.jvm......................  10    0    1    0   11
      1 todo   : got: $("GNUC",)
-S11-modules/require.t..............................  29    4    0    0   33
-     2 tests aborted (missing ok/not ok)
+S11-modules/require.rakudo.jvm.....................  28    0    3    2   33
+     2 skipped: You cannot create an instance of this type
+     2 todo   : only test for Cool::Cat passes in this loop
+     1 todo PASSED: only test for Cool::Cat passes in this loop
 S11-repository/curli-install.t.....................  18    0    0    0   18
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  23    0    0    0   23
@@ -1338,13 +1338,13 @@ S17-promise/nonblocking-await.rakudo.jvm...........   5    0    0   14   19
 S17-promise/start.t................................  58    0    0    0   58
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
-S17-scheduler/at.t.................................  15    0    0    0   15
+S17-scheduler/at.t.................................  13    2    0    0   15
 S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      3 skipped: waiting for new '.loads' semantics RT  \#124774
      2 skipped: waiting for new '.loads' semantics RT  \#124775
      3 skipped: waiting for new '.loads' semantics RT  \#124776
      2 skipped: waiting for new '.loads' semantics RT  \#124777
-S17-scheduler/every.t..............................  19    1    0    0   20
+S17-scheduler/every.t..............................  20    0    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
@@ -1691,9 +1691,8 @@ S32-num/power.rakudo.jvm...........................  88    0    3    6   97
      2 todo   : wrong results for "NaN" used with "**" RT #124800
 S32-num/rand.rakudo.jvm............................ 112    0    0    1  113
      1 skipped: Test is too slow; srand call incorrect RT  \#124812
-S32-num/rat.rakudo.jvm............................. 840    1    0    1  842
+S32-num/rat.rakudo.jvm............................. 841    0    0    1  842
      1 skipped: RT  \#74648
-     1 tests aborted (missing ok/not ok)
 S32-num/real-bridge.t.............................. 200    0    0    0  200
 S32-num/roots.t....................................  55    0    0    0   55
 S32-num/rounders.rakudo.jvm........................ 133    0    1    0  134
@@ -1955,10 +1954,9 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  28    2    2    0   32
+integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
-     2 tests aborted (missing ok/not ok)
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
@@ -1989,38 +1987,34 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9188,     0,   134,   402,  9724,  9727
-"S03",        6149,     0,    74,    97,  6320,  6338
+"S03",        6150,     0,    73,    97,  6320,  6338
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5759,     0,    93,   210,  6062,  6250
 "S06",        2153,     0,    67,    97,  2317,  2360
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2759,     0,    25,    40,  2824,  2824
-"S10",         136,     0,     9,     1,   146,   203
-"S11",         179,     4,     6,    10,   199,   209
+"S10",         138,     0,     7,     1,   146,   203
+"S11",         178,     0,     9,    12,   199,   209
 "S12",        1667,     0,    32,   137,  1836,  1891
 "S13",          62,     0,     0,     0,    62,    72
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
 "S16",         605,     0,    69,    87,   761,   798
-"S17",         924,     1,    17,    44,   986,  1069
+"S17",         923,     2,    17,    44,   986,  1069
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         409,     0,    13,     4,   426,   426
-"S32",       13736,     5,   216,   197, 14154, 12471
-"int",        1337,     3,    10,    17,  1367,  1361
+"S32",       13737,     4,   216,   197, 14154, 12471
+"int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48561,    13,   858,  1603, 51035,131409
+"total",     48565,     7,   858,  1605, 51035,131409
 ----------------
 Failure summary:
-S11-modules/require.t 29 - 1. multiple requires with top level package already defined
-S11-modules/require.t 30 - 2. multiple requires with top level package already defined
-S11-modules/require.t aborted 2 test(s)
-S17-scheduler/every.t 17 - Cue with :every/:times schedules repeatedly for 10 times
+S17-scheduler/at.t 3 - Cue on ThreadPoolScheduler with :at doesn't schedule immediately
+S17-scheduler/at.t 4 - Timer tasks on ThreadPoolScheduler with :at ran in right order
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
-S32-num/rat.rakudo.jvm aborted 1 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/error-reporting.rakudo.jvm aborted 2 test(s)
