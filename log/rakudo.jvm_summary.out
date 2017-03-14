@@ -392,7 +392,7 @@ S03-operators/context-forcers.rakudo.jvm........... 104    0    0    2  106
      2 skipped: failure modes of Str.Numeric RT  \#124540
 S03-operators/context.t............................  39    0    0    0   39
 S03-operators/custom.t.............................   1    0    0    0    1
-S03-operators/div.t................................   8    0    0    0    8
+S03-operators/div.t................................   8    1    0    0    9
 S03-operators/equality.t...........................  46    0    0    0   46
 S03-operators/eqv.rakudo.jvm.......................  52    0    3    1   56
      1 skipped: huh?
@@ -1338,7 +1338,7 @@ S17-promise/nonblocking-await.rakudo.jvm...........   5    0    0   14   19
 S17-promise/start.t................................  58    0    0    0   58
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
-S17-scheduler/at.t.................................  13    2    0    0   15
+S17-scheduler/at.t.................................  15    0    0    0   15
 S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      3 skipped: waiting for new '.loads' semantics RT  \#124774
      2 skipped: waiting for new '.loads' semantics RT  \#124775
@@ -1987,7 +1987,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9188,     0,   134,   402,  9724,  9727
-"S03",        6150,     0,    73,    97,  6320,  6338
+"S03",        6150,     1,    73,    97,  6321,  6339
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5759,     0,    93,   210,  6062,  6250
 "S06",        2153,     0,    67,    97,  2317,  2360
@@ -2000,7 +2000,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
 "S16",         605,     0,    69,    87,   761,   798
-"S17",         923,     2,    17,    44,   986,  1069
+"S17",         925,     0,    17,    44,   986,  1069
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -2010,11 +2010,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       13737,     4,   216,   197, 14154, 12471
 "int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48565,     7,   858,  1605, 51035,131409
+"total",     48567,     6,   858,  1605, 51036,131410
 ----------------
 Failure summary:
-S17-scheduler/at.t 3 - Cue on ThreadPoolScheduler with :at doesn't schedule immediately
-S17-scheduler/at.t 4 - Timer tasks on ThreadPoolScheduler with :at ran in right order
+S03-operators/div.t 8 - div works with negative native
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
