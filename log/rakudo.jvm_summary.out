@@ -95,13 +95,12 @@ S02-magicals/DISTRO.rakudo.jvm.....................  12    0    2   14   28
      1 todo   : no Distro.signature yet RT #124617
      1 todo   : no Distro.signature yet RT #124621
 S02-magicals/GROUP.t...............................   1    0    0    0    1
-S02-magicals/KERNEL.rakudo.jvm.....................  19    0    4   17   40
-     1 skipped: limited signal handling on jvm RT  \#124628
+S02-magicals/KERNEL.rakudo.jvm.....................  15    6    3   16   40
     16 skipped: unimpl $?KERNEL RT  \#124624
-     1 todo   : limited signal handling on jvm RT #124628
      1 todo   : no Kernel.desc yet RT #124626
      1 todo   : no Kernel.signature yet RT #124625
      1 todo   : no Kernel.signature yet RT #124627
+     6 tests aborted (missing ok/not ok)
 S02-magicals/PERL.rakudo.jvm.......................  17    0    8   25   50
     25 skipped: unimpl $?PERL RT  \#124581
      1 todo   : no Perl.compiler.codename yet RT #124600
@@ -203,7 +202,7 @@ S02-types/baggy.t..................................   6    0    0    0    6
 S02-types/baghash.rakudo.jvm....................... 242    0    2   21  265
     21 skipped: 'is TypeObject' NYI RT  \#124490
      2 todo   : in flux
-S02-types/bool.t...................................  66    0    0    0   66
+S02-types/bool.t...................................  67    0    0    0   67
 S02-types/built-in.t...............................   1    0    0    0    1
 S02-types/capture.t................................  33    0    0    0   33
 S02-types/catch_type_cast_mismatch.t...............  11    0    0    0   11
@@ -451,7 +450,7 @@ S03-operators/spaceship-and-containers.t...........   6    0    0    0    6
 S03-operators/spaceship.t..........................   6    0    0    0    6
 S03-operators/subscript-adverbs.t.................. 110    0    0    0  110
 S03-operators/subscript-vs-lt.t....................   4    0    0    0    4
-S03-operators/ternary.t............................  29    0    0    0   29
+S03-operators/ternary.t............................  28    0    0    0   28
 S03-operators/u2212-minus.t........................  54    0    0    0   54
 S03-operators/value_equivalence.t..................  87    0    0    0   87
 S03-sequence/arity-2-or-more.t.....................  20    0    0    0   20
@@ -1206,7 +1205,7 @@ S12-methods/what.t.................................  33    0    0    0   33
 S12-subset/multi-dispatch.t........................   6    0    0    0    6
 S12-subset/subtypes.t..............................  86    0    0    0   86
                                                    pass fail todo skip plan
-S13-overloading/metaoperators.t....................  11    0    0    0   11
+S13-overloading/metaoperators.t....................  12    0    0    0   12
 S13-overloading/operators.t........................   6    0    0    0    6
 S13-overloading/typecasting-long.t.................  32    0    0    0   32
 S13-type-casting/methods.t.........................  13    0    0    0   13
@@ -1333,8 +1332,9 @@ S17-promise/at.t...................................   3    0    0    0    3
 S17-promise/basic.t................................  29    0    0    0   29
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/nonblocking-await.rakudo.jvm...........   5    0    0   14   19
-    13 skipped: hangs on JVM
+    12 skipped: hangs on JVM
      1 skipped: hangs on JVM (sometimes)
+     1 skipped: hangs on JVMorg.perl6.nqp.runtime.UnwindException
 S17-promise/start.t................................  58    0    0    0   58
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
@@ -1368,7 +1368,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1396,7 +1397,7 @@ S17-supply/syntax.rakudo.jvm.......................  70    0    2    0   72
      2 todo   : got: '42'
 S17-supply/tail.t..................................   8    0    0    0    8
 S17-supply/throttle.t..............................  17    0    0    0   17
-S17-supply/unique.t................................  17    0    0    0   17
+S17-supply/unique.t................................  16    1    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
 S17-supply/words.t.................................   5    0    0    0    5
@@ -1927,7 +1928,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1986,8 +1987,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9188,     0,   134,   402,  9724,  9727
-"S03",        6150,     1,    73,    97,  6321,  6339
+"S02",        9185,     6,   133,   401,  9725,  9728
+"S03",        6149,     1,    73,    97,  6320,  6338
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5759,     0,    93,   210,  6062,  6250
 "S06",        2153,     0,    67,    97,  2317,  2360
@@ -1996,11 +1997,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S10",         138,     0,     7,     1,   146,   203
 "S11",         178,     0,     9,    12,   199,   209
 "S12",        1667,     0,    32,   137,  1836,  1891
-"S13",          62,     0,     0,     0,    62,    72
+"S13",          63,     0,     0,     0,    63,    73
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
 "S16",         605,     0,    69,    87,   761,   798
-"S17",         925,     0,    17,    44,   986,  1069
+"S17",         924,     1,    17,    44,   986,  1069
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -2008,12 +2009,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         409,     0,    13,     4,   426,   426
 "S32",       13737,     4,   216,   197, 14154, 12471
-"int",        1339,     1,    10,    17,  1367,  1361
+"int",        1340,     0,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48567,     6,   858,  1605, 51036,131410
+"total",     48564,    12,   857,  1604, 51037,131411
 ----------------
 Failure summary:
+S02-magicals/KERNEL.rakudo.jvm aborted 6 test(s)
 S03-operators/div.t 8 - div works with negative native
+S17-supply/unique.t 6 - unique with expiry works
 S32-array/splice.rakudo.jvm 393 - Array.splice callable args
 S32-io/seek.t aborted 3 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
