@@ -1334,10 +1334,9 @@ S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
 S17-promise/basic.t................................  29    0    0    0   29
 S17-promise/in.t...................................   3    0    0    0    3
-S17-promise/nonblocking-await.rakudo.jvm...........   5    1    0   13   19
-    12 skipped: hangs on JVM
+S17-promise/nonblocking-await.rakudo.jvm...........   5    0    0   14   19
+    13 skipped: hangs on JVM
      1 skipped: hangs on JVM (sometimes)
-     1 tests aborted (missing ok/not ok)
 S17-promise/start.t................................  58    0    0    0   58
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
@@ -1513,7 +1512,7 @@ S32-array/pop.rakudo.jvm...........................  35    0    2    0   37
 S32-array/push.t...................................  52    0    0    0   52
 S32-array/rotate.t.................................  29    0    0    0   29
 S32-array/shift.t..................................  33    0    0    0   33
-S32-array/splice.rakudo.jvm........................ 380    1   12    0  393
+S32-array/splice.rakudo.jvm........................ 381    0   12    0  393
     12 todo   : somehow the test causes different typecheck error
 S32-array/unshift.t................................  76    0    0    0   76
 S32-basics/pairup.t................................   5    0    0    0    5
@@ -1593,8 +1592,8 @@ S32-io/open.t......................................  27    0    0    0   27
 S32-io/other.t.....................................  61    0    0    0   61
 S32-io/pipe.t......................................  14    0    0    0   14
 S32-io/rename.t....................................  29    0    0    0   29
-S32-io/seek.t......................................   0    3    0    0    3
-     3 tests aborted (missing ok/not ok)
+S32-io/seek.rakudo.jvm.............................   0    0    0    3    3
+     3 skipped: Method 'sink' not found for invocant of class 'BOOTIO'
 S32-io/slurp.t.....................................  17    0    0    0   17
 S32-io/socket-accept-and-working-threads.t.........  10    0    0    0   10
 S32-io/socket-fail-invalid-values.t................   4    0    0    0    4
@@ -1662,8 +1661,7 @@ S32-list/seq.rakudo.jvm............................  34    0    1    0   35
      1 todo   : Cannot assign immutable
 S32-list/skip.t....................................  24    0    0    0   24
 S32-list/sort.t....................................  35    0    0    0   35
-S32-list/squish.rakudo.jvm.........................  61    0    1    0   62
-     1 todo   : fails due to above failure
+S32-list/squish.t..................................  62    0    0    0   62
 S32-list/tail.t....................................  24    0    0    0   24
 S32-list/unique.rakudo.jvm.........................  38    0    0    1   39
      1 skipped: This Seq has already been iterated, RT  \#128720
@@ -2003,21 +2001,18 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
 "S16",         605,     0,    69,    87,   761,   798
-"S17",         925,     1,    17,    43,   986,  1069
+"S17",         925,     0,    17,    44,   986,  1069
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         409,     0,    13,     4,   426,   426
-"S32",       13737,     4,   216,   197, 14154, 12471
+"S32",       13739,     0,   215,   200, 14154, 12471
 "int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48566,     7,   873,  1609, 51055,131429
+"total",     48568,     2,   872,  1613, 51055,131429
 ----------------
 Failure summary:
 S03-operators/div.t 8 - div works with negative native
-S17-promise/nonblocking-await.rakudo.jvm aborted 1 test(s)
-S32-array/splice.rakudo.jvm 393 - Array.splice callable args
-S32-io/seek.t aborted 3 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
