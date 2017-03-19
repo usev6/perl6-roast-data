@@ -204,7 +204,7 @@ S02-types/baghash.rakudo.jvm....................... 242    0    2   21  265
      2 todo   : in flux
 S02-types/bool.t...................................  67    0    0    0   67
 S02-types/built-in.t...............................   1    0    0    0    1
-S02-types/capture.t................................  33    0    0    0   33
+S02-types/capture.t................................  37    0    0    0   37
 S02-types/catch_type_cast_mismatch.t...............  11    0    0    0   11
 S02-types/compact.rakudo.jvm.......................   2    0    3    5   10
      5 skipped: cat NYI RT  \#124456
@@ -340,8 +340,7 @@ S03-junctions/associative.t........................  10    0    0    0   10
 S03-junctions/autothreading.t...................... 106    0    0    0  106
 S03-junctions/boolean-context.t....................  74    0    0    0   74
 S03-junctions/misc.t............................... 144    0    0    0  144
-S03-metaops/cross.rakudo.jvm.......................  76    0    2    0   78
-     2 todo   : RT #130980
+S03-metaops/cross.t................................  78    0    0    0   78
 S03-metaops/eager-hyper.rakudo.jvm.................   7    0    1    0    8
      1 todo   : hyper NYI entirely, I guess RT #124517
 S03-metaops/hyper.rakudo.jvm....................... 395    0    1    7  403
@@ -354,8 +353,7 @@ S03-metaops/reduce.rakudo.jvm...................... 545    0    1    1  547
      1 skipped: RT  \#129153 Type check failed in binding to &b; expected Callable but got Int (2)
      1 todo   : item context
 S03-metaops/reverse.t..............................  68    0    0    0   68
-S03-metaops/zip.rakudo.jvm.........................  74    0    2    0   76
-     2 todo   : RT #130980
+S03-metaops/zip.t..................................  76    0    0    0   76
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
      1 todo   : Multi colonpair syntax not yet understood RT #124553
 S03-operators/also.rakudo.jvm......................   4    0    4    0    8
@@ -394,7 +392,7 @@ S03-operators/context-forcers.rakudo.jvm........... 104    0    0    2  106
      2 skipped: failure modes of Str.Numeric RT  \#124540
 S03-operators/context.t............................  39    0    0    0   39
 S03-operators/custom.t.............................   1    0    0    0    1
-S03-operators/div.t................................   8    1    0    0    9
+S03-operators/div.t................................   9    0    0    0    9
 S03-operators/equality.t...........................  46    0    0    0   46
 S03-operators/eqv.rakudo.jvm.......................  52    0    3    1   56
      1 skipped: huh?
@@ -802,7 +800,7 @@ S05-modifier/samemark.rakudo.jvm...................   0    0    0    8    8
 S05-modifier/sigspace.t............................  18    0    0    0   18
 S05-substitution/67222.t...........................   1    0    0    0    1
 S05-substitution/match.t...........................  18    0    0    0   18
-S05-substitution/subst.rakudo.jvm.................. 167    0    1   18  186
+S05-substitution/subst.rakudo.jvm.................. 168    0    1   18  187
      6 skipped: "ordbaseat NYI" RT  \#125753
      1 skipped: RT  \#114388 -- No such method 'subst-mutate' for invocant of type 'Any'
      1 skipped: at least one of the sub-tests leads to an UnwindException
@@ -830,8 +828,8 @@ S06-advanced/return.rakudo.jvm.....................  98    0    1    0   99
 S06-advanced/stub.rakudo.jvm.......................  12    0    0    1   13
      1 skipped: supersede NYI
 S06-advanced/wrap.rakudo.jvm.......................  82    0    4    0   86
-     1 todo   : ?
      1 todo   : callwith RT #124653
+     1 todo   : still returns 10, RT #77474
      1 todo   : temp and wrap
      1 todo   : temp and wrap RT #124654
 S06-currying/assuming-and-mmd.t....................   7    0    0    0    7
@@ -1370,7 +1368,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1724,7 +1723,7 @@ S32-str/comb.rakudo.jvm............................  70    0    2    8   80
      1 skipped: ordbaseat NYI
      6 skipped: weird error, looks like wrong multi is used, RT  \#128580
      2 todo   : NFG on JVM RT #124737
-S32-str/contains.t.................................  20    0    0    0   20
+S32-str/contains.t.................................  21    0    0    0   21
 S32-str/encode.rakudo.jvm..........................  25    0    7    6   38
      5 skipped: Only moar handles this
      1 skipped: We do not handle NDF yet RT  \#124687
@@ -1733,12 +1732,12 @@ S32-str/encode.rakudo.jvm..........................  25    0    7    6   38
      1 todo   : RT#107204 should say line and column or mention term(ination)
      2 todo   : builtin JVM cp1252 code folds these RT #124686
      1 todo   : uft-16
-S32-str/ends-with.t................................   8    0    0    0    8
+S32-str/ends-with.t................................   9    0    0    0    9
 S32-str/flip.rakudo.jvm............................  11    0    2    0   13
      2 todo   : NFG on JVM RT #124682
 S32-str/indent.t...................................  62    0    0    0   62
-S32-str/index.t....................................  46    0    0    0   46
-S32-str/indices.t..................................  24    0    0    0   24
+S32-str/index.t....................................  47    0    0    0   47
+S32-str/indices.t..................................  31    0    0    0   31
 S32-str/lc.t.......................................  18    0    0    0   18
 S32-str/length.rakudo.jvm..........................  28    0    1    0   29
      1 todo   : .codes weirdness on JVM, possibly NYI? RT #124742
@@ -1753,7 +1752,7 @@ S32-str/parse-base.rakudo.jvm...................... 106    0    2    2  110
      2 todo   : Invalid base-10 character
 S32-str/parse-names.t..............................  20    0    0    0   20
 S32-str/pos.t......................................   2    0    0    0    2
-S32-str/rindex.t...................................  45    0    0    0   45
+S32-str/rindex.t...................................  46    0    0    0   46
 S32-str/samecase.t.................................   8    0    0    0    8
 S32-str/samemark.rakudo.jvm........................   0    0    0    9    9
      9 skipped: samemark NYI
@@ -1804,8 +1803,8 @@ S32-str/sprintf-b.rakudo.jvm.......................  68    0   90    7  165
      1 todo   : "%b" with precision and negative argument not correct RT #124736
      1 todo   : RT #123979
 S32-str/sprintf.t.................................. 171    0    0    0  171
-S32-str/starts-with.t..............................   8    0    0    0    8
-S32-str/substr-eq.t................................  12    0    0    0   12
+S32-str/starts-with.t..............................   9    0    0    0    9
+S32-str/substr-eq.t................................  13    0    0    0   13
 S32-str/substr-rw.rakudo.jvm.......................  32    0    8    0   40
      8 todo   : NYI
 S32-str/substr.rakudo.jvm..........................  56    0    1    2   59
@@ -1987,10 +1986,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9186,     0,   149,   407,  9742,  9745
-"S03",        6149,     1,    73,    97,  6320,  6338
+"S02",        9190,     0,   149,   407,  9746,  9749
+"S03",        6154,     0,    69,    97,  6320,  6338
 "S04",        1464,     0,    60,    33,  1557,  1589
-"S05",        5759,     0,    93,   210,  6062,  6250
+"S05",        5760,     0,    93,   210,  6063,  6251
 "S06",        2153,     0,    67,    97,  2317,  2360
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2759,     0,    25,    40,  2824,  2824
@@ -2008,11 +2007,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         409,     0,    13,     4,   426,   426
-"S32",       13739,     0,   215,   200, 14154, 12471
+"S32",       13752,     0,   215,   200, 14167, 12484
 "int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48568,     2,   872,  1613, 51055,131429
+"total",     48591,     1,   868,  1613, 51073,131447
 ----------------
 Failure summary:
-S03-operators/div.t 8 - div works with negative native
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
