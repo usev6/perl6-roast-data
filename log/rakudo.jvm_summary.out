@@ -441,8 +441,8 @@ S03-operators/reduce-le1arg.rakudo.jvm.............  51    0    0    3   54
      1 skipped: ~> NYI RT  \#124531
 S03-operators/relational.rakudo.jvm................ 177    0    2    0  179
      2 todo   : RT #121987
-S03-operators/repeat.rakudo.jvm....................  60    0    0    2   62
-     2 skipped: OutOfMemoryError: Java heap space
+S03-operators/repeat.rakudo.jvm....................  60    0    0    3   63
+     3 skipped: OutOfMemoryError: Java heap space
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set.t................................ 292    0    0    0  292
 S03-operators/short-circuit.t......................  83    0    0    0   83
@@ -1297,7 +1297,7 @@ S16-io/eof.t.......................................   1    0    0    1    2
      1 skipped: Don't test reading /proc file if not in Linux
 S16-io/getc.t......................................   2    0    0    0    2
 S16-io/handles-between-threads.t...................   8    0    0    0    8
-S16-io/lines.rakudo.jvm............................ 210    0   48   60  318
+S16-io/lines.rakudo.jvm............................ 212    0   48   60  320
     60 skipped: test will be run below with fine grained fudging
     48 todo   : :nl-in and :chomp not working yet
 S16-io/newline.t...................................   6    0    0    0    6
@@ -1368,8 +1368,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1638,7 +1638,7 @@ S32-list/grep.rakudo.jvm...........................  32    0    0   12   44
 S32-list/head.t....................................  24    0    0    0   24
 S32-list/iterator.t................................  54    0    0    0   54
 S32-list/join.t....................................  38    0    0    0   38
-S32-list/map.rakudo.jvm............................  52    0    0    6   58
+S32-list/map.rakudo.jvm............................  54    0    0    6   60
      1 skipped: Too few positionals passed; expected 3 arguments but got 1; RT  \#125146
      1 skipped: Too few positionals passed; expected 5 arguments but got 4; RT  \#125146
      2 skipped: adverbial block RT  \#124752
@@ -1927,7 +1927,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1987,7 +1987,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9190,     0,   149,   407,  9746,  9749
-"S03",        6154,     0,    69,    97,  6320,  6338
+"S03",        6154,     0,    69,    98,  6321,  6339
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5760,     0,    93,   210,  6063,  6251
 "S06",        2153,     0,    67,    97,  2317,  2360
@@ -1999,7 +1999,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
-"S16",         605,     0,    69,    87,   761,   798
+"S16",         607,     0,    69,    87,   763,   800
 "S17",         925,     0,    17,    44,   986,  1069
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
@@ -2007,9 +2007,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         409,     0,    13,     4,   426,   426
-"S32",       13752,     0,   215,   200, 14167, 12484
-"int",        1340,     0,    10,    17,  1367,  1361
+"S32",       13754,     0,   215,   200, 14169, 12486
+"int",        1339,     1,    10,    17,  1367,  1361
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48592,     0,   868,  1613, 51073,131447
+"total",     48595,     1,   868,  1614, 51078,131452
 ----------------
-No failures!
+Failure summary:
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
