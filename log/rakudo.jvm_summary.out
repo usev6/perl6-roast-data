@@ -754,7 +754,7 @@ S05-modifier/continue.t............................  14    0    0    0   14
 S05-modifier/counted-match.t.......................  29    0    0    0   29
 S05-modifier/counted.t............................. 126    0    0    0  126
 S05-modifier/global.t..............................   8    0    0    0    8
-S05-modifier/ignorecase.rakudo.jvm.................  23    0   13    0   36
+S05-modifier/ignorecase.rakudo.jvm.................  24    1   13    0   38
      2 todo   : ignorecase and SS/&szlig; RT #121377
      1 todo   : ligatures don't casefold on JVM
     10 todo   : ligatures in the haystack of case insensensitive regex don't work
@@ -1335,10 +1335,9 @@ S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
 S17-promise/basic.t................................  29    0    0    0   29
 S17-promise/in.t...................................   3    0    0    0    3
-S17-promise/nonblocking-await.rakudo.jvm...........   5    1    0   13   19
-    12 skipped: hangs on JVM
+S17-promise/nonblocking-await.rakudo.jvm...........   5    0    0   14   19
+    13 skipped: hangs on JVM
      1 skipped: hangs on JVM (sometimes)
-     1 tests aborted (missing ok/not ok)
 S17-promise/start.t................................  58    0    0    0   58
 S17-promise/stress.t...............................   1    0    0    0    1
 S17-promise/then.t.................................  14    0    0    0   14
@@ -1962,52 +1961,39 @@ integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
 integration/eval-and-threads.t.....................   1    0    0    0    1
-integration/failure-and-callsame.t.................   0   50    0    0   50
-    50 tests aborted (missing ok/not ok)
-integration/lazy-bentley-generator.t...............   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
-integration/lexical-array-in-inner-block.t.........   0    2    0    0    2
-     2 tests aborted (missing ok/not ok)
-integration/lexicals-and-attributes.t..............   0    8    0    0    8
-     8 tests aborted (missing ok/not ok)
-integration/man-or-boy.t...........................   0    0    0    0    0
-integration/method-calls-and-instantiation.t.......   0    2    0    0    2
-     2 tests aborted (missing ok/not ok)
-integration/no-indirect-new.t......................   0    2    0    0    2
-     2 tests aborted (missing ok/not ok)
-integration/packages.t.............................   0    0    0    0    0
-integration/pair-in-array.t........................   0    3    0    0    3
-     3 tests aborted (missing ok/not ok)
-integration/passing-pair-class-to-sub.t............   0    2    0    0    2
-     2 tests aborted (missing ok/not ok)
-integration/real-strings.t.........................   0   20    0    0   20
-    20 tests aborted (missing ok/not ok)
-integration/role-composition-vs-attribute.rakudo...   0   10    0    0   10
-    10 tests aborted (missing ok/not ok)
-integration/rule-in-class-Str.t....................   0    3    0    0    3
-     3 tests aborted (missing ok/not ok)
-integration/say-crash.t............................   0    4    0    0    4
-     4 tests aborted (missing ok/not ok)
-integration/substr-after-match-in-gather-in-for.t..   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
-integration/topic_in_double_loop.t.................   0    5    0    0    5
-     5 tests aborted (missing ok/not ok)
-integration/variables-in-do.t......................   0    3    0    0    3
-     3 tests aborted (missing ok/not ok)
-integration/weird-errors.rakudo.jvm................   0   32    0    0   32
-    32 tests aborted (missing ok/not ok)
+integration/failure-and-callsame.t.................  50    0    0    0   50
+integration/lazy-bentley-generator.t...............   1    0    0    0    1
+integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
+integration/lexicals-and-attributes.t..............   8    0    0    0    8
+integration/man-or-boy.t...........................  10    0    0    0   10
+integration/method-calls-and-instantiation.t.......   2    0    0    0    2
+integration/no-indirect-new.t......................   2    0    0    0    2
+integration/packages.t.............................   3    0    0    0    3
+integration/pair-in-array.t........................   3    0    0    0    3
+integration/passing-pair-class-to-sub.t............   2    0    0    0    2
+integration/real-strings.t.........................  20    0    0    0   20
+integration/role-composition-vs-attribute.rakudo...   6    0    0    4   10
+     2 skipped: alas, no visibility of native private attributes yet
+     2 skipped: alas, no visibility of private attributes in other role
+integration/rule-in-class-Str.t....................   3    0    0    0    3
+integration/say-crash.t............................   4    0    0    0    4
+integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
+integration/topic_in_double_loop.t.................   5    0    0    0    5
+integration/variables-in-do.t......................   3    0    0    0    3
+integration/weird-errors.rakudo.jvm................  29    0    2    1   32
+     1 skipped: RT127208
+     1 todo   : Feels like a bogus test in light of recent changes
+     1 todo   : Unknown encoding 'utf8-c8' RT #127878
                                                    pass fail todo skip plan
-rosettacode/greatest_element_of_a_list.t...........   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
-rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
+rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
+rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9189,     4,   149,   407,  9749,  9752
 "S03",        6162,     1,    69,    98,  6330,  6348
 "S04",        1464,     0,    60,    33,  1557,  1589
-"S05",        5761,     0,   104,   210,  6075,  6263
+"S05",        5762,     1,   104,   210,  6077,  6265
 "S06",        2153,     0,    67,    97,  2317,  2360
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2759,     0,    25,    40,  2824,  2824
@@ -2018,7 +2004,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
 "S16",         607,     0,    69,    87,   763,   800
-"S17",         925,     1,    17,    43,   986,  1069
+"S17",         925,     0,    17,    44,   986,  1069
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          28,     0,     0,     0,    28,    99
@@ -2026,31 +2012,13 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       13754,     0,   215,   200, 14169, 12486
-"int",        1186,   149,     8,    12,  1355,  1352
-"ros",           0,     2,     0,     0,     2,     2
-"total",     48471,   157,   877,  1608, 51113,131490
+"int",        1340,     1,    10,    17,  1368,  1362
+"ros",           2,     0,     0,     0,     2,     2
+"total",     48628,     7,   879,  1614, 51128,131502
 ----------------
 Failure summary:
 S02-types/array-shapes.rakudo.jvm aborted 3 test(s)
 S02-types/native.rakudo.jvm 92 - using native types as named parameters
 S03-operators/increment.rakudo.jvm 16 - can't postincrement a literal number
-S17-promise/nonblocking-await.rakudo.jvm aborted 1 test(s)
+S05-modifier/ignorecase.rakudo.jvm 37 - case insensitive regex works for haystacks which have synthetic graphemes
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/failure-and-callsame.t aborted 50 test(s)
-integration/lazy-bentley-generator.t aborted 1 test(s)
-integration/lexical-array-in-inner-block.t aborted 2 test(s)
-integration/lexicals-and-attributes.t aborted 8 test(s)
-integration/method-calls-and-instantiation.t aborted 2 test(s)
-integration/no-indirect-new.t aborted 2 test(s)
-integration/pair-in-array.t aborted 3 test(s)
-integration/passing-pair-class-to-sub.t aborted 2 test(s)
-integration/real-strings.t aborted 20 test(s)
-integration/role-composition-vs-attribute.rakudo. aborted 10 test(s)
-integration/rule-in-class-Str.t aborted 3 test(s)
-integration/say-crash.t aborted 4 test(s)
-integration/substr-after-match-in-gather-in-for.t aborted 1 test(s)
-integration/topic_in_double_loop.t aborted 5 test(s)
-integration/variables-in-do.t aborted 3 test(s)
-integration/weird-errors.rakudo.jvm aborted 32 test(s)
-rosettacode/greatest_element_of_a_list.t aborted 1 test(s)
-rosettacode/sierpinski_triangle.t aborted 1 test(s)
