@@ -184,9 +184,9 @@ S02-types/WHICH.rakudo.jvm.........................1566    0    0   44 1610
 S02-types/anon_block.rakudo.jvm....................  39    0    1    2   42
      2 skipped: tests don't work if previous test fails
      1 todo   : Parrot support for zero-arg subs?
-S02-types/array-shapes.rakudo.jvm..................  29    3    2    0   34
+S02-types/array-shapes.rakudo.jvm..................  29    0    2    3   34
+     3 skipped: Cannot modify an immutable Int
      2 todo   : code does not die, array shapes RT #124502
-     3 tests aborted (missing ok/not ok)
 S02-types/array.rakudo.jvm.........................  98    0    3    2  103
      2 skipped: multi-dim arrays NYI RT  \#124508
      1 todo   : bind_pos NYI
@@ -271,7 +271,7 @@ S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
      4 skipped: multi-dim sized arrays NYI RT  \#124483
 S02-types/nan.rakudo.jvm...........................  28    0    0    1   29
      1 skipped: RT  \#83446
-S02-types/native.rakudo.jvm........................  68    1   20    3   92
+S02-types/native.rakudo.jvm........................  69    0   20    3   92
      3 skipped: cannot unbox to a native number
      1 todo   : RT #102416 - though maybe wrong test? Not sure .WHAT is *that* magic
      3 todo   : native int args do not truncate, yet
@@ -405,8 +405,8 @@ S03-operators/gcd.t................................  19    0    0    0   19
 S03-operators/identity.rakudo.jvm..................  37    0    8    0   45
      4 todo   : misuse of =:= RT #124537
      4 todo   : unspecced
-S03-operators/increment.rakudo.jvm.................  35    1    3    0   39
-     3 todo   : RT #126531
+S03-operators/increment.rakudo.jvm.................  35    0    4    0   39
+     4 todo   : RT #126531
 S03-operators/infixed-function.t...................   5    0    0    0    5
 S03-operators/inplace.rakudo.jvm...................  27    0    0    4   31
      4 skipped: Method '' not found for invocant of class 'Str' RT  \#124528
@@ -754,7 +754,8 @@ S05-modifier/continue.t............................  14    0    0    0   14
 S05-modifier/counted-match.t.......................  29    0    0    0   29
 S05-modifier/counted.t............................. 126    0    0    0  126
 S05-modifier/global.t..............................   8    0    0    0    8
-S05-modifier/ignorecase.rakudo.jvm.................  24    1   13    0   38
+S05-modifier/ignorecase.rakudo.jvm.................  24    0   14    0   38
+     1 todo   : NFG NYI on JVM
      2 todo   : ignorecase and SS/&szlig; RT #121377
      1 todo   : ligatures don't casefold on JVM
     10 todo   : ligatures in the haystack of case insensensitive regex don't work
@@ -1961,39 +1962,52 @@ integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
 integration/eval-and-threads.t.....................   1    0    0    0    1
-integration/failure-and-callsame.t.................  50    0    0    0   50
-integration/lazy-bentley-generator.t...............   1    0    0    0    1
-integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
-integration/lexicals-and-attributes.t..............   8    0    0    0    8
-integration/man-or-boy.t...........................  10    0    0    0   10
-integration/method-calls-and-instantiation.t.......   2    0    0    0    2
-integration/no-indirect-new.t......................   2    0    0    0    2
-integration/packages.t.............................   3    0    0    0    3
-integration/pair-in-array.t........................   3    0    0    0    3
-integration/passing-pair-class-to-sub.t............   2    0    0    0    2
-integration/real-strings.t.........................  20    0    0    0   20
-integration/role-composition-vs-attribute.rakudo...   6    0    0    4   10
-     2 skipped: alas, no visibility of native private attributes yet
-     2 skipped: alas, no visibility of private attributes in other role
-integration/rule-in-class-Str.t....................   3    0    0    0    3
-integration/say-crash.t............................   4    0    0    0    4
-integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
-integration/topic_in_double_loop.t.................   5    0    0    0    5
-integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.rakudo.jvm................  29    0    2    1   32
-     1 skipped: RT127208
-     1 todo   : Feels like a bogus test in light of recent changes
-     1 todo   : Unknown encoding 'utf8-c8' RT #127878
+integration/failure-and-callsame.t.................   0   50    0    0   50
+    50 tests aborted (missing ok/not ok)
+integration/lazy-bentley-generator.t...............   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+integration/lexical-array-in-inner-block.t.........   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/lexicals-and-attributes.t..............   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/man-or-boy.t...........................   0    0    0    0    0
+integration/method-calls-and-instantiation.t.......   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/no-indirect-new.t......................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/packages.t.............................   0    0    0    0    0
+integration/pair-in-array.t........................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/passing-pair-class-to-sub.t............   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/real-strings.t.........................   0   20    0    0   20
+    20 tests aborted (missing ok/not ok)
+integration/role-composition-vs-attribute.rakudo...   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+integration/rule-in-class-Str.t....................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/say-crash.t............................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/substr-after-match-in-gather-in-for.t..   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+integration/topic_in_double_loop.t.................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+integration/variables-in-do.t......................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/weird-errors.rakudo.jvm................   0   32    0    0   32
+    32 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
-rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
+rosettacode/greatest_element_of_a_list.t...........   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9189,     4,   149,   407,  9749,  9752
-"S03",        6162,     1,    69,    98,  6330,  6348
+"S02",        9190,     0,   149,   410,  9749,  9752
+"S03",        6162,     0,    70,    98,  6330,  6348
 "S04",        1464,     0,    60,    33,  1557,  1589
-"S05",        5762,     1,   104,   210,  6077,  6265
+"S05",        5762,     0,   105,   210,  6077,  6265
 "S06",        2153,     0,    67,    97,  2317,  2360
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2759,     0,    25,    40,  2824,  2824
@@ -2012,13 +2026,27 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       13754,     0,   215,   200, 14169, 12486
-"int",        1340,     1,    10,    17,  1368,  1362
-"ros",           2,     0,     0,     0,     2,     2
-"total",     48628,     7,   879,  1614, 51128,131502
+"int",        1186,   149,     8,    12,  1355,  1352
+"ros",           0,     2,     0,     0,     2,     2
+"total",     48473,   151,   879,  1612, 51115,131492
 ----------------
 Failure summary:
-S02-types/array-shapes.rakudo.jvm aborted 3 test(s)
-S02-types/native.rakudo.jvm 92 - using native types as named parameters
-S03-operators/increment.rakudo.jvm 16 - can't postincrement a literal number
-S05-modifier/ignorecase.rakudo.jvm 37 - case insensitive regex works for haystacks which have synthetic graphemes
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+integration/failure-and-callsame.t aborted 50 test(s)
+integration/lazy-bentley-generator.t aborted 1 test(s)
+integration/lexical-array-in-inner-block.t aborted 2 test(s)
+integration/lexicals-and-attributes.t aborted 8 test(s)
+integration/method-calls-and-instantiation.t aborted 2 test(s)
+integration/no-indirect-new.t aborted 2 test(s)
+integration/pair-in-array.t aborted 3 test(s)
+integration/passing-pair-class-to-sub.t aborted 2 test(s)
+integration/real-strings.t aborted 20 test(s)
+integration/role-composition-vs-attribute.rakudo. aborted 10 test(s)
+integration/rule-in-class-Str.t aborted 3 test(s)
+integration/say-crash.t aborted 4 test(s)
+integration/substr-after-match-in-gather-in-for.t aborted 1 test(s)
+integration/topic_in_double_loop.t aborted 5 test(s)
+integration/variables-in-do.t aborted 3 test(s)
+integration/weird-errors.rakudo.jvm aborted 32 test(s)
+rosettacode/greatest_element_of_a_list.t aborted 1 test(s)
+rosettacode/sierpinski_triangle.t aborted 1 test(s)
