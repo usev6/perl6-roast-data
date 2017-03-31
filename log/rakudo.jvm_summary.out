@@ -1372,7 +1372,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1932,7 +1933,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -2014,10 +2015,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       13764,    25,   215,   200, 14204, 12521
-"int",        1340,     1,    10,    17,  1368,  1362
+"int",        1341,     0,    10,    17,  1368,  1362
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48656,    26,   881,  1617, 51180,131567
+"total",     48657,    25,   881,  1617, 51180,131567
 ----------------
 Failure summary:
 S32-io/open.t aborted 25 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
