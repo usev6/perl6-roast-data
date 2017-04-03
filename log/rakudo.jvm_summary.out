@@ -626,7 +626,7 @@ S05-capture/caps.t.................................  43    0    0    0   43
 S05-capture/dot.rakudo.jvm.........................  55    0    6    0   61
      3 todo   : dubious test RT #125004
      3 todo   : dubious test RT #125005
-S05-capture/match-object.rakudo.jvm................  39    0    1    3   43
+S05-capture/match-object.rakudo.jvm................  40    0    1    3   44
      1 skipped: No such method pos for invocant of type Any RT  \#124999
      2 skipped: Undeclared name: NFD, RT  \#130458
      1 todo   : Type of $¢ is Any instead of Cursor - RT #124998
@@ -1318,7 +1318,7 @@ S16-io/split.t.....................................  18    0    0    0   18
 S16-io/supply.rakudo.jvm...........................   3    0    4    0    7
      2 todo   : RT #128041
      2 todo   : got: $["ab", "cd", "e"]
-S16-io/tmpdir.t....................................   3    0    0    0    3
+S16-io/tmpdir.t....................................   7    0    0    0    7
 S16-io/words.t.....................................   9    0    0    0    9
 S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT  \#125041
@@ -1574,7 +1574,7 @@ S32-io/dir.rakudo.jvm..............................  10    0    3    1   14
      1 todo   : directories are not marked with trailing / yet RT #124784
      1 todo   : dirname is not yet absolute RT #124786
 S32-io/file-tests.t................................  35    0    0    0   35
-S32-io/indir.t.....................................   2    0    0    0    2
+S32-io/indir.t.....................................  74    0    0    0   74
 S32-io/io-handle.rakudo.jvm........................   2    0    1    0    3
      1 todo   : RT #123888
 S32-io/io-path-cygwin.rakudo.jvm...................  51    0    1    0   52
@@ -1995,7 +1995,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9190,     0,   149,   410,  9749,  9752
 "S03",        6160,     2,    70,    98,  6330,  6348
 "S04",        1464,     0,    60,    33,  1557,  1589
-"S05",        5762,     0,   105,   210,  6077,  6265
+"S05",        5763,     0,   105,   210,  6078,  6266
 "S06",        2149,     4,    67,    97,  2317,  2360
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2776,     0,    25,    40,  2841,  2841
@@ -2005,7 +2005,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         395,     1,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
-"S16",         607,     0,    69,    87,   763,   800
+"S16",         611,     0,    69,    87,   767,   804
 "S17",         925,     0,    17,    44,   986,  1069
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
@@ -2013,10 +2013,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       13763,    27,   215,   200, 14205, 12522
+"S32",       13835,    27,   215,   200, 14277, 12594
 "int",        1338,     3,    10,    17,  1368,  1362
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48645,    38,   881,  1617, 51181,131568
+"total",     48722,    38,   881,  1617, 51258,131645
 ----------------
 Failure summary:
 S03-junctions/misc.t 142 - Do not try to auto-thread Junction type object (only case)
