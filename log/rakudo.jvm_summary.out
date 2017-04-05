@@ -982,7 +982,7 @@ S06-traits/misc.rakudo.jvm.........................  15    0    6    0   21
      2 todo   : is readonly does not override
 S06-traits/native-is-copy.t........................  15    0    0    0   15
 S06-traits/native-is-rw.t..........................  48    0    0    0   48
-S06-traits/precedence.rakudo.jvm...................  14    0    1    0   15
+S06-traits/precedence.rakudo.jvm...................  15    0    1    0   16
      1 todo   : changing precedence of already declared op
 S06-traits/slurpy-is-rw.t..........................   3    0    0    0    3
                                                    pass fail todo skip plan
@@ -1933,7 +1933,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1997,7 +1997,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        6160,     2,    70,    98,  6330,  6348
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5763,     0,   105,   210,  6078,  6266
-"S06",        2149,     4,    67,    97,  2317,  2360
+"S06",        2150,     4,    67,    97,  2318,  2361
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2776,     0,    25,    40,  2841,  2841
 "S10",         138,     0,     7,     1,   146,   203
@@ -2015,9 +2015,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       13913,    33,   215,   198, 14359, 12672
-"int",        1339,     2,    10,    17,  1368,  1362
+"int",        1338,     3,    10,    17,  1368,  1362
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48801,    45,   879,  1615, 51340,131723
+"total",     48801,    46,   879,  1615, 51341,131724
 ----------------
 Failure summary:
 S02-types/int-uint.rakudo.jvm 71 - setting int64 to more than 9223372036854775807 throws
@@ -2034,5 +2034,6 @@ S32-exceptions/misc.rakudo.jvm 252 - did we throws-like X::TypeCheck::Binding?
 S32-exceptions/misc.rakudo.jvm 377 - did we throws-like X::TypeCheck::Binding?
 S32-io/chdir-process.t aborted 6 test(s)
 S32-io/open.t aborted 25 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
 integration/code-blocks-as-sub-args.t 1 - pointy block is not a sub
 integration/code-blocks-as-sub-args.t 3 - pointy block is not a sub (with optional last arg)
