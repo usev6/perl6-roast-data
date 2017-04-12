@@ -271,7 +271,7 @@ S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
      4 skipped: multi-dim sized arrays NYI RT  \#124483
 S02-types/nan.rakudo.jvm...........................  28    0    0    1   29
      1 skipped: RT  \#83446
-S02-types/native.rakudo.jvm........................  69    0   20    3   92
+S02-types/native.rakudo.jvm........................  69    1   20    3   93
      3 skipped: cannot unbox to a native number
      1 todo   : RT #102416 - though maybe wrong test? Not sure .WHAT is *that* magic
      3 todo   : native int args do not truncate, yet
@@ -339,7 +339,7 @@ S03-feeds/basic.rakudo.jvm.........................   9    0    6    8   23
 S03-junctions/associative.t........................  10    0    0    0   10
 S03-junctions/autothreading.t...................... 106    0    0    0  106
 S03-junctions/boolean-context.t....................  74    0    0    0   74
-S03-junctions/misc.t............................... 143    1    0    0  144
+S03-junctions/misc.t............................... 144    0    0    0  144
 S03-metaops/cross.t................................  78    0    0    0   78
 S03-metaops/eager-hyper.rakudo.jvm.................   7    0    1    0    8
      1 todo   : hyper NYI entirely, I guess RT #124517
@@ -458,7 +458,7 @@ S03-sequence/arity-2-or-more.t.....................  20    0    0    0   20
 S03-sequence/arity0.t..............................  13    0    0    0   13
 S03-sequence/basic.t............................... 143    0    0    0  143
 S03-sequence/limit-arity-2-or-more.t...............   8    0    0    0    8
-S03-sequence/misc.t................................  29    1    0    0   30
+S03-sequence/misc.t................................  30    0    0    0   30
 S03-sequence/nonnumeric.rakudo.jvm.................  27    0    0   17   44
     11 skipped: hangs RT  \#125049
      6 skipped: lifting comparison ops RT  \#125050
@@ -836,11 +836,11 @@ S06-advanced/wrap.rakudo.jvm.......................  82    0    4    0   86
      1 todo   : temp and wrap
      1 todo   : temp and wrap RT #124654
 S06-currying/assuming-and-mmd.t....................   7    0    0    0    7
-S06-currying/misc.rakudo.jvm.......................  10    1    0    2   13
+S06-currying/misc.rakudo.jvm.......................  11    0    0    2   13
      1 skipped: NullPointerException
      1 skipped: We could do better here
-S06-currying/named.t...............................  26    1    0    0   27
-S06-currying/positional.t.......................... 225    2    0    0  227
+S06-currying/named.t...............................  27    0    0    0   27
+S06-currying/positional.t.......................... 227    0    0    0  227
 S06-currying/slurpy.t..............................  32    0    0    0   32
 S06-macros/errors.t................................   2    0    0    0    2
 S06-macros/opaque-ast.rakudo.jvm...................   3    0    0    4    7
@@ -1121,7 +1121,7 @@ S12-class/self-inheritance.t.......................   2    0    0    0    2
 S12-class/stubs.rakudo.jvm.........................   7    0    1    0    8
      1 todo   : nom regression RT #125044
 S12-class/type-object.t............................   6    0    0    0    6
-S12-coercion/coercion-types.rakudo.jvm.............   7    1    1   12   21
+S12-coercion/coercion-types.rakudo.jvm.............   8    0    1   12   21
      3 skipped: NYI RT  \#124840
      2 skipped: NYI RT  \#124841
      1 skipped: Proc::Async NYI RT  \#126524
@@ -1234,7 +1234,7 @@ S14-roles/parameter-subtyping.t....................  22    0    0    0   22
 S14-roles/parameterized-basic.t....................  36    0    0    0   36
 S14-roles/parameterized-mixin.rakudo.jvm...........  26    0    4    0   30
      4 todo   : .does with parametric roles RT #124746
-S14-roles/parameterized-type.t.....................  31    1    0    0   32
+S14-roles/parameterized-type.t.....................  32    0    0    0   32
 S14-roles/stubs.t..................................  28    0    0    0   28
 S14-roles/submethods.t.............................   4    0    0    0    4
 S14-traits/attributes.t............................   8    0    0    0    8
@@ -1274,9 +1274,10 @@ S16-filehandles/argfiles.rakudo.jvm................  15    0    1    0   16
 S16-filehandles/chmod.t............................  16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  11    0    0    0   11
-S16-filehandles/filetest.rakudo.jvm................  35    0    0    9   44
+S16-filehandles/filetest.rakudo.jvm................  36   83    0    9  128
      6 skipped: :M, :C, :A
      3 skipped: no file README
+    83 tests aborted (missing ok/not ok)
 S16-filehandles/io.rakudo.jvm...................... 108    0    5    0  113
      1 todo   : Will fail due to above failure RT #125082
      1 todo   : builtin JVM charset folds these RT #124686
@@ -1374,8 +1375,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1537,7 +1537,7 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT  \#124907
-S32-exceptions/misc.rakudo.jvm..................... 411    2   11    3  427
+S32-exceptions/misc.rakudo.jvm..................... 413    0   11    3  427
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
      1 skipped: failure assignment still blows up on JVM, RT  \#125769
@@ -1945,7 +1945,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1971,7 +1971,7 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
      1 skipped: sometimes hangs, sometimes segfaults
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
-integration/code-blocks-as-sub-args.t..............   2    2    0    0    4
+integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
@@ -2005,20 +2005,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9193,     2,   146,   410,  9751,  9754
-"S03",        6160,     2,    70,    98,  6330,  6348
+"S02",        9193,     3,   146,   410,  9752,  9755
+"S03",        6162,     0,    70,    98,  6330,  6348
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5763,     0,   105,   210,  6078,  6266
-"S06",        2150,     4,    67,    97,  2318,  2361
+"S06",        2154,     0,    67,    97,  2318,  2361
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2776,     0,    25,    40,  2841,  2841
 "S10",         139,     0,     7,     1,   147,   204
 "S11",         178,     0,     9,    13,   200,   210
-"S12",        1667,     1,    34,   137,  1839,  1894
+"S12",        1668,     0,    34,   137,  1839,  1894
 "S13",          64,     0,     0,     0,    64,    74
-"S14",         395,     1,     5,     5,   406,   419
+"S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
-"S16",         614,     0,    69,    87,   770,   807
+"S16",         615,    83,    69,    87,   854,   891
 "S17",         926,     0,    17,    44,   987,  1070
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
@@ -2026,25 +2026,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14048,    39,   215,   198, 14500, 12820
-"int",        1338,     3,    10,    17,  1368,  1362
+"S32",       14050,    37,   215,   198, 14500, 12820
+"int",        1341,     0,    10,    17,  1368,  1362
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48949,    53,   880,  1616, 51498,131889
+"total",     48963,   124,   880,  1616, 51583,131974
 ----------------
 Failure summary:
 S02-types/int-uint.rakudo.jvm 71 - setting int64 to more than 9223372036854775807 throws
 S02-types/int-uint.rakudo.jvm 72 - setting int64 to less than -9223372036854775808 throws
-S03-junctions/misc.t 142 - Do not try to auto-thread Junction type object (only case)
-S03-sequence/misc.t 3 - sequence terminated by signature mismatch
-S06-currying/misc.rakudo.jvm 12 - Backtrace mentions priming and does not mention currying
-S06-currying/named.t 27 - Priming :(Str :$a!) with \(:a) mixed in a Failure 
-S06-currying/positional.t 219 - Priming :(Str $a) with \(1) mixed in a Failure 
-S06-currying/positional.t 220 - Priming :(Str $a) with \(1) mixed in a Failure 
-S12-coercion/coercion-types.rakudo.jvm 4 - coercion type still type-checks
-S14-roles/parameterized-type.t 31 - error message mentions expected type when a typed array in a signature fails to bind
+S02-types/native.rakudo.jvm 93 - a too large argument for a native parameter should throw
+S16-filehandles/filetest.rakudo.jvm aborted 83 test(s)
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
-S32-exceptions/misc.rakudo.jvm 252 - did we throws-like X::TypeCheck::Binding?
-S32-exceptions/misc.rakudo.jvm 377 - did we throws-like X::TypeCheck::Binding?
 S32-io/chdir-process.t aborted 6 test(s)
 S32-io/io-path-extension.t aborted 2 test(s)
 S32-io/open.t aborted 25 test(s)
@@ -2052,6 +2044,3 @@ S32-io/spurt.t 39 - spurt utf8 \()
 S32-io/spurt.t 40 - spurt utf8 \() 
 S32-io/spurt.t 51 - spurt Buf \() 
 S32-io/spurt.t 52 - spurt Buf \() 
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/code-blocks-as-sub-args.t 1 - pointy block is not a sub
-integration/code-blocks-as-sub-args.t 3 - pointy block is not a sub (with optional last arg)
