@@ -754,11 +754,10 @@ S05-modifier/continue.t............................  14    0    0    0   14
 S05-modifier/counted-match.t.......................  29    0    0    0   29
 S05-modifier/counted.t............................. 126    0    0    0  126
 S05-modifier/global.t..............................   8    0    0    0    8
-S05-modifier/ignorecase.rakudo.jvm.................  24    0   14    0   38
+S05-modifier/ignorecase.rakudo.jvm.................  24   10    4    0   38
      1 todo   : NFG NYI on JVM
      2 todo   : ignorecase and SS/&szlig; RT #121377
      1 todo   : ligatures don't casefold on JVM
-    10 todo   : ligatures in the haystack of case insensensitive regex don't work
 S05-modifier/ii.rakudo.jvm.........................  23    0    0    0   23
 S05-modifier/my.rakudo.jvm.........................  22    0    2    0   24
      1 todo   : :our variables in regexes
@@ -1582,24 +1581,24 @@ S32-io/dir.rakudo.jvm..............................  10    0    3    1   14
      1 todo   : dirname is not yet absolute RT #124786
 S32-io/file-tests.t................................  35    0    0    0   35
 S32-io/indir.t.....................................  75    0    0    0   75
-S32-io/io-handle.rakudo.jvm........................   2    0    1    0    3
+S32-io/io-handle.rakudo.jvm........................  12    0    1    0   13
      1 todo   : RT #123888
-S32-io/io-path-cygwin.rakudo.jvm...................  51    0    1    0   52
-     1 todo   : resolve NYI, needs nqp::readlink RT #124781
+S32-io/io-path-cygwin.rakudo.jvm...................  33   19    0    0   52
+    19 tests aborted (missing ok/not ok)
 S32-io/io-path-extension.t......................... 273    0    0    0  273
 S32-io/io-path-subclasses.t........................   8    0    0    0    8
 S32-io/io-path-symlink.t...........................  12    0    0    0   12
 S32-io/io-path-unix.rakudo.jvm.....................  36    0    1    0   37
      1 todo   : resolve NYI, needs nqp::readlink RT #124782
-S32-io/io-path-win.rakudo.jvm......................  50    0    1    0   51
-     1 todo   : resolve NYI, needs nqp::readlink RT #124783
+S32-io/io-path-win.rakudo.jvm......................  33   18    0    0   51
+    18 tests aborted (missing ok/not ok)
 S32-io/io-path.t...................................  29    0    0    0   29
-S32-io/io-spec-cygwin.t............................ 113    0    0    2  115
-     2 skipped: cygwin on-platform tests
+S32-io/io-spec-cygwin.t............................  90   25    0    0  115
+    25 tests aborted (missing ok/not ok)
 S32-io/io-spec-qnx.t...............................  28    0    0    0   28
 S32-io/io-spec-unix.t.............................. 131    0    0    0  131
-S32-io/io-spec-win.t............................... 207    0    0    3  210
-     3 skipped: Win32ish on-platform tests
+S32-io/io-spec-win.t...............................   4  206    0    0  210
+   206 tests aborted (missing ok/not ok)
 S32-io/io-special.t................................  42    0    0    0   42
 S32-io/move.t......................................  29    0    0    0   29
 S32-io/note.t......................................   6    0    0    0    6
@@ -1609,7 +1608,7 @@ S32-io/open.rakudo.jvm.............................  44    0    0   18   62
      4 skipped: [io grant] NoSuchFileException: t-32-io-open.tmp
      4 skipped: [io grant] NoSuchFileException: t-32-io-open.tmp'
 S32-io/other.t.....................................  61    0    0    0   61
-S32-io/pipe.t......................................  14    0    0    0   14
+S32-io/pipe.t......................................  17    0    0    0   17
 S32-io/rename.t....................................  29    0    0    0   29
 S32-io/seek.rakudo.jvm.............................   0    0    0    3    3
      3 skipped: Method 'sink' not found for invocant of class 'BOOTIO'
@@ -2012,7 +2011,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9189,     0,   149,   410,  9748,  9751
 "S03",        6162,     0,    70,    98,  6330,  6348
 "S04",        1464,     0,    60,    33,  1557,  1589
-"S05",        5763,     0,   105,   210,  6078,  6266
+"S05",        5763,    10,    95,   210,  6078,  6266
 "S06",        2154,     0,    67,    97,  2318,  2361
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2776,     0,    25,    40,  2841,  2841
@@ -2030,11 +2029,25 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14370,     0,   219,   216, 14805, 13125
+"S32",       14122,   268,   217,   211, 14818, 13138
 "int",        1340,     1,    10,    17,  1368,  1362
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49357,     2,   887,  1638, 51884,132275
+"total",     49109,   280,   875,  1633, 51897,132288
 ----------------
 Failure summary:
+S05-modifier/ignorecase.rakudo.jvm 27 - :i haystack: 'nﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 28 - :i haystack: 'qeﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 29 - :i haystack: 'jikﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 30 - :i haystack: 'cvmlﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 31 - :i haystack: 'esnjyﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 32 - :i haystack: 'xdsocrﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 33 - :i haystack: 'jtewpuoﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 34 - :i haystack: 'lkdaoufzﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 35 - :i haystack: 'utzgyqvobﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 36 - :i haystack: 'fahlvktjrqﬆ' needle: 'st'
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
+S32-io/io-path-cygwin.rakudo.jvm aborted 19 test(s)
+S32-io/io-path-win.rakudo.jvm aborted 18 test(s)
+S32-io/io-spec-cygwin.t aborted 25 test(s)
+S32-io/io-spec-win.t aborted 206 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
