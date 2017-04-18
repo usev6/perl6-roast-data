@@ -1272,10 +1272,10 @@ S16-filehandles/argfiles.rakudo.jvm................  15    0    1    0   16
 S16-filehandles/chmod.t............................  16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
 S16-filehandles/filestat.t.........................  11    0    0    0   11
-S16-filehandles/filetest.rakudo.jvm................  34   85    0    9  128
+S16-filehandles/filetest.rakudo.jvm................ 115    0    0   13  128
      6 skipped: :M, :C, :A
+     4 skipped: [io grant] NoSuchFileException for open(:create)
      3 skipped: no file README
-    85 tests aborted (missing ok/not ok)
 S16-filehandles/io.rakudo.jvm...................... 108    0    5    0  113
      1 todo   : Will fail due to above failure RT #125082
      1 todo   : builtin JVM charset folds these RT #124686
@@ -1373,8 +1373,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1401,7 +1400,8 @@ S17-supply/syntax-nonblocking-await.t..............   5    0    0    0    5
 S17-supply/syntax.rakudo.jvm.......................  70    0    2    0   72
      2 todo   : got: '42'
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................   8    9    0    0   17
+     7 tests aborted (missing ok/not ok)
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1570,8 +1570,7 @@ S32-io/IO-Socket-Async.rakudo.jvm..................   9    0    0    7   16
      1 skipped: hangs on JVM
 S32-io/IO-Socket-INET.t............................   0    0    0   51   51
     51 skipped: Operating system not yet supported
-S32-io/chdir.t.....................................   8   73    0    0   81
-    73 tests aborted (missing ok/not ok)
+S32-io/chdir.t.....................................  81    0    0    0   81
 S32-io/copy.t......................................  41    0    0    0   41
 S32-io/dir.rakudo.jvm..............................  10    0    3    1   14
      1 skipped: entries are still IO::Path RT  \#124785
@@ -1579,22 +1578,19 @@ S32-io/dir.rakudo.jvm..............................  10    0    3    1   14
      1 todo   : directories are not marked with trailing / yet RT #124784
      1 todo   : dirname is not yet absolute RT #124786
 S32-io/file-tests.t................................  35    0    0    0   35
-S32-io/indir.t.....................................   0   75    0    0   75
-    75 tests aborted (missing ok/not ok)
+S32-io/indir.t.....................................  75    0    0    0   75
 S32-io/io-handle.rakudo.jvm........................  12    0    1    0   13
      1 todo   : RT #123888
 S32-io/io-path-cygwin.rakudo.jvm...................  33   19    0    0   52
     19 tests aborted (missing ok/not ok)
 S32-io/io-path-extension.t......................... 273    0    0    0  273
 S32-io/io-path-subclasses.t........................   8    0    0    0    8
-S32-io/io-path-symlink.t...........................   0   12    0    0   12
-    12 tests aborted (missing ok/not ok)
-S32-io/io-path-unix.rakudo.jvm.....................  22   15    0    0   37
-    15 tests aborted (missing ok/not ok)
+S32-io/io-path-symlink.t...........................  12    0    0    0   12
+S32-io/io-path-unix.rakudo.jvm.....................  36    0    1    0   37
+     1 todo   : resolve NYI, needs nqp::readlink RT #124782
 S32-io/io-path-win.rakudo.jvm......................  33   18    0    0   51
     18 tests aborted (missing ok/not ok)
-S32-io/io-path.rakudo.jvm..........................  26    5    0    0   31
-     5 tests aborted (missing ok/not ok)
+S32-io/io-path.rakudo.jvm..........................  31    0    0    0   31
 S32-io/io-spec-cygwin.t............................  90   25    0    0  115
     25 tests aborted (missing ok/not ok)
 S32-io/io-spec-qnx.t...............................  28    0    0    0   28
@@ -1602,12 +1598,11 @@ S32-io/io-spec-unix.t.............................. 131    0    0    0  131
 S32-io/io-spec-win.t...............................   4  206    0    0  210
    206 tests aborted (missing ok/not ok)
 S32-io/io-special.t................................  42    0    0    0   42
-S32-io/lock.t......................................   0   28    0    0   28
-    28 tests aborted (missing ok/not ok)
+S32-io/lock.t......................................   6   22    0    0   28
+    22 tests aborted (missing ok/not ok)
 S32-io/move.t......................................  29    0    0    0   29
 S32-io/note.t......................................   6    0    0    0    6
-S32-io/null-char.t.................................   0   24    0    0   24
-    24 tests aborted (missing ok/not ok)
+S32-io/null-char.t.................................  24    0    0    0   24
 S32-io/open.rakudo.jvm.............................  44    0    0   18   62
     10 skipped: [io grant] IllegalArgumentException: READ + APPEND not allowed
      4 skipped: [io grant] NoSuchFileException: t-32-io-open.tmp
@@ -1623,8 +1618,8 @@ S32-io/socket-fail-invalid-values.t................   4    0    0    0    4
 S32-io/socket-host-port-split.rakudo.jvm...........   1    0    0    1    2
      1 skipped: Hangs on boxes without IPv6 support
 S32-io/socket-recv-vs-read.t.......................  11    0    0    0   11
-S32-io/spurt.rakudo.jvm............................  36   24    0    0   60
-    24 tests aborted (missing ok/not ok)
+S32-io/spurt.rakudo.jvm............................  56    0    4    0   60
+     4 todo   : [io grant] expected: Buf[uint8].new(200); got: Buf[uint8].new(200); maybe caused by RT #128041
 S32-list/batch.t...................................   4    0    0    0    4
 S32-list/categorize-list.t.........................  28    0    0    0   28
 S32-list/categorize.t..............................  28    0    0    0   28
@@ -1953,7 +1948,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -2026,41 +2021,37 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
-"S16",         613,    85,    69,    87,   854,   891
-"S17",         926,     0,    17,    44,   987,  1070
+"S16",         694,     0,    69,    91,   854,   891
+"S17",         917,     9,    17,    44,   987,  1070
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          32,     1,     0,     0,    33,   118
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       13905,   524,   212,   211, 14852, 13172
-"int",        1341,     0,    10,    17,  1368,  1362
+"S32",       14134,   290,   217,   211, 14852, 13172
+"int",        1340,     1,    10,    17,  1368,  1362
 "ros",           2,     0,     0,     0,     2,     2
-"total",     48817,   620,   869,  1628, 51934,132325
+"total",     49117,   311,   874,  1632, 51934,132325
 ----------------
 Failure summary:
-S05-modifier/ignorecase.rakudo.jvm 27 - :i haystack: 'qﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 28 - :i haystack: 'dxﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 29 - :i haystack: 'nutﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 30 - :i haystack: 'jgsnﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 31 - :i haystack: 'nearbﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 32 - :i haystack: 'axpwhjﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 33 - :i haystack: 'obnacehﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 34 - :i haystack: 'rmbowytkﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 35 - :i haystack: 'zaqxtjgdpﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 36 - :i haystack: 'apshgvndeiﬆ' needle: 'st'
-S16-filehandles/filetest.rakudo.jvm aborted 85 test(s)
+S05-modifier/ignorecase.rakudo.jvm 27 - :i haystack: 'zﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 28 - :i haystack: 'xqﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 29 - :i haystack: 'mozﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 30 - :i haystack: 'ndhxﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 31 - :i haystack: 'dmphuﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 32 - :i haystack: 'haxfzvﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 33 - :i haystack: 'qgbehtwﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 34 - :i haystack: 'vnwjhudeﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 35 - :i haystack: 'rlmswgzeiﬆ' needle: 'st'
+S05-modifier/ignorecase.rakudo.jvm 36 - :i haystack: 'ruobqyxafgﬆ' needle: 'st'
+S17-supply/throttle.t 9 - did we see all in the right order?
+S17-supply/throttle.t 10 - did we get the final status?
+S17-supply/throttle.t aborted 7 test(s)
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
-S32-io/chdir.t aborted 73 test(s)
-S32-io/indir.t aborted 75 test(s)
 S32-io/io-path-cygwin.rakudo.jvm aborted 19 test(s)
-S32-io/io-path-symlink.t aborted 12 test(s)
-S32-io/io-path-unix.rakudo.jvm aborted 15 test(s)
 S32-io/io-path-win.rakudo.jvm aborted 18 test(s)
-S32-io/io-path.rakudo.jvm aborted 5 test(s)
 S32-io/io-spec-cygwin.t aborted 25 test(s)
 S32-io/io-spec-win.t aborted 206 test(s)
-S32-io/lock.t aborted 28 test(s)
-S32-io/null-char.t aborted 24 test(s)
-S32-io/spurt.rakudo.jvm aborted 24 test(s)
+S32-io/lock.t aborted 22 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
