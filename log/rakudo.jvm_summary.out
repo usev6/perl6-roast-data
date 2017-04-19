@@ -752,10 +752,11 @@ S05-modifier/continue.t............................  14    0    0    0   14
 S05-modifier/counted-match.t.......................  29    0    0    0   29
 S05-modifier/counted.t............................. 126    0    0    0  126
 S05-modifier/global.t..............................   8    0    0    0    8
-S05-modifier/ignorecase.rakudo.jvm.................  24   10    4    0   38
+S05-modifier/ignorecase.rakudo.jvm.................  24    0   14    0   38
      1 todo   : NFG NYI on JVM
      2 todo   : ignorecase and SS/&szlig; RT #121377
      1 todo   : ligatures don't casefold on JVM
+    10 todo   : ligatures in the haystack of case insensensitive regex don't work
 S05-modifier/ii.rakudo.jvm.........................  23    0    0    0   23
 S05-modifier/my.rakudo.jvm.........................  22    0    2    0   24
      1 todo   : :our variables in regexes
@@ -1271,7 +1272,8 @@ S16-filehandles/argfiles.rakudo.jvm................  15    0    1    0   16
      1 todo   : RT #123888
 S16-filehandles/chmod.t............................  16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.t.........................  11    0    0    0   11
+S16-filehandles/filestat.rakudo.jvm................  10    0    0    1   11
+     1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 115    0    0   13  128
      6 skipped: :M, :C, :A
      4 skipped: [io grant] NoSuchFileException for open(:create)
@@ -1400,8 +1402,7 @@ S17-supply/syntax-nonblocking-await.t..............   5    0    0    0    5
 S17-supply/syntax.rakudo.jvm.......................  70    0    2    0   72
      2 todo   : got: '42'
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................   8    9    0    0   17
-     7 tests aborted (missing ok/not ok)
+S17-supply/throttle.t..............................  17    0    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1948,7 +1949,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1998,10 +1999,11 @@ integration/say-crash.t............................   4    0    0    0    4
 integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.rakudo.jvm................  29    0    2    1   32
+integration/weird-errors.rakudo.jvm................  23    7    2    1   33
      1 skipped: RT127208
      1 todo   : Feels like a bogus test in light of recent changes
      1 todo   : Unknown encoding 'utf8-c8' RT #127878
+     4 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
@@ -2011,7 +2013,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9189,     0,   149,   410,  9748,  9751
 "S03",        6162,     0,    70,    98,  6330,  6348
 "S04",        1464,     0,    60,    33,  1557,  1589
-"S05",        5768,    10,    94,   209,  6081,  6269
+"S05",        5768,     0,   104,   209,  6081,  6269
 "S06",        2154,     0,    67,    97,  2318,  2361
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2776,     0,    25,    40,  2841,  2841
@@ -2021,8 +2023,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
-"S16",         694,     0,    69,    91,   854,   891
-"S17",         917,     9,    17,    44,   987,  1070
+"S16",         693,     0,    69,    92,   854,   891
+"S17",         926,     0,    17,    44,   987,  1070
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          32,     1,     0,     0,    33,   118
@@ -2030,28 +2032,18 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       14134,   290,   217,   211, 14852, 13172
-"int",        1340,     1,    10,    17,  1368,  1362
+"int",        1335,     7,    10,    17,  1369,  1363
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49117,   311,   874,  1632, 51934,132325
+"total",     49120,   298,   884,  1633, 51935,132326
 ----------------
 Failure summary:
-S05-modifier/ignorecase.rakudo.jvm 27 - :i haystack: 'zﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 28 - :i haystack: 'xqﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 29 - :i haystack: 'mozﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 30 - :i haystack: 'ndhxﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 31 - :i haystack: 'dmphuﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 32 - :i haystack: 'haxfzvﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 33 - :i haystack: 'qgbehtwﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 34 - :i haystack: 'vnwjhudeﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 35 - :i haystack: 'rlmswgzeiﬆ' needle: 'st'
-S05-modifier/ignorecase.rakudo.jvm 36 - :i haystack: 'ruobqyxafgﬆ' needle: 'st'
-S17-supply/throttle.t 9 - did we see all in the right order?
-S17-supply/throttle.t 10 - did we get the final status?
-S17-supply/throttle.t aborted 7 test(s)
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S32-io/io-path-cygwin.rakudo.jvm aborted 19 test(s)
 S32-io/io-path-win.rakudo.jvm aborted 18 test(s)
 S32-io/io-spec-cygwin.t aborted 25 test(s)
 S32-io/io-spec-win.t aborted 206 test(s)
 S32-io/lock.t aborted 22 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+integration/weird-errors.rakudo.jvm 9 - can recurse many times into &EVAL
+integration/weird-errors.rakudo.jvm 12 - still able to parse statement after sub decl ending in newline
+integration/weird-errors.rakudo.jvm 27 - [;] does not explode the compiler
+integration/weird-errors.rakudo.jvm aborted 4 test(s)
