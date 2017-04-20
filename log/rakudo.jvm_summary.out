@@ -1599,8 +1599,11 @@ S32-io/io-spec-unix.t.............................. 131    0    0    0  131
 S32-io/io-spec-win.t...............................   4  206    0    0  210
    206 tests aborted (missing ok/not ok)
 S32-io/io-special.t................................  42    0    0    0   42
-S32-io/lock.t......................................   6   22    0    0   28
-    22 tests aborted (missing ok/not ok)
+S32-io/lock.rakudo.jvm.............................  12    2    3   11   28
+     6 skipped: Could not obtain blocking, shared lock: NonWritableChannelException
+     5 skipped: [io grant] hangs
+     3 todo   : [io grant] expected Failure, bot Bool
+     2 tests aborted (missing ok/not ok)
 S32-io/move.t......................................  29    0    0    0   29
 S32-io/note.t......................................   6    0    0    0    6
 S32-io/null-char.t.................................  24    0    0    0   24
@@ -1949,7 +1952,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1999,11 +2002,10 @@ integration/say-crash.t............................   4    0    0    0    4
 integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.rakudo.jvm................  23    7    2    1   33
+integration/weird-errors.rakudo.jvm................  30    0    2    1   33
      1 skipped: RT127208
      1 todo   : Feels like a bogus test in light of recent changes
      1 todo   : Unknown encoding 'utf8-c8' RT #127878
-     4 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
@@ -2031,10 +2033,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14134,   290,   217,   211, 14852, 13172
-"int",        1335,     7,    10,    17,  1369,  1363
+"S32",       14140,   270,   220,   222, 14852, 13172
+"int",        1341,     1,    10,    17,  1369,  1363
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49120,   298,   884,  1633, 51935,132326
+"total",     49132,   272,   887,  1644, 51935,132326
 ----------------
 Failure summary:
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
@@ -2042,8 +2044,5 @@ S32-io/io-path-cygwin.rakudo.jvm aborted 19 test(s)
 S32-io/io-path-win.rakudo.jvm aborted 18 test(s)
 S32-io/io-spec-cygwin.t aborted 25 test(s)
 S32-io/io-spec-win.t aborted 206 test(s)
-S32-io/lock.t aborted 22 test(s)
-integration/weird-errors.rakudo.jvm 9 - can recurse many times into &EVAL
-integration/weird-errors.rakudo.jvm 12 - still able to parse statement after sub decl ending in newline
-integration/weird-errors.rakudo.jvm 27 - [;] does not explode the compiler
-integration/weird-errors.rakudo.jvm aborted 4 test(s)
+S32-io/lock.rakudo.jvm aborted 2 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
