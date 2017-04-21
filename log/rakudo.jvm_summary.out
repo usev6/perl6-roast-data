@@ -1153,9 +1153,10 @@ S12-introspection/WHAT.rakudo.jvm..................  32    0    3    2   37
      2 skipped: Foo[Int].new on scalars fails
      1 todo   : Foo[Int,Str].new on scalars fails
      2 todo   : Foo[Int].new on scalars fails
-S12-introspection/attributes.rakudo.jvm............  28    0    0    8   36
+S12-introspection/attributes.rakudo.jvm............  29    0    1    8   38
      5 skipped: :tree NYI for .^attributes RT  \#125014
      3 skipped: StackOverflowError, RT  \#77070
+     1 todo   : RT #131174
 S12-introspection/can.t............................  29    0    0    0   29
 S12-introspection/definite.t.......................   7    0    0    0    7
 S12-introspection/meta-class.t.....................  17    0    0    0   17
@@ -1351,7 +1352,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT  \#124775
      3 skipped: waiting for new '.loads' semantics RT  \#124776
      2 skipped: waiting for new '.loads' semantics RT  \#124777
-S17-scheduler/every.t..............................  20    0    0    0   20
+S17-scheduler/every.t..............................  18    2    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
@@ -1599,11 +1600,10 @@ S32-io/io-spec-unix.t.............................. 131    0    0    0  131
 S32-io/io-spec-win.t...............................   4  206    0    0  210
    206 tests aborted (missing ok/not ok)
 S32-io/io-special.t................................  42    0    0    0   42
-S32-io/lock.rakudo.jvm.............................  12    2    3   11   28
-     6 skipped: Could not obtain blocking, shared lock: NonWritableChannelException
+S32-io/lock.rakudo.jvm.............................  12    0    3   13   28
+     8 skipped: [io grant] Could not obtain blocking, shared lock: NonWritableChannelException
      5 skipped: [io grant] hangs
      3 todo   : [io grant] expected Failure, bot Bool
-     2 tests aborted (missing ok/not ok)
 S32-io/move.t......................................  29    0    0    0   29
 S32-io/note.t......................................   6    0    0    0    6
 S32-io/null-char.t.................................  24    0    0    0   24
@@ -2021,28 +2021,29 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2776,     0,    25,    40,  2841,  2841
 "S10",         139,     0,     7,     1,   147,   204
 "S11",         178,     0,     9,    13,   200,   210
-"S12",        1668,     0,    34,   137,  1839,  1894
+"S12",        1669,     0,    35,   137,  1841,  1896
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
 "S16",         693,     0,    69,    92,   854,   891
-"S17",         926,     0,    17,    44,   987,  1070
+"S17",         924,     2,    17,    44,   987,  1070
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          32,     1,     0,     0,    33,   118
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14140,   270,   220,   222, 14852, 13172
+"S32",       14140,   268,   220,   224, 14852, 13172
 "int",        1341,     1,    10,    17,  1369,  1363
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49132,   272,   887,  1644, 51935,132326
+"total",     49131,   272,   888,  1646, 51937,132328
 ----------------
 Failure summary:
+S17-scheduler/every.t 19 - Cue with :every/:at/:catch schedules repeatedly (1)
+S17-scheduler/every.t 20 - Cue with :every/:at/:catch schedules repeatedly (2)
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S32-io/io-path-cygwin.rakudo.jvm aborted 19 test(s)
 S32-io/io-path-win.rakudo.jvm aborted 18 test(s)
 S32-io/io-spec-cygwin.t aborted 25 test(s)
 S32-io/io-spec-win.t aborted 206 test(s)
-S32-io/lock.rakudo.jvm aborted 2 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
