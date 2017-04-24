@@ -1376,7 +1376,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1965,7 +1966,7 @@ integration/advent2013-day09.t.....................  21    0    0    0   21
 integration/advent2013-day10.rakudo.jvm............  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.t.....................  32    0    0    0   32
-integration/advent2013-day14.t.....................   9    1    0    0   10
+integration/advent2013-day14.t.....................  10    0    0    0   10
 integration/advent2013-day15.rakudo.jvm............  29    0    1    0   30
      1 todo   : jvm rounding quirks
 integration/advent2013-day18.t.....................  10    0    0    0   10
@@ -2002,10 +2003,11 @@ integration/say-crash.t............................   4    0    0    0    4
 integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
 integration/topic_in_double_loop.t.................   5    0    0    0    5
 integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.rakudo.jvm................  30    0    2    1   33
+integration/weird-errors.rakudo.jvm................  28    2    2    1   33
      1 skipped: RT127208
      1 todo   : Feels like a bogus test in light of recent changes
      1 todo   : Unknown encoding 'utf8-c8' RT #127878
+     2 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
@@ -2034,11 +2036,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       14402,     0,   222,   229, 14853, 13173
-"int",        1340,     2,    10,    17,  1369,  1363
+"int",        1339,     3,    10,    17,  1369,  1363
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49448,     3,   890,  1651, 51992,132383
+"total",     49447,     4,   890,  1651, 51992,132383
 ----------------
 Failure summary:
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/advent2013-day14.t 2 - quotes example
+integration/weird-errors.rakudo.jvm aborted 2 test(s)
