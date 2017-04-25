@@ -160,16 +160,15 @@ S02-names/is_dynamic.t.............................  22    0    0    0   22
 S02-names/name.t...................................  24    0    0    0   24
 S02-names/our.rakudo.jvm...........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo.rakudo.jvm........................  69    0    6   69  144
+S02-names/pseudo.rakudo.jvm........................  80    0    4   69  153
      4 skipped: Cannot bind to &::("CORE")::foo RT  \#126113
      2 skipped: RT  \#123154
      4 skipped: the binding in here is NYI RT  \#124914
     23 skipped: various issues to resolve RT  \#124917
     36 skipped: various issues, skipping all for now RT  \#124915
-     2 todo   : RT #126523
+     1 todo   : RT #126523
      2 todo   : binding and interpolation together NYI
      1 todo   : interpolation and auto-viv NYI
-     1 todo   : not entirely sure these make sense...
 S02-names/strict.rakudo.jvm........................   5    0    0    1    6
      1 skipped: lax mode does not propagate into EVAL yet RT  \#124912
 S02-names/symbolic-deref.rakudo.jvm................  32    0    2    2   36
@@ -801,7 +800,7 @@ S05-modifier/samemark.rakudo.jvm...................   0    0    0    8    8
      8 skipped: ordbaseat NYI
 S05-modifier/sigspace.t............................  18    0    0    0   18
 S05-substitution/67222.t...........................   1    0    0    0    1
-S05-substitution/match.t...........................  18    0    0    0   18
+S05-substitution/match.t...........................  19    0    0    0   19
 S05-substitution/subst.rakudo.jvm.................. 169    0    1   18  188
      6 skipped: "ordbaseat NYI" RT  \#125753
      1 skipped: RT  \#114388 -- No such method 'subst-mutate' for invocant of type 'Any'
@@ -1323,7 +1322,7 @@ S16-io/supply.rakudo.jvm...........................   3    0    4    0    7
      2 todo   : RT #128041
      2 todo   : got: $["ab", "cd", "e"]
 S16-io/tmpdir.t....................................   9    0    0    0    9
-S16-io/words.t.....................................   9    0    0    0    9
+S16-io/words.t.....................................  10    0    0    0   10
 S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT  \#125041
      1 skipped: contextual rebinding regression RT  \#125042
@@ -1582,8 +1581,9 @@ S32-io/dir.rakudo.jvm..............................  11    0    3    1   15
      1 todo   : dirname is not yet absolute RT #124786
 S32-io/file-tests.t................................  35    0    0    0   35
 S32-io/indir.t.....................................  75    0    0    0   75
-S32-io/io-handle.rakudo.jvm........................  12    0    1    0   13
+S32-io/io-handle.rakudo.jvm........................  12    1    1    0   14
      1 todo   : RT #123888
+     1 tests aborted (missing ok/not ok)
 S32-io/io-path-cygwin.rakudo.jvm...................  51    0    1    0   52
      1 todo   : resolve NYI, needs nqp::readlink RT #124781
 S32-io/io-path-extension.t......................... 273    0    0    0  273
@@ -1623,7 +1623,7 @@ S32-io/socket-fail-invalid-values.t................   4    0    0    0    4
 S32-io/socket-host-port-split.rakudo.jvm...........   1    0    0    1    2
      1 skipped: Hangs on boxes without IPv6 support
 S32-io/socket-recv-vs-read.t.......................  11    0    0    0   11
-S32-io/spurt.rakudo.jvm............................  56    0    4    0   60
+S32-io/spurt.rakudo.jvm............................  56    1    4    0   61
      4 todo   : [io grant] expected: Buf[uint8].new(200); got: Buf[uint8].new(200); maybe caused by RT #128041
 S32-list/batch.t...................................   4    0    0    0    4
 S32-list/categorize-list.t.........................  28    0    0    0   28
@@ -1984,40 +1984,52 @@ integration/error-reporting.rakudo.jvm.............  30    0    2    0   32
      1 todo   : UnwindException
      1 todo   : nigh
 integration/eval-and-threads.t.....................   1    0    0    0    1
-integration/failure-and-callsame.t.................  50    0    0    0   50
-integration/lazy-bentley-generator.t...............   1    0    0    0    1
-integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
-integration/lexicals-and-attributes.t..............   8    0    0    0    8
-integration/man-or-boy.t...........................  10    0    0    0   10
-integration/method-calls-and-instantiation.t.......   2    0    0    0    2
-integration/no-indirect-new.t......................   2    0    0    0    2
-integration/packages.t.............................   3    0    0    0    3
-integration/pair-in-array.t........................   3    0    0    0    3
-integration/passing-pair-class-to-sub.t............   2    0    0    0    2
-integration/real-strings.t.........................  20    0    0    0   20
-integration/role-composition-vs-attribute.rakudo...   6    0    0    4   10
-     2 skipped: alas, no visibility of native private attributes yet
-     2 skipped: alas, no visibility of private attributes in other role
-integration/rule-in-class-Str.t....................   3    0    0    0    3
-integration/say-crash.t............................   4    0    0    0    4
-integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
-integration/topic_in_double_loop.t.................   5    0    0    0    5
-integration/variables-in-do.t......................   3    0    0    0    3
-integration/weird-errors.rakudo.jvm................  28    2    2    1   33
-     1 skipped: RT127208
-     1 todo   : Feels like a bogus test in light of recent changes
-     1 todo   : Unknown encoding 'utf8-c8' RT #127878
+integration/failure-and-callsame.t.................   0   50    0    0   50
+    50 tests aborted (missing ok/not ok)
+integration/lazy-bentley-generator.t...............   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+integration/lexical-array-in-inner-block.t.........   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
+integration/lexicals-and-attributes.t..............   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+integration/man-or-boy.t...........................   0    0    0    0    0
+integration/method-calls-and-instantiation.t.......   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/no-indirect-new.t......................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/packages.t.............................   0    0    0    0    0
+integration/pair-in-array.t........................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/passing-pair-class-to-sub.t............   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+integration/real-strings.t.........................   0   20    0    0   20
+    20 tests aborted (missing ok/not ok)
+integration/role-composition-vs-attribute.rakudo...   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
+integration/rule-in-class-Str.t....................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/say-crash.t............................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+integration/substr-after-match-in-gather-in-for.t..   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+integration/topic_in_double_loop.t.................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+integration/variables-in-do.t......................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
+integration/weird-errors.rakudo.jvm................   0   33    0    0   33
+    33 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
-rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
+rosettacode/greatest_element_of_a_list.t...........   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9189,     0,   149,   410,  9748,  9751
+"S02",        9200,     0,   147,   410,  9757,  9760
 "S03",        6162,     0,    70,    98,  6330,  6348
 "S04",        1464,     0,    60,    33,  1557,  1589
-"S05",        5822,     0,   104,   209,  6135,  6323
+"S05",        5823,     0,   104,   209,  6136,  6324
 "S06",        2154,     0,    67,    97,  2318,  2361
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2776,     0,    25,    40,  2841,  2841
@@ -2027,7 +2039,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
-"S16",         693,     0,    69,    92,   854,   891
+"S16",         694,     0,    69,    92,   855,   892
 "S17",         926,     0,    17,    44,   987,  1070
 "S19",          27,     0,     7,     1,    35,    35
 "S22",          18,     0,     0,     1,    19,    19
@@ -2035,12 +2047,31 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14402,     0,   222,   229, 14853, 13173
-"int",        1339,     3,    10,    17,  1369,  1363
-"ros",           2,     0,     0,     0,     2,     2
-"total",     49447,     4,   890,  1651, 51992,132383
+"S32",       14402,     2,   222,   229, 14855, 13179
+"int",        1186,   150,     8,    12,  1356,  1353
+"ros",           0,     2,     0,     0,     2,     2
+"total",     49305,   155,   886,  1646, 51992,132390
 ----------------
 Failure summary:
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
+S32-io/io-handle.rakudo.jvm aborted 1 test(s)
+S32-io/spurt.rakudo.jvm 61 - IO::Handle spurt
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/weird-errors.rakudo.jvm aborted 2 test(s)
+integration/failure-and-callsame.t aborted 50 test(s)
+integration/lazy-bentley-generator.t aborted 1 test(s)
+integration/lexical-array-in-inner-block.t aborted 2 test(s)
+integration/lexicals-and-attributes.t aborted 8 test(s)
+integration/method-calls-and-instantiation.t aborted 2 test(s)
+integration/no-indirect-new.t aborted 2 test(s)
+integration/pair-in-array.t aborted 3 test(s)
+integration/passing-pair-class-to-sub.t aborted 2 test(s)
+integration/real-strings.t aborted 20 test(s)
+integration/role-composition-vs-attribute.rakudo. aborted 10 test(s)
+integration/rule-in-class-Str.t aborted 3 test(s)
+integration/say-crash.t aborted 4 test(s)
+integration/substr-after-match-in-gather-in-for.t aborted 1 test(s)
+integration/topic_in_double_loop.t aborted 5 test(s)
+integration/variables-in-do.t aborted 3 test(s)
+integration/weird-errors.rakudo.jvm aborted 33 test(s)
+rosettacode/greatest_element_of_a_list.t aborted 1 test(s)
+rosettacode/sierpinski_triangle.t aborted 1 test(s)
