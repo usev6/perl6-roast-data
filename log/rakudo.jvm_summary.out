@@ -246,7 +246,7 @@ S02-types/is-type.rakudo.jvm.......................  10    0    0    2   12
      2 skipped: state variables with `is BagHash`
 S02-types/isDEPRECATED.rakudo.jvm..................  13    0    8    0   21
      8 todo   : NYI
-S02-types/keyhash.rakudo.jvm.......................   0    0    0   59   59
+S02-types/keyhash.rakudo.jvm.......................   1    0    0   59   60
     59 skipped: 'is ObjectType' NYI RT  \#124490
 S02-types/lazy-lists.t.............................  23    0    0    0   23
 S02-types/list.rakudo.jvm..........................  69    0    0    2   71
@@ -1268,7 +1268,7 @@ S15-unicode-information/uniname.rakudo.jvm.........  18    0    2   20   40
      1 todo   : RT #122470
      1 todo   : RT #122471
                                                    pass fail todo skip plan
-S16-filehandles/argfiles.rakudo.jvm................  15    0    1    0   16
+S16-filehandles/argfiles.rakudo.jvm................  16    0    1    0   17
      1 todo   : RT #123888
 S16-filehandles/chmod.t............................  16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
@@ -1682,7 +1682,7 @@ S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
      1 todo   : RT #77914
 S32-list/roll.t....................................  51    0    0    0   51
 S32-list/rotor.t...................................  14    0    0    0   14
-S32-list/seq.rakudo.jvm............................  34    0    1    0   35
+S32-list/seq.rakudo.jvm............................  36    0    1    0   37
      1 todo   : Cannot assign immutable
 S32-list/skip.t....................................  24    0    0    0   24
 S32-list/sort.t....................................  35    0    0    0   35
@@ -1953,7 +1953,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -2013,7 +2013,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9203,     0,   147,   409,  9759,  9762
+"S02",        9204,     0,   147,   409,  9760,  9763
 "S03",        6162,     0,    70,    98,  6330,  6348
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5823,     0,   104,   209,  6136,  6324
@@ -2026,7 +2026,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
-"S16",         702,     0,    69,    92,   863,   900
+"S16",         703,     0,    69,    92,   864,   901
 "S17",         926,     0,    17,    44,   987,  1070
 "S19",          28,     0,     7,     1,    36,    36
 "S22",          18,     0,     0,     1,    19,    19
@@ -2034,13 +2034,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14403,     2,   222,   229, 14856, 13180
-"int",        1343,     0,    10,    17,  1370,  1364
+"S32",       14405,     2,   222,   229, 14858, 13182
+"int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49466,    18,   888,  1650, 52022,132417
+"total",     49469,    19,   888,  1650, 52026,132421
 ----------------
 Failure summary:
 S06-signature/optional.t aborted 15 test(s)
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S32-io/io-handle.rakudo.jvm aborted 1 test(s)
 S32-io/spurt.rakudo.jvm 61 - IO::Handle spurt
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
