@@ -360,7 +360,7 @@ S03-operators/also.rakudo.jvm......................   4    0    4    0    8
      1 todo   : nom regression RT #124545
      1 todo   : nom regression RT #124546
      1 todo   : nom regression RT #124547
-S03-operators/andthen.t............................   9    0    0    0    9
+S03-operators/andthen.t............................  12    0    0    0   12
 S03-operators/arith.t.............................. 158    0    0    0  158
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
 S03-operators/assign.rakudo.jvm.................... 273    0   14   12  299
@@ -422,9 +422,9 @@ S03-operators/mix.rakudo.jvm....................... 127    0    8    0  135
 S03-operators/names.t..............................   7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
-S03-operators/notandthen.t.........................   2    0    0    0    2
+S03-operators/notandthen.t.........................   4    0    0    0    4
 S03-operators/numeric-shift.t......................  38    0    0    0   38
-S03-operators/orelse.t.............................  11    0    0    0   11
+S03-operators/orelse.t.............................  14    0    0    0   14
 S03-operators/overflow.t........................... 101    0    0    0  101
 S03-operators/precedence.rakudo.jvm................  71    0    4    2   77
      2 skipped: superscript exponent associativity RT  \#130414
@@ -1075,7 +1075,7 @@ S11-repository/curli-install.t.....................  18    0    0    0   18
                                                    pass fail todo skip plan
 S12-attributes/class.t.............................  23    0    0    0   23
 S12-attributes/clone.t.............................  42    0    0    0   42
-S12-attributes/defaults.t..........................  34    0    0    0   34
+S12-attributes/defaults.t..........................  37    0    0    0   37
 S12-attributes/delegation.t........................  65    0    0    0   65
 S12-attributes/inheritance.t.......................   7    0    0    0    7
 S12-attributes/instance.rakudo.jvm................. 146    0    5    1  152
@@ -1581,9 +1581,9 @@ S32-io/dir.rakudo.jvm..............................  11    0    3    1   15
      1 todo   : dirname is not yet absolute RT #124786
 S32-io/file-tests.t................................  35    0    0    0   35
 S32-io/indir.t.....................................  75    0    0    0   75
-S32-io/io-handle.rakudo.jvm........................  12    1    1    0   14
+S32-io/io-handle.rakudo.jvm........................  12    2    1    0   15
      1 todo   : RT #123888
-     1 tests aborted (missing ok/not ok)
+     2 tests aborted (missing ok/not ok)
 S32-io/io-path-cygwin.rakudo.jvm...................  51    0    1    0   52
      1 todo   : resolve NYI, needs nqp::readlink RT #124781
 S32-io/io-path-extension.t......................... 273    0    0    0  273
@@ -2014,7 +2014,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9204,     0,   147,   409,  9760,  9763
-"S03",        6162,     0,    70,    98,  6330,  6348
+"S03",        6170,     0,    70,    98,  6338,  6356
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5823,     0,   104,   209,  6136,  6324
 "S06",        2143,    15,    67,    97,  2322,  2365
@@ -2022,7 +2022,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S09",        2776,     0,    25,    40,  2841,  2841
 "S10",         139,     0,     7,     1,   147,   204
 "S11",         178,     0,     9,    13,   200,   210
-"S12",        1669,     0,    35,   137,  1841,  1896
+"S12",        1672,     0,    35,   137,  1844,  1899
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
@@ -2034,14 +2034,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14405,     2,   222,   229, 14858, 13182
+"S32",       14405,     3,   222,   229, 14859, 13183
 "int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49469,    19,   888,  1650, 52026,132421
+"total",     49480,    20,   888,  1650, 52038,132433
 ----------------
 Failure summary:
 S06-signature/optional.t aborted 15 test(s)
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
-S32-io/io-handle.rakudo.jvm aborted 1 test(s)
+S32-io/io-handle.rakudo.jvm aborted 2 test(s)
 S32-io/spurt.rakudo.jvm 61 - IO::Handle spurt
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
