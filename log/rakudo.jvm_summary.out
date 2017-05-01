@@ -1581,9 +1581,9 @@ S32-io/dir.rakudo.jvm..............................  11    0    3    1   15
      1 todo   : dirname is not yet absolute RT #124786
 S32-io/file-tests.t................................  35    0    0    0   35
 S32-io/indir.t.....................................  75    0    0    0   75
-S32-io/io-handle.rakudo.jvm........................  12    2    1    0   15
+S32-io/io-handle.rakudo.jvm........................  12    3    1    0   16
      1 todo   : RT #123888
-     2 tests aborted (missing ok/not ok)
+     3 tests aborted (missing ok/not ok)
 S32-io/io-path-cygwin.rakudo.jvm...................  51    0    1    0   52
      1 todo   : resolve NYI, needs nqp::readlink RT #124781
 S32-io/io-path-extension.t......................... 273    0    0    0  273
@@ -2034,14 +2034,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14405,     3,   222,   229, 14859, 13183
+"S32",       14405,     4,   222,   229, 14860, 13184
 "int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49480,    20,   888,  1650, 52038,132433
+"total",     49480,    21,   888,  1650, 52039,132434
 ----------------
 Failure summary:
 S06-signature/optional.t aborted 15 test(s)
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
-S32-io/io-handle.rakudo.jvm aborted 2 test(s)
+S32-io/io-handle.rakudo.jvm aborted 3 test(s)
 S32-io/spurt.rakudo.jvm 61 - IO::Handle spurt
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
