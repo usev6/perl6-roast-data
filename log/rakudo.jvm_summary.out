@@ -49,7 +49,7 @@ S02-literals/adverbs.rakudo.jvm....................  28    0    3    3   34
      3 skipped: Type check failed; expected 'Any' but got 'Mu'
      2 todo   : :@<...> and :%<...> broken needs RT
      1 todo   : RT #128306
-S02-literals/allomorphic.t......................... 103    0    0    0  103
+S02-literals/allomorphic.t......................... 106    0    0    0  106
 S02-literals/array-interpolation.t.................  12    0    0    0   12
 S02-literals/autoref.t.............................  38    0    0    0   38
 S02-literals/char-by-name.rakudo.jvm...............   9    0    1    1   11
@@ -294,7 +294,7 @@ S02-types/range.t.................................. 189    0    0    0  189
 S02-types/set-iterator.t...........................  12    0    0    0   12
 S02-types/set.rakudo.jvm........................... 172    0    0    9  181
      9 skipped: Hypers not yet Set compatible RT  \#124487
-S02-types/sethash.rakudo.jvm....................... 200    0    0   10  210
+S02-types/sethash.rakudo.jvm....................... 201    0    0   10  211
     10 skipped: 'is TypeObject' NYI RT  \#124490
 S02-types/sigils-and-types.rakudo.jvm..............  25    0    2    0   27
      1 todo   : Capture does Associative RT #124485
@@ -1581,9 +1581,9 @@ S32-io/dir.rakudo.jvm..............................  11    0    3    1   15
      1 todo   : dirname is not yet absolute RT #124786
 S32-io/file-tests.t................................  35    0    0    0   35
 S32-io/indir.t.....................................  75    0    0    0   75
-S32-io/io-handle.rakudo.jvm........................  12    3    1    0   16
+S32-io/io-handle.rakudo.jvm........................  12    4    1    0   17
      1 todo   : RT #123888
-     3 tests aborted (missing ok/not ok)
+     4 tests aborted (missing ok/not ok)
 S32-io/io-path-cygwin.rakudo.jvm...................  51    0    1    0   52
      1 todo   : resolve NYI, needs nqp::readlink RT #124781
 S32-io/io-path-extension.t......................... 273    0    0    0  273
@@ -2013,7 +2013,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9204,     0,   147,   409,  9760,  9763
+"S02",        9208,     0,   147,   409,  9764,  9767
 "S03",        6170,     0,    70,    98,  6338,  6356
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5823,     0,   104,   209,  6136,  6324
@@ -2034,14 +2034,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14405,     4,   222,   229, 14860, 13184
+"S32",       14405,     5,   222,   229, 14861, 13185
 "int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49480,    21,   888,  1650, 52039,132434
+"total",     49484,    22,   888,  1650, 52044,132439
 ----------------
 Failure summary:
 S06-signature/optional.t aborted 15 test(s)
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
-S32-io/io-handle.rakudo.jvm aborted 3 test(s)
+S32-io/io-handle.rakudo.jvm aborted 4 test(s)
 S32-io/spurt.rakudo.jvm 61 - IO::Handle spurt
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
