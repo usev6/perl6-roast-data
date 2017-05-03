@@ -1360,7 +1360,7 @@ S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  92    0    0    0   92
-S17-supply/batch.t.................................  10    1    0    0   11
+S17-supply/batch.t.................................  11    0    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1516,7 +1516,7 @@ S32-array/keys_values.t............................   8    0    0    0    8
 S32-array/kv.t.....................................  18    0    0    0   18
 S32-array/pairs.t..................................  14    0    0    0   14
 S32-array/perl.t...................................   8    0    0    0    8
-S32-array/pop.rakudo.jvm...........................  35    0    2    0   37
+S32-array/pop.rakudo.jvm...........................  36    0    2    0   38
      1 todo   : RT #111720
      1 todo   : code does not die
 S32-array/push.t...................................  52    0    0    0   52
@@ -1682,7 +1682,7 @@ S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
      1 todo   : RT #77914
 S32-list/roll.t....................................  51    0    0    0   51
 S32-list/rotor.t...................................  14    0    0    0   14
-S32-list/seq.rakudo.jvm............................  36    0    1    0   37
+S32-list/seq.rakudo.jvm............................  37    0    1    0   38
      1 todo   : Cannot assign immutable
 S32-list/skip.t....................................  24    0    0    0   24
 S32-list/sort.t....................................  35    0    0    0   35
@@ -2027,24 +2027,23 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
 "S16",         703,     0,    69,    92,   864,   901
-"S17",         925,     1,    17,    44,   987,  1070
+"S17",         926,     0,    17,    44,   987,  1070
 "S19",          28,     0,     7,     1,    36,    36
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          32,     1,     0,     0,    33,   118
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14401,    11,   222,   229, 14863, 13187
+"S32",       14403,    11,   222,   229, 14865, 13189
 "int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49477,    32,   888,  1650, 52047,132442
+"total",     49480,    31,   888,  1650, 52049,132444
 ----------------
 Failure summary:
 S06-signature/optional.t aborted 15 test(s)
 S06-signature/types.rakudo.jvm 11 - expected and got types in the exception are the correct ones
 S06-signature/types.rakudo.jvm 12 - expected and got types in the exception are the correct ones
 S06-signature/types.rakudo.jvm 13 - expected and got types in the exception are the correct ones
-S17-supply/batch.t 8 - we can batch by time
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S32-exceptions/misc.rakudo.jvm 362 - did we throws-like X::Parameter::InvalidConcreteness?
 S32-exceptions/misc.rakudo.jvm 363 - did we throws-like X::Parameter::InvalidConcreteness?
