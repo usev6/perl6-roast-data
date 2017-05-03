@@ -963,7 +963,7 @@ S06-signature/tree-node-parameters.rakudo.jvm......  16    0    0    4   20
      4 skipped: signature binding of return values NYI RT  \#124945
 S06-signature/type-capture.rakudo.jvm..............  10    0    0    2   12
      2 skipped: Method 'T' not found for invocant of class 'Rat', RT  \#126383
-S06-signature/types.rakudo.jvm.....................  17    0    0    1   18
+S06-signature/types.rakudo.jvm.....................  15    3    0    1   19
      1 skipped: '١' is not a valid number
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
@@ -1360,7 +1360,7 @@ S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
 S17-supply/Promise.t...............................  13    0    0    0   13
 S17-supply/act.t...................................   9    0    0    0    9
 S17-supply/basic.t.................................  92    0    0    0   92
-S17-supply/batch.t.................................  11    0    0    0   11
+S17-supply/batch.t.................................  10    1    0    0   11
 S17-supply/categorize.t............................  63    0    0    0   63
 S17-supply/classify.t..............................  33    0    0    0   33
 S17-supply/delayed.rakudo.jvm......................   5    0    0    8   13
@@ -1538,7 +1538,7 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT  \#124907
-S32-exceptions/misc.rakudo.jvm..................... 413    0   11    3  427
+S32-exceptions/misc.rakudo.jvm..................... 407    6   11    3  427
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
      1 skipped: failure assignment still blows up on JVM, RT  \#125769
@@ -1573,7 +1573,7 @@ S32-io/IO-Socket-Async.rakudo.jvm..................   9    0    0    7   16
 S32-io/IO-Socket-INET.t............................   0    0    0   51   51
     51 skipped: Operating system not yet supported
 S32-io/chdir.t.....................................  81    0    0    0   81
-S32-io/copy.t......................................  41    0    0    0   41
+S32-io/copy.t......................................  42    0    0    0   42
 S32-io/dir.rakudo.jvm..............................  11    0    3    1   15
      1 skipped: entries are still IO::Path RT  \#124785
      1 todo   : $*CWD misses slash at end still RT #124787
@@ -1605,7 +1605,7 @@ S32-io/lock.rakudo.jvm.............................  12    0    3   13   28
      8 skipped: [io grant] Could not obtain blocking, shared lock: NonWritableChannelException
      5 skipped: [io grant] hangs
      3 todo   : [io grant] expected Failure, bot Bool
-S32-io/move.t......................................  29    0    0    0   29
+S32-io/move.t......................................  30    0    0    0   30
 S32-io/note.t......................................   6    0    0    0    6
 S32-io/null-char.t.................................  24    0    0    0   24
 S32-io/open.rakudo.jvm.............................  44    0    0   18   62
@@ -2017,7 +2017,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S03",        6170,     0,    70,    98,  6338,  6356
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5823,     0,   104,   209,  6136,  6324
-"S06",        2143,    15,    67,    97,  2322,  2365
+"S06",        2141,    18,    67,    97,  2323,  2366
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2776,     0,    25,    40,  2841,  2841
 "S10",         139,     0,     7,     1,   147,   204
@@ -2027,21 +2027,31 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 81559
 "S16",         703,     0,    69,    92,   864,   901
-"S17",         926,     0,    17,    44,   987,  1070
+"S17",         925,     1,    17,    44,   987,  1070
 "S19",          28,     0,     7,     1,    36,    36
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          32,     1,     0,     0,    33,   118
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14405,     5,   222,   229, 14861, 13185
+"S32",       14401,    11,   222,   229, 14863, 13187
 "int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49484,    22,   888,  1650, 52044,132439
+"total",     49477,    32,   888,  1650, 52047,132442
 ----------------
 Failure summary:
 S06-signature/optional.t aborted 15 test(s)
+S06-signature/types.rakudo.jvm 11 - expected and got types in the exception are the correct ones
+S06-signature/types.rakudo.jvm 12 - expected and got types in the exception are the correct ones
+S06-signature/types.rakudo.jvm 13 - expected and got types in the exception are the correct ones
+S17-supply/batch.t 8 - we can batch by time
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
+S32-exceptions/misc.rakudo.jvm 362 - did we throws-like X::Parameter::InvalidConcreteness?
+S32-exceptions/misc.rakudo.jvm 363 - did we throws-like X::Parameter::InvalidConcreteness?
+S32-exceptions/misc.rakudo.jvm 364 - did we throws-like X::Parameter::InvalidConcreteness?
+S32-exceptions/misc.rakudo.jvm 365 - did we throws-like X::Parameter::InvalidConcreteness?
+S32-exceptions/misc.rakudo.jvm 366 - did we throws-like X::Parameter::InvalidConcreteness?
+S32-exceptions/misc.rakudo.jvm 367 - did we throws-like X::Parameter::InvalidConcreteness?
 S32-io/io-handle.rakudo.jvm aborted 4 test(s)
 S32-io/spurt.rakudo.jvm 61 - IO::Handle spurt
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
