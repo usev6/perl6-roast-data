@@ -1035,12 +1035,11 @@ S09-typed-arrays/native.t..........................   3    0    0    0    3
 S10-packages/basic.rakudo.jvm......................  81    0    0    1   82
      1 skipped: RT  \#59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............  44    0    7    0   51
+S10-packages/precompilation.rakudo.jvm.............  46    0    5    0   51
      2 todo   : Invalid typename 'RT112626::Class1' in parameter declaration
      1 todo   : got: $["B", "C"]
      1 todo   : got: $["C", "K"]
      1 todo   : no 6model parametrics interning yet
-     2 todo PASSED: ContextRef representation does not implement elems, RT #128156
 S10-packages/use-with-class.t......................  11    0    0    0   11
                                                    pass fail todo skip plan
 S11-compunit/compunit-dependencyspecification.t....   6    0    0    0    6
@@ -1519,7 +1518,7 @@ S32-array/pop.rakudo.jvm...........................  36    0    2    0   38
      1 todo   : RT #111720
      1 todo   : code does not die
 S32-array/push.t...................................  52    0    0    0   52
-S32-array/rotate.t.................................  29    0    0    0   29
+S32-array/rotate.t.................................  30    0    0    0   30
 S32-array/shift.t..................................  33    0    0    0   33
 S32-array/splice.rakudo.jvm........................ 381    0   12    0  393
     12 todo   : somehow the test causes different typecheck error
@@ -1537,7 +1536,7 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT  \#124907
-S32-exceptions/misc.rakudo.jvm..................... 407    6   11    3  427
+S32-exceptions/misc.rakudo.jvm..................... 407    5   11    3  426
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
      1 skipped: failure assignment still blows up on JVM, RT  \#125769
@@ -2019,7 +2018,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S06",        2141,    18,    67,    97,  2323,  2366
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2776,     0,    25,    40,  2841,  2841
-"S10",         139,     0,     7,     1,   147,   204
+"S10",         141,     0,     5,     1,   147,   204
 "S11",         178,     0,     9,    13,   200,   210
 "S12",        1673,     0,    34,   137,  1844,  1899
 "S13",          64,     0,     0,     0,    64,    74
@@ -2033,10 +2032,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14403,    11,   222,   229, 14865, 13189
+"S32",       14404,    10,   222,   229, 14865, 13189
 "int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49481,    31,   887,  1650, 52049,132444
+"total",     49484,    30,   885,  1650, 52049,132444
 ----------------
 Failure summary:
 S06-signature/optional.t aborted 15 test(s)
@@ -2049,7 +2048,6 @@ S32-exceptions/misc.rakudo.jvm 363 - did we throws-like X::Parameter::InvalidCon
 S32-exceptions/misc.rakudo.jvm 364 - did we throws-like X::Parameter::InvalidConcreteness?
 S32-exceptions/misc.rakudo.jvm 365 - did we throws-like X::Parameter::InvalidConcreteness?
 S32-exceptions/misc.rakudo.jvm 366 - did we throws-like X::Parameter::InvalidConcreteness?
-S32-exceptions/misc.rakudo.jvm 367 - did we throws-like X::Parameter::InvalidConcreteness?
 S32-io/io-handle.rakudo.jvm aborted 4 test(s)
 S32-io/spurt.rakudo.jvm 61 - IO::Handle spurt
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
