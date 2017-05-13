@@ -1336,7 +1336,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  30    0    0    0   30
+S17-promise/basic.t................................  29    1    0    0   30
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/nonblocking-await.rakudo.jvm...........   5    0    0   14   19
     13 skipped: hangs on JVM
@@ -1350,7 +1350,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT  \#124775
      3 skipped: waiting for new '.loads' semantics RT  \#124776
      2 skipped: waiting for new '.loads' semantics RT  \#124777
-S17-scheduler/every.t..............................  20    0    0    0   20
+S17-scheduler/every.t..............................  19    1    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
@@ -1374,8 +1374,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1402,7 +1401,7 @@ S17-supply/syntax-nonblocking-await.t..............   5    0    0    0    5
 S17-supply/syntax.rakudo.jvm.......................  70    0    2    0   72
      2 todo   : got: '42'
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................  16    1    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1435,7 +1434,7 @@ S24-testing/11-plan-skip-all.t.....................   0    1    0    0    1
 S24-testing/3-output.t.............................   4    0    0    0    4
 S24-testing/7-bail_out.t...........................   3    0    0    0    3
 S24-testing/8-die_on_fail.t........................   6    0    0    0    6
-S24-testing/9-is_deeply.t..........................   1    0    0    0    1
+S24-testing/9-is_deeply.t..........................   2    0    0    0    2
 S24-testing/line-numbers.t.........................  13    0    0    0   13
                                                    pass fail todo skip plan
 S26-documentation/01-delimited.t...................  40    0    0    0   40
@@ -2027,17 +2026,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 80815
 "S16",         695,     9,    68,    92,   864,   901
-"S17",         926,     0,    17,    44,   987,  1070
+"S17",         923,     3,    17,    44,   987,  1070
 "S19",          28,     0,     7,     1,    36,    36
 "S22",          18,     0,     0,     1,    19,    19
-"S24",          32,     1,     0,     0,    33,   118
+"S24",          33,     1,     0,     0,    34,   119
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       14425,    12,   222,   229, 14888, 13212
 "int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49501,    42,   884,  1650, 52077,131728
+"total",     49499,    45,   884,  1650, 52078,131729
 ----------------
 Failure summary:
 S03-metaops/reduce.rakudo.jvm 66 - reduce metaop of hyper metaop works with zero elements
@@ -2046,6 +2045,9 @@ S06-signature/types.rakudo.jvm 11 - expected and got types in the exception are 
 S06-signature/types.rakudo.jvm 12 - expected and got types in the exception are the correct ones
 S06-signature/types.rakudo.jvm 13 - expected and got types in the exception are the correct ones
 S16-io/comb.rakudo.jvm aborted 9 test(s)
+S17-promise/basic.t 27 - promises execute asynchronously [try 3]
+S17-scheduler/every.t 15 - Cue with :every/:at schedules repeatedly
+S17-supply/throttle.t 5 - did we see all of the element
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S32-exceptions/misc.rakudo.jvm 362 - did we throws-like X::Parameter::InvalidConcreteness?
 S32-exceptions/misc.rakudo.jvm 363 - did we throws-like X::Parameter::InvalidConcreteness?
