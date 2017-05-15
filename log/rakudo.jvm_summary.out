@@ -1350,7 +1350,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT  \#124775
      3 skipped: waiting for new '.loads' semantics RT  \#124776
      2 skipped: waiting for new '.loads' semantics RT  \#124777
-S17-scheduler/every.t..............................  19    1    0    0   20
+S17-scheduler/every.t..............................  20    0    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
@@ -1579,9 +1579,9 @@ S32-io/dir.rakudo.jvm..............................  12    0    3    1   16
      1 todo   : dirname is not yet absolute RT #124786
 S32-io/file-tests.t................................  35    0    0    0   35
 S32-io/indir.t.....................................  75    0    0    0   75
-S32-io/io-handle.rakudo.jvm........................  12    7    1    0   20
+S32-io/io-handle.rakudo.jvm........................  12   10    1    0   23
      1 todo   : RT #123888
-     7 tests aborted (missing ok/not ok)
+    10 tests aborted (missing ok/not ok)
 S32-io/io-path-cygwin.rakudo.jvm...................  51    0    1    0   52
      1 todo   : resolve NYI, needs nqp::readlink RT #124781
 S32-io/io-path-extension.t......................... 273    0    0    0  273
@@ -1591,12 +1591,12 @@ S32-io/io-path-unix.rakudo.jvm.....................  36    0    1    0   37
      1 todo   : resolve NYI, needs nqp::readlink RT #124782
 S32-io/io-path-win.rakudo.jvm......................  50    0    1    0   51
      1 todo   : resolve NYI, needs nqp::readlink RT #124783
-S32-io/io-path.rakudo.jvm..........................  31    0    0    0   31
-S32-io/io-spec-cygwin.t............................ 113    0    0    2  115
+S32-io/io-path.rakudo.jvm..........................  33    0    0    0   33
+S32-io/io-spec-cygwin.t............................ 114    0    0    2  116
      2 skipped: cygwin on-platform tests
-S32-io/io-spec-qnx.t...............................  28    0    0    0   28
-S32-io/io-spec-unix.t.............................. 132    0    0    0  132
-S32-io/io-spec-win.t............................... 207    0    0    3  210
+S32-io/io-spec-qnx.t...............................  29    0    0    0   29
+S32-io/io-spec-unix.t.............................. 133    0    0    0  133
+S32-io/io-spec-win.t............................... 208    1    0    3  212
      3 skipped: Win32ish on-platform tests
 S32-io/io-special.t................................  42    0    0    0   42
 S32-io/lock.rakudo.jvm.............................  12    0    3   13   28
@@ -1606,7 +1606,7 @@ S32-io/lock.rakudo.jvm.............................  12    0    3   13   28
 S32-io/move.t......................................  30    0    0    0   30
 S32-io/note.t......................................   6    0    0    0    6
 S32-io/null-char.t.................................  24    0    0    0   24
-S32-io/open.rakudo.jvm.............................  44    0    0   18   62
+S32-io/open.rakudo.jvm.............................  44    1    0   18   63
     10 skipped: [io grant] IllegalArgumentException: READ + APPEND not allowed
      4 skipped: [io grant] NoSuchFileException: t-32-io-open.tmp
      4 skipped: [io grant] NoSuchFileException: t-32-io-open.tmp'
@@ -1952,7 +1952,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -2026,17 +2026,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 80815
 "S16",         695,     9,    68,    92,   864,   901
-"S17",         925,     1,    17,    44,   987,  1070
+"S17",         926,     0,    17,    44,   987,  1070
 "S19",          28,     0,     7,     1,    36,    36
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          33,     1,     0,     0,    34,   119
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14427,    14,   222,   229, 14892, 13216
-"int",        1342,     1,    10,    17,  1370,  1364
+"S32",       14433,    19,   222,   229, 14903, 13227
+"int",        1343,     0,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49503,    45,   884,  1650, 52082,131733
+"total",     49511,    48,   884,  1650, 52093,131744
 ----------------
 Failure summary:
 S03-metaops/reduce.rakudo.jvm 66 - reduce metaop of hyper metaop works with zero elements
@@ -2045,14 +2045,14 @@ S06-signature/types.rakudo.jvm 11 - expected and got types in the exception are 
 S06-signature/types.rakudo.jvm 12 - expected and got types in the exception are the correct ones
 S06-signature/types.rakudo.jvm 13 - expected and got types in the exception are the correct ones
 S16-io/comb.rakudo.jvm aborted 9 test(s)
-S17-scheduler/every.t 2 - Cue with :every schedules repeatedly
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S32-exceptions/misc.rakudo.jvm 362 - did we throws-like X::Parameter::InvalidConcreteness?
 S32-exceptions/misc.rakudo.jvm 363 - did we throws-like X::Parameter::InvalidConcreteness?
 S32-exceptions/misc.rakudo.jvm 364 - did we throws-like X::Parameter::InvalidConcreteness?
 S32-exceptions/misc.rakudo.jvm 365 - did we throws-like X::Parameter::InvalidConcreteness?
 S32-exceptions/misc.rakudo.jvm 366 - did we throws-like X::Parameter::InvalidConcreteness?
-S32-io/io-handle.rakudo.jvm aborted 7 test(s)
+S32-io/io-handle.rakudo.jvm aborted 10 test(s)
+S32-io/io-spec-win.t 212 - .absolute with paths that have combiners on slashses
+S32-io/open.rakudo.jvm 63 - .open uses attributes by default
 S32-io/spurt.rakudo.jvm 61 - IO::Handle spurt
 S32-str/comb.rakudo.jvm aborted 1 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
