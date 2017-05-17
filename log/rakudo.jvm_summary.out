@@ -1303,7 +1303,7 @@ S16-io/eof.t.......................................   1    0    0    1    2
 S16-io/getc.t......................................   2    0    0    0    2
 S16-io/handles-between-threads.t...................   8    0    0    0    8
 S16-io/home.t......................................   8    0    0    0    8
-S16-io/lines.rakudo.jvm............................ 212    0   48   60  320
+S16-io/lines.rakudo.jvm............................ 214    0   48   60  322
     60 skipped: test will be run below with fine grained fudging
     48 todo   : :nl-in and :chomp not working yet
 S16-io/newline.t...................................   6    0    0    0    6
@@ -1321,7 +1321,7 @@ S16-io/supply.rakudo.jvm...........................   3    0    4    0    7
      2 todo   : RT #128041
      2 todo   : got: $["ab", "cd", "e"]
 S16-io/tmpdir.t....................................   9    0    0    0    9
-S16-io/words.t.....................................  10    0    0    0   10
+S16-io/words.t.....................................  12    0    0    0   12
 S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      1 skipped: contextual rebinding regression RT  \#125041
      1 skipped: contextual rebinding regression RT  \#125042
@@ -1374,8 +1374,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -2026,7 +2025,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 80815
-"S16",         695,     9,    68,    92,   864,   901
+"S16",         699,     9,    68,    92,   868,   905
 "S17",         926,     0,    17,    44,   987,  1073
 "S19",          28,     0,     7,     1,    36,    36
 "S22",          18,     0,     0,     1,    19,    19
@@ -2037,7 +2036,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       14436,    20,   222,   229, 14907, 13231
 "int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49513,    50,   884,  1650, 52097,131751
+"total",     49517,    50,   884,  1650, 52101,131755
 ----------------
 Failure summary:
 S03-metaops/reduce.rakudo.jvm 66 - reduce metaop of hyper metaop works with zero elements
