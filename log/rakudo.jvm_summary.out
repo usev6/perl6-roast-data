@@ -348,9 +348,10 @@ S03-metaops/hyper.rakudo.jvm....................... 395    0    1    7  403
      1 skipped: doesn't seem to see the nodal
      1 todo   : can_meta check for meta operators NYI
 S03-metaops/not.t..................................  46    0    0    0   46
-S03-metaops/reduce.rakudo.jvm...................... 555    1    1    1  558
+S03-metaops/reduce.rakudo.jvm...................... 555    0    2    1  558
      1 skipped: RT  \#129153 Type check failed in binding to &b; expected Callable but got Int (2)
      1 todo   : item context
+     1 todo   : reduce metaop of hyper metaop works with zero elements
 S03-metaops/reverse.t..............................  68    0    0    0   68
 S03-metaops/zip.t..................................  76    0    0    0   76
 S03-operators/adverbial-modifiers.rakudo.jvm.......  41    0    1    0   42
@@ -941,8 +942,9 @@ S06-signature/named-parameters.rakudo.jvm..........  83    0    0   16   99
     16 skipped: multiple same-named arguments NYI RT  \#124921
 S06-signature/named-placeholders.t.................   3    0    0    0    3
 S06-signature/named-renaming.t.....................  11    0    0    0   11
-S06-signature/optional.t...........................  20   15    0    0   35
-    15 tests aborted (missing ok/not ok)
+S06-signature/optional.rakudo.jvm..................  33    0    0    2   35
+     1 skipped: Type check failed in binding to parameter "%foo"; expected Associative[Int] but got Hash (${})
+     1 skipped: Type check failed in binding to parameter "@foo"; expected Positional[Int] but got Array ($[])
 S06-signature/outside-subroutine.t.................   4    0    0    0    4
 S06-signature/passing-arrays.t.....................  11    0    0    0   11
 S06-signature/passing-hashes.t.....................   3    0    0    0    3
@@ -963,8 +965,9 @@ S06-signature/tree-node-parameters.rakudo.jvm......  16    0    0    4   20
      4 skipped: signature binding of return values NYI RT  \#124945
 S06-signature/type-capture.rakudo.jvm..............  10    0    0    2   12
      2 skipped: Method 'T' not found for invocant of class 'Rat', RT  \#126383
-S06-signature/types.rakudo.jvm.....................  15    3    0    1   19
+S06-signature/types.rakudo.jvm.....................  15    0    3    1   19
      1 skipped: '١' is not a valid number
+     3 todo   : no typed exception X::Parameter::InvalidConcreteness, yet
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
 S06-signature/unspecified.t........................  18    0    0    0   18
@@ -1295,8 +1298,8 @@ S16-io/basic-open.rakudo.jvm.......................  11    0    1    0   12
      1 todo   : end of file flag is set too early
 S16-io/bom.rakudo.jvm..............................   1    0    9    0   10
      9 todo   : UTF-8 BOM stripping RT #124024
-S16-io/comb.rakudo.jvm.............................  16    9    0    0   25
-     9 tests aborted (missing ok/not ok)
+S16-io/comb.rakudo.jvm.............................  22    0    0    3   25
+     3 skipped: Type check failed in binding to parameter "$size"; expected Int but got Str ("")
 S16-io/cwd.t.......................................   3    0    0    0    3
 S16-io/eof.t.......................................   1    0    0    1    2
      1 skipped: Don't test reading /proc file if not in Linux
@@ -1336,7 +1339,7 @@ S17-lowlevel/thread.t..............................  25    0    0    0   25
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   3    0    0    0    3
-S17-promise/basic.t................................  30    0    0    0   30
+S17-promise/basic.t................................  31    0    0    0   31
 S17-promise/in.t...................................   3    0    0    0    3
 S17-promise/nonblocking-await.rakudo.jvm...........   5    0    0   14   19
     13 skipped: hangs on JVM
@@ -1350,7 +1353,7 @@ S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      2 skipped: waiting for new '.loads' semantics RT  \#124775
      3 skipped: waiting for new '.loads' semantics RT  \#124776
      2 skipped: waiting for new '.loads' semantics RT  \#124777
-S17-scheduler/every.t..............................  19    1    0    0   20
+S17-scheduler/every.t..............................  20    0    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.rakudo.jvm......................  12    0    0    2   14
@@ -1374,7 +1377,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1401,7 +1405,7 @@ S17-supply/syntax-nonblocking-await.t..............   5    0    0    0    5
 S17-supply/syntax.rakudo.jvm.......................  70    0    2    0   72
      2 todo   : got: '42'
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................  16    1    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   2    0    0    0    2
@@ -1536,13 +1540,14 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT  \#124907
-S32-exceptions/misc.rakudo.jvm..................... 407    5   11    3  426
+S32-exceptions/misc.rakudo.jvm..................... 407    0   16    3  426
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
      1 skipped: failure assignment still blows up on JVM, RT  \#125769
      8 todo   : awesome error message is not printed because these are parsed differently
      1 todo   : dies with X::AdHoc -- __P6opaque__77@3dc2adf9 in sub-signature of parameter @array
      1 todo   : good error message, but not the one that we are expecting
+     5 todo   : no typed exception X::Parameter::InvalidConcreteness, yet
      1 todo   : parsing regression RT #124679
 S32-hash/adverbs.t.................................1128    0    0    0 1128
 S32-hash/antipairs.t...............................   5    0    0    0    5
@@ -1579,9 +1584,9 @@ S32-io/dir.rakudo.jvm..............................  12    0    3    1   16
      1 todo   : dirname is not yet absolute RT #124786
 S32-io/file-tests.t................................  35    0    0    0   35
 S32-io/indir.t.....................................  75    0    0    0   75
-S32-io/io-handle.rakudo.jvm........................  12   11    1    0   24
+S32-io/io-handle.rakudo.jvm........................  22    0    1    1   24
+     1 skipped: The spawned command (perl6-j) exited unsuccessfully (exit code: 1)
      1 todo   : RT #123888
-    11 tests aborted (missing ok/not ok)
 S32-io/io-path-cygwin.rakudo.jvm...................  51    0    1    0   52
      1 todo   : resolve NYI, needs nqp::readlink RT #124781
 S32-io/io-path-extension.t......................... 273    0    0    0  273
@@ -1596,7 +1601,7 @@ S32-io/io-spec-cygwin.t............................ 114    0    0    2  116
      2 skipped: cygwin on-platform tests
 S32-io/io-spec-qnx.t...............................  29    0    0    0   29
 S32-io/io-spec-unix.t.............................. 133    0    0    0  133
-S32-io/io-spec-win.t............................... 209    1    0    3  213
+S32-io/io-spec-win.rakudo.jvm...................... 210    0    0    3  213
      3 skipped: Win32ish on-platform tests
 S32-io/io-special.t................................  42    0    0    0   42
 S32-io/lock.rakudo.jvm.............................  12    0    3   13   28
@@ -1606,7 +1611,7 @@ S32-io/lock.rakudo.jvm.............................  12    0    3   13   28
 S32-io/move.t......................................  30    0    0    0   30
 S32-io/note.t......................................   7    0    0    0    7
 S32-io/null-char.t.................................  24    0    0    0   24
-S32-io/open.rakudo.jvm.............................  44    1    0   18   63
+S32-io/open.rakudo.jvm.............................  45    0    0   18   63
     10 skipped: [io grant] IllegalArgumentException: READ + APPEND not allowed
      4 skipped: [io grant] NoSuchFileException: t-32-io-open.tmp
      4 skipped: [io grant] NoSuchFileException: t-32-io-open.tmp'
@@ -1621,7 +1626,7 @@ S32-io/socket-fail-invalid-values.t................   4    0    0    0    4
 S32-io/socket-host-port-split.rakudo.jvm...........   1    0    0    1    2
      1 skipped: Hangs on boxes without IPv6 support
 S32-io/socket-recv-vs-read.t.......................  11    0    0    0   11
-S32-io/spurt.rakudo.jvm............................  56    1    4    0   61
+S32-io/spurt.rakudo.jvm............................  57    0    4    0   61
      4 todo   : [io grant] expected: Buf[uint8].new(200); got: Buf[uint8].new(200); maybe caused by RT #128041
 S32-list/batch.t...................................   4    0    0    0    4
 S32-list/categorize-list.t.........................  28    0    0    0   28
@@ -1742,12 +1747,11 @@ S32-str/capitalize.rakudo.jvm......................  15    0    2    0   17
 S32-str/chomp.rakudo.jvm...........................  32    0    7    0   39
      7 todo   : \r\n not yet handled as grapheme
 S32-str/chop.t.....................................  36    0    0    0   36
-S32-str/comb.rakudo.jvm............................  70    1    2    8   81
+S32-str/comb.rakudo.jvm............................  71    0    2    8   81
      1 skipped: cannot call match, no signature matches RT  \#124738
      1 skipped: ordbaseat NYI
      6 skipped: weird error, looks like wrong multi is used, RT  \#128580
      2 todo   : NFG on JVM RT #124737
-     1 tests aborted (missing ok/not ok)
 S32-str/contains.t.................................  21    0    0    0   21
 S32-str/encode.rakudo.jvm..........................  25    0    7    6   38
      5 skipped: Only moar handles this
@@ -1952,7 +1956,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -2013,10 +2017,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9210,     0,   147,   409,  9766,  9769
-"S03",        6172,     1,    70,    98,  6341,  6359
+"S03",        6172,     0,    71,    98,  6341,  6359
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5823,     0,   104,   209,  6136,  6324
-"S06",        2141,    18,    67,    97,  2323,  2366
+"S06",        2154,     0,    70,    99,  2323,  2366
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2776,     0,    25,    40,  2841,  2841
 "S10",         141,     0,     5,     1,   147,   204
@@ -2025,35 +2029,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 80815
-"S16",         699,     9,    68,    92,   868,   905
-"S17",         925,     1,    17,    44,   987,  1073
+"S16",         705,     0,    68,    95,   868,   905
+"S17",         926,     1,    17,    44,   988,  1074
 "S19",          28,     0,     7,     1,    36,    36
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          34,     1,     0,     0,    35,   120
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14437,    20,   222,   229, 14908, 13232
-"int",        1343,     0,    10,    17,  1370,  1364
+"S32",       14451,     0,   227,   230, 14908, 13232
+"int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     49519,    50,   884,  1650, 52103,131757
+"total",     49552,     3,   893,  1656, 52104,131758
 ----------------
 Failure summary:
-S03-metaops/reduce.rakudo.jvm 66 - reduce metaop of hyper metaop works with zero elements
-S06-signature/optional.t aborted 15 test(s)
-S06-signature/types.rakudo.jvm 11 - expected and got types in the exception are the correct ones
-S06-signature/types.rakudo.jvm 12 - expected and got types in the exception are the correct ones
-S06-signature/types.rakudo.jvm 13 - expected and got types in the exception are the correct ones
-S16-io/comb.rakudo.jvm aborted 9 test(s)
-S17-scheduler/every.t 4 - Cue with :every :stop schedules repeatedly
+S17-supply/throttle.t 5 - did we see all of the element
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
-S32-exceptions/misc.rakudo.jvm 362 - did we throws-like X::Parameter::InvalidConcreteness?
-S32-exceptions/misc.rakudo.jvm 363 - did we throws-like X::Parameter::InvalidConcreteness?
-S32-exceptions/misc.rakudo.jvm 364 - did we throws-like X::Parameter::InvalidConcreteness?
-S32-exceptions/misc.rakudo.jvm 365 - did we throws-like X::Parameter::InvalidConcreteness?
-S32-exceptions/misc.rakudo.jvm 366 - did we throws-like X::Parameter::InvalidConcreteness?
-S32-io/io-handle.rakudo.jvm aborted 11 test(s)
-S32-io/io-spec-win.t 212 - .absolute with paths that have combiners on slashses
-S32-io/open.rakudo.jvm 63 - .open uses attributes by default
-S32-io/spurt.rakudo.jvm 61 - IO::Handle spurt
-S32-str/comb.rakudo.jvm aborted 1 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
