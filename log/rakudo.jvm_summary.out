@@ -1275,8 +1275,9 @@ S15-unicode-information/uniname.rakudo.jvm.........  18    0    2   20   40
      1 todo   : RT #122470
      1 todo   : RT #122471
                                                    pass fail todo skip plan
-S16-filehandles/argfiles.rakudo.jvm................  10    3    1    2   16
+S16-filehandles/argfiles.rakudo.jvm................  10    0    4    2   16
      2 skipped: hangs, RT  \#131393
+     3 todo   : Type check failed in binding to parameter $bin; expected Bool but got Int (0)
      1 todo   : appends newlines after expected output
 S16-filehandles/chmod.t............................  16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
@@ -1435,7 +1436,7 @@ S22-package-format/local.rakudo.jvm................  18    0    0    1   19
      1 skipped: cannot do signals in JVM RT  \#124628
                                                    pass fail todo skip plan
 S24-testing/0-compile.t............................   1    0    0    0    1
-S24-testing/10-is-approx.t.........................   5    2    0    0    7
+S24-testing/10-is-approx.rakudo.jvm................   7    0    0    0    7
 S24-testing/11-plan-skip-all-subtests.t............   4    0    0    0    4
 S24-testing/11-plan-skip-all.t.....................   0    1    0    0    1
      1 tests aborted (missing ok/not ok)
@@ -1589,8 +1590,8 @@ S32-io/dir.rakudo.jvm..............................  12    0    3    1   16
      1 todo   : dirname is not yet absolute RT #124786
 S32-io/file-tests.t................................  35    0    0    0   35
 S32-io/indir.t.....................................  75    0    0    0   75
-S32-io/io-cathandle.rakudo.jvm.....................   1   27    0    0   28
-    26 tests aborted (missing ok/not ok)
+S32-io/io-cathandle.rakudo.jvm.....................  27    0    0    1   28
+     1 skipped: Method 'sink' not found for invocant of class 'BOOTIO'
 S32-io/io-handle.rakudo.jvm........................  25    0    0    1   26
      1 skipped: The spawned command (perl6-j) exited unsuccessfully (exit code: 1)
 S32-io/io-path-cygwin.rakudo.jvm...................  51    0    1    0   52
@@ -1627,8 +1628,7 @@ S32-io/pipe.rakudo.jvm.............................  16    0    0    3   19
 S32-io/rename.t....................................  29    0    0    0   29
 S32-io/seek.rakudo.jvm.............................   0    0    0    4    4
      4 skipped: Method 'sink' not found for invocant of class 'BOOTIO'
-S32-io/slurp.t.....................................  17    1    0    0   18
-     1 tests aborted (missing ok/not ok)
+S32-io/slurp.rakudo.jvm............................  18    0    0    0   18
 S32-io/socket-accept-and-working-threads.t.........  15    0    0    0   15
 S32-io/socket-fail-invalid-values.t................   4    0    0    0    4
 S32-io/socket-host-port-split.rakudo.jvm...........   1    0    0    1    2
@@ -1636,7 +1636,7 @@ S32-io/socket-host-port-split.rakudo.jvm...........   1    0    0    1    2
 S32-io/socket-recv-vs-read.t.......................  13    0    0    0   13
 S32-io/spurt.rakudo.jvm............................  57    0    4    0   61
      4 todo   : [io grant] expected: Buf[uint8].new(200); got: Buf[uint8].new(200); maybe caused by RT #128041
-S32-io/tell.t......................................   3    1    0    0    4
+S32-io/tell.rakudo.jvm.............................   4    0    0    0    4
 S32-list/batch.t...................................   4    0    0    0    4
 S32-list/categorize-list.t.........................  28    0    0    0   28
 S32-list/categorize.t..............................  28    0    0    0   28
@@ -1966,7 +1966,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -2039,27 +2039,19 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          45,     0,     7,    68,   120, 80815
-"S16",         705,     3,    15,    38,   761,   798
+"S16",         705,     0,    18,    38,   761,   798
 "S17",         926,     0,    17,    47,   990,  1076
 "S19",          14,     0,     7,     2,    23,    33
 "S22",          18,     0,     0,     1,    19,    19
-"S24",          39,     3,     0,     0,    42,   114
+"S24",          41,     1,     0,     0,    42,   114
 "S26",        1372,     0,     7,    61,  1440,  1440
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14466,    29,   229,   234, 14958, 13278
-"int",        1343,     0,    10,    17,  1370,  1364
+"S32",       14494,     0,   229,   235, 14958, 13278
+"int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     50862,    35,   840,  1607, 53344,132984
+"total",     50891,     2,   843,  1608, 53344,132984
 ----------------
 Failure summary:
-S16-filehandles/argfiles.rakudo.jvm 2 - get($*ARGFILES) reads from $*IN if no files are in @*ARGS
-S16-filehandles/argfiles.rakudo.jvm 12 - Can change $*IN.nl-in and it has effect
-S16-filehandles/argfiles.rakudo.jvm 16 - no crash when ^D with get(ARGFILES)
-S24-testing/10-is-approx.t 5 - abs-tol + rel-tol version + optional description
-S24-testing/10-is-approx.t 7 - rel tol is correctly calculated
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
-S32-io/io-cathandle.rakudo.jvm 1 - chomp method and nl-in method
-S32-io/io-cathandle.rakudo.jvm aborted 26 test(s)
-S32-io/slurp.t aborted 1 test(s)
-S32-io/tell.t 3 - open(:a) handle
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
