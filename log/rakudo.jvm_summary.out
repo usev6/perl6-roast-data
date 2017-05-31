@@ -1447,7 +1447,7 @@ S24-testing/9-is_deeply.t..........................   3    0    0    0    3
 S24-testing/line-numbers.t.........................  13    0    0    0   13
                                                    pass fail todo skip plan
 S26-documentation/01-delimited.t...................  40    0    0    0   40
-S26-documentation/02-paragraph.t...................  27    0    0    0   27
+S26-documentation/02-paragraph.t...................  28    0    0    0   28
 S26-documentation/03-abbreviated.t.................  30    0    0    0   30
 S26-documentation/04-code.t........................  50    0    0    0   50
 S26-documentation/05-comment.t.....................   9    0    0    0    9
@@ -1966,7 +1966,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -2044,14 +2044,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S19",          14,     0,     7,     2,    23,    33
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          41,     1,     0,     0,    42,   114
-"S26",        1372,     0,     7,    61,  1440,  1440
+"S26",        1373,     0,     7,    61,  1441,  1441
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       14494,     0,   229,   235, 14958, 13278
-"int",        1342,     1,    10,    17,  1370,  1364
+"int",        1343,     0,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     50891,     2,   843,  1608, 53344,132984
+"total",     50893,     1,   843,  1608, 53345,132985
 ----------------
 Failure summary:
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
