@@ -1265,7 +1265,7 @@ S15-string-types/NFK-types.rakudo.jvm..............   0    0    0   10   10
 S15-string-types/Str.rakudo.jvm....................   1    0    2    1    4
      1 skipped: :nfg adverb NYI RT  \#124991
      1 todo   : NFG on JVM RT #124992
-     1 todo   : NFG on JVM RT #124994
+     1 todo PASSED: NFG on JVM RT #124994
 S15-unicode-information/uniname.rakudo.jvm.........  18    0    2   20   40
      5 skipped: :either NYI RT  \#125070
      5 skipped: :either and :one NYI RT  \#one NYI RT \#:125071
@@ -1966,7 +1966,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -2048,9 +2048,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       14494,     0,   229,   235, 14958, 13278
-"int",        1343,     0,    10,    17,  1370,  1364
+"int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     50893,     1,   843,  1608, 53345,132985
+"total",     50892,     2,   843,  1608, 53345,132985
 ----------------
 Failure summary:
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
