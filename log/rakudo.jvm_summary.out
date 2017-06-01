@@ -293,9 +293,9 @@ S02-types/range-iterator.t.........................  72    0    0    0   72
 S02-types/range.rakudo.jvm......................... 187    0    2    0  189
      2 todo   : wrong error message, cmp. Rakudo commit 0c16bb2b01
 S02-types/set-iterator.t...........................  12    0    0    0   12
-S02-types/set.rakudo.jvm........................... 197    0    0    9  206
+S02-types/set.rakudo.jvm........................... 201    0    0    9  210
      9 skipped: Hypers not yet Set compatible RT  \#124487
-S02-types/sethash.rakudo.jvm....................... 227    0    0   10  237
+S02-types/sethash.rakudo.jvm....................... 231    0    0   10  241
     10 skipped: 'is TypeObject' NYI RT  \#124490
 S02-types/sigils-and-types.rakudo.jvm..............  25    0    2    0   27
      1 todo   : Capture does Associative RT #124485
@@ -394,7 +394,7 @@ S03-operators/context-forcers.rakudo.jvm........... 104    0    0    2  106
 S03-operators/context.t............................  39    0    0    0   39
 S03-operators/custom.t.............................   1    0    0    0    1
 S03-operators/div.t................................   9    0    0    0    9
-S03-operators/elem.t............................... 228    0    0    0  228
+S03-operators/elem.t............................... 456    0    0    0  456
 S03-operators/equality.t...........................  46    0    0    0   46
 S03-operators/eqv.rakudo.jvm.......................  52    0    3    1   56
      1 skipped: huh?
@@ -433,7 +433,7 @@ S03-operators/precedence.rakudo.jvm................  71    0    4    2   77
      2 todo   : Inequality (!=) misparsed as assignment RT #121108
      1 todo   : RT 128042
      1 todo   : superscript exponent associativity RT #130414
-S03-operators/proper-subset.t...................... 540    0    0    0  540
+S03-operators/proper-subset.t......................1080    0    0    0 1080
 S03-operators/range-basic.t........................ 115    0    0    0  115
 S03-operators/range-int.t.......................... 507    0    0    0  507
 S03-operators/range.t.............................. 129    0    0    0  129
@@ -446,14 +446,14 @@ S03-operators/relational.rakudo.jvm................ 177    0    2    0  179
 S03-operators/repeat.rakudo.jvm....................  60    0    0    3   63
      3 skipped: OutOfMemoryError: Java heap space
 S03-operators/scalar-assign.t......................   4    0    0    0    4
-S03-operators/set.t................................ 204    0    0    0  204
+S03-operators/set.t................................  60    0    0    0   60
 S03-operators/short-circuit.t......................  83    0    0    0   83
 S03-operators/so.t.................................  15    0    0    0   15
 S03-operators/spaceship-and-containers.t...........   6    0    0    0    6
 S03-operators/spaceship.t..........................   6    0    0    0    6
 S03-operators/subscript-adverbs.t.................. 110    0    0    0  110
 S03-operators/subscript-vs-lt.t....................   4    0    0    0    4
-S03-operators/subset.t............................. 546    0    0    0  546
+S03-operators/subset.t.............................1092    0    0    0 1092
 S03-operators/ternary.t............................  28    0    0    0   28
 S03-operators/u2212-minus.t........................  54    0    0    0   54
 S03-operators/value_equivalence.t..................  87    0    0    0   87
@@ -1262,10 +1262,9 @@ S15-string-types/NF-types.rakudo.jvm...............   0    0    0   10   10
 S15-string-types/NFK-types.rakudo.jvm..............   0    0    0   10   10
      5 skipped: NFKC type NYI RT  \#124989
      5 skipped: NFKD type NYI RT  \#124990
-S15-string-types/Str.rakudo.jvm....................   1    0    2    1    4
+S15-string-types/Str.rakudo.jvm....................   2    0    1    1    4
      1 skipped: :nfg adverb NYI RT  \#124991
      1 todo   : NFG on JVM RT #124992
-     1 todo PASSED: NFG on JVM RT #124994
 S15-unicode-information/uniname.rakudo.jvm.........  18    0    2   20   40
      5 skipped: :either NYI RT  \#125070
      5 skipped: :either and :one NYI RT  \#one NYI RT \#:125071
@@ -1382,7 +1381,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1441,7 +1441,7 @@ S24-testing/11-plan-skip-all-subtests.t............   4    0    0    0    4
 S24-testing/11-plan-skip-all.t.....................   0    1    0    0    1
      1 tests aborted (missing ok/not ok)
 S24-testing/3-output.t.............................   4    0    0    0    4
-S24-testing/7-bail_out.t...........................   3    0    0    0    3
+S24-testing/7-bail_out.t...........................   4    0    0    0    4
 S24-testing/8-die_on_fail.t........................   6    0    0    0    6
 S24-testing/9-is_deeply.t..........................   3    0    0    0    3
 S24-testing/line-numbers.t.........................  13    0    0    0   13
@@ -1966,7 +1966,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -2026,8 +2026,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9282,     0,   149,   409,  9840,  9843
-"S03",        7399,     0,    63,    98,  7560,  7578
+"S02",        9290,     0,   149,   409,  9848,  9851
+"S03",        8569,     0,    63,    98,  8730,  8748
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5824,     0,   104,   209,  6137,  6325
 "S06",        2154,     0,    70,    99,  2323,  2366
@@ -2038,20 +2038,19 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S12",        1675,     0,    38,   137,  1850,  1899
 "S13",          64,     0,     0,     0,    64,    74
 "S14",         396,     0,     5,     5,   406,   419
-"S15",          45,     0,     7,    68,   120, 80815
+"S15",          46,     0,     6,    68,   120, 80815
 "S16",         705,     0,    18,    38,   761,   798
 "S17",         926,     0,    17,    47,   990,  1076
 "S19",          14,     0,     7,     2,    23,    33
 "S22",          18,     0,     0,     1,    19,    19
-"S24",          41,     1,     0,     0,    42,   114
+"S24",          42,     1,     0,     0,    43,   115
 "S26",        1373,     0,     7,    61,  1441,  1441
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       14494,     0,   229,   235, 14958, 13278
-"int",        1342,     1,    10,    17,  1370,  1364
+"int",        1343,     0,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     50892,     2,   843,  1608, 53345,132985
+"total",     52073,     1,   842,  1608, 54524,134164
 ----------------
 Failure summary:
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
