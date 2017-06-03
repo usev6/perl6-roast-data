@@ -95,7 +95,7 @@ S02-magicals/DISTRO.rakudo.jvm.....................  12    0    2   14   28
      1 todo   : no Distro.signature yet RT #124617
      1 todo   : no Distro.signature yet RT #124621
 S02-magicals/GROUP.t...............................   1    0    0    0    1
-S02-magicals/KERNEL.rakudo.jvm.....................  15    0    3   22   40
+S02-magicals/KERNEL.rakudo.jvm.....................  15    1    3   22   41
      6 skipped: skip tests because of above failure
     16 skipped: unimpl $?KERNEL RT  \#124624
      1 todo   : no Kernel.desc yet RT #124626
@@ -1383,8 +1383,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    12 todo   : \r\n not yet handled as grapheme
-     2 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1995,13 +1994,12 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  31    0    2    0   33
+integration/error-reporting.rakudo.jvm.............  28    3    2    0   33
      1 todo   : UnwindException
      1 todo   : nigh
-integration/eval-and-threads.t.....................   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
-integration/failure-and-callsame.t.................   0   50    0    0   50
-    50 tests aborted (missing ok/not ok)
+     3 tests aborted (missing ok/not ok)
+integration/eval-and-threads.t.....................   1    0    0    0    1
+integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
@@ -2030,7 +2028,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9290,     0,   149,   409,  9848,  9851
+"S02",        9290,     1,   149,   409,  9849,  9852
 "S03",        8869,     0,    63,    98,  9030,  9048
 "S04",        1464,     0,    60,    33,  1557,  1589
 "S05",        5824,     0,   104,   209,  6137,  6325
@@ -2052,12 +2050,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       14496,     0,   229,   235, 14960, 13280
-"int",        1291,    52,    10,    17,  1370,  1364
+"int",        1339,     4,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     52323,    53,   843,  1608, 54827,134468
+"total",     52371,     6,   843,  1608, 54828,134469
 ----------------
 Failure summary:
+S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/eval-and-threads.t aborted 1 test(s)
-integration/failure-and-callsame.t aborted 50 test(s)
+integration/error-reporting.rakudo.jvm aborted 3 test(s)
