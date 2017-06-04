@@ -339,7 +339,7 @@ S03-feeds/basic.rakudo.jvm.........................   9    0    6    8   23
 S03-junctions/associative.t........................  10    0    0    0   10
 S03-junctions/autothreading.t...................... 106    0    0    0  106
 S03-junctions/boolean-context.t....................  74    0    0    0   74
-S03-junctions/misc.t............................... 144    0    0    0  144
+S03-junctions/misc.t............................... 146    0    0    0  146
 S03-metaops/cross.t................................  79    0    0    0   79
 S03-metaops/eager-hyper.rakudo.jvm.................   7    0    1    0    8
      1 todo   : hyper NYI entirely, I guess RT #124517
@@ -362,7 +362,7 @@ S03-operators/also.rakudo.jvm......................   4    0    4    0    8
      1 todo   : nom regression RT #124545
      1 todo   : nom regression RT #124546
      1 todo   : nom regression RT #124547
-S03-operators/andthen.t............................  12    0    0    0   12
+S03-operators/andthen.t............................  14    0    0    0   14
 S03-operators/arith.t.............................. 158    0    0    0  158
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
 S03-operators/assign.rakudo.jvm.................... 273    0   14   12  299
@@ -424,9 +424,9 @@ S03-operators/mix.t................................ 126    0    0    0  126
 S03-operators/names.t..............................   7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
-S03-operators/notandthen.t.........................   4    0    0    0    4
+S03-operators/notandthen.t.........................   6    0    0    0    6
 S03-operators/numeric-shift.t......................  38    0    0    0   38
-S03-operators/orelse.t.............................  14    0    0    0   14
+S03-operators/orelse.t.............................  16    0    0    0   16
 S03-operators/overflow.t........................... 101    0    0    0  101
 S03-operators/precedence.rakudo.jvm................  71    0    4    2   77
      2 skipped: superscript exponent associativity RT  \#130414
@@ -526,7 +526,7 @@ S04-exception-handlers/control.t...................  12    0    0    0   12
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
 S04-exceptions/control_across_runloop.t............   1    0    0    0    1
 S04-exceptions/exceptions-json.t...................   3    0    0    0    3
-S04-exceptions/fail.t..............................  32    0    0    0   32
+S04-exceptions/fail.t..............................  34    0    0    0   34
 S04-exceptions/pending.rakudo.jvm..................  16    0    2    3   21
      2 skipped: $!.pending
      1 skipped: $object.handled
@@ -1994,10 +1994,9 @@ integration/advent2014-day05.rakudo.jvm............   6    0    0    1    7
 integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
-integration/error-reporting.rakudo.jvm.............  28    3    2    0   33
+integration/error-reporting.rakudo.jvm.............  31    0    2    0   33
      1 todo   : UnwindException
      1 todo   : nigh
-     3 tests aborted (missing ok/not ok)
 integration/eval-and-threads.t.....................   1    0    0    0    1
 integration/failure-and-callsame.t.................  50    0    0    0   50
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
@@ -2029,8 +2028,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9290,     1,   149,   409,  9849,  9852
-"S03",        8869,     0,    63,    98,  9030,  9048
-"S04",        1464,     0,    60,    33,  1557,  1589
+"S03",        8877,     0,    63,    98,  9038,  9056
+"S04",        1466,     0,    60,    33,  1559,  1591
 "S05",        5824,     0,   104,   209,  6137,  6325
 "S06",        2154,     0,    70,    99,  2323,  2366
 "S07",         144,     0,     7,     5,   156,   156
@@ -2050,12 +2049,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       14496,     0,   229,   235, 14960, 13280
-"int",        1339,     4,    10,    17,  1370,  1364
+"int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     52371,     6,   843,  1608, 54828,134469
+"total",     52384,     3,   843,  1608, 54838,134479
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/error-reporting.rakudo.jvm aborted 3 test(s)
