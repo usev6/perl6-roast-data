@@ -141,8 +141,7 @@ S02-names-vars/perl.rakudo.jvm..................... 114    0    1    1  116
      1 skipped: RT  \#67790
      1 todo   : RT #123048
 S02-names-vars/signature.t.........................  13    0    0    0   13
-S02-names-vars/variables-and-packages.rakudo.jvm...  35    0    3    0   38
-     3 todo   : nom regression: RT #122346
+S02-names-vars/variables-and-packages.t............  38    0    0    0   38
 S02-names-vars/varnames.rakudo.jvm.................  27    0    2    0   29
      2 todo   : cannot easily override [] at the moment
 S02-names/bare-sigil.t.............................  11    0    0    0   11
@@ -1352,7 +1351,7 @@ S17-promise/nonblocking-await.rakudo.jvm...........   5    0    0   14   19
      1 skipped: hangs on JVM (sometimes)
 S17-promise/start.t................................  58    0    0    0   58
 S17-promise/stress.t...............................   1    0    0    0    1
-S17-promise/then.t.................................  14    0    0    0   14
+S17-promise/then.t.................................  15    0    0    0   15
 S17-scheduler/at.t.................................  15    0    0    0   15
 S17-scheduler/basic.rakudo.jvm.....................  24    0    0   10   34
      3 skipped: waiting for new '.loads' semantics RT  \#124774
@@ -1410,7 +1409,7 @@ S17-supply/syntax-nonblocking-await.t..............   5    0    0    0    5
 S17-supply/syntax.rakudo.jvm.......................  70    0    2    0   72
      2 todo   : got: '42'
 S17-supply/tail.t..................................   8    0    0    0    8
-S17-supply/throttle.t..............................  17    0    0    0   17
+S17-supply/throttle.t..............................  16    1    0    0   17
 S17-supply/unique.t................................  17    0    0    0   17
 S17-supply/wait.t..................................   4    0    0    0    4
 S17-supply/watch-path.rakudo.jvm...................   1    0    0    3    4
@@ -1611,7 +1610,7 @@ S32-io/io-spec-qnx.t...............................  29    0    0    0   29
 S32-io/io-spec-unix.t.............................. 133    0    0    0  133
 S32-io/io-spec-win.rakudo.jvm...................... 210    0    0    3  213
      3 skipped: Win32ish on-platform tests
-S32-io/io-special.t................................  42    0    0    0   42
+S32-io/io-special.t................................  45    0    0    0   45
 S32-io/lock.rakudo.jvm.............................  13    0    3   13   29
      8 skipped: [io grant] Could not obtain blocking, shared lock: NonWritableChannelException
      5 skipped: [io grant] hangs
@@ -1619,17 +1618,18 @@ S32-io/lock.rakudo.jvm.............................  13    0    3   13   29
 S32-io/move.t......................................  30    0    0    0   30
 S32-io/note.t......................................   7    0    0    0    7
 S32-io/null-char.t.................................  24    0    0    0   24
-S32-io/open.rakudo.jvm.............................  44    0    0   18   62
+S32-io/open.rakudo.jvm.............................  44    2    0   18   64
     10 skipped: [io grant] IllegalArgumentException: READ + APPEND not allowed
      4 skipped: [io grant] NoSuchFileException: t-32-io-open.tmp
      4 skipped: [io grant] NoSuchFileException: t-32-io-open.tmp'
+     2 tests aborted (missing ok/not ok)
 S32-io/other.t.....................................  61    0    0    0   61
 S32-io/pipe.rakudo.jvm.............................  16    0    0    3   19
      3 skipped: hangs, RT  \#131393
 S32-io/rename.t....................................  29    0    0    0   29
 S32-io/seek.rakudo.jvm.............................   0    0    0    4    4
      4 skipped: Method 'sink' not found for invocant of class 'BOOTIO'
-S32-io/slurp.rakudo.jvm............................  18    0    0    0   18
+S32-io/slurp.rakudo.jvm............................  19    0    0    0   19
 S32-io/socket-accept-and-working-threads.t.........  15    0    0    0   15
 S32-io/socket-fail-invalid-values.t................   4    0    0    0    4
 S32-io/socket-host-port-split.rakudo.jvm...........   1    0    0    1    2
@@ -1967,7 +1967,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -2027,7 +2027,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9290,     1,   149,   409,  9849,  9852
+"S02",        9293,     1,   146,   409,  9849,  9852
 "S03",        8877,     0,    63,    98,  9038,  9056
 "S04",        1466,     0,    60,    33,  1559,  1591
 "S05",        5824,     0,   104,   209,  6137,  6325
@@ -2041,19 +2041,20 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          46,     0,     6,    68,   120, 80815
 "S16",         705,     0,    18,    38,   761,   798
-"S17",         926,     0,    17,    47,   990,  1077
+"S17",         926,     1,    17,    47,   991,  1078
 "S19",          14,     0,     7,     2,    23,    33
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          42,     1,     0,     0,    43,   115
 "S26",        1373,     0,     7,    61,  1441,  1441
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14496,     0,   229,   235, 14960, 13280
-"int",        1342,     1,    10,    17,  1370,  1364
+"S32",       14500,     2,   229,   235, 14966, 13286
+"int",        1343,     0,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     52384,     3,   843,  1608, 54838,134479
+"total",     52392,     5,   840,  1608, 54845,134486
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
+S17-supply/throttle.t 5 - did we see all of the element
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+S32-io/open.rakudo.jvm aborted 2 test(s)
