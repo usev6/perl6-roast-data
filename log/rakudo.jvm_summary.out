@@ -377,7 +377,7 @@ S03-operators/assign.rakudo.jvm.................... 273    0   14   12  299
 S03-operators/autoincrement-range.t................ 104    0    0    0  104
 S03-operators/autoincrement.t......................  80    0    0    0   80
 S03-operators/autovivification.t...................  23    0    0    0   23
-S03-operators/bag.t................................ 130    0    0    0  130
+S03-operators/bag.t................................ 102    0    0    0  102
 S03-operators/basic-types.t........................  19    0    0    0   19
 S03-operators/bit.t................................  40    0    0    0   40
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
@@ -410,7 +410,7 @@ S03-operators/increment.rakudo.jvm.................  35    0    4    0   39
 S03-operators/infixed-function.t...................   5    0    0    0    5
 S03-operators/inplace.rakudo.jvm...................  27    0    0    4   31
      4 skipped: Method '' not found for invocant of class 'Str' RT  \#124528
-S03-operators/intersection.t....................... 384    0    0    0  384
+S03-operators/intersection.t....................... 432    0    0    0  432
 S03-operators/is-divisible-by.rakudo.jvm...........  14    0    1    0   15
      1 todo   : not sure why this doesn't fire
 S03-operators/lcm.t................................  15    0    0    0   15
@@ -420,7 +420,7 @@ S03-operators/minmax.rakudo.jvm....................  37    0    0    2   39
 S03-operators/misc.rakudo.jvm......................  53    0    1    1   55
      1 skipped: Bogus term
      1 todo   : RT #93978
-S03-operators/mix.t................................ 126    0    0    0  126
+S03-operators/mix.t................................  98    0    0    0   98
 S03-operators/names.t..............................   7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -446,7 +446,7 @@ S03-operators/relational.rakudo.jvm................ 177    0    2    0  179
 S03-operators/repeat.rakudo.jvm....................  60    0    0    3   63
      3 skipped: OutOfMemoryError: Java heap space
 S03-operators/scalar-assign.t......................   4    0    0    0    4
-S03-operators/set.t................................  48    0    0    0   48
+S03-operators/set.t................................  40    0    0    0   40
 S03-operators/short-circuit.t......................  83    0    0    0   83
 S03-operators/so.t.................................  15    0    0    0   15
 S03-operators/spaceship-and-containers.t...........   6    0    0    0    6
@@ -1383,8 +1383,7 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1969,7 +1968,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   9    0    0    0    9
+integration/advent2012-day21.t.....................   8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1982,7 +1981,7 @@ integration/advent2013-day09.t.....................  21    0    0    0   21
 integration/advent2013-day10.rakudo.jvm............  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.t.....................  32    0    0    0   32
-integration/advent2013-day14.t.....................  10    0    0    0   10
+integration/advent2013-day14.t.....................   9    1    0    0   10
 integration/advent2013-day15.rakudo.jvm............  29    0    1    0   30
      1 todo   : jvm rounding quirks
 integration/advent2013-day18.t.....................  10    0    0    0   10
@@ -2030,7 +2029,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9294,     1,   146,   409,  9850,  9853
-"S03",        9261,     0,    63,    98,  9422,  9440
+"S03",        9245,     0,    63,    98,  9406,  9424
 "S04",        1466,     0,    60,    33,  1559,  1591
 "S05",        5824,     0,   104,   209,  6137,  6325
 "S06",        2154,     0,    70,    99,  2323,  2366
@@ -2043,7 +2042,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         396,     0,     5,     5,   406,   419
 "S15",          46,     0,     6,    68,   120, 80815
 "S16",         705,     0,    18,    38,   761,   798
-"S17",         927,     0,    17,    47,   991,  1078
+"S17",         927,     0,    17,    47,   991,  1089
 "S19",          14,     0,     7,     2,    23,    33
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          42,     1,     0,     0,    43,   115
@@ -2051,11 +2050,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
 "S32",       14510,     2,   229,   235, 14976, 13296
-"int",        1343,     0,    10,    17,  1370,  1364
+"int",        1341,     2,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     52788,     4,   840,  1608, 55240,134881
+"total",     52770,     6,   840,  1608, 55224,134876
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S32-io/open.rakudo.jvm aborted 2 test(s)
+integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
+integration/advent2013-day14.t 2 - quotes example
