@@ -194,11 +194,11 @@ S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  22    0    0    0   22
 S02-types/bag-iterator.t...........................  14    0    0    0   14
-S02-types/bag.rakudo.jvm........................... 208    0    2    0  210
+S02-types/bag.rakudo.jvm........................... 220    0    2    0  222
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT #124454
 S02-types/baggy.t..................................   7    0    0    0    7
-S02-types/baghash.rakudo.jvm....................... 251    0    2   21  274
+S02-types/baghash.rakudo.jvm....................... 263    0    2   21  286
     21 skipped: 'is TypeObject' NYI RT  \#124490
      2 todo   : in flux
 S02-types/bool.t...................................  67    0    0    0   67
@@ -254,13 +254,13 @@ S02-types/list.rakudo.jvm..........................  69    0    0    2   71
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding RT  \#124494
 S02-types/mix-iterator.t...........................  14    0    0    0   14
-S02-types/mix.rakudo.jvm........................... 199    0    2    0  201
+S02-types/mix.rakudo.jvm........................... 211    0    2    0  213
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT #124496
 S02-types/mixed_multi_dimensional.rakudo.jvm.......  77    0    3    0   80
      1 todo   : isa hash
      2 todo   : unknown
-S02-types/mixhash.rakudo.jvm....................... 222    0    2   21  245
+S02-types/mixhash.rakudo.jvm....................... 234    0    2   21  257
     21 skipped: 'is TypeObject' NYI RT  \#124490
      2 todo   : in flux
 S02-types/mu.t.....................................   8    0    0    0    8
@@ -292,9 +292,9 @@ S02-types/range-iterator.t.........................  72    0    0    0   72
 S02-types/range.rakudo.jvm......................... 187    0    2    0  189
      2 todo   : wrong error message, cmp. Rakudo commit 0c16bb2b01
 S02-types/set-iterator.t...........................  12    0    0    0   12
-S02-types/set.rakudo.jvm........................... 201    0    0    9  210
+S02-types/set.rakudo.jvm........................... 203    0    0    9  212
      9 skipped: Hypers not yet Set compatible RT  \#124487
-S02-types/sethash.rakudo.jvm....................... 231    0    0   10  241
+S02-types/sethash.rakudo.jvm....................... 233    0    0   10  243
     10 skipped: 'is TypeObject' NYI RT  \#124490
 S02-types/sigils-and-types.rakudo.jvm..............  25    0    2    0   27
      1 todo   : Capture does Associative RT #124485
@@ -526,7 +526,7 @@ S04-exception-handlers/control.t...................  12    0    0    0   12
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
 S04-exceptions/control_across_runloop.t............   1    0    0    0    1
 S04-exceptions/exceptions-json.t...................   3    0    0    0    3
-S04-exceptions/fail.t..............................  34    0    0    0   34
+S04-exceptions/fail.t..............................  35    0    0    0   35
 S04-exceptions/pending.rakudo.jvm..................  16    0    2    3   21
      2 skipped: $!.pending
      1 skipped: $object.handled
@@ -1383,7 +1383,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1708,7 +1709,7 @@ S32-num/abs.t......................................  49    0    0    0   49
 S32-num/base.rakudo.jvm............................  60    0    1    0   61
      1 todo   : code does not die, RT#125819
 S32-num/complex.t.................................. 553    0    0    0  553
-S32-num/cool-num.rakudo.jvm........................  39    0    0    4   43
+S32-num/cool-num.rakudo.jvm........................  41    0    0    4   45
      4 skipped: angle conversion RT  \#124816
 S32-num/exp.t......................................  72    0    0    0   72
 S32-num/expmod.t................................... 117    0    0    0  117
@@ -1968,7 +1969,7 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................   8    1    0    0    9
+integration/advent2012-day21.t.....................   9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
 integration/advent2012-day24.t.....................   1    0    0    0    1
@@ -1981,7 +1982,7 @@ integration/advent2013-day09.t.....................  21    0    0    0   21
 integration/advent2013-day10.rakudo.jvm............  43    0    1    0   44
      1 todo   : adverb stacking
 integration/advent2013-day12.t.....................  32    0    0    0   32
-integration/advent2013-day14.t.....................   9    1    0    0   10
+integration/advent2013-day14.t.....................  10    0    0    0   10
 integration/advent2013-day15.rakudo.jvm............  29    0    1    0   30
      1 todo   : jvm rounding quirks
 integration/advent2013-day18.t.....................  10    0    0    0   10
@@ -2028,9 +2029,9 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9294,     1,   146,   409,  9850,  9853
-"S03",        9245,     0,    63,    98,  9406,  9424
-"S04",        1466,     0,    60,    33,  1559,  1591
+"S02",        9346,     1,   146,   409,  9902,  9905
+"S03",        9245,     0,    63,    98,  9406,  9412
+"S04",        1467,     0,    60,    33,  1560,  1592
 "S05",        5824,     0,   104,   209,  6137,  6325
 "S06",        2154,     0,    70,    99,  2323,  2366
 "S07",         144,     0,     7,     5,   156,   156
@@ -2049,14 +2050,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1373,     0,     7,    61,  1441,  1441
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14510,     2,   229,   235, 14976, 13296
-"int",        1341,     2,    10,    17,  1370,  1364
+"S32",       14512,     2,   229,   235, 14978, 13298
+"int",        1343,     0,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     52770,     6,   840,  1608, 55224,134876
+"total",     52827,     4,   840,  1608, 55279,134919
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S32-io/open.rakudo.jvm aborted 2 test(s)
-integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
-integration/advent2013-day14.t 2 - quotes example
