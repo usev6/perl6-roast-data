@@ -869,7 +869,7 @@ S06-multi/subsignature.rakudo.jvm..................  86    0    9    5  100
      1 todo   : RT #126702
      1 todo   : operator protos
 S06-multi/syntax.t.................................  45    0    0    0   45
-S06-multi/type-based.rakudo.jvm....................  62    0    4    0   66
+S06-multi/type-based.rakudo.jvm....................  61    0    4    0   65
      4 todo   : coercions need to fail like constraints RT #124772
 S06-multi/unpackability.t..........................  10    0    0    0   10
 S06-multi/value-based.rakudo.jvm...................  19    0    2    0   21
@@ -2032,8 +2032,8 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9346,     1,   146,   409,  9902,  9905
 "S03",        9245,     0,    63,    98,  9406,  9412
 "S04",        1467,     0,    60,    33,  1560,  1592
-"S05",        5824,     0,   104,   209,  6137,  6325
-"S06",        2154,     0,    70,    99,  2323,  2366
+"S05",        5824,     0,   104,   209,  6137,  6329
+"S06",        2153,     0,    70,    99,  2322,  2365
 "S07",         144,     0,     7,     5,   156,   156
 "S09",        2776,     0,    25,    40,  2841,  2841
 "S10",         141,     0,     5,     1,   147,   204
@@ -2053,7 +2053,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       14512,     2,   229,   235, 14978, 13298
 "int",        1343,     0,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     52827,     4,   840,  1608, 55279,134919
+"total",     52826,     4,   840,  1608, 55278,134922
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
