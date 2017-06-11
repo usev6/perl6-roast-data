@@ -1383,7 +1383,8 @@ S17-supply/head.t..................................   9    0    0    0    9
 S17-supply/interval.rakudo.jvm.....................   5    0    0    3    8
      3 skipped: Proc::Async NYI RT  \#126524
 S17-supply/lines.rakudo.jvm........................   9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    12 todo   : \r\n not yet handled as grapheme
+     2 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................   5    0    0    0    5
 S17-supply/map.t...................................   7    0    0    0    7
 S17-supply/max.t...................................  10    0    0    0   10
@@ -1547,7 +1548,7 @@ S32-container/roundrobin.t.........................   6    0    0    0    6
 S32-container/stringify.t..........................  16    0    0    0   16
 S32-container/zip.rakudo.jvm.......................  12    0    0    2   14
      2 skipped: lvalue zip RT  \#124907
-S32-exceptions/misc.rakudo.jvm..................... 407    0   16    3  426
+S32-exceptions/misc.rakudo.jvm..................... 408    0   16    3  427
      1 skipped: Error while compiling, type X::TooLateForREPR
      1 skipped: UnwindException
      1 skipped: failure assignment still blows up on JVM, RT  \#125769
@@ -2050,10 +2051,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1373,     0,     7,    61,  1441,  1441
 "S28",           2,     0,     0,     0,     2,     6
 "S29",         432,     0,    13,     4,   449,   449
-"S32",       14514,     3,   229,   235, 14981, 13301
+"S32",       14515,     3,   229,   235, 14982, 13302
 "int",        1342,     1,    10,    17,  1370,  1364
 "ros",           2,     0,     0,     0,     2,     2
-"total",     52828,     6,   840,  1608, 55282,134926
+"total",     52829,     6,   840,  1608, 55283,134927
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
