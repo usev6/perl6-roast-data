@@ -285,7 +285,7 @@ S02-types/nil.rakudo.jvm...........................  59    0    5    1   65
      1 skipped: triage
      5 todo   : triage
 S02-types/num.rakudo.jvm...........................  98    0    0    0   98
-S02-types/pair.rakudo.jvm.......................... 181    0    1    0  182
+S02-types/pair.rakudo.jvm.......................... 182    0    1    0  183
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range-iterator.t.........................  72    0    0    0   72
@@ -433,7 +433,7 @@ S03-operators/precedence.rakudo.jvm................  71    0    4    2   77
      2 todo   : Inequality (!=) misparsed as assignment RT #121108
      1 todo   : RT 128042
      1 todo   : superscript exponent associativity RT #130414
-S03-operators/proper-subset.t......................1080    0    0    0 1080
+S03-operators/proper-subset.t......................1560    0    0    0 1560
 S03-operators/range-basic.t........................ 115    0    0    0  115
 S03-operators/range-int.t.......................... 507    0    0    0  507
 S03-operators/range.t.............................. 129    0    0    0  129
@@ -593,7 +593,7 @@ S04-statements/if.rakudo.jvm.......................  39    0    4    0   43
      4 todo   : RT#105872
 S04-statements/label.rakudo.jvm....................   3    0    2    1    6
      1 skipped: control exception without handler, RT  \#126490
-     2 todo   : redo of outer labels broken, related to RT #126490
+     2 todo PASSED: redo of outer labels broken, related to RT #126490
 S04-statements/last.rakudo.jvm.....................   8    0    0    1    9
      1 skipped: control exception without handler, RT  \#126490
 S04-statements/loop.rakudo.jvm.....................  16    0    2    0   18
@@ -2295,8 +2295,8 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9349,     2,   146,   409,  9906,  9909
-"S03",        9485,     0,    63,    98,  9646,  9652
+"S02",        9350,     2,   146,   409,  9907,  9910
+"S03",        9965,     0,    63,    98, 10126, 10132
 "S04",        1458,     7,    60,    33,  1558,  1590
 "S05",        5824,     0,   104,   209,  6137,  6329
 "S06",        2154,     0,    70,    99,  2323,  2366
@@ -2319,7 +2319,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10570,     0,     0, 10570, 10669
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     30612, 18346,   471,   950, 50379,131805
+"total",     31093, 18346,   471,   950, 50860,132286
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
