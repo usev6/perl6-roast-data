@@ -194,11 +194,11 @@ S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  22    0    0    0   22
 S02-types/bag-iterator.t...........................  14    0    0    0   14
-S02-types/bag.rakudo.jvm........................... 220    0    2    0  222
+S02-types/bag.rakudo.jvm........................... 221    0    2    0  223
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT #124454
 S02-types/baggy.t..................................   7    0    0    0    7
-S02-types/baghash.rakudo.jvm....................... 263    0    2   21  286
+S02-types/baghash.rakudo.jvm....................... 264    0    2   21  287
     21 skipped: 'is TypeObject' NYI RT  \#124490
      2 todo   : in flux
 S02-types/bool.t...................................  67    0    0    0   67
@@ -254,13 +254,13 @@ S02-types/list.rakudo.jvm..........................  69    0    0    2   71
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding RT  \#124494
 S02-types/mix-iterator.t...........................  14    0    0    0   14
-S02-types/mix.rakudo.jvm........................... 213    0    2    0  215
+S02-types/mix.rakudo.jvm........................... 214    0    2    0  216
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT #124496
 S02-types/mixed_multi_dimensional.rakudo.jvm.......  77    0    3    0   80
      1 todo   : isa hash
      2 todo   : unknown
-S02-types/mixhash.rakudo.jvm....................... 236    0    2   21  259
+S02-types/mixhash.rakudo.jvm....................... 237    0    2   21  260
     21 skipped: 'is TypeObject' NYI RT  \#124490
      2 todo   : in flux
 S02-types/mu.t.....................................   8    0    0    0    8
@@ -292,9 +292,9 @@ S02-types/range-iterator.t.........................  72    0    0    0   72
 S02-types/range.rakudo.jvm......................... 187    0    2    0  189
      2 todo   : wrong error message, cmp. Rakudo commit 0c16bb2b01
 S02-types/set-iterator.t...........................  12    0    0    0   12
-S02-types/set.rakudo.jvm........................... 203    0    0    9  212
+S02-types/set.rakudo.jvm........................... 204    0    0    9  213
      9 skipped: Hypers not yet Set compatible RT  \#124487
-S02-types/sethash.rakudo.jvm....................... 233    0    0   10  243
+S02-types/sethash.rakudo.jvm....................... 234    0    0   10  244
     10 skipped: 'is TypeObject' NYI RT  \#124490
 S02-types/sigils-and-types.rakudo.jvm..............  25    0    2    0   27
      1 todo   : Capture does Associative RT #124485
@@ -2295,7 +2295,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9350,     2,   146,   409,  9907,  9910
+"S02",        9356,     2,   146,   409,  9913,  9916
 "S03",        9965,     0,    63,    98, 10126, 10132
 "S04",        1458,     7,    60,    33,  1558,  1590
 "S05",        5824,     0,   104,   209,  6137,  6329
@@ -2319,7 +2319,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10570,     0,     0, 10570, 10669
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     31093, 18346,   471,   950, 50860,132286
+"total",     31099, 18346,   471,   950, 50866,132292
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
