@@ -1012,14 +1012,14 @@ S09-multidim/assign.rakudo.jvm.....................   0   54    0    0   54
     54 tests aborted (missing ok/not ok)
 S09-multidim/decl.t................................   0   40    0    0   40
     40 tests aborted (missing ok/not ok)
-S09-multidim/indexing.t............................  10   21    0    0   31
-    21 tests aborted (missing ok/not ok)
+S09-multidim/indexing.t............................   0   31    0    0   31
+    31 tests aborted (missing ok/not ok)
 S09-multidim/methods.t.............................   0   80    0    0   80
     80 tests aborted (missing ok/not ok)
 S09-multidim/subs.t................................   0   44    0    0   44
     44 tests aborted (missing ok/not ok)
-S09-subscript/multidim-assignment.t................   9    2    0    0   11
-     2 tests aborted (missing ok/not ok)
+S09-subscript/multidim-assignment.t................   1   10    0    0   11
+    10 tests aborted (missing ok/not ok)
 S09-subscript/slice.rakudo.jvm.....................   0   31    0    0   31
     31 tests aborted (missing ok/not ok)
 S09-typed-arrays/arrays.rakudo.jvm.................   0   84    0    0   84
@@ -2301,7 +2301,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S05",        5825,     0,   104,   209,  6138,  6329
 "S06",        2154,     0,    70,    99,  2323,  2366
 "S07",          18,   131,     7,     0,   156,   156
-"S09",          52,  1042,     0,     0,  1094,  1094
+"S09",          34,  1060,     0,     0,  1094,  1094
 "S10",           0,   148,     0,     0,   148,   205
 "S11",          15,   185,     1,     0,   201,   210
 "S12",           0,  1851,     0,     0,  1851,  1900
@@ -2319,7 +2319,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10588,     0,     0, 10588, 10687
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     28846, 19207,   451,   934, 49438,130863
+"total",     28828, 19225,   451,   934, 49438,130863
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -2339,10 +2339,10 @@ S09-hashes/objecthash.rakudo.jvm aborted 54 test(s)
 S09-multidim/XX-POS-on-dimensioned.t aborted 69 test(s)
 S09-multidim/assign.rakudo.jvm aborted 54 test(s)
 S09-multidim/decl.t aborted 40 test(s)
-S09-multidim/indexing.t aborted 21 test(s)
+S09-multidim/indexing.t aborted 31 test(s)
 S09-multidim/methods.t aborted 80 test(s)
 S09-multidim/subs.t aborted 44 test(s)
-S09-subscript/multidim-assignment.t aborted 2 test(s)
+S09-subscript/multidim-assignment.t aborted 10 test(s)
 S09-subscript/slice.rakudo.jvm aborted 31 test(s)
 S09-typed-arrays/arrays.rakudo.jvm aborted 84 test(s)
 S09-typed-arrays/hashes.t aborted 44 test(s)
