@@ -310,7 +310,7 @@ S02-types/unicode.rakudo.jvm.......................   2    0    3    0    5
      1 todo   : NFG on JVM RT #124500
      2 todo   : NFG on JVM RT #124501
 S02-types/version-stress.t.........................2035    0    0    0 2035
-S02-types/version.t................................  43    0    0    0   43
+S02-types/version.t................................  44    0    0    0   44
 S02-types/whatever.rakudo.jvm...................... 109    0    1    1  111
      1 skipped: currying plus R meta op RT  \#124486
      1 todo   : * as dummy
@@ -993,8 +993,8 @@ S06-traits/slurpy-is-rw.t..........................   3    0    0    0    3
                                                    pass fail todo skip plan
 S07-hyperrace/hyper.rakudo.jvm.....................   9    0    4    0   13
      4 todo   : hyper and race cause lists to become empty RT #126597
-S07-hyperrace/race.rakudo.jvm......................   9    0    3    0   12
-     3 todo   : hyper and race cause lists to become empty RT #126597
+S07-hyperrace/race.rakudo.jvm......................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
 S07-iterators/range-iterator.rakudo.jvm............   0  108    0    0  108
    108 tests aborted (missing ok/not ok)
 S07-slip/slip.t....................................   0   23    0    0   23
@@ -1036,7 +1036,8 @@ S09-typed-arrays/native-num.rakudo.jvm.............   0  148    0    0  148
    148 tests aborted (missing ok/not ok)
 S09-typed-arrays/native-str.rakudo.jvm.............   0  160    0    0  160
    160 tests aborted (missing ok/not ok)
-S09-typed-arrays/native.t..........................   3    0    0    0    3
+S09-typed-arrays/native.t..........................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S10-packages/basic.rakudo.jvm......................   0   83    0    0   83
     83 tests aborted (missing ok/not ok)
@@ -1047,10 +1048,12 @@ S10-packages/precompilation.rakudo.jvm.............   0   51    0    0   51
 S10-packages/use-with-class.t......................   0   11    0    0   11
     11 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-S11-compunit/compunit-dependencyspecification.t....   6    0    0    0    6
-S11-compunit/compunit-repository.t.................   8    1    0    0    9
-S11-compunit/rt126904.rakudo.jvm...................   0    0    1    0    1
-     1 todo PASSED: Missing serialize function for REPR ContextRef
+S11-compunit/compunit-dependencyspecification.t....   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S11-compunit/compunit-repository.t.................   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
+S11-compunit/rt126904.rakudo.jvm...................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
 S11-modules/export.rakudo.jvm......................   0   41    0    0   41
     41 tests aborted (missing ok/not ok)
 S11-modules/import-multi.rakudo.jvm................   0   17    0    0   17
@@ -2298,15 +2301,15 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9358,     2,   146,   409,  9915,  9918
+"S02",        9359,     2,   146,   409,  9916,  9919
 "S03",       10180,     1,    63,    98, 10342, 10348
 "S04",        1459,     8,    60,    33,  1560,  1592
 "S05",        5825,     0,   104,   209,  6138,  6329
 "S06",        2154,     0,    70,    99,  2323,  2366
-"S07",          18,   131,     7,     0,   156,   156
-"S09",           3,  1091,     0,     0,  1094,  1094
+"S07",           9,   143,     4,     0,   156,   156
+"S09",           0,  1094,     0,     0,  1094,  1094
 "S10",           0,   148,     0,     0,   148,   205
-"S11",          14,   186,     1,     0,   201,   210
+"S11",           0,   201,     0,     0,   201,   210
 "S12",           0,  1851,     0,     0,  1851,  1900
 "S13",           0,    64,     0,     0,    64,    74
 "S14",           0,   406,     0,     0,   406,   419
@@ -2322,7 +2325,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10589,     0,     0, 10589, 10688
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     29011, 19259,   451,   934, 49655,131080
+"total",     28986, 19289,   447,   934, 49656,131081
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -2335,6 +2338,7 @@ S04-exceptions/exceptions-json.t 2 - can handle X::Undeclared::Symbols exception
 S04-exceptions/exceptions-json.t 3 - using wrong module gives us a JSON error instead of crashing
 S04-phasers/end.t 1 - can use &exit from END block
 S04-statements/for.rakudo.jvm aborted 2 test(s)
+S07-hyperrace/race.rakudo.jvm aborted 12 test(s)
 S07-iterators/range-iterator.rakudo.jvm aborted 108 test(s)
 S07-slip/slip.t aborted 23 test(s)
 S09-autovivification/autoincrement.t aborted 7 test(s)
@@ -2355,11 +2359,14 @@ S09-typed-arrays/native-decl.t aborted 14 test(s)
 S09-typed-arrays/native-int.rakudo.jvm aborted 160 test(s)
 S09-typed-arrays/native-num.rakudo.jvm aborted 148 test(s)
 S09-typed-arrays/native-str.rakudo.jvm aborted 160 test(s)
+S09-typed-arrays/native.t aborted 3 test(s)
 S10-packages/basic.rakudo.jvm aborted 83 test(s)
 S10-packages/joined-namespaces.t aborted 3 test(s)
 S10-packages/precompilation.rakudo.jvm aborted 51 test(s)
 S10-packages/use-with-class.t aborted 11 test(s)
-S11-compunit/compunit-repository.t 8 - 
+S11-compunit/compunit-dependencyspecification.t aborted 6 test(s)
+S11-compunit/compunit-repository.t aborted 9 test(s)
+S11-compunit/rt126904.rakudo.jvm aborted 1 test(s)
 S11-modules/export.rakudo.jvm aborted 41 test(s)
 S11-modules/import-multi.rakudo.jvm aborted 17 test(s)
 S11-modules/import-tag.t aborted 12 test(s)
