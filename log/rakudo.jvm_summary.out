@@ -392,7 +392,8 @@ S03-operators/context-forcers.rakudo.jvm........... 104    0    0    2  106
      2 skipped: failure modes of Str.Numeric RT  \#124540
 S03-operators/context.t............................  39    0    0    0   39
 S03-operators/custom.t.............................   1    0    0    0    1
-S03-operators/difference.t......................... 216    0    0    0  216
+S03-operators/difference.t.........................   0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
 S03-operators/div.t................................   9    0    0    0    9
 S03-operators/elem.t............................... 456    0    0    0  456
 S03-operators/equality.t...........................  46    0    0    0   46
@@ -2302,7 +2303,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9359,     2,   146,   409,  9916,  9919
-"S03",       10180,     1,    63,    98, 10342, 10348
+"S03",        9964,     3,    63,    98, 10128, 10134
 "S04",        1459,     8,    60,    33,  1560,  1592
 "S05",        5825,     0,   104,   209,  6138,  6329
 "S06",        2154,     0,    70,    99,  2323,  2366
@@ -2325,11 +2326,12 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10589,     0,     0, 10589, 10688
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     28986, 19289,   447,   934, 49656,131081
+"total",     28770, 19291,   447,   934, 49442,130867
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
 S02-one-pass-parsing/misc.t 1 - spurious backslash at end of file error must ask for semicolon
+S03-operators/difference.t aborted 2 test(s)
 S03-operators/mix.t 97 - Mix symmetric difference reduce works on three mixes
 S04-exception-handlers/control.t 1 - next with CONTROL gives error mentioning next
 S04-exception-handlers/control.t 12 - take without gather error mentions location
