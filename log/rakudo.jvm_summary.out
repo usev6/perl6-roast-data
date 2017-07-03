@@ -418,7 +418,7 @@ S03-operators/minmax.rakudo.jvm....................  37    0    0    2   39
 S03-operators/misc.rakudo.jvm......................  53    0    1    1   55
      1 skipped: Bogus term
      1 todo   : RT #93978
-S03-operators/mix.t................................  65    1    0    0   66
+S03-operators/mix.t................................  62    4    0    0   66
 S03-operators/names.t..............................   7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -450,7 +450,7 @@ S03-operators/set_difference.t.....................   0    2    0    0    2
 S03-operators/set_elem.t........................... 456    0    0    0  456
 S03-operators/set_intersection.t................... 488    0    0    0  488
 S03-operators/set_multiply.t....................... 600    0    0    0  600
-S03-operators/set_proper_subset.t..................1560    0    0    0 1560
+S03-operators/set_proper_subset.t..................1536    0    0    0 1536
 S03-operators/set_subset.t.........................1332    0    0    0 1332
 S03-operators/set_union.t.......................... 312    0    0    0  312
 S03-operators/short-circuit.t......................  83    0    0    0   83
@@ -990,8 +990,8 @@ S06-traits/misc.rakudo.jvm.........................  15    0    6    0   21
      2 todo   : is readonly does not override
 S06-traits/native-is-copy.t........................  15    0    0    0   15
 S06-traits/native-is-rw.t..........................  48    0    0    0   48
-S06-traits/precedence.rakudo.jvm...................   0   16    0    0   16
-    16 tests aborted (missing ok/not ok)
+S06-traits/precedence.rakudo.jvm...................  15    0    1    0   16
+     1 todo   : changing precedence of already declared op
 S06-traits/slurpy-is-rw.t..........................   3    0    0    0    3
                                                    pass fail todo skip plan
 S07-hyperrace/hyper.rakudo.jvm.....................   9    0    4    0   13
@@ -2305,10 +2305,10 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9359,     2,   146,   409,  9916,  9919
-"S03",       11126,     3,    63,    98, 11290, 11296
+"S03",       11099,     6,    63,    98, 11266, 11272
 "S04",        1459,     8,    60,    33,  1560,  1592
 "S05",        5825,     0,   104,   209,  6138,  6329
-"S06",        2140,    16,    69,    99,  2324,  2367
+"S06",        2155,     0,    70,    99,  2324,  2367
 "S07",           9,   143,     4,     0,   156,   156
 "S09",           0,  1094,     0,     0,  1094,  1094
 "S10",           0,   148,     0,     0,   148,   205
@@ -2328,11 +2328,14 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10589,     0,     0, 10589, 10688
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     29918, 19307,   446,   934, 50605,132042
+"total",     29906, 19294,   447,   934, 50581,132018
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
 S02-one-pass-parsing/misc.t 1 - spurious backslash at end of file error must ask for semicolon
+S03-operators/mix.t 27 - ⊄ - mix(d(2.2), e(2.2), n(2.2)) is not a strict submix of mix(d(2.2), e(4.4), n(2.2), y(2.2))
+S03-operators/mix.t 30 - !(<) - mix(d(2.2), e(2.2), n(2.2)) is not a strict submix of mix(d(2.2), e(4.4), n(2.2), y(2.2)) (texas)
+S03-operators/mix.t 32 - !(>) - mix(d(2.2), e(4.4), n(2.2), y(2.2)) is not a strict supermix of mix(d(2.2), e(2.2), n(2.2))
 S03-operators/mix.t 65 - Mix symmetric difference reduce works on three mixes
 S03-operators/set_difference.t aborted 2 test(s)
 S04-exception-handlers/control.t 1 - next with CONTROL gives error mentioning next
@@ -2342,7 +2345,6 @@ S04-exceptions/exceptions-json.t 2 - can handle X::Undeclared::Symbols exception
 S04-exceptions/exceptions-json.t 3 - using wrong module gives us a JSON error instead of crashing
 S04-phasers/end.t 1 - can use &exit from END block
 S04-statements/for.rakudo.jvm aborted 2 test(s)
-S06-traits/precedence.rakudo.jvm aborted 16 test(s)
 S07-hyperrace/race.rakudo.jvm aborted 12 test(s)
 S07-iterators/range-iterator.rakudo.jvm aborted 108 test(s)
 S07-slip/slip.t aborted 23 test(s)
