@@ -194,11 +194,11 @@ S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  22    0    0    0   22
 S02-types/bag-iterator.t...........................  14    0    0    0   14
-S02-types/bag.rakudo.jvm........................... 221    0    2    0  223
+S02-types/bag.rakudo.jvm........................... 224    0    2    0  226
      1 todo   : ?
      1 todo   : we have not secured .WHICH creation yet RT #124454
-S02-types/baggy.t..................................   7    0    0    0    7
-S02-types/baghash.rakudo.jvm....................... 264    0    2   21  287
+S02-types/baggy.t..................................   8    0    0    0    8
+S02-types/baghash.rakudo.jvm....................... 267    0    2   21  290
     21 skipped: 'is TypeObject' NYI RT  \#124490
      2 todo   : in flux
 S02-types/bool.t...................................  67    0    0    0   67
@@ -232,7 +232,7 @@ S02-types/infinity.rakudo.jvm......................  17    0    0    4   21
      2 skipped: integer Inf RT  \#124451
      2 skipped: integer Inf RT  \#124452
 S02-types/instants-and-durations.t.................  33    0    0    0   33
-S02-types/int-uint.rakudo.jvm......................  59    0   32    0   91
+S02-types/int-uint.rakudo.jvm......................  60    0   32    0   92
      1 todo   : getting -1 instead of 0
      1 todo   : getting -1 instead of 18446744073709551615
      6 todo   : max overflow to min
@@ -418,7 +418,7 @@ S03-operators/minmax.rakudo.jvm....................  37    0    0    2   39
 S03-operators/misc.rakudo.jvm......................  53    0    1    1   55
      1 skipped: Bogus term
      1 todo   : RT #93978
-S03-operators/mix.t................................  62    4    0    0   66
+S03-operators/mix.t................................  65    1    0    0   66
 S03-operators/names.t..............................   7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -450,7 +450,7 @@ S03-operators/set_difference.t.....................   0    2    0    0    2
 S03-operators/set_elem.t........................... 456    0    0    0  456
 S03-operators/set_intersection.t................... 488    0    0    0  488
 S03-operators/set_multiply.t....................... 600    0    0    0  600
-S03-operators/set_proper_subset.t..................1536    0    0    0 1536
+S03-operators/set_proper_subset.t..................1560    0    0    0 1560
 S03-operators/set_subset.t.........................1332    0    0    0 1332
 S03-operators/set_union.t.......................... 312    0    0    0  312
 S03-operators/short-circuit.t......................  83    0    0    0   83
@@ -996,8 +996,8 @@ S06-traits/slurpy-is-rw.t..........................   3    0    0    0    3
                                                    pass fail todo skip plan
 S07-hyperrace/hyper.rakudo.jvm.....................   9    0    4    0   13
      4 todo   : hyper and race cause lists to become empty RT #126597
-S07-hyperrace/race.rakudo.jvm......................   0   12    0    0   12
-    12 tests aborted (missing ok/not ok)
+S07-hyperrace/race.rakudo.jvm......................   9    0    3    0   12
+     3 todo   : hyper and race cause lists to become empty RT #126597
 S07-iterators/range-iterator.rakudo.jvm............   0  108    0    0  108
    108 tests aborted (missing ok/not ok)
 S07-slip/slip.t....................................   0   23    0    0   23
@@ -2304,12 +2304,12 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9359,     2,   146,   409,  9916,  9919
-"S03",       11099,     6,    63,    98, 11266, 11272
+"S02",        9367,     2,   146,   409,  9924,  9927
+"S03",       11126,     3,    63,    98, 11290, 11296
 "S04",        1459,     8,    60,    33,  1560,  1592
 "S05",        5825,     0,   104,   209,  6138,  6329
 "S06",        2155,     0,    70,    99,  2324,  2367
-"S07",           9,   143,     4,     0,   156,   156
+"S07",          18,   131,     7,     0,   156,   156
 "S09",           0,  1094,     0,     0,  1094,  1094
 "S10",           0,   148,     0,     0,   148,   205
 "S11",           0,   201,     0,     0,   201,   210
@@ -2328,14 +2328,11 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10589,     0,     0, 10589, 10688
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     29906, 19294,   447,   934, 50581,132018
+"total",     29950, 19279,   450,   934, 50613,132050
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
 S02-one-pass-parsing/misc.t 1 - spurious backslash at end of file error must ask for semicolon
-S03-operators/mix.t 27 - ⊄ - mix(d(2.2), e(2.2), n(2.2)) is not a strict submix of mix(d(2.2), e(4.4), n(2.2), y(2.2))
-S03-operators/mix.t 30 - !(<) - mix(d(2.2), e(2.2), n(2.2)) is not a strict submix of mix(d(2.2), e(4.4), n(2.2), y(2.2)) (texas)
-S03-operators/mix.t 32 - !(>) - mix(d(2.2), e(4.4), n(2.2), y(2.2)) is not a strict supermix of mix(d(2.2), e(2.2), n(2.2))
 S03-operators/mix.t 65 - Mix symmetric difference reduce works on three mixes
 S03-operators/set_difference.t aborted 2 test(s)
 S04-exception-handlers/control.t 1 - next with CONTROL gives error mentioning next
@@ -2345,7 +2342,6 @@ S04-exceptions/exceptions-json.t 2 - can handle X::Undeclared::Symbols exception
 S04-exceptions/exceptions-json.t 3 - using wrong module gives us a JSON error instead of crashing
 S04-phasers/end.t 1 - can use &exit from END block
 S04-statements/for.rakudo.jvm aborted 2 test(s)
-S07-hyperrace/race.rakudo.jvm aborted 12 test(s)
 S07-iterators/range-iterator.rakudo.jvm aborted 108 test(s)
 S07-slip/slip.t aborted 23 test(s)
 S09-autovivification/autoincrement.t aborted 7 test(s)
