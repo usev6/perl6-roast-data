@@ -194,9 +194,8 @@ S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  22    0    0    0   22
 S02-types/bag-iterator.t...........................  14    0    0    0   14
-S02-types/bag.rakudo.jvm........................... 224    0    2    0  226
+S02-types/bag.rakudo.jvm........................... 225    0    1    0  226
      1 todo   : ?
-     1 todo   : we have not secured .WHICH creation yet RT #124454
 S02-types/baggy.t..................................   8    0    0    0    8
 S02-types/baghash.rakudo.jvm....................... 267    0    2   21  290
     21 skipped: 'is TypeObject' NYI RT  \#124490
@@ -254,9 +253,8 @@ S02-types/list.rakudo.jvm..........................  69    0    0    2   71
 S02-types/lists.rakudo.jvm.........................  29    0    0    3   32
      3 skipped: list binding RT  \#124494
 S02-types/mix-iterator.t...........................  14    0    0    0   14
-S02-types/mix.rakudo.jvm........................... 214    0    2    0  216
+S02-types/mix.rakudo.jvm........................... 215    0    1    0  216
      1 todo   : ?
-     1 todo   : we have not secured .WHICH creation yet RT #124496
 S02-types/mixed_multi_dimensional.rakudo.jvm.......  77    0    3    0   80
      1 todo   : isa hash
      2 todo   : unknown
@@ -503,7 +501,7 @@ S04-blocks-and-statements/pointy.rakudo.jvm........  20    0    1    0   21
 S04-blocks-and-statements/temp.rakudo.jvm..........  34    0    6    2   42
      2 skipped: RT  \#126447
      6 todo   : TEMP phasers NYI
-S04-declarations/constant.rakudo.jvm...............  66    0    4    0   70
+S04-declarations/constant.rakudo.jvm...............  68    0    4    0   72
      3 todo   : COMPILING RT #125054
      1 todo   : constants as type constraints
 S04-declarations/implicit-parameter.t..............  20    0    0    0   20
@@ -976,28 +974,37 @@ S06-signature/type-capture.rakudo.jvm..............  10    0    0    2   12
 S06-signature/types.rakudo.jvm.....................  15    0    3    1   19
      1 skipped: '١' is not a valid number
      3 todo   : no typed exception X::Parameter::InvalidConcreteness, yet
-S06-signature/unpack-array.t.......................  15    0    0    0   15
-S06-signature/unpack-object.t......................   4    0    0    0    4
-S06-signature/unspecified.t........................  18    0    0    0   18
-S06-traits/as.t....................................   5    0    0    0    5
-S06-traits/is-assoc.rakudo.jvm.....................   4    0    0    2    6
-     2 skipped: RT  \#116244
-S06-traits/is-copy.t...............................  27    0    0    0   27
-S06-traits/is-readonly.t...........................   1    0    0    0    1
-S06-traits/is-rw.t.................................   7    0    0    0    7
-S06-traits/misc.rakudo.jvm.........................  15    0    6    0   21
-     4 todo   : RT #126531
-     2 todo   : is readonly does not override
-S06-traits/native-is-copy.t........................  15    0    0    0   15
-S06-traits/native-is-rw.t..........................  48    0    0    0   48
-S06-traits/precedence.rakudo.jvm...................  15    0    1    0   16
-     1 todo   : changing precedence of already declared op
-S06-traits/slurpy-is-rw.t..........................   3    0    0    0    3
+S06-signature/unpack-array.t.......................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+S06-signature/unpack-object.t......................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S06-signature/unspecified.t........................   0   18    0    0   18
+    18 tests aborted (missing ok/not ok)
+S06-traits/as.t....................................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
+S06-traits/is-assoc.rakudo.jvm.....................   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
+S06-traits/is-copy.t...............................   0   27    0    0   27
+    27 tests aborted (missing ok/not ok)
+S06-traits/is-readonly.t...........................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S06-traits/is-rw.t.................................   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S06-traits/misc.rakudo.jvm.........................   0   21    0    0   21
+    21 tests aborted (missing ok/not ok)
+S06-traits/native-is-copy.t........................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+S06-traits/native-is-rw.t..........................   0   48    0    0   48
+    48 tests aborted (missing ok/not ok)
+S06-traits/precedence.rakudo.jvm...................   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
+S06-traits/slurpy-is-rw.t..........................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-S07-hyperrace/hyper.rakudo.jvm.....................   9    0    4    0   13
-     4 todo   : hyper and race cause lists to become empty RT #126597
-S07-hyperrace/race.rakudo.jvm......................   9    0    3    0   12
-     3 todo   : hyper and race cause lists to become empty RT #126597
+S07-hyperrace/hyper.rakudo.jvm.....................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
+S07-hyperrace/race.rakudo.jvm......................   0   12    0    0   12
+    12 tests aborted (missing ok/not ok)
 S07-iterators/range-iterator.rakudo.jvm............   0  108    0    0  108
    108 tests aborted (missing ok/not ok)
 S07-slip/slip.t....................................   0   23    0    0   23
@@ -2304,12 +2311,12 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9367,     2,   146,   409,  9924,  9927
+"S02",        9369,     2,   144,   409,  9924,  9927
 "S03",       11126,     3,    63,    98, 11290, 11296
-"S04",        1459,     8,    60,    33,  1560,  1592
+"S04",        1461,     8,    60,    33,  1562,  1594
 "S05",        5825,     0,   104,   209,  6138,  6329
-"S06",        2155,     0,    70,    99,  2324,  2367
-"S07",          18,   131,     7,     0,   156,   156
+"S06",        1978,   186,    63,    97,  2324,  2367
+"S07",           0,   156,     0,     0,   156,   156
 "S09",           0,  1094,     0,     0,  1094,  1094
 "S10",           0,   148,     0,     0,   148,   205
 "S11",           0,   201,     0,     0,   201,   210
@@ -2328,7 +2335,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10589,     0,     0, 10589, 10688
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     29950, 19279,   450,   934, 50613,132050
+"total",     29759, 19490,   434,   932, 50615,132052
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -2342,6 +2349,21 @@ S04-exceptions/exceptions-json.t 2 - can handle X::Undeclared::Symbols exception
 S04-exceptions/exceptions-json.t 3 - using wrong module gives us a JSON error instead of crashing
 S04-phasers/end.t 1 - can use &exit from END block
 S04-statements/for.rakudo.jvm aborted 2 test(s)
+S06-signature/unpack-array.t aborted 15 test(s)
+S06-signature/unpack-object.t aborted 4 test(s)
+S06-signature/unspecified.t aborted 18 test(s)
+S06-traits/as.t aborted 5 test(s)
+S06-traits/is-assoc.rakudo.jvm aborted 6 test(s)
+S06-traits/is-copy.t aborted 27 test(s)
+S06-traits/is-readonly.t aborted 1 test(s)
+S06-traits/is-rw.t aborted 7 test(s)
+S06-traits/misc.rakudo.jvm aborted 21 test(s)
+S06-traits/native-is-copy.t aborted 15 test(s)
+S06-traits/native-is-rw.t aborted 48 test(s)
+S06-traits/precedence.rakudo.jvm aborted 16 test(s)
+S06-traits/slurpy-is-rw.t aborted 3 test(s)
+S07-hyperrace/hyper.rakudo.jvm aborted 13 test(s)
+S07-hyperrace/race.rakudo.jvm aborted 12 test(s)
 S07-iterators/range-iterator.rakudo.jvm aborted 108 test(s)
 S07-slip/slip.t aborted 23 test(s)
 S09-autovivification/autoincrement.t aborted 7 test(s)
