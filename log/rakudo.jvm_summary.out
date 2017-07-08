@@ -1157,8 +1157,8 @@ S12-class/stubs.rakudo.jvm.........................   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
 S12-class/type-object.t............................   0    6    0    0    6
      6 tests aborted (missing ok/not ok)
-S12-coercion/coercion-types.rakudo.jvm.............   0   21    0    0   21
-    21 tests aborted (missing ok/not ok)
+S12-coercion/coercion-types.rakudo.jvm.............   0   22    0    0   22
+    22 tests aborted (missing ok/not ok)
 S12-construction/BUILD.rakudo.jvm..................   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
 S12-construction/TWEAK.t...........................   0    3    0    0    3
@@ -1757,8 +1757,8 @@ S32-io/indir.t.....................................   0   77    0    0   77
     77 tests aborted (missing ok/not ok)
 S32-io/io-cathandle.rakudo.jvm.....................   0   28    0    0   28
     28 tests aborted (missing ok/not ok)
-S32-io/io-handle.rakudo.jvm........................   0   26    0    0   26
-    26 tests aborted (missing ok/not ok)
+S32-io/io-handle.rakudo.jvm........................   0   27    0    0   27
+    27 tests aborted (missing ok/not ok)
 S32-io/io-path-cygwin.rakudo.jvm...................   0   52    0    0   52
     52 tests aborted (missing ok/not ok)
 S32-io/io-path-extension.t.........................   0    2    0    0    2
@@ -2320,10 +2320,10 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S09",           0,  1094,     0,     0,  1094,  1094
 "S10",           0,   148,     0,     0,   148,   205
 "S11",           0,   201,     0,     0,   201,   210
-"S12",           0,  1851,     0,     0,  1851,  1900
+"S12",           0,  1852,     0,     0,  1852,  1901
 "S13",           0,    64,     0,     0,    64,    74
 "S14",           0,   406,     0,     0,   406,   419
-"S15",           0,   120,     0,     0,   120, 80815
+"S15",           0,   120,     0,     0,   120, 80816
 "S16",           0,   557,     0,     0,   557,   594
 "S17",           0,   991,     0,     0,   991,  1101
 "S19",           0,    23,     0,     0,    23,    33
@@ -2332,10 +2332,10 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S26",           0,  1441,     0,     0,  1441,  1441
 "S28",           0,     2,     0,     0,     2,     6
 "S29",           0,   227,     0,     0,   227,   227
-"S32",           0, 10589,     0,     0, 10589, 10688
+"S32",           0, 10590,     0,     0, 10590, 10689
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     29759, 19490,   434,   932, 50615,132052
+"total",     29759, 19492,   434,   932, 50617,132055
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -2438,7 +2438,7 @@ S12-class/rw.t aborted 5 test(s)
 S12-class/self-inheritance.t aborted 2 test(s)
 S12-class/stubs.rakudo.jvm aborted 8 test(s)
 S12-class/type-object.t aborted 6 test(s)
-S12-coercion/coercion-types.rakudo.jvm aborted 21 test(s)
+S12-coercion/coercion-types.rakudo.jvm aborted 22 test(s)
 S12-construction/BUILD.rakudo.jvm aborted 12 test(s)
 S12-construction/TWEAK.t aborted 3 test(s)
 S12-construction/autopairs.t aborted 4 test(s)
@@ -2732,7 +2732,7 @@ S32-io/dir.rakudo.jvm aborted 16 test(s)
 S32-io/file-tests.t aborted 35 test(s)
 S32-io/indir.t aborted 77 test(s)
 S32-io/io-cathandle.rakudo.jvm aborted 28 test(s)
-S32-io/io-handle.rakudo.jvm aborted 26 test(s)
+S32-io/io-handle.rakudo.jvm aborted 27 test(s)
 S32-io/io-path-cygwin.rakudo.jvm aborted 52 test(s)
 S32-io/io-path-extension.t aborted 2 test(s)
 S32-io/io-path-subclasses.t aborted 8 test(s)
