@@ -120,7 +120,7 @@ S02-magicals/VM.rakudo.jvm.........................  14    0    2   16   32
 S02-magicals/args.t................................   6    0    0    0    6
 S02-magicals/block.t...............................   3    0    0    0    3
 S02-magicals/dollar-underscore.t...................  11    0    0    0   11
-S02-magicals/dollar_bang.t.........................  15    0    0    0   15
+S02-magicals/dollar_bang.t.........................  13    2    0    0   15
 S02-magicals/env.rakudo.jvm........................  17    0    0    1   18
      1 skipped: import fails, ENV not available: RT  \#122339
 S02-magicals/file_line.t...........................   2    0    0    0    2
@@ -299,7 +299,7 @@ S02-types/sigils-and-types.rakudo.jvm..............  25    0    2    0   27
      1 todo   : Capture does Positional RT #124484
 S02-types/stash.t..................................   1    0    0    0    1
 S02-types/subscripts_and_context.t.................   8    0    0    0    8
-S02-types/subset.t.................................  44    0    0    0   44
+S02-types/subset.t.................................  43    1    0    0   44
 S02-types/type.rakudo.jvm..........................  73    0    1    0   74
      1 todo   : nigh, RT #121518
 S02-types/undefined-types.rakudo.jvm...............  45    0    4    0   49
@@ -379,7 +379,7 @@ S03-operators/bag.t................................  54    0    0    0   54
 S03-operators/basic-types.t........................  19    0    0    0   19
 S03-operators/bit.t................................  40    0    0    0   40
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
-S03-operators/brainos.t............................   9    0    0    0    9
+S03-operators/brainos.t............................   7    2    0    0    9
 S03-operators/buf.t................................ 133    0    0    0  133
 S03-operators/chained-declarators.t................   5    0    0    0    5
 S03-operators/cmp.t................................  60    0    0    0   60
@@ -416,13 +416,13 @@ S03-operators/minmax.rakudo.jvm....................  37    0    0    2   39
 S03-operators/misc.rakudo.jvm......................  53    0    1    1   55
      1 skipped: Bogus term
      1 todo   : RT #93978
-S03-operators/mix.t................................  65    1    0    0   66
+S03-operators/mix.t................................  66    0    0    0   66
 S03-operators/names.t..............................   7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
 S03-operators/notandthen.t.........................   6    0    0    0    6
 S03-operators/numeric-shift.t......................  38    0    0    0   38
-S03-operators/orelse.t.............................  16    0    0    0   16
+S03-operators/orelse.t.............................  15    1    0    0   16
 S03-operators/overflow.t........................... 101    0    0    0  101
 S03-operators/precedence.rakudo.jvm................  71    0    4    2   77
      2 skipped: superscript exponent associativity RT  \#130414
@@ -523,12 +523,12 @@ S04-declarations/will.rakudo.jvm...................  13    0    4    3   20
      1 todo   : declared variable not visible in block yet RT #125067
      1 todo   : will init NYI
      1 todo   : will post NYI RT #125062
-S04-exception-handlers/catch.t.....................  31    0    0    0   31
+S04-exception-handlers/catch.t.....................  30    1    0    0   31
 S04-exception-handlers/control.t...................  10    2    0    0   12
 S04-exception-handlers/top-level.t.................   1    0    0    0    1
 S04-exceptions/control_across_runloop.t............   1    0    0    0    1
 S04-exceptions/exceptions-json.t...................   0    3    0    0    3
-S04-exceptions/fail.t..............................  35    0    0    0   35
+S04-exceptions/fail.t..............................  34    1    0    0   35
 S04-exceptions/pending.rakudo.jvm..................  16    0    2    3   21
      2 skipped: $!.pending
      1 skipped: $object.handled
@@ -540,7 +540,7 @@ S04-phasers/begin.rakudo.jvm.......................  12    0    1    0   13
 S04-phasers/check.t................................   5    0    0    0    5
 S04-phasers/descending-order.t.....................   7    0    0    0    7
 S04-phasers/end.t..................................   7    1    0    0    8
-S04-phasers/enter-leave.rakudo.jvm.................  26    0    3    1   30
+S04-phasers/enter-leave.rakudo.jvm.................  24    2    3    1   30
      1 skipped: leave NYI RT  \#124960
      1 todo   : RT #121530
      1 todo   : is this spec? why would LEAVE not see outer $!? fossil?
@@ -554,12 +554,12 @@ S04-phasers/in-loop.rakudo.jvm.....................   6    0    5    0   11
      1 todo   : got '2 3 2 3 3 2 3 2 3 3 2 3 2 3 3'
      1 todo   : this test works "standalone", but not after previous test; RT #121145
 S04-phasers/init.t.................................  13    0    0    0   13
-S04-phasers/keep-undo.rakudo.jvm...................  14    0    2    0   16
+S04-phasers/keep-undo.rakudo.jvm...................  13    1    2    0   16
      2 todo   : RT #111866
 S04-phasers/multiple.t.............................   2    0    0    0    2
 S04-phasers/next.rakudo.jvm........................  14    0    2    0   16
      2 todo   : NEXT/LEAVE ordering RT #124952
-S04-phasers/pre-post.rakudo.jvm....................  20    0    1    1   22
+S04-phasers/pre-post.rakudo.jvm....................  19    1    1    1   22
      1 skipped: POST and exceptions RT  \#124961
      1 todo   : POST and exceptions RT #124961
 S04-phasers/rvalue.t...............................  16    0    0    0   16
@@ -581,7 +581,7 @@ S04-statements/do.rakudo.jvm.......................  21    0    1    7   29
      1 skipped: redo without loop construct RT  \#124576
      1 todo   : Rakudo still uses Nil here RT #124572
 S04-statements/for-scope.t.........................  16    0    0    0   16
-S04-statements/for.rakudo.jvm......................  99    2    3    0  104
+S04-statements/for.rakudo.jvm......................  95    6    3    0  104
      1 todo   : RT #126531
      1 todo   : RT 128054
      1 todo   : Rakudo still uses Nil here RT #124569
@@ -612,7 +612,7 @@ S04-statements/repeat.t............................  21    0    0    0   21
 S04-statements/return.t............................  22    0    0    0   22
 S04-statements/sink.t..............................   4    0    0    0    4
 S04-statements/terminator.t........................  20    0    0    0   20
-S04-statements/try.t...............................  40    0    0    0   40
+S04-statements/try.t...............................  36    4    0    0   40
 S04-statements/unless.t............................  10    0    0    0   10
 S04-statements/until.t.............................   4    0    0    0    4
 S04-statements/when.t..............................  25    0    0    0   25
@@ -645,7 +645,7 @@ S05-grammar/example.rakudo.jvm.....................   7    0    2    2   11
 S05-grammar/inheritance.rakudo.jvm.................  30    0    2    0   32
      1 todo   : RT #77350
      1 todo   : automatic Grammar superclass
-S05-grammar/methods.t..............................   8    0    0    0    8
+S05-grammar/methods.t..............................   7    1    0    0    8
 S05-grammar/namespace.t............................   5    0    0    0    5
 S05-grammar/parse_and_parsefile.t..................  17    0    0    0   17
 S05-grammar/polymorphism.t.........................  28    0    0    0   28
@@ -729,7 +729,7 @@ S05-metasyntax/angle-brackets.rakudo.jvm...........  73    0    2   20   95
      1 todo   : <$subrule> NYI RT #124524
 S05-metasyntax/assertions.t........................   4    0    0    0    4
 S05-metasyntax/changed.t...........................  12    0    0    0   12
-S05-metasyntax/charset.rakudo.jvm..................  49    0    2    4   55
+S05-metasyntax/charset.rakudo.jvm..................  48    1    2    4   55
      3 skipped: "ordbaseat NYI", ignorecase and character ranges RT  \#125753
      1 skipped: ordbaseat NYI
      2 todo   : ignorecase and character ranges RT #125753
@@ -846,7 +846,7 @@ S06-currying/misc.rakudo.jvm.......................  11    0    0    2   13
 S06-currying/named.t...............................  27    0    0    0   27
 S06-currying/positional.t.......................... 227    0    0    0  227
 S06-currying/slurpy.t..............................  32    0    0    0   32
-S06-macros/errors.t................................   2    0    0    0    2
+S06-macros/errors.t................................   1    1    0    0    2
 S06-macros/opaque-ast.rakudo.jvm...................   3    0    0    4    7
      3 skipped: :COMPILING flag RT  \#124964
      1 skipped: return from macro RT  \#124965
@@ -936,7 +936,7 @@ S06-signature/defaults.t...........................  11    0    0    0   11
 S06-signature/definite-return.rakudo.jvm...........  18    0    0    3   21
      1 skipped: RT  \#128964 Type check failed for return value; expected ?(?) but got Int (42)
      2 skipped: variables as return specifications dont parse yet RT  \#124927
-S06-signature/errors.rakudo.jvm....................  25    0    6    0   31
+S06-signature/errors.rakudo.jvm....................  10   15    6    0   31
      6 todo   : unival NYI RT #124920
 S06-signature/introspection.rakudo.jvm............. 131    0    1    1  133
      1 skipped: expected Any but got Mu instead
@@ -1743,8 +1743,8 @@ S32-hash/slice.rakudo.jvm..........................   0   31    0    0   31
     31 tests aborted (missing ok/not ok)
 S32-io/IO-Socket-Async.rakudo.jvm..................   0   16    0    0   16
     16 tests aborted (missing ok/not ok)
-S32-io/IO-Socket-INET.t............................   0   24    0    0   24
-    24 tests aborted (missing ok/not ok)
+S32-io/IO-Socket-INET.t............................   0   26    0    0   26
+    26 tests aborted (missing ok/not ok)
 S32-io/chdir.t.....................................   0   81    0    0   81
     81 tests aborted (missing ok/not ok)
 S32-io/copy.t......................................   0   42    0    0   42
@@ -2311,11 +2311,11 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9369,     2,   144,   409,  9924,  9927
-"S03",       11126,     3,    63,    98, 11290, 11296
-"S04",        1461,     8,    60,    33,  1562,  1594
-"S05",        5825,     0,   104,   209,  6138,  6329
-"S06",        1978,   186,    63,    97,  2324,  2367
+"S02",        9366,     5,   144,   409,  9924,  9927
+"S03",       11124,     5,    63,    98, 11290, 11296
+"S04",        1447,    22,    60,    33,  1562,  1594
+"S05",        5823,     2,   104,   209,  6138,  6329
+"S06",        1962,   202,    63,    97,  2324,  2367
 "S07",           0,   156,     0,     0,   156,   156
 "S09",           0,  1094,     0,     0,  1094,  1094
 "S10",           0,   148,     0,     0,   148,   205
@@ -2332,23 +2332,60 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S26",           0,  1441,     0,     0,  1441,  1441
 "S28",           0,     2,     0,     0,     2,     6
 "S29",           0,   227,     0,     0,   227,   227
-"S32",           0, 10590,     0,     0, 10590, 10689
+"S32",           0, 10592,     0,     0, 10592, 10691
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     29759, 19492,   434,   932, 50617,132055
+"total",     29722, 19531,   434,   932, 50619,132057
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
+S02-magicals/dollar_bang.t 8 - die sets $! properly
+S02-magicals/dollar_bang.t 14 - $! has correct value after eval
 S02-one-pass-parsing/misc.t 1 - spurious backslash at end of file error must ask for semicolon
-S03-operators/mix.t 65 - Mix symmetric difference reduce works on three mixes
+S02-types/subset.t 26 - error for bad assignment mentions subset
+S03-operators/brainos.t 2 - error for "=~" usage mentions "~~"
+S03-operators/brainos.t 4 - error for "!~" usage mentions "!~~"
+S03-operators/orelse.t 9 - orelse sets $! after an exception
 S03-operators/set_difference.t aborted 2 test(s)
+S04-exception-handlers/catch.t 29 - Two invocations of a die()ing routine should still hit the CATCH handler
 S04-exception-handlers/control.t 1 - next with CONTROL gives error mentioning next
 S04-exception-handlers/control.t 12 - take without gather error mentions location
 S04-exceptions/exceptions-json.t 1 - can handle exception without `message` method
 S04-exceptions/exceptions-json.t 2 - can handle X::Undeclared::Symbols exception
 S04-exceptions/exceptions-json.t 3 - using wrong module gives us a JSON error instead of crashing
+S04-exceptions/fail.t 30 - fail outside of routine just behaves like die (2)
 S04-phasers/end.t 1 - can use &exit from END block
+S04-phasers/enter-leave.rakudo.jvm 13 - $! set in LEAVE if exception thrown
+S04-phasers/enter-leave.rakudo.jvm 24 - LEAVE fires after die in sub
+S04-phasers/keep-undo.rakudo.jvm 13 - UNDO fires after die
+S04-phasers/pre-post.rakudo.jvm 17 - POST runs on exception, with correct $!
+S04-statements/for.rakudo.jvm 66 - mentions C-style
+S04-statements/for.rakudo.jvm 67 - mentions for
+S04-statements/for.rakudo.jvm 68 - mentions loop
+S04-statements/for.rakudo.jvm 73 - Sensible error message
 S04-statements/for.rakudo.jvm aborted 2 test(s)
+S04-statements/try.t 1 - error var was set
+S04-statements/try.t 24 - $!.Str uses the payload
+S04-statements/try.t 28 - $!.Str culls whitespace
+S04-statements/try.t 32 - When $! is set, die() is die($!).
+S05-grammar/methods.t 2 - and got the exception message
+S05-metasyntax/charset.rakudo.jvm 39 - STD error message for - as character range
+S06-macros/errors.t 2 - die-ing inside a macro dies normally.
+S06-signature/errors.rakudo.jvm 6 - ... error message mentions signature
+S06-signature/errors.rakudo.jvm 7 - ... error message mentions "call"
+S06-signature/errors.rakudo.jvm 8 - ... error message mentions call profile
+S06-signature/errors.rakudo.jvm 10 - too few args reports call profile
+S06-signature/errors.rakudo.jvm 11 - too few args reports declared signature
+S06-signature/errors.rakudo.jvm 12 - too few args mentions signature
+S06-signature/errors.rakudo.jvm 13 - ... error message mentions "call"
+S06-signature/errors.rakudo.jvm 14 - simple Str vs Int reports call profile
+S06-signature/errors.rakudo.jvm 15 - simple Str vs Int reports signature
+S06-signature/errors.rakudo.jvm 16 - simple Str vs Int mentions signature
+S06-signature/errors.rakudo.jvm 17 - ... error message mentions "call"
+S06-signature/errors.rakudo.jvm 24 - fails multi sigs reports call profile
+S06-signature/errors.rakudo.jvm 25 - mentions signature
+S06-signature/errors.rakudo.jvm 26 - Error mentions Int
+S06-signature/errors.rakudo.jvm 27 - ... error message mentions "call"
 S06-signature/unpack-array.t aborted 15 test(s)
 S06-signature/unpack-object.t aborted 4 test(s)
 S06-signature/unspecified.t aborted 18 test(s)
@@ -2725,7 +2762,7 @@ S32-hash/perl.t aborted 14 test(s)
 S32-hash/push.t aborted 10 test(s)
 S32-hash/slice.rakudo.jvm aborted 31 test(s)
 S32-io/IO-Socket-Async.rakudo.jvm aborted 16 test(s)
-S32-io/IO-Socket-INET.t aborted 24 test(s)
+S32-io/IO-Socket-INET.t aborted 26 test(s)
 S32-io/chdir.t aborted 81 test(s)
 S32-io/copy.t aborted 42 test(s)
 S32-io/dir.rakudo.jvm aborted 16 test(s)
