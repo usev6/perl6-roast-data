@@ -375,7 +375,7 @@ S03-operators/assign.rakudo.jvm.................... 273    0   14   12  299
 S03-operators/autoincrement-range.t................ 104    0    0    0  104
 S03-operators/autoincrement.t......................  80    0    0    0   80
 S03-operators/autovivification.t...................  23    0    0    0   23
-S03-operators/bag.t................................  54    0    0    0   54
+S03-operators/bag.t................................  53    1    0    0   54
 S03-operators/basic-types.t........................  19    0    0    0   19
 S03-operators/bit.t................................  40    0    0    0   40
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
@@ -416,7 +416,7 @@ S03-operators/minmax.rakudo.jvm....................  37    0    0    2   39
 S03-operators/misc.rakudo.jvm......................  53    0    1    1   55
      1 skipped: Bogus term
      1 todo   : RT #93978
-S03-operators/mix.t................................  66    0    0    0   66
+S03-operators/mix.t................................  65    1    0    0   66
 S03-operators/names.t..............................   7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -2312,7 +2312,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9366,     5,   144,   409,  9924,  9927
-"S03",       11124,     5,    63,    98, 11290, 11296
+"S03",       11122,     7,    63,    98, 11290, 11296
 "S04",        1447,    22,    60,    33,  1562,  1594
 "S05",        5823,     2,   104,   209,  6138,  6329
 "S06",        1962,   202,    63,    97,  2324,  2367
@@ -2335,7 +2335,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10592,     0,     0, 10592, 10691
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     29722, 19531,   434,   932, 50619,132057
+"total",     29720, 19533,   434,   932, 50619,132057
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -2343,8 +2343,10 @@ S02-magicals/dollar_bang.t 8 - die sets $! properly
 S02-magicals/dollar_bang.t 14 - $! has correct value after eval
 S02-one-pass-parsing/misc.t 1 - spurious backslash at end of file error must ask for semicolon
 S02-types/subset.t 26 - error for bad assignment mentions subset
+S03-operators/bag.t 53 - Bag symmetric difference reduce works on three bags
 S03-operators/brainos.t 2 - error for "=~" usage mentions "~~"
 S03-operators/brainos.t 4 - error for "!~" usage mentions "!~~"
+S03-operators/mix.t 65 - Mix symmetric difference reduce works on three mixes
 S03-operators/orelse.t 9 - orelse sets $! after an exception
 S03-operators/set_difference.t aborted 2 test(s)
 S04-exception-handlers/catch.t 29 - Two invocations of a die()ing routine should still hit the CATCH handler
