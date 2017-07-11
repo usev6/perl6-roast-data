@@ -200,7 +200,7 @@ S02-types/baggy.t..................................   8    0    0    0    8
 S02-types/baghash.rakudo.jvm....................... 267    0    2   21  290
     21 skipped: 'is TypeObject' NYI RT  \#124490
      2 todo   : in flux
-S02-types/bool.t...................................  67    0    0    0   67
+S02-types/bool.t...................................  68    0    0    0   68
 S02-types/built-in.t...............................   1    0    0    0    1
 S02-types/capture.t................................  38    0    0    0   38
 S02-types/catch_type_cast_mismatch.t...............  11    0    0    0   11
@@ -375,7 +375,7 @@ S03-operators/assign.rakudo.jvm.................... 273    0   14   12  299
 S03-operators/autoincrement-range.t................ 104    0    0    0  104
 S03-operators/autoincrement.t......................  80    0    0    0   80
 S03-operators/autovivification.t...................  23    0    0    0   23
-S03-operators/bag.t................................  53    1    0    0   54
+S03-operators/bag.t................................  54    0    0    0   54
 S03-operators/basic-types.t........................  19    0    0    0   19
 S03-operators/bit.t................................  40    0    0    0   40
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
@@ -416,7 +416,7 @@ S03-operators/minmax.rakudo.jvm....................  37    0    0    2   39
 S03-operators/misc.rakudo.jvm......................  53    0    1    1   55
      1 skipped: Bogus term
      1 todo   : RT #93978
-S03-operators/mix.t................................  65    1    0    0   66
+S03-operators/mix.t................................  66    0    0    0   66
 S03-operators/names.t..............................   7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -448,7 +448,7 @@ S03-operators/set_difference.t.....................   0    2    0    0    2
 S03-operators/set_elem.t........................... 456    0    0    0  456
 S03-operators/set_intersection.t................... 488    0    0    0  488
 S03-operators/set_multiply.t....................... 600    0    0    0  600
-S03-operators/set_proper_subset.t..................1560    0    0    0 1560
+S03-operators/set_proper_subset.t..................1572   12    0    0 1584
 S03-operators/set_subset.t.........................1332    0    0    0 1332
 S03-operators/set_union.t.......................... 312    0    0    0  312
 S03-operators/short-circuit.t......................  83    0    0    0   83
@@ -2311,8 +2311,8 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9366,     5,   144,   409,  9924,  9927
-"S03",       11122,     7,    63,    98, 11290, 11296
+"S02",        9367,     5,   144,   409,  9925,  9928
+"S03",       11136,    17,    63,    98, 11314, 11320
 "S04",        1447,    22,    60,    33,  1562,  1594
 "S05",        5823,     2,   104,   209,  6138,  6329
 "S06",        1962,   202,    63,    97,  2324,  2367
@@ -2335,7 +2335,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10592,     0,     0, 10592, 10691
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     29720, 19533,   434,   932, 50619,132057
+"total",     29735, 19543,   434,   932, 50644,132082
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -2343,12 +2343,22 @@ S02-magicals/dollar_bang.t 8 - die sets $! properly
 S02-magicals/dollar_bang.t 14 - $! has correct value after eval
 S02-one-pass-parsing/misc.t 1 - spurious backslash at end of file error must ask for semicolon
 S02-types/subset.t 26 - error for bad assignment mentions subset
-S03-operators/bag.t 53 - Bag symmetric difference reduce works on three bags
 S03-operators/brainos.t 2 - error for "=~" usage mentions "~~"
 S03-operators/brainos.t 4 - error for "!~" usage mentions "!~~"
-S03-operators/mix.t 65 - Mix symmetric difference reduce works on three mixes
 S03-operators/orelse.t 9 - orelse sets $! after an exception
 S03-operators/set_difference.t aborted 2 test(s)
+S03-operators/set_proper_subset.t 27 - a b is ⊂ of Mix
+S03-operators/set_proper_subset.t 28 - Mix ⊃ a b
+S03-operators/set_proper_subset.t 291 - a b is (<) of Mix
+S03-operators/set_proper_subset.t 292 - Mix (>) a b
+S03-operators/set_proper_subset.t 555 - a b is R⊃ of Mix
+S03-operators/set_proper_subset.t 556 - Mix R⊂ a b
+S03-operators/set_proper_subset.t 819 - a b is R(>) of Mix
+S03-operators/set_proper_subset.t 820 - Mix R(<) a b
+S03-operators/set_proper_subset.t 1083 - a b is NOT ⊈ of Mix
+S03-operators/set_proper_subset.t 1084 - Mix NOT ⊅ a b
+S03-operators/set_proper_subset.t 1347 - a b is NOT R⊅ of Mix
+S03-operators/set_proper_subset.t 1348 - Mix NOT R⊈ a b
 S04-exception-handlers/catch.t 29 - Two invocations of a die()ing routine should still hit the CATCH handler
 S04-exception-handlers/control.t 1 - next with CONTROL gives error mentioning next
 S04-exception-handlers/control.t 12 - take without gather error mentions location
