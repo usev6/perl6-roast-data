@@ -139,7 +139,7 @@ S02-names-vars/names.rakudo.jvm.................... 141    0    0    8  149
      2 skipped: this kind of lookup NYI RT  \#125659
 S02-names-vars/perl.rakudo.jvm..................... 114    0    1    1  116
      1 skipped: RT  \#67790
-     1 todo   : RT #123048
+     1 todo PASSED: RT #123048
 S02-names-vars/signature.t.........................  13    0    0    0   13
 S02-names-vars/variables-and-packages.t............  38    0    0    0   38
 S02-names-vars/varnames.rakudo.jvm.................  27    0    2    0   29
@@ -375,7 +375,7 @@ S03-operators/assign.rakudo.jvm.................... 273    0   14   12  299
 S03-operators/autoincrement-range.t................ 104    0    0    0  104
 S03-operators/autoincrement.t......................  80    0    0    0   80
 S03-operators/autovivification.t...................  23    0    0    0   23
-S03-operators/bag.t................................  54    0    0    0   54
+S03-operators/bag.t................................  46    0    0    0   46
 S03-operators/basic-types.t........................  19    0    0    0   19
 S03-operators/bit.t................................  40    0    0    0   40
 S03-operators/boolean-bitwise.t....................  45    0    0    0   45
@@ -416,7 +416,7 @@ S03-operators/minmax.rakudo.jvm....................  37    0    0    2   39
 S03-operators/misc.rakudo.jvm......................  53    0    1    1   55
      1 skipped: Bogus term
      1 todo   : RT #93978
-S03-operators/mix.t................................  66    0    0    0   66
+S03-operators/mix.t................................  58    0    0    0   58
 S03-operators/names.t..............................   7    0    0    0    7
 S03-operators/nesting.t............................  26    0    0    0   26
 S03-operators/not.t................................  22    0    0    0   22
@@ -441,7 +441,7 @@ S03-operators/relational.rakudo.jvm................ 177    0    2    0  179
 S03-operators/repeat.rakudo.jvm....................  60    0    0    3   63
      3 skipped: OutOfMemoryError: Java heap space
 S03-operators/scalar-assign.t......................   4    0    0    0    4
-S03-operators/set.t................................  26    0    0    0   26
+S03-operators/set.t................................  20    0    0    0   20
 S03-operators/set_addition.t....................... 600    0    0    0  600
 S03-operators/set_difference.t.....................   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
@@ -454,7 +454,8 @@ S03-operators/set_subset.t.........................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 S03-operators/set_symmetric_difference.t...........   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S03-operators/set_union.t.......................... 312    0    0    0  312
+S03-operators/set_union.t.......................... 164  972    0    0 1136
+   972 tests aborted (missing ok/not ok)
 S03-operators/short-circuit.t......................  83    0    0    0   83
 S03-operators/so.t.................................  15    0    0    0   15
 S03-operators/spaceship-and-containers.t...........   6    0    0    0    6
@@ -948,9 +949,8 @@ S06-signature/introspection.rakudo.jvm............. 131    0    1    1  133
 S06-signature/mixed-placeholders.t.................  18    0    0    0   18
 S06-signature/multi-invocant.t.....................  25    0    0    0   25
 S06-signature/multidimensional.t...................  10    0    0    0   10
-S06-signature/named-parameters.rakudo.jvm..........  63   20    0   16   99
+S06-signature/named-parameters.rakudo.jvm..........  83    0    0   16   99
     16 skipped: multiple same-named arguments NYI RT  \#124921
-    20 tests aborted (missing ok/not ok)
 S06-signature/named-placeholders.t.................   3    0    0    0    3
 S06-signature/named-renaming.t.....................  11    0    0    0   11
 S06-signature/optional.rakudo.jvm..................  33    0    0    2   35
@@ -965,8 +965,9 @@ S06-signature/scalar-type.t........................   8    0    0    0    8
 S06-signature/shape.t..............................  35    0    0    0   35
 S06-signature/sigilless.t..........................  10    0    0    0   10
 S06-signature/slurpy-and-interpolation.t...........  12    0    0    0   12
-S06-signature/slurpy-params.rakudo.jvm.............   0   87    0    0   87
-    87 tests aborted (missing ok/not ok)
+S06-signature/slurpy-params.rakudo.jvm.............  85    0    0    2   87
+     1 skipped: Proc::Async NYI RT  \#126524 / RT  \#128201
+     1 skipped: Proc::Async NYI RT  \#129175
 S06-signature/slurpy-placeholders.t................   8    0    0    0    8
 S06-signature/sub-ref.rakudo.jvm...................  28    0    2    4   34
      4 skipped: macros, compile time binding RT  \#124919
@@ -1446,8 +1447,8 @@ S17-supply/Promise.t...............................   0   13    0    0   13
     13 tests aborted (missing ok/not ok)
 S17-supply/act.t...................................   0    9    0    0    9
      9 tests aborted (missing ok/not ok)
-S17-supply/basic.t.................................   0   92    0    0   92
-    92 tests aborted (missing ok/not ok)
+S17-supply/basic.t.................................   0   94    0    0   94
+    94 tests aborted (missing ok/not ok)
 S17-supply/batch.t.................................   0   11    0    0   11
     11 tests aborted (missing ok/not ok)
 S17-supply/categorize.t............................   0   63    0    0   63
@@ -1642,8 +1643,8 @@ S29-conversions/hash.t.............................   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
 S29-conversions/ord_and_chr.rakudo.jvm.............   0   55    0    0   55
     55 tests aborted (missing ok/not ok)
-S29-os/system.rakudo.jvm...........................   0   37    0    0   37
-    37 tests aborted (missing ok/not ok)
+S29-os/system.rakudo.jvm...........................   0   36    0    0   36
+    36 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S32-array/adverbs.t................................   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
@@ -1939,8 +1940,8 @@ S32-num/power.rakudo.jvm...........................   0   98    0    0   98
     98 tests aborted (missing ok/not ok)
 S32-num/rand.rakudo.jvm............................   0  113    0    0  113
    113 tests aborted (missing ok/not ok)
-S32-num/rat.rakudo.jvm.............................   0  843    0    0  843
-   843 tests aborted (missing ok/not ok)
+S32-num/rat.rakudo.jvm.............................   0  844    0    0  844
+   844 tests aborted (missing ok/not ok)
 S32-num/real-bridge.t..............................   0  200    0    0  200
    200 tests aborted (missing ok/not ok)
 S32-num/roots.t....................................   0   55    0    0   55
@@ -2308,10 +2309,10 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9367,     5,   144,   409,  9925,  9928
-"S03",        8232,    15,    63,    98,  8408,  8414
+"S03",        8062,   987,    63,    98,  9210,  9216
 "S04",        1447,    22,    60,    33,  1562,  1594
 "S05",        5823,     2,   104,   209,  6138,  6329
-"S06",        2009,   151,    69,    95,  2324,  2367
+"S06",        2114,    44,    69,    97,  2324,  2367
 "S07",           9,   143,     4,     0,   156,   156
 "S09",           0,  1094,     0,     0,  1094,  1094
 "S10",           0,   148,     0,     0,   148,   205
@@ -2319,19 +2320,19 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S12",           0,  1852,     0,     0,  1852,  1901
 "S13",           0,    64,     0,     0,    64,    74
 "S14",           0,   406,     0,     0,   406,   419
-"S15",           0,   120,     0,     0,   120, 80816
+"S15",           0,   120,     0,     0,   120, 99538
 "S16",           0,   557,     0,     0,   557,   594
-"S17",           0,   991,     0,     0,   991,  1101
+"S17",           0,   993,     0,     0,   993,  1103
 "S19",           0,    23,     0,     0,    23,    33
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    43,     0,     0,    43,   115
 "S26",           0,  1441,     0,     0,  1441,  1441
 "S28",           0,     2,     0,     0,     2,     6
-"S29",           0,   227,     0,     0,   227,   227
-"S32",           0, 10592,     0,     0, 10592, 10691
+"S29",           0,   226,     0,     0,   226,   226
+"S32",           0, 10593,     0,     0, 10593, 10692
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     26887, 19477,   444,   930, 47738,129176
+"total",     26822, 20344,   444,   932, 48542,148702
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -2346,6 +2347,7 @@ S03-operators/set_difference.t aborted 2 test(s)
 S03-operators/set_proper_subset.t aborted 4 test(s)
 S03-operators/set_subset.t aborted 4 test(s)
 S03-operators/set_symmetric_difference.t aborted 2 test(s)
+S03-operators/set_union.t aborted 972 test(s)
 S04-exception-handlers/catch.t 29 - Two invocations of a die()ing routine should still hit the CATCH handler
 S04-exception-handlers/control.t 1 - next with CONTROL gives error mentioning next
 S04-exception-handlers/control.t 12 - take without gather error mentions location
@@ -2385,8 +2387,6 @@ S06-signature/errors.rakudo.jvm 24 - fails multi sigs reports call profile
 S06-signature/errors.rakudo.jvm 25 - mentions signature
 S06-signature/errors.rakudo.jvm 26 - Error mentions Int
 S06-signature/errors.rakudo.jvm 27 - ... error message mentions "call"
-S06-signature/named-parameters.rakudo.jvm aborted 20 test(s)
-S06-signature/slurpy-params.rakudo.jvm aborted 87 test(s)
 S06-signature/types.rakudo.jvm aborted 4 test(s)
 S06-traits/is-assoc.rakudo.jvm aborted 6 test(s)
 S06-traits/misc.rakudo.jvm 19 - error message mentions trait
@@ -2611,7 +2611,7 @@ S17-scheduler/times.t aborted 4 test(s)
 S17-supply/Channel.rakudo.jvm aborted 14 test(s)
 S17-supply/Promise.t aborted 13 test(s)
 S17-supply/act.t aborted 9 test(s)
-S17-supply/basic.t aborted 92 test(s)
+S17-supply/basic.t aborted 94 test(s)
 S17-supply/batch.t aborted 11 test(s)
 S17-supply/categorize.t aborted 63 test(s)
 S17-supply/classify.t aborted 33 test(s)
@@ -2706,7 +2706,7 @@ S29-context/exit.t aborted 3 test(s)
 S29-context/sleep.t aborted 23 test(s)
 S29-conversions/hash.t aborted 8 test(s)
 S29-conversions/ord_and_chr.rakudo.jvm aborted 55 test(s)
-S29-os/system.rakudo.jvm aborted 37 test(s)
+S29-os/system.rakudo.jvm aborted 36 test(s)
 S32-array/adverbs.t aborted 2 test(s)
 S32-array/bool.t aborted 15 test(s)
 S32-array/create.t aborted 12 test(s)
@@ -2854,7 +2854,7 @@ S32-num/polar.t aborted 48 test(s)
 S32-num/polymod.rakudo.jvm aborted 9 test(s)
 S32-num/power.rakudo.jvm aborted 98 test(s)
 S32-num/rand.rakudo.jvm aborted 113 test(s)
-S32-num/rat.rakudo.jvm aborted 843 test(s)
+S32-num/rat.rakudo.jvm aborted 844 test(s)
 S32-num/real-bridge.t aborted 200 test(s)
 S32-num/roots.t aborted 55 test(s)
 S32-num/rounders.rakudo.jvm aborted 134 test(s)
