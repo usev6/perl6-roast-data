@@ -442,12 +442,14 @@ S03-operators/repeat.rakudo.jvm....................  60    0    0    3   63
      3 skipped: OutOfMemoryError: Java heap space
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set.t................................   1    0    0    0    1
-S03-operators/set_addition.t....................... 678    0    0    0  678
+S03-operators/set_addition.t....................... 165  513    0    0  678
+   513 tests aborted (missing ok/not ok)
 S03-operators/set_difference.t.....................   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
 S03-operators/set_elem.t........................... 228    0    0    0  228
 S03-operators/set_intersection.t................... 622    0    0    0  622
-S03-operators/set_multiply.t....................... 678    0    0    0  678
+S03-operators/set_multiply.t....................... 165  513    0    0  678
+   513 tests aborted (missing ok/not ok)
 S03-operators/set_precedes.t.......................  32    0    0    0   32
 S03-operators/set_proper_subset.t..................   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
@@ -1794,8 +1796,8 @@ S32-io/note.t......................................   0    7    0    0    7
      7 tests aborted (missing ok/not ok)
 S32-io/null-char.t.................................   0    6    0    0    6
      6 tests aborted (missing ok/not ok)
-S32-io/open.rakudo.jvm.............................   0   64    0    0   64
-    64 tests aborted (missing ok/not ok)
+S32-io/open.rakudo.jvm.............................   0   65    0    0   65
+    65 tests aborted (missing ok/not ok)
 S32-io/other.t.....................................   0   61    0    0   61
     61 tests aborted (missing ok/not ok)
 S32-io/pipe.rakudo.jvm.............................   0   19    0    0   19
@@ -2315,7 +2317,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
 "S02",        9369,     5,   144,   409,  9927,  9930
-"S03",        8036,   415,    63,    98,  8612,  8618
+"S03",        7010,  1441,    63,    98,  8612,  8618
 "S04",        1448,    22,    60,    33,  1563,  1595
 "S05",        5823,     2,   104,   209,  6138,  6329
 "S06",        2114,    46,    69,    97,  2326,  2369
@@ -2335,10 +2337,10 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S26",           0,  1441,     0,     0,  1441,  1441
 "S28",           0,     2,     0,     0,     2,     6
 "S29",           0,   226,     0,     0,   226,   226
-"S32",           0, 10594,     0,     0, 10594, 10691
+"S32",           0, 10595,     0,     0, 10595, 10692
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     26799, 19783,   444,   932, 47958,148117
+"total",     25773, 20810,   444,   932, 47959,148118
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -2349,7 +2351,9 @@ S02-types/subset.t 26 - error for bad assignment mentions subset
 S03-operators/brainos.t 2 - error for "=~" usage mentions "~~"
 S03-operators/brainos.t 4 - error for "!~" usage mentions "!~~"
 S03-operators/orelse.t 9 - orelse sets $! after an exception
+S03-operators/set_addition.t aborted 513 test(s)
 S03-operators/set_difference.t aborted 2 test(s)
+S03-operators/set_multiply.t aborted 513 test(s)
 S03-operators/set_proper_subset.t aborted 2 test(s)
 S03-operators/set_subset.t aborted 2 test(s)
 S03-operators/set_symmetric_difference.t aborted 2 test(s)
@@ -2788,7 +2792,7 @@ S32-io/lock.rakudo.jvm aborted 29 test(s)
 S32-io/move.t aborted 30 test(s)
 S32-io/note.t aborted 7 test(s)
 S32-io/null-char.t aborted 6 test(s)
-S32-io/open.rakudo.jvm aborted 64 test(s)
+S32-io/open.rakudo.jvm aborted 65 test(s)
 S32-io/other.t aborted 61 test(s)
 S32-io/pipe.rakudo.jvm aborted 19 test(s)
 S32-io/rename.t aborted 29 test(s)
