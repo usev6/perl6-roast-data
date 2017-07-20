@@ -197,7 +197,7 @@ S02-types/bag-iterator.t...........................  14    0    0    0   14
 S02-types/bag.rakudo.jvm........................... 225    0    1    0  226
      1 todo   : ?
 S02-types/baggy.t..................................   8    0    0    0    8
-S02-types/baghash.rakudo.jvm....................... 267    0    2   21  290
+S02-types/baghash.rakudo.jvm....................... 269    0    2   21  292
     21 skipped: 'is TypeObject' NYI RT  \#124490
      2 todo   : in flux
 S02-types/bool.t...................................  68    0    0    0   68
@@ -258,7 +258,7 @@ S02-types/mix.rakudo.jvm........................... 215    0    1    0  216
 S02-types/mixed_multi_dimensional.rakudo.jvm.......  77    0    3    0   80
      1 todo   : isa hash
      2 todo   : unknown
-S02-types/mixhash.rakudo.jvm....................... 237    0    2   21  260
+S02-types/mixhash.rakudo.jvm....................... 239    0    2   21  262
     21 skipped: 'is TypeObject' NYI RT  \#124490
      2 todo   : in flux
 S02-types/mu.t.....................................   8    0    0    0    8
@@ -292,7 +292,7 @@ S02-types/range.rakudo.jvm......................... 187    0    2    0  189
 S02-types/set-iterator.t...........................  12    0    0    0   12
 S02-types/set.rakudo.jvm........................... 206    0    0    9  215
      9 skipped: Hypers not yet Set compatible RT  \#124487
-S02-types/sethash.rakudo.jvm....................... 234    0    0   10  244
+S02-types/sethash.rakudo.jvm....................... 236    0    0   10  246
     10 skipped: 'is TypeObject' NYI RT  \#124490
 S02-types/sigils-and-types.rakudo.jvm..............  25    0    2    0   27
      1 todo   : Capture does Associative RT #124485
@@ -980,10 +980,8 @@ S06-signature/tree-node-parameters.rakudo.jvm......  16    0    0    4   20
      4 skipped: signature binding of return values NYI RT  \#124945
 S06-signature/type-capture.rakudo.jvm..............  10    0    0    2   12
      2 skipped: Method 'T' not found for invocant of class 'Rat', RT  \#126383
-S06-signature/types.rakudo.jvm.....................  11    4    3    1   19
-     1 skipped: '١' is not a valid number
-     3 todo   : no typed exception X::Parameter::InvalidConcreteness, yet
-     4 tests aborted (missing ok/not ok)
+S06-signature/types.rakudo.jvm.....................   0   19    0    0   19
+    19 tests aborted (missing ok/not ok)
 S06-signature/unpack-array.t.......................  15    0    0    0   15
 S06-signature/unpack-object.t......................   4    0    0    0    4
 S06-signature/unspecified.t........................  18    0    0    0   18
@@ -2316,11 +2314,11 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    86,    86,    86
-"S02",        9369,     5,   144,   409,  9927,  9930
+"S02",        9375,     5,   144,   409,  9933,  9936
 "S03",        7010,  1441,    63,    98,  8612,  8618
 "S04",        1448,    22,    60,    33,  1563,  1595
 "S05",        5823,     2,   104,   209,  6138,  6329
-"S06",        2114,    46,    69,    97,  2326,  2369
+"S06",        2103,    61,    66,    96,  2326,  2369
 "S07",           9,   143,     4,     0,   156,   156
 "S09",           0,  1094,     0,     0,  1094,  1094
 "S10",           0,   148,     0,     0,   148,   205
@@ -2340,7 +2338,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10595,     0,     0, 10595, 10692
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     25773, 20810,   444,   932, 47959,148118
+"total",     25768, 20825,   441,   931, 47965,148124
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -2398,7 +2396,7 @@ S06-signature/errors.rakudo.jvm 24 - fails multi sigs reports call profile
 S06-signature/errors.rakudo.jvm 25 - mentions signature
 S06-signature/errors.rakudo.jvm 26 - Error mentions Int
 S06-signature/errors.rakudo.jvm 27 - ... error message mentions "call"
-S06-signature/types.rakudo.jvm aborted 4 test(s)
+S06-signature/types.rakudo.jvm aborted 19 test(s)
 S06-traits/is-assoc.rakudo.jvm aborted 6 test(s)
 S06-traits/is-rw.t 8 - did we throws-like X::Parameter::RW?
 S06-traits/misc.rakudo.jvm 19 - error message mentions trait
