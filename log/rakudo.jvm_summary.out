@@ -980,28 +980,39 @@ S06-signature/tree-node-parameters.rakudo.jvm......  16    0    0    4   20
      4 skipped: signature binding of return values NYI RT  \#124945
 S06-signature/type-capture.rakudo.jvm..............  10    0    0    2   12
      2 skipped: Method 'T' not found for invocant of class 'Rat', RT  \#126383
-S06-signature/types.rakudo.jvm.....................   0   19    0    0   19
-    19 tests aborted (missing ok/not ok)
-S06-signature/unpack-array.t.......................  15    0    0    0   15
-S06-signature/unpack-object.t......................   4    0    0    0    4
-S06-signature/unspecified.t........................  18    0    0    0   18
-S06-traits/as.t....................................   5    0    0    0    5
+S06-signature/types.rakudo.jvm.....................  13    2    3    1   19
+     1 skipped: '١' is not a valid number
+     3 todo   : no typed exception X::Parameter::InvalidConcreteness, yet
+     2 tests aborted (missing ok/not ok)
+S06-signature/unpack-array.t.......................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+S06-signature/unpack-object.t......................   0    4    0    0    4
+     4 tests aborted (missing ok/not ok)
+S06-signature/unspecified.t........................   0   18    0    0   18
+    18 tests aborted (missing ok/not ok)
+S06-traits/as.t....................................   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
 S06-traits/is-assoc.rakudo.jvm.....................   0    6    0    0    6
      6 tests aborted (missing ok/not ok)
-S06-traits/is-copy.t...............................  27    0    0    0   27
-S06-traits/is-readonly.t...........................   1    0    0    0    1
-S06-traits/is-rw.t.................................   7    1    0    0    8
-S06-traits/misc.rakudo.jvm.........................  13    2    6    0   21
-     4 todo   : RT #126531
-     2 todo   : is readonly does not override
-S06-traits/native-is-copy.t........................  15    0    0    0   15
-S06-traits/native-is-rw.t..........................  48    0    0    0   48
+S06-traits/is-copy.t...............................   0   27    0    0   27
+    27 tests aborted (missing ok/not ok)
+S06-traits/is-readonly.t...........................   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
+S06-traits/is-rw.t.................................   0    8    0    0    8
+     8 tests aborted (missing ok/not ok)
+S06-traits/misc.rakudo.jvm.........................   0   21    0    0   21
+    21 tests aborted (missing ok/not ok)
+S06-traits/native-is-copy.t........................   0   15    0    0   15
+    15 tests aborted (missing ok/not ok)
+S06-traits/native-is-rw.t..........................   0   48    0    0   48
+    48 tests aborted (missing ok/not ok)
 S06-traits/precedence.rakudo.jvm...................   0   16    0    0   16
     16 tests aborted (missing ok/not ok)
-S06-traits/slurpy-is-rw.t..........................   3    0    0    0    3
+S06-traits/slurpy-is-rw.t..........................   0    3    0    0    3
+     3 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-S07-hyperrace/hyper.rakudo.jvm.....................   9    0    4    0   13
-     4 todo   : hyper and race cause lists to become empty RT #126597
+S07-hyperrace/hyper.rakudo.jvm.....................   0   13    0    0   13
+    13 tests aborted (missing ok/not ok)
 S07-hyperrace/race.rakudo.jvm......................   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
 S07-iterators/range-iterator.rakudo.jvm............   0  108    0    0  108
@@ -2318,8 +2329,8 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S03",        7010,  1441,    63,    98,  8612,  8618
 "S04",        1448,    22,    60,    33,  1563,  1595
 "S05",        5823,     2,   104,   209,  6138,  6329
-"S06",        2103,    61,    66,    96,  2326,  2369
-"S07",           9,   143,     4,     0,   156,   156
+"S06",        1960,   206,    63,    97,  2326,  2369
+"S07",           0,   156,     0,     0,   156,   156
 "S09",           0,  1094,     0,     0,  1094,  1094
 "S10",           0,   148,     0,     0,   148,   205
 "S11",           0,   202,     0,     0,   202,   211
@@ -2338,7 +2349,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10595,     0,     0, 10595, 10692
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",     25768, 20825,   441,   931, 47965,148124
+"total",     25616, 20983,   434,   932, 47965,148124
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -2396,12 +2407,21 @@ S06-signature/errors.rakudo.jvm 24 - fails multi sigs reports call profile
 S06-signature/errors.rakudo.jvm 25 - mentions signature
 S06-signature/errors.rakudo.jvm 26 - Error mentions Int
 S06-signature/errors.rakudo.jvm 27 - ... error message mentions "call"
-S06-signature/types.rakudo.jvm aborted 19 test(s)
+S06-signature/types.rakudo.jvm aborted 2 test(s)
+S06-signature/unpack-array.t aborted 15 test(s)
+S06-signature/unpack-object.t aborted 4 test(s)
+S06-signature/unspecified.t aborted 18 test(s)
+S06-traits/as.t aborted 5 test(s)
 S06-traits/is-assoc.rakudo.jvm aborted 6 test(s)
-S06-traits/is-rw.t 8 - did we throws-like X::Parameter::RW?
-S06-traits/misc.rakudo.jvm 19 - error message mentions trait
-S06-traits/misc.rakudo.jvm 20 - error message mentions the name of the trait
+S06-traits/is-copy.t aborted 27 test(s)
+S06-traits/is-readonly.t aborted 1 test(s)
+S06-traits/is-rw.t aborted 8 test(s)
+S06-traits/misc.rakudo.jvm aborted 21 test(s)
+S06-traits/native-is-copy.t aborted 15 test(s)
+S06-traits/native-is-rw.t aborted 48 test(s)
 S06-traits/precedence.rakudo.jvm aborted 16 test(s)
+S06-traits/slurpy-is-rw.t aborted 3 test(s)
+S07-hyperrace/hyper.rakudo.jvm aborted 13 test(s)
 S07-hyperrace/race.rakudo.jvm aborted 12 test(s)
 S07-iterators/range-iterator.rakudo.jvm aborted 108 test(s)
 S07-slip/slip.t aborted 23 test(s)
