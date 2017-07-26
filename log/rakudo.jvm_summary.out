@@ -372,8 +372,8 @@ S03-operators/boolean-bitwise.t....................   0   45    0    0   45
     45 tests aborted (missing ok/not ok)
 S03-operators/brainos.t............................   0    9    0    0    9
      9 tests aborted (missing ok/not ok)
-S03-operators/buf.t................................   0  133    0    0  133
-   133 tests aborted (missing ok/not ok)
+S03-operators/buf.t................................   0  141    0    0  141
+   141 tests aborted (missing ok/not ok)
 S03-operators/chained-declarators.t................   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
 S03-operators/cmp.t................................   0   60    0    0   60
@@ -551,8 +551,8 @@ S04-blocks-and-statements/pointy.rakudo.jvm........   0   21    0    0   21
     21 tests aborted (missing ok/not ok)
 S04-blocks-and-statements/temp.rakudo.jvm..........   0   42    0    0   42
     42 tests aborted (missing ok/not ok)
-S04-declarations/constant.rakudo.jvm...............   0   72    0    0   72
-    72 tests aborted (missing ok/not ok)
+S04-declarations/constant.rakudo.jvm...............   0   75    0    0   75
+    75 tests aborted (missing ok/not ok)
 S04-declarations/implicit-parameter.t..............   0   20    0    0   20
     20 tests aborted (missing ok/not ok)
 S04-declarations/multiple.rakudo.jvm...............   0    8    0    0    8
@@ -2361,8 +2361,8 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
 "S02",           0,  5924,     0,     0,  5924,  5928
-"S03",           0,  5848,     0,     0,  5848,  5854
-"S04",           0,  1543,     0,     0,  1543,  1595
+"S03",           0,  5856,     0,     0,  5856,  5862
+"S04",           0,  1546,     0,     0,  1546,  1598
 "S05",           0,  6138,     0,     0,  6138,  6329
 "S06",           0,  2313,     0,     0,  2313,  2369
 "S07",           0,   156,     0,     0,   156,   156
@@ -2384,7 +2384,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10596,     0,     0, 10596, 10693
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41169,     0,     0, 41169,124466
+"total",         0, 41180,     0,     0, 41180,124477
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2571,7 +2571,7 @@ S03-operators/basic-types.t aborted 19 test(s)
 S03-operators/bit.t aborted 40 test(s)
 S03-operators/boolean-bitwise.t aborted 45 test(s)
 S03-operators/brainos.t aborted 9 test(s)
-S03-operators/buf.t aborted 133 test(s)
+S03-operators/buf.t aborted 141 test(s)
 S03-operators/chained-declarators.t aborted 5 test(s)
 S03-operators/cmp.t aborted 60 test(s)
 S03-operators/comparison-simple.t aborted 24 test(s)
@@ -2660,7 +2660,7 @@ S04-blocks-and-statements/let.rakudo.jvm aborted 12 test(s)
 S04-blocks-and-statements/pointy-rw.t aborted 10 test(s)
 S04-blocks-and-statements/pointy.rakudo.jvm aborted 21 test(s)
 S04-blocks-and-statements/temp.rakudo.jvm aborted 42 test(s)
-S04-declarations/constant.rakudo.jvm aborted 72 test(s)
+S04-declarations/constant.rakudo.jvm aborted 75 test(s)
 S04-declarations/implicit-parameter.t aborted 20 test(s)
 S04-declarations/multiple.rakudo.jvm aborted 8 test(s)
 S04-declarations/my.rakudo.jvm aborted 105 test(s)
