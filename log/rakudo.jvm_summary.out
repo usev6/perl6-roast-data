@@ -1003,8 +1003,8 @@ S04-statements/return.t............................Can't open perl script "eval-
    0   22    0    0   22
     22 tests aborted (missing ok/not ok)
 S04-statements/sink.t..............................Can't open perl script "eval-client.pl": No such file or directory
-   0    4    0    0    4
-     4 tests aborted (missing ok/not ok)
+   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
 S04-statements/terminator.t........................Can't open perl script "eval-client.pl": No such file or directory
    0   20    0    0   20
     20 tests aborted (missing ok/not ok)
@@ -3538,8 +3538,8 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S01",           0,    86,     0,     0,    86,    86
 "S02",           0,  5924,     0,     0,  5924,  5928
 "S03",           0,  5857,     0,     0,  5857,  5863
-"S04",           0,  1543,     0,     0,  1543,  1595
-"S05",           0,  6138,     0,     0,  6138,  6329
+"S04",           0,  1544,     0,     0,  1544,  1596
+"S05",           0,  6138,     0,     0,  6138,  6331
 "S06",           0,  2313,     0,     0,  2313,  2369
 "S07",           0,   156,     0,     0,   156,   156
 "S09",           0,  1095,     0,     0,  1095,  1095
@@ -3550,7 +3550,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S14",           0,   406,     0,     0,   406,   419
 "S15",           0,   120,     0,     0,   120, 82643
 "S16",           0,   562,     0,     0,   562,   599
-"S17",           0,   995,     0,     0,   995,  1105
+"S17",           0,   995,     0,     0,   995,  1129
 "S19",           0,    24,     0,     0,    24,    34
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    51,     0,     0,    51,   123
@@ -3560,7 +3560,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S32",           0, 10596,     0,     0, 10596, 10693
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41180,     0,     0, 41180,124477
+"total",         0, 41181,     0,     0, 41181,124504
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3894,7 +3894,7 @@ S04-statements/quietly.t aborted 4 test(s)
 S04-statements/redo.rakudo.jvm aborted 12 test(s)
 S04-statements/repeat.t aborted 21 test(s)
 S04-statements/return.t aborted 22 test(s)
-S04-statements/sink.t aborted 4 test(s)
+S04-statements/sink.t aborted 5 test(s)
 S04-statements/terminator.t aborted 20 test(s)
 S04-statements/try.t aborted 40 test(s)
 S04-statements/unless.t aborted 10 test(s)
