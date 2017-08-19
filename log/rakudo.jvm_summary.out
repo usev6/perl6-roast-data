@@ -103,9 +103,9 @@ S02-literals/fmt-interpolation.t...................Can't open perl script "eval-
 S02-literals/hash-interpolation.t..................Can't open perl script "eval-client.pl": No such file or directory
    0   12    0    0   12
     12 tests aborted (missing ok/not ok)
-S02-literals/heredocs.t............................Can't open perl script "eval-client.pl": No such file or directory
-   0   23    0    0   23
-    23 tests aborted (missing ok/not ok)
+S02-literals/heredocs.rakudo.jvm...................Can't open perl script "eval-client.pl": No such file or directory
+   0   34    0    0   34
+    34 tests aborted (missing ok/not ok)
 S02-literals/hex_chars.t...........................Can't open perl script "eval-client.pl": No such file or directory
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -2418,8 +2418,8 @@ S24-testing/12-subtest-todo.t......................Can't open perl script "eval-
    0    8    0    0    8
      8 tests aborted (missing ok/not ok)
 S24-testing/3-output.t.............................Can't open perl script "eval-client.pl": No such file or directory
-   0    4    0    0    4
-     4 tests aborted (missing ok/not ok)
+   0    6    0    0    6
+     6 tests aborted (missing ok/not ok)
 S24-testing/7-bail_out.t...........................Can't open perl script "eval-client.pl": No such file or directory
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -3536,7 +3536,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
-"S02",           0,  5924,     0,     0,  5924,  5928
+"S02",           0,  5935,     0,     0,  5935,  5939
 "S03",           0,  5916,     0,     0,  5916,  5922
 "S04",           0,  1546,     0,     0,  1546,  1598
 "S05",           0,  6138,     0,     0,  6138,  6347
@@ -3553,14 +3553,14 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S17",           0,   995,     0,     0,   995,  1231
 "S19",           0,    24,     0,     0,    24,    34
 "S22",           0,    19,     0,     0,    19,    19
-"S24",           0,    51,     0,     0,    51,   123
+"S24",           0,    53,     0,     0,    53,   125
 "S26",           0,  1441,     0,     0,  1441,  1441
 "S28",           0,     2,     0,     0,     2,     6
 "S29",           0,   226,     0,     0,   226,   226
 "S32",           0, 10596,     0,     0, 10596, 10693
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41243,     0,     0, 41243,124684
+"total",         0, 41256,     0,     0, 41256,124697
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3597,7 +3597,7 @@ S02-literals/char-by-name.rakudo.jvm aborted 11 test(s)
 S02-literals/char-by-number.t aborted 38 test(s)
 S02-literals/fmt-interpolation.t aborted 11 test(s)
 S02-literals/hash-interpolation.t aborted 12 test(s)
-S02-literals/heredocs.t aborted 23 test(s)
+S02-literals/heredocs.rakudo.jvm aborted 34 test(s)
 S02-literals/hex_chars.t aborted 4 test(s)
 S02-literals/listquote-whitespace.t aborted 3 test(s)
 S02-literals/listquote.rakudo.jvm aborted 24 test(s)
@@ -4360,7 +4360,7 @@ S24-testing/10-is-approx.rakudo.jvm aborted 7 test(s)
 S24-testing/11-plan-skip-all-subtests.t aborted 4 test(s)
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S24-testing/12-subtest-todo.t aborted 8 test(s)
-S24-testing/3-output.t aborted 4 test(s)
+S24-testing/3-output.t aborted 6 test(s)
 S24-testing/7-bail_out.t aborted 4 test(s)
 S24-testing/8-die_on_fail.t aborted 6 test(s)
 S24-testing/9-is_deeply.t aborted 3 test(s)
