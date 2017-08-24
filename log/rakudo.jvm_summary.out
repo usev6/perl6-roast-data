@@ -446,8 +446,8 @@ S03-operators/reduce-le1arg.rakudo.jvm.............   0   54    0    0   54
     54 tests aborted (missing ok/not ok)
 S03-operators/relational.rakudo.jvm................   0  179    0    0  179
    179 tests aborted (missing ok/not ok)
-S03-operators/repeat.rakudo.jvm....................   0   63    0    0   63
-    63 tests aborted (missing ok/not ok)
+S03-operators/repeat.rakudo.jvm....................   0   65    0    0   65
+    65 tests aborted (missing ok/not ok)
 S03-operators/scalar-assign.t......................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 S03-operators/set.t................................   0    1    0    0    1
@@ -2361,7 +2361,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
 "S02",           0,  5935,     0,     0,  5935,  5939
-"S03",           0,  5916,     0,     0,  5916,  5922
+"S03",           0,  5918,     0,     0,  5918,  5924
 "S04",           0,  1546,     0,     0,  1546,  1598
 "S05",           0,  6138,     0,     0,  6138,  6347
 "S06",           0,  2314,     0,     0,  2314,  2370
@@ -2384,7 +2384,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10596,     0,     0, 10596, 10693
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41256,     0,     0, 41256,124697
+"total",         0, 41258,     0,     0, 41258,124699
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2608,7 +2608,7 @@ S03-operators/range-int.t aborted 507 test(s)
 S03-operators/range.t aborted 129 test(s)
 S03-operators/reduce-le1arg.rakudo.jvm aborted 54 test(s)
 S03-operators/relational.rakudo.jvm aborted 179 test(s)
-S03-operators/repeat.rakudo.jvm aborted 63 test(s)
+S03-operators/repeat.rakudo.jvm aborted 65 test(s)
 S03-operators/scalar-assign.t aborted 4 test(s)
 S03-operators/set.t aborted 1 test(s)
 S03-operators/set_addition.t aborted 2 test(s)
