@@ -2505,8 +2505,8 @@ S17-supply/basic.t.................................nice: ./perl6-m: No such file
    0   94    0    0   94
     94 tests aborted (missing ok/not ok)
 S17-supply/batch.t.................................nice: ./perl6-m: No such file or directory
-   0   11    0    0   11
-    11 tests aborted (missing ok/not ok)
+   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
 S17-supply/categorize.t............................nice: ./perl6-m: No such file or directory
    0   63    0    0   63
     63 tests aborted (missing ok/not ok)
@@ -2658,9 +2658,9 @@ S19-command-line/dash-e.t..........................nice: ./perl6-m: No such file
 S19-command-line/help.t............................nice: ./perl6-m: No such file or directory
    0    1    0    0    1
      1 tests aborted (missing ok/not ok)
-S19-command-line/repl.rakudo.moar..................nice: ./perl6-m: No such file or directory
-   0   10    0    0   10
-    10 tests aborted (missing ok/not ok)
+S19-command-line/repl.t............................nice: ./perl6-m: No such file or directory
+   0    1    0    0    1
+     1 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S22-package-format/local.t.........................nice: ./perl6-m: No such file or directory
    0   19    0    0   19
@@ -3841,8 +3841,8 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "S14",           0,   406,     0,     0,   406,   419
 "S15",           0, 85061,     0,     0, 85061, 82643
 "S16",           0,   562,     0,     0,   562,   599
-"S17",           0,  1232,     0,     0,  1232,  1232
-"S19",           0,    34,     0,     0,    34,    34
+"S17",           0,  1230,     0,     0,  1230,  1230
+"S19",           0,    25,     0,     0,    25,    25
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    53,     0,     0,    53,   125
 "S26",           0,  1441,     0,     0,  1441,  1441
@@ -3851,7 +3851,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "S32",           0, 10686,     0,     0, 10686, 10710
 "int",           0,  1365,     0,     0,  1365,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0,126612,     0,     0,126612,124721
+"total",         0,126601,     0,     0,126601,124710
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.moar aborted 17 test(s)
@@ -4681,7 +4681,7 @@ S17-supply/Channel.t aborted 14 test(s)
 S17-supply/Promise.t aborted 13 test(s)
 S17-supply/act.t aborted 9 test(s)
 S17-supply/basic.t aborted 94 test(s)
-S17-supply/batch.t aborted 11 test(s)
+S17-supply/batch.t aborted 9 test(s)
 S17-supply/categorize.t aborted 63 test(s)
 S17-supply/classify.t aborted 33 test(s)
 S17-supply/delayed.rakudo.moar aborted 13 test(s)
@@ -4732,7 +4732,7 @@ S19-command-line-options/06-dash-rxtrace.t aborted 1 test(s)
 S19-command-line/arguments.t aborted 6 test(s)
 S19-command-line/dash-e.t aborted 4 test(s)
 S19-command-line/help.t aborted 1 test(s)
-S19-command-line/repl.rakudo.moar aborted 10 test(s)
+S19-command-line/repl.t aborted 1 test(s)
 S22-package-format/local.t aborted 19 test(s)
 S24-testing/0-compile.t aborted 1 test(s)
 S24-testing/10-is-approx.t aborted 7 test(s)

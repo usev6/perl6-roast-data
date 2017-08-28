@@ -2426,8 +2426,8 @@ S17-supply/basic.t.................................nice: ./perl6-m: No such file
    0   88    0    0   88
     88 tests aborted (missing ok/not ok)
 S17-supply/batch.t.................................nice: ./perl6-m: No such file or directory
-   0   11    0    0   11
-    11 tests aborted (missing ok/not ok)
+   0    9    0    0    9
+     9 tests aborted (missing ok/not ok)
 S17-supply/categorize.t............................nice: ./perl6-m: No such file or directory
    0   63    0    0   63
     63 tests aborted (missing ok/not ok)
@@ -3593,7 +3593,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "S14",           0,   401,     0,     0,   401,   401
 "S15",           0, 79061,     0,     0, 79061, 79061
 "S16",           0,   398,     0,     0,   398,   398
-"S17",           0,   948,     0,     0,   948,   948
+"S17",           0,   946,     0,     0,   946,   946
 "S19",           0,    14,     0,     0,    14,    14
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    18,     0,     0,    18,    18
@@ -3603,7 +3603,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "S32",           0,  9096,     0,     0,  9096,  9096
 "int",           0,  1289,     0,     0,  1289,  1278
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0,117760,     0,     0,117760,117749
+"total",         0,117758,     0,     0,117758,117747
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.moar aborted 17 test(s)
@@ -4366,7 +4366,7 @@ S17-supply/Channel.t aborted 12 test(s)
 S17-supply/Promise.t aborted 13 test(s)
 S17-supply/act.t aborted 9 test(s)
 S17-supply/basic.t aborted 88 test(s)
-S17-supply/batch.t aborted 11 test(s)
+S17-supply/batch.t aborted 9 test(s)
 S17-supply/categorize.t aborted 63 test(s)
 S17-supply/classify.t aborted 33 test(s)
 S17-supply/delayed.rakudo.moar aborted 13 test(s)
