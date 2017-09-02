@@ -283,8 +283,8 @@ S02-types/anon_block.rakudo.jvm....................Can't open perl script "eval-
    0   42    0    0   42
     42 tests aborted (missing ok/not ok)
 S02-types/array-shapes.rakudo.jvm..................Can't open perl script "eval-client.pl": No such file or directory
-   0   34    0    0   34
-    34 tests aborted (missing ok/not ok)
+   0   37    0    0   37
+    37 tests aborted (missing ok/not ok)
 S02-types/array.rakudo.jvm.........................Can't open perl script "eval-client.pl": No such file or directory
    0  103    0    0  103
    103 tests aborted (missing ok/not ok)
@@ -1378,7 +1378,7 @@ S06-operator-overloading/infix.rakudo.jvm..........Can't open perl script "eval-
 S06-operator-overloading/methods.rakudo.jvm........Can't open perl script "eval-client.pl": No such file or directory
    0    3    0    0    3
      3 tests aborted (missing ok/not ok)
-S06-operator-overloading/prefix.rakudo.jvm.........Can't open perl script "eval-client.pl": No such file or directory
+S06-operator-overloading/prefix.t..................Can't open perl script "eval-client.pl": No such file or directory
    0    9    0    0    9
      9 tests aborted (missing ok/not ok)
 S06-operator-overloading/semicolon.t...............Can't open perl script "eval-client.pl": No such file or directory
@@ -2629,8 +2629,8 @@ S32-encoding/registry.t............................Can't open perl script "eval-
    0   14    0    0   14
     14 tests aborted (missing ok/not ok)
 S32-exceptions/misc.rakudo.jvm.....................Can't open perl script "eval-client.pl": No such file or directory
-   0  427    0    0  427
-   427 tests aborted (missing ok/not ok)
+   0  431    0    0  431
+   431 tests aborted (missing ok/not ok)
 S32-hash/adverbs.t.................................Can't open perl script "eval-client.pl": No such file or directory
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -3536,7 +3536,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
-"S02",           0,  5935,     0,     0,  5935,  5939
+"S02",           0,  5938,     0,     0,  5938,  5942
 "S03",           0,  5918,     0,     0,  5918,  5924
 "S04",           0,  1546,     0,     0,  1546,  1598
 "S05",           0,  6142,     0,     0,  6142,  6351
@@ -3557,10 +3557,10 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S26",           0,  1441,     0,     0,  1441,  1441
 "S28",           0,     2,     0,     0,     2,     6
 "S29",           0,   226,     0,     0,   226,   226
-"S32",           0, 10596,     0,     0, 10596, 10693
+"S32",           0, 10600,     0,     0, 10600, 10697
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41263,     0,     0, 41263,124695
+"total",         0, 41270,     0,     0, 41270,124702
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3656,7 +3656,7 @@ S02-one-pass-parsing/misc.t aborted 1 test(s)
 S02-packages/package-lookup.t aborted 7 test(s)
 S02-types/WHICH.rakudo.jvm aborted 6 test(s)
 S02-types/anon_block.rakudo.jvm aborted 42 test(s)
-S02-types/array-shapes.rakudo.jvm aborted 34 test(s)
+S02-types/array-shapes.rakudo.jvm aborted 37 test(s)
 S02-types/array.rakudo.jvm aborted 103 test(s)
 S02-types/array_extending.t aborted 21 test(s)
 S02-types/array_ref.t aborted 45 test(s)
@@ -4018,7 +4018,7 @@ S06-operator-overloading/circumfix.rakudo.jvm aborted 16 test(s)
 S06-operator-overloading/imported-subs.t aborted 20 test(s)
 S06-operator-overloading/infix.rakudo.jvm aborted 47 test(s)
 S06-operator-overloading/methods.rakudo.jvm aborted 3 test(s)
-S06-operator-overloading/prefix.rakudo.jvm aborted 9 test(s)
+S06-operator-overloading/prefix.t aborted 9 test(s)
 S06-operator-overloading/semicolon.t aborted 3 test(s)
 S06-operator-overloading/sub.rakudo.jvm aborted 30 test(s)
 S06-operator-overloading/term.t aborted 10 test(s)
@@ -4429,7 +4429,7 @@ S32-container/stringify.t aborted 16 test(s)
 S32-container/zip.rakudo.jvm aborted 14 test(s)
 S32-encoding/encoder.t aborted 4 test(s)
 S32-encoding/registry.t aborted 14 test(s)
-S32-exceptions/misc.rakudo.jvm aborted 427 test(s)
+S32-exceptions/misc.rakudo.jvm aborted 431 test(s)
 S32-hash/adverbs.t aborted 4 test(s)
 S32-hash/antipairs.t aborted 5 test(s)
 S32-hash/delete-adverb.t aborted 131 test(s)
