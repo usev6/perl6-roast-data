@@ -2187,8 +2187,8 @@ S17-lowlevel/thread-start-join-stress.t............Can't open perl script "eval-
    0    1    0    0    1
      1 tests aborted (missing ok/not ok)
 S17-lowlevel/thread.t..............................Can't open perl script "eval-client.pl": No such file or directory
-   0   25    0    0   25
-    25 tests aborted (missing ok/not ok)
+   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
 S17-promise/allof.t................................Can't open perl script "eval-client.pl": No such file or directory
    0   13    0    0   13
     13 tests aborted (missing ok/not ok)
@@ -3550,7 +3550,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S14",           0,   406,     0,     0,   406,   419
 "S15",           0,   120,     0,     0,   120, 82643
 "S16",           0,   562,     0,     0,   562,   599
-"S17",           0,   993,     0,     0,   993,  1229
+"S17",           0,   997,     0,     0,   997,  1233
 "S19",           0,    25,     0,     0,    25,    26
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    53,     0,     0,    53,   125
@@ -3560,7 +3560,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S32",           0, 10600,     0,     0, 10600, 10697
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41271,     0,     0, 41271,124703
+"total",         0, 41275,     0,     0, 41275,124707
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -4284,7 +4284,7 @@ S17-channel/stress.rakudo.jvm aborted 5 test(s)
 S17-lowlevel/lock.t aborted 23 test(s)
 S17-lowlevel/semaphore.t aborted 2 test(s)
 S17-lowlevel/thread-start-join-stress.t aborted 1 test(s)
-S17-lowlevel/thread.t aborted 25 test(s)
+S17-lowlevel/thread.t aborted 29 test(s)
 S17-promise/allof.t aborted 13 test(s)
 S17-promise/anyof.t aborted 10 test(s)
 S17-promise/at.t aborted 3 test(s)
