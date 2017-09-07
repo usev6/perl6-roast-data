@@ -670,8 +670,8 @@ S03-operators/relational.rakudo.jvm................Can't open perl script "eval-
    0  179    0    0  179
    179 tests aborted (missing ok/not ok)
 S03-operators/repeat.rakudo.jvm....................Can't open perl script "eval-client.pl": No such file or directory
-   0   65    0    0   65
-    65 tests aborted (missing ok/not ok)
+   0   60    0    0   60
+    60 tests aborted (missing ok/not ok)
 S03-operators/scalar-assign.t......................Can't open perl script "eval-client.pl": No such file or directory
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -824,8 +824,8 @@ S04-blocks-and-statements/pointy.rakudo.jvm........Can't open perl script "eval-
    0   21    0    0   21
     21 tests aborted (missing ok/not ok)
 S04-blocks-and-statements/temp.rakudo.jvm..........Can't open perl script "eval-client.pl": No such file or directory
-   0   42    0    0   42
-    42 tests aborted (missing ok/not ok)
+   0   43    0    0   43
+    43 tests aborted (missing ok/not ok)
 S04-declarations/constant.rakudo.jvm...............Can't open perl script "eval-client.pl": No such file or directory
    0   72    0    0   72
     72 tests aborted (missing ok/not ok)
@@ -845,8 +845,8 @@ S04-declarations/smiley.rakudo.jvm.................Can't open perl script "eval-
    0   63    0    0   63
     63 tests aborted (missing ok/not ok)
 S04-declarations/state.rakudo.jvm..................Can't open perl script "eval-client.pl": No such file or directory
-   0   41    0    0   41
-    41 tests aborted (missing ok/not ok)
+   0   42    0    0   42
+    42 tests aborted (missing ok/not ok)
 S04-declarations/will.rakudo.jvm...................Can't open perl script "eval-client.pl": No such file or directory
    0    0    0    0    0
 S04-exception-handlers/catch.t.....................Can't open perl script "eval-client.pl": No such file or directory
@@ -1040,8 +1040,8 @@ S05-capture/dot.rakudo.jvm.........................Can't open perl script "eval-
    0   61    0    0   61
     61 tests aborted (missing ok/not ok)
 S05-capture/match-object.rakudo.jvm................Can't open perl script "eval-client.pl": No such file or directory
-   0   44    0    0   44
-    44 tests aborted (missing ok/not ok)
+   0   46    0    0   46
+    46 tests aborted (missing ok/not ok)
 S05-capture/named.rakudo.jvm.......................Can't open perl script "eval-client.pl": No such file or directory
    0   11    0    0   11
     11 tests aborted (missing ok/not ok)
@@ -1124,8 +1124,8 @@ S05-match/capturing-contexts.rakudo.jvm............Can't open perl script "eval-
    0   64    0    0   64
     64 tests aborted (missing ok/not ok)
 S05-match/make.t...................................Can't open perl script "eval-client.pl": No such file or directory
-   0    4    0    0    4
-     4 tests aborted (missing ok/not ok)
+   0   10    0    0   10
+    10 tests aborted (missing ok/not ok)
 S05-match/non-capturing.t..........................Can't open perl script "eval-client.pl": No such file or directory
    0    9    0    0    9
      9 tests aborted (missing ok/not ok)
@@ -2208,8 +2208,8 @@ S17-promise/nonblocking-await.rakudo.jvm...........Can't open perl script "eval-
    0   19    0    0   19
     19 tests aborted (missing ok/not ok)
 S17-promise/start.t................................Can't open perl script "eval-client.pl": No such file or directory
-   0   58    0    0   58
-    58 tests aborted (missing ok/not ok)
+   0   59    0    0   59
+    59 tests aborted (missing ok/not ok)
 S17-promise/stress.t...............................Can't open perl script "eval-client.pl": No such file or directory
    0    1    0    0    1
      1 tests aborted (missing ok/not ok)
@@ -3537,9 +3537,9 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
 "S02",           0,  5938,     0,     0,  5938,  5942
-"S03",           0,  5918,     0,     0,  5918,  5924
-"S04",           0,  1548,     0,     0,  1548,  1600
-"S05",           0,  6142,     0,     0,  6142,  6351
+"S03",           0,  5913,     0,     0,  5913,  5919
+"S04",           0,  1550,     0,     0,  1550,  1602
+"S05",           0,  6150,     0,     0,  6150,  6359
 "S06",           0,  2314,     0,     0,  2314,  2370
 "S07",           0,   156,     0,     0,   156,   156
 "S09",           0,  1095,     0,     0,  1095,  1095
@@ -3550,7 +3550,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S14",           0,   406,     0,     0,   406,   419
 "S15",           0,   120,     0,     0,   120, 82643
 "S16",           0,   562,     0,     0,   562,   599
-"S17",           0,   997,     0,     0,   997,  1233
+"S17",           0,   998,     0,     0,   998,  1234
 "S19",           0,    25,     0,     0,    25,    26
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    53,     0,     0,    53,   125
@@ -3560,7 +3560,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S32",           0, 10600,     0,     0, 10600, 10697
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41277,     0,     0, 41277,124709
+"total",         0, 41283,     0,     0, 41283,124715
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3784,7 +3784,7 @@ S03-operators/range-int.t aborted 507 test(s)
 S03-operators/range.t aborted 129 test(s)
 S03-operators/reduce-le1arg.rakudo.jvm aborted 54 test(s)
 S03-operators/relational.rakudo.jvm aborted 179 test(s)
-S03-operators/repeat.rakudo.jvm aborted 65 test(s)
+S03-operators/repeat.rakudo.jvm aborted 60 test(s)
 S03-operators/scalar-assign.t aborted 4 test(s)
 S03-operators/set.t aborted 1 test(s)
 S03-operators/set_addition.t aborted 2 test(s)
@@ -3835,14 +3835,14 @@ S03-smartmatch/signature-signature.rakudo.jvm aborted 23 test(s)
 S04-blocks-and-statements/let.rakudo.jvm aborted 12 test(s)
 S04-blocks-and-statements/pointy-rw.t aborted 10 test(s)
 S04-blocks-and-statements/pointy.rakudo.jvm aborted 21 test(s)
-S04-blocks-and-statements/temp.rakudo.jvm aborted 42 test(s)
+S04-blocks-and-statements/temp.rakudo.jvm aborted 43 test(s)
 S04-declarations/constant.rakudo.jvm aborted 72 test(s)
 S04-declarations/implicit-parameter.t aborted 20 test(s)
 S04-declarations/multiple.rakudo.jvm aborted 8 test(s)
 S04-declarations/my.rakudo.jvm aborted 105 test(s)
 S04-declarations/our.t aborted 31 test(s)
 S04-declarations/smiley.rakudo.jvm aborted 63 test(s)
-S04-declarations/state.rakudo.jvm aborted 41 test(s)
+S04-declarations/state.rakudo.jvm aborted 42 test(s)
 S04-exception-handlers/catch.t aborted 31 test(s)
 S04-exception-handlers/control.t aborted 12 test(s)
 S04-exception-handlers/top-level.t aborted 1 test(s)
@@ -3906,7 +3906,7 @@ S05-capture/alias.rakudo.jvm aborted 32 test(s)
 S05-capture/array-alias.rakudo.jvm aborted 50 test(s)
 S05-capture/caps.t aborted 43 test(s)
 S05-capture/dot.rakudo.jvm aborted 61 test(s)
-S05-capture/match-object.rakudo.jvm aborted 44 test(s)
+S05-capture/match-object.rakudo.jvm aborted 46 test(s)
 S05-capture/named.rakudo.jvm aborted 11 test(s)
 S05-capture/subrule.t aborted 46 test(s)
 S05-grammar/action-stubs.t aborted 25 test(s)
@@ -3934,7 +3934,7 @@ S05-mass/stdrules.t aborted 191 test(s)
 S05-match/arrayhash.t aborted 9 test(s)
 S05-match/blocks.rakudo.jvm aborted 19 test(s)
 S05-match/capturing-contexts.rakudo.jvm aborted 64 test(s)
-S05-match/make.t aborted 4 test(s)
+S05-match/make.t aborted 10 test(s)
 S05-match/non-capturing.t aborted 9 test(s)
 S05-match/perl.rakudo.jvm aborted 11 test(s)
 S05-match/positions.t aborted 12 test(s)
@@ -4291,7 +4291,7 @@ S17-promise/at.t aborted 3 test(s)
 S17-promise/basic.t aborted 31 test(s)
 S17-promise/in.t aborted 3 test(s)
 S17-promise/nonblocking-await.rakudo.jvm aborted 19 test(s)
-S17-promise/start.t aborted 58 test(s)
+S17-promise/start.t aborted 59 test(s)
 S17-promise/stress.t aborted 1 test(s)
 S17-promise/then.t aborted 15 test(s)
 S17-scheduler/at.t aborted 15 test(s)
