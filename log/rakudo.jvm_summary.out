@@ -244,8 +244,8 @@ S02-types/lazy-lists.t.............................   0   23    0    0   23
     23 tests aborted (missing ok/not ok)
 S02-types/list.rakudo.jvm..........................   0   71    0    0   71
     71 tests aborted (missing ok/not ok)
-S02-types/lists.rakudo.jvm.........................   0   32    0    0   32
-    32 tests aborted (missing ok/not ok)
+S02-types/lists.t..................................   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
 S02-types/mix-iterator.t...........................   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
 S02-types/mix.rakudo.jvm...........................   0  216    0    0  216
@@ -2360,7 +2360,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
-"S02",           0,  5938,     0,     0,  5938,  5942
+"S02",           0,  5935,     0,     0,  5935,  5939
 "S03",           0,  5913,     0,     0,  5913,  5919
 "S04",           0,  1550,     0,     0,  1550,  1602
 "S05",           0,  6152,     0,     0,  6152,  6361
@@ -2384,7 +2384,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10600,     0,     0, 10600, 10697
 "int",           0,  1357,     0,     0,  1357,  1354
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41285,     0,     0, 41285,124717
+"total",         0, 41282,     0,     0, 41282,124714
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -2508,7 +2508,7 @@ S02-types/isDEPRECATED.rakudo.jvm aborted 21 test(s)
 S02-types/keyhash.rakudo.jvm aborted 60 test(s)
 S02-types/lazy-lists.t aborted 23 test(s)
 S02-types/list.rakudo.jvm aborted 71 test(s)
-S02-types/lists.rakudo.jvm aborted 32 test(s)
+S02-types/lists.t aborted 29 test(s)
 S02-types/mix-iterator.t aborted 2 test(s)
 S02-types/mix.rakudo.jvm aborted 216 test(s)
 S02-types/mixed_multi_dimensional.rakudo.jvm aborted 80 test(s)
