@@ -595,8 +595,8 @@ S03-operators/equality.t...........................nice: ./perl6-m: No such file
    0   46    0    0   46
     46 tests aborted (missing ok/not ok)
 S03-operators/eqv.rakudo.moar......................nice: ./perl6-m: No such file or directory
-   0   56    0    0   56
-    56 tests aborted (missing ok/not ok)
+   0   57    0    0   57
+    57 tests aborted (missing ok/not ok)
 S03-operators/flip-flop.rakudo.moar................nice: ./perl6-m: No such file or directory
    0   40    0    0   40
     40 tests aborted (missing ok/not ok)
@@ -2502,8 +2502,8 @@ S17-supply/act.t...................................nice: ./perl6-m: No such file
    0    9    0    0    9
      9 tests aborted (missing ok/not ok)
 S17-supply/basic.t.................................nice: ./perl6-m: No such file or directory
-   0   94    0    0   94
-    94 tests aborted (missing ok/not ok)
+   0   78    0    0   78
+    78 tests aborted (missing ok/not ok)
 S17-supply/batch.t.................................nice: ./perl6-m: No such file or directory
    0    9    0    0    9
      9 tests aborted (missing ok/not ok)
@@ -2818,8 +2818,8 @@ S32-array/delete-adverb-native.t...................nice: ./perl6-m: No such file
    0  138    0    0  138
    138 tests aborted (missing ok/not ok)
 S32-array/delete-adverb.t..........................nice: ./perl6-m: No such file or directory
-   0  218    0    0  218
-   218 tests aborted (missing ok/not ok)
+   0  219    0    0  219
+   219 tests aborted (missing ok/not ok)
 S32-array/delete.t.................................nice: ./perl6-m: No such file or directory
    0   32    0    0   32
     32 tests aborted (missing ok/not ok)
@@ -3840,7 +3840,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
 "S02",           0,  6054,     0,     0,  6054,  6054
-"S03",           0,  5913,     0,     0,  5913,  5919
+"S03",           0,  5914,     0,     0,  5914,  5920
 "S04",           0,  1550,     0,     0,  1550,  1602
 "S05",           0,  6218,     0,     0,  6218,  6371
 "S06",           0,  2320,     0,     0,  2320,  2376
@@ -3853,17 +3853,17 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "S14",           0,   408,     0,     0,   408,   421
 "S15",           0, 85082,     0,     0, 85082, 82664
 "S16",           0,   562,     0,     0,   562,   599
-"S17",           0,  1245,     0,     0,  1245,  1284
+"S17",           0,  1229,     0,     0,  1229,  1268
 "S19",           0,    26,     0,     0,    26,    26
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    53,     0,     0,    53,   125
 "S26",           0,  1441,     0,     0,  1441,  1441
 "S28",           0,     6,     0,     0,     6,     6
 "S29",           0,   226,     0,     0,   226,   226
-"S32",           0, 17934,     0,     0, 17934, 17958
+"S32",           0, 17935,     0,     0, 17935, 17959
 "int",           0,  1367,     0,     0,  1367,  1356
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0,134051,     0,     0,134051,132199
+"total",         0,134037,     0,     0,134037,132185
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.moar aborted 17 test(s)
@@ -4062,7 +4062,7 @@ S03-operators/context.t aborted 39 test(s)
 S03-operators/custom.t aborted 1 test(s)
 S03-operators/div.t aborted 9 test(s)
 S03-operators/equality.t aborted 46 test(s)
-S03-operators/eqv.rakudo.moar aborted 56 test(s)
+S03-operators/eqv.rakudo.moar aborted 57 test(s)
 S03-operators/flip-flop.rakudo.moar aborted 40 test(s)
 S03-operators/gcd.t aborted 19 test(s)
 S03-operators/identity.rakudo.moar aborted 46 test(s)
@@ -4692,7 +4692,7 @@ S17-scheduler/times.t aborted 4 test(s)
 S17-supply/Channel.t aborted 14 test(s)
 S17-supply/Promise.t aborted 13 test(s)
 S17-supply/act.t aborted 9 test(s)
-S17-supply/basic.t aborted 94 test(s)
+S17-supply/basic.t aborted 78 test(s)
 S17-supply/batch.t aborted 9 test(s)
 S17-supply/categorize.t aborted 63 test(s)
 S17-supply/classify.t aborted 33 test(s)
@@ -4795,7 +4795,7 @@ S32-array/adverbs.rakudo.moar aborted 2 test(s)
 S32-array/bool.t aborted 15 test(s)
 S32-array/create.t aborted 12 test(s)
 S32-array/delete-adverb-native.t aborted 138 test(s)
-S32-array/delete-adverb.t aborted 218 test(s)
+S32-array/delete-adverb.t aborted 219 test(s)
 S32-array/delete.t aborted 32 test(s)
 S32-array/elems.t aborted 12 test(s)
 S32-array/end.t aborted 12 test(s)
