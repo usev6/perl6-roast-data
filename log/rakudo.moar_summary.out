@@ -438,9 +438,9 @@ S02-types/stash.t..................................nice: ./perl6-m: No such file
 S02-types/subscripts_and_context.t.................nice: ./perl6-m: No such file or directory
    0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S02-types/subset.rakudo.moar.......................nice: ./perl6-m: No such file or directory
-   0   48    0    0   48
-    48 tests aborted (missing ok/not ok)
+S02-types/subset.t.................................nice: ./perl6-m: No such file or directory
+   0   49    0    0   49
+    49 tests aborted (missing ok/not ok)
 S02-types/type.rakudo.moar.........................nice: ./perl6-m: No such file or directory
    0   74    0    0   74
     74 tests aborted (missing ok/not ok)
@@ -3839,7 +3839,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,    86,     0,     0,    86,    86
-"S02",           0,  6054,     0,     0,  6054,  6054
+"S02",           0,  6055,     0,     0,  6055,  6055
 "S03",           0,  5914,     0,     0,  5914,  5920
 "S04",           0,  1550,     0,     0,  1550,  1602
 "S05",           0,  6218,     0,     0,  6218,  6371
@@ -3863,7 +3863,7 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "S32",           0, 17935,     0,     0, 17935, 17959
 "int",           0,  1367,     0,     0,  1367,  1356
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0,134037,     0,     0,134037,132185
+"total",         0,134038,     0,     0,134038,132186
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.moar aborted 17 test(s)
@@ -4011,7 +4011,7 @@ S02-types/sethash.rakudo.moar aborted 246 test(s)
 S02-types/sigils-and-types.rakudo.moar aborted 27 test(s)
 S02-types/stash.t aborted 1 test(s)
 S02-types/subscripts_and_context.t aborted 8 test(s)
-S02-types/subset.rakudo.moar aborted 48 test(s)
+S02-types/subset.t aborted 49 test(s)
 S02-types/type.rakudo.moar aborted 74 test(s)
 S02-types/undefined-types.rakudo.moar aborted 49 test(s)
 S02-types/unicode.t aborted 5 test(s)
