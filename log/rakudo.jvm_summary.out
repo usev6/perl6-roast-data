@@ -1073,8 +1073,8 @@ S05-interpolation/lexicals.t.......................Can't open perl script "eval-
    0   14    0    0   14
     14 tests aborted (missing ok/not ok)
 S05-interpolation/regex-in-variable.rakudo.jvm.....Can't open perl script "eval-client.pl": No such file or directory
-   0   53    0    0   53
-    53 tests aborted (missing ok/not ok)
+   0   63    0    0   63
+    63 tests aborted (missing ok/not ok)
 S05-mass/charsets.rakudo.jvm.......................Can't open perl script "eval-client.pl": No such file or directory
    0   17    0    0   17
     17 tests aborted (missing ok/not ok)
@@ -3539,7 +3539,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S02",           0,  6056,     0,     0,  6056,  6060
 "S03",           0,  5929,     0,     0,  5929,  5935
 "S04",           0,  1549,     0,     0,  1549,  1601
-"S05",           0,  6169,     0,     0,  6169,  6385
+"S05",           0,  6179,     0,     0,  6179,  6395
 "S06",           0,  2323,     0,     0,  2323,  2379
 "S07",           0,   156,     0,     0,   156,   156
 "S09",           0,  1095,     0,     0,  1095,  1095
@@ -3560,7 +3560,7 @@ rosettacode/sierpinski_triangle.t..................Can't open perl script "eval-
 "S32",           0, 10609,     0,     0, 10609, 17956
 "int",           0,  1357,     0,     0,  1357,  1356
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41555,     0,     0, 41555,132242
+"total",         0, 41565,     0,     0, 41565,132252
 ----------------
 Failure summary:
 S01-perl-5-integration/array.rakudo.jvm aborted 17 test(s)
@@ -3917,7 +3917,7 @@ S05-grammar/protos.t aborted 4 test(s)
 S05-grammar/signatures.t aborted 10 test(s)
 S05-grammar/ws.rakudo.jvm aborted 12 test(s)
 S05-interpolation/lexicals.t aborted 14 test(s)
-S05-interpolation/regex-in-variable.rakudo.jvm aborted 53 test(s)
+S05-interpolation/regex-in-variable.rakudo.jvm aborted 63 test(s)
 S05-mass/charsets.rakudo.jvm aborted 17 test(s)
 S05-mass/named-chars.t aborted 431 test(s)
 S05-mass/properties-block.t aborted 670 test(s)
