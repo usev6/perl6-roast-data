@@ -29,7 +29,7 @@ S01-perl-5-integration/subs.t......................   0    0    0    2    2
                                                    pass fail todo skip plan
 S02-lexical-conventions/begin_end_pod.t............   2    0    0    0    2
 S02-lexical-conventions/bom.t......................   1    0    0    0    1
-S02-lexical-conventions/comments.t.................  51    0    0    0   51
+S02-lexical-conventions/comments.t.................  50    0    0    0   50
 S02-lexical-conventions/end-pod.t..................   1    0    0    0    1
 S02-lexical-conventions/minimal-whitespace.t.......  18    0    0    0   18
 S02-lexical-conventions/one-pass-parsing.t.........   5    0    0    0    5
@@ -174,8 +174,8 @@ S02-names/symbolic-deref.rakudo.jvm................  32    0    2    2   36
 S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-one-pass-parsing/misc.t........................   0    1    0    0    1
 S02-packages/package-lookup.t......................   7    0    0    0    7
-S02-types/WHICH.rakudo.jvm.........................1562    0    0   44 1606
-    44 skipped: NYI on jvm - RT  \#126524 / RT  \#124500
+S02-types/WHICH.rakudo.jvm.........................1584    0    0   22 1606
+    22 skipped: NFC NYI on jvm - RT  \#124500
 S02-types/anon_block.rakudo.jvm....................  39    0    1    2   42
      2 skipped: tests don't work if previous test fails
      1 todo   : Parrot support for zero-arg subs?
@@ -258,93 +258,106 @@ S02-types/mixhash.rakudo.jvm....................... 239    0    2   21  262
     21 skipped: 'is TypeObject' NYI RT  \#124490
      2 todo   : in flux
 S02-types/mu.t.....................................   8    0    0    0    8
-S02-types/multi_dimensional_array.rakudo.jvm.......   0   58    0    0   58
-    58 tests aborted (missing ok/not ok)
-S02-types/nan.t....................................   0   28    0    0   28
-    28 tests aborted (missing ok/not ok)
-S02-types/native.rakudo.jvm........................   0   93    0    0   93
-    93 tests aborted (missing ok/not ok)
-S02-types/nested_arrays.t..........................   0   10    0    0   10
-    10 tests aborted (missing ok/not ok)
-S02-types/nested_pairs.t...........................   0   14    0    0   14
-    14 tests aborted (missing ok/not ok)
-S02-types/nil.rakudo.jvm...........................   0   65    0    0   65
-    65 tests aborted (missing ok/not ok)
-S02-types/num.rakudo.jvm...........................   0   98    0    0   98
-    98 tests aborted (missing ok/not ok)
-S02-types/pair.rakudo.jvm..........................   0    4    0    0    4
-     4 tests aborted (missing ok/not ok)
-S02-types/parsing-bool.t...........................   0    4    0    0    4
-     4 tests aborted (missing ok/not ok)
-S02-types/range-iterator.t.........................   0   12    0    0   12
-    12 tests aborted (missing ok/not ok)
-S02-types/range.rakudo.jvm.........................   0  189    0    0  189
-   189 tests aborted (missing ok/not ok)
-S02-types/set-iterator.t...........................   0    2    0    0    2
-     2 tests aborted (missing ok/not ok)
+S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
+     6 skipped: multi-dim sized arrays NYI RT  \#124482
+     4 skipped: multi-dim sized arrays NYI RT  \#124483
+S02-types/nan.t....................................  28    0    0    0   28
+S02-types/native.rakudo.jvm........................  69    0   21    3   93
+     3 skipped: cannot unbox to a native number
+     1 todo   : RT #102416 - though maybe wrong test? Not sure .WHAT is *that* magic
+     1 todo   : does not die, gives 7766279631452241919
+     3 todo   : native int args do not truncate, yet
+     3 todo   : native int does not truncate, yet
+     9 todo   : signed/unsigned native ints RT #124294
+     1 todo   : the value gets sign-extended
+     1 todo   : uint16 increment in sink context doesn't work
+     1 todo   : uint32 increment in sink context doesn't work
+     1 todo   : uint8 increment in sink context doesn't work
+S02-types/nested_arrays.t..........................  10    0    0    0   10
+S02-types/nested_pairs.t...........................  14    0    0    0   14
+S02-types/nil.rakudo.jvm...........................  56    3    5    1   65
+     1 skipped: triage
+     5 todo   : triage
+S02-types/num.rakudo.jvm...........................  98    0    0    0   98
+S02-types/pair.rakudo.jvm.......................... 182    0    1    0  183
+     1 todo   : should it really have \n on the end?
+S02-types/parsing-bool.t...........................   4    0    0    0    4
+S02-types/range-iterator.t.........................  72    0    0    0   72
+S02-types/range.rakudo.jvm......................... 187    0    2    0  189
+     2 todo   : wrong error message, cmp. Rakudo commit 0c16bb2b01
+S02-types/set-iterator.t...........................  12    0    0    0   12
 S02-types/set.rakudo.jvm...........................   0  217    0    0  217
    217 tests aborted (missing ok/not ok)
 S02-types/sethash.rakudo.jvm.......................   0  246    0    0  246
    246 tests aborted (missing ok/not ok)
-S02-types/sigils-and-types.rakudo.jvm..............   0   27    0    0   27
-    27 tests aborted (missing ok/not ok)
-S02-types/stash.t..................................   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
-S02-types/subscripts_and_context.t.................   0    8    0    0    8
-     8 tests aborted (missing ok/not ok)
+S02-types/sigils-and-types.rakudo.jvm..............  13   13    1    0   27
+     1 todo   : Capture does Positional RT #124484
+    13 tests aborted (missing ok/not ok)
+S02-types/stash.t..................................   1    0    0    0    1
+S02-types/subscripts_and_context.t.................   8    0    0    0    8
 S02-types/subset.t.................................   0   49    0    0   49
     49 tests aborted (missing ok/not ok)
 S02-types/type.rakudo.jvm..........................   0   74    0    0   74
     74 tests aborted (missing ok/not ok)
-S02-types/undefined-types.rakudo.jvm...............   0   49    0    0   49
-    49 tests aborted (missing ok/not ok)
-S02-types/unicode.rakudo.jvm.......................   0    5    0    0    5
-     5 tests aborted (missing ok/not ok)
+S02-types/undefined-types.rakudo.jvm...............  43    2    4    0   49
+     4 todo   : .clone doesn't copy typedness
+S02-types/unicode.rakudo.jvm.......................   2    0    3    0    5
+     1 todo   : NFG on JVM RT #124500
+     2 todo   : NFG on JVM RT #124501
 S02-types/version-stress.t.........................   0    0    0    0    0
-S02-types/version.t................................   0   44    0    0   44
-    44 tests aborted (missing ok/not ok)
+S02-types/version.t................................  14   30    0    0   44
+    30 tests aborted (missing ok/not ok)
 S02-types/whatever.rakudo.jvm......................   0  117    0    0  117
    117 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-S03-binding/arrays.t...............................   0   47    0    0   47
-    47 tests aborted (missing ok/not ok)
-S03-binding/attributes.rakudo.jvm..................   0   12    0    0   12
-    12 tests aborted (missing ok/not ok)
-S03-binding/closure.rakudo.jvm.....................   0    8    0    0    8
-     8 tests aborted (missing ok/not ok)
+S03-binding/arrays.t...............................   3   44    0    0   47
+    44 tests aborted (missing ok/not ok)
+S03-binding/attributes.rakudo.jvm..................   9    0    0    3   12
+     3 skipped: class attributes RT  \#124631
+S03-binding/closure.rakudo.jvm.....................   4    0    0    4    8
+     4 skipped: ::= NYI
 S03-binding/hashes.t...............................   0   39    0    0   39
     39 tests aborted (missing ok/not ok)
 S03-binding/nested.t...............................   0   43    0    0   43
     43 tests aborted (missing ok/not ok)
-S03-binding/nonsense.rakudo.jvm....................   0    5    0    0    5
-     5 tests aborted (missing ok/not ok)
-S03-binding/ro.rakudo.jvm..........................   0   11    0    0   11
-    11 tests aborted (missing ok/not ok)
+S03-binding/nonsense.rakudo.jvm....................   3    0    2    0    5
+     2 todo   : wrong exception
+S03-binding/ro.rakudo.jvm..........................   2    0    0    9   11
+     9 skipped: ::= NYI
 S03-binding/scalars.rakudo.jvm.....................   0   33    0    0   33
     33 tests aborted (missing ok/not ok)
-S03-feeds/basic.rakudo.jvm.........................   0   23    0    0   23
-    23 tests aborted (missing ok/not ok)
-S03-junctions/associative.t........................   0   10    0    0   10
-    10 tests aborted (missing ok/not ok)
+S03-feeds/basic.rakudo.jvm.........................   7   15    1    0   23
+     1 todo   : feeds + signatures
+    15 tests aborted (missing ok/not ok)
+S03-junctions/associative.t........................  10    0    0    0   10
 S03-junctions/autothreading.t......................   0  106    0    0  106
    106 tests aborted (missing ok/not ok)
-S03-junctions/boolean-context.t....................   0   74    0    0   74
+S03-junctions/boolean-context.t....................cannot connect to eval server: Connection refused
+   0   74    0    0   74
     74 tests aborted (missing ok/not ok)
-S03-junctions/misc.t...............................   0  146    0    0  146
+S03-junctions/misc.t...............................cannot connect to eval server: Connection refused
+   0  146    0    0  146
    146 tests aborted (missing ok/not ok)
-S03-metaops/cross.t................................   0   79    0    0   79
+S03-metaops/cross.t................................cannot connect to eval server: Connection refused
+   0   79    0    0   79
     79 tests aborted (missing ok/not ok)
-S03-metaops/eager-hyper.rakudo.jvm.................   0    8    0    0    8
+S03-metaops/eager-hyper.rakudo.jvm.................cannot connect to eval server: Connection refused
+   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S03-metaops/hyper.rakudo.jvm.......................   0  403    0    0  403
+S03-metaops/hyper.rakudo.jvm.......................cannot connect to eval server: Connection refused
+   0  403    0    0  403
    403 tests aborted (missing ok/not ok)
-S03-metaops/not.t..................................   0   46    0    0   46
+S03-metaops/not.t..................................cannot connect to eval server: Connection refused
+   0   46    0    0   46
     46 tests aborted (missing ok/not ok)
-S03-metaops/reduce.rakudo.jvm......................   0  559    0    0  559
+S03-metaops/reduce.rakudo.jvm......................cannot connect to eval server: Connection refused
+   0  559    0    0  559
    559 tests aborted (missing ok/not ok)
-S03-metaops/reverse.t..............................   0   68    0    0   68
+S03-metaops/reverse.t..............................cannot connect to eval server: Connection refused
+   0   68    0    0   68
     68 tests aborted (missing ok/not ok)
-S03-metaops/zip.t..................................   0   76    0    0   76
+S03-metaops/zip.t..................................cannot connect to eval server: Connection refused
+   0   76    0    0   76
     76 tests aborted (missing ok/not ok)
 S03-operators/adverbial-modifiers.rakudo.jvm.......cannot connect to eval server: Connection refused
    0   42    0    0   42
@@ -485,8 +498,8 @@ S03-operators/range-int.t..........................cannot connect to eval server
    0  507    0    0  507
    507 tests aborted (missing ok/not ok)
 S03-operators/range.t..............................cannot connect to eval server: Connection refused
-   0  129    0    0  129
-   129 tests aborted (missing ok/not ok)
+   0  177    0    0  177
+   177 tests aborted (missing ok/not ok)
 S03-operators/reduce-le1arg.rakudo.jvm.............cannot connect to eval server: Connection refused
    0   54    0    0   54
     54 tests aborted (missing ok/not ok)
@@ -494,8 +507,8 @@ S03-operators/relational.rakudo.jvm................cannot connect to eval server
    0  179    0    0  179
    179 tests aborted (missing ok/not ok)
 S03-operators/repeat.rakudo.jvm....................cannot connect to eval server: Connection refused
-   0   60    0    0   60
-    60 tests aborted (missing ok/not ok)
+   0   61    0    0   61
+    61 tests aborted (missing ok/not ok)
 S03-operators/scalar-assign.t......................cannot connect to eval server: Connection refused
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -2462,8 +2475,8 @@ S32-encoding/registry.t............................cannot connect to eval server
    0   14    0    0   14
     14 tests aborted (missing ok/not ok)
 S32-exceptions/misc.rakudo.jvm.....................cannot connect to eval server: Connection refused
-   0  431    0    0  431
-   431 tests aborted (missing ok/not ok)
+   0  432    0    0  432
+   432 tests aborted (missing ok/not ok)
 S32-hash/adverbs.t.................................cannot connect to eval server: Connection refused
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -2525,8 +2538,8 @@ S32-io/dir.rakudo.jvm..............................cannot connect to eval server
    0   16    0    0   16
     16 tests aborted (missing ok/not ok)
 S32-io/file-tests.t................................cannot connect to eval server: Connection refused
-   0   35    0    0   35
-    35 tests aborted (missing ok/not ok)
+   0   16    0    0   16
+    16 tests aborted (missing ok/not ok)
 S32-io/indir.t.....................................cannot connect to eval server: Connection refused
    0   77    0    0   77
     77 tests aborted (missing ok/not ok)
@@ -2864,8 +2877,8 @@ S32-str/chop.t.....................................cannot connect to eval server
    0   36    0    0   36
     36 tests aborted (missing ok/not ok)
 S32-str/comb.rakudo.jvm............................cannot connect to eval server: Connection refused
-   0   81    0    0   81
-    81 tests aborted (missing ok/not ok)
+   0   82    0    0   82
+    82 tests aborted (missing ok/not ok)
 S32-str/contains.t.................................cannot connect to eval server: Connection refused
    0   21    0    0   21
     21 tests aborted (missing ok/not ok)
@@ -3369,8 +3382,8 @@ rosettacode/sierpinski_triangle.t..................cannot connect to eval server
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    87,    87,    87
-"S02",        5883,  1440,   108,   378,  7809,  7812
-"S03",           0,  5931,     0,     0,  5931,  5937
+"S02",        6765,   777,   145,   370,  8057,  8060
+"S03",          38,  5923,     3,    16,  5980,  5986
 "S04",           0,  1550,     0,     0,  1550,  1602
 "S05",           0,  6197,     0,     0,  6197,  6417
 "S06",           0,  2324,     0,     0,  2324,  2380
@@ -3390,10 +3403,10 @@ rosettacode/sierpinski_triangle.t..................cannot connect to eval server
 "S26",           0,  1441,     0,     0,  1441,  1441
 "S28",           0,     5,     0,     0,     5,     9
 "S29",           0,   228,     0,     0,   228,   228
-"S32",           0, 10617,     0,     0, 10617, 17979
+"S32",           0, 10600,     0,     0, 10600, 17962
 "int",           0,  1357,     0,     0,  1357,  1356
 "ros",           0,     2,     0,     0,     2,     2
-"total",      5883, 36896,   108,   465, 43352,134362
+"total",      6803, 36208,   148,   473, 43632,134642
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -3422,39 +3435,23 @@ S02-names/is_default.rakudo.jvm 176 - typed hash element returned to its default
 S02-names/is_default.rakudo.jvm 184 - type attrib hash element returned to its default with Nil
 S02-names/is_default.rakudo.jvm 188 - type attrib hash element returned to its default with undefine
 S02-one-pass-parsing/misc.t 1 - spurious backslash at end of file error must ask for semicolon
-S02-types/multi_dimensional_array.rakudo.jvm aborted 58 test(s)
-S02-types/nan.t aborted 28 test(s)
-S02-types/native.rakudo.jvm aborted 93 test(s)
-S02-types/nested_arrays.t aborted 10 test(s)
-S02-types/nested_pairs.t aborted 14 test(s)
-S02-types/nil.rakudo.jvm aborted 65 test(s)
-S02-types/num.rakudo.jvm aborted 98 test(s)
-S02-types/pair.rakudo.jvm aborted 4 test(s)
-S02-types/parsing-bool.t aborted 4 test(s)
-S02-types/range-iterator.t aborted 12 test(s)
-S02-types/range.rakudo.jvm aborted 189 test(s)
-S02-types/set-iterator.t aborted 2 test(s)
+S02-types/nil.rakudo.jvm 20 - Nil assigned to scalar produces an Any
+S02-types/nil.rakudo.jvm 21 - 
+S02-types/nil.rakudo.jvm 25 - assigns to subset type object
 S02-types/set.rakudo.jvm aborted 217 test(s)
 S02-types/sethash.rakudo.jvm aborted 246 test(s)
-S02-types/sigils-and-types.rakudo.jvm aborted 27 test(s)
-S02-types/stash.t aborted 1 test(s)
-S02-types/subscripts_and_context.t aborted 8 test(s)
+S02-types/sigils-and-types.rakudo.jvm aborted 13 test(s)
 S02-types/subset.t aborted 49 test(s)
 S02-types/type.rakudo.jvm aborted 74 test(s)
-S02-types/undefined-types.rakudo.jvm aborted 49 test(s)
-S02-types/unicode.rakudo.jvm aborted 5 test(s)
-S02-types/version.t aborted 44 test(s)
+S02-types/undefined-types.rakudo.jvm 10 - assigning Nil to Int should work
+S02-types/undefined-types.rakudo.jvm 25 - assigning Nil to hash element should work
+S02-types/version.t aborted 30 test(s)
 S02-types/whatever.rakudo.jvm aborted 117 test(s)
-S03-binding/arrays.t aborted 47 test(s)
-S03-binding/attributes.rakudo.jvm aborted 12 test(s)
-S03-binding/closure.rakudo.jvm aborted 8 test(s)
+S03-binding/arrays.t aborted 44 test(s)
 S03-binding/hashes.t aborted 39 test(s)
 S03-binding/nested.t aborted 43 test(s)
-S03-binding/nonsense.rakudo.jvm aborted 5 test(s)
-S03-binding/ro.rakudo.jvm aborted 11 test(s)
 S03-binding/scalars.rakudo.jvm aborted 33 test(s)
-S03-feeds/basic.rakudo.jvm aborted 23 test(s)
-S03-junctions/associative.t aborted 10 test(s)
+S03-feeds/basic.rakudo.jvm aborted 15 test(s)
 S03-junctions/autothreading.t aborted 106 test(s)
 S03-junctions/boolean-context.t aborted 74 test(s)
 S03-junctions/misc.t aborted 146 test(s)
@@ -3511,10 +3508,10 @@ S03-operators/overflow.t aborted 101 test(s)
 S03-operators/precedence.rakudo.jvm aborted 77 test(s)
 S03-operators/range-basic.t aborted 115 test(s)
 S03-operators/range-int.t aborted 507 test(s)
-S03-operators/range.t aborted 129 test(s)
+S03-operators/range.t aborted 177 test(s)
 S03-operators/reduce-le1arg.rakudo.jvm aborted 54 test(s)
 S03-operators/relational.rakudo.jvm aborted 179 test(s)
-S03-operators/repeat.rakudo.jvm aborted 60 test(s)
+S03-operators/repeat.rakudo.jvm aborted 61 test(s)
 S03-operators/scalar-assign.t aborted 4 test(s)
 S03-operators/set_addition.t aborted 2 test(s)
 S03-operators/set_difference.t aborted 2 test(s)
@@ -4162,7 +4159,7 @@ S32-container/stringify.t aborted 16 test(s)
 S32-container/zip.rakudo.jvm aborted 14 test(s)
 S32-encoding/encoder.t aborted 4 test(s)
 S32-encoding/registry.t aborted 14 test(s)
-S32-exceptions/misc.rakudo.jvm aborted 431 test(s)
+S32-exceptions/misc.rakudo.jvm aborted 432 test(s)
 S32-hash/adverbs.t aborted 4 test(s)
 S32-hash/antipairs.t aborted 5 test(s)
 S32-hash/delete-adverb.t aborted 131 test(s)
@@ -4183,7 +4180,7 @@ S32-io/IO-Socket-INET.t aborted 26 test(s)
 S32-io/chdir.t aborted 82 test(s)
 S32-io/copy.t aborted 42 test(s)
 S32-io/dir.rakudo.jvm aborted 16 test(s)
-S32-io/file-tests.t aborted 35 test(s)
+S32-io/file-tests.t aborted 16 test(s)
 S32-io/indir.t aborted 77 test(s)
 S32-io/io-cathandle.rakudo.jvm aborted 28 test(s)
 S32-io/io-handle.rakudo.jvm aborted 27 test(s)
@@ -4296,7 +4293,7 @@ S32-str/bool.t aborted 12 test(s)
 S32-str/capitalize.rakudo.jvm aborted 17 test(s)
 S32-str/chomp.rakudo.jvm aborted 39 test(s)
 S32-str/chop.t aborted 36 test(s)
-S32-str/comb.rakudo.jvm aborted 81 test(s)
+S32-str/comb.rakudo.jvm aborted 82 test(s)
 S32-str/contains.t aborted 21 test(s)
 S32-str/encode.rakudo.jvm aborted 38 test(s)
 S32-str/ends-with.t aborted 9 test(s)
