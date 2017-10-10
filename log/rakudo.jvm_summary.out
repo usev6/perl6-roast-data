@@ -199,7 +199,7 @@ S02-types/baghash.rakudo.jvm....................... 269    0    2   21  292
      2 todo   : in flux
 S02-types/bool.t...................................  68    0    0    0   68
 S02-types/built-in.t...............................   1    0    0    0    1
-S02-types/capture.t................................  38    0    0    0   38
+S02-types/capture.t................................  42    1    0    0   43
 S02-types/catch_type_cast_mismatch.t...............  11    0    0    0   11
 S02-types/compact.rakudo.jvm.......................   2    0    3    5   10
      5 skipped: cat NYI RT  \#124456
@@ -262,7 +262,7 @@ S02-types/multi_dimensional_array.rakudo.jvm.......  48    0    0   10   58
      6 skipped: multi-dim sized arrays NYI RT  \#124482
      4 skipped: multi-dim sized arrays NYI RT  \#124483
 S02-types/nan.t....................................  28    0    0    0   28
-S02-types/native.rakudo.jvm........................  69    0   21    3   93
+S02-types/native.rakudo.jvm........................  69    1   21    3   94
      3 skipped: cannot unbox to a native number
      1 todo   : RT #102416 - though maybe wrong test? Not sure .WHAT is *that* magic
      1 todo   : does not die, gives 7766279631452241919
@@ -283,344 +283,501 @@ S02-types/pair.rakudo.jvm.......................... 182    0    1    0  183
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range-iterator.t.........................  72    0    0    0   72
-S02-types/range.rakudo.jvm.........................   0  189    0    0  189
-   189 tests aborted (missing ok/not ok)
+S02-types/range.rakudo.jvm......................... 188    0    2    0  190
+     2 todo   : wrong error message, cmp. Rakudo commit 0c16bb2b01
 S02-types/set-iterator.t...........................  12    0    0    0   12
-S02-types/set.rakudo.jvm...........................   0  217    0    0  217
-   217 tests aborted (missing ok/not ok)
-S02-types/sethash.rakudo.jvm.......................   0  246    0    0  246
-   246 tests aborted (missing ok/not ok)
-S02-types/sigils-and-types.rakudo.jvm..............   0   27    0    0   27
-    27 tests aborted (missing ok/not ok)
-S02-types/stash.t..................................   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
-S02-types/subscripts_and_context.t.................   0    8    0    0    8
-     8 tests aborted (missing ok/not ok)
-S02-types/subset.t.................................   0   49    0    0   49
-    49 tests aborted (missing ok/not ok)
-S02-types/type.rakudo.jvm..........................   0   74    0    0   74
-    74 tests aborted (missing ok/not ok)
-S02-types/undefined-types.rakudo.jvm...............   0   49    0    0   49
-    49 tests aborted (missing ok/not ok)
+S02-types/set.rakudo.jvm........................... 208    0    0    9  217
+     9 skipped: Hypers not yet Set compatible RT  \#124487
+S02-types/sethash.rakudo.jvm....................... 236    0    0   10  246
+    10 skipped: 'is TypeObject' NYI RT  \#124490
+S02-types/sigils-and-types.rakudo.jvm..............  25    0    2    0   27
+     1 todo   : Capture does Associative RT #124485
+     1 todo   : Capture does Positional RT #124484
+S02-types/stash.t..................................   1    0    0    0    1
+S02-types/subscripts_and_context.t.................   8    0    0    0    8
+S02-types/subset.t.................................  49    0    0    0   49
+S02-types/type.rakudo.jvm..........................  73    0    1    0   74
+     1 todo   : nigh, RT #121518
+S02-types/undefined-types.rakudo.jvm...............  43    2    4    0   49
+     4 todo   : .clone doesn't copy typedness
 S02-types/unicode.rakudo.jvm.......................   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S02-types/version-stress.t.........................   0    0    0    0    0
-S02-types/version.t................................   0   44    0    0   44
+S02-types/version-stress.t.........................cannot connect to eval server: Connection refused
+   0    0    0    0    0
+S02-types/version.t................................cannot connect to eval server: Connection refused
+   0   44    0    0   44
     44 tests aborted (missing ok/not ok)
-S02-types/whatever.rakudo.jvm......................   0  117    0    0  117
+S02-types/whatever.rakudo.jvm......................cannot connect to eval server: Connection refused
+   0  117    0    0  117
    117 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-S03-binding/arrays.t...............................   0   47    0    0   47
+S03-binding/arrays.t...............................cannot connect to eval server: Connection refused
+   0   47    0    0   47
     47 tests aborted (missing ok/not ok)
-S03-binding/attributes.rakudo.jvm..................   0   12    0    0   12
+S03-binding/attributes.rakudo.jvm..................cannot connect to eval server: Connection refused
+   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
-S03-binding/closure.rakudo.jvm.....................   0    8    0    0    8
+S03-binding/closure.rakudo.jvm.....................cannot connect to eval server: Connection refused
+   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S03-binding/hashes.t...............................   0   39    0    0   39
+S03-binding/hashes.t...............................cannot connect to eval server: Connection refused
+   0   39    0    0   39
     39 tests aborted (missing ok/not ok)
-S03-binding/nested.t...............................   0   43    0    0   43
+S03-binding/nested.t...............................cannot connect to eval server: Connection refused
+   0   43    0    0   43
     43 tests aborted (missing ok/not ok)
-S03-binding/nonsense.rakudo.jvm....................   0    5    0    0    5
+S03-binding/nonsense.rakudo.jvm....................cannot connect to eval server: Connection refused
+   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S03-binding/ro.rakudo.jvm..........................   0   11    0    0   11
+S03-binding/ro.rakudo.jvm..........................cannot connect to eval server: Connection refused
+   0   11    0    0   11
     11 tests aborted (missing ok/not ok)
-S03-binding/scalars.rakudo.jvm.....................   0   33    0    0   33
+S03-binding/scalars.rakudo.jvm.....................cannot connect to eval server: Connection refused
+   0   33    0    0   33
     33 tests aborted (missing ok/not ok)
-S03-feeds/basic.rakudo.jvm.........................   0   23    0    0   23
+S03-feeds/basic.rakudo.jvm.........................cannot connect to eval server: Connection refused
+   0   23    0    0   23
     23 tests aborted (missing ok/not ok)
-S03-junctions/associative.t........................   0   10    0    0   10
+S03-junctions/associative.t........................cannot connect to eval server: Connection refused
+   0   10    0    0   10
     10 tests aborted (missing ok/not ok)
-S03-junctions/autothreading.t......................   0  106    0    0  106
+S03-junctions/autothreading.t......................cannot connect to eval server: Connection refused
+   0  106    0    0  106
    106 tests aborted (missing ok/not ok)
-S03-junctions/boolean-context.t....................   0   74    0    0   74
+S03-junctions/boolean-context.t....................cannot connect to eval server: Connection refused
+   0   74    0    0   74
     74 tests aborted (missing ok/not ok)
-S03-junctions/misc.t...............................   0  146    0    0  146
+S03-junctions/misc.t...............................cannot connect to eval server: Connection refused
+   0  146    0    0  146
    146 tests aborted (missing ok/not ok)
-S03-metaops/cross.t................................   0   79    0    0   79
+S03-metaops/cross.t................................cannot connect to eval server: Connection refused
+   0   79    0    0   79
     79 tests aborted (missing ok/not ok)
-S03-metaops/eager-hyper.rakudo.jvm.................   0    8    0    0    8
+S03-metaops/eager-hyper.rakudo.jvm.................cannot connect to eval server: Connection refused
+   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S03-metaops/hyper.rakudo.jvm.......................   0  403    0    0  403
+S03-metaops/hyper.rakudo.jvm.......................cannot connect to eval server: Connection refused
+   0  403    0    0  403
    403 tests aborted (missing ok/not ok)
-S03-metaops/not.t..................................   0   46    0    0   46
+S03-metaops/not.t..................................cannot connect to eval server: Connection refused
+   0   46    0    0   46
     46 tests aborted (missing ok/not ok)
-S03-metaops/reduce.rakudo.jvm......................   0  559    0    0  559
+S03-metaops/reduce.rakudo.jvm......................cannot connect to eval server: Connection refused
+   0  559    0    0  559
    559 tests aborted (missing ok/not ok)
-S03-metaops/reverse.t..............................   0   68    0    0   68
+S03-metaops/reverse.t..............................cannot connect to eval server: Connection refused
+   0   68    0    0   68
     68 tests aborted (missing ok/not ok)
-S03-metaops/zip.t..................................   0   76    0    0   76
+S03-metaops/zip.t..................................cannot connect to eval server: Connection refused
+   0   76    0    0   76
     76 tests aborted (missing ok/not ok)
-S03-operators/adverbial-modifiers.rakudo.jvm.......   0   42    0    0   42
+S03-operators/adverbial-modifiers.rakudo.jvm.......cannot connect to eval server: Connection refused
+   0   42    0    0   42
     42 tests aborted (missing ok/not ok)
-S03-operators/also.rakudo.jvm......................   0    8    0    0    8
+S03-operators/also.rakudo.jvm......................cannot connect to eval server: Connection refused
+   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S03-operators/andthen.t............................   0   14    0    0   14
+S03-operators/andthen.t............................cannot connect to eval server: Connection refused
+   0   14    0    0   14
     14 tests aborted (missing ok/not ok)
-S03-operators/arith.t..............................   0  161    0    0  161
+S03-operators/arith.t..............................cannot connect to eval server: Connection refused
+   0  161    0    0  161
    161 tests aborted (missing ok/not ok)
-S03-operators/assign-is-not-binding.t..............   0    9    0    0    9
+S03-operators/assign-is-not-binding.t..............cannot connect to eval server: Connection refused
+   0    9    0    0    9
      9 tests aborted (missing ok/not ok)
-S03-operators/assign.rakudo.jvm....................   0  299    0    0  299
+S03-operators/assign.rakudo.jvm....................cannot connect to eval server: Connection refused
+   0  299    0    0  299
    299 tests aborted (missing ok/not ok)
-S03-operators/autoincrement-range.t................   0  104    0    0  104
+S03-operators/autoincrement-range.t................cannot connect to eval server: Connection refused
+   0  104    0    0  104
    104 tests aborted (missing ok/not ok)
-S03-operators/autoincrement.t......................   0   80    0    0   80
+S03-operators/autoincrement.t......................cannot connect to eval server: Connection refused
+   0   80    0    0   80
     80 tests aborted (missing ok/not ok)
-S03-operators/autovivification.t...................   0   23    0    0   23
+S03-operators/autovivification.t...................cannot connect to eval server: Connection refused
+   0   23    0    0   23
     23 tests aborted (missing ok/not ok)
-S03-operators/basic-types.t........................   0   19    0    0   19
+S03-operators/basic-types.t........................cannot connect to eval server: Connection refused
+   0   19    0    0   19
     19 tests aborted (missing ok/not ok)
-S03-operators/bit.rakudo.jvm.......................   0   54    0    0   54
+S03-operators/bit.rakudo.jvm.......................cannot connect to eval server: Connection refused
+   0   54    0    0   54
     54 tests aborted (missing ok/not ok)
-S03-operators/boolean-bitwise.t....................   0   45    0    0   45
+S03-operators/boolean-bitwise.t....................cannot connect to eval server: Connection refused
+   0   45    0    0   45
     45 tests aborted (missing ok/not ok)
-S03-operators/brainos.t............................   0    9    0    0    9
+S03-operators/brainos.t............................cannot connect to eval server: Connection refused
+   0    9    0    0    9
      9 tests aborted (missing ok/not ok)
-S03-operators/buf.t................................   0  142    0    0  142
+S03-operators/buf.t................................cannot connect to eval server: Connection refused
+   0  142    0    0  142
    142 tests aborted (missing ok/not ok)
-S03-operators/chained-declarators.t................   0    5    0    0    5
+S03-operators/chained-declarators.t................cannot connect to eval server: Connection refused
+   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S03-operators/cmp.t................................   0   60    0    0   60
+S03-operators/cmp.t................................cannot connect to eval server: Connection refused
+   0   60    0    0   60
     60 tests aborted (missing ok/not ok)
-S03-operators/comparison-simple.t..................   0   24    0    0   24
+S03-operators/comparison-simple.t..................cannot connect to eval server: Connection refused
+   0   24    0    0   24
     24 tests aborted (missing ok/not ok)
-S03-operators/comparison.t.........................   0  112    0    0  112
+S03-operators/comparison.t.........................cannot connect to eval server: Connection refused
+   0  112    0    0  112
    112 tests aborted (missing ok/not ok)
-S03-operators/composition.t........................   0   12    0    0   12
+S03-operators/composition.t........................cannot connect to eval server: Connection refused
+   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
-S03-operators/context-forcers.rakudo.jvm...........   0  106    0    0  106
+S03-operators/context-forcers.rakudo.jvm...........cannot connect to eval server: Connection refused
+   0  106    0    0  106
    106 tests aborted (missing ok/not ok)
-S03-operators/context.t............................   0   39    0    0   39
+S03-operators/context.t............................cannot connect to eval server: Connection refused
+   0   39    0    0   39
     39 tests aborted (missing ok/not ok)
-S03-operators/custom.t.............................   0    1    0    0    1
+S03-operators/custom.t.............................cannot connect to eval server: Connection refused
+   0    1    0    0    1
      1 tests aborted (missing ok/not ok)
-S03-operators/div.t................................   0    9    0    0    9
+S03-operators/div.t................................cannot connect to eval server: Connection refused
+   0    9    0    0    9
      9 tests aborted (missing ok/not ok)
-S03-operators/equality.t...........................   0   46    0    0   46
+S03-operators/equality.t...........................cannot connect to eval server: Connection refused
+   0   46    0    0   46
     46 tests aborted (missing ok/not ok)
-S03-operators/eqv.rakudo.jvm.......................   0   57    0    0   57
+S03-operators/eqv.rakudo.jvm.......................cannot connect to eval server: Connection refused
+   0   57    0    0   57
     57 tests aborted (missing ok/not ok)
-S03-operators/flip-flop.rakudo.jvm.................   0   40    0    0   40
+S03-operators/flip-flop.rakudo.jvm.................cannot connect to eval server: Connection refused
+   0   40    0    0   40
     40 tests aborted (missing ok/not ok)
-S03-operators/gcd.t................................   0   19    0    0   19
+S03-operators/gcd.t................................cannot connect to eval server: Connection refused
+   0   19    0    0   19
     19 tests aborted (missing ok/not ok)
-S03-operators/identity.rakudo.jvm..................   0   46    0    0   46
+S03-operators/identity.rakudo.jvm..................cannot connect to eval server: Connection refused
+   0   46    0    0   46
     46 tests aborted (missing ok/not ok)
-S03-operators/increment.rakudo.jvm.................   0   39    0    0   39
+S03-operators/increment.rakudo.jvm.................cannot connect to eval server: Connection refused
+   0   39    0    0   39
     39 tests aborted (missing ok/not ok)
-S03-operators/infixed-function.t...................   0    5    0    0    5
+S03-operators/infixed-function.t...................cannot connect to eval server: Connection refused
+   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S03-operators/inplace.rakudo.jvm...................   0   31    0    0   31
+S03-operators/inplace.rakudo.jvm...................cannot connect to eval server: Connection refused
+   0   31    0    0   31
     31 tests aborted (missing ok/not ok)
-S03-operators/is-divisible-by.rakudo.jvm...........   0   15    0    0   15
+S03-operators/is-divisible-by.rakudo.jvm...........cannot connect to eval server: Connection refused
+   0   15    0    0   15
     15 tests aborted (missing ok/not ok)
-S03-operators/lcm.t................................   0   15    0    0   15
+S03-operators/lcm.t................................cannot connect to eval server: Connection refused
+   0   15    0    0   15
     15 tests aborted (missing ok/not ok)
-S03-operators/list-quote-junction.t................   0   16    0    0   16
+S03-operators/list-quote-junction.t................cannot connect to eval server: Connection refused
+   0   16    0    0   16
     16 tests aborted (missing ok/not ok)
-S03-operators/minmax.rakudo.jvm....................   0   39    0    0   39
+S03-operators/minmax.rakudo.jvm....................cannot connect to eval server: Connection refused
+   0   39    0    0   39
     39 tests aborted (missing ok/not ok)
-S03-operators/misc.rakudo.jvm......................   0   73    0    0   73
+S03-operators/misc.rakudo.jvm......................cannot connect to eval server: Connection refused
+   0   73    0    0   73
     73 tests aborted (missing ok/not ok)
-S03-operators/names.t..............................   0    7    0    0    7
+S03-operators/names.t..............................cannot connect to eval server: Connection refused
+   0    7    0    0    7
      7 tests aborted (missing ok/not ok)
-S03-operators/nesting.t............................   0   26    0    0   26
+S03-operators/nesting.t............................cannot connect to eval server: Connection refused
+   0   26    0    0   26
     26 tests aborted (missing ok/not ok)
-S03-operators/not.t................................   0   22    0    0   22
+S03-operators/not.t................................cannot connect to eval server: Connection refused
+   0   22    0    0   22
     22 tests aborted (missing ok/not ok)
-S03-operators/notandthen.t.........................   0    6    0    0    6
+S03-operators/notandthen.t.........................cannot connect to eval server: Connection refused
+   0    6    0    0    6
      6 tests aborted (missing ok/not ok)
-S03-operators/numeric-shift.t......................   0   38    0    0   38
+S03-operators/numeric-shift.t......................cannot connect to eval server: Connection refused
+   0   38    0    0   38
     38 tests aborted (missing ok/not ok)
-S03-operators/orelse.t.............................   0   16    0    0   16
+S03-operators/orelse.t.............................cannot connect to eval server: Connection refused
+   0   16    0    0   16
     16 tests aborted (missing ok/not ok)
-S03-operators/overflow.t...........................   0  101    0    0  101
+S03-operators/overflow.t...........................cannot connect to eval server: Connection refused
+   0  101    0    0  101
    101 tests aborted (missing ok/not ok)
-S03-operators/precedence.rakudo.jvm................   0   77    0    0   77
+S03-operators/precedence.rakudo.jvm................cannot connect to eval server: Connection refused
+   0   77    0    0   77
     77 tests aborted (missing ok/not ok)
-S03-operators/range-basic.t........................   0  115    0    0  115
+S03-operators/range-basic.t........................cannot connect to eval server: Connection refused
+   0  115    0    0  115
    115 tests aborted (missing ok/not ok)
-S03-operators/range-int.t..........................   0  507    0    0  507
+S03-operators/range-int.t..........................cannot connect to eval server: Connection refused
+   0  507    0    0  507
    507 tests aborted (missing ok/not ok)
-S03-operators/range.t..............................   0  177    0    0  177
+S03-operators/range.t..............................cannot connect to eval server: Connection refused
+   0  177    0    0  177
    177 tests aborted (missing ok/not ok)
-S03-operators/reduce-le1arg.rakudo.jvm.............   0   54    0    0   54
+S03-operators/reduce-le1arg.rakudo.jvm.............cannot connect to eval server: Connection refused
+   0   54    0    0   54
     54 tests aborted (missing ok/not ok)
-S03-operators/relational.rakudo.jvm................   0  179    0    0  179
+S03-operators/relational.rakudo.jvm................cannot connect to eval server: Connection refused
+   0  179    0    0  179
    179 tests aborted (missing ok/not ok)
-S03-operators/repeat.rakudo.jvm....................   0   61    0    0   61
+S03-operators/repeat.rakudo.jvm....................cannot connect to eval server: Connection refused
+   0   61    0    0   61
     61 tests aborted (missing ok/not ok)
-S03-operators/scalar-assign.t......................   0    4    0    0    4
+S03-operators/scalar-assign.t......................cannot connect to eval server: Connection refused
+   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
-S03-operators/set_addition.t.......................   0    2    0    0    2
+S03-operators/set_addition.t.......................cannot connect to eval server: Connection refused
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S03-operators/set_difference.t.....................   0    2    0    0    2
+S03-operators/set_difference.t.....................cannot connect to eval server: Connection refused
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S03-operators/set_elem.t...........................   0    2    0    0    2
+S03-operators/set_elem.t...........................cannot connect to eval server: Connection refused
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S03-operators/set_intersection.t...................   0    2    0    0    2
+S03-operators/set_intersection.t...................cannot connect to eval server: Connection refused
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S03-operators/set_multiply.t.......................   0    2    0    0    2
+S03-operators/set_multiply.t.......................cannot connect to eval server: Connection refused
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S03-operators/set_precedes.t.......................   0   32    0    0   32
+S03-operators/set_precedes.t.......................cannot connect to eval server: Connection refused
+   0   32    0    0   32
     32 tests aborted (missing ok/not ok)
-S03-operators/set_proper_subset.t..................   0    2    0    0    2
+S03-operators/set_proper_subset.t..................cannot connect to eval server: Connection refused
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S03-operators/set_subset.t.........................   0    2    0    0    2
+S03-operators/set_subset.t.........................cannot connect to eval server: Connection refused
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S03-operators/set_symmetric_difference.t...........   0    2    0    0    2
+S03-operators/set_symmetric_difference.t...........cannot connect to eval server: Connection refused
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S03-operators/set_union.t..........................   0    2    0    0    2
+S03-operators/set_union.t..........................cannot connect to eval server: Connection refused
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S03-operators/short-circuit.t......................   0   83    0    0   83
+S03-operators/short-circuit.t......................cannot connect to eval server: Connection refused
+   0   83    0    0   83
     83 tests aborted (missing ok/not ok)
-S03-operators/so.t.................................   0   15    0    0   15
+S03-operators/so.t.................................cannot connect to eval server: Connection refused
+   0   15    0    0   15
     15 tests aborted (missing ok/not ok)
-S03-operators/spaceship-and-containers.t...........   0    6    0    0    6
+S03-operators/spaceship-and-containers.t...........cannot connect to eval server: Connection refused
+   0    6    0    0    6
      6 tests aborted (missing ok/not ok)
-S03-operators/spaceship.t..........................   0    6    0    0    6
+S03-operators/spaceship.t..........................cannot connect to eval server: Connection refused
+   0    6    0    0    6
      6 tests aborted (missing ok/not ok)
-S03-operators/subscript-adverbs.t..................   0  110    0    0  110
+S03-operators/subscript-adverbs.t..................cannot connect to eval server: Connection refused
+   0  110    0    0  110
    110 tests aborted (missing ok/not ok)
-S03-operators/subscript-vs-lt.t....................   0    4    0    0    4
+S03-operators/subscript-vs-lt.t....................cannot connect to eval server: Connection refused
+   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
-S03-operators/ternary.t............................   0   28    0    0   28
+S03-operators/ternary.t............................cannot connect to eval server: Connection refused
+   0   28    0    0   28
     28 tests aborted (missing ok/not ok)
-S03-operators/u2212-minus.t........................   0   54    0    0   54
+S03-operators/u2212-minus.t........................cannot connect to eval server: Connection refused
+   0   54    0    0   54
     54 tests aborted (missing ok/not ok)
-S03-operators/value_equivalence.t..................   0   87    0    0   87
+S03-operators/value_equivalence.t..................cannot connect to eval server: Connection refused
+   0   87    0    0   87
     87 tests aborted (missing ok/not ok)
-S03-sequence/arity-2-or-more.t.....................   0   20    0    0   20
+S03-sequence/arity-2-or-more.t.....................cannot connect to eval server: Connection refused
+   0   20    0    0   20
     20 tests aborted (missing ok/not ok)
-S03-sequence/arity0.t..............................   0   13    0    0   13
+S03-sequence/arity0.t..............................cannot connect to eval server: Connection refused
+   0   13    0    0   13
     13 tests aborted (missing ok/not ok)
-S03-sequence/basic.t...............................   0  143    0    0  143
+S03-sequence/basic.t...............................cannot connect to eval server: Connection refused
+   0  143    0    0  143
    143 tests aborted (missing ok/not ok)
-S03-sequence/limit-arity-2-or-more.t...............   0    8    0    0    8
+S03-sequence/limit-arity-2-or-more.t...............cannot connect to eval server: Connection refused
+   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S03-sequence/misc.t................................   0   30    0    0   30
+S03-sequence/misc.t................................cannot connect to eval server: Connection refused
+   0   30    0    0   30
     30 tests aborted (missing ok/not ok)
-S03-sequence/nonnumeric.rakudo.jvm.................   0   44    0    0   44
+S03-sequence/nonnumeric.rakudo.jvm.................cannot connect to eval server: Connection refused
+   0   44    0    0   44
     44 tests aborted (missing ok/not ok)
-S03-smartmatch/any-any.t...........................   0    8    0    0    8
+S03-smartmatch/any-any.t...........................cannot connect to eval server: Connection refused
+   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S03-smartmatch/any-bool.t..........................   0    8    0    0    8
+S03-smartmatch/any-bool.t..........................cannot connect to eval server: Connection refused
+   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S03-smartmatch/any-callable.t......................   0    6    0    0    6
+S03-smartmatch/any-callable.t......................cannot connect to eval server: Connection refused
+   0    6    0    0    6
      6 tests aborted (missing ok/not ok)
-S03-smartmatch/any-complex.t.......................   0   12    0    0   12
+S03-smartmatch/any-complex.t.......................cannot connect to eval server: Connection refused
+   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
-S03-smartmatch/any-hash-pair.t.....................   0    7    0    0    7
+S03-smartmatch/any-hash-pair.t.....................cannot connect to eval server: Connection refused
+   0    7    0    0    7
      7 tests aborted (missing ok/not ok)
-S03-smartmatch/any-method.t........................   0    4    0    0    4
+S03-smartmatch/any-method.t........................cannot connect to eval server: Connection refused
+   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
-S03-smartmatch/any-num.rakudo.jvm..................   0   20    0    0   20
+S03-smartmatch/any-num.rakudo.jvm..................cannot connect to eval server: Connection refused
+   0   20    0    0   20
     20 tests aborted (missing ok/not ok)
-S03-smartmatch/any-pair.t..........................   0   10    0    0   10
+S03-smartmatch/any-pair.t..........................cannot connect to eval server: Connection refused
+   0   10    0    0   10
     10 tests aborted (missing ok/not ok)
-S03-smartmatch/any-str.t...........................   0    5    0    0    5
+S03-smartmatch/any-str.t...........................cannot connect to eval server: Connection refused
+   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S03-smartmatch/any-sub.t...........................   0    8    0    0    8
+S03-smartmatch/any-sub.t...........................cannot connect to eval server: Connection refused
+   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S03-smartmatch/any-type.t..........................   0   15    0    0   15
+S03-smartmatch/any-type.t..........................cannot connect to eval server: Connection refused
+   0   15    0    0   15
     15 tests aborted (missing ok/not ok)
-S03-smartmatch/array-array.t.......................   0   69    0    0   69
+S03-smartmatch/array-array.t.......................cannot connect to eval server: Connection refused
+   0   69    0    0   69
     69 tests aborted (missing ok/not ok)
-S03-smartmatch/array-hash.rakudo.jvm...............   0    6    0    0    6
+S03-smartmatch/array-hash.rakudo.jvm...............cannot connect to eval server: Connection refused
+   0    6    0    0    6
      6 tests aborted (missing ok/not ok)
-S03-smartmatch/capture-signature.t.................   0    6    0    0    6
-     6 tests aborted (missing ok/not ok)
-S03-smartmatch/disorganized.t......................   0   42    0    0   42
+S03-smartmatch/capture-signature.t.................cannot connect to eval server: Connection refused
+   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
+S03-smartmatch/disorganized.t......................cannot connect to eval server: Connection refused
+   0   42    0    0   42
     42 tests aborted (missing ok/not ok)
-S03-smartmatch/hash-hash.t.........................   0   16    0    0   16
+S03-smartmatch/hash-hash.t.........................cannot connect to eval server: Connection refused
+   0   16    0    0   16
     16 tests aborted (missing ok/not ok)
-S03-smartmatch/range-range.t.......................   0   20    0    0   20
+S03-smartmatch/range-range.t.......................cannot connect to eval server: Connection refused
+   0   20    0    0   20
     20 tests aborted (missing ok/not ok)
-S03-smartmatch/regex-hash.t........................   0    4    0    0    4
+S03-smartmatch/regex-hash.t........................cannot connect to eval server: Connection refused
+   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
-S03-smartmatch/scalar-hash.t.......................   0    3    0    0    3
+S03-smartmatch/scalar-hash.t.......................cannot connect to eval server: Connection refused
+   0    3    0    0    3
      3 tests aborted (missing ok/not ok)
-S03-smartmatch/signature-signature.rakudo.jvm......   0   23    0    0   23
+S03-smartmatch/signature-signature.rakudo.jvm......cannot connect to eval server: Connection refused
+   0   23    0    0   23
     23 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-S04-blocks-and-statements/let.rakudo.jvm...........   0   12    0    0   12
+S04-blocks-and-statements/let.rakudo.jvm...........cannot connect to eval server: Connection refused
+   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
-S04-blocks-and-statements/pointy-rw.t..............   0   10    0    0   10
+S04-blocks-and-statements/pointy-rw.t..............cannot connect to eval server: Connection refused
+   0   10    0    0   10
     10 tests aborted (missing ok/not ok)
-S04-blocks-and-statements/pointy.rakudo.jvm........   0   21    0    0   21
+S04-blocks-and-statements/pointy.rakudo.jvm........cannot connect to eval server: Connection refused
+   0   21    0    0   21
     21 tests aborted (missing ok/not ok)
-S04-blocks-and-statements/temp.rakudo.jvm..........   0   43    0    0   43
+S04-blocks-and-statements/temp.rakudo.jvm..........cannot connect to eval server: Connection refused
+   0   43    0    0   43
     43 tests aborted (missing ok/not ok)
-S04-declarations/constant.rakudo.jvm...............   0   72    0    0   72
+S04-declarations/constant.rakudo.jvm...............cannot connect to eval server: Connection refused
+   0   72    0    0   72
     72 tests aborted (missing ok/not ok)
-S04-declarations/implicit-parameter.t..............   0   20    0    0   20
+S04-declarations/implicit-parameter.t..............cannot connect to eval server: Connection refused
+   0   20    0    0   20
     20 tests aborted (missing ok/not ok)
-S04-declarations/multiple.rakudo.jvm...............   0    8    0    0    8
+S04-declarations/multiple.rakudo.jvm...............cannot connect to eval server: Connection refused
+   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S04-declarations/my.rakudo.jvm.....................   0  105    0    0  105
+S04-declarations/my.rakudo.jvm.....................cannot connect to eval server: Connection refused
+   0  105    0    0  105
    105 tests aborted (missing ok/not ok)
-S04-declarations/our.t.............................   0   31    0    0   31
+S04-declarations/our.t.............................cannot connect to eval server: Connection refused
+   0   31    0    0   31
     31 tests aborted (missing ok/not ok)
-S04-declarations/smiley.rakudo.jvm.................   0   63    0    0   63
+S04-declarations/smiley.rakudo.jvm.................cannot connect to eval server: Connection refused
+   0   63    0    0   63
     63 tests aborted (missing ok/not ok)
-S04-declarations/state.rakudo.jvm..................   0   42    0    0   42
+S04-declarations/state.rakudo.jvm..................cannot connect to eval server: Connection refused
+   0   42    0    0   42
     42 tests aborted (missing ok/not ok)
-S04-declarations/will.rakudo.jvm...................   0    0    0    0    0
-S04-exception-handlers/catch.t.....................   0   31    0    0   31
+S04-declarations/will.rakudo.jvm...................cannot connect to eval server: Connection refused
+   0    0    0    0    0
+S04-exception-handlers/catch.t.....................cannot connect to eval server: Connection refused
+   0   31    0    0   31
     31 tests aborted (missing ok/not ok)
-S04-exception-handlers/control.t...................   0   12    0    0   12
+S04-exception-handlers/control.t...................cannot connect to eval server: Connection refused
+   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
-S04-exception-handlers/top-level.t.................   0    1    0    0    1
+S04-exception-handlers/top-level.t.................cannot connect to eval server: Connection refused
+   0    1    0    0    1
      1 tests aborted (missing ok/not ok)
-S04-exceptions/control_across_runloop.t............   0    1    0    0    1
+S04-exceptions/control_across_runloop.t............cannot connect to eval server: Connection refused
+   0    1    0    0    1
      1 tests aborted (missing ok/not ok)
-S04-exceptions/exceptions-json.t...................   0    3    0    0    3
+S04-exceptions/exceptions-json.t...................cannot connect to eval server: Connection refused
+   0    3    0    0    3
      3 tests aborted (missing ok/not ok)
-S04-exceptions/fail.t..............................   0   35    0    0   35
+S04-exceptions/fail.t..............................cannot connect to eval server: Connection refused
+   0   35    0    0   35
     35 tests aborted (missing ok/not ok)
-S04-exceptions/pending.rakudo.jvm..................   0   21    0    0   21
+S04-exceptions/pending.rakudo.jvm..................cannot connect to eval server: Connection refused
+   0   21    0    0   21
     21 tests aborted (missing ok/not ok)
-S04-phasers/ascending-order.t......................   0    7    0    0    7
+S04-phasers/ascending-order.t......................cannot connect to eval server: Connection refused
+   0    7    0    0    7
      7 tests aborted (missing ok/not ok)
-S04-phasers/begin.rakudo.jvm.......................   0   13    0    0   13
+S04-phasers/begin.rakudo.jvm.......................cannot connect to eval server: Connection refused
+   0   13    0    0   13
     13 tests aborted (missing ok/not ok)
-S04-phasers/check.t................................   0    5    0    0    5
+S04-phasers/check.t................................cannot connect to eval server: Connection refused
+   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S04-phasers/descending-order.t.....................   0    7    0    0    7
+S04-phasers/descending-order.t.....................cannot connect to eval server: Connection refused
+   0    7    0    0    7
      7 tests aborted (missing ok/not ok)
-S04-phasers/end.t..................................   0    8    0    0    8
+S04-phasers/end.t..................................cannot connect to eval server: Connection refused
+   0    8    0    0    8
      8 tests aborted (missing ok/not ok)
-S04-phasers/enter-leave.rakudo.jvm.................   0   30    0    0   30
+S04-phasers/enter-leave.rakudo.jvm.................cannot connect to eval server: Connection refused
+   0   30    0    0   30
     30 tests aborted (missing ok/not ok)
-S04-phasers/first.t................................   0    7    0    0    7
+S04-phasers/first.t................................cannot connect to eval server: Connection refused
+   0    7    0    0    7
      7 tests aborted (missing ok/not ok)
-S04-phasers/in-eval.rakudo.jvm.....................   0   35    0    0   35
+S04-phasers/in-eval.rakudo.jvm.....................cannot connect to eval server: Connection refused
+   0   35    0    0   35
     35 tests aborted (missing ok/not ok)
-S04-phasers/in-loop.rakudo.jvm.....................   0   11    0    0   11
+S04-phasers/in-loop.rakudo.jvm.....................cannot connect to eval server: Connection refused
+   0   11    0    0   11
     11 tests aborted (missing ok/not ok)
-S04-phasers/init.t.................................   0   13    0    0   13
+S04-phasers/init.t.................................cannot connect to eval server: Connection refused
+   0   13    0    0   13
     13 tests aborted (missing ok/not ok)
-S04-phasers/keep-undo.rakudo.jvm...................   0   16    0    0   16
+S04-phasers/keep-undo.rakudo.jvm...................cannot connect to eval server: Connection refused
+   0   16    0    0   16
     16 tests aborted (missing ok/not ok)
-S04-phasers/multiple.t.............................   0    2    0    0    2
+S04-phasers/multiple.t.............................cannot connect to eval server: Connection refused
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S04-phasers/next.rakudo.jvm........................   0   16    0    0   16
+S04-phasers/next.rakudo.jvm........................cannot connect to eval server: Connection refused
+   0   16    0    0   16
     16 tests aborted (missing ok/not ok)
-S04-phasers/pre-post.rakudo.jvm....................   0   22    0    0   22
+S04-phasers/pre-post.rakudo.jvm....................cannot connect to eval server: Connection refused
+   0   22    0    0   22
     22 tests aborted (missing ok/not ok)
-S04-phasers/rvalue.t...............................   0   16    0    0   16
+S04-phasers/rvalue.t...............................cannot connect to eval server: Connection refused
+   0   16    0    0   16
     16 tests aborted (missing ok/not ok)
-S04-statement-modifiers/for.t......................   0   31    0    0   31
+S04-statement-modifiers/for.t......................cannot connect to eval server: Connection refused
+   0   31    0    0   31
     31 tests aborted (missing ok/not ok)
-S04-statement-modifiers/given.t....................   0   12    0    0   12
+S04-statement-modifiers/given.t....................cannot connect to eval server: Connection refused
+   0   12    0    0   12
     12 tests aborted (missing ok/not ok)
-S04-statement-modifiers/if.t.......................   0   14    0    0   14
+S04-statement-modifiers/if.t.......................cannot connect to eval server: Connection refused
+   0   14    0    0   14
     14 tests aborted (missing ok/not ok)
-S04-statement-modifiers/unless.t...................   0    9    0    0    9
+S04-statement-modifiers/unless.t...................cannot connect to eval server: Connection refused
+   0    9    0    0    9
      9 tests aborted (missing ok/not ok)
-S04-statement-modifiers/until.t....................   0    5    0    0    5
+S04-statement-modifiers/until.t....................cannot connect to eval server: Connection refused
+   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S04-statement-modifiers/values_in_bool_context.t...   0   24    0    0   24
+S04-statement-modifiers/values_in_bool_context.t...cannot connect to eval server: Connection refused
+   0   24    0    0   24
     24 tests aborted (missing ok/not ok)
 S04-statement-modifiers/while.t....................cannot connect to eval server: Connection refused
    0    6    0    0    6
@@ -1100,7 +1257,7 @@ S06-other/main.t...................................cannot connect to eval server
 S06-other/misc.t...................................cannot connect to eval server: Connection refused
    0   16    0    0   16
     16 tests aborted (missing ok/not ok)
-S06-other/pairs-as-lvalues.rakudo.jvm..............cannot connect to eval server: Connection refused
+S06-other/pairs-as-lvalues.t.......................cannot connect to eval server: Connection refused
    0    5    0    0    5
      5 tests aborted (missing ok/not ok)
 S06-parameters/smiley.rakudo.jvm...................cannot connect to eval server: Connection refused
@@ -2486,8 +2643,8 @@ S32-io/spurt.rakudo.jvm............................cannot connect to eval server
    0   61    0    0   61
     61 tests aborted (missing ok/not ok)
 S32-io/tell.rakudo.jvm.............................cannot connect to eval server: Connection refused
-   0    4    0    0    4
-     4 tests aborted (missing ok/not ok)
+   0    5    0    0    5
+     5 tests aborted (missing ok/not ok)
 S32-list/batch.t...................................cannot connect to eval server: Connection refused
    0    4    0    0    4
      4 tests aborted (missing ok/not ok)
@@ -2644,9 +2801,9 @@ S32-num/cool-num.rakudo.jvm........................cannot connect to eval server
 S32-num/exp.t......................................cannot connect to eval server: Connection refused
    0   72    0    0   72
     72 tests aborted (missing ok/not ok)
-S32-num/expmod.t...................................cannot connect to eval server: Connection refused
-   0  117    0    0  117
-   117 tests aborted (missing ok/not ok)
+S32-num/expmod.rakudo.jvm..........................cannot connect to eval server: Connection refused
+   0  118    0    0  118
+   118 tests aborted (missing ok/not ok)
 S32-num/fatrat.rakudo.jvm..........................cannot connect to eval server: Connection refused
    0  288    0    0  288
    288 tests aborted (missing ok/not ok)
@@ -3237,8 +3394,8 @@ rosettacode/sierpinski_triangle.t..................cannot connect to eval server
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "S01",           0,     0,     0,    87,    87,    87
-"S02",        6497,  1055,   135,   370,  8057,  8060
-"S03",           0,  5997,     0,     0,  5997,  6003
+"S02",        7332,   199,   144,   389,  8064,  8067
+"S03",           0,  5998,     0,     0,  5998,  6004
 "S04",           0,  1550,     0,     0,  1550,  1602
 "S05",           0,  6197,     0,     0,  6197,  6417
 "S06",           0,  2324,     0,     0,  2324,  2380
@@ -3258,10 +3415,10 @@ rosettacode/sierpinski_triangle.t..................cannot connect to eval server
 "S26",           0,  1441,     0,     0,  1441,  1441
 "S28",           0,     5,     0,     0,     5,     9
 "S29",           0,   228,     0,     0,   228,   228
-"S32",           0, 10603,     0,     0, 10603, 17965
+"S32",           0, 10605,     0,     0, 10605, 17967
 "int",           0,  1357,     0,     0,  1357,  1356
 "ros",           0,     2,     0,     0,     2,     2
-"total",      6497, 36563,   135,   457, 43652,134662
+"total",      7332, 35710,   144,   476, 43662,134672
 ----------------
 Failure summary:
 S02-magicals/KERNEL.rakudo.jvm 41 - .signal: Str:D works with un-initialized $*KERNEL.signals
@@ -3290,18 +3447,13 @@ S02-names/is_default.rakudo.jvm 176 - typed hash element returned to its default
 S02-names/is_default.rakudo.jvm 184 - type attrib hash element returned to its default with Nil
 S02-names/is_default.rakudo.jvm 188 - type attrib hash element returned to its default with undefine
 S02-one-pass-parsing/misc.t 1 - spurious backslash at end of file error must ask for semicolon
+S02-types/capture.t 43 - types whose .Capture behaves like Mu.Capture
+S02-types/native.rakudo.jvm 94 - native strings can be as large as regular strings
 S02-types/nil.rakudo.jvm 20 - Nil assigned to scalar produces an Any
 S02-types/nil.rakudo.jvm 21 - 
 S02-types/nil.rakudo.jvm 25 - assigns to subset type object
-S02-types/range.rakudo.jvm aborted 189 test(s)
-S02-types/set.rakudo.jvm aborted 217 test(s)
-S02-types/sethash.rakudo.jvm aborted 246 test(s)
-S02-types/sigils-and-types.rakudo.jvm aborted 27 test(s)
-S02-types/stash.t aborted 1 test(s)
-S02-types/subscripts_and_context.t aborted 8 test(s)
-S02-types/subset.t aborted 49 test(s)
-S02-types/type.rakudo.jvm aborted 74 test(s)
-S02-types/undefined-types.rakudo.jvm aborted 49 test(s)
+S02-types/undefined-types.rakudo.jvm 10 - assigning Nil to Int should work
+S02-types/undefined-types.rakudo.jvm 25 - assigning Nil to hash element should work
 S02-types/unicode.rakudo.jvm aborted 5 test(s)
 S02-types/version.t aborted 44 test(s)
 S02-types/whatever.rakudo.jvm aborted 117 test(s)
@@ -3414,7 +3566,7 @@ S03-smartmatch/any-sub.t aborted 8 test(s)
 S03-smartmatch/any-type.t aborted 15 test(s)
 S03-smartmatch/array-array.t aborted 69 test(s)
 S03-smartmatch/array-hash.rakudo.jvm aborted 6 test(s)
-S03-smartmatch/capture-signature.t aborted 6 test(s)
+S03-smartmatch/capture-signature.t aborted 7 test(s)
 S03-smartmatch/disorganized.t aborted 42 test(s)
 S03-smartmatch/hash-hash.t aborted 16 test(s)
 S03-smartmatch/range-range.t aborted 20 test(s)
@@ -3618,7 +3770,7 @@ S06-other/main-semicolon.t aborted 10 test(s)
 S06-other/main-usage.rakudo.jvm aborted 31 test(s)
 S06-other/main.t aborted 9 test(s)
 S06-other/misc.t aborted 16 test(s)
-S06-other/pairs-as-lvalues.rakudo.jvm aborted 5 test(s)
+S06-other/pairs-as-lvalues.t aborted 5 test(s)
 S06-parameters/smiley.rakudo.jvm aborted 35 test(s)
 S06-routine-modifiers/lvalue-subroutines.t aborted 14 test(s)
 S06-routine-modifiers/native-lvalue-subroutines.t aborted 18 test(s)
@@ -4074,7 +4226,7 @@ S32-io/socket-fail-invalid-values.t aborted 4 test(s)
 S32-io/socket-host-port-split.rakudo.jvm aborted 2 test(s)
 S32-io/socket-recv-vs-read.t aborted 13 test(s)
 S32-io/spurt.rakudo.jvm aborted 61 test(s)
-S32-io/tell.rakudo.jvm aborted 4 test(s)
+S32-io/tell.rakudo.jvm aborted 5 test(s)
 S32-list/batch.t aborted 4 test(s)
 S32-list/categorize-list.t aborted 28 test(s)
 S32-list/categorize.t aborted 28 test(s)
@@ -4127,7 +4279,7 @@ S32-num/base.rakudo.jvm aborted 63 test(s)
 S32-num/complex.t aborted 553 test(s)
 S32-num/cool-num.rakudo.jvm aborted 45 test(s)
 S32-num/exp.t aborted 72 test(s)
-S32-num/expmod.t aborted 117 test(s)
+S32-num/expmod.rakudo.jvm aborted 118 test(s)
 S32-num/fatrat.rakudo.jvm aborted 288 test(s)
 S32-num/int.t aborted 162 test(s)
 S32-num/is-prime.t aborted 39 test(s)
