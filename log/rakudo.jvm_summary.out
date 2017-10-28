@@ -2647,8 +2647,8 @@ S04-statements/return.t............................Unhandled exception: VMArray 
   in <anon> (gen/jvm/CORE.setting:52061)
   in THREAD-ENTRY (gen/jvm/CORE.setting:51033)
 
-   0   22    0    0   22
-    22 tests aborted (missing ok/not ok)
+   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
 S04-statements/sink.t..............................Unhandled exception: VMArray representation does not implement bind_pos_native
   in STORE (gen/jvm/CORE.setting:29581)
   in STORE (gen/jvm/CORE.setting:28892)
@@ -9452,7 +9452,7 @@ rosettacode/sierpinski_triangle.t..................Unhandled exception: VMArray 
 "S01",           0,    87,     0,     0,    87,    87
 "S02",           0,  6085,     0,     0,  6085,  6089
 "S03",           0,  6000,     0,     0,  6000,  6006
-"S04",           0,  1553,     0,     0,  1553,  1605
+"S04",           0,  1555,     0,     0,  1555,  1607
 "S05",           0,  6198,     0,     0,  6198,  6418
 "S06",           0,  2324,     0,     0,  2324,  2380
 "S07",           0,   238,     0,     0,   238,   238
@@ -9474,7 +9474,7 @@ rosettacode/sierpinski_triangle.t..................Unhandled exception: VMArray 
 "S32",           0, 10589,     0,     0, 10589, 17982
 "int",           0,  1357,     0,     0,  1357,  1356
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41782,     0,     0, 41782,132825
+"total",         0, 41784,     0,     0, 41784,132827
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
@@ -9805,7 +9805,7 @@ S04-statements/once.t aborted 23 test(s)
 S04-statements/quietly.t aborted 4 test(s)
 S04-statements/redo.t aborted 12 test(s)
 S04-statements/repeat.t aborted 21 test(s)
-S04-statements/return.t aborted 22 test(s)
+S04-statements/return.t aborted 24 test(s)
 S04-statements/sink.t aborted 7 test(s)
 S04-statements/terminator.t aborted 20 test(s)
 S04-statements/try.t aborted 40 test(s)
