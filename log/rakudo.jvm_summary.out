@@ -5262,8 +5262,8 @@ S13-overloading/operators.t........................Unhandled exception: VMArray 
   in <anon> (gen/jvm/CORE.setting:52061)
   in THREAD-ENTRY (gen/jvm/CORE.setting:51033)
 
-   0    6    0    0    6
-     6 tests aborted (missing ok/not ok)
+   0    7    0    0    7
+     7 tests aborted (missing ok/not ok)
 S13-overloading/typecasting-long.t.................Unhandled exception: VMArray representation does not implement bind_pos_native
   in STORE (gen/jvm/CORE.setting:29581)
   in STORE (gen/jvm/CORE.setting:28892)
@@ -9460,7 +9460,7 @@ rosettacode/sierpinski_triangle.t..................Unhandled exception: VMArray 
 "S10",           0,   151,     0,     0,   151,   208
 "S11",           0,   217,     0,     0,   217,   226
 "S12",           0,  1863,     0,     0,  1863,  1912
-"S13",           0,    64,     0,     0,    64,    74
+"S13",           0,    65,     0,     0,    65,    75
 "S14",           0,   408,     0,     0,   408,   421
 "S15",           0,   128,     0,     0,   128, 82965
 "S16",           0,   563,     0,     0,   563,   600
@@ -9474,7 +9474,7 @@ rosettacode/sierpinski_triangle.t..................Unhandled exception: VMArray 
 "S32",           0, 10589,     0,     0, 10589, 17982
 "int",           0,  1357,     0,     0,  1357,  1356
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41784,     0,     0, 41784,132827
+"total",         0, 41785,     0,     0, 41785,132828
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
@@ -10130,7 +10130,7 @@ S12-methods/what.t aborted 33 test(s)
 S12-subset/multi-dispatch.t aborted 6 test(s)
 S12-subset/subtypes.rakudo.jvm aborted 88 test(s)
 S13-overloading/metaoperators.t aborted 13 test(s)
-S13-overloading/operators.t aborted 6 test(s)
+S13-overloading/operators.t aborted 7 test(s)
 S13-overloading/typecasting-long.t aborted 32 test(s)
 S13-type-casting/methods.t aborted 13 test(s)
 S14-roles/anonymous.t aborted 13 test(s)
