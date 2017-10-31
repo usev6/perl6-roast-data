@@ -823,8 +823,8 @@ S02-types/bag.rakudo.jvm...........................Unhandled exception: VMArray 
   in <anon> (gen/jvm/CORE.setting:52061)
   in THREAD-ENTRY (gen/jvm/CORE.setting:51033)
 
-   0  226    0    0  226
-   226 tests aborted (missing ok/not ok)
+   0  233    0    0  233
+   233 tests aborted (missing ok/not ok)
 S02-types/baggy.t..................................Unhandled exception: VMArray representation does not implement bind_pos_native
   in STORE (gen/jvm/CORE.setting:29581)
   in STORE (gen/jvm/CORE.setting:28892)
@@ -839,8 +839,8 @@ S02-types/baghash.rakudo.jvm.......................Unhandled exception: VMArray 
   in <anon> (gen/jvm/CORE.setting:52061)
   in THREAD-ENTRY (gen/jvm/CORE.setting:51033)
 
-   0  293    0    0  293
-   293 tests aborted (missing ok/not ok)
+   0  302    0    0  302
+   302 tests aborted (missing ok/not ok)
 S02-types/bool.t...................................Unhandled exception: VMArray representation does not implement bind_pos_native
   in STORE (gen/jvm/CORE.setting:29581)
   in STORE (gen/jvm/CORE.setting:28892)
@@ -1007,8 +1007,8 @@ S02-types/mix.rakudo.jvm...........................Unhandled exception: VMArray 
   in <anon> (gen/jvm/CORE.setting:52061)
   in THREAD-ENTRY (gen/jvm/CORE.setting:51033)
 
-   0  218    0    0  218
-   218 tests aborted (missing ok/not ok)
+   0  225    0    0  225
+   225 tests aborted (missing ok/not ok)
 S02-types/mixed_multi_dimensional.rakudo.jvm.......Unhandled exception: VMArray representation does not implement bind_pos_native
   in STORE (gen/jvm/CORE.setting:29581)
   in STORE (gen/jvm/CORE.setting:28892)
@@ -1023,8 +1023,8 @@ S02-types/mixhash.rakudo.jvm.......................Unhandled exception: VMArray 
   in <anon> (gen/jvm/CORE.setting:52061)
   in THREAD-ENTRY (gen/jvm/CORE.setting:51033)
 
-   0  262    0    0  262
-   262 tests aborted (missing ok/not ok)
+   0  271    0    0  271
+   271 tests aborted (missing ok/not ok)
 S02-types/mu.t.....................................Unhandled exception: VMArray representation does not implement bind_pos_native
   in STORE (gen/jvm/CORE.setting:29581)
   in STORE (gen/jvm/CORE.setting:28892)
@@ -1135,16 +1135,16 @@ S02-types/set.rakudo.jvm...........................Unhandled exception: VMArray 
   in <anon> (gen/jvm/CORE.setting:52061)
   in THREAD-ENTRY (gen/jvm/CORE.setting:51033)
 
-   0  218    0    0  218
-   218 tests aborted (missing ok/not ok)
+   0  225    0    0  225
+   225 tests aborted (missing ok/not ok)
 S02-types/sethash.rakudo.jvm.......................Unhandled exception: VMArray representation does not implement bind_pos_native
   in STORE (gen/jvm/CORE.setting:29581)
   in STORE (gen/jvm/CORE.setting:28892)
   in <anon> (gen/jvm/CORE.setting:52061)
   in THREAD-ENTRY (gen/jvm/CORE.setting:51033)
 
-   0  246    0    0  246
-   246 tests aborted (missing ok/not ok)
+   0  255    0    0  255
+   255 tests aborted (missing ok/not ok)
 S02-types/sigils-and-types.rakudo.jvm..............Unhandled exception: VMArray representation does not implement bind_pos_native
   in STORE (gen/jvm/CORE.setting:29581)
   in STORE (gen/jvm/CORE.setting:28892)
@@ -1351,8 +1351,8 @@ S03-metaops/hyper.rakudo.jvm.......................Unhandled exception: VMArray 
   in <anon> (gen/jvm/CORE.setting:52061)
   in THREAD-ENTRY (gen/jvm/CORE.setting:51033)
 
-   0  403    0    0  403
-   403 tests aborted (missing ok/not ok)
+   0  405    0    0  405
+   405 tests aborted (missing ok/not ok)
 S03-metaops/not.t..................................Unhandled exception: VMArray representation does not implement bind_pos_native
   in STORE (gen/jvm/CORE.setting:29581)
   in STORE (gen/jvm/CORE.setting:28892)
@@ -9450,8 +9450,8 @@ rosettacode/sierpinski_triangle.t..................Unhandled exception: VMArray 
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "MIS",           0,     5,     0,     0,     5,     5
 "S01",           0,    87,     0,     0,    87,    87
-"S02",           0,  6085,     0,     0,  6085,  6089
-"S03",           0,  6000,     0,     0,  6000,  6006
+"S02",           0,  6133,     0,     0,  6133,  6137
+"S03",           0,  6002,     0,     0,  6002,  6008
 "S04",           0,  1555,     0,     0,  1555,  1607
 "S05",           0,  6198,     0,     0,  6198,  6418
 "S06",           0,  2324,     0,     0,  2324,  2380
@@ -9474,7 +9474,7 @@ rosettacode/sierpinski_triangle.t..................Unhandled exception: VMArray 
 "S32",           0, 10589,     0,     0, 10589, 17982
 "int",           0,  1357,     0,     0,  1357,  1356
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 41785,     0,     0, 41785,132828
+"total",         0, 41835,     0,     0, 41835,132878
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
@@ -9579,9 +9579,9 @@ S02-types/array_ref.t aborted 45 test(s)
 S02-types/assigning-refs.t aborted 18 test(s)
 S02-types/autovivification.t aborted 22 test(s)
 S02-types/bag-iterator.t aborted 2 test(s)
-S02-types/bag.rakudo.jvm aborted 226 test(s)
+S02-types/bag.rakudo.jvm aborted 233 test(s)
 S02-types/baggy.t aborted 8 test(s)
-S02-types/baghash.rakudo.jvm aborted 293 test(s)
+S02-types/baghash.rakudo.jvm aborted 302 test(s)
 S02-types/bool.t aborted 68 test(s)
 S02-types/built-in.t aborted 1 test(s)
 S02-types/capture.t aborted 43 test(s)
@@ -9602,9 +9602,9 @@ S02-types/lazy-lists.t aborted 23 test(s)
 S02-types/list.rakudo.jvm aborted 71 test(s)
 S02-types/lists.t aborted 29 test(s)
 S02-types/mix-iterator.t aborted 2 test(s)
-S02-types/mix.rakudo.jvm aborted 218 test(s)
+S02-types/mix.rakudo.jvm aborted 225 test(s)
 S02-types/mixed_multi_dimensional.rakudo.jvm aborted 80 test(s)
-S02-types/mixhash.rakudo.jvm aborted 262 test(s)
+S02-types/mixhash.rakudo.jvm aborted 271 test(s)
 S02-types/mu.t aborted 8 test(s)
 S02-types/multi_dimensional_array.rakudo.jvm aborted 58 test(s)
 S02-types/nan.t aborted 28 test(s)
@@ -9618,8 +9618,8 @@ S02-types/parsing-bool.t aborted 4 test(s)
 S02-types/range-iterator.t aborted 12 test(s)
 S02-types/range.rakudo.jvm aborted 191 test(s)
 S02-types/set-iterator.t aborted 2 test(s)
-S02-types/set.rakudo.jvm aborted 218 test(s)
-S02-types/sethash.rakudo.jvm aborted 246 test(s)
+S02-types/set.rakudo.jvm aborted 225 test(s)
+S02-types/sethash.rakudo.jvm aborted 255 test(s)
 S02-types/sigils-and-types.rakudo.jvm aborted 27 test(s)
 S02-types/stash.t aborted 1 test(s)
 S02-types/subscripts_and_context.t aborted 8 test(s)
@@ -9644,7 +9644,7 @@ S03-junctions/boolean-context.t aborted 74 test(s)
 S03-junctions/misc.t aborted 146 test(s)
 S03-metaops/cross.t aborted 79 test(s)
 S03-metaops/eager-hyper.t aborted 8 test(s)
-S03-metaops/hyper.rakudo.jvm aborted 403 test(s)
+S03-metaops/hyper.rakudo.jvm aborted 405 test(s)
 S03-metaops/not.t aborted 46 test(s)
 S03-metaops/reduce.rakudo.jvm aborted 559 test(s)
 S03-metaops/reverse.t aborted 68 test(s)
