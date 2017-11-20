@@ -70,10 +70,10 @@ S01-perl-5-integration/eval_lex.rakudo.jvm.........Could not find Inline::Perl5 
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<338466092>
-    CompUnit::Repository::NQP<1940653618>
-    CompUnit::Repository::Perl5<1003890873>
-    CompUnit::Repository::JavaRuntime<1268997914>
+    CompUnit::Repository::AbsolutePath<1298507779>
+    CompUnit::Repository::NQP<338466092>
+    CompUnit::Repository::Perl5<1528014440>
+    CompUnit::Repository::JavaRuntime<1003890873>
   in block <unit> at t/spec/S01-perl-5-integration/eval_lex.rakudo.jvm line 7
 
    0    0    0    2    2
@@ -507,7 +507,7 @@ S02-types/built-in.t...............................   1    0    0    0    1
 S02-types/capture.t................................# Failed test 'text matches '/'Capture|(Scalar|' \d+ ')'/''
 # at t/spec/S02-types/capture.t line 197
 #      expected: '/'Capture|(Scalar|' \d+ ')'/'
-#      got: 'Capture|(Int|226125493)'
+#      got: 'Capture|(Int|1494528151)'
         # Failed test 'numerator'
         # at t/spec/S02-types/capture.t line 312
         # expected: 1
@@ -687,7 +687,7 @@ S02-types/version-stress.t.........................2035    0    0    0 2035
 S02-types/version.t................................  44    0    0    0   44
 S02-types/whatever.rakudo.jvm......................#      got err: "WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/EVAL_0:\nUseless use of \"+\" in expression \"*+*\" in sink context (line 1)\n"
 # expected err: ""
-#      got err: "WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/getout-16421-593592.code:\nUseless use of \"==\" in expression \"* == 42\" in sink context (line 1)\n"
+#      got err: "WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/getout-89573-844032.code:\nUseless use of \"==\" in expression \"* == 42\" in sink context (line 1)\n"
 # expected err: ""
  113    0    4    0  117
      1 todo   : * as dummy
@@ -1205,7 +1205,10 @@ S03-operators/set_addition.t.......................Too many positionals passed; 
 # Looks like you planned 678 tests, but ran 165
  165  513    0    0  678
    513 tests aborted (missing ok/not ok)
-S03-operators/set_difference.t.....................   0    2    0    0    2
+S03-operators/set_difference.t.....................java.lang.IllegalArgumentException: bad parameter count 285
+  in block <unit> at t/spec/S03-operators/set_difference.t line 191
+
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
 S03-operators/set_elem.t........................... 228    0    0    0  228
 S03-operators/set_intersection.t................... 622    0    0    0  622
@@ -1241,10 +1244,7 @@ Please use set operator ⊇ instead.
 Please contact the author to have these occurrences of deprecated code
 adapted, so that this message will disappear!
   32    0    0    0   32
-S03-operators/set_proper_subset.t..................java.lang.IllegalArgumentException: bad parameter count 337
-  in block <unit> at t/spec/S03-operators/set_proper_subset.t line 385
-
-   0    2    0    0    2
+S03-operators/set_proper_subset.t..................   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
 S03-operators/set_subset.t.........................java.lang.IllegalArgumentException: bad parameter count 331
   in block <unit> at t/spec/S03-operators/set_subset.t line 381
@@ -2684,13 +2684,13 @@ S16-filehandles/argfiles.rakudo.jvm................#      got out: "a\nb\nc\n\n\
   13    0    1    2   16
      2 skipped: hangs, RT  \#131393
      1 todo   : appends newlines after expected output
-S16-filehandles/chmod.t............................# Using file temp_1511062397
-# Using file temp_1511062397
-# Using file temp_1511062397
+S16-filehandles/chmod.t............................# Using file temp_1511159613
+# Using file temp_1511159613
+# Using file temp_1511159613
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-46212-1.temp
-# Using file temp-16-filehandles-filestat-46212-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-18856-1.temp
+# Using file temp-16-filehandles-filestat-18856-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 115    0    0   13  128
@@ -2718,11 +2718,11 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-605734
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-518472
   14    0    0    0   14
-S16-filehandles/mode.t.............................# Using file temp_1511062522.834
-# Using file temp_1511062522.899
-# Using file temp_1511062522.913
+S16-filehandles/mode.t.............................# Using file temp_1511159739.532
+# Using file temp_1511159739.592
+# Using file temp_1511159739.609
   15    0    0    0   15
 S16-filehandles/open.t.............................   4    0    0    1    5
      1 skipped: open('nonexisting') => undefined is waiting on 'use fatal'
@@ -2778,7 +2778,7 @@ S17-lowlevel/thread.t..............................  29    0    0    0   29
 S17-promise/allof.t................................# Failed test 'got the right order'
 # at t/spec/S17-promise/allof.t line 44
 # expected: '0 1 2 3 4 5 6 7 8 9'
-#      got: '2 0 5 9 6 3 7 8 1 4'
+#      got: '5 2 9 7 6 1 8 3 4 0'
 # Looks like you failed 1 test of 13
   12    1    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
@@ -2817,8 +2817,7 @@ S17-promise/lock-async-stress2.t...................   1    0    0    0    1
 S17-promise/lock-async.t...........................  37    0    0    0   37
 S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-1" org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
-	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:335)
-	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5543)   5    0    2   20   27
+   5    0    2   20   27
      1 skipped: NullPointerException
      5 skipped: UnwindException
     13 skipped: hangs on JVM
@@ -2836,7 +2835,11 @@ Useless use of constant integer 1 in sink context (use Nil instead to suppress t
      2 skipped: waiting for new '.loads' semantics RT  \#124775
      3 skipped: waiting for new '.loads' semantics RT  \#124776
      2 skipped: waiting for new '.loads' semantics RT  \#124777
-S17-scheduler/every.t..............................  20    0    0    0   20
+S17-scheduler/every.t..............................# Failed test 'Cue with :every schedules repeatedly'
+# at t/spec/S17-scheduler/every.t line 16
+# seen 21 runs
+# Looks like you failed 1 test of 20
+  19    1    0    0   20
 S17-scheduler/in.t.................................  14    0    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.t...............................# **** scheduling with ThreadPoolScheduler
@@ -2896,8 +2899,7 @@ S17-supply/interval.t..............................   9    0    0    0    9
 S17-supply/lines.rakudo.jvm........................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    5    0    0    0    5
@@ -6142,14 +6144,14 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# recursive-ternary: 6.848 seconds
-# gerdr: 7.054 seconds
-# kaz: 7.08 seconds
-# loop: 7.103 seconds
-# hand-memoization: 7.288 seconds
-# sequence-ternary: 18.069 seconds
-# recursive-ternary-hand-cached: 32.892 seconds
-# sequence: 34.05 seconds
+integration/advent2012-day21.t.....................# recursive-ternary: 6.657 seconds
+# kaz: 6.758 seconds
+# gerdr: 6.814 seconds
+# hand-memoization: 7.011 seconds
+# loop: 7.289 seconds
+# sequence-ternary: 14.737 seconds
+# recursive-ternary-hand-cached: 32.329 seconds
+# sequence: 34.011 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -6184,7 +6186,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed for parameter '$x'
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-75896-386369.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-48607-674219.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:335)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   28    3    2    0   33
      1 todo   : UnwindException
@@ -6236,7 +6238,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         398,     0,     5,     5,   408,   421
 "S15",          54,     2,     4,    68,   128, 82967
 "S16",         715,     1,    14,    38,   768,   805
-"S17",         984,     7,    18,    70,  1079,  1303
+"S17",         983,     8,    18,    70,  1079,  1303
 "S19",          15,     0,     7,     3,    25,    26
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          54,     1,     0,     0,    55,   127
@@ -6246,7 +6248,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       14635,    34,   140,   167, 14976, 20593
 "int",        1337,     5,     9,    19,  1370,  1366
 "ros",           2,     0,     0,     0,     2,     2
-"total",     51362,  1499,   748,  1516, 55125,144458
+"total",     51361,  1500,   748,  1516, 55125,144458
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
@@ -6271,6 +6273,7 @@ S17-promise/basic.t 34 - promises execute asynchronously [try 1]
 S17-promise/basic.t 35 - promises execute asynchronously [try 2]
 S17-promise/basic.t 36 - promises execute asynchronously [try 3]
 S17-promise/in.t 1 - Scheduler did not cause things to run in wrong order
+S17-scheduler/every.t 2 - Cue with :every schedules repeatedly
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S29-context/eval.rakudo.jvm 25 - EVAL(Buf)
 S29-context/evalfile.t 3 - &EVALFILE respects compiler encoding options
