@@ -685,7 +685,7 @@ S02-types/version-stress.t.........................2035    0    0    0 2035
 S02-types/version.t................................  44    0    0    0   44
 S02-types/whatever.rakudo.jvm......................#      got err: "WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/EVAL_0:\nUseless use of \"+\" in expression \"*+*\" in sink context (line 1)\n"
 # expected err: ""
-#      got err: "WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/getout-91939-130054.code:\nUseless use of \"==\" in expression \"* == 42\" in sink context (line 1)\n"
+#      got err: "WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/getout-86349-27635.code:\nUseless use of \"==\" in expression \"* == 42\" in sink context (line 1)\n"
 # expected err: ""
  116    0    4    0  120
      1 todo   : * as dummy
@@ -2750,13 +2750,13 @@ S16-filehandles/argfiles.rakudo.jvm................#      got out: "a\nb\nc\n\n\
   13    0    1    2   16
      2 skipped: hangs, RT  \#131393
      1 todo   : appends newlines after expected output
-S16-filehandles/chmod.t............................# Using file temp_1514430916
-# Using file temp_1514430916
-# Using file temp_1514430916
+S16-filehandles/chmod.t............................# Using file temp_1514517311
+# Using file temp_1514517311
+# Using file temp_1514517311
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-22113-1.temp
-# Using file temp-16-filehandles-filestat-22113-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-16499-1.temp
+# Using file temp-16-filehandles-filestat-16499-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 115    0    0   13  128
@@ -2769,11 +2769,11 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-860310
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-709466
   14    0    0    0   14
-S16-filehandles/mode.t.............................# Using file temp_1514431042.635
-# Using file temp_1514431042.689
-# Using file temp_1514431042.704
+S16-filehandles/mode.t.............................# Using file temp_1514517438.89
+# Using file temp_1514517438.958
+# Using file temp_1514517438.970999
   15    0    0    0   15
 S16-filehandles/open.t.............................   4    0    0    1    5
      1 skipped: open('nonexisting') => undefined is waiting on 'use fatal'
@@ -2846,11 +2846,7 @@ S17-promise/lock-async-stress.t....................   1    0    0    0    1
 S17-promise/lock-async-stress2.t...................   1    0    0    0    1
 S17-promise/lock-async.t...........................  37    0    0    0   37
 S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-1" org.perl6.nqp.runtime.UnwindException
-	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
-	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:335)
-	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5543)
-	at java.lang.Thread.run(Thread.java:748)
-   5    0    2   21   28
+	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)   5    0    2   21   28
      1 skipped: NullPointerException
      5 skipped: UnwindException
      1 skipped: atomicint NYI
@@ -3041,8 +3037,6 @@ Unhandled exception; category = 1
   in run-supply-code (gen/jvm/CORE.setting:55780)
   in <anon> (gen/jvm/CORE.setting:55722)
   in <anon> (gen/jvm/CORE.setting:54001)
-  in <anon> (gen/jvm/CORE.setting:52599)
-  in <anon> (gen/jvm/CORE.setting:52413)
   in <anon> (gen/jvm/CORE.setting:52591)
   in run-one (gen/jvm/CORE.setting:52585)
   in dispatch:<!> (gen/jvm/CORE.setting:1729)
@@ -5627,25 +5621,10 @@ S32-io/io-cathandle.rakudo.jvm.....................  26    0    0    3   29
      1 skipped: Method 'sink' not found for invocant of class 'BOOTIO'
      1 skipped: UnwindException
      1 skipped: hangs; Rakudo GH  \#1313
-S32-io/io-handle.rakudo.jvm........................Use of Nil in string context
-Unhandled exception: java.lang.InternalError: BMH.reinvoke=Lambda(a0:L/SpeciesData<LLLL>,a1:L,a2:I,a3:L,a4:L)=>{
-    t5:L=BoundMethodHandle$Species_L4.argL3(a0:L);
-    t6:L=BoundMethodHandle$Species_L4.argL2(a0:L);
-    t7:L=BoundMethodHandle$Species_L4.argL1(a0:L);
-    t8:L=BoundMethodHandle$Species_L4.argL0(a0:L);
-    t9:V=MethodHandle.invokeBasic(t8:L,a1:L,t7:L,t6:L,t5:L,a3:L,a4:L);void}
-  in command_eval (gen/jvm/stage2/NQPHLL.nqp:1347)
-  in command_eval (src/Perl6/Compiler.nqp:42)
-  in command_line (gen/jvm/stage2/NQPHLL.nqp:1269)
-  in MAIN (gen/jvm/main.nqp:47)
-  in <mainline> (gen/jvm/main.nqp:38)
-  in <anon> (gen/jvm/main.nqp)
-
-  24    1    3    0   28
+S32-io/io-handle.rakudo.jvm........................  25    0    3    0   28
      1 todo   : OutOfMemoryError: Java heap space
      1 todo   : does not die
      1 todo   : requires nqp::filenofh to work
-     1 tests aborted (missing ok/not ok)
 S32-io/io-path-cygwin.rakudo.jvm...................Use of uninitialized value $CWD of type Any in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block <unit> at t/spec/S32-io/io-path-cygwin.rakudo.jvm line 9
@@ -6810,30 +6789,30 @@ integration/advent2012-day21.t.....................# Failed test 'recursive-tern
 # #
 # # A fatal error has been detected by the Java Runtime Environment:
 # #
-# #  SIGSEGV (0xb) at pc=0x00000008039b7110, pid=51187, tid=0x000000000001874d
+# #  SIGSEGV (0xb) at pc=0x0000000804859960, pid=45494, tid=0x000000000001875d
 # #
 # # JRE version: OpenJDK Runtime Environment (8.0_144-b01) (build 1.8.0_144-b01)
 # # Java VM: OpenJDK 64-Bit Server VM (25.144-b01 mixed mode bsd-amd64 compressed oops)
 # # Problematic frame:
-# # J 180 C2 java.lang.String.equals(Ljava/lang/Object;)Z (81 bytes) @ 0x00000008039b7110 [0x00000008039b70e0+0x30]
+# # J 3261 C2 80AD30916FEC53590349E5617408B4FD39548E51.qb_328(Lorg/perl6/nqp/runtime/CompilationUnit;Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/runtime/CodeRef;Lorg/perl6/nqp/runtime/CallSiteDescriptor;Lorg/perl6/nqp/runtime/ResumeStatus$Frame;Lorg/perl6/nqp/sixmodel/SixModelObject;Lorg/perl6/nqp/sixmodel/SixModelObject;)V (244 bytes) @ 0x0000000804859960 [0x0000000804859960+0x0]
 # #
 # # Core dump written. Default location: /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/java.core
 # #
 # # An error report file with more information is saved as:
-# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid51187.log
+# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid45494.log
 # #
 # # If you would like to submit a bug report, please visit:
 # #   http://bugreport.java.com/bugreport/crash.jsp
 # #
 # '
-# kaz: 6.204 seconds
-# gerdr: 6.259 seconds
-# loop: 6.797 seconds
-# hand-memoization: 6.952 seconds
-# recursive-ternary: 7.074 seconds
-# sequence-ternary: 15.069 seconds
-# recursive-ternary-hand-cached: 18.702 seconds
-# sequence: 22.768 seconds
+# kaz: 6.2 seconds
+# gerdr: 6.285 seconds
+# loop: 6.8259989 seconds
+# hand-memoization: 7.032 seconds
+# recursive-ternary: 7.123 seconds
+# sequence-ternary: 15.097 seconds
+# recursive-ternary-hand-cached: 18.781 seconds
+# sequence: 23.57 seconds
 # Looks like you failed 1 test of 9
    8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
@@ -6869,7 +6848,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed for parameter '$x'
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-52383-771868.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-46688-989333.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:335)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   31    0    2    0   33
      1 todo   : UnwindException
@@ -6926,10 +6905,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1441,     0,     5,    48,  1494,  1486
 "S28",           5,     0,     0,     0,     5,     9
 "S29",         443,     4,     3,     3,   453,   453
-"S32",       14658,    34,   134,   159, 14985, 20602
+"S32",       14659,    33,   134,   159, 14985, 20602
 "int",        1339,     2,     9,    19,  1369,  1365
 "ros",           2,     0,     0,     0,     2,     2
-"total",     52960,    74,   726,  1478, 55238,144636
+"total",     52961,    73,   726,  1478, 55238,144636
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
@@ -6968,7 +6947,6 @@ S32-container/buf.t 20 - resized Bufs do not have leftover values
 S32-encoding/encoder.t 2 - Dies it try to encode disallowed char
 S32-encoding/encoder.t aborted 2 test(s)
 S32-io/IO-Socket-Async.rakudo.jvm aborted 25 test(s)
-S32-io/io-handle.rakudo.jvm aborted 1 test(s)
 S32-io/out-buffering.t 1 - .open: \(:w)
 S32-io/out-buffering.t 2 - .open: \(:rw)
 S32-io/out-buffering.t 3 - .open: \(:a)
