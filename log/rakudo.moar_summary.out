@@ -2740,9 +2740,9 @@ S26-documentation/07c-tables.t.....................nice: ./perl6-m: No such file
 S26-documentation/08-formattingcodes.t.............nice: ./perl6-m: No such file or directory
    0   43    0    0   43
     43 tests aborted (missing ok/not ok)
-S26-documentation/09-configuration.rakudo.moar.....nice: ./perl6-m: No such file or directory
-   0   18    0    0   18
-    18 tests aborted (missing ok/not ok)
+S26-documentation/09-configuration.t...............nice: ./perl6-m: No such file or directory
+   0   94    0    0   94
+    94 tests aborted (missing ok/not ok)
 S26-documentation/10-doc-cli.t.....................nice: ./perl6-m: No such file or directory
    0    2    0    0    2
      2 tests aborted (missing ok/not ok)
@@ -3212,8 +3212,8 @@ S32-list/rotor.t...................................nice: ./perl6-m: No such file
    0   16    0    0   16
     16 tests aborted (missing ok/not ok)
 S32-list/seq.rakudo.moar...........................nice: ./perl6-m: No such file or directory
-   0   40    0    0   40
-    40 tests aborted (missing ok/not ok)
+   0   41    0    0   41
+    41 tests aborted (missing ok/not ok)
 S32-list/skip.t....................................nice: ./perl6-m: No such file or directory
    0   26    0    0   26
     26 tests aborted (missing ok/not ok)
@@ -3886,13 +3886,13 @@ rosettacode/sierpinski_triangle.t..................nice: ./perl6-m: No such file
 "S19",           0,    25,     0,     0,    25,    25
 "S22",           0,    19,     0,     0,    19,    19
 "S24",           0,    55,     0,     0,    55,   127
-"S26",           0,  1494,     0,     0,  1494,  1486
+"S26",           0,  1570,     0,     0,  1570,  1562
 "S28",           0,     9,     0,     0,     9,     9
 "S29",           0,   229,     0,     0,   229,   229
-"S32",           0, 17978,     0,     0, 17978, 18003
+"S32",           0, 17979,     0,     0, 17979, 18004
 "int",           0,  1366,     0,     0,  1366,  1355
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0,134963,     0,     0,134963,133115
+"total",         0,135040,     0,     0,135040,133192
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
@@ -4800,7 +4800,7 @@ S26-documentation/07a-tables.t aborted 61 test(s)
 S26-documentation/07b-tables.t aborted 4 test(s)
 S26-documentation/07c-tables.t aborted 8 test(s)
 S26-documentation/08-formattingcodes.t aborted 43 test(s)
-S26-documentation/09-configuration.rakudo.moar aborted 18 test(s)
+S26-documentation/09-configuration.t aborted 94 test(s)
 S26-documentation/10-doc-cli.t aborted 2 test(s)
 S26-documentation/block-leading.t aborted 335 test(s)
 S26-documentation/block-trailing.t aborted 52 test(s)
@@ -4956,7 +4956,7 @@ S32-list/repeated.t aborted 38 test(s)
 S32-list/reverse.rakudo.moar aborted 19 test(s)
 S32-list/roll.t aborted 51 test(s)
 S32-list/rotor.t aborted 16 test(s)
-S32-list/seq.rakudo.moar aborted 40 test(s)
+S32-list/seq.rakudo.moar aborted 41 test(s)
 S32-list/skip.t aborted 26 test(s)
 S32-list/sort.t aborted 35 test(s)
 S32-list/squish.t aborted 31 test(s)
