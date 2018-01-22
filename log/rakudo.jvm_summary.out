@@ -28,9 +28,9 @@ S01-perl-5-integration/basic.rakudo.jvm............Could not find Inline::Perl5 
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<2133657511>
+    CompUnit::Repository::AbsolutePath<1621547368>
     CompUnit::Repository::NQP<1488477854>
-    CompUnit::Repository::Perl5<1742818853>
+    CompUnit::Repository::Perl5<828030207>
     CompUnit::Repository::JavaRuntime<1894153537>
   in block <unit> at t/spec/S01-perl-5-integration/basic.rakudo.jvm line 5
 
@@ -72,7 +72,7 @@ S01-perl-5-integration/eval_lex.rakudo.jvm.........Could not find Inline::Perl5 
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
     CompUnit::Repository::AbsolutePath<1630797023>
-    CompUnit::Repository::NQP<704317024>
+    CompUnit::Repository::NQP<1284335865>
     CompUnit::Repository::Perl5<1343698266>
     CompUnit::Repository::JavaRuntime<775749251>
   in block <unit> at t/spec/S01-perl-5-integration/eval_lex.rakudo.jvm line 7
@@ -116,7 +116,7 @@ S01-perl-5-integration/import.t....................Could not find Inline::Perl5 
     CompUnit::Repository::AbsolutePath<1352004823>
     CompUnit::Repository::NQP<1450203022>
     CompUnit::Repository::Perl5<162084425>
-    CompUnit::Repository::JavaRuntime<1052922176>
+    CompUnit::Repository::JavaRuntime<1091446522>
   in block <unit> at t/spec/S01-perl-5-integration/import.t line 12
 
    0    0    0    3    3
@@ -130,7 +130,7 @@ S01-perl-5-integration/method.rakudo.jvm...........Could not find Inline::Perl5 
     CompUnit::Repository::AbsolutePath<1219553924>
     CompUnit::Repository::NQP<250799747>
     CompUnit::Repository::Perl5<1983010724>
-    CompUnit::Repository::JavaRuntime<1784645072>
+    CompUnit::Repository::JavaRuntime<628408112>
   in block <unit> at t/spec/S01-perl-5-integration/method.rakudo.jvm line 7
 
    0    0    0   13   13
@@ -171,7 +171,7 @@ S01-perl-5-integration/strings.rakudo.jvm..........Could not find Inline::Perl5 
     /home/christian/bin/rakudo.jvm/share/perl6
     CompUnit::Repository::AbsolutePath<1165493493>
     CompUnit::Repository::NQP<1539710820>
-    CompUnit::Repository::Perl5<33079021>
+    CompUnit::Repository::Perl5<1489073617>
     CompUnit::Repository::JavaRuntime<69361035>
   in block <unit> at t/spec/S01-perl-5-integration/strings.rakudo.jvm line 6
 
@@ -1194,17 +1194,17 @@ Will be removed with release v6.d!
 Please use set operator (<=) instead.
 --------------------------------------------------------------------------------
 Set operator (>+) seen at:
-  gen/jvm/CORE.setting, line 49647
+  gen/jvm/CORE.setting, line 49649
 Will be removed with release v6.d!
 Please use set operator (>=) instead.
 --------------------------------------------------------------------------------
 Set operator ≼ seen at:
-  gen/jvm/CORE.setting, line 49640
+  gen/jvm/CORE.setting, line 49642
 Will be removed with release v6.d!
 Please use set operator ⊆ instead.
 --------------------------------------------------------------------------------
 Set operator ≽ seen at:
-  gen/jvm/CORE.setting, line 49653
+  gen/jvm/CORE.setting, line 49655
 Will be removed with release v6.d!
 Please use set operator ⊇ instead.
 --------------------------------------------------------------------------------
@@ -2630,13 +2630,13 @@ S16-filehandles/argfiles.rakudo.jvm................#      got out: "a\nb\nc\n\n\
   13    0    1    2   16
      2 skipped: hangs, RT  \#131393
      1 todo   : appends newlines after expected output
-S16-filehandles/chmod.t............................# Using file temp_1516502545
-# Using file temp_1516502545
-# Using file temp_1516502545
+S16-filehandles/chmod.t............................# Using file temp_1516592521
+# Using file temp_1516592521
+# Using file temp_1516592522
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-73089-1.temp
-# Using file temp-16-filehandles-filestat-73089-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-65487-1.temp
+# Using file temp-16-filehandles-filestat-65487-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 115    0    0   13  128
@@ -2649,7 +2649,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-603311
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-302104
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2724,10 +2724,7 @@ S17-promise/lock-async-stress2.t...................   1    0    0    0    1
 S17-promise/lock-async.t...........................  37    0    0    0   37
 S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-1" org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
-	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:335)
-	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5619)
-	at java.lang.Thread.run(Thread.java:748)
-   5    0    2   21   28
+	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:335)   5    0    2   21   28
      1 skipped: NullPointerException
      5 skipped: UnwindException
      1 skipped: atomicint NYI
@@ -2807,8 +2804,7 @@ S17-supply/interval.t..............................   9    0    0    0    9
 S17-supply/lines.rakudo.jvm........................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0    0    0    9
@@ -2879,42 +2875,42 @@ S17-supply/tail.t..................................# **** scheduling with Thread
    8    0    0    0    8
 S17-supply/throttle.t..............................# **** scheduling with ThreadPoolScheduler
 Unhandled exception; category = 1
-  in <anon> (gen/jvm/CORE.setting:54103)
+  in <anon> (gen/jvm/CORE.setting:54105)
   in <anon> (gen/jvm/CORE.setting)
   in <anon> (gen/jvm/CORE.setting)
-  in throw (gen/jvm/CORE.setting:36253)
-  in print_control (gen/jvm/CORE.setting:36637)
-  in <anon> (gen/jvm/CORE.setting:36656)
+  in throw (gen/jvm/CORE.setting:36255)
+  in print_control (gen/jvm/CORE.setting:36639)
+  in <anon> (gen/jvm/CORE.setting:36658)
+  in <anon> (gen/jvm/CORE.setting:52680)
   in <anon> (gen/jvm/CORE.setting:52678)
-  in <anon> (gen/jvm/CORE.setting:52676)
   in <anon> (gen/jvm/CORE.setting)
   in THROW-NIL (gen/jvm/CORE.setting:709)
   in done (gen/jvm/CORE.setting:852)
   in <anon> (t/spec/S17-supply/throttle.t:104)
-  in <anon> (gen/jvm/CORE.setting:55864)
-  in <anon> (gen/jvm/CORE.setting:55864)
-  in <anon> (gen/jvm/CORE.setting:55917)
-  in run-under-recursion-list (gen/jvm/CORE.setting:52187)
-  in run-with-updated-recursion-list (gen/jvm/CORE.setting:52167)
-  in protect-or-queue-on-recursion (gen/jvm/CORE.setting:52130)
-  in run-supply-code (gen/jvm/CORE.setting:55915)
-  in <anon> (gen/jvm/CORE.setting:55864)
-  in run-done (gen/jvm/CORE.setting:55823)
+  in <anon> (gen/jvm/CORE.setting:55866)
+  in <anon> (gen/jvm/CORE.setting:55866)
+  in <anon> (gen/jvm/CORE.setting:55919)
+  in run-under-recursion-list (gen/jvm/CORE.setting:52189)
+  in run-with-updated-recursion-list (gen/jvm/CORE.setting:52169)
+  in protect-or-queue-on-recursion (gen/jvm/CORE.setting:52132)
+  in run-supply-code (gen/jvm/CORE.setting:55917)
+  in <anon> (gen/jvm/CORE.setting:55866)
+  in run-done (gen/jvm/CORE.setting:55825)
   in <anon> (gen/jvm/CORE.setting)
   in THROW-NIL (gen/jvm/CORE.setting:709)
   in done (gen/jvm/CORE.setting:852)
-  in <anon> (gen/jvm/CORE.setting:55289)
-  in <anon> (gen/jvm/CORE.setting:55917)
-  in run-under-recursion-list (gen/jvm/CORE.setting:52187)
-  in run-with-updated-recursion-list (gen/jvm/CORE.setting:52167)
-  in protect-or-queue-on-recursion (gen/jvm/CORE.setting:52130)
-  in run-supply-code (gen/jvm/CORE.setting:55915)
-  in <anon> (gen/jvm/CORE.setting:55857)
-  in <anon> (gen/jvm/CORE.setting:54102)
-  in <anon> (gen/jvm/CORE.setting:52673)
-  in run-one (gen/jvm/CORE.setting:52667)
-  in <anon> (gen/jvm/CORE.setting:52718)
-  in THREAD-ENTRY (gen/jvm/CORE.setting:51847)
+  in <anon> (gen/jvm/CORE.setting:55291)
+  in <anon> (gen/jvm/CORE.setting:55919)
+  in run-under-recursion-list (gen/jvm/CORE.setting:52189)
+  in run-with-updated-recursion-list (gen/jvm/CORE.setting:52169)
+  in protect-or-queue-on-recursion (gen/jvm/CORE.setting:52132)
+  in run-supply-code (gen/jvm/CORE.setting:55917)
+  in <anon> (gen/jvm/CORE.setting:55859)
+  in <anon> (gen/jvm/CORE.setting:54104)
+  in <anon> (gen/jvm/CORE.setting:52675)
+  in run-one (gen/jvm/CORE.setting:52669)
+  in <anon> (gen/jvm/CORE.setting:52720)
+  in THREAD-ENTRY (gen/jvm/CORE.setting:51849)
 
   17    1    0    0   18
      1 tests aborted (missing ok/not ok)
@@ -6638,30 +6634,30 @@ integration/advent2012-day21.t.....................# Failed test 'recursive-tern
 # #
 # # A fatal error has been detected by the Java Runtime Environment:
 # #
-# #  SIGSEGV (0xb) at pc=0x0000000804274070, pid=1980, tid=0x0000000000018725
+# #  SIGSEGV (0xb) at pc=0x000000080429c0d0, pid=94323, tid=0x0000000000018742
 # #
 # # JRE version: OpenJDK Runtime Environment (8.0_152-b16) (build 1.8.0_152-b16)
 # # Java VM: OpenJDK 64-Bit Server VM (25.152-b16 mixed mode bsd-amd64 compressed oops)
 # # Problematic frame:
-# # J 2164 C2 __P6opaque__78.get_attribute_boxed(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/sixmodel/SixModelObject;Ljava/lang/String;J)Lorg/perl6/nqp/sixmodel/SixModelObject; (214 bytes) @ 0x0000000804274070 [0x0000000804274040+0x30]
+# # J 2156 C2 __P6opaque__78.get_attribute_boxed(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/sixmodel/SixModelObject;Ljava/lang/String;J)Lorg/perl6/nqp/sixmodel/SixModelObject; (214 bytes) @ 0x000000080429c0d0 [0x000000080429c0a0+0x30]
 # #
 # # Core dump written. Default location: /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/java.core
 # #
 # # An error report file with more information is saved as:
-# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid1980.log
+# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid94323.log
 # #
 # # If you would like to submit a bug report, please visit:
 # #   http://bugreport.java.com/bugreport/crash.jsp
 # #
 # '
-# kaz: 7.666 seconds
-# gerdr: 7.9 seconds
-# loop: 8.031 seconds
-# recursive-ternary: 8.244 seconds
-# hand-memoization: 8.488 seconds
-# sequence-ternary: 17.054 seconds
-# recursive-ternary-hand-cached: 18.253 seconds
-# sequence: 25.626 seconds
+# kaz: 7.676 seconds
+# gerdr: 7.741 seconds
+# loop: 8.093 seconds
+# recursive-ternary: 8.117 seconds
+# hand-memoization: 8.299 seconds
+# sequence-ternary: 17.376 seconds
+# recursive-ternary-hand-cached: 18.74 seconds
+# sequence: 25.01 seconds
 # Looks like you failed 1 test of 9
    8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
@@ -6697,7 +6693,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed for parameter '$x'
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-3164-873905.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-95513-194950.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:335)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   31    0    2    0   33
      1 todo   : UnwindException
