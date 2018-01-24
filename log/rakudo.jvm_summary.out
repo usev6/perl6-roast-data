@@ -503,7 +503,7 @@ S02-types/array_ref.t..............................  45    0    0    0   45
 S02-types/assigning-refs.t.........................  18    0    0    0   18
 S02-types/autovivification.t.......................  22    0    0    0   22
 S02-types/bag-iterator.t...........................  14    0    0    0   14
-S02-types/bag.t.................................... 233    0    0    0  233
+S02-types/bag.t.................................... 234    0    0    0  234
 S02-types/baggy.t..................................   9    0    0    0    9
 S02-types/baghash.rakudo.jvm....................... 279    0    2   21  302
     21 skipped: 'is TypeObject' NYI RT  \#124490
@@ -1188,7 +1188,10 @@ Use of uninitialized value of type Int in numeric context
      1 todo   : NFG or normalization not supported on JVM
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set_addition.t....................... 678    0    0    0  678
-S03-operators/set_difference.t.....................   0    2    0    0    2
+S03-operators/set_difference.t.....................java.lang.IllegalArgumentException: bad parameter count 285
+  in block <unit> at t/spec/S03-operators/set_difference.t line 191
+
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
 S03-operators/set_elem.t........................... 228    0    0    0  228
 S03-operators/set_intersection.t................... 622    0    0    0  622
@@ -1218,12 +1221,12 @@ Please use set operator ⊇ instead.
 Please contact the author to have these occurrences of deprecated code
 adapted, so that this message will disappear!
   32    0    0    0   32
-S03-operators/set_proper_subset.t..................   0    2    0    0    2
-     2 tests aborted (missing ok/not ok)
-S03-operators/set_subset.t.........................java.lang.IllegalArgumentException: bad parameter count 331
-  in block <unit> at t/spec/S03-operators/set_subset.t line 381
+S03-operators/set_proper_subset.t..................java.lang.IllegalArgumentException: bad parameter count 337
+  in block <unit> at t/spec/S03-operators/set_proper_subset.t line 385
 
    0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S03-operators/set_subset.t.........................   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
 S03-operators/set_symmetric_difference.t...........java.lang.IllegalArgumentException: bad parameter count 261
   in block <unit> at t/spec/S03-operators/set_symmetric_difference.t line 181
@@ -2634,13 +2637,13 @@ S16-filehandles/argfiles.rakudo.jvm................#      got out: "a\nb\nc\n\n\
   13    0    1    2   16
      2 skipped: hangs, RT  \#131393
      1 todo   : appends newlines after expected output
-S16-filehandles/chmod.t............................# Using file temp_1516678892
-# Using file temp_1516678892
-# Using file temp_1516678892
+S16-filehandles/chmod.t............................# Using file temp_1516765296
+# Using file temp_1516765296
+# Using file temp_1516765296
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-58906-1.temp
-# Using file temp-16-filehandles-filestat-58906-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-51693-1.temp
+# Using file temp-16-filehandles-filestat-51693-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 115    0    0   13  128
@@ -2653,7 +2656,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-489168
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-832110
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2726,12 +2729,7 @@ S17-promise/in.rakudo.jvm..........................   3    0    1    0    4
 S17-promise/lock-async-stress.t....................   1    0    0    0    1
 S17-promise/lock-async-stress2.t...................   1    0    0    0    1
 S17-promise/lock-async.t...........................  37    0    0    0   37
-S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-1" org.perl6.nqp.runtime.UnwindException
-	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
-	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:335)
-	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5619)
-	at java.lang.Thread.run(Thread.java:748)
-   5    0    2   21   28
+S17-promise/nonblocking-await.rakudo.jvm...........   5    0    2   21   28
      1 skipped: NullPointerException
      5 skipped: UnwindException
      1 skipped: atomicint NYI
@@ -6647,30 +6645,30 @@ integration/advent2012-day21.t.....................# Failed test 'recursive-tern
 # #
 # # A fatal error has been detected by the Java Runtime Environment:
 # #
-# #  SIGSEGV (0xb) at pc=0x00000008048006f0, pid=87659, tid=0x000000000001874a
+# #  SIGSEGV (0xb) at pc=0x0000000804518690, pid=80628, tid=0x0000000000018726
 # #
 # # JRE version: OpenJDK Runtime Environment (8.0_152-b16) (build 1.8.0_152-b16)
 # # Java VM: OpenJDK 64-Bit Server VM (25.152-b16 mixed mode bsd-amd64 compressed oops)
 # # Problematic frame:
-# # J 2966 C2 org.perl6.nqp.runtime.CallFrame.<init>(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/runtime/CodeRef;)V (406 bytes) @ 0x00000008048006f0 [0x00000008048006c0+0x30]
+# # J 2636 C2 __P6opaque__78.get_attribute_boxed(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/sixmodel/SixModelObject;Ljava/lang/String;J)Lorg/perl6/nqp/sixmodel/SixModelObject; (214 bytes) @ 0x0000000804518690 [0x0000000804518660+0x30]
 # #
 # # Core dump written. Default location: /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/java.core
 # #
 # # An error report file with more information is saved as:
-# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid87659.log
+# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid80628.log
 # #
 # # If you would like to submit a bug report, please visit:
 # #   http://bugreport.java.com/bugreport/crash.jsp
 # #
 # '
-# kaz: 7.585 seconds
-# gerdr: 7.9990011 seconds
-# recursive-ternary: 8.086 seconds
-# loop: 8.199 seconds
-# hand-memoization: 8.388 seconds
-# sequence-ternary: 18.436 seconds
-# recursive-ternary-hand-cached: 18.895 seconds
-# sequence: 25.04 seconds
+# gerdr: 7.767 seconds
+# kaz: 7.849 seconds
+# recursive-ternary: 8.331 seconds
+# loop: 8.458 seconds
+# hand-memoization: 8.483 seconds
+# sequence-ternary: 16.384 seconds
+# recursive-ternary-hand-cached: 18.686 seconds
+# sequence: 25.545 seconds
 # Looks like you failed 1 test of 9
    8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
@@ -6706,7 +6704,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed for parameter '$x'
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-88843-850111.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-81814-673046.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:335)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   31    0    2    0   33
      1 todo   : UnwindException
@@ -6743,7 +6741,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "MIS",           4,     5,     0,     0,     9,     9
 "S01",           0,     0,     0,    87,    87,    87
-"S02",        9679,     2,   147,   378, 10206, 10209
+"S02",        9680,     2,   147,   378, 10207, 10210
 "S03",        8608,     8,    51,   100,  8767,  8773
 "S04",        1506,     0,    53,    30,  1589,  1621
 "S05",        5873,     0,   120,   200,  6193,  6454
@@ -6767,7 +6765,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       14667,    32,   135,   161, 14995, 20612
 "int",        1338,     3,     9,    19,  1369,  1365
 "ros",           2,     0,     0,     0,     2,     2
-"total",     53120,    59,   720,  1471, 55370,144768
+"total",     53121,    59,   720,  1471, 55371,144769
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
