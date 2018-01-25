@@ -1684,7 +1684,12 @@ S05-mass/properties-derived.rakudo.jvm............. 191    0    1   21  213
     10 skipped: isCommon NYI RT  \#124884
      7 skipped: isGraphemeLink RT  \#124874
      1 todo   : isUnassigned NYI RT #124883
-S05-mass/properties-general.rakudo.jvm............. 596    0    4   15  615
+S05-mass/properties-general.rakudo.jvm.............# Failed test 'space chars'
+# at t/spec/S05-mass/properties-general.rakudo.jvm line 829
+# expected: "\t \t"
+#      got: Match.new(orig => "\t \t", pos => 2, made => Any, from => 1, list => (), hash => Map.new(()))
+# Looks like you failed 1 test of 615
+ 595    1    4   15  615
      1 skipped: PatternSyntaxException: Unknown character block name {ASCII}
     10 skipped: RT  \#124500
      4 skipped: Unicode property pairs NYI
@@ -2637,13 +2642,13 @@ S16-filehandles/argfiles.rakudo.jvm................#      got out: "a\nb\nc\n\n\
   13    0    1    2   16
      2 skipped: hangs, RT  \#131393
      1 todo   : appends newlines after expected output
-S16-filehandles/chmod.t............................# Using file temp_1516765296
-# Using file temp_1516765296
-# Using file temp_1516765296
+S16-filehandles/chmod.t............................# Using file temp_1516851686
+# Using file temp_1516851686
+# Using file temp_1516851686
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-51693-1.temp
-# Using file temp-16-filehandles-filestat-51693-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-44590-1.temp
+# Using file temp-16-filehandles-filestat-44590-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 115    0    0   13  128
@@ -2656,7 +2661,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-832110
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-349578
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2729,7 +2734,12 @@ S17-promise/in.rakudo.jvm..........................   3    0    1    0    4
 S17-promise/lock-async-stress.t....................   1    0    0    0    1
 S17-promise/lock-async-stress2.t...................   1    0    0    0    1
 S17-promise/lock-async.t...........................  37    0    0    0   37
-S17-promise/nonblocking-await.rakudo.jvm...........   5    0    2   21   28
+S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-1" org.perl6.nqp.runtime.UnwindException
+	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
+	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:335)
+	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5619)
+	at java.lang.Thread.run(Thread.java:748)
+   5    0    2   21   28
      1 skipped: NullPointerException
      5 skipped: UnwindException
      1 skipped: atomicint NYI
@@ -6645,30 +6655,30 @@ integration/advent2012-day21.t.....................# Failed test 'recursive-tern
 # #
 # # A fatal error has been detected by the Java Runtime Environment:
 # #
-# #  SIGSEGV (0xb) at pc=0x0000000804518690, pid=80628, tid=0x0000000000018726
+# #  SIGSEGV (0xb) at pc=0x00000008048b7b10, pid=73876, tid=0x00000000000187ba
 # #
 # # JRE version: OpenJDK Runtime Environment (8.0_152-b16) (build 1.8.0_152-b16)
 # # Java VM: OpenJDK 64-Bit Server VM (25.152-b16 mixed mode bsd-amd64 compressed oops)
 # # Problematic frame:
-# # J 2636 C2 __P6opaque__78.get_attribute_boxed(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/sixmodel/SixModelObject;Ljava/lang/String;J)Lorg/perl6/nqp/sixmodel/SixModelObject; (214 bytes) @ 0x0000000804518690 [0x0000000804518660+0x30]
+# # J 3010 C2 org.perl6.nqp.runtime.CallFrame.<init>(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/runtime/CodeRef;)V (406 bytes) @ 0x00000008048b7b10 [0x00000008048b7ae0+0x30]
 # #
 # # Core dump written. Default location: /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/java.core
 # #
 # # An error report file with more information is saved as:
-# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid80628.log
+# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid73876.log
 # #
 # # If you would like to submit a bug report, please visit:
 # #   http://bugreport.java.com/bugreport/crash.jsp
 # #
 # '
-# gerdr: 7.767 seconds
-# kaz: 7.849 seconds
-# recursive-ternary: 8.331 seconds
-# loop: 8.458 seconds
-# hand-memoization: 8.483 seconds
-# sequence-ternary: 16.384 seconds
-# recursive-ternary-hand-cached: 18.686 seconds
-# sequence: 25.545 seconds
+# kaz: 7.855 seconds
+# recursive-ternary: 8.0609989 seconds
+# gerdr: 8.107 seconds
+# hand-memoization: 8.108 seconds
+# loop: 8.567 seconds
+# sequence-ternary: 17.941 seconds
+# recursive-ternary-hand-cached: 19.7409990 seconds
+# sequence: 23.811 seconds
 # Looks like you failed 1 test of 9
    8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
@@ -6704,7 +6714,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed for parameter '$x'
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-81814-673046.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-75081-978929.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:335)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   31    0    2    0   33
      1 todo   : UnwindException
@@ -6744,7 +6754,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9680,     2,   147,   378, 10207, 10210
 "S03",        8608,     8,    51,   100,  8767,  8773
 "S04",        1506,     0,    53,    30,  1589,  1621
-"S05",        5873,     0,   120,   200,  6193,  6454
+"S05",        5872,     1,   120,   200,  6193,  6454
 "S06",        2203,     0,    64,    80,  2347,  2390
 "S07",         126,     0,     0,    11,   137,   230
 "S09",        2795,     0,    12,    39,  2846,  2846
@@ -6753,7 +6763,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S12",        1712,     0,    39,   118,  1869,  1918
 "S13",          65,     0,     0,     0,    65,    75
 "S14",         400,     0,     5,     5,   410,   423
-"S15",          54,     0,     6,    68,   128, 82998
+"S15",          54,     0,     6,    68,   128, 83000
 "S16",         719,     0,    14,    35,   768,   805
 "S17",         987,     5,    25,    71,  1088,  1321
 "S19",          14,     0,     7,     3,    24,    25
@@ -6765,7 +6775,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       14667,    32,   135,   161, 14995, 20612
 "int",        1338,     3,     9,    19,  1369,  1365
 "ros",           2,     0,     0,     0,     2,     2
-"total",     53121,    59,   720,  1471, 55371,144769
+"total",     53120,    60,   720,  1471, 55371,144771
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
@@ -6777,6 +6787,7 @@ S03-operators/set_difference.t aborted 2 test(s)
 S03-operators/set_proper_subset.t aborted 2 test(s)
 S03-operators/set_subset.t aborted 2 test(s)
 S03-operators/set_symmetric_difference.t aborted 2 test(s)
+S05-mass/properties-general.rakudo.jvm 605 - space chars
 S11-compunit/compunit-dependencyspecification.t 1 - 
 S17-supply/syntax.rakudo.jvm aborted 4 test(s)
 S17-supply/throttle.t aborted 1 test(s)
