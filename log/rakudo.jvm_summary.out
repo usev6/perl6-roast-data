@@ -7,60 +7,67 @@ MISC/bug-coverage-stress.rakudo.jvm................The spawned command './perl6-
 # Looks like you planned 5 tests, but ran 1
    1    4    0    0    5
      4 tests aborted (missing ok/not ok)
-MISC/bug-coverage.t................................   4    0    0    0    4
+MISC/bug-coverage.t................................Exception in thread "main" org.perl6.nqp.runtime.UnwindException
+	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
+	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
+	at org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)
+	at org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)
+	at perl6.main(gen/jvm/main.nqp)
+   4    1    0    0    5
+     1 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
 S01-perl-5-integration/array.rakudo.jvm............Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<774372472>
-    CompUnit::Repository::NQP<638619696>
-    CompUnit::Repository::Perl5<515986523>
-    CompUnit::Repository::JavaRuntime<400423727>
+    CompUnit::Repository::AbsolutePath<450170508>
+    CompUnit::Repository::NQP<1997891966>
+    CompUnit::Repository::Perl5<892759689>
+    CompUnit::Repository::JavaRuntime<1808108937>
   in block <unit> at t/spec/S01-perl-5-integration/array.rakudo.jvm line 7
 
    0    0    0   17   17
     17 skipped: <unknown>
 S01-perl-5-integration/basic.rakudo.jvm............Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<988069389>
-    CompUnit::Repository::NQP<437757112>
-    CompUnit::Repository::Perl5<1621547368>
-    CompUnit::Repository::JavaRuntime<2133657511>
+    CompUnit::Repository::AbsolutePath<2125198134>
+    CompUnit::Repository::NQP<242367202>
+    CompUnit::Repository::Perl5<1741869669>
+    CompUnit::Repository::JavaRuntime<1038601387>
   in block <unit> at t/spec/S01-perl-5-integration/basic.rakudo.jvm line 5
 
    0    0    0   15   15
     15 skipped: <unknown>
 S01-perl-5-integration/class.rakudo.jvm............Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<2122821135>
-    CompUnit::Repository::NQP<936820417>
-    CompUnit::Repository::Perl5<1608825063>
-    CompUnit::Repository::JavaRuntime<807810749>
+    CompUnit::Repository::AbsolutePath<444087359>
+    CompUnit::Repository::NQP<1469234158>
+    CompUnit::Repository::Perl5<412035246>
+    CompUnit::Repository::JavaRuntime<951719886>
   in block <unit> at t/spec/S01-perl-5-integration/class.rakudo.jvm line 7
 
    0    0    0    3    3
      3 skipped: <unknown>
 S01-perl-5-integration/context.rakudo.jvm..........Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<1072985159>
-    CompUnit::Repository::NQP<1414070575>
-    CompUnit::Repository::Perl5<366846969>
-    CompUnit::Repository::JavaRuntime<371527908>
+    CompUnit::Repository::AbsolutePath<2147246345>
+    CompUnit::Repository::NQP<243190371>
+    CompUnit::Repository::Perl5<875188317>
+    CompUnit::Repository::JavaRuntime<1468960480>
   in block <unit> at t/spec/S01-perl-5-integration/context.rakudo.jvm line 5
 
    0    0    0   10   10
@@ -68,126 +75,126 @@ S01-perl-5-integration/context.rakudo.jvm..........Could not find Inline::Perl5 
 S01-perl-5-integration/eval_lex.rakudo.jvm.........Could not find Inline::Perl5 at line 0 in:
     /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<922306355>
-    CompUnit::Repository::NQP<1997230859>
-    CompUnit::Repository::Perl5<1161041148>
-    CompUnit::Repository::JavaRuntime<965215158>
+    CompUnit::Repository::AbsolutePath<1246169190>
+    CompUnit::Repository::NQP<1644152277>
+    CompUnit::Repository::Perl5<1571424711>
+    CompUnit::Repository::JavaRuntime<802962988>
   in block <unit> at t/spec/S01-perl-5-integration/eval_lex.rakudo.jvm line 7
 
    0    0    0    2    2
      2 skipped: <unknown>
 S01-perl-5-integration/exception_handling.t........Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<1556435331>
-    CompUnit::Repository::NQP<767081120>
-    CompUnit::Repository::Perl5<2113919733>
-    CompUnit::Repository::JavaRuntime<1325578987>
+    CompUnit::Repository::AbsolutePath<1090489318>
+    CompUnit::Repository::NQP<2021448589>
+    CompUnit::Repository::Perl5<1856873768>
+    CompUnit::Repository::JavaRuntime<2044989588>
   in block  at t/spec/S01-perl-5-integration/exception_handling.t line 8
 
    0    0    0    3    3
      3 skipped: no perl 5 support
 S01-perl-5-integration/hash.t......................Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<1413343039>
-    CompUnit::Repository::NQP<690007044>
-    CompUnit::Repository::Perl5<1224178557>
-    CompUnit::Repository::JavaRuntime<1903324920>
+    CompUnit::Repository::AbsolutePath<2020701878>
+    CompUnit::Repository::NQP<1206488658>
+    CompUnit::Repository::Perl5<2086065878>
+    CompUnit::Repository::JavaRuntime<584119639>
   in block <unit> at t/spec/S01-perl-5-integration/hash.t line 7
 
    0    0    0    6    6
      6 skipped: <unknown>
 S01-perl-5-integration/import.t....................Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<885634851>
-    CompUnit::Repository::NQP<485704193>
-    CompUnit::Repository::Perl5<300535268>
-    CompUnit::Repository::JavaRuntime<1352004823>
+    CompUnit::Repository::AbsolutePath<1496190543>
+    CompUnit::Repository::NQP<960252400>
+    CompUnit::Repository::Perl5<159533815>
+    CompUnit::Repository::JavaRuntime<1875510251>
   in block <unit> at t/spec/S01-perl-5-integration/import.t line 12
 
    0    0    0    3    3
      3 skipped: <unknown>
 S01-perl-5-integration/method.rakudo.jvm...........Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<400423727>
-    CompUnit::Repository::NQP<109576592>
-    CompUnit::Repository::Perl5<616271969>
-    CompUnit::Repository::JavaRuntime<1219553924>
+    CompUnit::Repository::AbsolutePath<892759689>
+    CompUnit::Repository::NQP<1808108937>
+    CompUnit::Repository::Perl5<1498828563>
+    CompUnit::Repository::JavaRuntime<97813470>
   in block <unit> at t/spec/S01-perl-5-integration/method.rakudo.jvm line 7
 
    0    0    0   13   13
     13 skipped: <unknown>
 S01-perl-5-integration/return.t....................Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<1325578987>
-    CompUnit::Repository::NQP<960345025>
-    CompUnit::Repository::Perl5<1362650108>
-    CompUnit::Repository::JavaRuntime<1385378652>
+    CompUnit::Repository::AbsolutePath<1856873768>
+    CompUnit::Repository::NQP<2044989588>
+    CompUnit::Repository::Perl5<1165493493>
+    CompUnit::Repository::JavaRuntime<1539710820>
   in block <unit> at t/spec/S01-perl-5-integration/return.t line 7
 
    0    0    0    2    2
      2 skipped: <unknown>
 S01-perl-5-integration/roundtrip.t.................Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<2094372407>
-    CompUnit::Repository::NQP<1271961226>
-    CompUnit::Repository::Perl5<1607253343>
-    CompUnit::Repository::JavaRuntime<135570902>
+    CompUnit::Repository::AbsolutePath<1784862711>
+    CompUnit::Repository::NQP<1588364061>
+    CompUnit::Repository::Perl5<897327051>
+    CompUnit::Repository::JavaRuntime<2106433593>
   in block <unit> at t/spec/S01-perl-5-integration/roundtrip.t line 7
 
    0    0    0    5    5
      5 skipped: <unknown>
 S01-perl-5-integration/strings.rakudo.jvm..........Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<1090489318>
-    CompUnit::Repository::NQP<2021448589>
-    CompUnit::Repository::Perl5<2044989588>
-    CompUnit::Repository::JavaRuntime<1165493493>
+    CompUnit::Repository::AbsolutePath<599492859>
+    CompUnit::Repository::NQP<1522729646>
+    CompUnit::Repository::Perl5<356712978>
+    CompUnit::Repository::JavaRuntime<2132807247>
   in block <unit> at t/spec/S01-perl-5-integration/strings.rakudo.jvm line 6
 
    0    0    0    6    6
      6 skipped: <unknown>
 S01-perl-5-integration/subs.t......................Could not find Inline::Perl5 at line 0 in:
     /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib
-    /home/christian/.perl6
+    /home/christian
     /home/christian/bin/rakudo.jvm/share/perl6/site
     /home/christian/bin/rakudo.jvm/share/perl6/vendor
     /home/christian/bin/rakudo.jvm/share/perl6
-    CompUnit::Repository::AbsolutePath<2120021565>
-    CompUnit::Repository::NQP<1398079282>
-    CompUnit::Repository::Perl5<1784174703>
-    CompUnit::Repository::JavaRuntime<1374851265>
+    CompUnit::Repository::AbsolutePath<314139725>
+    CompUnit::Repository::NQP<292720302>
+    CompUnit::Repository::Perl5<286247711>
+    CompUnit::Repository::JavaRuntime<663155886>
   in block <unit> at t/spec/S01-perl-5-integration/subs.t line 5
 
    0    0    0    2    2
@@ -504,7 +511,7 @@ S02-types/built-in.t...............................   1    0    0    0    1
 S02-types/capture.t................................# Failed test 'text matches '/'Capture|(Scalar|' \d+ ')'/''
 # at t/spec/S02-types/capture.t line 197
 #      expected: '/'Capture|(Scalar|' \d+ ')'/'
-#      got: 'Capture|(Int|924385688)'
+#      got: 'Capture|(Int|52948512)'
         # Failed test 'numerator'
         # at t/spec/S02-types/capture.t line 312
         # expected: 1
@@ -1217,10 +1224,7 @@ S03-operators/set_proper_subset.t..................java.lang.IllegalArgumentExce
 
    0    2    0    0    2
      2 tests aborted (missing ok/not ok)
-S03-operators/set_subset.t.........................java.lang.IllegalArgumentException: bad parameter count 331
-  in block <unit> at t/spec/S03-operators/set_subset.t line 381
-
-   0    2    0    0    2
+S03-operators/set_subset.t.........................   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
 S03-operators/set_symmetric_difference.t...........java.lang.IllegalArgumentException: bad parameter count 261
   in block <unit> at t/spec/S03-operators/set_symmetric_difference.t line 181
@@ -1551,9 +1555,8 @@ S04-statements/for.rakudo.jvm......................WARNINGS for /usr/home/christ
 Useless use of constant integer 41 in sink context (lines 466, 467, 471, 474, 478)
 Use of Nil in string context
   in block  at t/spec/S04-statements/for.rakudo.jvm line 500
- 103    0    3    1  107
+ 104    0    2    1  107
      1 skipped: labeled next without loop construct
-     1 todo   : RT 128054
      1 todo   : Rakudo still uses Nil here RT #124569
      1 todo   : X::AdHoc "Cannot assign to a readonly variable or a value" instead of X::Multi::NoMatch; RT #126531
 S04-statements/for_with_only_one_item.t............  12    0    0    0   12
@@ -2342,7 +2345,7 @@ S10-packages/joined-namespaces.t...................   3    0    0    0    3
 S10-packages/precompilation.rakudo.jvm.............#      got status: 1
 #      got out: ""
 # expected out: "True"
-#      got err: "===SORRY!===\nCould not find InternArrayA at line 1 in:\n    /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages\n    /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib\n    /home/christian/.perl6\n    /home/christian/bin/rakudo.jvm/share/perl6/site\n    /home/christian/bin/rakudo.jvm/share/perl6/vendor\n    /home/christian/bin/rakudo.jvm/share/perl6\n    CompUnit::Repository::AbsolutePath<513500869>\n    CompUnit::Repository::NQP<1319778954>\n    CompUnit::Repository::Perl5<661000790>\n    CompUnit::Repository::JavaRuntime<567815153>\n"
+#      got err: "===SORRY!===\nCould not find InternArrayA at line 1 in:\n    /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages\n    /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib\n    /home/christian\n    /home/christian/bin/rakudo.jvm/share/perl6/site\n    /home/christian/bin/rakudo.jvm/share/perl6/vendor\n    /home/christian/bin/rakudo.jvm/share/perl6\n    CompUnit::Repository::AbsolutePath<1893334171>\n    CompUnit::Repository::NQP<1467992390>\n    CompUnit::Repository::Perl5<1300232244>\n    CompUnit::Repository::JavaRuntime<1470952007>\n"
 # expected err: ""
 #      got status: 1
 #      got out: ""
@@ -2453,7 +2456,7 @@ S12-coercion/coercion-types.rakudo.jvm.............# Failed test 'coercers do no
 #      got status: 1
 #      got out: ""
 # expected out: "(Bar)\n(Bar)\n"
-#      got err: "Died\n  in method Bar at getout-22942-277.code line 2\n  in block <unit> at getout-22942-277.code line 4\n\n"
+#      got err: "Died\n  in method Bar at getout-17338-113360.code line 2\n  in block <unit> at getout-17338-113360.code line 4\n\n"
 # expected err: ""
 # Looks like you failed 1 test of 21
   13    1    1    6   21
@@ -2651,13 +2654,13 @@ S16-filehandles/argfiles.rakudo.jvm................#      got out: "a\nb\nc\n\n\
   13    0    1    2   16
      2 skipped: hangs, RT  \#131393
      1 todo   : appends newlines after expected output
-S16-filehandles/chmod.t............................# Using file temp_1516938079
-# Using file temp_1516938079
-# Using file temp_1516938079
+S16-filehandles/chmod.t............................# Using file temp_1517024406
+# Using file temp_1517024406
+# Using file temp_1517024406
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-27752-1.temp
-# Using file temp-16-filehandles-filestat-27752-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-22099-1.temp
+# Using file temp-16-filehandles-filestat-22099-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 115    0    0   13  128
@@ -2670,7 +2673,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-439338
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-28772
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2828,7 +2831,8 @@ S17-supply/interval.t..............................   9    0    0    0    9
 S17-supply/lines.rakudo.jvm........................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0    0    0    9
@@ -6671,30 +6675,30 @@ integration/advent2012-day21.t.....................# Failed test 'recursive-tern
 # #
 # # A fatal error has been detected by the Java Runtime Environment:
 # #
-# #  SIGSEGV (0xb) at pc=0x000000080493a1b0, pid=56551, tid=0x000000000001880d
+# #  SIGSEGV (0xb) at pc=0x00000008048bffb0, pid=50877, tid=0x000000000001878d
 # #
 # # JRE version: OpenJDK Runtime Environment (8.0_152-b16) (build 1.8.0_152-b16)
 # # Java VM: OpenJDK 64-Bit Server VM (25.152-b16 mixed mode bsd-amd64 compressed oops)
 # # Problematic frame:
-# # J 3044 C2 org.perl6.nqp.runtime.CallFrame.<init>(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/runtime/CodeRef;)V (406 bytes) @ 0x000000080493a1b0 [0x000000080493a180+0x30]
+# # J 2993 C2 org.perl6.nqp.runtime.CallFrame.<init>(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/runtime/CodeRef;)V (406 bytes) @ 0x00000008048bffb0 [0x00000008048bff80+0x30]
 # #
 # # Core dump written. Default location: /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/java.core
 # #
 # # An error report file with more information is saved as:
-# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid56551.log
+# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid50877.log
 # #
 # # If you would like to submit a bug report, please visit:
 # #   http://bugreport.java.com/bugreport/crash.jsp
 # #
 # '
-# kaz: 7.461 seconds
-# gerdr: 7.651 seconds
-# recursive-ternary: 7.958 seconds
-# loop: 8.265 seconds
-# hand-memoization: 8.361 seconds
-# recursive-ternary-hand-cached: 18.335 seconds
-# sequence-ternary: 18.3459989 seconds
-# sequence: 28.076 seconds
+# kaz: 7.8 seconds
+# gerdr: 8.125 seconds
+# hand-memoization: 8.234 seconds
+# recursive-ternary: 8.51 seconds
+# loop: 8.677 seconds
+# sequence-ternary: 16.804 seconds
+# recursive-ternary-hand-cached: 18.079 seconds
+# sequence: 28.874 seconds
 # Looks like you failed 1 test of 9
    8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
@@ -6730,7 +6734,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed for parameter '$x'
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-57733-485929.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-52067-278951.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   31    0    2    0   33
      1 todo   : UnwindException
@@ -6765,11 +6769,11 @@ rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
-"MIS",           6,     4,     0,     0,    10,    10
+"MIS",           6,     5,     0,     0,    11,    11
 "S01",           0,     0,     0,    87,    87,    87
 "S02",        9681,     2,   147,   378, 10208, 10211
 "S03",        8608,     8,    51,   100,  8767,  8773
-"S04",        1512,     0,    53,    30,  1595,  1627
+"S04",        1513,     0,    52,    30,  1595,  1627
 "S05",        5872,     1,   120,   200,  6193,  6454
 "S06",        2203,     0,    64,    80,  2347,  2390
 "S07",         126,     0,     0,    11,   137,   230
@@ -6791,11 +6795,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       14670,    32,   135,   161, 14998, 20615
 "int",        1338,     3,     9,    19,  1369,  1365
 "ros",           2,     0,     0,     0,     2,     2
-"total",     53024,   172,   719,  1471, 55386,144786
+"total",     53025,   173,   718,  1471, 55387,144787
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
 MISC/bug-coverage-stress.rakudo.jvm aborted 4 test(s)
+MISC/bug-coverage.t aborted 1 test(s)
 S02-types/capture.t 35 - text matches '/'Capture|(Scalar|' \d+ ')'/'
 S02-types/capture.t 43 - types whose .Capture behaves like Mu.Capture
 S03-operators/set_difference.t aborted 2 test(s)
