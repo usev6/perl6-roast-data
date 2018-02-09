@@ -407,8 +407,8 @@ S03-operators/increment.rakudo.jvm.................   0   39    0    0   39
     39 tests aborted (missing ok/not ok)
 S03-operators/infixed-function.t...................   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S03-operators/inplace.rakudo.jvm...................   0   32    0    0   32
-    32 tests aborted (missing ok/not ok)
+S03-operators/inplace.rakudo.jvm...................   0   34    0    0   34
+    34 tests aborted (missing ok/not ok)
 S03-operators/is-divisible-by.rakudo.jvm...........   0   15    0    0   15
     15 tests aborted (missing ok/not ok)
 S03-operators/lcm.t................................   0   15    0    0   15
@@ -1773,8 +1773,8 @@ S32-encoding/encoder.t.............................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 S32-encoding/registry.t............................   0   15    0    0   15
     15 tests aborted (missing ok/not ok)
-S32-exceptions/misc.rakudo.jvm.....................   0  449    0    0  449
-   449 tests aborted (missing ok/not ok)
+S32-exceptions/misc.rakudo.jvm.....................   0  450    0    0  450
+   450 tests aborted (missing ok/not ok)
 S32-hash/adverbs.t.................................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 S32-hash/antipairs.t...............................   0    5    0    0    5
@@ -2377,7 +2377,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "MIS",           0,    13,     0,     0,    13,    13
 "S01",           0,    87,     0,     0,    87,    87
 "S02",           0,  6201,     0,     0,  6201,  6205
-"S03",           0,  6004,     0,     0,  6004,  6010
+"S03",           0,  6006,     0,     0,  6006,  6012
 "S04",           0,  1578,     0,     0,  1578,  1630
 "S05",           0,  6194,     0,     0,  6194,  6455
 "S06",           0,  2336,     0,     0,  2336,  2392
@@ -2397,10 +2397,10 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S26",           0,  1570,     0,     0,  1570,  1562
 "S28",           0,     5,     0,     0,     5,     9
 "S29",           0,   230,     0,     0,   230,   230
-"S32",           0, 10618,     0,     0, 10618, 18018
+"S32",           0, 10619,     0,     0, 10619, 18019
 "int",           0,  1356,     0,     0,  1356,  1355
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 42040,     0,     0, 42040,133261
+"total",         0, 42043,     0,     0, 42043,133264
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
@@ -2605,7 +2605,7 @@ S03-operators/gcd.t aborted 19 test(s)
 S03-operators/identity.rakudo.jvm aborted 46 test(s)
 S03-operators/increment.rakudo.jvm aborted 39 test(s)
 S03-operators/infixed-function.t aborted 5 test(s)
-S03-operators/inplace.rakudo.jvm aborted 32 test(s)
+S03-operators/inplace.rakudo.jvm aborted 34 test(s)
 S03-operators/is-divisible-by.rakudo.jvm aborted 15 test(s)
 S03-operators/lcm.t aborted 15 test(s)
 S03-operators/list-quote-junction.t aborted 16 test(s)
@@ -3277,7 +3277,7 @@ S32-container/stringify.t aborted 16 test(s)
 S32-container/zip.rakudo.jvm aborted 14 test(s)
 S32-encoding/encoder.t aborted 4 test(s)
 S32-encoding/registry.t aborted 15 test(s)
-S32-exceptions/misc.rakudo.jvm aborted 449 test(s)
+S32-exceptions/misc.rakudo.jvm aborted 450 test(s)
 S32-hash/adverbs.t aborted 4 test(s)
 S32-hash/antipairs.t aborted 5 test(s)
 S32-hash/delete-adverb.t aborted 131 test(s)
