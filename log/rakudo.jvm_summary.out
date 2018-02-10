@@ -407,8 +407,8 @@ S03-operators/increment.rakudo.jvm.................   0   39    0    0   39
     39 tests aborted (missing ok/not ok)
 S03-operators/infixed-function.t...................   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S03-operators/inplace.rakudo.jvm...................   0   34    0    0   34
-    34 tests aborted (missing ok/not ok)
+S03-operators/inplace.rakudo.jvm...................   0   35    0    0   35
+    35 tests aborted (missing ok/not ok)
 S03-operators/is-divisible-by.rakudo.jvm...........   0   15    0    0   15
     15 tests aborted (missing ok/not ok)
 S03-operators/lcm.t................................   0   15    0    0   15
@@ -1074,8 +1074,8 @@ S09-multidim/subs.t................................   0   44    0    0   44
     44 tests aborted (missing ok/not ok)
 S09-subscript/multidim-assignment.t................   0   11    0    0   11
     11 tests aborted (missing ok/not ok)
-S09-subscript/slice.rakudo.jvm.....................   0   32    0    0   32
-    32 tests aborted (missing ok/not ok)
+S09-subscript/slice.rakudo.jvm.....................   0   33    0    0   33
+    33 tests aborted (missing ok/not ok)
 S09-typed-arrays/arrays.rakudo.jvm.................   0   84    0    0   84
     84 tests aborted (missing ok/not ok)
 S09-typed-arrays/hashes.rakudo.jvm.................   0   44    0    0   44
@@ -1137,8 +1137,8 @@ S11-modules/runtime.t..............................   0    1    0    0    1
 S11-repository/curli-install.t.....................   0   18    0    0   18
     18 tests aborted (missing ok/not ok)
                                                    pass fail todo skip plan
-S12-attributes/class.t.............................   0   23    0    0   23
-    23 tests aborted (missing ok/not ok)
+S12-attributes/class.t.............................   0   24    0    0   24
+    24 tests aborted (missing ok/not ok)
 S12-attributes/clone.t.............................   0   43    0    0   43
     43 tests aborted (missing ok/not ok)
 S12-attributes/defaults.t..........................   0   37    0    0   37
@@ -2377,15 +2377,15 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "MIS",           0,    13,     0,     0,    13,    13
 "S01",           0,    87,     0,     0,    87,    87
 "S02",           0,  6201,     0,     0,  6201,  6205
-"S03",           0,  6006,     0,     0,  6006,  6012
+"S03",           0,  6007,     0,     0,  6007,  6013
 "S04",           0,  1578,     0,     0,  1578,  1630
 "S05",           0,  6194,     0,     0,  6194,  6455
 "S06",           0,  2336,     0,     0,  2336,  2392
 "S07",           0,   137,     0,     0,   137,   230
-"S09",           0,  1104,     0,     0,  1104,  1104
+"S09",           0,  1105,     0,     0,  1105,  1105
 "S10",           0,   152,     0,     0,   152,   209
 "S11",           0,   217,     0,     0,   217,   226
-"S12",           0,  1884,     0,     0,  1884,  1933
+"S12",           0,  1885,     0,     0,  1885,  1934
 "S13",           0,    65,     0,     0,    65,    75
 "S14",           0,   410,     0,     0,   410,   423
 "S15",           0,   128,     0,     0,   128, 83001
@@ -2400,7 +2400,7 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S32",           0, 10619,     0,     0, 10619, 18019
 "int",           0,  1356,     0,     0,  1356,  1355
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 42043,     0,     0, 42043,133264
+"total",         0, 42046,     0,     0, 42046,133267
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
@@ -2605,7 +2605,7 @@ S03-operators/gcd.t aborted 19 test(s)
 S03-operators/identity.rakudo.jvm aborted 46 test(s)
 S03-operators/increment.rakudo.jvm aborted 39 test(s)
 S03-operators/infixed-function.t aborted 5 test(s)
-S03-operators/inplace.rakudo.jvm aborted 34 test(s)
+S03-operators/inplace.rakudo.jvm aborted 35 test(s)
 S03-operators/is-divisible-by.rakudo.jvm aborted 15 test(s)
 S03-operators/lcm.t aborted 15 test(s)
 S03-operators/list-quote-junction.t aborted 16 test(s)
@@ -2935,7 +2935,7 @@ S09-multidim/indexing.t aborted 31 test(s)
 S09-multidim/methods.t aborted 80 test(s)
 S09-multidim/subs.t aborted 44 test(s)
 S09-subscript/multidim-assignment.t aborted 11 test(s)
-S09-subscript/slice.rakudo.jvm aborted 32 test(s)
+S09-subscript/slice.rakudo.jvm aborted 33 test(s)
 S09-typed-arrays/arrays.rakudo.jvm aborted 84 test(s)
 S09-typed-arrays/hashes.rakudo.jvm aborted 44 test(s)
 S09-typed-arrays/native-decl.t aborted 14 test(s)
@@ -2965,7 +2965,7 @@ S11-modules/perl6lib.t aborted 1 test(s)
 S11-modules/require.rakudo.jvm aborted 34 test(s)
 S11-modules/runtime.t aborted 1 test(s)
 S11-repository/curli-install.t aborted 18 test(s)
-S12-attributes/class.t aborted 23 test(s)
+S12-attributes/class.t aborted 24 test(s)
 S12-attributes/clone.t aborted 43 test(s)
 S12-attributes/defaults.t aborted 37 test(s)
 S12-attributes/delegation.t aborted 65 test(s)
