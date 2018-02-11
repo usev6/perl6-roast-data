@@ -407,8 +407,8 @@ S03-operators/increment.rakudo.jvm.................   0   39    0    0   39
     39 tests aborted (missing ok/not ok)
 S03-operators/infixed-function.t...................   0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S03-operators/inplace.rakudo.jvm...................   0   35    0    0   35
-    35 tests aborted (missing ok/not ok)
+S03-operators/inplace.rakudo.jvm...................   0   38    0    0   38
+    38 tests aborted (missing ok/not ok)
 S03-operators/is-divisible-by.rakudo.jvm...........   0   15    0    0   15
     15 tests aborted (missing ok/not ok)
 S03-operators/lcm.t................................   0   15    0    0   15
@@ -573,8 +573,8 @@ S04-exceptions/control_across_runloop.t............   0    1    0    0    1
      1 tests aborted (missing ok/not ok)
 S04-exceptions/exceptions-json.t...................   0    3    0    0    3
      3 tests aborted (missing ok/not ok)
-S04-exceptions/fail.t..............................   0   36    0    0   36
-    36 tests aborted (missing ok/not ok)
+S04-exceptions/fail.t..............................   0   37    0    0   37
+    37 tests aborted (missing ok/not ok)
 S04-exceptions/pending.rakudo.jvm..................   0   21    0    0   21
     21 tests aborted (missing ok/not ok)
 S04-phasers/ascending-order.t......................   0    7    0    0    7
@@ -639,8 +639,8 @@ S04-statements/gather.rakudo.jvm...................   0   39    0    0   39
     39 tests aborted (missing ok/not ok)
 S04-statements/given.t.............................   0   51    0    0   51
     51 tests aborted (missing ok/not ok)
-S04-statements/if.rakudo.jvm.......................   0   43    0    0   43
-    43 tests aborted (missing ok/not ok)
+S04-statements/if.t................................   0   44    0    0   44
+    44 tests aborted (missing ok/not ok)
 S04-statements/label.t.............................   0    6    0    0    6
      6 tests aborted (missing ok/not ok)
 S04-statements/last.t..............................   0    9    0    0    9
@@ -1943,8 +1943,8 @@ S32-list/minmax.t..................................   0  101    0    0  101
    101 tests aborted (missing ok/not ok)
 S32-list/permutations.t............................   0    9    0    0    9
      9 tests aborted (missing ok/not ok)
-S32-list/pick.t....................................   0  316    0    0  316
-   316 tests aborted (missing ok/not ok)
+S32-list/pick.t....................................   0  317    0    0  317
+   317 tests aborted (missing ok/not ok)
 S32-list/produce.t.................................   0   25    0    0   25
     25 tests aborted (missing ok/not ok)
 S32-list/reduce.t..................................   0   17    0    0   17
@@ -1953,8 +1953,8 @@ S32-list/repeated.t................................   0   38    0    0   38
     38 tests aborted (missing ok/not ok)
 S32-list/reverse.rakudo.jvm........................   0   19    0    0   19
     19 tests aborted (missing ok/not ok)
-S32-list/roll.t....................................   0   51    0    0   51
-    51 tests aborted (missing ok/not ok)
+S32-list/roll.t....................................   0   52    0    0   52
+    52 tests aborted (missing ok/not ok)
 S32-list/rotor.t...................................   0   18    0    0   18
     18 tests aborted (missing ok/not ok)
 S32-list/seq.rakudo.jvm............................   0   41    0    0   41
@@ -1965,8 +1965,8 @@ S32-list/sort.t....................................   0   36    0    0   36
     36 tests aborted (missing ok/not ok)
 S32-list/squish.t..................................   0   31    0    0   31
     31 tests aborted (missing ok/not ok)
-S32-list/tail.t....................................   0   28    0    0   28
-    28 tests aborted (missing ok/not ok)
+S32-list/tail.t....................................   0   29    0    0   29
+    29 tests aborted (missing ok/not ok)
 S32-list/toggle.rakudo.jvm.........................   0    4    0    0    4
      4 tests aborted (missing ok/not ok)
 S32-list/unique.t..................................   0   39    0    0   39
@@ -2377,8 +2377,8 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "MIS",           0,    13,     0,     0,    13,    13
 "S01",           0,    87,     0,     0,    87,    87
 "S02",           0,  6201,     0,     0,  6201,  6205
-"S03",           0,  6007,     0,     0,  6007,  6013
-"S04",           0,  1578,     0,     0,  1578,  1630
+"S03",           0,  6010,     0,     0,  6010,  6016
+"S04",           0,  1580,     0,     0,  1580,  1632
 "S05",           0,  6194,     0,     0,  6194,  6455
 "S06",           0,  2336,     0,     0,  2336,  2392
 "S07",           0,   137,     0,     0,   137,   230
@@ -2397,10 +2397,10 @@ rosettacode/sierpinski_triangle.t..................   0    1    0    0    1
 "S26",           0,  1570,     0,     0,  1570,  1562
 "S28",           0,     5,     0,     0,     5,     9
 "S29",           0,   230,     0,     0,   230,   230
-"S32",           0, 10619,     0,     0, 10619, 18019
+"S32",           0, 10622,     0,     0, 10622, 18022
 "int",           0,  1356,     0,     0,  1356,  1355
 "ros",           0,     2,     0,     0,     2,     2
-"total",         0, 42046,     0,     0, 42046,133267
+"total",         0, 42054,     0,     0, 42054,133275
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
@@ -2605,7 +2605,7 @@ S03-operators/gcd.t aborted 19 test(s)
 S03-operators/identity.rakudo.jvm aborted 46 test(s)
 S03-operators/increment.rakudo.jvm aborted 39 test(s)
 S03-operators/infixed-function.t aborted 5 test(s)
-S03-operators/inplace.rakudo.jvm aborted 35 test(s)
+S03-operators/inplace.rakudo.jvm aborted 38 test(s)
 S03-operators/is-divisible-by.rakudo.jvm aborted 15 test(s)
 S03-operators/lcm.t aborted 15 test(s)
 S03-operators/list-quote-junction.t aborted 16 test(s)
@@ -2687,7 +2687,7 @@ S04-exception-handlers/control.t aborted 12 test(s)
 S04-exception-handlers/top-level.t aborted 1 test(s)
 S04-exceptions/control_across_runloop.t aborted 1 test(s)
 S04-exceptions/exceptions-json.t aborted 3 test(s)
-S04-exceptions/fail.t aborted 36 test(s)
+S04-exceptions/fail.t aborted 37 test(s)
 S04-exceptions/pending.rakudo.jvm aborted 21 test(s)
 S04-phasers/ascending-order.t aborted 7 test(s)
 S04-phasers/begin.rakudo.jvm aborted 13 test(s)
@@ -2720,7 +2720,7 @@ S04-statements/for.rakudo.jvm aborted 107 test(s)
 S04-statements/for_with_only_one_item.t aborted 12 test(s)
 S04-statements/gather.rakudo.jvm aborted 39 test(s)
 S04-statements/given.t aborted 51 test(s)
-S04-statements/if.rakudo.jvm aborted 43 test(s)
+S04-statements/if.t aborted 44 test(s)
 S04-statements/label.t aborted 6 test(s)
 S04-statements/last.t aborted 9 test(s)
 S04-statements/loop.rakudo.jvm aborted 18 test(s)
@@ -3362,18 +3362,18 @@ S32-list/map.rakudo.jvm aborted 60 test(s)
 S32-list/map_function_return_values.t aborted 2 test(s)
 S32-list/minmax.t aborted 101 test(s)
 S32-list/permutations.t aborted 9 test(s)
-S32-list/pick.t aborted 316 test(s)
+S32-list/pick.t aborted 317 test(s)
 S32-list/produce.t aborted 25 test(s)
 S32-list/reduce.t aborted 17 test(s)
 S32-list/repeated.t aborted 38 test(s)
 S32-list/reverse.rakudo.jvm aborted 19 test(s)
-S32-list/roll.t aborted 51 test(s)
+S32-list/roll.t aborted 52 test(s)
 S32-list/rotor.t aborted 18 test(s)
 S32-list/seq.rakudo.jvm aborted 41 test(s)
 S32-list/skip.t aborted 27 test(s)
 S32-list/sort.t aborted 36 test(s)
 S32-list/squish.t aborted 31 test(s)
-S32-list/tail.t aborted 28 test(s)
+S32-list/tail.t aborted 29 test(s)
 S32-list/toggle.rakudo.jvm aborted 4 test(s)
 S32-list/unique.t aborted 39 test(s)
 S32-num/abs.t aborted 49 test(s)
