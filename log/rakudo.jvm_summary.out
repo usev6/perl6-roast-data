@@ -4,9 +4,9 @@ MISC/bug-coverage-6.d.t............................   1    0    0    0    1
 MISC/bug-coverage-stress.rakudo.jvm................The spawned command './perl6-j' exited unsuccessfully (exit code: 1)
   in block <unit> at t/spec/MISC/bug-coverage-stress.rakudo.jvm line 44
 
-# Looks like you planned 7 tests, but ran 1
-   1    6    0    0    7
-     6 tests aborted (missing ok/not ok)
+# Looks like you planned 8 tests, but ran 1
+   1    7    0    0    8
+     7 tests aborted (missing ok/not ok)
 MISC/bug-coverage.t................................Exception in thread "main" org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
@@ -2865,13 +2865,13 @@ S16-filehandles/argfiles.rakudo.jvm................#      got out: "a\nb\nc\n\n\
   13    0    1    2   16
      2 skipped: hangs, RT  \#131393
      1 todo   : appends newlines after expected output
-S16-filehandles/chmod.t............................# Using file temp_1518751891
-# Using file temp_1518751891
-# Using file temp_1518751891
+S16-filehandles/chmod.t............................# Using file temp_1518853913
+# Using file temp_1518853913
+# Using file temp_1518853913
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-50238-1.temp
-# Using file temp-16-filehandles-filestat-50238-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-44543-1.temp
+# Using file temp-16-filehandles-filestat-44543-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 115    0    0   13  128
@@ -2884,7 +2884,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-118017
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-15501
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2957,7 +2957,12 @@ S17-promise/in.rakudo.jvm..........................   3    0    1    0    4
 S17-promise/lock-async-stress.t....................   1    0    0    0    1
 S17-promise/lock-async-stress2.t...................   1    0    0    0    1
 S17-promise/lock-async.t...........................  37    0    0    0   37
-S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-1" org.perl6.nqp.runtime.UnwindException   5    0    2   21   28
+S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-1" org.perl6.nqp.runtime.UnwindException
+	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
+	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
+	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5623)
+	at java.lang.Thread.run(Thread.java:748)
+   5    0    2   21   28
      1 skipped: NullPointerException
      5 skipped: UnwindException
      1 skipped: atomicint NYI
@@ -3037,7 +3042,8 @@ S17-supply/interval.t..............................   9    0    0    0    9
 S17-supply/lines.rakudo.jvm........................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0    0    0    9
@@ -6899,30 +6905,30 @@ integration/advent2012-day21.t.....................# Failed test 'recursive-tern
 # #
 # # A fatal error has been detected by the Java Runtime Environment:
 # #
-# #  SIGSEGV (0xb) at pc=0x0000000804246410, pid=78984, tid=0x0000000000018877
+# #  SIGSEGV (0xb) at pc=0x00000008042bf9d0, pid=73421, tid=0x0000000000018790
 # #
 # # JRE version: OpenJDK Runtime Environment (8.0_152-b16) (build 1.8.0_152-b16)
 # # Java VM: OpenJDK 64-Bit Server VM (25.152-b16 mixed mode bsd-amd64 compressed oops)
 # # Problematic frame:
-# # J 2158 C2 __P6opaque__78.get_attribute_boxed(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/sixmodel/SixModelObject;Ljava/lang/String;J)Lorg/perl6/nqp/sixmodel/SixModelObject; (214 bytes) @ 0x0000000804246410 [0x00000008042463e0+0x30]
+# # J 2176 C2 __P6opaque__78.get_attribute_boxed(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/sixmodel/SixModelObject;Ljava/lang/String;J)Lorg/perl6/nqp/sixmodel/SixModelObject; (214 bytes) @ 0x00000008042bf9d0 [0x00000008042bf9a0+0x30]
 # #
 # # Core dump written. Default location: /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/java.core
 # #
 # # An error report file with more information is saved as:
-# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid78984.log
+# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid73421.log
 # #
 # # If you would like to submit a bug report, please visit:
 # #   http://bugreport.java.com/bugreport/crash.jsp
 # #
 # '
-# kaz: 7.495 seconds
-# gerdr: 7.554 seconds
-# recursive-ternary: 8.109 seconds
-# hand-memoization: 8.165 seconds
-# loop: 8.209 seconds
-# sequence-ternary: 17.589 seconds
-# recursive-ternary-hand-cached: 18.02 seconds
-# sequence: 26.593 seconds
+# loop: 7.903 seconds
+# kaz: 7.905 seconds
+# gerdr: 8.04 seconds
+# hand-memoization: 8.490999 seconds
+# recursive-ternary: 8.556 seconds
+# sequence-ternary: 16.121 seconds
+# recursive-ternary-hand-cached: 19.439 seconds
+# sequence: 26.862 seconds
 # Looks like you failed 1 test of 9
    8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
@@ -6958,7 +6964,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed for parameter '$x'
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-80180-329460.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at getout-74611-219586.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   32    0    2    0   34
      1 todo   : UnwindException
@@ -6993,7 +6999,7 @@ rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
-"MIS",           6,     7,     0,     0,    13,    13
+"MIS",           6,     8,     0,     0,    14,    14
 "S01",           0,     0,     0,    87,    87,    87
 "S02",        9703,     3,   147,   379, 10232, 10235
 "S03",        8617,     8,    49,   100,  8774,  8780
@@ -7019,11 +7025,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       14330,   402,   136,   161, 15029, 20650
 "int",        1339,     3,     9,    19,  1370,  1366
 "ros",           2,     0,     0,     0,     2,     2
-"total",     52745,   552,   712,  1471, 55480,144885
+"total",     52745,   553,   712,  1471, 55481,144886
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
-MISC/bug-coverage-stress.rakudo.jvm aborted 6 test(s)
+MISC/bug-coverage-stress.rakudo.jvm aborted 7 test(s)
 MISC/bug-coverage.t aborted 1 test(s)
 S02-types/capture.t 35 - text matches '/'Capture|(Scalar|' \d+ ')'/'
 S02-types/capture.t 43 - types whose .Capture behaves like Mu.Capture
