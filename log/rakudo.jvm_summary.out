@@ -3574,13 +3574,13 @@ S15-unicode-information/uniname.rakudo.jvm.........  26    0    2   20   48
      1 todo   : HANGUL SYLLABLES D4DB
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1525317022
-# Using file temp_1525317022
-# Using file temp_1525317022
+S16-filehandles/chmod.t............................# Using file temp_1525403425
+# Using file temp_1525403425
+# Using file temp_1525403425
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-96134-1.temp
-# Using file temp-16-filehandles-filestat-96134-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-94499-1.temp
+# Using file temp-16-filehandles-filestat-94499-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 119    0    0    9  128
@@ -3592,7 +3592,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-486618
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-889591
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -8434,30 +8434,30 @@ integration/advent2012-day21.t.....................# Failed test 'recursive-tern
 # #
 # # A fatal error has been detected by the Java Runtime Environment:
 # #
-# #  SIGSEGV (0xb) at pc=0x0000000803f31980, pid=25303, tid=0x00000000000187d9
+# #  SIGSEGV (0xb) at pc=0x00000008042a8810, pid=23881, tid=0x0000000000018728
 # #
 # # JRE version: OpenJDK Runtime Environment (8.0_152-b16) (build 1.8.0_152-b16)
 # # Java VM: OpenJDK 64-Bit Server VM (25.152-b16 mixed mode bsd-amd64 compressed oops)
 # # Problematic frame:
-# # J 3484 C2 CE235867DE9CD9678B8335BF78DCD6875BF6E69C.qb_312(Lorg/perl6/nqp/runtime/CompilationUnit;Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/runtime/CodeRef;Lorg/perl6/nqp/runtime/CallSiteDescriptor;Lorg/perl6/nqp/runtime/ResumeStatus$Frame;[Ljava/lang/Object;)V (308 bytes) @ 0x0000000803f31980 [0x0000000803f31980+0x0]
+# # J 2209 C2 __P6opaque__78.get_attribute_boxed(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/sixmodel/SixModelObject;Ljava/lang/String;J)Lorg/perl6/nqp/sixmodel/SixModelObject; (214 bytes) @ 0x00000008042a8810 [0x00000008042a87e0+0x30]
 # #
 # # Core dump written. Default location: /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/java.core
 # #
 # # An error report file with more information is saved as:
-# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid25303.log
+# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid23881.log
 # #
 # # If you would like to submit a bug report, please visit:
 # #   http://bugreport.java.com/bugreport/crash.jsp
 # #
 # '
-# kaz: 8.204 seconds
-# gerdr: 8.297 seconds
-# recursive-ternary: 8.583 seconds
-# hand-memoization: 8.713 seconds
-# loop: 8.738 seconds
-# recursive-ternary-hand-cached: 16.75 seconds
-# sequence-ternary: 17.015 seconds
-# sequence: 23.429 seconds
+# kaz: 8.195 seconds
+# gerdr: 8.223 seconds
+# loop: 8.599 seconds
+# recursive-ternary: 8.752 seconds
+# hand-memoization: 8.905 seconds
+# sequence-ternary: 16.124 seconds
+# recursive-ternary-hand-cached: 17.568 seconds
+# sequence: 23.324 seconds
 # Looks like you failed 1 test of 9
    8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
@@ -8494,7 +8494,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed for parameter '$x'
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-26485-265894.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-25075-926429.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   32    0    2    0   34
      1 todo   : UnwindException
