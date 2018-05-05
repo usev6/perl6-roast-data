@@ -1957,10 +1957,7 @@ Use of uninitialized value of type Int in numeric context
      1 todo   : NFG or normalization not supported on JVM
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set_addition.t....................... 678    0    0    0  678
-S03-operators/set_difference.t.....................java.lang.IllegalArgumentException: bad parameter count 285
-  in block <unit> at t/spec/S03-operators/set_difference.t line 191
-
-   0    2    0    0    2
+S03-operators/set_difference.t.....................   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
 S03-operators/set_elem.t...........................# Failed test 'before is (elem) of Mix'
 # at t/spec/S03-operators/set_elem.t line 84
@@ -3574,13 +3571,13 @@ S15-unicode-information/uniname.rakudo.jvm.........  26    0    2   20   48
      1 todo   : HANGUL SYLLABLES D4DB
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1525403425
-# Using file temp_1525403425
-# Using file temp_1525403425
+S16-filehandles/chmod.t............................# Using file temp_1525489808
+# Using file temp_1525489808
+# Using file temp_1525489809
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-94499-1.temp
-# Using file temp-16-filehandles-filestat-94499-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-10253-1.temp
+# Using file temp-16-filehandles-filestat-10253-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 119    0    0    9  128
@@ -3592,7 +3589,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-889591
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-70349
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -3653,7 +3650,17 @@ S17-promise/at.t...................................   4    0    0    0    4
 S17-promise/basic.t................................  41    0    0    0   41
 S17-promise/in.t...................................   4    0    0    0    4
 S17-promise/lock-async.t...........................  37    0    0    0   37
-S17-promise/nonblocking-await.rakudo.jvm...........   5    0    2   21   28
+S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-3" Exception in thread "Thread-1" org.perl6.nqp.runtime.UnwindException
+	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
+	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
+	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5638)
+	at java.lang.Thread.run(Thread.java:748)
+org.perl6.nqp.runtime.UnwindException
+	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
+	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
+	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5638)
+	at java.lang.Thread.run(Thread.java:748)
+   5    0    2   21   28
      1 skipped: NullPointerException
      5 skipped: UnwindException
      1 skipped: atomicint NYI
@@ -3674,7 +3681,12 @@ Useless use of constant integer 1 in sink context (use Nil instead to suppress t
      3 skipped: waiting for new '.loads' semantics RT  \#124776
      2 skipped: waiting for new '.loads' semantics RT  \#124777
 S17-scheduler/every.t..............................  20    0    0    0   20
-S17-scheduler/in.t.................................  14    0    0    0   14
+S17-scheduler/in.t.................................# Failed test 'Timer tasks on ThreadPoolScheduler with :in ran in right order'
+# at t/spec/S17-scheduler/in.t line 20
+# expected: '1s2s'
+#      got: '2s1s'
+# Looks like you failed 1 test of 14
+  13    1    0    0   14
 S17-scheduler/times.t..............................   4    0    0    0    4
 S17-supply/Channel.t...............................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
@@ -3733,8 +3745,7 @@ S17-supply/interval.t..............................   9    0    0    0    9
 S17-supply/lines.rakudo.jvm........................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0    0    0    9
@@ -8434,30 +8445,30 @@ integration/advent2012-day21.t.....................# Failed test 'recursive-tern
 # #
 # # A fatal error has been detected by the Java Runtime Environment:
 # #
-# #  SIGSEGV (0xb) at pc=0x00000008042a8810, pid=23881, tid=0x0000000000018728
+# #  SIGSEGV (0xb) at pc=0x0000000804a55a10, pid=39293, tid=0x0000000000018721
 # #
 # # JRE version: OpenJDK Runtime Environment (8.0_152-b16) (build 1.8.0_152-b16)
 # # Java VM: OpenJDK 64-Bit Server VM (25.152-b16 mixed mode bsd-amd64 compressed oops)
 # # Problematic frame:
-# # J 2209 C2 __P6opaque__78.get_attribute_boxed(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/sixmodel/SixModelObject;Ljava/lang/String;J)Lorg/perl6/nqp/sixmodel/SixModelObject; (214 bytes) @ 0x00000008042a8810 [0x00000008042a87e0+0x30]
+# # J 3020 C2 org.perl6.nqp.runtime.CallFrame.<init>(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/runtime/CodeRef;)V (406 bytes) @ 0x0000000804a55a10 [0x0000000804a559e0+0x30]
 # #
 # # Core dump written. Default location: /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/java.core
 # #
 # # An error report file with more information is saved as:
-# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid23881.log
+# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid39293.log
 # #
 # # If you would like to submit a bug report, please visit:
 # #   http://bugreport.java.com/bugreport/crash.jsp
 # #
 # '
-# kaz: 8.195 seconds
-# gerdr: 8.223 seconds
-# loop: 8.599 seconds
-# recursive-ternary: 8.752 seconds
-# hand-memoization: 8.905 seconds
-# sequence-ternary: 16.124 seconds
-# recursive-ternary-hand-cached: 17.568 seconds
-# sequence: 23.324 seconds
+# kaz: 8.188 seconds
+# gerdr: 8.295 seconds
+# loop: 8.768 seconds
+# hand-memoization: 8.805 seconds
+# recursive-ternary: 8.826 seconds
+# sequence-ternary: 15.573 seconds
+# recursive-ternary-hand-cached: 17.646999 seconds
+# sequence: 22.266 seconds
 # Looks like you failed 1 test of 9
    8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
@@ -8494,7 +8505,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed for parameter '$x'
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-25075-926429.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-40487-791525.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   32    0    2    0   34
      1 todo   : UnwindException
@@ -8545,7 +8556,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         400,     0,     5,     5,   410,   423
 "S15",          54,     0,     6,    68,   128, 83001
 "S16",         728,     0,    13,    30,   771,   808
-"S17",         993,     0,    18,    75,  1086,  1323
+"S17",         992,     1,    18,    75,  1086,  1323
 "S19",          18,     0,     7,     0,    25,    25
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          60,     1,     0,     0,    61,   133
@@ -8555,7 +8566,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       14462,   268,   137,   141, 15006, 20637
 "int",        1338,     5,     8,    19,  1370,  1366
 "ros",           2,     0,     0,     0,     2,     2
-"total",     53053,   354,   705,  1454, 55564,144980
+"total",     53052,   355,   705,  1454, 55564,144980
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
@@ -8633,6 +8644,7 @@ S06-operator-overloading/circumfix.rakudo.jvm 7 - circumfix with non-Latin1 brac
 S06-signature/types.rakudo.jvm 16 - numeric literals as type constraints
 S09-typed-arrays/native.t 8 - assigning other arrays into native arrays dies if the type of an element is wrong
 S11-compunit/compunit-dependencyspecification.t 1 - 
+S17-scheduler/in.t 4 - Timer tasks on ThreadPoolScheduler with :in ran in right order
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S29-context/eval.rakudo.jvm 25 - EVAL(Buf)
 S29-context/evalfile.t 3 - &EVALFILE respects compiler encoding options
