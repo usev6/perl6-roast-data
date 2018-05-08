@@ -1679,50 +1679,50 @@ S05-mass/properties-script.rakudo.jvm.............. 325    0    0   35  360
 S05-mass/recursive.t...............................  20    0    0    0   20
 S05-mass/rx.rakudo.jvm.............................Potential difficulties:
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1390
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1389
     ------> [32mok 'a b c def' ~~ /:s(1) b c [:s(0) d[33m⏏[31m e f ]/, 'sigspace, lexical repetition ([0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1390
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1389
     ------> [32mok 'a b c def' ~~ /:s(1) b c [:s(0) d e[33m⏏[31m f ]/, 'sigspace, lexical repetition (:s[0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1393
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1392
     ------> [32mok 'a b c def' ~~ /:s b c [:!s d[33m⏏[31m e f ]/, 'sigspace, lexical repetition ([0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1393
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1392
     ------> [32mok 'a b c def' ~~ /:s b c [:!s d e[33m⏏[31m f ]/, 'sigspace, lexical repetition (:s[0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1396
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1395
     ------> [32mok 'a b c def' !~~ /:s(0) b[33m⏏[31m c [:s(1) d e f ]/, 'sigspace, lexical r[0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1400
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1399
     ------> [32mok 'a b c def' !~~ /:!s b[33m⏏[31m c [:s d e f ]/, 'sigspace, lexical repe[0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1403
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1402
     ------> [32mok 'a b c def' !~~ /:s(0) b[33m⏏[31m c [:s(0) d e f ]/, 'sigspace, lexical r[0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1403
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1402
     ------> [32mok 'a b c def' !~~ /:s(0) b c [:s(0) d[33m⏏[31m e f ]/, 'sigspace, lexical repetition ([0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1403
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1402
     ------> [32mok 'a b c def' !~~ /:s(0) b c [:s(0) d e[33m⏏[31m f ]/, 'sigspace, lexical repetition (:s[0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1407
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1406
     ------> [32mok 'a b c def' !~~ /:!s b[33m⏏[31m c [:!s d e f ]/, 'sigspace, lexical rep[0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1407
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1406
     ------> [32mok 'a b c def' !~~ /:!s b c [:!s d[33m⏏[31m e f ]/, 'sigspace, lexical repetition ([0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1407
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:1406
     ------> [32mok 'a b c def' !~~ /:!s b c [:!s d e[33m⏏[31m f ]/, 'sigspace, lexical repetition (:s[0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:2047
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:2046
     ------> [32m    ok 'foooo' ~~ /^ f[33m⏏[31m o ** 4 $/, 'RT #112450 sanity';[0m
     Space is not significant here; please use quotes or :s (:sigspace) modifier (or, to suppress this warning, omit the space, or otherwise change the spacing)
-    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:2049
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S05-mass/rx.rakudo.jvm:2048
     ------> [32m    ok 'foooo' ~~ /^ f[33m⏏[31m o ** {$rt112450} $/, 'RT #112450 closur[0m
 Use of Nil in string context
   in block <unit> at t/spec/S05-mass/rx.rakudo.jvm line 427
- 736    0    4   15  755
+ 737    0    3   15  755
      1 skipped: '۳' is not a valid number
      1 skipped: :: NYI RT  \#124889
      1 skipped: :: NYI RT  \#124890
@@ -1741,7 +1741,6 @@ Use of Nil in string context
      1 todo   : <commit> NYI RT #124897
      1 todo   : RT #121307
      1 todo   : parse error RT #124903
-     1 todo PASSED: anchors and after RT #124898
 S05-mass/stdrules.t................................ 193    0    0    0  193
 S05-match/arrayhash.t..............................   9    0    0    0    9
 S05-match/blocks.rakudo.jvm........................Use of Nil in string context
@@ -1827,8 +1826,7 @@ S05-metasyntax/longest-alternative.rakudo.jvm......  56    0    1    5   62
      1 skipped: :: RT  \#124526
      4 skipped: :ignoremark needs NFG RT  \#124500
      1 todo   : negative lookahead does not LTM properly, RT #122951
-S05-metasyntax/lookaround.rakudo.jvm...............  10    0    4    0   14
-     4 todo PASSED: RT #131964
+S05-metasyntax/lookaround.t........................  14    0    0    0   14
 S05-metasyntax/null.t..............................   4    0    0    0    4
 S05-metasyntax/proto-token-ltm.t...................  10    0    0    0   10
 S05-metasyntax/regex.t.............................Potential difficulties:
@@ -2632,13 +2630,13 @@ S15-unicode-information/uniname.rakudo.jvm.........  26    0    2   20   48
      1 todo   : HANGUL SYLLABLES D4DB
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1525662522
-# Using file temp_1525662522
-# Using file temp_1525662522
+S16-filehandles/chmod.t............................# Using file temp_1525748878
+# Using file temp_1525748878
+# Using file temp_1525748878
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-60319-1.temp
-# Using file temp-16-filehandles-filestat-60319-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-52829-1.temp
+# Using file temp-16-filehandles-filestat-52829-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 119    0    0    9  128
@@ -2650,7 +2648,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-385068
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-729533
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2711,7 +2709,7 @@ S17-promise/at.t...................................   4    0    0    0    4
 S17-promise/basic.t................................  41    0    0    0   41
 S17-promise/in.t...................................   4    0    0    0    4
 S17-promise/lock-async.t...........................  37    0    0    0   37
-S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-1" Exception in thread "Thread-3" org.perl6.nqp.runtime.UnwindException
+S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-3" Exception in thread "Thread-1" org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
 	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5641)
@@ -2719,8 +2717,6 @@ S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-1
 org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
-	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5641)
-	at java.lang.Thread.run(Thread.java:748)
    5    0    2   21   28
      1 skipped: NullPointerException
      5 skipped: UnwindException
@@ -2801,7 +2797,8 @@ S17-supply/interval.t..............................   9    0    0    0    9
 S17-supply/lines.rakudo.jvm........................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0    0    0    9
@@ -6615,30 +6612,30 @@ integration/advent2012-day21.t.....................# Failed test 'recursive-tern
 # #
 # # A fatal error has been detected by the Java Runtime Environment:
 # #
-# #  SIGSEGV (0xb) at pc=0x00000008048f7370, pid=89444, tid=0x000000000001877e
+# #  SIGSEGV (0xb) at pc=0x00000008049e13e0, pid=81882, tid=0x000000000001880b
 # #
 # # JRE version: OpenJDK Runtime Environment (8.0_152-b16) (build 1.8.0_152-b16)
 # # Java VM: OpenJDK 64-Bit Server VM (25.152-b16 mixed mode bsd-amd64 compressed oops)
 # # Problematic frame:
-# # J 3010 C2 org.perl6.nqp.runtime.CallFrame.<init>(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/runtime/CodeRef;)V (406 bytes) @ 0x00000008048f7370 [0x00000008048f7340+0x30]
+# # J 3400 C1 java.lang.invoke.LambdaForm$BMH.reinvoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V (47 bytes) @ 0x00000008049e13e0 [0x00000008049e13e0+0x0]
 # #
 # # Core dump written. Default location: /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/java.core
 # #
 # # An error report file with more information is saved as:
-# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid89444.log
+# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid81882.log
 # #
 # # If you would like to submit a bug report, please visit:
 # #   http://bugreport.java.com/bugreport/crash.jsp
 # #
 # '
-# gerdr: 8.306 seconds
-# kaz: 8.3810010 seconds
-# hand-memoization: 8.707 seconds
-# loop: 8.74 seconds
-# recursive-ternary: 8.821 seconds
-# sequence-ternary: 15.4650011 seconds
-# recursive-ternary-hand-cached: 17.4 seconds
-# sequence: 22.447 seconds
+# kaz: 8.041 seconds
+# gerdr: 8.138 seconds
+# loop: 8.524 seconds
+# recursive-ternary: 8.645 seconds
+# hand-memoization: 8.7140011 seconds
+# sequence-ternary: 16.441 seconds
+# recursive-ternary-hand-cached: 17.305 seconds
+# sequence: 23.2920011 seconds
 # Looks like you failed 1 test of 9
    8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
@@ -6668,7 +6665,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed for parameter '$x'
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-90640-170384.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-83084-166079.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   32    0    2    0   34
      1 todo   : UnwindException
@@ -6708,7 +6705,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S02",        9743,     3,   143,   382, 10271, 10274
 "S03",        8633,     8,    49,   108,  8798,  8804
 "S04",        1540,     0,    48,    22,  1610,  1642
-"S05",        5880,     0,   121,   198,  6199,  6460
+"S05",        5885,     0,   116,   198,  6199,  6460
 "S06",        2205,     0,    64,    80,  2349,  2392
 "S07",         126,     0,     0,    11,   137,   233
 "S09",        2801,     1,    12,    39,  2853,  2853
@@ -6729,7 +6726,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       14701,    29,   137,   141, 15006, 20637
 "int",        1341,     2,     8,    19,  1370,  1366
 "ros",           2,     0,     0,     0,     2,     2
-"total",     53361,    47,   705,  1454, 55565,144981
+"total",     53366,    47,   700,  1454, 55565,144981
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
