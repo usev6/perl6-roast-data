@@ -9,6 +9,8 @@ MISC/bug-coverage-stress.rakudo.jvm................#      got status: 1
 #      got status: 1
 #      got out: ""
 # expected out: "pass"
+#      got err: "===SORRY!===\njava.lang.IllegalArgumentException: bad parameter count 850\n"
+# expected err: ""
    5    0    2    4   11
      1 skipped: The spawned command './perl6-j' exited unsuccessfully (exit code: 1)
      2 skipped: atomicint NYI
@@ -486,17 +488,10 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
 Use of uninitialized value @bar of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at t/spec/S02-types/array.rakudo.jvm line 357
-Died
-  in block  at t/spec/S02-types/array.rakudo.jvm line 410
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 414
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 404
-  in block <unit> at t/spec/S02-types/array.rakudo.jvm line 408
-
-  99    1    3    2  105
+ 100    0    3    2  105
      2 skipped: multi-dim arrays NYI RT  \#124508
      1 todo   : bind_pos NYI
      2 todo   : regression to AdHoc exception RT #124509
-     1 tests aborted (missing ok/not ok)
 S02-types/array_extending.t........................Use of uninitialized value of type Any in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at t/spec/S02-types/array_extending.t line 97
@@ -518,12 +513,8 @@ S02-types/baghash.rakudo.jvm....................... 279    0    2   21  302
      2 todo   : in flux
 S02-types/bool.t...................................  68    0    0    0   68
 S02-types/built-in.t...............................   1    0    0    0    1
-S02-types/capture.t................................# Failed test 'text matches /'Capture|(Scalar|' \d+ ')'/'
-# at t/spec/S02-types/capture.t line 197
-# expected a match with: /'Capture|(Scalar|' \d+ ')'/
-#                   got: "Capture|(Int|1395460425)"
-# Looks like you failed 1 test of 43
-  42    1    0    0   43
+S02-types/capture.rakudo.jvm.......................  42    0    1    0   43
+     1 todo   : Code fails due to preceding test; R#1816
 S02-types/catch_type_cast_mismatch.t...............  11    0    0    0   11
 S02-types/compact.rakudo.jvm.......................   2    0    0    8   10
      5 skipped: cat NYI RT  \#124456
@@ -1164,7 +1155,10 @@ Use of uninitialized value of type Int in numeric context
      1 todo   : NFG or normalization not supported on JVM
 S03-operators/scalar-assign.t......................   4    0    0    0    4
 S03-operators/set_addition.t....................... 678    0    0    0  678
-S03-operators/set_difference.t.....................   0    2    0    0    2
+S03-operators/set_difference.t.....................java.lang.IllegalArgumentException: bad parameter count 285
+  in block <unit> at t/spec/S03-operators/set_difference.t line 191
+
+   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
 S03-operators/set_elem.t........................... 240    0    0    0  240
 S03-operators/set_intersection.t................... 622    0    0    0  622
@@ -1194,12 +1188,12 @@ Please use set operator ⊇ instead.
 Please contact the author to have these occurrences of deprecated code
 adapted, so that this message will disappear!
   32    0    0    0   32
-S03-operators/set_proper_subset.t..................   0    2    0    0    2
-     2 tests aborted (missing ok/not ok)
-S03-operators/set_subset.t.........................java.lang.IllegalArgumentException: bad parameter count 331
-  in block <unit> at t/spec/S03-operators/set_subset.t line 381
+S03-operators/set_proper_subset.t..................java.lang.IllegalArgumentException: bad parameter count 337
+  in block <unit> at t/spec/S03-operators/set_proper_subset.t line 385
 
    0    2    0    0    2
+     2 tests aborted (missing ok/not ok)
+S03-operators/set_subset.t.........................   0    2    0    0    2
      2 tests aborted (missing ok/not ok)
 S03-operators/set_symmetric_difference.t...........java.lang.IllegalArgumentException: bad parameter count 261
   in block <unit> at t/spec/S03-operators/set_symmetric_difference.t line 181
@@ -2303,21 +2297,7 @@ S09-typed-arrays/native-num.rakudo.jvm.............# Testing num array
 S09-typed-arrays/native-str.rakudo.jvm.............# Testing str array
  160    0    0    2  162
      2 skipped: non-existing str elements return null_s
-S09-typed-arrays/native.t..........................        # Failed test ''my int @a = 1, 2**65' died'
-        # at t/spec/S09-typed-arrays/native.t line 103
-        # Looks like you failed 1 test of 2
-    # Failed test 'assigning a too big literal to an int array throws'
-    # at t/spec/S09-typed-arrays/native.t line 103
-        # Failed test ''my $a = 2**65;   my int @a = 1, $a' died'
-        # at t/spec/S09-typed-arrays/native.t line 107
-        # Looks like you failed 1 test of 2
-    # Failed test 'assigning a too big variable to an int array throws'
-    # at t/spec/S09-typed-arrays/native.t line 107
-    # Looks like you failed 2 tests of 14
-# Failed test 'assigning other arrays into native arrays dies if the type of an element is wrong'
-# at t/spec/S09-typed-arrays/native.t line 98
-# Looks like you failed 1 test of 8
-   7    1    0    0    8
+S09-typed-arrays/native.rakudo.jvm.................   8    0    0    0    8
                                                    pass fail todo skip plan
 S10-packages/basic.rakudo.jvm......................  82    0    0    1   83
      1 skipped: RT  \#59484
@@ -2611,13 +2591,13 @@ S15-unicode-information/uniname.rakudo.jvm.........  26    0    2   20   48
      1 todo   : HANGUL SYLLABLES D4DB
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1526008238
-# Using file temp_1526008239
-# Using file temp_1526008239
+S16-filehandles/chmod.t............................# Using file temp_1526094978
+# Using file temp_1526094978
+# Using file temp_1526094978
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-90955-1.temp
-# Using file temp-16-filehandles-filestat-90955-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-99705-1.temp
+# Using file temp-16-filehandles-filestat-99705-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 119    0    0    9  128
@@ -2629,7 +2609,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-370205
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-221406
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2690,14 +2670,16 @@ S17-promise/at.t...................................   4    0    0    0    4
 S17-promise/basic.t................................  41    0    0    0   41
 S17-promise/in.t...................................   4    0    0    0    4
 S17-promise/lock-async.t...........................  37    0    0    0   37
-S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-3" org.perl6.nqp.runtime.UnwindException
+S17-promise/nonblocking-await.rakudo.jvm...........Exception in thread "Thread-1" Exception in thread "Thread-3" org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
 	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5645)
 	at java.lang.Thread.run(Thread.java:748)
-Exception in thread "Thread-1" org.perl6.nqp.runtime.UnwindException
+org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
+	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5645)
+	at java.lang.Thread.run(Thread.java:748)
    5    0    2   21   28
      1 skipped: NullPointerException
      5 skipped: UnwindException
@@ -2778,7 +2760,8 @@ S17-supply/interval.t..............................   9    0    0    0    9
 S17-supply/lines.rakudo.jvm........................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    12 todo   : \r\n not yet handled as grapheme
+     2 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0    0    0    9
@@ -5789,15 +5772,14 @@ S32-str/chop.t.....................................  36    0    0    0   36
 S32-str/comb.rakudo.jvm............................  81    0    2    0   83
      2 todo   : NFG on JVM RT #124737
 S32-str/contains.t.................................  21    0    0    0   21
-S32-str/encode.rakudo.jvm..........................  25    0    7    6   36
-     5 skipped: Only moar handles this
+S32-str/encode.rakudo.jvm..........................  25    0    7    4   36
      1 skipped: We do not handle NDF yet RT  \#124687
+     3 skipped: encoding with replacement NYI
      2 todo   : JVM builtin code folds these RT #124686
      1 todo   : RT#107204 should say line and column
      1 todo   : RT#107204 should say line and column or mention term(ination)
      2 todo   : builtin JVM cp1252 code folds these RT #124686
      1 todo   : uft-16
-     2 tests more than planned were run
 S32-str/ends-with.t................................   9    0    0    0    9
 S32-str/flip.rakudo.jvm............................  11    0    2    0   13
      2 todo   : NFG on JVM RT #124682
@@ -6563,30 +6545,30 @@ integration/advent2012-day21.t.....................# Failed test 'recursive-tern
 # #
 # # A fatal error has been detected by the Java Runtime Environment:
 # #
-# #  SIGSEGV (0xb) at pc=0x00000008048f6de0, pid=20146, tid=0x00000000000187a4
+# #  SIGSEGV (0xb) at pc=0x0000000804a36ff0, pid=29001, tid=0x00000000000188bf
 # #
 # # JRE version: OpenJDK Runtime Environment (8.0_152-b16) (build 1.8.0_152-b16)
 # # Java VM: OpenJDK 64-Bit Server VM (25.152-b16 mixed mode bsd-amd64 compressed oops)
 # # Problematic frame:
-# # J 3201 C2 java.lang.invoke.LambdaForm$BMH.reinvoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V (47 bytes) @ 0x00000008048f6de0 [0x00000008048f6de0+0x0]
+# # J 3025 C2 org.perl6.nqp.runtime.CallFrame.<init>(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/runtime/CodeRef;)V (406 bytes) @ 0x0000000804a36ff0 [0x0000000804a36fc0+0x30]
 # #
 # # Core dump written. Default location: /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/java.core
 # #
 # # An error report file with more information is saved as:
-# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid20146.log
+# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid29001.log
 # #
 # # If you would like to submit a bug report, please visit:
 # #   http://bugreport.java.com/bugreport/crash.jsp
 # #
 # '
-# gerdr: 8.546 seconds
-# kaz: 8.871 seconds
-# loop: 8.881 seconds
-# hand-memoization: 9.216 seconds
-# recursive-ternary: 9.387 seconds
-# sequence-ternary: 15.895 seconds
-# recursive-ternary-hand-cached: 17.925 seconds
-# sequence: 22.93 seconds
+# gerdr: 8.433 seconds
+# kaz: 8.543 seconds
+# loop: 8.687 seconds
+# recursive-ternary: 8.86 seconds
+# hand-memoization: 9.021 seconds
+# sequence-ternary: 16.2770010 seconds
+# recursive-ternary-hand-cached: 17.535 seconds
+# sequence: 23.395 seconds
 # Looks like you failed 1 test of 9
    8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
@@ -6616,7 +6598,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed in binding to parameter '$x'; expected Even but got Int (3)
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-21331-134104.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-30195-747513.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   32    0    2    0   34
      1 todo   : UnwindException
@@ -6653,13 +6635,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "MIS",          16,     0,     2,     5,    23,    23
 "S01",           0,     0,     0,    87,    87,    87
-"S02",        9744,     2,   143,   382, 10271, 10274
+"S02",        9745,     0,   144,   382, 10271, 10274
 "S03",        8634,     8,    49,   107,  8798,  8804
 "S04",        1540,     0,    48,    24,  1612,  1644
 "S05",        5895,     0,   116,   188,  6199,  6460
 "S06",        2220,     0,    64,    77,  2361,  2404
 "S07",         126,     0,     0,    11,   137,   233
-"S09",        2829,     1,    12,    39,  2881,  2881
+"S09",        2830,     0,    12,    39,  2881,  2881
 "S10",         142,     0,     5,     1,   148,   205
 "S11",         184,     1,    21,    12,   218,   222
 "S12",        1743,     0,    39,   118,  1900,  1949
@@ -6674,20 +6656,17 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1518,     0,     4,    48,  1570,  1562
 "S28",           5,     0,     0,     0,     5,     9
 "S29",         447,     2,     3,     3,   455,   455
-"S32",       14702,    28,   137,   141, 15006, 20637
+"S32",       14702,    28,   137,   139, 15006, 20637
 "int",        1341,     2,     8,    19,  1370,  1366
 "ros",           2,     0,     0,     0,     2,     2
-"total",     53425,    45,   700,  1441, 55609,145025
+"total",     53427,    42,   701,  1439, 55609,145025
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
-S02-types/array.rakudo.jvm aborted 1 test(s)
-S02-types/capture.t 35 - text matches /'Capture|(Scalar|' \d+ ')'/
 S03-operators/set_difference.t aborted 2 test(s)
 S03-operators/set_proper_subset.t aborted 2 test(s)
 S03-operators/set_subset.t aborted 2 test(s)
 S03-operators/set_symmetric_difference.t aborted 2 test(s)
-S09-typed-arrays/native.t 8 - assigning other arrays into native arrays dies if the type of an element is wrong
 S11-compunit/compunit-dependencyspecification.t 1 - 
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S29-context/eval.rakudo.jvm 25 - EVAL(Buf)
@@ -6696,6 +6675,5 @@ S32-io/IO-Socket-Async.rakudo.jvm aborted 25 test(s)
 S32-io/out-buffering.rakudo.jvm 1 - .open: \(:w)
 S32-io/out-buffering.rakudo.jvm 2 - .open: \(:rw)
 S32-io/out-buffering.rakudo.jvm 3 - .open: \(:a)
-S32-str/encode.rakudo.jvm passed 2 unplanned test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
 integration/man-or-boy.t aborted 1 test(s)
