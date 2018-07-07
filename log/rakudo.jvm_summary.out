@@ -2208,17 +2208,17 @@ S07-hyperrace/stress.t.............................Exception in thread "Thread-1
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
 	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5661)
 	at java.lang.Thread.run(Thread.java:748)
-Exception in thread "Thread-19" org.perl6.nqp.runtime.UnwindException
-	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
-	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
-	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5661)
-	at java.lang.Thread.run(Thread.java:748)
-Exception in thread "Thread-20" org.perl6.nqp.runtime.UnwindException
-	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
-	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
-	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5661)
-	at java.lang.Thread.run(Thread.java:748)
 Exception in thread "Thread-16" org.perl6.nqp.runtime.UnwindException
+	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
+	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
+	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5661)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-22" org.perl6.nqp.runtime.UnwindException
+	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
+	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
+	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5661)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-19" org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
 	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5661)
@@ -2588,13 +2588,13 @@ S15-unicode-information/uniname.rakudo.jvm.........  26    0    2   20   48
      1 todo   : HANGUL SYLLABLES D4DB
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1530844843
-# Using file temp_1530844843
-# Using file temp_1530844843
+S16-filehandles/chmod.t............................# Using file temp_1530931343
+# Using file temp_1530931343
+# Using file temp_1530931343
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-58403-1.temp
-# Using file temp-16-filehandles-filestat-58403-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-55093-1.temp
+# Using file temp-16-filehandles-filestat-55093-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 119    0    0    9  128
@@ -2606,7 +2606,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-940195
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-121090
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2661,7 +2661,19 @@ S17-lowlevel/lock.t................................  23    0    0    0   23
 S17-lowlevel/semaphore.t...........................   2    0    0    0    2
 S17-lowlevel/thread-start-join-stress.t............   1    0    0    0    1
 S17-lowlevel/thread.t..............................  29    0    0    0   29
-S17-procasync/basic.rakudo.jvm.....................  42    0    1    3   46
+S17-procasync/basic.rakudo.jvm.....................    # Failed test 'stdout is good'
+    # at t/spec/S17-procasync/basic.rakudo.jvm line 177
+    # expected: "test passed"
+    #      got: "test passe"
+    # Failed test 'stderr is empty'
+    # at t/spec/S17-procasync/basic.rakudo.jvm line 178
+    # expected: ""
+    #      got: "d"
+    # Looks like you failed 2 tests of 3
+# Failed test '.new accepts command + args via a single Iterable arg'
+# at t/spec/S17-procasync/basic.rakudo.jvm line 170
+# Looks like you failed 1 test of 46
+  41    1    1    3   46
      3 skipped: returns Nil (flapping tests) RT  \#125047
      1 todo   : wrong handling of \r\n
 S17-procasync/encoding.rakudo.jvm..................  11    0    2    0   13
@@ -2671,14 +2683,19 @@ S17-procasync/no-runaway-file-limit.t..............   1    0    0    0    1
 S17-procasync/nonexistent.t........................   7    0    0    0    7
 S17-procasync/print.rakudo.jvm.....................  11    0    0    5   16
      5 skipped: Flapping tests RT  \#125048
-S17-procasync/stress.rakudo.jvm....................#      got status: 1
+S17-procasync/stress.rakudo.jvm....................    # 
+    # Hang in doesn't-hang() test detected by heuristic.
+    # You can set %*ENV<ROAST_TIMING_SCALE> to a value higher than 1
+    # to make it wait longer.
+    # 
+#      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "Exception in thread \"Thread-3\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.Ops\$CodeRunnable.run(Ops.java:5661)\n\tat java.lang.Thread.run(Thread.java:748)\nAn operation first awaited:\n  in block <unit> at /tmp/getout-63479-810509.code line 2\n\nDied with the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-63479-810509.code line 8\n\n"
+#      got err: "An operation first awaited:\n  in block <unit> at /tmp/getout-60171-18172.code line 2\n\nDied with the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-60171-18172.code line 8\n\n"
 # expected err: ""
   21    0    2    0   23
      1 todo   : Unknown encoding utf8-c8
-     1 todo PASSED: hangs
+     1 todo   : hangs
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   4    0    0    0    4
@@ -2775,7 +2792,8 @@ S17-supply/interval.t..............................   9    0    0    0    9
 S17-supply/lines.rakudo.jvm........................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0   14    0   23
-    14 todo   : \r\n not yet handled as grapheme
+    13 todo   : \r\n not yet handled as grapheme
+     1 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0    0    0    9
@@ -2833,27 +2851,7 @@ S17-supply/stable.rakudo.jvm.......................# **** scheduling with Thread
 S17-supply/start.t.................................   8    0    0    0    8
 S17-supply/supplier-preserving.rakudo.jvm..........   1    0    0    0    1
 S17-supply/syntax-nonblocking-await.t..............   9    0    0    0    9
-S17-supply/syntax.rakudo.jvm.......................Exception in thread "Thread-16" org.perl6.nqp.runtime.UnwindException
-	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
-	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
-	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5661)
-	at java.lang.Thread.run(Thread.java:748)
-Exception in thread "Thread-25" org.perl6.nqp.runtime.UnwindException
-	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
-	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
-	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5661)
-	at java.lang.Thread.run(Thread.java:748)
-Exception in thread "Thread-29" org.perl6.nqp.runtime.UnwindException
-	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
-	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
-	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5661)
-	at java.lang.Thread.run(Thread.java:748)
-Exception in thread "Thread-36" org.perl6.nqp.runtime.UnwindException
-	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
-	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
-	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5661)
-	at java.lang.Thread.run(Thread.java:748)
-  69    0    1   13   83
+S17-supply/syntax.rakudo.jvm.......................  69    0    1   13   83
      1 skipped: RT  \#126842 hangs since rakudo commit 1a4df4e100
      5 skipped: UnwindException
      1 skipped: atomicint NYI
@@ -6474,30 +6472,30 @@ integration/advent2012-day21.t.....................# Failed test 'recursive-tern
 # #
 # # A fatal error has been detected by the Java Runtime Environment:
 # #
-# #  SIGSEGV (0xb) at pc=0x00000008042899d0, pid=91138, tid=0x0000000000018af4
+# #  SIGSEGV (0xb) at pc=0x0000000803d554a0, pid=87890, tid=0x0000000000018714
 # #
 # # JRE version: OpenJDK Runtime Environment (8.0_162-b12) (build 1.8.0_162-b12)
 # # Java VM: OpenJDK 64-Bit Server VM (25.162-b12 mixed mode bsd-amd64 compressed oops)
 # # Problematic frame:
-# # J 2206 C2 __P6opaque__79.get_attribute_boxed(Lorg/perl6/nqp/runtime/ThreadContext;Lorg/perl6/nqp/sixmodel/SixModelObject;Ljava/lang/String;J)Lorg/perl6/nqp/sixmodel/SixModelObject; (214 bytes) @ 0x00000008042899d0 [0x00000008042899a0+0x30]
+# # J 3231 C2 java.lang.invoke.LambdaForm$BMH.reinvoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V (49 bytes) @ 0x0000000803d554a0 [0x0000000803d554a0+0x0]
 # #
 # # Core dump written. Default location: /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/java.core
 # #
 # # An error report file with more information is saved as:
-# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid91138.log
+# # /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/hs_err_pid87890.log
 # #
 # # If you would like to submit a bug report, please visit:
 # #   http://bugreport.java.com/bugreport/crash.jsp
 # #
 # '
-# kaz: 7.312 seconds
-# gerdr: 7.346 seconds
-# loop: 7.981 seconds
-# recursive-ternary: 8.151 seconds
-# hand-memoization: 8.183 seconds
-# sequence-ternary: 16.412 seconds
-# recursive-ternary-hand-cached: 17.071 seconds
-# sequence: 21.522 seconds
+# gerdr: 7.362 seconds
+# kaz: 7.574 seconds
+# loop: 7.804 seconds
+# hand-memoization: 8.087 seconds
+# recursive-ternary: 8.208 seconds
+# sequence-ternary: 14.285 seconds
+# recursive-ternary-hand-cached: 16.698 seconds
+# sequence: 21.446 seconds
 # Looks like you failed 1 test of 9
    8    1    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
@@ -6527,7 +6525,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed in binding to parameter '$x'; expected Even but got Int (3)
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-92334-85166.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-89089-457237.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   32    0    2    0   34
      1 todo   : UnwindException
@@ -6578,7 +6576,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         401,     0,     5,     5,   411,   424
 "S15",          54,     0,     6,    68,   128, 83001
 "S16",         728,     0,    13,    30,   771,   808
-"S17",        1097,     0,    23,    73,  1193,  1323
+"S17",        1096,     1,    23,    73,  1193,  1323
 "S19",          18,     0,     7,     0,    25,    25
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          60,     1,     0,     0,    61,   133
@@ -6588,11 +6586,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       14913,     0,   130,   138, 15181, 20782
 "int",        1341,     2,     8,    19,  1370,  1366
 "ros",           2,     0,     0,     0,     2,     2
-"total",     58331,    14,   693,  1435, 60473,149744
+"total",     58330,    15,   693,  1435, 60473,149744
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have MIS
 MISC/bug-coverage-stress.rakudo.jvm aborted 11 test(s)
+S17-procasync/basic.rakudo.jvm 46 - .new accepts command + args via a single Iterable arg
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 integration/advent2012-day21.t 3 - recursive-ternary-hand-cached
 integration/man-or-boy.t aborted 1 test(s)
