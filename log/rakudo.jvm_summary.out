@@ -2209,4 +2209,6 @@ S07-hyperrace/stress.t.............................Exception in thread "Thread-1
 	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5661)
 	at java.lang.Thread.run(Thread.java:748     4    7    0    0   11
      7 tests aborted (missing ok/not ok)
-S07-iterators/range-iterator.rakudo.jvm.............jvm: No such file or directory
+S07-iterators/range-iterator.rakudo.jvm............ 103    0    0    5  108
+     5 skipped: Method 'count-only' not found for invocant of class
+S07-slip/slip.t....................................
