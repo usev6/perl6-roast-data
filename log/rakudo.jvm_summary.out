@@ -2,7 +2,15 @@
                                                    pass fail todo skip plan
 APPENDICES/A01-limits/misc.rakudo.jvm..............   2    0    1    0    3
      1 todo   : repeat count (4294967295) cannot be greater than max allowed number of graphemes 2147483647
-APPENDICES/A01-limits/overflow.t...................  18    0    0    0   18
+APPENDICES/A01-limits/overflow.t...................# Failed test 'raising a Rat to largish power does not throw'
+# at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 163
+#      got status: 1
+#      got out: ""
+# expected out: "pass\n"
+#      got err: "java.lang.ArithmeticException: BigInteger would overflow supported range\n  in block <unit> at EVAL_0 line 1\n  in block <unit> at /tmp/getout-38467-689546.code line 1\n\n"
+# expected err: ""
+# Looks like you failed 1 test of 18
+  17    1    0    0   18
 APPENDICES/A02-some-day-maybe/concreteness.t.......   1    0    0    0    1
 APPENDICES/A02-some-day-maybe/io-cathandle.t.......  13    0    0    0   13
 APPENDICES/A02-some-day-maybe/misc.t...............Ignoring [Nil] as shape specification, did you mean 'my Nil @foo' ?
@@ -41,6 +49,21 @@ Exception in thread "Thread-32" org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
 	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5710)
 	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-33" org.perl6.nqp.runtime.UnwindException
+	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
+	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
+	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5710)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-34" org.perl6.nqp.runtime.UnwindException
+	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
+	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
+	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5710)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-35" org.perl6.nqp.runtime.UnwindException
+	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
+	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
+	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5710)
+	at java.lang.Thread.run(Thread.java:748)
 # 
 #     NOTE IF THIS TEST FLOPS. LIKELY THE BUG STILL EXISTS.
 #     BUMP THE LOOP COUNTER TO ^20000 to make the failure more likely to occur.
@@ -60,7 +83,7 @@ MISC/bug-coverage-stress.rakudo.jvm................#      got status: 1
 MISC/bug-coverage.rakudo.jvm.......................#      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "Died\n  in block <unit> at /tmp/getout-76982-456448.code line 5\n\n"
+#      got err: "Died\n  in block <unit> at /tmp/getout-39515-284157.code line 5\n\n"
 # expected err: ""
   15    0    1    1   17
      1 skipped: UnwindException in thread "main", RT  \#132172
@@ -396,18 +419,18 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
      1 todo   : signal SIGHUP not supported
 S02-magicals/PERL.rakudo.jvm.......................Use of uninitialized value of type Blob in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block <unit> at t/spec/S02-magicals/PERL.rakudo.jvm line 47
+  in block <unit> at t/spec/S02-magicals/PERL.rakudo.jvm line 45
 Use of uninitialized value of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block <unit> at t/spec/S02-magicals/PERL.rakudo.jvm line 49
+  in block <unit> at t/spec/S02-magicals/PERL.rakudo.jvm line 47
 Use of uninitialized value of type Blob in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block <unit> at t/spec/S02-magicals/PERL.rakudo.jvm line 66
+  in block <unit> at t/spec/S02-magicals/PERL.rakudo.jvm line 64
 Use of uninitialized value of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block <unit> at t/spec/S02-magicals/PERL.rakudo.jvm line 68
-  17    0    8   25   50
-    25 skipped: unimpl $?PERL RT  \#124581
+  in block <unit> at t/spec/S02-magicals/PERL.rakudo.jvm line 66
+  15    0    8   23   46
+    23 skipped: unimpl $?PERL RT  \#124581
      1 todo   : no Perl.compiler.codename yet RT #124600
      1 todo   : no Perl.compiler.desc yet RT #124594
      1 todo   : no Perl.compiler.release yet RT #124597
@@ -2411,11 +2434,11 @@ S11-modules/nested.rakudo.jvm......................  10    0    1    0   11
 S11-modules/perl6lib.t.............................   1    0    0    0    1
 S11-modules/require.rakudo.jvm.....................Unhandled exception: Wrong number of arguments passed; expected 1..1, but got 1
   in dispatch:<::> (gen/jvm/CORE.setting:1768)
-  in clone (gen/jvm/CORE.setting:43455)
-  in <anon> (gen/jvm/CORE.setting:39390)
-  in EXCEPTION (gen/jvm/CORE.setting:39384)
-  in print_exception (gen/jvm/CORE.setting:39461)
-  in <anon> (gen/jvm/CORE.setting:39568)
+  in clone (gen/jvm/CORE.setting:43457)
+  in <anon> (gen/jvm/CORE.setting:39392)
+  in EXCEPTION (gen/jvm/CORE.setting:39386)
+  in print_exception (gen/jvm/CORE.setting:39463)
+  in <anon> (gen/jvm/CORE.setting:39570)
   in command_eval (gen/jvm/stage2/NQPHLL.nqp:1366)
   in command_eval (src/Perl6/Compiler.nqp:48)
   in command_line (gen/jvm/stage2/NQPHLL.nqp:1288)
@@ -2428,7 +2451,7 @@ S11-modules/require.rakudo.jvm.....................Unhandled exception: Wrong nu
      2 todo   : only test for Cool::Cat passes in this loop
      1 todo PASSED: only test for Cool::Cat passes in this loop
 S11-modules/runtime.t..............................   1    0    0    0    1
-S11-repository/cur-candidates.t....................Failed to get the directory contents of '/tmp/perl6_roast_cur_candidates_t_line_1_0_119409194606590391556585386/my-repo/dist': nqp::opendir: unable to get a DirectoryStream
+S11-repository/cur-candidates.t....................Failed to get the directory contents of '/tmp/perl6_roast_cur_candidates_t_line_1_0_75142340686365631557102292/my-repo/dist': nqp::opendir: unable to get a DirectoryStream
   in block  at t/spec/S11-repository/cur-candidates.t line 185
   in block  at t/spec/S11-repository/cur-candidates.t line 152
   in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 420
@@ -2683,13 +2706,13 @@ S15-unicode-information/uniname.rakudo.jvm.........  26    0    2   20   48
      1 todo   : HANGUL SYLLABLES D4DB
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1556587179
-# Using file temp_1556587179
-# Using file temp_1556587179
+S16-filehandles/chmod.t............................# Using file temp_1557104080
+# Using file temp_1557104080
+# Using file temp_1557104080
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-19928-1.temp
-# Using file temp-16-filehandles-filestat-19928-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-82124-1.temp
+# Using file temp-16-filehandles-filestat-82124-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 119    0    0    9  128
@@ -2701,7 +2724,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-977683
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-545830
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2772,7 +2795,7 @@ S17-procasync/stress.rakudo.jvm....................    #
 #      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "A react block:\n  in sub REACT at gen/jvm/CORE.d.setting line 104\n  in block <unit> at /tmp/getout-25422-919092.code line 2\n\nDied because of the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-25422-919092.code line 8\n\n"
+#      got err: "A react block:\n  in sub REACT at gen/jvm/CORE.d.setting line 104\n  in block <unit> at /tmp/getout-87894-281164.code line 2\n\nDied because of the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-87894-281164.code line 8\n\n"
 # expected err: ""
   21    0    2    0   23
      1 todo   : Unknown encoding utf8-c8
@@ -5442,9 +5465,9 @@ S32-hash/slice.rakudo.jvm..........................  21    0   10    0   31
 S32-io/IO-Socket-Async.rakudo.jvm..................# host=127.0.0.1
 # host=::1
 # 127.0.0.1
-# 59135
+# 45777
 # 127.0.0.1
-# 59136
+# 45778
   35    0    4    1   40
      1 skipped: seems to crash the server (sometimes): IllegalStateException: Current state = CODING_END, new state = CODING
      1 todo   : NullPointerException
@@ -5808,7 +5831,7 @@ S32-str/flip.rakudo.jvm............................  11    0    2    0   13
      2 todo   : NFG on JVM RT #124682
 S32-str/indent.rakudo.jvm..........................Asked to remove 4 spaces, but the shortest indent is 3 spaces
   in block <unit> at t/spec/S32-str/indent.rakudo.jvm line 62
-    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-50162-912875.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
+    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-12806-332843.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
     # expected err: ""
   63    0    0    0   63
 S32-str/index.t....................................  47    0    0    0   47
@@ -5965,14 +5988,14 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# gerdr: 8.258 seconds
-# loop: 8.313 seconds
-# hand-memoization: 8.586 seconds
-# recursive-ternary: 8.647 seconds
-# kaz: 8.817 seconds
-# sequence-ternary: 13.67 seconds
-# sequence: 22.611 seconds
-# recursive-ternary-hand-cached: 26.016 seconds
+integration/advent2012-day21.t.....................# gerdr: 8.017 seconds
+# kaz: 8.363 seconds
+# recursive-ternary: 8.368 seconds
+# loop: 8.415 seconds
+# hand-memoization: 8.662 seconds
+# sequence-ternary: 14.154 seconds
+# sequence: 21.8150011 seconds
+# recursive-ternary-hand-cached: 25.18 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -6002,7 +6025,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed in binding to parameter '$x'; expected Even but got Int (3)
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-58356-175710.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-20998-363890.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/main.nqp)\n"
   31    0    2    0   33
      1 todo   : UnwindException
@@ -6036,10 +6059,10 @@ rosettacode/greatest_element_of_a_list.t...........   1    0    0    0    1
 rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
-"APP",          80,     0,     1,     4,    85,    85
+"APP",          79,     1,     1,     4,    85,    85
 "MIS",          30,     0,     3,     5,    38,    38
 "S01",           2,     0,     0,    87,    89,    89
-"S02",        9825,     0,   136,   321, 10282, 10285
+"S02",        9823,     0,   136,   319, 10278, 10281
 "S03",       19513,     0,    53,    99, 19665, 19671
 "S04",        1571,     0,    48,    24,  1643,  1675
 "S05",        5889,     0,   114,   189,  6192,  6453
@@ -6063,10 +6086,11 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       31759,     1,   122,   134, 32016, 37644
 "int",        1343,     0,     8,    21,  1372,  1368
 "ros",           2,     0,     0,     0,     2,     2
-"total",     82261,     2,   667,  1349, 84279,174141
+"total",     82258,     3,   667,  1347, 84275,174137
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have APP
+APPENDICES/A01-limits/overflow.t 10 - raising a Rat to largish power does not throw
 note: test_summary.pl @syn does not have MIS
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S32-io/io-handle.rakudo.jvm 19 - .t returns True for TTY
