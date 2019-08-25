@@ -489,7 +489,12 @@ S02-one-pass-parsing/less-than.t...................   9    0    0    0    9
 S02-one-pass-parsing/misc.t........................   1    0    0    0    1
 S02-packages/package-lookup.t......................   7    0    0    0    7
 S02-types/WHICH.t..................................1605    0    0    0 1605
-S02-types/anon_block.rakudo.moar...................Block object coerced to string (please use .gist or .perl to do that)
+S02-types/anon_block.rakudo.moar...................WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Type Block does not support associative indexing.
+  in block <unit> at EVAL_1 line 1
+  in block <unit> at t/spec/S02-types/anon_block.rakudo.moar line 94
+
+Block object coerced to string (please use .gist or .perl to do that)
   in sub isnt at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 224
   39    0    1    2   42
      2 skipped: tests don't work if previous test fails
@@ -506,10 +511,6 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
 Use of uninitialized value @bar of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at t/spec/S02-types/array.rakudo.moar line 357
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Index out of range. Is: 1, should be in 0..0
-  in block <unit> at t/spec/S02-types/array.rakudo.moar line 283
-
  100    0    3    2  105
      2 skipped: multi-dim arrays NYI RT  \#124508
      1 todo   : bind_pos NYI
@@ -595,9 +596,8 @@ S02-types/mu.t.....................................   8    0    0    0    8
 S02-types/multi_dimensional_array.rakudo.moar......  55    0    0    4   59
      4 skipped: multi-dim sized arrays NYI RT  \#124483
 S02-types/nan.t....................................  28    0    0    0   28
-S02-types/native.rakudo.moar.......................  88    0    3    4   95
+S02-types/native.rakudo.moar.......................  91    0    3    1   95
      1 skipped: Cannot unbox 64 bit wide bigint
-     3 skipped: cannot unbox to a native number
      3 todo   : the values get accidentally sign-extended
 S02-types/nested_arrays.t..........................  10    0    0    0   10
 S02-types/nested_pairs.t...........................  14    0    0    0   14
@@ -605,7 +605,7 @@ S02-types/nil.rakudo.moar..........................Potential difficulties:
     Smartmatch against True always matches; if you mean to test the topic for truthiness, use :so or *.so or ?* instead
     at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S02-types/nil.rakudo.moar:68
     ------> [32m    subset MyInt of Int where [33m⏏[31mTrue;[0m
-  59    0    6    1   66
+  60    0    6    1   67
      1 skipped: triage
      1 todo   : returns True/False
      5 todo   : triage
@@ -614,132 +614,12 @@ S02-types/pair.rakudo.moar.........................# checking fat-comma
 # checking Pair.new(:key,:value)
 # checking Pair.new(key,value)
 # checking pair()
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Index out of range. Is: 1, should be in 0..0
-  in sub test3 at t/spec/S02-types/pair.rakudo.moar line 154
-  in block <unit> at t/spec/S02-types/pair.rakudo.moar line 157
-
  179    0    1    0  180
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range-iterator.t.........................  72    0    0    0   72
 S02-types/range.t..................................Use of uninitialized value of type Range in numeric context
   in block <unit> at t/spec/S02-types/range.t line 85
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S02-types/range.t line 448
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert Inf to Int: 
-  in block  at t/spec/S02-types/range.t line 433
-  in block <unit> at t/spec/S02-types/range.t line 433
-
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S02-types/range.t line 448
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert Inf to Int: 
-  in block  at t/spec/S02-types/range.t line 433
-  in block <unit> at t/spec/S02-types/range.t line 433
-
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S02-types/range.t line 448
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert Inf to Int: 
-  in block  at t/spec/S02-types/range.t line 433
-  in block <unit> at t/spec/S02-types/range.t line 433
-
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S02-types/range.t line 448
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert Inf to Int: 
-  in block  at t/spec/S02-types/range.t line 433
-  in block <unit> at t/spec/S02-types/range.t line 433
-
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S02-types/range.t line 448
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert -Inf to Int: 
-  in block  at t/spec/S02-types/range.t line 433
-  in block <unit> at t/spec/S02-types/range.t line 433
-
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S02-types/range.t line 448
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert -Inf to Int: 
-  in block  at t/spec/S02-types/range.t line 433
-  in block <unit> at t/spec/S02-types/range.t line 433
-
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S02-types/range.t line 448
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert -Inf to Int: 
-  in block  at t/spec/S02-types/range.t line 433
-  in block <unit> at t/spec/S02-types/range.t line 433
-
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S02-types/range.t line 448
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert -Inf to Int: 
-  in block  at t/spec/S02-types/range.t line 433
-  in block <unit> at t/spec/S02-types/range.t line 433
-
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S02-types/range.t line 448
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert -Inf to Int: 
-  in block  at t/spec/S02-types/range.t line 433
-  in block <unit> at t/spec/S02-types/range.t line 433
-
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S02-types/range.t line 448
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert NaN to Int: 
-  in block  at t/spec/S02-types/range.t line 433
-  in block <unit> at t/spec/S02-types/range.t line 433
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert 0+1i to Real: imaginary part not zero
-  in block  at t/spec/S02-types/range.t line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 409
-  in block <unit> at t/spec/S02-types/range.t line 409
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert 0+1i to Real: imaginary part not zero
-  in block  at t/spec/S02-types/range.t line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 409
-  in block <unit> at t/spec/S02-types/range.t line 409
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert 0+1i to Real: imaginary part not zero
-  in block  at t/spec/S02-types/range.t line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 409
-  in block <unit> at t/spec/S02-types/range.t line 409
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert 0+1i to Real: imaginary part not zero
-  in block  at t/spec/S02-types/range.t line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 409
-  in block <unit> at t/spec/S02-types/range.t line 409
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert 0+1i to Real: imaginary part not zero
-  in block  at t/spec/S02-types/range.t line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 409
-  in block <unit> at t/spec/S02-types/range.t line 409
-
  193    0    0    0  193
 S02-types/resolved-in-setting.t....................   4    0    0    0    4
 S02-types/set-iterator.t...........................  12    0    0    0   12
@@ -752,14 +632,7 @@ S02-types/sigils-and-types.rakudo.moar.............  25    0    2    0   27
 S02-types/stash.t..................................   1    0    0    0    1
 S02-types/subscripts_and_context.t.................  14    0    0    0   14
 S02-types/subset-6c.t..............................  51    0    0    0   51
-S02-types/subset-6e.t..............................# Failed test 'subset created by 6.e language version'
-# at t/spec/S02-types/subset-6e.t line 19
-# expected: '6.e'
-#      got: '6.d'
-# Failed test 'assigns to subset type object'
-# at t/spec/S02-types/subset-6e.t line 311
-# You failed 2 tests of 60
-  58    2    0    0   60
+S02-types/subset-6e.t..............................  60    0    0    0   60
 S02-types/type.rakudo.moar.........................  79    0    1    0   80
      1 todo   : nigh, RT #121518
 S02-types/undefined-types.rakudo.moar..............Use of uninitialized value $obj of type Any in string context.
@@ -857,16 +730,16 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
   in block  at t/spec/S03-buf/read-int.t line 110
 Use of uninitialized value of type Buf[uint8] in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S03-buf/read-int.t line 90
+  in block  at t/spec/S03-buf/read-int.t line 109
 Use of uninitialized value of type Buf[uint8] in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S03-buf/read-int.t line 90
+  in block  at t/spec/S03-buf/read-int.t line 110
 Use of uninitialized value of type Buf[uint8] in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S03-buf/read-int.t line 90
+  in block  at t/spec/S03-buf/read-int.t line 109
 Use of uninitialized value of type Buf[uint8] in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at t/spec/S03-buf/read-int.t line 90
+  in block  at t/spec/S03-buf/read-int.t line 110
 2008    0    0    0 2008
 S03-buf/read-num.t................................. 200    0    0    0  200
 S03-buf/read-write-bits.t..........................1590    0    0    0 1590
@@ -939,8 +812,8 @@ adapted, so that this message will disappear!
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
 S03-operators/assign.rakudo.moar...................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S03-operators/assign.rakudo.moar:
 Useless use of constant integer 3 in sink context (lines 558, 558, 878, 878)
-Useless use of constant integer 2 in sink context (lines 878, 878)
 Useless use of constant integer 4 in sink context (lines 558, 558)
+Useless use of constant integer 2 in sink context (lines 878, 878)
  275    0   14   12  301
      3 skipped: ,= needs to be special cased after GLR to compile to push(@a, 3, 4)
      3 skipped: cannot modify an immutable value RT  \#124533
@@ -1304,8 +1177,8 @@ S03-operators/numeric-shift.t......................  38    0    0    0   38
 S03-operators/orelse.t.............................  16    0    0    0   16
 S03-operators/overflow.t...........................  98    0    0    0   98
 S03-operators/precedence.rakudo.moar...............WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S03-operators/precedence.rakudo.moar:
-Useless use of "X" in expression "my $a = (1, 3) X (2, 4)" in sink context (line 150)
 Useless use of constant integer 2 in sink context (lines 148, 148)
+Useless use of "X" in expression "my $a = (1, 3) X (2, 4)" in sink context (line 150)
 Useless use of constant integer 3 in sink context (lines 148, 148)
   71    0    4    2   77
      2 skipped: superscript exponent associativity RT  \#130414
@@ -1332,29 +1205,6 @@ S03-operators/reduce-le1arg.rakudo.moar............  52    0    0    2   54
 S03-operators/relational.t......................... 179    0    0    0  179
 S03-operators/repeat.t.............................Use of uninitialized value of type Int in numeric context
   in block <unit> at t/spec/S03-operators/repeat.t line 24
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 614
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert NaN to Int: 
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 614
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 420
-  in sub throws-like at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 606
-  in block <unit> at t/spec/S03-operators/repeat.t line 29
-
-Use of uninitialized value element of type Any in string context.
-Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 614
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert NaN to Int: 
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 614
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 420
-  in sub throws-like at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 606
-  in block <unit> at t/spec/S03-operators/repeat.t line 27
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert string to number: base-10 number must begin with valid digits or '.' in '[32m⏏[31mb[0m' (indicated by ⏏[0m)
-
 Use of uninitialized value of type Int in numeric context
   in block  at t/spec/S03-operators/repeat.t line 154
   62    0    0    0   62
@@ -1704,8 +1554,8 @@ Useless use of constant integer 1 in sink context (line 255)
      1 skipped: leave NYI RT  \#124960
      1 todo   : is this spec? why would LEAVE not see outer $!? fossil?
 S04-phasers/first.t................................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S04-phasers/first.t:
-Useless use of LOOP_BLOCK_1 symbol in sink context (line 50)
 Useless use of LOOP_BLOCK_2 symbol in sink context (line 61)
+Useless use of LOOP_BLOCK_1 symbol in sink context (line 50)
    7    0    0    0    7
 S04-phasers/in-eval.rakudo.moar....................  34    0    1    0   35
      1 todo   : not sure
@@ -1738,8 +1588,8 @@ Useless use of constant integer 1 in sink context (use Nil instead to suppress t
 S04-statement-modifiers/if.t.......................  15    0    0    0   15
 S04-statement-modifiers/unless.t...................  10    0    0    0   10
 S04-statement-modifiers/until.t....................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/EVAL_0:
-Useless use of constant integer 2 in sink context (lines 1, 1)
 Useless use of constant integer 1 in sink context (use Nil instead to suppress this warning) (lines 1, 1)
+Useless use of constant integer 2 in sink context (lines 1, 1)
    5    0    0    0    5
 S04-statement-modifiers/values_in_bool_context.t...  24    0    0    0   24
 S04-statement-modifiers/while.t....................Use of uninitialized value of type Any in numeric context
@@ -2209,8 +2059,8 @@ S06-macros/opaque-ast.rakudo.moar..................   3    0    0    4    7
 S06-macros/quasi-blocks.rakudo.moar................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-macros/quasi-blocks.rakudo.moar:
 Useless use of constant string "motor oil" in sink context (line 74)
 Useless use of constant string "grasshopper" in sink context (line 74)
-Useless use of constant integer 2 in sink context (line 65)
 Useless use of constant integer 1 in sink context (line 65)
+Useless use of constant integer 2 in sink context (line 65)
   12    0    0    2   14
      2 skipped: Cannot resolve caller prefix:<++>(Mu) RT  \#124968
 S06-macros/unquoting.rakudo.moar...................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-macros/unquoting.rakudo.moar:
@@ -2333,11 +2183,11 @@ S06-signature/definite-return.rakudo.moar..........Potential difficulties:
     ------> [32mmpty) { 1, { ++$got-here; last } ... * }[33m⏏[31m<EOL>[0m
 WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-signature/definite-return.rakudo.moar:
 Useless use of constant integer False in sink context (line 105)
-Useless use of constant integer True in sink context (lines 110, 115, 122)
-Useless use of "sin(1)" in expression "sin(1)" in sink context (line 132)
-Useless use of constant integer 3 in sink context (line 21)
 Useless use of constant integer 1 in sink context (line 13)
 Useless use of constant integer 42 in sink context (line 86)
+Useless use of constant integer 3 in sink context (line 21)
+Useless use of constant integer True in sink context (lines 110, 115, 122)
+Useless use of "sin(1)" in expression "sin(1)" in sink context (line 132)
   17    0    0    2   19
      2 skipped: variables as return specifications dont parse yet RT  \#124927
 S06-signature/errors.t.............................  31    0    0    0   31
@@ -2495,7 +2345,7 @@ S10-packages/basic.rakudo.moar.....................  82    0    0    1   83
      1 skipped: RT  \#59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
 S10-packages/precompilation.rakudo.moar............#      got status: 1
-#      got err: "Cannot invoke this object (REPR: Null; VMNull)\n  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/experimental.pm6 (experimental) line 8\n  in block <unit> at /tmp/getout-51363-205990.code line 3\n\n"
+#      got err: "Cannot invoke this object (REPR: Null; VMNull)\n  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/experimental.pm6 (experimental) line 8\n  in block <unit> at /tmp/getout-71473-290952.code line 3\n\n"
 # expected err: ""
 #      got out: "False"
 # expected out: "True"
@@ -2701,14 +2551,7 @@ Use of uninitialized value of type Match in numeric context
   in block  at t/spec/S12-methods/what.t line 57
   33    0    0    0   33
 S12-subset/multi-dispatch.t........................   6    0    0    0    6
-S12-subset/subtypes.rakudo.moar....................WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert string to number: base-10 number must begin with valid digits or '.' in '[32m⏏[31mx[0m' (indicated by ⏏[0m)
-  in block  at t/spec/S12-subset/subtypes.rakudo.moar line 369
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 409
-  in block <unit> at t/spec/S12-subset/subtypes.rakudo.moar line 362
-
-  89    0    1    0   90
+S12-subset/subtypes.rakudo.moar....................  89    0    1    0   90
      1 todo   : Parameterized subs do not take Array of subset types
                                                    pass fail todo skip plan
 S13-overloading/metaoperators.t....................  16    0    0    0   16
@@ -2859,13 +2702,13 @@ S15-unicode-information/uniprop.rakudo.moar........ 174    0   29    0  203
 S15-unicode-information/unival.t...................  40    0    0    0   40
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1566282598
-# Using file temp_1566282598
-# Using file temp_1566282598
+S16-filehandles/chmod.t............................# Using file temp_1566712433
+# Using file temp_1566712433
+# Using file temp_1566712433
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.moar...............# Using file temp-16-filehandles-filestat-51818-1.temp
-# Using file temp-16-filehandles-filestat-51818-2.temp
+S16-filehandles/filestat.rakudo.moar...............# Using file temp-16-filehandles-filestat-71926-1.temp
+# Using file temp-16-filehandles-filestat-71926-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.moar............... 119    0    0    9  128
@@ -2875,7 +2718,7 @@ S16-filehandles/io.t............................... 114    0    0    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-773901
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-549394
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -3146,8 +2989,8 @@ S24-testing/3-output.t.............................   6    0    0    0    6
 S24-testing/7-bail_out.t...........................   4    0    0    0    4
 S24-testing/8-die_on_fail.t........................   6    0    0    0    6
 S24-testing/9-is_deeply.t..........................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S24-testing/9-is_deeply.t:
-Useless use of ":err{ $^s.contains: 'none' }" in sink context (line 33)
 Useless use of ":out{ not $^s.contains: 'Seq.new-consumed' }" in sink context (lines 14, 19, 24)
+Useless use of ":err{ $^s.contains: 'none' }" in sink context (line 33)
 Useless use of ":err{ not $^s.contains: 'Seq.new-consumed' }" in sink context (lines 13, 18, 23)
 Useless use of ":out{ $^s.contains: 'not ok' }" in sink context (line 34)
    3    0    0    0    3
@@ -3229,10 +3072,7 @@ Useless use of constant integer 1 in sink context (lines 66, 73)
   38    0    1    0   39
      1 todo   : RT 128398
                                                    pass fail todo skip plan
-S32-array/adverbs.t................................Failed to write bytes to filehandle: Broken pipe
-  in block <unit> at -e line 1
-
-Use of uninitialized value @n[11] of type Any in string context.
+S32-array/adverbs.t................................Use of uninitialized value @n[11] of type Any in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 173
 Use of uninitialized value of type Any in string context.
@@ -3552,28 +3392,28 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 173
 Use of uninitialized value @s[11] of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 173
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 171
 Use of uninitialized value of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 173
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 171
 Use of uninitialized value @s[11] of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 173
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 171
 Use of uninitialized value of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 173
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 171
 Use of uninitialized value element of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 173
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 171
 Use of uninitialized value element of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 173
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 171
 Use of uninitialized value element of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 173
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 171
 Use of uninitialized value element of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 173
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 171
 Use of uninitialized value @s[11] of type Str in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.pm6 (Test) line 171
@@ -3957,37 +3797,33 @@ BEGIN TIME EXCEPTION IS AT /usr/home/christian/perl6/perl6-roast-data/rakudo.moa
 EXCEPTION: Can only parameterize array with a native type, not Int
 WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
 bar
-  in sub c at t/spec/S32-exceptions/misc.rakudo.moar line 422
+  in sub c at t/spec/S32-exceptions/misc.rakudo.moar line 419
   in block <unit> at t/spec/S32-exceptions/misc.rakudo.moar line 425
 
 WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
 bar
-  in sub c at t/spec/S32-exceptions/misc.rakudo.moar line 421
+  in sub c at t/spec/S32-exceptions/misc.rakudo.moar line 419
   in block <unit> at t/spec/S32-exceptions/misc.rakudo.moar line 425
 
 WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
 bar
-  in sub c at t/spec/S32-exceptions/misc.rakudo.moar line 420
+  in sub c at t/spec/S32-exceptions/misc.rakudo.moar line 419
   in block <unit> at t/spec/S32-exceptions/misc.rakudo.moar line 425
 
 WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
 bar
-  in sub b at t/spec/S32-exceptions/misc.rakudo.moar line 415
   in block <unit> at t/spec/S32-exceptions/misc.rakudo.moar line 418
 
 WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
 bar
-  in sub b at t/spec/S32-exceptions/misc.rakudo.moar line 414
   in block <unit> at t/spec/S32-exceptions/misc.rakudo.moar line 418
 
 WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
 foo
-  in sub a at t/spec/S32-exceptions/misc.rakudo.moar line 408
   in block <unit> at t/spec/S32-exceptions/misc.rakudo.moar line 412
 
 WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
 foo
-  in sub a at t/spec/S32-exceptions/misc.rakudo.moar line 407
   in block <unit> at t/spec/S32-exceptions/misc.rakudo.moar line 412
 
  172    0    3    0  175
@@ -5636,9 +5472,9 @@ S32-io/IO-Socket-Async-UDP.t.......................   3    0    0    0    3
 S32-io/IO-Socket-Async.t...........................# host=127.0.0.1
 # host=::1
 # ::1
-# 59102
+# 11069
 # ::1
-# 59103
+# 58472
   40    0    0    0   40
 S32-io/IO-Socket-INET.t............................  28    0    0    0   28
 S32-io/chdir-process.t.............................   8    0    0    0    8
@@ -6006,7 +5842,7 @@ S32-str/flip.t.....................................  13    0    0    0   13
 S32-str/gb2312-encode-decode.t.....................   5    0    0    0    5
 S32-str/indent.rakudo.moar.........................Asked to remove 4 spaces, but the shortest indent is 3 spaces
   in block <unit> at t/spec/S32-str/indent.rakudo.moar line 62
-    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-55387-606083.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
+    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-75503-339271.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
     # expected err: ""
   63    0    0    0   63
 S32-str/index.t....................................  47    0    0    0   47
@@ -6159,14 +5995,14 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# loop: 0.33582897 seconds
-# kaz: 0.3376573 seconds
-# hand-memoization: 0.33939037 seconds
-# gerdr: 0.3405307 seconds
-# recursive-ternary: 0.3464306 seconds
-# sequence-ternary: 0.59377528 seconds
-# recursive-ternary-hand-cached: 0.61016323 seconds
-# sequence: 0.87848461 seconds
+integration/advent2012-day21.t.....................# gerdr: 0.33626211 seconds
+# kaz: 0.3373572 seconds
+# hand-memoization: 0.35228903 seconds
+# loop: 0.3609244 seconds
+# recursive-ternary: 0.3628893 seconds
+# sequence-ternary: 0.59665362 seconds
+# recursive-ternary-hand-cached: 0.61774665 seconds
+# sequence: 0.88174281 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -6206,11 +6042,11 @@ integration/no-indirect-new.t......................   2    0    0    0    2
 integration/packages.t.............................   3    0    0    0    3
 integration/pair-in-array.t........................   3    0    0    0    3
 integration/passing-pair-class-to-sub.t............   2    0    0    0    2
-integration/precompiled.t..........................WARNINGS for /tmp/p6testmod8A27960B/p6testmod22DB5E97.pm6 (p6testmod22DB5E97):
+integration/precompiled.t..........................WARNINGS for /tmp/p6testmod5A9C7D0E/p6testmod98F99F39.pm6 (p6testmod98F99F39):
 Useless use of constant integer 42 in sink context (line 1)
 WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/integration/precompiled.t:
 Useless use of constant integer 42 in sink context (line 1)
-WARNINGS for /tmp/p6testmod8A27960B/p6testmod97E0C125.pm6 (p6testmod97E0C125):
+WARNINGS for /tmp/p6testmod5A9C7D0E/p6testmodDFB54D20.pm6 (p6testmodDFB54D20):
 Useless use of constant integer 42 in sink context (line 1)
 WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/integration/precompiled.t:
 Useless use of constant integer 42 in sink context (line 1)
@@ -6235,7 +6071,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "APP",          84,     0,     0,     1,    85,    85
 "MIS",          37,     0,     1,     0,    38,    38
 "S01",           2,     0,     0,    87,    89,    89
-"S02",       10256,     2,    97,   398, 10753, 10752
+"S02",       10262,     0,    97,   395, 10754, 10753
 "S03",       24367,     0,    47,    84, 24498, 24504
 "S04",        1707,     0,    33,    16,  1756,  1788
 "S05",        6089,     0,    73,    98,  6260,  6454
@@ -6256,14 +6092,12 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1583,     0,     4,    48,  1635,  1668
 "S28",           9,     0,     0,     0,     9,     9
 "S29",         440,     0,     3,     1,   444,   444
-"S32",       42945,     0,    86,    84, 43115, 41358
+"S32",       42945,     0,    86,    84, 43115, 41363
 "int",        1363,     0,     4,    15,  1382,  1368
 "ros",           2,     0,     0,     0,     2,     2
-"total",    185310,     3,   477,  1165,186955,183759
+"total",    185316,     1,   477,  1162,186956,183765
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have APP
 note: test_summary.pl @syn does not have MIS
-S02-types/subset-6e.t 1 - subset created by 6.e language version
-S02-types/subset-6e.t 54 - assigns to subset type object
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
