@@ -63,14 +63,29 @@ Exception in thread "Thread-36" org.perl6.nqp.runtime.UnwindException
 # 
    0    0    1    0    1
      1 todo   : UnwindException in thread "Thread-xx"
-MISC/bug-coverage-stress.rakudo.jvm................===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0   12    0    0   12
-    12 tests aborted (missing ok/not ok)
+MISC/bug-coverage-stress.rakudo.jvm................    # Failed test 'STDOUT'
+    # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 295
+    # expected: "pass"
+    #  matcher: 'infix:<~~>'
+    #      got: ""
+    # You failed 1 test of 2
+# Failed test 'no deadlock while acquiring mutex'
+# at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 288
+#      got status: 1
+#      got out: ""
+# expected out: "pass"
+#      got err: "===SORRY!===\njava.lang.BootstrapMethodError: java.lang.IllegalArgumentException: bad parameter count 850\n"
+# expected err: ""
+# You failed 1 test of 12
+   6    1    1    4   12
+     1 skipped: The spawned command './perl6-j' exited unsuccessfully (exit code: 1)
+     2 skipped: atomicint NYI
+     1 skipped: hangs
+     1 todo   : IllegalArgumentException: bad parameter count 850; https://github.com/rakudo/rakudo/issues/1413
 MISC/bug-coverage.rakudo.jvm.......................#      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "Died\n  in block <unit> at /tmp/getout-847-794676.code line 5\n\n"
+#      got err: "Died\n  in block <unit> at /tmp/getout-69181-789669.code line 5\n\n"
 # expected err: ""
   15    0    1    1   17
      1 skipped: UnwindException in thread "main", RT  \#132172
@@ -327,10 +342,9 @@ S02-literals/pod.rakudo.jvm........................   1    0    0    5    6
      3 skipped: isn't the iterator exhausted already, since it's been used previously?
      2 skipped: postcircumfix:<{ }> not defined for type Array RT  \#125130
 S02-literals/quoting-unicode.t..................... 101    0    0    0  101
-S02-literals/quoting.t.............................===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0  212    0    0  212
-   212 tests aborted (missing ok/not ok)
+S02-literals/quoting.t.............................# The following test might STDERR about unfound command
+/bin/sh: the-cake-is-a-lie-badfsadsadsadasdsadasdsadsadasdsadas: not found
+ 212    0    0    0  212
 S02-literals/radix.rakudo.jvm...................... 154    0    1    3  158
      1 skipped: Error while compiling: Radix 0 out of range (allowed: 2..36)
      1 skipped: RT  \#123862 - negative radix
@@ -549,13 +563,19 @@ S02-types/anon_block.rakudo.jvm....................Block object coerced to strin
 S02-types/array-shapes.rakudo.jvm..................  37    0    2    1   40
      1 skipped: R \#1297
      2 todo   : code does not die, array shapes RT #124502
-S02-types/array.rakudo.jvm.........................Method 'pull-one' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S02-types/array.rakudo.jvm line 207
-
-# You planned 105 tests, but ran 63
-  61   42    0    2  105
+S02-types/array.rakudo.jvm.........................Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 634
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 634
+Use of uninitialized value @bar of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S02-types/array.rakudo.jvm line 358
+ 100    0    3    2  105
      2 skipped: multi-dim arrays NYI RT  \#124508
-    42 tests aborted (missing ok/not ok)
+     1 todo   : bind_pos NYI
+     2 todo   : regression to AdHoc exception RT #124509
 S02-types/array_extending.t........................Use of uninitialized value of type Any in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at t/spec/S02-types/array_extending.t line 97
@@ -623,12 +643,7 @@ S02-types/isDEPRECATED.rakudo.jvm..................  10    0    3    0   13
      3 todo   : NYI
 S02-types/keyhash.rakudo.jvm.......................   1    0    0   59   60
     59 skipped: 'is ObjectType' NYI RT  \#124490
-S02-types/lazy-lists.t.............................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S02-types/lazy-lists.t line 33
-
-# You planned 26 tests, but ran 2
-   2   24    0    0   26
-    24 tests aborted (missing ok/not ok)
+S02-types/lazy-lists.t.............................  26    0    0    0   26
 S02-types/list.rakudo.jvm..........................  77    0    0    1   78
      1 skipped: dies with t/harness5
 S02-types/lists.t..................................  29    0    0    0   29
@@ -758,12 +773,7 @@ S03-junctions/associative.t........................  10    0    0    0   10
 S03-junctions/autothreading.t...................... 106    0    0    0  106
 S03-junctions/boolean-context.t....................  74    0    0    0   74
 S03-junctions/misc.t............................... 149    0    0    0  149
-S03-metaops/cross.t................................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S03-metaops/cross.t line 262
-
-# You planned 81 tests, but ran 77
-  77    4    0    0   81
-     4 tests aborted (missing ok/not ok)
+S03-metaops/cross.t................................  81    0    0    0   81
 S03-metaops/eager-hyper.rakudo.jvm.................   6    0    0    2    8
      2 skipped: hangs sometimes (UnwindException in thread Thread-1)
 S03-metaops/hyper.rakudo.jvm....................... 403    0    2    7  412
@@ -775,21 +785,23 @@ S03-metaops/hyper.rakudo.jvm....................... 403    0    2    7  412
 S03-metaops/infix.t................................5076    0    0    0 5076
 S03-metaops/misc.t.................................   1    0    0    0    1
 S03-metaops/not.rakudo.jvm.........................  47    0    0    0   47
-S03-metaops/reduce.rakudo.jvm......................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S03-metaops/reduce.rakudo.jvm line 215
-
-# You planned 560 tests, but ran 80
-  78  480    2    0  560
+S03-metaops/reduce.rakudo.jvm......................Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S03-metaops/reduce.rakudo.jvm line 332
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S03-metaops/reduce.rakudo.jvm line 332
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S03-metaops/reduce.rakudo.jvm line 335
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S03-metaops/reduce.rakudo.jvm line 335
+ 558    0    2    0  560
      1 todo   : item context
      1 todo   : reduce metaop of hyper metaop works with zero elements
-   480 tests aborted (missing ok/not ok)
 S03-metaops/reverse.t..............................  69    0    0    0   69
-S03-metaops/zip.t..................................Method 'pull-one' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S03-metaops/zip.t line 22
-
-# You planned 76 tests, but ran 8
-   8   68    0    0   76
-    68 tests aborted (missing ok/not ok)
+S03-metaops/zip.t..................................  76    0    0    0   76
 S03-operators/adverbial-modifiers.rakudo.jvm.......Block object coerced to string (please use .gist or .perl to do that)
   in block  at t/spec/S03-operators/adverbial-modifiers.rakudo.jvm line 48
 Block object coerced to string (please use .gist or .perl to do that)
@@ -858,11 +870,7 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
   in block  at t/spec/S03-operators/buf.t line 121
  194    0    0    0  194
 S03-operators/chained-declarators.t................   5    0    0    0    5
-S03-operators/cmp.t................................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S03-operators/cmp.t line 174
-
-  60    1    0    0   61
-     1 tests aborted (missing ok/not ok)
+S03-operators/cmp.t................................  61    0    0    0   61
 S03-operators/comparison-simple.t..................  24    0    0    0   24
 S03-operators/comparison.rakudo.jvm................ 109    0    0    3  112
      2 skipped: Unrecognized character name [ZWJ]
@@ -1352,53 +1360,22 @@ S03-operators/value_equivalence.t..................Potential difficulties:
   87    0    0    0   87
 S03-sequence/arity-2-or-more.t.....................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S03-sequence/arity-2-or-more.t:
 Useless use of constant integer 1 in sink context (use Nil instead to suppress this warning) (line 39)
-Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S03-sequence/arity-2-or-more.t line 10
-
-   0   20    0    0   20
-    20 tests aborted (missing ok/not ok)
-S03-sequence/arity0.t..............................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S03-sequence/arity0.t line 10
-
-   0   13    0    0   13
-    13 tests aborted (missing ok/not ok)
-S03-sequence/basic.t...............................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S03-sequence/basic.t line 30
-
-# You planned 143 tests, but ran 16
-  16  127    0    0  143
-   127 tests aborted (missing ok/not ok)
+  20    0    0    0   20
+S03-sequence/arity0.t..............................  13    0    0    0   13
+S03-sequence/basic.t...............................Potential difficulties:
+    Comma found before apparent sequence operator; please remove comma (or put parens around the ... call, or use 'fail' instead of ...)
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/EVAL_1:1
+    ------> [32m1, 2, 3,[33m⏏[31m ... 5[0m
+ 143    0    0    0  143
 S03-sequence/limit-arity-2-or-more.t...............   8    0    0    0    8
-S03-sequence/misc.t................................    # Failed test 'right exception type (X::TypeCheck::Binding)'
-    # at gen/jvm/CORE.c.setting line 7242
-    # Expected: X::TypeCheck::Binding
-    # Got:      X::Method::NotFound
-    # Exception message: No such method 'push-exactly' for invocant of type 'Any'
-    # You failed 1 test of 2
-# Failed test 'sequence terminated by signature mismatch'
-# at t/spec/S03-sequence/misc.t line 12
-    # Failed test 'right exception type (X::Cannot::Empty)'
-    # at gen/jvm/CORE.c.setting line 7242
-    # Expected: X::Cannot::Empty
-    # Got:      X::Method::NotFound
-    # Exception message: No such method 'push-exactly' for invocant of type 'Any'
-    # You failed 1 test of 2
-# Failed test 'Nil sequence'
-# at t/spec/S03-sequence/misc.t line 19
-Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S03-sequence/misc.t line 24
-
-# You planned 31 tests, but ran 4
-# You failed 2 tests of 4
-   2   29    0    0   31
-    27 tests aborted (missing ok/not ok)
-S03-sequence/nonnumeric.rakudo.jvm.................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S03-sequence/nonnumeric.rakudo.jvm line 39
-
-# You planned 44 tests, but ran 12
-   1   32    0   11   44
+S03-sequence/misc.t................................Potential difficulties:
+    Comma found before apparent sequence operator; please remove comma (or put parens around the ... call, or use 'fail' instead of ...)
+    at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/EVAL_0:1
+    ------> [32m(1, 2,[33m⏏[31m ... 3)[2][0m
+  31    0    0    0   31
+S03-sequence/nonnumeric.rakudo.jvm.................  27    0    0   17   44
     11 skipped: hangs
-    32 tests aborted (missing ok/not ok)
+     6 skipped: lifting comparison ops
 S03-smartmatch/any-any.t...........................   8    0    0    0    8
 S03-smartmatch/any-bool.t..........................   8    0    0    0    8
 S03-smartmatch/any-callable.t......................   7    0    0    0    7
@@ -1409,7 +1386,7 @@ S03-smartmatch/any-num.t...........................  21    0    0    0   21
 S03-smartmatch/any-pair.t..........................  10    0    0    0   10
 S03-smartmatch/any-str.t...........................   5    0    0    0    5
 S03-smartmatch/any-sub.t...........................   8    0    0    0    8
-S03-smartmatch/any-type.t..........................  15    0    0    0   15
+S03-smartmatch/any-type.t..........................   4    0    0    0    4
 S03-smartmatch/array-array.t.......................  73    0    0    0   73
 S03-smartmatch/array-hash.rakudo.jvm...............   0    0    0    6    6
      6 skipped: RT  \#124444
@@ -1471,14 +1448,9 @@ Use of uninitialized value of type Any in numeric context
   in block  at t/spec/S04-declarations/constant.rakudo.jvm line 112
 Use of uninitialized value of type Any in numeric context
   in block  at t/spec/S04-declarations/constant.rakudo.jvm line 133
-Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S04-declarations/constant.rakudo.jvm line 282
-
-# You planned 72 tests, but ran 45
-  41   27    4    0   72
+  68    0    4    0   72
      3 todo   : COMPILING
      1 todo   : constants as type constraints
-    27 tests aborted (missing ok/not ok)
 S04-declarations/implicit-parameter.rakudo.jvm.....  19    0    1    0   20
      1 todo   : got (Rakudo::Internals::LoweredAwayLexical)
 S04-declarations/multiple.rakudo.jvm...............Potential difficulties:
@@ -1645,22 +1617,13 @@ S04-statements/for.rakudo.jvm......................WARNINGS for /usr/home/christ
 Useless use of constant integer 41 in sink context (lines 467, 468, 472, 475, 479)
 Use of Nil in string context
   in block  at t/spec/S04-statements/for.rakudo.jvm line 501
-Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S04-statements/for.rakudo.jvm line 769
-
-# You planned 111 tests, but ran 105
- 103    6    1    1  111
+ 109    0    1    1  111
      1 skipped: labeled next without loop construct
      1 todo   : Rakudo still uses Nil here RT #124569
-     6 tests aborted (missing ok/not ok)
 S04-statements/for_with_only_one_item.t............  12    0    0    0   12
-S04-statements/gather.rakudo.jvm...................Method 'push-exactly' not found for invocant of class 'Any'
-  in block  at t/spec/S04-statements/gather.rakudo.jvm line 145
-  in block <unit> at t/spec/S04-statements/gather.rakudo.jvm line 143
-
-# You planned 39 tests, but ran 16
-  16   23    0    0   39
-    23 tests aborted (missing ok/not ok)
+S04-statements/gather.rakudo.jvm...................  36    0    0    3   39
+     2 skipped: RT  \#66820, and hangs under GLR
+     1 skipped: UnwindException RT  \#124279
 S04-statements/given.t.............................  51    0    0    0   51
 S04-statements/if.t................................  44    0    0    0   44
 S04-statements/label.t.............................   6    0    0    0    6
@@ -2024,12 +1987,7 @@ S05-modifier/Perl_9.rakudo.jvm.....................  75    0    9    0   84
 S05-modifier/continue.t............................Use of Nil in string context
   in block  at t/spec/S05-modifier/continue.t line 19
   14    0    0    0   14
-S05-modifier/counted-match.t.......................Method 'pull-one' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S05-modifier/counted-match.t line 67
-
-# You planned 28 tests, but ran 18
-  18   10    0    0   28
-    10 tests aborted (missing ok/not ok)
+S05-modifier/counted-match.t.......................  28    0    0    0   28
 S05-modifier/counted.t............................. 126    0    0    0  126
 S05-modifier/global.t..............................   8    0    0    0    8
 S05-modifier/ignorecase.rakudo.jvm.................  77    0   23    0  100
@@ -2226,10 +2184,7 @@ S06-other/main-usage.rakudo.jvm....................#      got status: 2
      1 todo   : nom regression RT #124666
      1 todo   : nom regression RT #124667
      1 todo   : nom regression RT #124668
-S06-other/main.t...................................===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0    9    0    0    9
-     9 tests aborted (missing ok/not ok)
+S06-other/main.t...................................   9    0    0    0    9
 S06-other/misc.t...................................  16    0    0    0   16
 S06-other/pairs-as-lvalues.t.......................   5    0    0    0    5
 S06-parameters/smiley.rakudo.jvm...................  22    0    0   17   39
@@ -2256,14 +2211,8 @@ Useless use of constant integer 42 in sink context (line 86)
 Useless use of constant integer 1 in sink context (line 13)
 Useless use of constant integer 3 in sink context (line 21)
 Useless use of constant integer True in sink context (lines 110, 115, 122)
-Method 'pull-one' not found for invocant of class 'Any'
-  in sub return-eleven at t/spec/S06-signature/definite-return.rakudo.jvm line 99
-  in block <unit> at t/spec/S06-signature/definite-return.rakudo.jvm line 100
-
-# You planned 19 tests, but ran 11
-   9    8    0    2   19
+  17    0    0    2   19
      2 skipped: variables as return specifications dont parse yet
-     8 tests aborted (missing ok/not ok)
 S06-signature/errors.rakudo.jvm....................  25    0    6    0   31
      6 todo   : unival NYI
 S06-signature/introspection.rakudo.jvm............. 134    0    1    1  136
@@ -2346,12 +2295,7 @@ S07-hyperrace/for.rakudo.jvm.......................   0    0    0    6    6
      6 skipped: often hangs with UnwindException in Thread-1
 S07-iterators/range-iterator.rakudo.jvm............  98    0    0    5  103
      5 skipped: Method 'count-only' not found for invocant of class
-S07-slip/slip.t....................................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S07-slip/slip.t line 33
-
-# You planned 25 tests, but ran 18
-  18    7    0    0   25
-     7 tests aborted (missing ok/not ok)
+S07-slip/slip.t....................................  25    0    0    0   25
                                                    pass fail todo skip plan
 S09-autovivification/autoincrement.t...............   7    0    0    0    7
 S09-autovivification/autovivification.rakudo.jvm...Use of uninitialized value of type Any in string context.
@@ -2372,12 +2316,9 @@ S09-multidim/indexing.t............................  31    0    0    0   31
 S09-multidim/methods.t.............................  80    0    0    0   80
 S09-multidim/subs.t................................  44    0    0    0   44
 S09-subscript/multidim-assignment.t................  11    0    0    0   11
-S09-subscript/slice.rakudo.jvm.....................Method 'pull-one' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S09-subscript/slice.rakudo.jvm line 34
-
-# You planned 34 tests, but ran 11
-  11   23    0    0   34
-    23 tests aborted (missing ok/not ok)
+S09-subscript/slice.rakudo.jvm.....................  30    0    0    4   34
+     2 skipped: RT  \#120383
+     2 skipped: RT  \#61844
 S09-typed-arrays/arrays.rakudo.jvm.................Use of uninitialized value of type Int in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
@@ -2428,10 +2369,23 @@ S09-typed-arrays/native.rakudo.jvm.................  10    0    0    0   10
 S10-packages/basic.rakudo.jvm......................  82    0    0    1   83
      1 skipped: RT  \#59484
 S10-packages/joined-namespaces.t...................   3    0    0    0    3
-S10-packages/precompilation.rakudo.jvm.............===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0   52    0    0   52
-    52 tests aborted (missing ok/not ok)
+S10-packages/precompilation.rakudo.jvm.............#      got out: "False"
+# expected out: "True"
+#      got status: 1
+#      got out: ""
+# expected out: "pass\n"
+#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n"
+# expected err: ""
+#      got status: 1
+#      got out: ""
+# expected out: "pass\n"
+#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n"
+# expected err: ""
+  47    0    5    0   52
+     2 todo   : Invalid typename 'RT112626::Class1' in parameter declaration
+     1 todo   : got: $["B", "C"]
+     1 todo   : got: $["C", "K"]
+     1 todo   : no 6model parametrics interning yet
 S10-packages/require-and-use.t.....................   2    0    0    0    2
 S10-packages/use-with-class.t......................  10    0    0    0   10
                                                    pass fail todo skip plan
@@ -2465,8 +2419,13 @@ S11-modules/require.rakudo.jvm.....................  52    0    3    3   58
      2 todo   : only test for Cool::Cat passes in this loop
      1 todo PASSED: only test for Cool::Cat passes in this loop
 S11-modules/runtime.t..............................   1    0    0    0    1
-S11-repository/cur-candidates.t....................===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
+S11-repository/cur-candidates.t....................Failed to get the directory contents of '/tmp/perl6_roast_cur_candidates_t_line_1_0_63982285352098071577720783/my-repo/dist': nqp::opendir: unable to get a DirectoryStream
+  in block  at t/spec/S11-repository/cur-candidates.t line 185
+  in block  at t/spec/S11-repository/cur-candidates.t line 152
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 420
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 409
+  in block <unit> at t/spec/S11-repository/cur-candidates.t line 130
+
    0    0    0    0    0
 S11-repository/cur-current-distribution.t..........   3    0    0    0    3
 S11-repository/curli-install.t.....................  19    0    0    0   19
@@ -2491,12 +2450,7 @@ S12-attributes/undeclared.t........................  11    0    0    0   11
 S12-class/anonymous.rakudo.jvm.....................  17    0    1    0   18
      1 todo   : Anonymous class stringification (?)
 S12-class/attributes-required.t....................   8    0    0    0    8
-S12-class/attributes.t.............................Method 'pull-one' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S12-class/attributes.t line 146
-
-# You planned 39 tests, but ran 27
-  27   12    0    0   39
-    12 tests aborted (missing ok/not ok)
+S12-class/attributes.t.............................  39    0    0    0   39
 S12-class/augment-supersede.rakudo.jvm.............  12    0    0    2   14
      2 skipped: redeclaration of symbol Bar
 S12-class/basic.t..................................  43    0    0    0   43
@@ -2738,13 +2692,13 @@ S15-unicode-information/uniname.rakudo.jvm.........  27    0    2   19   48
      1 todo   : HANGUL SYLLABLES D4DB
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1577476963
-# Using file temp_1577476964
-# Using file temp_1577476964
+S16-filehandles/chmod.t............................# Using file temp_1577722247
+# Using file temp_1577722247
+# Using file temp_1577722247
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-6132-1.temp
-# Using file temp-16-filehandles-filestat-6132-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-75017-1.temp
+# Using file temp-16-filehandles-filestat-75017-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 119    0    0    9  128
@@ -2756,7 +2710,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-464444
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-762024
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2795,10 +2749,7 @@ S16-io/supply.rakudo.jvm...........................# **** scheduling with Thread
 S16-io/tmpdir.t....................................   9    0    0    0    9
 S16-io/watch.rakudo.jvm............................   0    0    0    1    1
      1 skipped: nqp::watchfile only implemented as stub for JVM backend
-S16-io/words.t.....................................===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0    4    0    0    4
-     4 tests aborted (missing ok/not ok)
+S16-io/words.t.....................................  11    0    0    0   11
 S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      2 skipped: contextual rebinding regression
                                                    pass fail todo skip plan
@@ -2822,27 +2773,22 @@ S17-procasync/no-runaway-file-limit.t..............   1    0    0    0    1
 S17-procasync/nonexistent.t........................   7    0    0    0    7
 S17-procasync/print.rakudo.jvm.....................  11    0    0    5   16
      5 skipped: Flapping tests
-S17-procasync/stress.rakudo.jvm....................    # 
-    # Hang in doesn't-hang() test detected by heuristic.
-    # You can set %*ENV<ROAST_TIMING_SCALE> to a value higher than 1
-    # to make it wait longer.
-    # 
-#      got status: 1
+S17-procasync/stress.rakudo.jvm....................#      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "A react block:\n  in block <unit> at /tmp/getout-8701-189817.code line 2\n\nDied because of the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-8701-189817.code line 8\n\n"
+#      got err: "A react block:\n  in block <unit> at /tmp/getout-77594-465982.code line 2\n\nDied because of the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-77594-465982.code line 8\n\n"
 # expected err: ""
-  21    1    2    0   24
+  21    0    2    1   24
+     1 skipped: hangs / SIGTERM not supported
      1 todo   : Unknown encoding utf8-c8
-     1 todo   : hangs
-     1 tests aborted (missing ok/not ok)
+     1 todo PASSED: hangs
 S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.rakudo.jvm..........................   3    0    0    1    4
      1 skipped: NullPointerException
 S17-promise/basic.t................................# Failed test 'promises execute asynchronously [try 1]'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 163
-#      got out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nend\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\n"
+#      got out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nstart\nend\nend\nend\nend\nend\nend\nend\nend\n"
 # expected out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\nend\n"
 # Failed test 'promises execute asynchronously [try 2]'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 163
@@ -2926,8 +2872,7 @@ S17-supply/interval.t..............................   9    0    0    0    9
 S17-supply/lines.rakudo.jvm........................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    14 todo   : \r\n not yet handled as grapheme
 S17-supply/list.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0    0    0    9
@@ -3080,20 +3025,16 @@ S26-documentation/06-lists.t.......................  39    0    0    0   39
 S26-documentation/07-tables.t......................  37    0    0    0   37
 S26-documentation/07a-tables.t.....................  85    0    0    0   85
 S26-documentation/07b-tables.t.....................   4    0    0    0    4
-S26-documentation/07c-tables.t.....................===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0    8    0    0    8
-     8 tests aborted (missing ok/not ok)
+S26-documentation/07c-tables.t.....................   8    0    0    0    8
 S26-documentation/08-formattingcodes.t.............  43    0    0    0   43
 S26-documentation/09-configuration.t...............  98    0    0    0   98
 S26-documentation/10-doc-cli.t.....................   2    0    0    0    2
 S26-documentation/14-defn.t........................  30    0    0    0   30
 S26-documentation/15-numbered-alias.rakudo.jvm.....   1    0    0    0    1
 S26-documentation/block-leading-user-format.t......   2    0    0    0    2
-S26-documentation/block-leading.t..................===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0  335    0    0  335
-   335 tests aborted (missing ok/not ok)
+S26-documentation/block-leading.t.................. 321    0    0   14  335
+     7 skipped: declaration comments are NYI on constants
+     7 skipped: declaration comments are NYI on variables
 S26-documentation/block-trailing.t.................  50    0    0    2   52
      1 skipped: declaration comments are NYI on constants
      1 skipped: declaration comments are NYI on variables
@@ -3152,15 +3093,15 @@ at -e:1
 ------> [32muse NativeCall[33m⏏[31m; sub strdup(int64) is native(Str) {*}; [0m
 Unhandled exception: Wrong number of arguments passed; expected 1..1, but got 32 (1 of those positional)
   in dispatch:<::> (gen/jvm/CORE.c.setting:1804)
-  in clone (gen/jvm/CORE.c.setting:43789)
-  in <anon> (gen/jvm/CORE.c.setting:39698)
-  in EXCEPTION (gen/jvm/CORE.c.setting:39692)
+  in clone (gen/jvm/CORE.c.setting:44389)
+  in <anon> (gen/jvm/CORE.c.setting:40298)
+  in EXCEPTION (gen/jvm/CORE.c.setting:40292)
   in <anon> (gen/jvm/CORE.c.setting)
   in <anon> (gen/jvm/CORE.c.setting)
   in dispatch:<::> (gen/jvm/CORE.c.setting:1804)
-  in clone (gen/jvm/CORE.c.setting:43789)
-  in <anon> (gen/jvm/CORE.c.setting:39698)
-  in EXCEPTION (gen/jvm/CORE.c.setting:39692)
+  in clone (gen/jvm/CORE.c.setting:44389)
+  in <anon> (gen/jvm/CORE.c.setting:40298)
+  in EXCEPTION (gen/jvm/CORE.c.setting:40292)
   in <anon> (gen/jvm/CORE.c.setting:4963)
   in <anon> (gen/jvm/CORE.c.setting)
   in <anon> (gen/jvm/CORE.c.setting:1877)
@@ -3169,27 +3110,27 @@ Unhandled exception: Wrong number of arguments passed; expected 1..1, but got 32
   in push-all (gen/jvm/CORE.c.setting:3088)
   in coremap (gen/jvm/CORE.c.setting:4844)
   in coremap (gen/jvm/CORE.c.setting:4762)
-  in deepmap (gen/jvm/CORE.c.setting:55788)
-  in deepmap (gen/jvm/CORE.c.setting:55787)
-  in infix (gen/jvm/CORE.c.setting:55061)
-  in infix (gen/jvm/CORE.c.setting:54840)
-  in HYPER (gen/jvm/CORE.c.setting:55783)
+  in deepmap (gen/jvm/CORE.c.setting:56060)
+  in deepmap (gen/jvm/CORE.c.setting:56059)
+  in infix (gen/jvm/CORE.c.setting:55333)
+  in infix (gen/jvm/CORE.c.setting:55112)
+  in HYPER (gen/jvm/CORE.c.setting:56055)
   in dispatch:<hyper> (gen/jvm/CORE.c.setting:1878)
-  in report (gen/jvm/CORE.c.setting:56078)
-  in report (gen/jvm/CORE.c.setting:56072)
-  in <anon> (gen/jvm/CORE.c.setting:56171)
-  in <anon> (gen/jvm/CORE.c.setting:56170)
+  in report (gen/jvm/CORE.c.setting:56350)
+  in report (gen/jvm/CORE.c.setting:56344)
+  in <anon> (gen/jvm/CORE.c.setting:56443)
+  in <anon> (gen/jvm/CORE.c.setting:56442)
   in <anon> (gen/jvm/CORE.c.setting:4960)
   in <anon> (gen/jvm/CORE.c.setting:4959)
   in <anon> (gen/jvm/CORE.c.setting:4958)
   in <anon> (gen/jvm/CORE.c.setting:4955)
-  in protect (gen/jvm/CORE.c.setting:56594)
-  in protect (gen/jvm/CORE.c.setting:56590)
+  in protect (gen/jvm/CORE.c.setting:56866)
+  in protect (gen/jvm/CORE.c.setting:56862)
   in <anon> (gen/jvm/CORE.c.setting:4954)
   in <anon> (gen/jvm/CORE.c.setting:4953)
-  in <anon> (gen/jvm/CORE.c.setting:39815)
-  in print_exception (gen/jvm/CORE.c.setting:39796)
-  in <anon> (gen/jvm/CORE.c.setting:39876)
+  in <anon> (gen/jvm/CORE.c.setting:40415)
+  in print_exception (gen/jvm/CORE.c.setting:40396)
+  in <anon> (gen/jvm/CORE.c.setting:40476)
   in command_eval (gen/jvm/stage2/NQPHLL.nqp:1379)
   in command_eval (gen/jvm/Compiler.nqp:65)
   in command_line (gen/jvm/stage2/NQPHLL.nqp:1301)
@@ -3434,26 +3375,413 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
 Use of uninitialized value element of type Any in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
-Method 'pull-one' not found for invocant of class 'Any'
-  in block  at t/spec/S32-array/adverbs.t line 280
-  in block <unit> at t/spec/S32-array/adverbs.t line 31
-
-# You planned 606 tests, but ran 182
- 182  424    0    0  606
-   424 tests aborted (missing ok/not ok)
+Use of uninitialized value @n[12] of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @n[12] of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @n[12] of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @n[12] of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @n[12] of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @n[12] of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @n[12] of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @n[12] of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @n[12] of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @n[12] of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[11] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value @s[12] of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+Use of uninitialized value element of type Str in string context.
+Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
+ 606    0    0    0  606
 S32-array/bool.t...................................  15    0    0    0   15
-S32-array/create.t.................................Method 'push-exactly' not found for invocant of class 'Any'
-  in block  at t/spec/S32-array/create.t line 41
-  in block <unit> at t/spec/S32-array/create.t line 35
-
-   9    3    0    0   12
-     3 tests aborted (missing ok/not ok)
+S32-array/create.t.................................  12    0    0    0   12
 S32-array/delete-adverb-native.t................... 138    0    0    0  138
-S32-array/delete-adverb.t..........................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S32-array/delete-adverb.t line 378
-
- 218    1    0    0  219
-     1 tests aborted (missing ok/not ok)
+S32-array/delete-adverb.t.......................... 219    0    0    0  219
 S32-array/delete.t.................................Use of uninitialized value of type Any in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at t/spec/S32-array/delete.t line 63
@@ -3477,13 +3805,8 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
 Use of uninitialized value element of type Int in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 629
-Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S32-array/splice.rakudo.jvm line 334
-
-    # You planned 8 tests, but ran 2
- 379    1   12    0  392
+ 380    0   12    0  392
     12 todo   : somehow the test causes different typecheck error
-     1 tests aborted (missing ok/not ok)
 S32-array/unshift.t................................  76    0    0    0   76
 S32-basics/pairup.t................................   6    0    0    0    6
 S32-basics/warn.t..................................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S32-basics/warn.t:
@@ -5186,9 +5509,9 @@ S32-hash/slice.rakudo.jvm..........................  21    0   10    0   31
 S32-io/IO-Socket-Async.rakudo.jvm..................# host=127.0.0.1
 # host=::1
 # 0:0:0:0:0:0:0:0
-# 17793
+# 23149
 # 0:0:0:0:0:0:0:0
-# 17794
+# 23150
   35    0    3    2   40
      1 skipped: hangs (sometimes)
      1 skipped: seems to crash the server (sometimes): IllegalStateException: Current state = CODING_END, new state = CODING
@@ -5405,15 +5728,7 @@ S32-list/repeated.t................................  38    0    0    0   38
 S32-list/reverse.rakudo.jvm........................  18    0    1    0   19
      1 todo   : RT #77914
 S32-list/roll.t....................................  52    0    0    0   52
-S32-list/rotor.t...................................Method 'push-exactly' not found for invocant of class 'Any'
-  in sub test-eqv at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 92
-  in sub _is-eqv at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 94
-  in sub is-eqv at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 77
-  in block <unit> at t/spec/S32-list/rotor.t line 56
-
-# You planned 19 tests, but ran 14
-  14    5    0    0   19
-     5 tests aborted (missing ok/not ok)
+S32-list/rotor.t...................................  19    0    0    0   19
 S32-list/seq.rakudo.jvm............................Use of uninitialized value @n of type Any in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
@@ -5444,24 +5759,11 @@ Methods .^name, .perl, .gist, or .say can be used to stringify it to something m
 Use of uninitialized value of type Any in string context.
 Methods .^name, .perl, .gist, or .say can be used to stringify it to something meaningful.
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 173
-Method 'pull-one' not found for invocant of class 'Any'
-  in block  at t/spec/S32-list/seq.rakudo.jvm line 202
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 420
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 409
-  in block <unit> at t/spec/S32-list/seq.rakudo.jvm line 161
-
-        # You planned 12 tests, but ran 9
-  36   15    1    0   52
+  51    0    1    0   52
      1 todo   : Cannot assign immutable
-    15 tests aborted (missing ok/not ok)
 S32-list/skip.t....................................  27    0    0    0   27
 S32-list/sort.t....................................  38    0    0    0   38
-S32-list/squish.t..................................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S32-list/squish.t line 36
-
-# You planned 31 tests, but ran 9
-   9   22    0    0   31
-    22 tests aborted (missing ok/not ok)
+S32-list/squish.t..................................  31    0    0    0   31
 S32-list/tail.t....................................  29    0    0    0   29
 S32-list/unique.t..................................  39    0    0    0   39
 S32-num/abs.t......................................  49    0    0    0   49
@@ -5483,14 +5785,7 @@ S32-num/narrow.t...................................  17    0    0    0   17
 S32-num/negative-zero.t............................  20    0    0    0   20
 S32-num/pi.t.......................................   8    0    0    0    8
 S32-num/polar.t....................................  48    0    0    0   48
-S32-num/polymod.t..................................Method 'push-exactly' not found for invocant of class 'Any'
-  in sub _is_deeply at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 665
-  in sub is-deeply at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 590
-  in sub is-deeply at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.pm6 (Test) line 579
-  in block <unit> at t/spec/S32-num/polymod.t line 16
-
-   4    1    0    0    5
-     1 tests aborted (missing ok/not ok)
+S32-num/polymod.t..................................   5    0    0    0    5
 S32-num/power.rakudo.jvm...........................  79    0    9    1   89
      1 skipped: unival NYI
      6 todo   : got: 1
@@ -5593,12 +5888,11 @@ S32-str/gb2312-encode-decode.t.....................Unsupported VM encoding 'gb23
 
    0    5    0    0    5
      5 tests aborted (missing ok/not ok)
-S32-str/indent.rakudo.jvm..........................Method 'pull-one' not found for invocant of class 'Any'
-  in block <unit> at t/spec/S32-str/indent.rakudo.jvm line 54
-
-# You planned 63 tests, but ran 41
-  41   22    0    0   63
-    22 tests aborted (missing ok/not ok)
+S32-str/indent.rakudo.jvm..........................Asked to remove 4 spaces, but the shortest indent is 3 spaces
+  in block <unit> at t/spec/S32-str/indent.rakudo.jvm line 62
+    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-82313-257130.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
+    # expected err: ""
+  63    0    0    0   63
 S32-str/index.t....................................  47    0    0    0   47
 S32-str/indices.t..................................  31    0    0    0   31
 S32-str/lc.t.......................................  19    0    0    0   19
@@ -5709,30 +6003,16 @@ integration/advent2009-day19.t.....................   6    0    0    0    6
 integration/advent2009-day20.t.....................  21    0    0    0   21
 integration/advent2009-day21.t.....................   2    0    0    0    2
 integration/advent2009-day22.t.....................   4    0    0    0    4
-integration/advent2009-day23.t.....................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/integration/advent2009-day23.t line 64
-
-# You planned 10 tests, but ran 4
-   4    6    0    0   10
-     6 tests aborted (missing ok/not ok)
+integration/advent2009-day23.t.....................  10    0    0    0   10
 integration/advent2009-day24.t.....................   4    0    0    0    4
 integration/advent2010-day03.t.....................  12    0    0    0   12
-integration/advent2010-day04.t.....................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/integration/advent2010-day04.t line 9
-
-   0   11    0    0   11
-    11 tests aborted (missing ok/not ok)
+integration/advent2010-day04.t.....................  11    0    0    0   11
 integration/advent2010-day06.t.....................  12    0    0    0   12
 integration/advent2010-day07.t.....................   8    0    0    0    8
 integration/advent2010-day08.t.....................   8    0    0    0    8
 integration/advent2010-day10.rakudo.jvm............   2    0    2    0    4
      2 todo   : RT #121843
-integration/advent2010-day11.t.....................Method 'push-exactly' not found for invocant of class 'Any'
-  in block <unit> at t/spec/integration/advent2010-day11.t line 45
-
-# You planned 2 tests, but ran 1
-   1    1    0    0    2
-     1 tests aborted (missing ok/not ok)
+integration/advent2010-day11.t.....................   2    0    0    0    2
 integration/advent2010-day12.t.....................  13    0    0    0   13
 integration/advent2010-day14.t.....................   5    0    0    0    5
 integration/advent2010-day16.t.....................  13    0    0    0   13
@@ -5744,72 +6024,43 @@ integration/advent2011-day03.t.....................   2    0    0    0    2
 integration/advent2011-day04.t.....................   2    0    0    0    2
 integration/advent2011-day05.t.....................   5    0    0    0    5
 integration/advent2011-day07.t.....................   3    0    0    0    3
-integration/advent2011-day10.t.....................===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0    5    0    0    5
-     5 tests aborted (missing ok/not ok)
+integration/advent2011-day10.t.....................   5    0    0    0    5
 integration/advent2011-day11.t.....................   9    0    0    0    9
 integration/advent2011-day14.t.....................   8    0    0    0    8
 integration/advent2011-day15.t.....................   9    0    0    0    9
 integration/advent2011-day16.t.....................  12    0    0    0   12
 integration/advent2011-day20.t.....................  16    0    0    0   16
 integration/advent2011-day22.t.....................   2    0    0    0    2
-integration/advent2011-day23.t.....................Method 'pull-one' not found for invocant of class 'Any'
-  in block  at t/spec/integration/advent2011-day23.t line 223
-  in block <unit> at t/spec/integration/advent2011-day23.t line 222
-
-# You planned 55 tests, but ran 51
-  51    4    0    0   55
-     4 tests aborted (missing ok/not ok)
+integration/advent2011-day23.t.....................  55    0    0    0   55
 integration/advent2011-day24.t.....................   8    0    0    0    8
 integration/advent2012-day02.t.....................   4    0    0    0    4
 integration/advent2012-day03.t.....................   2    0    0    0    2
-integration/advent2012-day04.rakudo.jvm............Method 'pull-one' not found for invocant of class 'Any'
-  in sub largest-prime-factor at t/spec/integration/advent2012-day04.rakudo.jvm line 9
-  in block <unit> at t/spec/integration/advent2012-day04.rakudo.jvm line 18
-
-# You planned 8 tests, but ran 1
-   1    7    0    0    8
-     7 tests aborted (missing ok/not ok)
-integration/advent2012-day06.t.....................===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0    2    0    0    2
-     2 tests aborted (missing ok/not ok)
+integration/advent2012-day04.rakudo.jvm............   7    0    1    0    8
+     1 todo   : failing during 2015.09 release...
+integration/advent2012-day06.t.....................   2    0    0    0    2
 integration/advent2012-day09.t.....................   8    0    0    0    8
 integration/advent2012-day10.t.....................  26    0    0    0   26
 integration/advent2012-day12.t.....................   5    0    0    0    5
 integration/advent2012-day13.t.....................  42    0    0    0   42
-integration/advent2012-day14.t.....................Method 'push-exactly' not found for invocant of class 'Any'
-  in sub is-prime-beta at t/spec/integration/advent2012-day14.t line 10
-  in block <unit> at t/spec/integration/advent2012-day14.t line 56
-
-# You planned 6 tests, but ran 1
-   1    5    0    0    6
-     5 tests aborted (missing ok/not ok)
+integration/advent2012-day14.t.....................   6    0    0    0    6
 integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 6.444 seconds
-# gerdr: 6.47 seconds
-# hand-memoization: 6.894 seconds
-# loop: 6.994 seconds
-# recursive-ternary: 7.259 seconds
-# sequence-ternary: 11.644 seconds
-# sequence: 19.942 seconds
-# recursive-ternary-hand-cached: 22.987 seconds
+integration/advent2012-day21.t.....................# gerdr: 6.67 seconds
+# kaz: 6.941 seconds
+# loop: 6.954 seconds
+# hand-memoization: 7.338 seconds
+# recursive-ternary: 7.491 seconds
+# sequence-ternary: 12.799 seconds
+# sequence: 21.676 seconds
+# recursive-ternary-hand-cached: 24.158 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
-integration/advent2012-day24.t.....................===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
+integration/advent2012-day24.t.....................   1    0    0    0    1
 integration/advent2013-day02.t.....................  12    0    0    0   12
-integration/advent2013-day04.t.....................===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0    7    0    0    7
-     7 tests aborted (missing ok/not ok)
+integration/advent2013-day04.t.....................   7    0    0    0    7
 integration/advent2013-day06.t.....................   1    0    0    0    1
 integration/advent2013-day07.t.....................   6    0    0    0    6
 integration/advent2013-day08.t.....................  11    0    0    0   11
@@ -5832,32 +6083,27 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed in binding to parameter '$x'; expected Even but got Int (3)
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-14461-247890.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-83234-522802.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/perl6.nqp)\n"
   31    0    2    0   33
      1 todo   : UnwindException
      1 todo   : Use of uninitialized value of type Any in numeric context
 integration/eval-and-threads.t.....................   1    0    0    0    1
 integration/failure-and-callsame.t.................  50    0    0    0   50
-integration/lazy-bentley-generator.t...............Method 'push-exactly' not found for invocant of class 'Any'
-  in sub bentley_clever at t/spec/integration/lazy-bentley-generator.t line 11
-  in block <unit> at t/spec/integration/lazy-bentley-generator.t line 24
-
-   0    1    0    0    1
-     1 tests aborted (missing ok/not ok)
+integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
-integration/man-or-boy.t...........................  10    0    0    0   10
+integration/man-or-boy.t...........................   9    1    0    0   10
+     1 tests aborted (missing ok/not ok)
 integration/method-calls-and-instantiation.t.......   2    0    0    0    2
 integration/no-indirect-new.t......................   2    0    0    0    2
 integration/packages.t.............................   3    0    0    0    3
 integration/pair-in-array.t........................   3    0    0    0    3
 integration/passing-pair-class-to-sub.t............   2    0    0    0    2
 integration/real-strings.t.........................  20    0    0    0   20
-integration/role-composition-vs-attribute.rakudo...===SORRY!===
-Method 'pull-one' not found for invocant of class 'Any'
-   0   10    0    0   10
-    10 tests aborted (missing ok/not ok)
+integration/role-composition-vs-attribute.rakudo...   6    0    0    4   10
+     2 skipped: alas, no visibility of native private attributes yet
+     2 skipped: alas, no visibility of private attributes in other role
 integration/rule-in-class-Str.t....................   3    0    0    0    3
 integration/say-crash.t............................   4    0    0    0    4
 integration/substr-after-match-in-gather-in-for.t..   1    0    0    0    1
@@ -5873,97 +6119,49 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "APP",          78,     0,     1,     6,    85,    85
-"MIS",          23,    12,     2,     1,    38,    38
+"MIS",          29,     1,     3,     5,    38,    38
 "S01",           2,     0,     0,    87,    89,    89
-"S02",        9783,   442,   138,   437, 10800, 10803
-"S03",       18748,   774,    55,    92, 19669, 19675
-"S04",        1631,    56,    48,    21,  1756,  1788
-"S05",        5909,    10,   110,   189,  6218,  6479
-"S06",        2728,    17,    46,    74,  2865,  2906
-"S07",         116,     7,     0,    11,   134,   231
-"S09",        2884,    23,    12,    35,  2954,  2954
-"S10",          97,    52,     0,     1,   150,   207
+"S02",       10058,   164,   141,   437, 10800, 10803
+"S03",       19505,     0,    55,    98, 19658, 19664
+"S04",        1684,     0,    48,    24,  1756,  1788
+"S05",        5919,     0,   110,   189,  6218,  6479
+"S06",        2745,     0,    46,    74,  2865,  2906
+"S07",         123,     0,     0,    11,   134,   231
+"S09",        2903,     0,    12,    39,  2954,  2954
+"S10",         144,     0,     5,     1,   150,   207
 "S11",         214,     0,    22,    13,   249,   267
-"S12",        1737,    23,    32,   118,  1910,  1959
+"S12",        1749,    11,    32,   118,  1910,  1959
 "S13",          68,     0,     0,     0,    68,    78
 "S14",         413,     0,     3,     5,   421,   438
 "S15",          57,     0,     4,    67,   128, 83815
-"S16",         716,     4,    13,    20,   753,   790
-"S17",        1112,     3,    20,    69,  1204,  1384
+"S16",         727,     0,    13,    20,   760,   797
+"S17",        1112,     2,    20,    70,  1204,  1384
 "S19",          18,     0,     7,     0,    25,    25
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          60,     1,     0,     0,    61,   133
-"S26",        1258,   343,     4,    34,  1639,  1672
+"S26",        1587,     0,     4,    48,  1639,  1672
 "S28",           5,     0,     0,     0,     5,     9
 "S29",         444,     0,     2,     2,   448,   448
-"S32",       31296,   505,   129,   127, 32057, 38244
-"int",        1289,    60,     6,    17,  1372,  1368
+"S32",       31790,    11,   129,   127, 32057, 38244
+"int",        1343,     1,     7,    21,  1372,  1368
 "ros",           2,     0,     0,     0,     2,     2
-"total",     80706,  2332,   654,  1427, 85119,175906
+"total",     82797,   191,   664,  1463, 85115,175902
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have APP
 note: test_summary.pl @syn does not have MIS
-MISC/bug-coverage-stress.rakudo.jvm aborted 12 test(s)
-S02-literals/quoting.t aborted 212 test(s)
+MISC/bug-coverage-stress.rakudo.jvm 1 - no deadlock while acquiring mutex
 S02-names/pseudo-6e.rakudo.jvm aborted 164 test(s)
-S02-types/array.rakudo.jvm aborted 42 test(s)
-S02-types/lazy-lists.t aborted 24 test(s)
-S03-metaops/cross.t aborted 4 test(s)
-S03-metaops/reduce.rakudo.jvm aborted 480 test(s)
-S03-metaops/zip.t aborted 68 test(s)
-S03-operators/cmp.t aborted 1 test(s)
-S03-sequence/arity-2-or-more.t aborted 20 test(s)
-S03-sequence/arity0.t aborted 13 test(s)
-S03-sequence/basic.t aborted 127 test(s)
-S03-sequence/misc.t 3 - sequence terminated by signature mismatch
-S03-sequence/misc.t 4 - Nil sequence
-S03-sequence/misc.t aborted 27 test(s)
-S03-sequence/nonnumeric.rakudo.jvm aborted 32 test(s)
-S04-declarations/constant.rakudo.jvm aborted 27 test(s)
-S04-statements/for.rakudo.jvm aborted 6 test(s)
-S04-statements/gather.rakudo.jvm aborted 23 test(s)
-S05-modifier/counted-match.t aborted 10 test(s)
-S06-other/main.t aborted 9 test(s)
-S06-signature/definite-return.rakudo.jvm aborted 8 test(s)
-S07-slip/slip.t aborted 7 test(s)
-S09-subscript/slice.rakudo.jvm aborted 23 test(s)
-S10-packages/precompilation.rakudo.jvm aborted 52 test(s)
-S12-class/attributes.t aborted 12 test(s)
 S12-construction/destruction.t 3 - ... only when object goes away everywhere
 S12-construction/destruction.t 5 - Child DESTROY should fire first
 S12-construction/destruction.t 6 - ... then parent
 S12-construction/roles-6e.t 3 - DESTROY
 S12-methods/accessors.t aborted 3 test(s)
 S12-methods/qualified.t aborted 4 test(s)
-S16-io/words.t aborted 4 test(s)
-S17-procasync/stress.rakudo.jvm aborted 1 test(s)
 S17-promise/basic.t 34 - promises execute asynchronously [try 1]
 S17-promise/basic.t 35 - promises execute asynchronously [try 2]
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
-S26-documentation/07c-tables.t aborted 8 test(s)
-S26-documentation/block-leading.t aborted 335 test(s)
-S32-array/adverbs.t aborted 424 test(s)
-S32-array/create.t aborted 3 test(s)
-S32-array/delete-adverb.t aborted 1 test(s)
-S32-array/splice.rakudo.jvm aborted 1 test(s)
 S32-io/io-handle.rakudo.jvm 19 - .t returns True for TTY
-S32-list/rotor.t aborted 5 test(s)
-S32-list/seq.rakudo.jvm aborted 15 test(s)
-S32-list/squish.t aborted 22 test(s)
-S32-num/polymod.t aborted 1 test(s)
 S32-str/gb18030-encode-decode.t aborted 5 test(s)
 S32-str/gb2312-encode-decode.t aborted 5 test(s)
-S32-str/indent.rakudo.jvm aborted 22 test(s)
-integration/advent2009-day23.t aborted 6 test(s)
-integration/advent2010-day04.t aborted 11 test(s)
-integration/advent2010-day11.t aborted 1 test(s)
-integration/advent2011-day10.t aborted 5 test(s)
-integration/advent2011-day23.t aborted 4 test(s)
-integration/advent2012-day04.rakudo.jvm aborted 7 test(s)
-integration/advent2012-day06.t aborted 2 test(s)
-integration/advent2012-day14.t aborted 5 test(s)
-integration/advent2012-day24.t aborted 1 test(s)
-integration/advent2013-day04.t aborted 7 test(s)
-integration/lazy-bentley-generator.t aborted 1 test(s)
-integration/role-composition-vs-attribute.rakudo. aborted 10 test(s)
+integration/man-or-boy.t aborted 1 test(s)
