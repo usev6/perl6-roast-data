@@ -32,12 +32,12 @@ APPENDICES/A04-experimental/01-misc.rakudo.jvm.....  18    0    0    1   19
      1 skipped: RT  \#128964 Type check failed for return value; expected Str(Any) but got Int (42)
                                                    pass fail todo skip plan
 MISC/bug-coverage-6.d.t............................   1    0    0    0    1
-MISC/bug-coverage-stress-6.d.rakudo.jvm............Exception in thread "Thread-32" org.perl6.nqp.runtime.UnwindException
+MISC/bug-coverage-stress-6.d.rakudo.jvm............Exception in thread "Thread-34" org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
 	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5811)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-Exception in thread "Thread-35" org.perl6.nqp.runtime.UnwindException
+Exception in thread "Thread-32" org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
 	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5811)
@@ -52,32 +52,23 @@ Exception in thread "Thread-37" org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
 	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5811)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-# 
+Exception in thread "Thread-38" # 
 #     NOTE IF THIS TEST FLOPS. LIKELY THE BUG STILL EXISTS.
 #     BUMP THE LOOP COUNTER TO ^20000 to make the failure more likely to occur.
 # 
-Exception in thread "Thread-38" org.perl6.nqp.runtime.UnwindException
+org.perl6.nqp.runtime.UnwindException
 	at org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)
 	at org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)
 	at org.perl6.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5811)
 	at java.base/java.lang.Thread.run(Thread.java:834)
    0    0    1    0    1
      1 todo   : UnwindException in thread "Thread-xx"
-MISC/bug-coverage-stress.rakudo.jvm................    # Failed test 'STDOUT'
-    # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 295
-    # expected: "pass"
-    #  matcher: 'infix:<~~>'
-    #      got: ""
-    # You failed 1 test of 2
-# Failed test 'no deadlock while acquiring mutex'
-# at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 288
-#      got status: 1
+MISC/bug-coverage-stress.rakudo.jvm................#      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-33615-705326.code\n===SORRY!===\njava.lang.BootstrapMethodError: java.lang.IllegalArgumentException: bad parameter count 850\n\nat /tmp/getout-33615-705326.code:1\n"
+#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-73619-490159.code\n===SORRY!===\njava.lang.BootstrapMethodError: java.lang.IllegalArgumentException: bad parameter count 850\n\nat /tmp/getout-73619-490159.code:1\n"
 # expected err: ""
-# You failed 1 test of 12
-   6    1    1    4   12
+   7    0    1    4   12
      1 skipped: The spawned command './perl6-j' exited unsuccessfully (exit code: 1)
      2 skipped: atomicint NYI
      1 skipped: hangs
@@ -85,7 +76,7 @@ MISC/bug-coverage-stress.rakudo.jvm................    # Failed test 'STDOUT'
 MISC/bug-coverage.rakudo.jvm.......................#      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "Died\n  in block <unit> at /tmp/getout-33660-24729.code line 5\n\n"
+#      got err: "Died\n  in block <unit> at /tmp/getout-73667-504491.code line 5\n\n"
 # expected err: ""
   15    0    1    1   17
      1 skipped: UnwindException in thread "main"
@@ -312,7 +303,7 @@ S02-literals/adverbs.rakudo.jvm....................Use of Nil in string context
   32    0    3    0   35
      2 todo   : :@<...> and :%<...> broken needs RT
      1 todo   : RT #128306
-S02-literals/allomorphic.t......................... 117    0    0    0  117
+S02-literals/allomorphic.t......................... 118    0    0    0  118
 S02-literals/array-interpolation.t.................  12    0    0    0   12
 S02-literals/autoref.t.............................Use of uninitialized value of type Any in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
@@ -565,10 +556,10 @@ S02-types/array-shapes.rakudo.jvm..................  37    0    2    1   40
      2 todo   : code does not die, array shapes
 S02-types/array.rakudo.jvm.........................Use of uninitialized value element of type Any in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.rakumod (Test) line 634
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.rakumod (Test) line 639
 Use of uninitialized value element of type Any in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.rakumod (Test) line 634
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.rakumod (Test) line 639
 Use of uninitialized value @bar of type Str in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
   in block  at t/spec/S02-types/array.rakudo.jvm line 360
@@ -770,37 +761,7 @@ S03-feeds/basic.rakudo.jvm.........................   9    0    6    8   23
 S03-junctions/associative.t........................  10    0    0    0   10
 S03-junctions/autothreading.t...................... 106    0    0    0  106
 S03-junctions/boolean-context.t....................  74    0    0    0   74
-S03-junctions/misc.t...............................        # Failed test 'STDOUT'
-        # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 295
-        # expected: "all(1, 2)"
-        #  matcher: 'infix:<~~>'
-        #      got: "all(1, 2"
-        # Failed test 'STDERR'
-        # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 296
-        # expected: ""
-        #  matcher: 'infix:<~~>'
-        #      got: ")"
-        # You failed 2 tests of 3
-    # Failed test 'junction 'all' doesn't freeze after assign metaop'
-    # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 288
-        # Failed test 'STDOUT'
-        # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 295
-        # expected: "one(1, 2)"
-        #  matcher: 'infix:<~~>'
-        #      got: "one(1, 2"
-        # Failed test 'STDERR'
-        # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 296
-        # expected: ""
-        #  matcher: 'infix:<~~>'
-        #      got: ")"
-        # You failed 2 tests of 3
-    # Failed test 'junction 'one' doesn't freeze after assign metaop'
-    # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 288
-    # You failed 2 tests of 3
-# Failed test 'meta-assignment to a scalar doesn't cause freezing'
-# at t/spec/S03-junctions/misc.t line 548
-# You failed 1 test of 150
- 149    1    0    0  150
+S03-junctions/misc.t............................... 150    0    0    0  150
 S03-metaops/cross.t................................  82    0    0    0   82
 S03-metaops/eager-hyper.rakudo.jvm.................   6    0    0    2    8
      2 skipped: hangs sometimes (UnwindException in thread Thread-1)
@@ -2053,7 +2014,7 @@ Methods .^name, .raku, .gist, or .say can be used to stringify it to something m
 Use of uninitialized value element of type Any in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
   in block  at t/spec/S05-substitution/subst.rakudo.jvm line 532
- 168    0    8   10  186
+ 172    0    8   10  190
     10 skipped: samemark NYI
      1 todo   : RT #114388 -- expected: '', got: (Any)
      6 todo   : RT #125753
@@ -2340,7 +2301,7 @@ S09-multidim/XX-POS-on-undimensioned.t.............  51    0    0    0   51
 S09-multidim/assign.t..............................  59    0    0    0   59
 S09-multidim/decl.t................................  39    0    0    0   39
 S09-multidim/indexing.t............................  31    0    0    0   31
-S09-multidim/methods.t.............................  80    0    0    0   80
+S09-multidim/methods.t.............................  82    0    0    0   82
 S09-multidim/subs.t................................  44    0    0    0   44
 S09-subscript/multidim-assignment.t................  11    0    0    0   11
 S09-subscript/slice.rakudo.jvm.....................  30    0    0    4   34
@@ -2401,12 +2362,12 @@ S10-packages/precompilation.rakudo.jvm.............#      got out: "False"
 #      got status: 1
 #      got out: ""
 # expected out: "pass\n"
-#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-37706-818750.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-37706-818750.code:1\n"
+#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-77722-896321.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-77722-896321.code:1\n"
 # expected err: ""
 #      got status: 1
 #      got out: ""
 # expected out: "pass\n"
-#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-37706-828852.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-37706-828852.code:1\n"
+#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-77722-665326.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-77722-665326.code:1\n"
 # expected err: ""
   47    0    5    0   52
      2 todo   : Invalid typename 'RT112626::Class1' in parameter declaration
@@ -2446,7 +2407,7 @@ S11-modules/require.rakudo.jvm.....................  52    0    3    3   58
      2 todo   : only test for Cool::Cat passes in this loop
      1 todo PASSED: only test for Cool::Cat passes in this loop
 S11-modules/runtime.t..............................   1    0    0    0    1
-S11-repository/cur-candidates.t....................Failed to get the directory contents of '/tmp/perl6_roast_cur_candidates_t_line_1_0_45428762785848811581327116/my-repo/dist': nqp::opendir: unable to get a DirectoryStream
+S11-repository/cur-candidates.t....................Failed to get the directory contents of '/tmp/perl6_roast_cur_candidates_t_line_1_0_72005423866790591581503003/my-repo/dist': nqp::opendir: unable to get a DirectoryStream
   in block  at t/spec/S11-repository/cur-candidates.t line 185
   in block  at t/spec/S11-repository/cur-candidates.t line 152
   in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.rakumod (Test) line 420
@@ -2693,13 +2654,13 @@ S15-unicode-information/uniname.rakudo.jvm.........  27    0    2   19   48
      1 todo   : HANGUL SYLLABLES D4DB
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1581328630
-# Using file temp_1581328630
-# Using file temp_1581328630
+S16-filehandles/chmod.t............................# Using file temp_1581504512
+# Using file temp_1581504512
+# Using file temp_1581504512
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-39639-1.temp
-# Using file temp-16-filehandles-filestat-39639-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-79620-1.temp
+# Using file temp-16-filehandles-filestat-79620-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 119    0    0    9  128
@@ -2711,7 +2672,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-971486
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-235905
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2754,7 +2715,7 @@ S16-io/words.t.....................................  11    0    0    0   11
 S16-unfiled/rebindstdhandles.rakudo.jvm............   0    0    0    2    2
      2 skipped: contextual rebinding regression
                                                    pass fail todo skip plan
-S17-channel/basic.rakudo.jvm.......................  26    0    0    1   27
+S17-channel/basic.rakudo.jvm.......................  27    0    0    1   28
      1 skipped: NullPointerException
 S17-channel/stress.rakudo.jvm......................   1    0    0    4    5
      4 skipped: Does not finish fourth run RT  \#129949
@@ -2782,7 +2743,7 @@ S17-procasync/stress.rakudo.jvm....................    #
 #      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "A react block:\n  in block <unit> at /tmp/getout-42213-398390.code line 2\n\nDied because of the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-42213-398390.code line 8\n\n"
+#      got err: "A react block:\n  in block <unit> at /tmp/getout-82211-654182.code line 2\n\nDied because of the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-82211-654182.code line 8\n\n"
 # expected err: ""
   21    0    2    1   24
      1 skipped: hangs / SIGTERM not supported
@@ -2792,9 +2753,9 @@ S17-promise/allof.t................................  13    0    0    0   13
 S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.rakudo.jvm..........................   3    0    0    1    4
      1 skipped: NullPointerException
-S17-promise/basic.t................................# Failed test 'promises execute asynchronously [try 2]'
+S17-promise/basic.t................................# Failed test 'promises execute asynchronously [try 0]'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 163
-#      got out: "start\nstart\nstart\nstart\nstart\nstart\nend\nstart\nstart\nend\nstart\nend\nend\nend\nend\nend\nend\nend\n"
+#      got out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nstart\nend\nend\nend\nend\nend\nend\nend\nend\n"
 # expected out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\nend\n"
 # You failed 1 test of 41
   40    1    0    0   41
@@ -3001,13 +2962,13 @@ S19-command-line-options/02-dash-n.rakudo.jvm......#      got out: ""
 S19-command-line-options/03-dash-p.t...............   3    0    0    0    3
 S19-command-line-options/04-negation.rakudo.jvm....#      got out: ""
 # expected out: "hi\n"
-#      got err: "Grouped options '-/h' contain '/', which is not a valid option\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  PERL6LIB    Modify the module search path\n  RAKUDO_HOME Override the path of the Raku runtime files\n  PERL6_HOME  Override the path of the Raku runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
+#      got err: "Grouped options '-/h' contain '/', which is not a valid option\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  RAKUDOLIB   Modify the module search path\n  PERL6LIB    Modify the module search path\n  RAKUDO_HOME Override the path of the Rakudo runtime files\n  PERL6_HOME  Override the path of the Rakudo runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
 # expected err: ""
 #      got out: ""
-#      got err: "Grouped options '-/hv' contain '/', which is not a valid option\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  PERL6LIB    Modify the module search path\n  RAKUDO_HOME Override the path of the Raku runtime files\n  PERL6_HOME  Override the path of the Raku runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
+#      got err: "Grouped options '-/hv' contain '/', which is not a valid option\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  RAKUDOLIB   Modify the module search path\n  PERL6LIB    Modify the module search path\n  RAKUDO_HOME Override the path of the Rakudo runtime files\n  PERL6_HOME  Override the path of the Rakudo runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
 # expected err: ""
 #      got out: ""
-#      got err: "Illegal option --/target\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  PERL6LIB    Modify the module search path\n  RAKUDO_HOME Override the path of the Raku runtime files\n  PERL6_HOME  Override the path of the Raku runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
+#      got err: "Illegal option --/target\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  RAKUDOLIB   Modify the module search path\n  PERL6LIB    Modify the module search path\n  RAKUDO_HOME Override the path of the Rakudo runtime files\n  PERL6_HOME  Override the path of the Rakudo runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
 # expected err: ""
    0    0    3    0    3
      3 todo   : 
@@ -3124,44 +3085,44 @@ at -e:1
 ------> [32muse NativeCall[33m⏏[31m; sub strdup(int64) is native(Str) {*}; [0m
 Unhandled exception: Wrong number of arguments passed; expected 1..1, but got 32 (1 of those positional)
   in dispatch:<::> (gen/jvm/CORE.c.setting:1947)
-  in clone (gen/jvm/CORE.c.setting:44272)
-  in <anon> (gen/jvm/CORE.c.setting:40166)
-  in EXCEPTION (gen/jvm/CORE.c.setting:40160)
+  in clone (gen/jvm/CORE.c.setting:44532)
+  in <anon> (gen/jvm/CORE.c.setting:40426)
+  in EXCEPTION (gen/jvm/CORE.c.setting:40420)
   in <anon> (gen/jvm/CORE.c.setting)
   in <anon> (gen/jvm/CORE.c.setting)
   in dispatch:<::> (gen/jvm/CORE.c.setting:1947)
-  in clone (gen/jvm/CORE.c.setting:44272)
-  in <anon> (gen/jvm/CORE.c.setting:40166)
-  in EXCEPTION (gen/jvm/CORE.c.setting:40160)
-  in <anon> (gen/jvm/CORE.c.setting:5097)
+  in clone (gen/jvm/CORE.c.setting:44532)
+  in <anon> (gen/jvm/CORE.c.setting:40426)
+  in EXCEPTION (gen/jvm/CORE.c.setting:40420)
+  in <anon> (gen/jvm/CORE.c.setting:5115)
   in <anon> (gen/jvm/CORE.c.setting)
   in <anon> (gen/jvm/CORE.c.setting:2020)
-  in <anon> (gen/jvm/CORE.c.setting:4937)
-  in pull-one (gen/jvm/CORE.c.setting:4924)
-  in push-all (gen/jvm/CORE.c.setting:3257)
-  in coremap (gen/jvm/CORE.c.setting:4978)
-  in coremap (gen/jvm/CORE.c.setting:4896)
-  in deepmap (gen/jvm/CORE.c.setting:56433)
-  in deepmap (gen/jvm/CORE.c.setting:56432)
-  in infix (gen/jvm/CORE.c.setting:55706)
-  in infix (gen/jvm/CORE.c.setting:55485)
-  in HYPER (gen/jvm/CORE.c.setting:56428)
+  in <anon> (gen/jvm/CORE.c.setting:4955)
+  in pull-one (gen/jvm/CORE.c.setting:4942)
+  in push-all (gen/jvm/CORE.c.setting:3272)
+  in coremap (gen/jvm/CORE.c.setting:4996)
+  in coremap (gen/jvm/CORE.c.setting:4914)
+  in deepmap (gen/jvm/CORE.c.setting:56693)
+  in deepmap (gen/jvm/CORE.c.setting:56692)
+  in infix (gen/jvm/CORE.c.setting:55966)
+  in infix (gen/jvm/CORE.c.setting:55745)
+  in HYPER (gen/jvm/CORE.c.setting:56688)
   in dispatch:<hyper> (gen/jvm/CORE.c.setting:2021)
-  in report (gen/jvm/CORE.c.setting:56723)
-  in report (gen/jvm/CORE.c.setting:56717)
-  in <anon> (gen/jvm/CORE.c.setting:56816)
-  in <anon> (gen/jvm/CORE.c.setting:56815)
-  in <anon> (gen/jvm/CORE.c.setting:5094)
-  in <anon> (gen/jvm/CORE.c.setting:5093)
-  in <anon> (gen/jvm/CORE.c.setting:5092)
-  in <anon> (gen/jvm/CORE.c.setting:5089)
-  in protect (gen/jvm/CORE.c.setting:57239)
-  in protect (gen/jvm/CORE.c.setting:57235)
-  in <anon> (gen/jvm/CORE.c.setting:5088)
-  in <anon> (gen/jvm/CORE.c.setting:5087)
-  in <anon> (gen/jvm/CORE.c.setting:40279)
-  in print_exception (gen/jvm/CORE.c.setting:40260)
-  in <anon> (gen/jvm/CORE.c.setting:40340)
+  in report (gen/jvm/CORE.c.setting:56983)
+  in report (gen/jvm/CORE.c.setting:56977)
+  in <anon> (gen/jvm/CORE.c.setting:57076)
+  in <anon> (gen/jvm/CORE.c.setting:57075)
+  in <anon> (gen/jvm/CORE.c.setting:5112)
+  in <anon> (gen/jvm/CORE.c.setting:5111)
+  in <anon> (gen/jvm/CORE.c.setting:5110)
+  in <anon> (gen/jvm/CORE.c.setting:5107)
+  in protect (gen/jvm/CORE.c.setting:57499)
+  in protect (gen/jvm/CORE.c.setting:57495)
+  in <anon> (gen/jvm/CORE.c.setting:5106)
+  in <anon> (gen/jvm/CORE.c.setting:5105)
+  in <anon> (gen/jvm/CORE.c.setting:40539)
+  in print_exception (gen/jvm/CORE.c.setting:40520)
+  in <anon> (gen/jvm/CORE.c.setting:40600)
   in command_eval (gen/jvm/stage2/NQPHLL.nqp:1381)
   in command_eval (gen/jvm/Compiler.nqp:65)
   in command_line (gen/jvm/stage2/NQPHLL.nqp:1303)
@@ -3832,10 +3793,10 @@ S32-array/rotate.t.................................  30    0    0    0   30
 S32-array/shift.t..................................  33    0    0    0   33
 S32-array/splice.rakudo.jvm........................Use of uninitialized value element of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.rakumod (Test) line 629
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.rakumod (Test) line 634
 Use of uninitialized value element of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.rakumod (Test) line 629
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.rakumod (Test) line 634
  380    0   12    0  392
     12 todo   : somehow the test causes different typecheck error
 S32-array/unshift.t................................  76    0    0    0   76
@@ -5917,7 +5878,7 @@ S32-str/gb2312-encode-decode.t.....................Unsupported VM encoding 'gb23
      5 tests aborted (missing ok/not ok)
 S32-str/indent.rakudo.jvm..........................Asked to remove 4 spaces, but the shortest indent is 3 spaces
   in block <unit> at t/spec/S32-str/indent.rakudo.jvm line 62
-    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-47027-916113.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
+    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-86952-898195.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
     # expected err: ""
   63    0    0    0   63
 S32-str/index.t....................................  47    0    0    0   47
@@ -6074,14 +6035,14 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# gerdr: 6.828 seconds
-# loop: 6.854 seconds
-# kaz: 7.068 seconds
-# hand-memoization: 7.26 seconds
-# recursive-ternary: 7.463 seconds
-# sequence-ternary: 12.235 seconds
-# sequence: 21.872 seconds
-# recursive-ternary-hand-cached: 23.575 seconds
+integration/advent2012-day21.t.....................# gerdr: 6.555 seconds
+# kaz: 6.797 seconds
+# loop: 7.413 seconds
+# recursive-ternary: 7.633 seconds
+# hand-memoization: 7.659 seconds
+# sequence-ternary: 12.145 seconds
+# sequence: 21.340001 seconds
+# recursive-ternary-hand-cached: 24.257 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -6110,7 +6071,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed in binding to parameter '$x'; expected Even but got Int (3)
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-47959-996146.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-87896-330858.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/perl6.nqp)\n"
   31    0    2    0   33
      1 todo   : UnwindException
@@ -6149,15 +6110,15 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "APP",          78,     0,     1,     6,    85,    85
-"MIS",          29,     1,     3,     5,    38,    38
+"MIS",          30,     0,     3,     5,    38,    38
 "S01",           2,     0,     0,    87,    89,    89
-"S02",       10062,   164,   140,   434, 10800, 10803
-"S03",       19509,     1,    55,    97, 19662, 19668
+"S02",       10063,   164,   140,   434, 10801, 10804
+"S03",       19510,     0,    55,    97, 19662, 19668
 "S04",        1685,     1,    47,    24,  1757,  1789
-"S05",        5920,     0,   110,   189,  6219,  6480
+"S05",        5924,     0,   110,   189,  6223,  6484
 "S06",        2757,     0,    46,    69,  2872,  2913
 "S07",         123,     0,     0,    11,   134,   231
-"S09",        2903,     0,    12,    39,  2954,  2954
+"S09",        2905,     0,    12,    39,  2956,  2956
 "S10",         144,     0,     5,     1,   150,   207
 "S11",         214,     0,    22,    13,   249,   267
 "S12",        1764,     0,    35,   118,  1917,  1966
@@ -6165,7 +6126,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         414,     0,     3,     5,   422,   439
 "S15",          57,     0,     4,    67,   128, 83815
 "S16",         727,     0,    13,    20,   760,   797
-"S17",        1237,     1,    64,    70,  1372,  1552
+"S17",        1238,     1,    64,    70,  1373,  1553
 "S19",          18,     0,     7,     0,    25,    25
 "S22",          18,     0,     0,     1,    19,    19
 "S24",          60,     1,     0,     0,    61,   133
@@ -6175,16 +6136,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       31783,    34,   126,   123, 32066, 38261
 "int",        1343,     1,     7,    21,  1372,  1368
 "ros",           2,     0,     0,     0,     2,     2
-"total",     82953,   204,   706,  1450, 85313,176108
+"total",     82963,   202,   706,  1450, 85321,176116
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have APP
 note: test_summary.pl @syn does not have MIS
-MISC/bug-coverage-stress.rakudo.jvm 1 - no deadlock while acquiring mutex
 S02-names/pseudo-6e.rakudo.jvm aborted 164 test(s)
-S03-junctions/misc.t 148 - meta-assignment to a scalar doesn't cause freezing
 S04-exceptions/exceptions-alternatives.t 3 - using wrong module gives us a JSON error instead of crashing
-S17-promise/basic.t 35 - promises execute asynchronously [try 2]
+S17-promise/basic.t 33 - promises execute asynchronously [try 0]
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S32-io/IO-Socket-Async.rakudo.jvm aborted 23 test(s)
 S32-io/io-handle.rakudo.jvm 19 - .t returns True for TTY
