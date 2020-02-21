@@ -63,12 +63,21 @@ Exception in thread "Thread-39" org.perl6.nqp.runtime.UnwindException
 # 
    0    0    1    0    1
      1 todo   : UnwindException in thread "Thread-xx"
-MISC/bug-coverage-stress.rakudo.jvm................#      got status: 1
+MISC/bug-coverage-stress.rakudo.jvm................    # Failed test 'STDOUT'
+    # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 295
+    # expected: "pass"
+    #  matcher: 'infix:<~~>'
+    #      got: "pas"
+    # You failed 1 test of 2
+# Failed test 'no deadlock while acquiring mutex'
+# at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 288
+#      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-66344-22976.code\n===SORRY!===\njava.lang.BootstrapMethodError: java.lang.IllegalArgumentException: bad parameter count 850\n\nat /tmp/getout-66344-22976.code:1\n"
+#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-96732-880161.code\n===SORRY!===\njava.lang.BootstrapMethodError: java.lang.IllegalArgumentException: bad parameter count 850\n\nat /tmp/getout-96732-880161.code:1\n"
 # expected err: ""
-   7    0    1    4   12
+# You failed 1 test of 12
+   6    1    1    4   12
      1 skipped: The spawned command './rakudo-j' exited unsuccessfully (exit code: 1)
      2 skipped: atomicint NYI
      1 skipped: hangs
@@ -76,7 +85,7 @@ MISC/bug-coverage-stress.rakudo.jvm................#      got status: 1
 MISC/bug-coverage.rakudo.jvm.......................#      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "Died\n  in block <unit> at /tmp/getout-66389-631705.code line 5\n\n"
+#      got err: "Died\n  in block <unit> at /tmp/getout-96777-211439.code line 5\n\n"
 # expected err: ""
   15    0    1    1   17
      1 skipped: UnwindException in thread "main"
@@ -638,10 +647,7 @@ S02-types/list.rakudo.jvm..........................  77    0    0    1   78
      1 skipped: dies with t/harness5
 S02-types/lists.t..................................  29    0    0    0   29
 S02-types/mix-iterator.t...........................  14    0    0    0   14
-S02-types/mix.rakudo.jvm...........................# Failed test '.roll(*)[^100] (2)'
-# at t/spec/S02-types/mix.rakudo.jvm line 288
-# You failed 1 test of 232
- 229    1    2    0  232
+S02-types/mix.rakudo.jvm........................... 230    0    2    0  232
      2 todo   : got: Nil
 S02-types/mixed_multi_dimensional.rakudo.jvm.......  77    0    3    0   80
      1 todo   : isa hash
@@ -764,7 +770,24 @@ S03-feeds/basic.rakudo.jvm.........................   9    0    6    8   23
 S03-junctions/associative.t........................  10    0    0    0   10
 S03-junctions/autothreading.t...................... 106    0    0    0  106
 S03-junctions/boolean-context.t....................  74    0    0    0   74
-S03-junctions/misc.t............................... 150    0    0    0  150
+S03-junctions/misc.t...............................        # Failed test 'STDOUT'
+        # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 295
+        # expected: "all(1, 2)"
+        #  matcher: 'infix:<~~>'
+        #      got: "all(1, 2"
+        # Failed test 'STDERR'
+        # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 296
+        # expected: ""
+        #  matcher: 'infix:<~~>'
+        #      got: ")"
+        # You failed 2 tests of 3
+    # Failed test 'junction 'all' doesn't freeze after assign metaop'
+    # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 288
+    # You failed 1 test of 3
+# Failed test 'meta-assignment to a scalar doesn't cause freezing'
+# at t/spec/S03-junctions/misc.t line 548
+# You failed 1 test of 150
+ 149    1    0    0  150
 S03-metaops/cross.t................................  82    0    0    0   82
 S03-metaops/eager-hyper.rakudo.jvm.................   6    0    0    2    8
      2 skipped: hangs sometimes (UnwindException in thread Thread-1)
@@ -2206,7 +2229,7 @@ Useless use of constant integer True in sink context (lines 110, 115, 122)
      2 skipped: variables as return specifications dont parse yet
 S06-signature/errors.rakudo.jvm....................  25    0    6    0   31
      6 todo   : unival NYI
-S06-signature/introspection.rakudo.jvm............. 145    0    1    1  147
+S06-signature/introspection.rakudo.jvm............. 146    0    1    1  148
      1 skipped: expected Any but got Mu instead
      1 todo   : needs/find RT: Logic to make :a($a) into :$a makes :a(:b($a) into ::b(:$a)
 S06-signature/mixed-placeholders.t.................  18    0    0    0   18
@@ -2365,12 +2388,12 @@ S10-packages/precompilation.rakudo.jvm.............#      got out: "False"
 #      got status: 1
 #      got out: ""
 # expected out: "pass\n"
-#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-70416-868794.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-70416-868794.code:1\n"
+#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-858-836237.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-858-836237.code:1\n"
 # expected err: ""
 #      got status: 1
 #      got out: ""
 # expected out: "pass\n"
-#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-70416-368401.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-70416-368401.code:1\n"
+#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-858-5320.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-858-5320.code:1\n"
 # expected err: ""
   47    0    5    0   52
      2 todo   : Invalid typename 'RT112626::Class1' in parameter declaration
@@ -2410,7 +2433,7 @@ S11-modules/require.rakudo.jvm.....................  52    0    3    3   58
      2 todo   : only test for Cool::Cat passes in this loop
      1 todo PASSED: only test for Cool::Cat passes in this loop
 S11-modules/runtime.t..............................   1    0    0    0    1
-S11-repository/cur-candidates.t....................Failed to get the directory contents of '/tmp/perl6_roast_cur_candidates_t_line_1_0_19545737742346671582193442/my-repo/dist': nqp::opendir: unable to get a DirectoryStream
+S11-repository/cur-candidates.t....................Failed to get the directory contents of '/tmp/perl6_roast_cur_candidates_t_line_1_0_25870491747317581582276887/my-repo/dist': nqp::opendir: unable to get a DirectoryStream
   in block  at t/spec/S11-repository/cur-candidates.t line 185
   in block  at t/spec/S11-repository/cur-candidates.t line 152
   in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.rakumod (Test) line 420
@@ -2658,13 +2681,13 @@ S15-unicode-information/uniname.rakudo.jvm.........  27    0    2   19   48
      1 todo   : HANGUL SYLLABLES D4DB
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1582194944
-# Using file temp_1582194944
-# Using file temp_1582194944
+S16-filehandles/chmod.t............................# Using file temp_1582278397
+# Using file temp_1582278397
+# Using file temp_1582278397
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-72329-1.temp
-# Using file temp-16-filehandles-filestat-72329-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-2732-1.temp
+# Using file temp-16-filehandles-filestat-2732-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 119    0    0    9  128
@@ -2676,7 +2699,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-473641
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-651243
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2747,7 +2770,7 @@ S17-procasync/stress.rakudo.jvm....................    #
 #      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "A react block:\n  in block <unit> at /tmp/getout-74902-564665.code line 2\n\nDied because of the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-74902-564665.code line 8\n\n"
+#      got err: "A react block:\n  in block <unit> at /tmp/getout-5313-612922.code line 2\n\nDied because of the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-5313-612922.code line 8\n\n"
 # expected err: ""
   21    0    2    1   24
      1 skipped: hangs / SIGTERM not supported
@@ -2767,7 +2790,7 @@ S17-promise/basic.t................................# Failed test 'promises execu
 # expected out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\nend\n"
 # Failed test 'promises execute asynchronously [try 2]'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 163
-#      got out: "start\nstart\nstart\nstart\nstart\nend\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\n"
+#      got out: "start\nstart\nstart\nstart\nstart\nstart\nend\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\n"
 # expected out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\nend\n"
 # Failed test 'promises execute asynchronously [try 3]'
 # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 163
@@ -3106,15 +3129,15 @@ at -e:1
 ------> [32muse NativeCall[33m⏏[31m; sub strdup(int64) is native(Str) {*}; [0m
 Unhandled exception: Wrong number of arguments passed; expected 1..1, but got 32 (1 of those positional)
   in dispatch:<::> (gen/jvm/CORE.c.setting:1947)
-  in clone (gen/jvm/CORE.c.setting:44723)
-  in <anon> (gen/jvm/CORE.c.setting:40617)
-  in EXCEPTION (gen/jvm/CORE.c.setting:40611)
+  in clone (gen/jvm/CORE.c.setting:44716)
+  in <anon> (gen/jvm/CORE.c.setting:40610)
+  in EXCEPTION (gen/jvm/CORE.c.setting:40604)
   in <anon> (gen/jvm/CORE.c.setting)
   in <anon> (gen/jvm/CORE.c.setting)
   in dispatch:<::> (gen/jvm/CORE.c.setting:1947)
-  in clone (gen/jvm/CORE.c.setting:44723)
-  in <anon> (gen/jvm/CORE.c.setting:40617)
-  in EXCEPTION (gen/jvm/CORE.c.setting:40611)
+  in clone (gen/jvm/CORE.c.setting:44716)
+  in <anon> (gen/jvm/CORE.c.setting:40610)
+  in EXCEPTION (gen/jvm/CORE.c.setting:40604)
   in <anon> (gen/jvm/CORE.c.setting:5115)
   in <anon> (gen/jvm/CORE.c.setting)
   in <anon> (gen/jvm/CORE.c.setting:2020)
@@ -3123,27 +3146,27 @@ Unhandled exception: Wrong number of arguments passed; expected 1..1, but got 32
   in push-all (gen/jvm/CORE.c.setting:3272)
   in coremap (gen/jvm/CORE.c.setting:4996)
   in coremap (gen/jvm/CORE.c.setting:4914)
-  in deepmap (gen/jvm/CORE.c.setting:56969)
-  in deepmap (gen/jvm/CORE.c.setting:56968)
-  in infix (gen/jvm/CORE.c.setting:56242)
-  in infix (gen/jvm/CORE.c.setting:56021)
-  in HYPER (gen/jvm/CORE.c.setting:56964)
+  in deepmap (gen/jvm/CORE.c.setting:56962)
+  in deepmap (gen/jvm/CORE.c.setting:56961)
+  in infix (gen/jvm/CORE.c.setting:56235)
+  in infix (gen/jvm/CORE.c.setting:56014)
+  in HYPER (gen/jvm/CORE.c.setting:56957)
   in dispatch:<hyper> (gen/jvm/CORE.c.setting:2021)
-  in report (gen/jvm/CORE.c.setting:57259)
-  in report (gen/jvm/CORE.c.setting:57253)
-  in <anon> (gen/jvm/CORE.c.setting:57352)
-  in <anon> (gen/jvm/CORE.c.setting:57351)
+  in report (gen/jvm/CORE.c.setting:57252)
+  in report (gen/jvm/CORE.c.setting:57246)
+  in <anon> (gen/jvm/CORE.c.setting:57345)
+  in <anon> (gen/jvm/CORE.c.setting:57344)
   in <anon> (gen/jvm/CORE.c.setting:5112)
   in <anon> (gen/jvm/CORE.c.setting:5111)
   in <anon> (gen/jvm/CORE.c.setting:5110)
   in <anon> (gen/jvm/CORE.c.setting:5107)
-  in protect (gen/jvm/CORE.c.setting:57775)
-  in protect (gen/jvm/CORE.c.setting:57771)
+  in protect (gen/jvm/CORE.c.setting:57768)
+  in protect (gen/jvm/CORE.c.setting:57764)
   in <anon> (gen/jvm/CORE.c.setting:5106)
   in <anon> (gen/jvm/CORE.c.setting:5105)
-  in <anon> (gen/jvm/CORE.c.setting:40730)
-  in print_exception (gen/jvm/CORE.c.setting:40711)
-  in <anon> (gen/jvm/CORE.c.setting:40791)
+  in <anon> (gen/jvm/CORE.c.setting:40723)
+  in print_exception (gen/jvm/CORE.c.setting:40704)
+  in <anon> (gen/jvm/CORE.c.setting:40784)
   in command_eval (gen/jvm/stage2/NQPHLL.nqp:1381)
   in command_eval (gen/jvm/Compiler.nqp:65)
   in command_line (gen/jvm/stage2/NQPHLL.nqp:1303)
@@ -5522,9 +5545,9 @@ S32-hash/slice.rakudo.jvm..........................  21    0   10    0   31
 S32-io/IO-Socket-Async.rakudo.jvm..................# host=127.0.0.1
 # host=::1
 # 0:0:0:0:0:0:0:0
-# 62236
+# 14233
 # 0:0:0:0:0:0:0:0
-# 36449
+# 13530
   35    0    3    2   40
      1 skipped: hangs (sometimes)
      1 skipped: seems to crash the server (sometimes): IllegalStateException: Current state = CODING_END, new state = CODING
@@ -5899,7 +5922,7 @@ S32-str/gb2312-encode-decode.t.....................Unsupported VM encoding 'gb23
      5 tests aborted (missing ok/not ok)
 S32-str/indent.rakudo.jvm..........................Asked to remove 4 spaces, but the shortest indent is 3 spaces
   in block <unit> at t/spec/S32-str/indent.rakudo.jvm line 62
-    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-79681-903269.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
+    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-9993-925248.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
     # expected err: ""
   63    0    0    0   63
 S32-str/index.t.................................... 212    0    0    0  212
@@ -6056,14 +6079,14 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# kaz: 7.089 seconds
-# gerdr: 7.162 seconds
-# loop: 7.185 seconds
-# hand-memoization: 7.248 seconds
-# recursive-ternary: 7.523 seconds
-# sequence-ternary: 11.992 seconds
-# sequence: 21.717 seconds
-# recursive-ternary-hand-cached: 23.911 seconds
+integration/advent2012-day21.t.....................# gerdr: 6.757 seconds
+# loop: 7.087 seconds
+# recursive-ternary: 7.247 seconds
+# kaz: 7.345 seconds
+# hand-memoization: 7.498 seconds
+# sequence-ternary: 11.824 seconds
+# sequence: 21.31 seconds
+# recursive-ternary-hand-cached: 23.600999 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -6092,7 +6115,7 @@ integration/advent2014-day13.t.....................  13    0    0    0   13
 integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed in binding to parameter '$x'; expected Even but got Int (3)
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-80603-452967.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-10909-734006.code line 1\n"
 #      got err: "Exception in thread \"main\" org.perl6.nqp.runtime.UnwindException\n\tat org.perl6.nqp.runtime.ThreadContext.<init>(ThreadContext.java:121)\n\tat org.perl6.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:343)\n\tat org.perl6.nqp.runtime.GlobalContext.<init>(GlobalContext.java:248)\n\tat org.perl6.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/rakudo.nqp)\n"
   31    0    2    0   33
      1 todo   : UnwindException
@@ -6128,13 +6151,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "APP",          78,     0,     1,     6,    85,    85
-"MIS",          30,     0,     3,     5,    38,    38
+"MIS",          29,     1,     3,     5,    38,    38
 "S01",           2,     0,     0,    87,    89,    89
-"S02",       10062,   165,   140,   434, 10801, 10804
-"S03",       19510,     0,    55,    97, 19662, 19668
+"S02",       10063,   164,   140,   434, 10801, 10804
+"S03",       19509,     1,    55,    97, 19662, 19668
 "S04",        1686,     1,    47,    24,  1758,  1790
 "S05",        5924,     0,   110,   189,  6223,  6484
-"S06",        2758,     0,    46,    69,  2873,  2914
+"S06",        2759,     0,    46,    69,  2874,  2915
 "S07",         123,     0,     0,    11,   134,   231
 "S09",        2905,     0,    12,    39,  2956,  2956
 "S10",         144,     0,     5,     1,   150,   207
@@ -6154,13 +6177,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       32629,    11,   128,   124, 32892, 38133
 "int",        1343,     1,     7,    21,  1372,  1368
 "ros",           2,     0,     0,     0,     2,     2
-"total",     83810,   184,   708,  1451, 86153,175994
+"total",     83810,   185,   708,  1451, 86154,175995
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have APP
 note: test_summary.pl @syn does not have MIS
+MISC/bug-coverage-stress.rakudo.jvm 1 - no deadlock while acquiring mutex
 S02-names/pseudo-6e.rakudo.jvm aborted 164 test(s)
-S02-types/mix.rakudo.jvm 128 - .roll(*)[^100] (2)
+S03-junctions/misc.t 148 - meta-assignment to a scalar doesn't cause freezing
 S04-exceptions/exceptions-alternatives.t 3 - using wrong module gives us a JSON error instead of crashing
 S17-promise/basic.t 33 - promises execute asynchronously [try 0]
 S17-promise/basic.t 34 - promises execute asynchronously [try 1]
