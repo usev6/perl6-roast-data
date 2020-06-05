@@ -450,7 +450,15 @@ No such symbol 'OUR::A42'
     36 skipped: various issues, skipping all for now
      2 todo   : binding and interpolation together NYI
      1 todo   : interpolation and auto-viv NYI
-S02-names/pseudo-6d.rakudo.moar....................  89    0    3   67  159
+S02-names/pseudo-6d.rakudo.moar....................WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+No such symbol 'OUR::A43'
+  in block <unit> at t/spec/S02-names/pseudo-6d.rakudo.moar line 186
+
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+No such symbol 'OUR::A42'
+  in block <unit> at t/spec/S02-names/pseudo-6d.rakudo.moar line 182
+
+  89    0    3   67  159
      4 skipped: Cannot bind to &::("CORE")::foo
      4 skipped: the binding in here is NYI
     23 skipped: various issues to resolve
@@ -495,10 +503,6 @@ Methods .^name, .raku, .gist, or .say can be used to stringify it to something m
 Use of uninitialized value @bar of type Str in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
   in block  at t/spec/S02-types/array.rakudo.moar line 360
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Index out of range. Is: 1, should be in 0..0
-  in block <unit> at t/spec/S02-types/array.rakudo.moar line 285
-
  100    0    3    2  105
      2 skipped: multi-dim arrays NYI
      1 todo   : bind_pos NYI
@@ -596,36 +600,132 @@ S02-types/nil.rakudo.moar..........................Potential difficulties:
      1 skipped: triage
      1 todo   : returns True/False
      5 todo   : triage
-S02-types/num.rakudo.moar..........................WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Attempt to divide by zero using %
-  in block  at t/spec/S02-types/num.rakudo.moar line 361
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 419
-  in block <unit> at t/spec/S02-types/num.rakudo.moar line 349
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Attempt to divide 5 by zero using %
-  in block  at t/spec/S02-types/num.rakudo.moar line 359
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 419
-  in block <unit> at t/spec/S02-types/num.rakudo.moar line 349
-
- 108    0    0    0  108
+S02-types/num.rakudo.moar.......................... 108    0    0    0  108
 S02-types/pair.rakudo.moar.........................# checking fat-comma
 # checking Pair.new(:key,:value)
 # checking Pair.new(key,value)
 # checking pair()
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Index out of range. Is: 1, should be in 0..0
-  in sub test3 at t/spec/S02-types/pair.rakudo.moar line 154
-  in block <unit> at t/spec/S02-types/pair.rakudo.moar line 157
-
  181    0    1    0  182
      1 todo   : should it really have \n on the end?
 S02-types/parsing-bool.t...........................   4    0    0    0    4
 S02-types/range-iterator.t.........................  72    0    0    0   72
 S02-types/range.t..................................Use of uninitialized value of type Range in numeric context
   in block <unit> at t/spec/S02-types/range.t line 85
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S02-types/range.t line 445
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert Inf to Int: 
+  in block  at t/spec/S02-types/range.t line 435
+  in block <unit> at t/spec/S02-types/range.t line 435
+
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S02-types/range.t line 445
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert Inf to Int: 
+  in block  at t/spec/S02-types/range.t line 435
+  in block <unit> at t/spec/S02-types/range.t line 435
+
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S02-types/range.t line 445
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert Inf to Int: 
+  in block  at t/spec/S02-types/range.t line 435
+  in block <unit> at t/spec/S02-types/range.t line 435
+
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S02-types/range.t line 445
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert Inf to Int: 
+  in block  at t/spec/S02-types/range.t line 435
+  in block <unit> at t/spec/S02-types/range.t line 435
+
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S02-types/range.t line 445
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert -Inf to Int: 
+  in block  at t/spec/S02-types/range.t line 435
+  in block <unit> at t/spec/S02-types/range.t line 435
+
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S02-types/range.t line 445
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert -Inf to Int: 
+  in block  at t/spec/S02-types/range.t line 435
+  in block <unit> at t/spec/S02-types/range.t line 435
+
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S02-types/range.t line 445
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert -Inf to Int: 
+  in block  at t/spec/S02-types/range.t line 435
+  in block <unit> at t/spec/S02-types/range.t line 435
+
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S02-types/range.t line 445
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert -Inf to Int: 
+  in block  at t/spec/S02-types/range.t line 435
+  in block <unit> at t/spec/S02-types/range.t line 435
+
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S02-types/range.t line 445
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert -Inf to Int: 
+  in block  at t/spec/S02-types/range.t line 435
+  in block <unit> at t/spec/S02-types/range.t line 435
+
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in block  at t/spec/S02-types/range.t line 445
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert NaN to Int: 
+  in block  at t/spec/S02-types/range.t line 435
+  in block <unit> at t/spec/S02-types/range.t line 435
+
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert 0+1i to Real: imaginary part not zero
+  in block  at t/spec/S02-types/range.t line 422
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 419
+  in block <unit> at t/spec/S02-types/range.t line 411
+
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert 0+1i to Real: imaginary part not zero
+  in block  at t/spec/S02-types/range.t line 422
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 419
+  in block <unit> at t/spec/S02-types/range.t line 411
+
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert 0+1i to Real: imaginary part not zero
+  in block  at t/spec/S02-types/range.t line 422
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 419
+  in block <unit> at t/spec/S02-types/range.t line 411
+
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert 0+1i to Real: imaginary part not zero
+  in block  at t/spec/S02-types/range.t line 422
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 419
+  in block <unit> at t/spec/S02-types/range.t line 411
+
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert 0+1i to Real: imaginary part not zero
+  in block  at t/spec/S02-types/range.t line 422
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 419
+  in block <unit> at t/spec/S02-types/range.t line 411
+
  193    0    0    0  193
 S02-types/resolved-in-setting.t....................   4    0    0    0    4
 S02-types/set-iterator.t...........................  12    0    0    0   12
@@ -804,9 +904,9 @@ S03-operators/arith.t..............................Use of uninitialized value of
  158    0    0    0  158
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
 S03-operators/assign.rakudo.moar...................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S03-operators/assign.rakudo.moar:
+Useless use of constant integer 4 in sink context (lines 555, 555)
 Useless use of constant integer 3 in sink context (lines 555, 555, 875, 875)
 Useless use of constant integer 2 in sink context (lines 875, 875)
-Useless use of constant integer 4 in sink context (lines 555, 555)
  276    0   14   11  301
      2 skipped: ,= needs to be special cased after GLR to compile to push(@a, 3, 4)
      3 skipped: cannot modify an immutable value
@@ -1151,25 +1251,7 @@ S03-operators/is-divisible-by.rakudo.moar..........  15    0    1    0   16
      1 todo   : not sure why this doesn't fire
 S03-operators/lcm.t................................  15    0    0    0   15
 S03-operators/list-quote-junction.t................  16    0    0    0   16
-S03-operators/minmax.rakudo.moar...................WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert string to number: base-10 number must begin with valid digits or '.' in '[32m⏏[31ma[0m' (indicated by ⏏[0m)
-  in block <unit> at EVAL_4 line 1
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 629
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
-  in sub throws-like at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 621
-  in sub no-fatal-throws-like at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 358
-  in block <unit> at t/spec/S03-operators/minmax.rakudo.moar line 102
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Cannot convert string to number: base-10 number must begin with valid digits or '.' in '[32m⏏[31ma[0m' (indicated by ⏏[0m)
-  in block <unit> at EVAL_3 line 1
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 629
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
-  in sub throws-like at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 621
-  in sub no-fatal-throws-like at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 358
-  in block <unit> at t/spec/S03-operators/minmax.rakudo.moar line 100
-
-  37    0    0    2   39
+S03-operators/minmax.rakudo.moar...................  37    0    0    2   39
      2 skipped: Annoying test that we haven't done the obvious yet unspecced, fails because we have indeed done the obvious
 S03-operators/misc.rakudo.moar.....................Use of uninitialized value of type Str in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
@@ -1188,9 +1270,9 @@ S03-operators/numeric-shift.t......................  38    0    0    0   38
 S03-operators/orelse.t.............................  16    0    0    0   16
 S03-operators/overflow.t...........................  98    0    0    0   98
 S03-operators/precedence.rakudo.moar...............WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S03-operators/precedence.rakudo.moar:
-Useless use of constant integer 3 in sink context (lines 148, 148)
 Useless use of constant integer 2 in sink context (lines 148, 148)
 Useless use of "X" in expression "my $a = (1, 3) X (2, 4)" in sink context (line 150)
+Useless use of constant integer 3 in sink context (lines 148, 148)
   71    0    4    2   77
      2 skipped: superscript exponent associativity
      2 todo   : Inequality (!=) misparsed as assignment
@@ -1216,6 +1298,39 @@ S03-operators/reduce-le1arg.rakudo.moar............  52    0    0    2   54
 S03-operators/relational.t......................... 179    0    0    0  179
 S03-operators/repeat.t.............................Use of uninitialized value of type Int in numeric context
   in block <unit> at t/spec/S03-operators/repeat.t line 24
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in code  at t/spec/S03-operators/repeat.t line 63
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert -Inf to Int: 
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 629
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
+  in sub throws-like at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 621
+  in block <unit> at t/spec/S03-operators/repeat.t line 31
+
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in code  at t/spec/S03-operators/repeat.t line 63
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert NaN to Int: 
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 629
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
+  in sub throws-like at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 621
+  in block <unit> at t/spec/S03-operators/repeat.t line 29
+
+Use of uninitialized value element of type Any in string context.
+Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
+  in code  at t/spec/S03-operators/repeat.t line 63
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert NaN to Int: 
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 629
+  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
+  in sub throws-like at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 621
+  in block <unit> at t/spec/S03-operators/repeat.t line 27
+
+WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot convert string to number: base-10 number must begin with valid digits or '.' in '[32m⏏[31mb[0m' (indicated by ⏏[0m)
+
 Use of uninitialized value of type Int in numeric context
   in block  at t/spec/S03-operators/repeat.t line 155
   62    0    0    0   62
@@ -1517,21 +1632,6 @@ S04-exceptions/fail-6e.t...........................   3    0    0    0    3
 S04-exceptions/fail.t..............................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S04-exceptions/fail.t:
 Useless use of constant integer 1 in sink context (line 83)
 Useless use of "so " in expression "so my $f = failer" in sink context (line 172)
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-AnEx with no message
-  in sub f at t/spec/S04-exceptions/fail.t line 72
-  in block <unit> at t/spec/S04-exceptions/fail.t line 72
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-foo
-  in sub  at t/spec/S04-exceptions/fail.t line 65
-  in block <unit> at t/spec/S04-exceptions/fail.t line 65
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-42
-  in sub  at t/spec/S04-exceptions/fail.t line 18
-  in block <unit> at t/spec/S04-exceptions/fail.t line 20
-
   38    0    0    0   38
 S04-exceptions/pending.rakudo.moar.................  16    0    2    3   21
      2 skipped: $!.pending
@@ -1590,8 +1690,8 @@ S04-statement-modifiers/values_in_bool_context.t...  24    0    0    0   24
 S04-statement-modifiers/while.t....................Use of uninitialized value of type Any in numeric context
   in block  at t/spec/S04-statement-modifiers/while.t line 18
 WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/EVAL_0:
-Useless use of constant integer 2 in sink context (lines 1, 1)
 Useless use of constant integer 1 in sink context (use Nil instead to suppress this warning) (lines 1, 1)
+Useless use of constant integer 2 in sink context (lines 1, 1)
    6    0    0    0    6
 S04-statement-modifiers/with.rakudo.moar...........WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S04-statement-modifiers/with.rakudo.moar:
 Useless use of constant integer 1 in sink context (line 74)
@@ -1935,8 +2035,8 @@ S05-metasyntax/unknown.rakudo.moar.................Use of Nil in string context
   12    0    1    0   13
      1 todo   : faulty regex error
 S05-modifier/Perl_0.rakudo.moar....................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S05-modifier/Perl_0.rakudo.moar:
-Useless use of constant string "false" in sink context (line 96)
 Useless use of constant string "true" in sink context (line 96)
+Useless use of constant string "false" in sink context (line 96)
 # Now going to test numbered match variable.
   20    0    4    0   24
      4 todo   : NYI
@@ -2057,10 +2157,10 @@ S06-macros/opaque-ast.rakudo.moar..................   3    0    0    4    7
      3 skipped: :COMPILING flag
      1 skipped: return from macro
 S06-macros/quasi-blocks.rakudo.moar................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-macros/quasi-blocks.rakudo.moar:
+Useless use of constant string "grasshopper" in sink context (line 74)
+Useless use of constant string "motor oil" in sink context (line 74)
 Useless use of constant integer 2 in sink context (line 65)
 Useless use of constant integer 1 in sink context (line 65)
-Useless use of constant string "motor oil" in sink context (line 74)
-Useless use of constant string "grasshopper" in sink context (line 74)
   12    0    0    2   14
      2 skipped: Cannot resolve caller prefix:<++>(Mu)
 S06-macros/unquoting.rakudo.moar...................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-macros/unquoting.rakudo.moar:
@@ -2105,8 +2205,8 @@ S06-operator-overloading/methods.rakudo.moar.......   2    0    1    0    3
      1 todo   : nom regression
 S06-operator-overloading/prefix.t..................  10    0    0    0   10
 S06-operator-overloading/semicolon.t...............WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-operator-overloading/semicolon.t:
-Useless use of constant integer 3 in sink context (line 15)
 Useless use of constant integer 2 in sink context (line 15)
+Useless use of constant integer 3 in sink context (line 15)
    3    0    0    0    3
 S06-operator-overloading/sub.rakudo.moar...........  28    0    0    1   29
      1 skipped: missing block, apparently "if" not an op
@@ -2177,12 +2277,12 @@ S06-signature/definite-return.rakudo.moar..........Potential difficulties:
     at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-signature/definite-return.rakudo.moar:100
     ------> [32mmpty) { 1, { ++$got-here; last } ... * }[33m⏏[31m<EOL>[0m
 WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-signature/definite-return.rakudo.moar:
-Useless use of constant integer 42 in sink context (line 86)
 Useless use of constant integer 3 in sink context (line 21)
-Useless use of "sin(1)" in expression "sin(1)" in sink context (line 132)
-Useless use of constant integer 1 in sink context (line 13)
+Useless use of constant integer 42 in sink context (line 86)
 Useless use of constant integer False in sink context (line 105)
+Useless use of constant integer 1 in sink context (line 13)
 Useless use of constant integer True in sink context (lines 110, 115, 122)
+Useless use of "sin(1)" in expression "sin(1)" in sink context (line 132)
   17    0    0    2   19
      2 skipped: variables as return specifications dont parse yet
 S06-signature/errors.t.............................  31    0    0    0   31
@@ -2242,8 +2342,8 @@ S06-traits/as.t....................................   5    0    0    0    5
 S06-traits/is-assoc.rakudo.moar....................   5    0    0    2    7
      2 skipped: RT  \#116244
 S06-traits/is-copy.t...............................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-traits/is-copy.t:
-Useless use of "+" in expression "+1" in sink context (lines 104, 104)
 Useless use of "-" in expression "-1" in sink context (line 104)
+Useless use of "+" in expression "+1" in sink context (lines 104, 104)
 Potential difficulties:
     Redeclaration of symbol '$x'
     at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/EVAL_0:1
@@ -2679,13 +2779,13 @@ S15-unicode-information/uniprop.rakudo.moar........ 174    0   29    0  203
 S15-unicode-information/unival.t...................  40    0    0    0   40
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1591164287
-# Using file temp_1591164287
-# Using file temp_1591164287
+S16-filehandles/chmod.t............................# Using file temp_1591298881
+# Using file temp_1591298881
+# Using file temp_1591298881
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.moar...............# Using file temp-16-filehandles-filestat-69806-1.temp
-# Using file temp-16-filehandles-filestat-69806-2.temp
+S16-filehandles/filestat.rakudo.moar...............# Using file temp-16-filehandles-filestat-3550-1.temp
+# Using file temp-16-filehandles-filestat-3550-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.moar............... 119    0    0    9  128
@@ -2695,7 +2795,7 @@ S16-filehandles/io.t............................... 114    0    0    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-269652
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-110892
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2706,7 +2806,17 @@ S16-io/basic-open.t................................  12    0    0    0   12
 S16-io/bom.t.......................................  10    0    0    0   10
 S16-io/comb.t......................................  30    0    0    0   30
 S16-io/cwd.t.......................................   3    0    0    0    3
-S16-io/eof.t.......................................   4    0    0    1    5
+S16-io/eof.t.......................................    # Got STDOUT: "meow\nFalse\n^D\b\bmeow\n\nTrue\n"
+    # Failed test 'STDOUT'
+    # at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 386
+    # expected: -> ;; $_? is raw = OUTER::<$_> { #`(Block|34518726432) ... }
+    #  matcher: 'infix:<~~>'
+    #      got: "meow\nFalse\n^D\b\bmeow\n\nTrue\n"
+    # You failed 1 test of 3
+# Failed test '.eof on TTY STDIN works right'
+# at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 380
+# You failed 1 test of 5
+   3    1    0    1    5
      1 skipped: Don't test reading /proc file if not in Linux
 S16-io/getc.t......................................   3    0    0    0    3
 S16-io/handles-between-threads.t...................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S16-io/handles-between-threads.t:
@@ -2950,13 +3060,13 @@ S19-command-line-options/02-dash-n.rakudo.moar.....#      got out: ""
 S19-command-line-options/03-dash-p.t...............   3    0    0    0    3
 S19-command-line-options/04-negation.rakudo.moar...#      got out: ""
 # expected out: "hi\n"
-#      got err: "Grouped options '-/h' contain '/', which is not a valid option\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n  --profile[=name]     write profile information to a file\n                       Extension controls format:\n                           .json outputs in JSON\n                           .sql  outputs in SQL\n                           any other extension outputs in HTML\n  --profile-compile[=name]\n                       write compile-time profile information to a file\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n  --profile-kind[=name]\n                       choose the type of profile to generate\n                         instrumented - performance measurements (default)\n                         heap - record heap snapshots after every garbage\n                         collector run\n  --profile-filename=name\n                       provide a different filename for profile.\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n                       This option will go away in a future Rakudo release\n  --profile-stage=stage\n                       write profile information for the given compilation\n                       stage to a file. Use --profile-compile to set name\n                       and format\n  --full-cleanup       try to free all memory and exit cleanly\n  --debug-port=port    listen for incoming debugger connections\n  --debug-suspend      pause execution at the entry point\n  --tracing            output a line to stderr on every interpreter instr (only if\n                       enabled in MoarVM)\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  RAKULIB     Modify the module search path\n  PERL6LIB    Modify the module search path # to be deprecated\n  RAKUDO_HOME Override the path of the Rakudo runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
+#      got err: "Grouped options '-/h' contain '/', which is not a valid option\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -                    read program source from STDIN or start REPL if a TTY\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n  --profile[=name]     write profile information to a file\n                       Extension controls format:\n                           .json outputs in JSON\n                           .sql  outputs in SQL\n                           any other extension outputs in HTML\n  --profile-compile[=name]\n                       write compile-time profile information to a file\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n  --profile-kind[=name]\n                       choose the type of profile to generate\n                         instrumented - performance measurements (default)\n                         heap - record heap snapshots after every garbage\n                         collector run\n  --profile-filename=name\n                       provide a different filename for profile.\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n                       This option will go away in a future Rakudo release\n  --profile-stage=stage\n                       write profile information for the given compilation\n                       stage to a file. Use --profile-compile to set name\n                       and format\n  --full-cleanup       try to free all memory and exit cleanly\n  --debug-port=port    listen for incoming debugger connections\n  --debug-suspend      pause execution at the entry point\n  --tracing            output a line to stderr on every interpreter instr (only if\n                       enabled in MoarVM)\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  RAKULIB     Modify the module search path\n  PERL6LIB    Modify the module search path # to be deprecated\n  RAKUDO_HOME Override the path of the Rakudo runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
 # expected err: ""
 #      got out: ""
-#      got err: "Grouped options '-/hv' contain '/', which is not a valid option\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n  --profile[=name]     write profile information to a file\n                       Extension controls format:\n                           .json outputs in JSON\n                           .sql  outputs in SQL\n                           any other extension outputs in HTML\n  --profile-compile[=name]\n                       write compile-time profile information to a file\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n  --profile-kind[=name]\n                       choose the type of profile to generate\n                         instrumented - performance measurements (default)\n                         heap - record heap snapshots after every garbage\n                         collector run\n  --profile-filename=name\n                       provide a different filename for profile.\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n                       This option will go away in a future Rakudo release\n  --profile-stage=stage\n                       write profile information for the given compilation\n                       stage to a file. Use --profile-compile to set name\n                       and format\n  --full-cleanup       try to free all memory and exit cleanly\n  --debug-port=port    listen for incoming debugger connections\n  --debug-suspend      pause execution at the entry point\n  --tracing            output a line to stderr on every interpreter instr (only if\n                       enabled in MoarVM)\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  RAKULIB     Modify the module search path\n  PERL6LIB    Modify the module search path # to be deprecated\n  RAKUDO_HOME Override the path of the Rakudo runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
+#      got err: "Grouped options '-/hv' contain '/', which is not a valid option\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -                    read program source from STDIN or start REPL if a TTY\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n  --profile[=name]     write profile information to a file\n                       Extension controls format:\n                           .json outputs in JSON\n                           .sql  outputs in SQL\n                           any other extension outputs in HTML\n  --profile-compile[=name]\n                       write compile-time profile information to a file\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n  --profile-kind[=name]\n                       choose the type of profile to generate\n                         instrumented - performance measurements (default)\n                         heap - record heap snapshots after every garbage\n                         collector run\n  --profile-filename=name\n                       provide a different filename for profile.\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n                       This option will go away in a future Rakudo release\n  --profile-stage=stage\n                       write profile information for the given compilation\n                       stage to a file. Use --profile-compile to set name\n                       and format\n  --full-cleanup       try to free all memory and exit cleanly\n  --debug-port=port    listen for incoming debugger connections\n  --debug-suspend      pause execution at the entry point\n  --tracing            output a line to stderr on every interpreter instr (only if\n                       enabled in MoarVM)\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  RAKULIB     Modify the module search path\n  PERL6LIB    Modify the module search path # to be deprecated\n  RAKUDO_HOME Override the path of the Rakudo runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
 # expected err: ""
 #      got out: ""
-#      got err: "Illegal option --/target\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n  --profile[=name]     write profile information to a file\n                       Extension controls format:\n                           .json outputs in JSON\n                           .sql  outputs in SQL\n                           any other extension outputs in HTML\n  --profile-compile[=name]\n                       write compile-time profile information to a file\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n  --profile-kind[=name]\n                       choose the type of profile to generate\n                         instrumented - performance measurements (default)\n                         heap - record heap snapshots after every garbage\n                         collector run\n  --profile-filename=name\n                       provide a different filename for profile.\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n                       This option will go away in a future Rakudo release\n  --profile-stage=stage\n                       write profile information for the given compilation\n                       stage to a file. Use --profile-compile to set name\n                       and format\n  --full-cleanup       try to free all memory and exit cleanly\n  --debug-port=port    listen for incoming debugger connections\n  --debug-suspend      pause execution at the entry point\n  --tracing            output a line to stderr on every interpreter instr (only if\n                       enabled in MoarVM)\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  RAKULIB     Modify the module search path\n  PERL6LIB    Modify the module search path # to be deprecated\n  RAKUDO_HOME Override the path of the Rakudo runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
+#      got err: "Illegal option --/target\n [switches] [--] [programfile] [arguments]\n\nWith no arguments, enters a REPL (see --repl-mode option).\nWith a \"[programfile]\" or the \"-e\" option, compiles the given program\nand, by default, also executes the compiled code.\n\n  -                    read program source from STDIN or start REPL if a TTY\n  -c                   check syntax only (runs BEGIN and CHECK blocks)\n  --doc                extract documentation and print it as text\n  -e program           one line of program, strict is enabled by default\n  -h, --help           display this help text\n  -n                   run program once for each line of input\n  -p                   same as -n, but also print \$_ at the end of lines\n  -I path              adds the path to the module search path\n  -M module            loads the module prior to running the program\n  --target=stage       specify compilation stage to emit\n  --optimize=level     use the given level of optimization (0..3)\n  -o, --output=name    specify name of output file\n  -v, --version        display version information\n  -V                   print configuration summary\n  --stagestats         display time spent in the compilation stages\n  --ll-exception       display a low level backtrace on errors\n  --doc=module         use Pod::To::[module] to render inline documentation\n  --repl-mode=interactive|non-interactive\n                       when running without \"-e\" or filename arguments,\n                       a REPL is started. By default, if STDIN is a TTY,\n                       \"interactive\" REPL is started that shows extra messages and\n                       prompts, otherwise a \"non-interactive\" mode is used where\n                       STDIN is read entirely and evaluated as if it were a program,\n                       without any extra output (in fact, no REPL machinery is even\n                       loaded). This option allows to bypass TTY detection and\n                       force one of the REPL modes.\n  --profile[=name]     write profile information to a file\n                       Extension controls format:\n                           .json outputs in JSON\n                           .sql  outputs in SQL\n                           any other extension outputs in HTML\n  --profile-compile[=name]\n                       write compile-time profile information to a file\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n  --profile-kind[=name]\n                       choose the type of profile to generate\n                         instrumented - performance measurements (default)\n                         heap - record heap snapshots after every garbage\n                         collector run\n  --profile-filename=name\n                       provide a different filename for profile.\n                       Extension controls format:\n                         .json outputs in JSON\n                         .sql  outputs in SQL\n                         any other extension outputs in HTML\n                       This option will go away in a future Rakudo release\n  --profile-stage=stage\n                       write profile information for the given compilation\n                       stage to a file. Use --profile-compile to set name\n                       and format\n  --full-cleanup       try to free all memory and exit cleanly\n  --debug-port=port    listen for incoming debugger connections\n  --debug-suspend      pause execution at the entry point\n  --tracing            output a line to stderr on every interpreter instr (only if\n                       enabled in MoarVM)\n\nNote that only boolean single-letter options may be bundled.\n\nThe following environment variables are respected:\n\n  RAKULIB     Modify the module search path\n  PERL6LIB    Modify the module search path # to be deprecated\n  RAKUDO_HOME Override the path of the Rakudo runtime files\n  NQP_HOME    Override the path of the NQP runtime files\n\n\n"
 # expected err: ""
    0    0    3    0    3
      3 todo   : 
@@ -2986,10 +3096,10 @@ S24-testing/3-output.t.............................   6    0    0    0    6
 S24-testing/7-bail_out.t...........................   4    0    0    0    4
 S24-testing/8-die_on_fail.t........................   6    0    0    0    6
 S24-testing/9-is_deeply.t..........................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S24-testing/9-is_deeply.t:
+Useless use of ":err{ $^s.contains: 'none' }" in sink context (line 33)
 Useless use of ":out{ $^s.contains: 'not ok' }" in sink context (line 34)
 Useless use of ":out{ not $^s.contains: 'Seq.new()' }" in sink context (lines 14, 19, 24)
 Useless use of ":err{ not $^s.contains: 'Seq.new()' }" in sink context (lines 13, 18, 23)
-Useless use of ":err{ $^s.contains: 'none' }" in sink context (line 33)
    3    0    0    0    3
 S24-testing/fails-like.t...........................   2    0    0    0    2
 S24-testing/line-numbers.t.........................  13    0    0    0   13
@@ -3742,7 +3852,11 @@ Cannot pop from an empty Array
      1 todo   : RT #111720
 S32-array/push.t...................................  56    0    0    0   56
 S32-array/rotate.t.................................  29    0    0    0   29
-S32-array/shift.t..................................  33    0    0    0   33
+S32-array/shift.t..................................WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Cannot shift from an empty Array
+  in block <unit> at t/spec/S32-array/shift.t line 60
+
+  33    0    0    0   33
 S32-array/splice.rakudo.moar.......................Use of uninitialized value element of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 644
@@ -3798,8 +3912,8 @@ S32-encoding/decoder.t.............................   2    0    0    0    2
 S32-encoding/encoder.t.............................   4    0    0    0    4
 S32-encoding/registry.t............................  40    0    0    0   40
 S32-exceptions/misc.rakudo.moar....................# Variable '$abd' is not declared. Did you mean any of these?
-#     $abe
 #     $abc
+#     $abe
 # 
 WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
 bar
@@ -4241,70 +4355,70 @@ Methods .^name, .raku, .gist, or .say can be used to stringify it to something m
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
 Use of uninitialized value %i{'B'} of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value %i{'B'} of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value element of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value element of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value element of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value element of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value %i{'B'} of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value %i{'B'} of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value %i{'B'} of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value %i{'B'} of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value %i{'B'} of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value element of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value element of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value element of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value element of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value %i{'B'} of type Int in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
@@ -5476,9 +5590,9 @@ S32-io/IO-Socket-Async-UDP.t.......................   3    0    0    0    3
 S32-io/IO-Socket-Async.t...........................# host=127.0.0.1
 # host=::1
 # 0.0.0.0
-# 37527
+# 12388
 # 0.0.0.0
-# 20954
+# 17391
   40    0    0    0   40
 S32-io/IO-Socket-INET-UNIX.t.......................   8    0    0    0    8
 S32-io/IO-Socket-INET.t............................  28    0    0    0   28
@@ -5546,7 +5660,7 @@ Useless use of constant string ".IO.rename missing file" in sink context (line 6
   29    0    0    0   29
 S32-io/seek.t......................................   4    0    0    0    4
 S32-io/signals.t...................................   1    0    0    0    1
-S32-io/slurp.t.....................................  19    0    0    0   19
+S32-io/slurp.t.....................................  21    0    0    0   21
 S32-io/socket-accept-and-working-threads.t.........  15    0    0    0   15
 S32-io/socket-fail-invalid-values.t................   4    0    0    0    4
 S32-io/socket-host-port-split.rakudo.moar..........   1    0    0    1    2
@@ -5844,7 +5958,7 @@ S32-str/gb18030-encode-decode.t....................   5    0    0    0    5
 S32-str/gb2312-encode-decode.t.....................   5    0    0    0    5
 S32-str/indent.rakudo.moar.........................Asked to remove 4 spaces, but the shortest indent is 3 spaces
   in block <unit> at t/spec/S32-str/indent.rakudo.moar line 62
-    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-74592-758964.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
+    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-8360-200211.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
     # expected err: ""
   63    0    0    0   63
 S32-str/index.t.................................... 356    0    0    0  356
@@ -5891,8 +6005,8 @@ S32-str/windows-1251-windows-1252-encode-decode.t..   4    0    0    0    4
 S32-str/words.t....................................  17    0    0    0   17
 S32-temporal/Date.t................................ 136    0    0    0  136
 S32-temporal/DateTime-Instant-Duration.t...........WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S32-temporal/DateTime-Instant-Duration.t:
-Useless use of "+" in expression "days(1) + 1" in sink context (line 66)
 Useless use of constant string "Instant subtraction (June 30 leap second)" in sink context (lines 66, 66)
+Useless use of "+" in expression "days(1) + 1" in sink context (line 66)
   64    0    0    0   64
 S32-temporal/DateTime.t............................ 309    0    0    0  309
 S32-temporal/calendar.t............................ 130    0    0    0  130
@@ -5997,14 +6111,14 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# gerdr: 0.38241748 seconds
-# hand-memoization: 0.38544757 seconds
-# kaz: 0.3857398 seconds
-# recursive-ternary: 0.3920828 seconds
-# loop: 0.39690633 seconds
-# sequence-ternary: 0.6689197 seconds
-# recursive-ternary-hand-cached: 0.68795324 seconds
-# sequence: 1.0280307 seconds
+integration/advent2012-day21.t.....................# kaz: 0.37075 seconds
+# gerdr: 0.3780127 seconds
+# hand-memoization: 0.38560471 seconds
+# recursive-ternary: 0.3914326 seconds
+# loop: 0.39713001 seconds
+# sequence-ternary: 0.6686987 seconds
+# recursive-ternary-hand-cached: 0.6893027 seconds
+# sequence: 1.0481707 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -6045,11 +6159,11 @@ integration/no-indirect-new.t......................   2    0    0    0    2
 integration/packages.t.............................   3    0    0    0    3
 integration/pair-in-array.t........................   3    0    0    0    3
 integration/passing-pair-class-to-sub.t............   2    0    0    0    2
-integration/precompiled.t..........................WARNINGS for /tmp/p6testmod17919177/p6testmodCC50E220.pm6 (p6testmodCC50E220):
+integration/precompiled.t..........................WARNINGS for /tmp/p6testmod7DDDC30C/p6testmod2B22437E.pm6 (p6testmod2B22437E):
 Useless use of constant integer 42 in sink context (line 1)
 WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/integration/precompiled.t:
 Useless use of constant integer 42 in sink context (line 1)
-WARNINGS for /tmp/p6testmod17919177/p6testmodA68C6D41.pm6 (p6testmodA68C6D41):
+WARNINGS for /tmp/p6testmod7DDDC30C/p6testmod60084EF3.pm6 (p6testmod60084EF3):
 Useless use of constant integer 42 in sink context (line 1)
 WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/integration/precompiled.t:
 Useless use of constant integer 42 in sink context (line 1)
@@ -6088,7 +6202,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S13",          68,     0,     0,     0,    68,    78
 "S14",         422,     0,     3,     5,   430,   447
 "S15",       85738,     0,    37,    38, 85813, 83815
-"S16",         747,     0,     0,    17,   764,   801
+"S16",         746,     1,     0,    17,   764,   801
 "S17",        1533,     0,     1,    28,  1562,  1575
 "S19",          18,     0,     7,     0,    25,    25
 "S22",          19,     0,     0,     0,    19,    19
@@ -6096,12 +6210,13 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S26",        1587,     0,     4,    48,  1639,  1672
 "S28",           9,     0,     0,     0,     9,     9
 "S29",         445,     0,     2,     1,   448,   448
-"S32",       44358,     0,    84,    82, 44524, 41302
+"S32",       44360,     0,    84,    82, 44526, 41304
 "int",        1366,     0,     4,    15,  1385,  1371
 "ros",           2,     0,     0,     0,     2,     2
-"total",    187119,     1,   467,  1196,188783,184130
+"total",    187120,     2,   467,  1196,188785,184132
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have APP
 note: test_summary.pl @syn does not have MIS
+S16-io/eof.t 3 - .eof on TTY STDIN works right
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
