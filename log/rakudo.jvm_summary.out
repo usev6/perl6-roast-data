@@ -35,27 +35,27 @@ MISC/bug-coverage-6.d.t............................   1    0    0    0    1
 MISC/bug-coverage-stress-6.d.rakudo.jvm............Exception in thread "Thread-34" org.raku.nqp.runtime.UnwindException
 	at org.raku.nqp.runtime.ThreadContext.<init>(ThreadContext.java:127)
 	at org.raku.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:348)
-	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5535)
+	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5539)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Exception in thread "Thread-37" org.raku.nqp.runtime.UnwindException
 	at org.raku.nqp.runtime.ThreadContext.<init>(ThreadContext.java:127)
 	at org.raku.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:348)
-	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5535)
+	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5539)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Exception in thread "Thread-38" org.raku.nqp.runtime.UnwindException
 	at org.raku.nqp.runtime.ThreadContext.<init>(ThreadContext.java:127)
 	at org.raku.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:348)
-	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5535)
+	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5539)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Exception in thread "Thread-39" org.raku.nqp.runtime.UnwindException
 	at org.raku.nqp.runtime.ThreadContext.<init>(ThreadContext.java:127)
 	at org.raku.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:348)
-	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5535)
+	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5539)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Exception in thread "Thread-40" org.raku.nqp.runtime.UnwindException
 	at org.raku.nqp.runtime.ThreadContext.<init>(ThreadContext.java:127)
 	at org.raku.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:348)
-	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5535)
+	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5539)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 # 
 #     NOTE IF THIS TEST FLOPS. LIKELY THE BUG STILL EXISTS.
@@ -63,12 +63,21 @@ Exception in thread "Thread-40" org.raku.nqp.runtime.UnwindException
 # 
    0    0    1    0    1
      1 todo   : UnwindException in thread "Thread-xx"
-MISC/bug-coverage-stress.rakudo.jvm................#      got status: 1
+MISC/bug-coverage-stress.rakudo.jvm................    # Failed test 'STDOUT'
+    # at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 295
+    # expected: "pass"
+    #  matcher: 'infix:<~~>'
+    #      got: ""
+    # You failed 1 test of 2
+# Failed test 'no deadlock while acquiring mutex'
+# at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/Test-Helpers/lib/Test/Util.pm6 (Test::Util) line 288
+#      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-36639-865432.code\n===SORRY!===\njava.lang.BootstrapMethodError: java.lang.IllegalArgumentException: bad parameter count 850\n\nat /tmp/getout-36639-865432.code:1\n"
+#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-91092-328545.code\n===SORRY!===\njava.lang.BootstrapMethodError: java.lang.IllegalArgumentException: bad parameter count 850\n\nat /tmp/getout-91092-328545.code:1\n"
 # expected err: ""
-   7    0    1    6   14
+# You failed 1 test of 14
+   6    1    1    6   14
      3 skipped: The spawned command './rakudo-j' exited unsuccessfully (exit code: 1)
      2 skipped: atomicint NYI
      1 skipped: hangs
@@ -76,7 +85,7 @@ MISC/bug-coverage-stress.rakudo.jvm................#      got status: 1
 MISC/bug-coverage.rakudo.jvm.......................#      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "Died\n  in block <unit> at /tmp/getout-36686-130789.code line 5\n\n"
+#      got err: "Died\n  in block <unit> at /tmp/getout-91137-446728.code line 5\n\n"
 # expected err: ""
   15    0    1    1   17
      1 skipped: UnwindException in thread "main"
@@ -977,88 +986,88 @@ S03-operators/eqv.rakudo.jvm.......................Potential difficulties:
     at /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/S03-operators/eqv.rakudo.jvm:104
     ------> [32m  todo('huh?'); ok !(\3 eqv \[33m⏏[31m3),         "eqv on anonymous scalar ref[0m
 Exception in thread "Thread-22" org.raku.nqp.runtime.SaveStackException
-	at org.raku.nqp.runtime.Ops.continuationcontrol(Ops.java:7228)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12885(gen/jvm/CORE.c.setting:59956)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12886(gen/jvm/CORE.c.setting:59948)
+	at org.raku.nqp.runtime.Ops.continuationcontrol(Ops.java:7232)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12882(gen/jvm/CORE.c.setting:59966)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12883(gen/jvm/CORE.c.setting:59958)
 	at org.raku.nqp.runtime.ArgsExpectation.invokeByExpectation(ArgsExpectation.java:21)
 	at org.raku.nqp.runtime.IndyBootstrap.indcallInvoker_noa(IndyBootstrap.java:355)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12881(gen/jvm/CORE.c.setting:59940)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12878(gen/jvm/CORE.c.setting:59950)
 	at org.raku.nqp.runtime.ArgsExpectation.invokeByExpectation(ArgsExpectation.java:21)
 	at org.raku.nqp.runtime.IndyBootstrap.methcallCacheMono_noa(IndyBootstrap.java:485)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_4774(gen/jvm/CORE.c.setting:26543)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_4774(gen/jvm/CORE.c.setting:26543)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resume(ResumeStatus.java:53)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNext(ResumeStatus.java:59)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNextSave(ResumeStatus.java:69)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_13142(gen/jvm/CORE.c.setting:61375)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_13139(gen/jvm/CORE.c.setting:61385)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resume(ResumeStatus.java:53)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNext(ResumeStatus.java:59)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNextSave(ResumeStatus.java:69)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_13011(gen/jvm/CORE.c.setting:60793)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_13008(gen/jvm/CORE.c.setting:60803)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resume(ResumeStatus.java:53)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNext(ResumeStatus.java:59)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNextSave(ResumeStatus.java:69)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12915(gen/jvm/CORE.c.setting:60142)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12912(gen/jvm/CORE.c.setting:60152)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resume(ResumeStatus.java:53)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNext(ResumeStatus.java:59)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNextSave(ResumeStatus.java:69)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12920(gen/jvm/CORE.c.setting:60150)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12917(gen/jvm/CORE.c.setting:60160)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resume(ResumeStatus.java:53)
-	at org.raku.nqp.runtime.Ops.continuationinvoke(Ops.java:7236)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12913(gen/jvm/CORE.c.setting:60133)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12922(gen/jvm/CORE.c.setting:60132)
+	at org.raku.nqp.runtime.Ops.continuationinvoke(Ops.java:7240)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12910(gen/jvm/CORE.c.setting:60143)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12919(gen/jvm/CORE.c.setting:60142)
 	at org.raku.nqp.runtime.ArgsExpectation.invokeByExpectation(ArgsExpectation.java:21)
 	at org.raku.nqp.runtime.IndyBootstrap.indcallInvoker_noa(IndyBootstrap.java:355)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12927(gen/jvm/CORE.c.setting:60175)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12924(gen/jvm/CORE.c.setting:60185)
 	at org.raku.nqp.runtime.ArgsExpectation.invokeByExpectation(ArgsExpectation.java:21)
 	at org.raku.nqp.runtime.IndyBootstrap.subInvoker(IndyBootstrap.java:164)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12724(gen/jvm/CORE.c.setting:59293)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12721(gen/jvm/CORE.c.setting:59303)
 	at org.raku.nqp.runtime.ArgsExpectation.invokeByExpectation(ArgsExpectation.java:21)
-	at org.raku.nqp.runtime.Ops.invokeDirect(Ops.java:2179)
-	at org.raku.nqp.runtime.Ops.invokeDirect(Ops.java:2157)
-	at org.raku.nqp.runtime.Ops.invokeArgless(Ops.java:2139)
-	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5537)
+	at org.raku.nqp.runtime.Ops.invokeDirect(Ops.java:2182)
+	at org.raku.nqp.runtime.Ops.invokeDirect(Ops.java:2160)
+	at org.raku.nqp.runtime.Ops.invokeArgless(Ops.java:2142)
+	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5541)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Exception in thread "Thread-23" org.raku.nqp.runtime.SaveStackException
-	at org.raku.nqp.runtime.Ops.continuationcontrol(Ops.java:7228)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12885(gen/jvm/CORE.c.setting:59956)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12886(gen/jvm/CORE.c.setting:59948)
+	at org.raku.nqp.runtime.Ops.continuationcontrol(Ops.java:7232)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12882(gen/jvm/CORE.c.setting:59966)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12883(gen/jvm/CORE.c.setting:59958)
 	at org.raku.nqp.runtime.ArgsExpectation.invokeByExpectation(ArgsExpectation.java:21)
 	at org.raku.nqp.runtime.IndyBootstrap.indcallInvoker_noa(IndyBootstrap.java:355)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12881(gen/jvm/CORE.c.setting:59940)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12878(gen/jvm/CORE.c.setting:59950)
 	at org.raku.nqp.runtime.ArgsExpectation.invokeByExpectation(ArgsExpectation.java:21)
 	at org.raku.nqp.runtime.IndyBootstrap.methcallCacheMono_noa(IndyBootstrap.java:485)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_4774(gen/jvm/CORE.c.setting:26543)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_4774(gen/jvm/CORE.c.setting:26543)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resume(ResumeStatus.java:53)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNext(ResumeStatus.java:59)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNextSave(ResumeStatus.java:69)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_13142(gen/jvm/CORE.c.setting:61375)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_13139(gen/jvm/CORE.c.setting:61385)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resume(ResumeStatus.java:53)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNext(ResumeStatus.java:59)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNextSave(ResumeStatus.java:69)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_13011(gen/jvm/CORE.c.setting:60793)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_13008(gen/jvm/CORE.c.setting:60803)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resume(ResumeStatus.java:53)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNext(ResumeStatus.java:59)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNextSave(ResumeStatus.java:69)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12915(gen/jvm/CORE.c.setting:60142)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12912(gen/jvm/CORE.c.setting:60152)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resume(ResumeStatus.java:53)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNext(ResumeStatus.java:59)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resumeNextSave(ResumeStatus.java:69)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12920(gen/jvm/CORE.c.setting:60150)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12917(gen/jvm/CORE.c.setting:60160)
 	at org.raku.nqp.runtime.ResumeStatus$Frame.resume(ResumeStatus.java:53)
-	at org.raku.nqp.runtime.Ops.continuationinvoke(Ops.java:7236)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12913(gen/jvm/CORE.c.setting:60133)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12922(gen/jvm/CORE.c.setting:60132)
+	at org.raku.nqp.runtime.Ops.continuationinvoke(Ops.java:7240)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12910(gen/jvm/CORE.c.setting:60143)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12919(gen/jvm/CORE.c.setting:60142)
 	at org.raku.nqp.runtime.ArgsExpectation.invokeByExpectation(ArgsExpectation.java:21)
 	at org.raku.nqp.runtime.IndyBootstrap.indcallInvoker_noa(IndyBootstrap.java:355)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12927(gen/jvm/CORE.c.setting:60175)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12924(gen/jvm/CORE.c.setting:60185)
 	at org.raku.nqp.runtime.ArgsExpectation.invokeByExpectation(ArgsExpectation.java:21)
 	at org.raku.nqp.runtime.IndyBootstrap.subInvoker(IndyBootstrap.java:164)
-	at 36C842795953871C16C28BD65A370DAC385B356D.qb_12724(gen/jvm/CORE.c.setting:59293)
+	at D4B3FB3409B4A5A39C64065B89E14B77F9FE7AF6.qb_12721(gen/jvm/CORE.c.setting:59303)
 	at org.raku.nqp.runtime.ArgsExpectation.invokeByExpectation(ArgsExpectation.java:21)
-	at org.raku.nqp.runtime.Ops.invokeDirect(Ops.java:2179)
-	at org.raku.nqp.runtime.Ops.invokeDirect(Ops.java:2157)
-	at org.raku.nqp.runtime.Ops.invokeArgless(Ops.java:2139)
-	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5537)
+	at org.raku.nqp.runtime.Ops.invokeDirect(Ops.java:2182)
+	at org.raku.nqp.runtime.Ops.invokeDirect(Ops.java:2160)
+	at org.raku.nqp.runtime.Ops.invokeArgless(Ops.java:2142)
+	at org.raku.nqp.runtime.Ops$CodeRunnable.run(Ops.java:5541)
 	at java.base/java.lang.Thread.run(Thread.java:834)
   55    0    3    1   59
      1 skipped: huh?
@@ -2468,12 +2477,12 @@ S10-packages/precompilation.rakudo.jvm.............#      got out: "False"
 #      got status: 1
 #      got out: ""
 # expected out: "pass\n"
-#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-40811-212642.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-40811-212642.code:1\n"
+#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-95257-188188.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-95257-188188.code:1\n"
 # expected err: ""
 #      got status: 1
 #      got out: ""
 # expected out: "pass\n"
-#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-40811-829852.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-40811-829852.code:1\n"
+#      got err: "\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /tmp/getout-95257-906350.code\n\x[1B][31m===\x[1B][0mSORRY!\x[1B][31m===\x[1B][0m Error while compiling /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict)\nInvalid typename 'RT112626::Class1' in parameter declaration.\nat /usr/home/christian/perl6/perl6-roast-data/rakudo.jvm/t/spec/packages/RT112626/lib/RT112626/Conflict.pm6 (RT112626::Conflict):5\n------> \x[1B][32msub f(RT112626::Class1\x[1B][33m⏏\x[1B][31m \$x)  \{}\x[1B][0m\n\nat /tmp/getout-95257-906350.code:1\n"
 # expected err: ""
   47    0    5    0   52
      2 todo   : Invalid typename 'RT112626::Class1' in parameter declaration
@@ -2517,7 +2526,7 @@ S11-modules/require.rakudo.jvm.....................  52    0    3    3   58
      1 todo PASSED: only test for Cool::Cat passes in this loop
 S11-modules/runtime.t..............................   1    0    0    0    1
 S11-modules/versioning.t...........................   9    0    0    0    9
-S11-repository/cur-candidates.t....................Failed to get the directory contents of '/tmp/perl6_roast_cur_candidates_t_line_1_0_60976654060038571600901392/my-repo/dist': nqp::opendir: unable to get a DirectoryStream
+S11-repository/cur-candidates.t....................Failed to get the directory contents of '/tmp/perl6_roast_cur_candidates_t_line_1_0_64628618532600561601072923/my-repo/dist': nqp::opendir: unable to get a DirectoryStream
   in block  at t/spec/S11-repository/cur-candidates.t line 185
   in block  at t/spec/S11-repository/cur-candidates.t line 152
   in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.jvm/lib/Test.rakumod (Test) line 430
@@ -2776,13 +2785,13 @@ S15-unicode-information/uniname.rakudo.jvm.........  27    0    2   19   48
      1 todo   : HANGUL SYLLABLES D4DB
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1600903131
-# Using file temp_1600903131
-# Using file temp_1600903131
+S16-filehandles/chmod.t............................# Using file temp_1601074613
+# Using file temp_1601074614
+# Using file temp_1601074614
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-43225-1.temp
-# Using file temp-16-filehandles-filestat-43225-2.temp
+S16-filehandles/filestat.rakudo.jvm................# Using file temp-16-filehandles-filestat-97662-1.temp
+# Using file temp-16-filehandles-filestat-97662-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.jvm................ 119    0    0    9  128
@@ -2794,7 +2803,7 @@ S16-filehandles/io.rakudo.jvm...................... 112    0    2    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-340588
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-171406
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2866,7 +2875,7 @@ S17-procasync/stress.rakudo.jvm....................    #
 #      got status: 1
 #      got out: ""
 # expected out: "pass"
-#      got err: "A react block:\n  in block <unit> at /tmp/getout-45819-68203.code line 2\n\nDied because of the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-45819-68203.code line 8\n\n"
+#      got err: "A react block:\n  in block <unit> at /tmp/getout-356-261839.code line 2\n\nDied because of the exception:\n    Unknown encoding 'utf8-c8'\n      in block  at /tmp/getout-356-261839.code line 8\n\n"
 # expected err: ""
   21    0    2    1   24
      1 skipped: hangs / SIGTERM not supported
@@ -2877,11 +2886,11 @@ S17-promise/anyof.t................................  10    0    0    0   10
 S17-promise/at.t...................................   4    0    0    0    4
 S17-promise/basic.rakudo.jvm.......................#      got out: "start\nstart\nstart\nstart\nstart\nend\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\n"
 # expected out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\nend\n"
-#      got out: "start\nstart\nstart\nstart\nstart\nend\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\n"
-# expected out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\nend\n"
-#      got out: "start\nstart\nstart\nstart\nstart\nend\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\n"
-# expected out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\nend\n"
 #      got out: "start\nstart\nstart\nstart\nstart\nstart\nend\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\n"
+# expected out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\nend\n"
+#      got out: "start\nstart\nstart\nstart\nstart\nend\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\n"
+# expected out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\nend\n"
+#      got out: "start\nstart\nstart\nstart\nstart\nend\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\n"
 # expected out: "start\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nstart\nend\nend\nend\nend\nend\nend\nend\nend\nend\n"
   37    0    4    0   41
      4 todo   : fails most of the time
@@ -2985,8 +2994,8 @@ S17-supply/interval.t..............................   9    0    0    0    9
 S17-supply/lines.rakudo.jvm........................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0   14    0   23
-    13 todo   : \r\n not yet handled as grapheme
-     1 todo PASSED: \r\n not yet handled as grapheme
+    12 todo   : \r\n not yet handled as grapheme
+     2 todo PASSED: \r\n not yet handled as grapheme
 S17-supply/list.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
    9    0    0    0    9
@@ -3062,8 +3071,8 @@ S17-supply/syntax.rakudo.jvm.......................  70    0    2   18   90
      6 skipped: done without supply or react
      1 skipped: hangs since rakudo commit 1a4df4e100
      2 skipped: hangs with SaveStackException in Thread-xx
+     1 todo   : fails sometimes
      1 todo   : got: '42'
-     1 todo PASSED: fails sometimes
 S17-supply/tail.t..................................# **** scheduling with ThreadPoolScheduler
 # **** scheduling with CurrentThreadScheduler
   15    0    0    0   15
@@ -3244,15 +3253,15 @@ at -e:1
 ------> [32muse NativeCall[33m⏏[31m; sub strdup(int64) is native(Str) {*}; [0m
 Unhandled exception: Wrong number of arguments passed; expected 1..1, but got 32 (1 of those positional)
   in dispatch:<::> (gen/jvm/CORE.c.setting:2050)
-  in clone (gen/jvm/CORE.c.setting:46026)
-  in <anon> (gen/jvm/CORE.c.setting:41851)
-  in EXCEPTION (gen/jvm/CORE.c.setting:41845)
+  in clone (gen/jvm/CORE.c.setting:46036)
+  in <anon> (gen/jvm/CORE.c.setting:41861)
+  in EXCEPTION (gen/jvm/CORE.c.setting:41855)
   in <anon> (gen/jvm/CORE.c.setting)
   in <anon> (gen/jvm/CORE.c.setting)
   in dispatch:<::> (gen/jvm/CORE.c.setting:2050)
-  in clone (gen/jvm/CORE.c.setting:46026)
-  in <anon> (gen/jvm/CORE.c.setting:41851)
-  in EXCEPTION (gen/jvm/CORE.c.setting:41845)
+  in clone (gen/jvm/CORE.c.setting:46036)
+  in <anon> (gen/jvm/CORE.c.setting:41861)
+  in EXCEPTION (gen/jvm/CORE.c.setting:41855)
   in <anon> (gen/jvm/CORE.c.setting:5210)
   in <anon> (gen/jvm/CORE.c.setting)
   in <anon> (gen/jvm/CORE.c.setting:2124)
@@ -3261,27 +3270,27 @@ Unhandled exception: Wrong number of arguments passed; expected 1..1, but got 32
   in push-all (gen/jvm/CORE.c.setting:3346)
   in coremap (gen/jvm/CORE.c.setting:5091)
   in coremap (gen/jvm/CORE.c.setting:5009)
-  in deepmap (gen/jvm/CORE.c.setting:58643)
-  in deepmap (gen/jvm/CORE.c.setting:58642)
-  in infix (gen/jvm/CORE.c.setting:57896)
-  in infix (gen/jvm/CORE.c.setting:57675)
-  in HYPER (gen/jvm/CORE.c.setting:58638)
+  in deepmap (gen/jvm/CORE.c.setting:58653)
+  in deepmap (gen/jvm/CORE.c.setting:58652)
+  in infix (gen/jvm/CORE.c.setting:57906)
+  in infix (gen/jvm/CORE.c.setting:57685)
+  in HYPER (gen/jvm/CORE.c.setting:58648)
   in dispatch:<hyper> (gen/jvm/CORE.c.setting:2125)
-  in report (gen/jvm/CORE.c.setting:58911)
-  in report (gen/jvm/CORE.c.setting:58905)
-  in <anon> (gen/jvm/CORE.c.setting:59007)
-  in <anon> (gen/jvm/CORE.c.setting:59006)
+  in report (gen/jvm/CORE.c.setting:58921)
+  in report (gen/jvm/CORE.c.setting:58915)
+  in <anon> (gen/jvm/CORE.c.setting:59017)
+  in <anon> (gen/jvm/CORE.c.setting:59016)
   in <anon> (gen/jvm/CORE.c.setting:5207)
   in <anon> (gen/jvm/CORE.c.setting:5206)
   in <anon> (gen/jvm/CORE.c.setting:5205)
   in <anon> (gen/jvm/CORE.c.setting:5202)
-  in protect (gen/jvm/CORE.c.setting:59430)
-  in protect (gen/jvm/CORE.c.setting:59426)
+  in protect (gen/jvm/CORE.c.setting:59440)
+  in protect (gen/jvm/CORE.c.setting:59436)
   in <anon> (gen/jvm/CORE.c.setting:5201)
   in <anon> (gen/jvm/CORE.c.setting:5200)
-  in <anon> (gen/jvm/CORE.c.setting:41964)
-  in print_exception (gen/jvm/CORE.c.setting:41945)
-  in <anon> (gen/jvm/CORE.c.setting:42025)
+  in <anon> (gen/jvm/CORE.c.setting:41974)
+  in print_exception (gen/jvm/CORE.c.setting:41955)
+  in <anon> (gen/jvm/CORE.c.setting:42035)
   in command_eval (gen/jvm/stage2/NQPHLL.nqp:1386)
   in command_eval (gen/jvm/Compiler.nqp:74)
   in command_line (gen/jvm/stage2/NQPHLL.nqp:1308)
@@ -5661,9 +5670,9 @@ S32-hash/slice.rakudo.jvm..........................  21    0   10    0   31
 S32-io/IO-Socket-Async.rakudo.jvm..................# host=127.0.0.1
 # host=::1
 # 0:0:0:0:0:0:0:0
-# 49921
+# 23826
 # 0:0:0:0:0:0:0:0
-# 15376
+# 46855
   35    0    3    2   40
      1 skipped: hangs (sometimes)
      1 skipped: seems to crash the server (sometimes): IllegalStateException: Current state = CODING_END, new state = CODING
@@ -6038,7 +6047,7 @@ S32-str/flip.rakudo.jvm............................  11    0    2    0   13
      2 todo   : NFG on JVM RT #124682
 S32-str/indent.rakudo.jvm..........................Asked to remove 4 spaces, but the shortest indent is 3 spaces
   in block <unit> at t/spec/S32-str/indent.rakudo.jvm line 62
-    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-50998-475641.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
+    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-5138-606933.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
     # expected err: ""
   63    0    0    0   63
 S32-str/index.t.................................... 248    0    0    0  248
@@ -6209,14 +6218,14 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# loop: 7.339 seconds
-# hand-memoization: 7.6680011 seconds
-# kaz: 7.727 seconds
-# recursive-ternary: 7.763 seconds
-# gerdr: 8.803 seconds
-# sequence-ternary: 13.883 seconds
-# sequence: 22.763 seconds
-# recursive-ternary-hand-cached: 25.275 seconds
+integration/advent2012-day21.t.....................# hand-memoization: 7.488999 seconds
+# gerdr: 7.49 seconds
+# loop: 7.519 seconds
+# recursive-ternary: 7.549 seconds
+# kaz: 7.589 seconds
+# sequence-ternary: 12.949 seconds
+# sequence: 23.092 seconds
+# recursive-ternary-hand-cached: 24.133 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -6246,7 +6255,7 @@ integration/advent2014-day16.t.....................  21    0    0    0   21
 integration/code-blocks-as-sub-args.t..............   4    0    0    0    4
 integration/diamond.t..............................   2    0    0    0    2
 integration/error-reporting.rakudo.jvm.............# Error message: Constraint type check failed in binding to parameter '$x'; expected Even but got Int (3)
-#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-51986-729097.code line 1\n"
+#      got err: "Use of uninitialized value of type Any in numeric context\n  in sub mysub at /tmp/getout-6493-730854.code line 1\n"
 #      got err: "Exception in thread \"main\" org.raku.nqp.runtime.UnwindException\n\tat org.raku.nqp.runtime.ThreadContext.<init>(ThreadContext.java:127)\n\tat org.raku.nqp.runtime.GlobalContext.getCurrentThreadContext(GlobalContext.java:348)\n\tat org.raku.nqp.runtime.GlobalContext.<init>(GlobalContext.java:253)\n\tat org.raku.nqp.runtime.CompilationUnit.enterFromMain(CompilationUnit.java:56)\n\tat perl6.main(gen/jvm/rakudo.nqp)\n"
   31    0    2    0   33
      1 todo   : UnwindException
@@ -6262,7 +6271,8 @@ integration/gather-with-loops.rakudo.jvm...........#      got status: 1
 integration/lazy-bentley-generator.t...............   1    0    0    0    1
 integration/lexical-array-in-inner-block.t.........   2    0    0    0    2
 integration/lexicals-and-attributes.t..............   8    0    0    0    8
-integration/man-or-boy.t...........................  10    0    0    0   10
+integration/man-or-boy.t...........................   9    1    0    0   10
+     1 tests aborted (missing ok/not ok)
 integration/method-calls-and-instantiation.t.......   2    0    0    0    2
 integration/no-indirect-new.t......................   2    0    0    0    2
 integration/packages.t.............................   3    0    0    0    3
@@ -6289,7 +6299,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 ----------------
 "Synopsis", "pass","fail","todo","skip","plan","spec"
 "APP",          78,     0,     1,     6,    85,    85
-"MIS",          30,     0,     3,     7,    40,    40
+"MIS",          29,     1,     3,     7,    40,    40
 "S01",           2,     0,     0,    87,    89,    89
 "S02",       10221,     0,   138,   469, 10828, 10831
 "S03",       21290,     0,    55,    92, 21437, 21319
@@ -6313,12 +6323,14 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S28",           5,     0,     0,     0,     5,     9
 "S29",         444,     0,     2,     2,   448,   448
 "S32",       32743,     1,   142,   124, 33010, 38221
-"int",        1347,     0,     8,    42,  1397,  1393
+"int",        1346,     1,     8,    42,  1397,  1393
 "ros",           2,     0,     0,     0,     2,     2
-"total",     86240,     2,   795,  1516, 88553,177946
+"total",     86238,     4,   795,  1516, 88553,177946
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have APP
 note: test_summary.pl @syn does not have MIS
+MISC/bug-coverage-stress.rakudo.jvm 1 - no deadlock while acquiring mutex
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
 S32-io/io-handle.rakudo.jvm 19 - .t returns True for TTY
+integration/man-or-boy.t aborted 1 test(s)
