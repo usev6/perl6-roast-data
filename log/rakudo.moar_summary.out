@@ -255,7 +255,11 @@ S02-literals/heredocs.rakudo.moar..................  22    0    0   11   33
     11 skipped: RT  \#131927
 S02-literals/hex_chars.t...........................   4    0    0    0    4
 S02-literals/listquote-whitespace.t................  12    0    0    0   12
-S02-literals/listquote.rakudo.moar.................  23    0    1    0   24
+S02-literals/listquote.rakudo.moar.................WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
+Type Str does not support associative indexing.
+  in block <unit> at t/spec/S02-literals/listquote.rakudo.moar line 19
+
+  23    0    1    0   24
      1 todo   : meta operators RT #124558
 S02-literals/misc-interpolation.t..................  50    0    0    0   50
 S02-literals/numeric.rakudo.moar...................  65    0    4    0   69
@@ -437,15 +441,7 @@ S02-names/is_dynamic.t.............................  28    0    0    0   28
 S02-names/name.t...................................  24    0    0    0   24
 S02-names/our.rakudo.moar..........................   9    0    0    1   10
      1 skipped: OUR::subname() does not work
-S02-names/pseudo-6c.rakudo.moar....................WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-No such symbol 'OUR::A43'
-  in block <unit> at t/spec/S02-names/pseudo-6c.rakudo.moar line 186
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-No such symbol 'OUR::A42'
-  in block <unit> at t/spec/S02-names/pseudo-6c.rakudo.moar line 182
-
-  89    0    3   67  159
+S02-names/pseudo-6c.rakudo.moar....................  89    0    3   67  159
      4 skipped: Cannot bind to &::("CORE")::foo
      4 skipped: the binding in here is NYI
     23 skipped: various issues to resolve
@@ -488,11 +484,7 @@ S02-types/anon_block.rakudo.moar...................Block object coerced to strin
 S02-types/array-shapes.rakudo.moar.................  37    0    2    1   40
      1 skipped: coercion of shaped array indicesdd
      2 todo   : code does not die, array shapes
-S02-types/array.rakudo.moar........................WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Index out of range. Is: 1, should be in 0..0
-  in block <unit> at t/spec/S02-types/array.rakudo.moar line 285
-
-Use of uninitialized value element of type Any in string context.
+S02-types/array.rakudo.moar........................Use of uninitialized value element of type Any in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 649
 Use of uninitialized value element of type Any in string context.
@@ -598,21 +590,7 @@ S02-types/nil.rakudo.moar..........................Potential difficulties:
      1 skipped: triage
      1 todo   : returns True/False
      5 todo   : triage
-S02-types/num.rakudo.moar..........................WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Attempt to divide by zero using %
-  in block  at t/spec/S02-types/num.rakudo.moar line 361
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 419
-  in block <unit> at t/spec/S02-types/num.rakudo.moar line 349
-
-WARNING: unhandled Failure detected in DESTROY. If you meant to ignore it, you can mark it as handled by calling .Bool, .so, .not, or .defined methods. The Failure was:
-Attempt to divide 5 by zero using %
-  in block  at t/spec/S02-types/num.rakudo.moar line 359
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 430
-  in sub subtest at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 419
-  in block <unit> at t/spec/S02-types/num.rakudo.moar line 349
-
- 108    0    0    0  108
+S02-types/num.rakudo.moar.......................... 108    0    0    0  108
 S02-types/pair.rakudo.moar.........................# checking fat-comma
 # checking Pair.new(:key,:value)
 # checking Pair.new(key,value)
@@ -802,8 +780,8 @@ S03-operators/arith.t..............................Use of uninitialized value of
 S03-operators/assign-is-not-binding.t..............   9    0    0    0    9
 S03-operators/assign.rakudo.moar...................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S03-operators/assign.rakudo.moar:
 Useless use of constant integer 4 in sink context (lines 555, 555)
-Useless use of constant integer 2 in sink context (lines 875, 875)
 Useless use of constant integer 3 in sink context (lines 555, 555, 875, 875)
+Useless use of constant integer 2 in sink context (lines 875, 875)
  276    0   14   11  301
      2 skipped: ,= needs to be special cased after GLR to compile to push(@a, 3, 4)
      3 skipped: cannot modify an immutable value
@@ -1167,9 +1145,9 @@ S03-operators/numeric-shift.t......................  38    0    0    0   38
 S03-operators/orelse.t.............................  16    0    0    0   16
 S03-operators/overflow.t...........................  98    0    0    0   98
 S03-operators/precedence.rakudo.moar...............WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S03-operators/precedence.rakudo.moar:
-Useless use of "X" in expression "my $a = (1, 3) X (2, 4)" in sink context (line 150)
-Useless use of constant integer 3 in sink context (lines 148, 148)
 Useless use of constant integer 2 in sink context (lines 148, 148)
+Useless use of constant integer 3 in sink context (lines 148, 148)
+Useless use of "X" in expression "my $a = (1, 3) X (2, 4)" in sink context (line 150)
   71    0    4    2   77
      2 skipped: superscript exponent associativity
      2 todo   : Inequality (!=) misparsed as assignment
@@ -1919,8 +1897,8 @@ S05-metasyntax/unknown.rakudo.moar.................Use of Nil in string context
   12    0    1    0   13
      1 todo   : faulty regex error
 S05-modifier/Perl_0.rakudo.moar....................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S05-modifier/Perl_0.rakudo.moar:
-Useless use of constant string "false" in sink context (line 96)
 Useless use of constant string "true" in sink context (line 96)
+Useless use of constant string "false" in sink context (line 96)
 # Now going to test numbered match variable.
   20    0    4    0   24
      4 todo   : NYI
@@ -2043,10 +2021,10 @@ S06-macros/opaque-ast.rakudo.moar..................   3    0    0    4    7
      3 skipped: :COMPILING flag
      1 skipped: return from macro
 S06-macros/quasi-blocks.rakudo.moar................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-macros/quasi-blocks.rakudo.moar:
-Useless use of constant string "grasshopper" in sink context (line 74)
 Useless use of constant string "motor oil" in sink context (line 74)
-Useless use of constant integer 2 in sink context (line 65)
 Useless use of constant integer 1 in sink context (line 65)
+Useless use of constant integer 2 in sink context (line 65)
+Useless use of constant string "grasshopper" in sink context (line 74)
   12    0    0    2   14
      2 skipped: Cannot resolve caller prefix:<++>(Mu)
 S06-macros/unquoting.rakudo.moar...................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-macros/unquoting.rakudo.moar:
@@ -2091,8 +2069,8 @@ S06-operator-overloading/methods.rakudo.moar.......   2    0    1    0    3
      1 todo   : nom regression
 S06-operator-overloading/prefix.t..................  10    0    0    0   10
 S06-operator-overloading/semicolon.t...............WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-operator-overloading/semicolon.t:
-Useless use of constant integer 2 in sink context (line 15)
 Useless use of constant integer 3 in sink context (line 15)
+Useless use of constant integer 2 in sink context (line 15)
    3    0    0    0    3
 S06-operator-overloading/sub.rakudo.moar...........  28    0    0    1   29
      1 skipped: missing block, apparently "if" not an op
@@ -2163,12 +2141,12 @@ S06-signature/definite-return.rakudo.moar..........Potential difficulties:
     at /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-signature/definite-return.rakudo.moar:100
     ------> [32mmpty) { 1, { ++$got-here; last } ... * }[33m⏏[31m<EOL>[0m
 WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S06-signature/definite-return.rakudo.moar:
+Useless use of constant integer True in sink context (lines 110, 115, 122)
+Useless use of constant integer 42 in sink context (line 86)
+Useless use of constant integer 1 in sink context (line 13)
 Useless use of constant integer False in sink context (line 105)
 Useless use of constant integer 3 in sink context (line 21)
-Useless use of constant integer 42 in sink context (line 86)
-Useless use of constant integer True in sink context (lines 110, 115, 122)
 Useless use of "sin(1)" in expression "sin(1)" in sink context (line 132)
-Useless use of constant integer 1 in sink context (line 13)
   17    0    0    2   19
      2 skipped: variables as return specifications dont parse yet
 S06-signature/errors.t.............................  31    0    0    0   31
@@ -2725,13 +2703,13 @@ S15-unicode-information/uniprop.rakudo.moar........ 174    0   29    0  203
 S15-unicode-information/unival.t...................  40    0    0    0   40
                                                    pass fail todo skip plan
 S16-filehandles/argfiles.t.........................  16    0    0    0   16
-S16-filehandles/chmod.t............................# Using file temp_1601061829
-# Using file temp_1601061829
-# Using file temp_1601061829
+S16-filehandles/chmod.t............................# Using file temp_1601359731
+# Using file temp_1601359731
+# Using file temp_1601359731
   16    0    0    3   19
      3 skipped: :r :w :x can accidentally work with root permission
-S16-filehandles/filestat.rakudo.moar...............# Using file temp-16-filehandles-filestat-83615-1.temp
-# Using file temp-16-filehandles-filestat-83615-2.temp
+S16-filehandles/filestat.rakudo.moar...............# Using file temp-16-filehandles-filestat-38493-1.temp
+# Using file temp-16-filehandles-filestat-38493-2.temp
   10    0    0    1   11
      1 skipped: TODO figure out a better way for noatime systems
 S16-filehandles/filetest.rakudo.moar............... 119    0    0    9  128
@@ -2741,7 +2719,7 @@ S16-filehandles/io.t............................... 114    0    0    0  114
 S16-filehandles/io_in_for_loops.t..................  32    0    0    0   32
 S16-filehandles/io_in_while_loops.t................  17    0    0    0   17
 S16-filehandles/misc.t.............................   2    0    0    0    2
-S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-12769
+S16-filehandles/mkdir_rmdir.t......................# mkdir-t-testfile-465047
   14    0    0    0   14
 S16-filehandles/mode.t.............................  12    0    0    0   12
 S16-filehandles/open.t.............................   4    0    0    1    5
@@ -2813,7 +2791,12 @@ S17-promise/in.t...................................   4    0    0    0    4
 S17-promise/lock-async-stress.t....................   1    0    0    0    1
 S17-promise/lock-async-stress2.t...................   1    0    0    0    1
 S17-promise/lock-async.t...........................  37    0    0    0   37
-S17-promise/nonblocking-await.t....................  28    0    0    0   28
+S17-promise/nonblocking-await.t....................Unhandled exception in code scheduled on thread 9
+continuationinvoke expects an MVMContinuation
+
+# You planned 28 tests, but ran 26
+  26    2    0    0   28
+     2 tests aborted (missing ok/not ok)
 S17-promise/single-assignment.t....................  12    0    0    0   12
 S17-promise/start.t................................  64    0    0    0   64
 S17-promise/stress.t...............................   1    0    0    0    1
@@ -3057,10 +3040,10 @@ S24-testing/3-output.t.............................   6    0    0    0    6
 S24-testing/7-bail_out.t...........................   4    0    0    0    4
 S24-testing/8-die_on_fail.t........................   6    0    0    0    6
 S24-testing/9-is_deeply.t..........................WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/S24-testing/9-is_deeply.t:
-Useless use of ":err{ $^s.contains: 'none' }" in sink context (line 33)
-Useless use of ":out{ $^s.contains: 'not ok' }" in sink context (line 34)
-Useless use of ":out{ not $^s.contains: 'Seq.new()' }" in sink context (lines 14, 19, 24)
 Useless use of ":err{ not $^s.contains: 'Seq.new()' }" in sink context (lines 13, 18, 23)
+Useless use of ":out{ not $^s.contains: 'Seq.new()' }" in sink context (lines 14, 19, 24)
+Useless use of ":out{ $^s.contains: 'not ok' }" in sink context (line 34)
+Useless use of ":err{ $^s.contains: 'none' }" in sink context (line 33)
    3    0    0    0    3
 S24-testing/fails-like.t...........................   2    0    0    0    2
 S24-testing/line-numbers.t.........................  13    0    0    0   13
@@ -3461,16 +3444,16 @@ Methods .^name, .raku, .gist, or .say can be used to stringify it to something m
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
 Use of uninitialized value @s[11] of type Str in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value of type Str in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value @s[11] of type Str in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value of type Str in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
-  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 176
+  in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
 Use of uninitialized value element of type Str in string context.
 Methods .^name, .raku, .gist, or .say can be used to stringify it to something meaningful.
   in block  at /home/christian/perl6/perl6-roast-data/rakudo.moar/lib/Test.rakumod (Test) line 174
@@ -5546,9 +5529,9 @@ S32-io/IO-Socket-Async-UDP.t.......................   3    0    0    0    3
 S32-io/IO-Socket-Async.t...........................# host=127.0.0.1
 # host=::1
 # 0.0.0.0
-# 48706
+# 58603
 # 0.0.0.0
-# 48707
+# 54447
   40    0    0    0   40
 S32-io/IO-Socket-INET-UNIX.t.......................   8    0    0    0    8
 S32-io/IO-Socket-INET.t............................  28    0    0    0   28
@@ -5924,7 +5907,7 @@ S32-str/gb18030-encode-decode.t....................   5    0    0    0    5
 S32-str/gb2312-encode-decode.t.....................   5    0    0    0    5
 S32-str/indent.rakudo.moar.........................Asked to remove 4 spaces, but the shortest indent is 3 spaces
   in block <unit> at t/spec/S32-str/indent.rakudo.moar line 62
-    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-88429-259040.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
+    #      got err: "Potential difficulties:\n    Asked to remove 4 spaces, but the shortest indent is 2 spaces\n    at /tmp/getout-44142-908687.code:5\n    ------> \x[1B][32m    END\x[1B][33m⏏\x[1B][31m<EOL>\x[1B][0m\n"
     # expected err: ""
   63    0    0    0   63
 S32-str/index.t.................................... 356    0    0    0  356
@@ -6090,14 +6073,14 @@ integration/advent2012-day15.t.....................  11    0    0    0   11
 integration/advent2012-day16.t.....................  11    0    0    0   11
 integration/advent2012-day19.t.....................  10    0    0    0   10
 integration/advent2012-day20.t.....................   2    0    0    0    2
-integration/advent2012-day21.t.....................# loop: 0.370833 seconds
-# kaz: 0.37821555 seconds
-# gerdr: 0.3782525 seconds
-# hand-memoization: 0.3813508 seconds
-# recursive-ternary: 0.42846724 seconds
-# recursive-ternary-hand-cached: 0.67135035 seconds
-# sequence-ternary: 0.6946577 seconds
-# sequence: 1.0006833 seconds
+integration/advent2012-day21.t.....................# loop: 0.377606 seconds
+# kaz: 0.38577184 seconds
+# gerdr: 0.3891537 seconds
+# hand-memoization: 0.39054807 seconds
+# recursive-ternary: 0.4230037 seconds
+# sequence-ternary: 0.66415324 seconds
+# recursive-ternary-hand-cached: 0.69266971 seconds
+# sequence: 0.95698921 seconds
    9    0    0    0    9
 integration/advent2012-day22.t.....................   6    0    0    0    6
 integration/advent2012-day23.t.....................   2    0    0    0    2
@@ -6139,11 +6122,11 @@ integration/no-indirect-new.t......................   2    0    0    0    2
 integration/packages.t.............................   3    0    0    0    3
 integration/pair-in-array.t........................   3    0    0    0    3
 integration/passing-pair-class-to-sub.t............   2    0    0    0    2
-integration/precompiled.t..........................WARNINGS for /tmp/p6testmod646A357D/p6testmod51286BBF.pm6 (p6testmod51286BBF):
+integration/precompiled.t..........................WARNINGS for /tmp/p6testmod4E18D9A5/p6testmod312C1381.pm6 (p6testmod312C1381):
 Useless use of constant integer 42 in sink context (line 1)
 WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/integration/precompiled.t:
 Useless use of constant integer 42 in sink context (line 1)
-WARNINGS for /tmp/p6testmod646A357D/p6testmod98E7B6EE.pm6 (p6testmod98E7B6EE):
+WARNINGS for /tmp/p6testmod4E18D9A5/p6testmodA7C8FD8E.pm6 (p6testmodA7C8FD8E):
 Useless use of constant integer 42 in sink context (line 1)
 WARNINGS for /usr/home/christian/perl6/perl6-roast-data/rakudo.moar/t/spec/integration/precompiled.t:
 Useless use of constant integer 42 in sink context (line 1)
@@ -6183,7 +6166,7 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S14",         437,     0,     3,     3,   443,   443
 "S15",       85738,     0,    37,    38, 85813, 83815
 "S16",         747,     0,     1,    17,   765,   765
-"S17",        1551,     0,     1,    28,  1580,  1605
+"S17",        1549,     2,     1,    28,  1580,  1605
 "S19",          18,     0,     7,     0,    25,    25
 "S22",          19,     0,     0,     0,    19,    19
 "S24",          80,     1,    24,     6,   111,   112
@@ -6193,9 +6176,10 @@ rosettacode/sierpinski_triangle.t..................   1    0    0    0    1
 "S32",       44409,     0,    96,    82, 44587, 41351
 "int",        1388,     0,     4,    15,  1407,  1393
 "ros",           2,     0,     0,     0,     2,     2
-"total",    189239,     1,   549,  1204,190993,185903
+"total",    189237,     3,   549,  1204,190993,185903
 ----------------
 Failure summary:
 note: test_summary.pl @syn does not have APP
 note: test_summary.pl @syn does not have MIS
+S17-promise/nonblocking-await.t aborted 2 test(s)
 S24-testing/11-plan-skip-all.t aborted 1 test(s)
